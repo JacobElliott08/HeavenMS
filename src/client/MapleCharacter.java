@@ -162,12 +162,17 @@ import constants.skills.Shadower;
 import constants.skills.Sniper;
 import constants.skills.Swordsman;
 import constants.skills.ThunderBreaker;
+import java.io.File;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import scripting.item.ItemScriptManager;
 import server.life.MobSkillFactory;
 import server.maps.MapleMapItem;
 import net.server.audit.locks.MonitoredLockType;
 import net.server.audit.locks.factory.MonitoredReentrantLockFactory;
 import org.apache.mina.util.ConcurrentHashSet;
+import provider.MapleData;
+import provider.MapleDataProviderFactory;
 
 public class MapleCharacter extends AbstractMapleCharacterObject {
     private static final MapleItemInformationProvider ii = MapleItemInformationProvider.getInstance();
@@ -325,6 +330,11 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     private int banishSp = -1;
     private long banishTime = 0;
     private long lastExpGainTime;
+    
+    private int firstJob = 0;
+    private int currentJob = 0;
+    private int secondJob = 0;
+    private int levelPoints = 0;
     
     private MapleCharacter() {
         super.setListener(new AbstractCharacterListener() {
@@ -1091,6 +1101,17 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     public synchronized void changeJob(MapleJob newJob) {
         if (newJob == null) {
             return;//the fuck you doing idiot!
+        }
+        
+        //Saving the current job
+        System.out.println("saving current job "+getCurrentJob());
+        if(getCurrentJob() == 0) {
+            System.out.println("saving as first job "+getJob().jobid);
+            this.setFirstJob(getJob().jobid);
+        }
+        else{
+            System.out.println("saving as second job "+getJob().jobid);
+            this.setSecondJob(getJob().jobid);
         }
         
         if (canRecvPartySearchInvite && getParty() == null) {
@@ -6372,8 +6393,19 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             ThreadManager.getInstance().newTask(r);
         }
 
+        if( (level < 120 && level % 5 == 0) || (level >= 120 && level % 2 == 0) ){
+            
+            setLevelPoints(getLevelPoints() + 1);
+            updateLevelPoints();
+            dropMessage("You have gained a level point, total : "+getLevelPoints());
+        }
+        
+        
         levelUpMessages();
         guildUpdate();
+        
+        
+        
     }
     
     public boolean leaveParty() {
@@ -6487,20 +6519,20 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     
     public void setPlayerRates() {
         this.expRate  *=  GameConstants.getPlayerBonusExpRate(this.level / 20);
-        this.mesoRate *= GameConstants.getPlayerBonusMesoRate(this.level / 20);
-        this.dropRate *= GameConstants.getPlayerBonusDropRate(this.level / 20);
+        //this.mesoRate *= GameConstants.getPlayerBonusMesoRate(this.level / 20);
+        //this.dropRate *= GameConstants.getPlayerBonusDropRate(this.level / 20);
     }
 
     public void revertLastPlayerRates() {
         this.expRate  /=  GameConstants.getPlayerBonusExpRate((this.level - 1) / 20);
-        this.mesoRate /= GameConstants.getPlayerBonusMesoRate((this.level - 1) / 20);
-        this.dropRate /= GameConstants.getPlayerBonusDropRate((this.level - 1) / 20);
+        //this.mesoRate /= GameConstants.getPlayerBonusMesoRate((this.level - 1) / 20);
+        //this.dropRate /= GameConstants.getPlayerBonusDropRate((this.level - 1) / 20);
     }
     
     public void revertPlayerRates() {
         this.expRate  /=  GameConstants.getPlayerBonusExpRate(this.level / 20);
-        this.mesoRate /= GameConstants.getPlayerBonusMesoRate(this.level / 20);
-        this.dropRate /= GameConstants.getPlayerBonusDropRate(this.level / 20);
+        //this.mesoRate /= GameConstants.getPlayerBonusMesoRate(this.level / 20);
+        //this.dropRate /= GameConstants.getPlayerBonusDropRate(this.level / 20);
     }
     
     public void setWorldRates() {
@@ -6724,7 +6756,14 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             // skipping pets, probably unneeded here
 
             ret.level = rs.getInt("level");
-            ret.job = MapleJob.getById(rs.getInt("job"));
+            ret.setFirstJob(rs.getInt("job"));
+            ret.setSecondJob(rs.getInt("secondJob"));
+            ret.setCurrentJob(rs.getInt("currentJob"));
+            
+            
+            ret.setJob(ret.getCurrentJob() == 0 ? MapleJob.getById(ret.getFirstJob()) : MapleJob.getById(ret.getSecondJob()));
+            //ret.job = MapleJob.getById(rs.getInt("job"));
+
             ret.str = rs.getInt("str");
             ret.dex = rs.getInt("dex");
             ret.int_ = rs.getInt("int");
@@ -6900,6 +6939,11 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             ret.lastExpGainTime = rs.getTimestamp("lastExpGainTime").getTime();
             ret.canRecvPartySearchInvite = rs.getBoolean("partySearch");
             
+            ret.currentJob = rs.getInt("currentJob");
+            ret.secondJob = rs.getInt("secondJob");
+            
+            System.out.println("Setting current Job + Second Job");
+            
             ret.getInventory(MapleInventoryType.EQUIP).setSlotLimit(rs.getByte("equipslots"));
             ret.getInventory(MapleInventoryType.USE).setSlotLimit(rs.getByte("useslots"));
             ret.getInventory(MapleInventoryType.SETUP).setSlotLimit(rs.getByte("setupslots"));
@@ -7046,6 +7090,21 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             }
             rs.close();
             ps.close();
+            
+            
+            ps = con.prepareStatement("SELECT levelpoints FROM accounts WHERE id = ?");
+            ps.setInt(1,ret.accountid);
+            rs = ps.executeQuery();
+            if (!rs.next()) {
+                rs.close();
+                ps.close();
+                throw new RuntimeException("Loading char failed levelpoints");
+            }
+                        
+            ret.levelPoints = rs.getInt("levelpoints");
+            rs.close();
+            ps.close();
+            
             ps = con.prepareStatement("SELECT `area`,`info` FROM area_info WHERE charid = ?");
             ps.setInt(1, ret.id);
             rs = ps.executeQuery();
@@ -8161,7 +8220,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             con.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);
             con.setAutoCommit(false);
             PreparedStatement ps;
-            ps = con.prepareStatement("UPDATE characters SET level = ?, fame = ?, str = ?, dex = ?, luk = ?, `int` = ?, exp = ?, gachaexp = ?, hp = ?, mp = ?, maxhp = ?, maxmp = ?, sp = ?, ap = ?, gm = ?, skincolor = ?, gender = ?, job = ?, hair = ?, face = ?, map = ?, meso = ?, hpMpUsed = ?, spawnpoint = ?, party = ?, buddyCapacity = ?, messengerid = ?, messengerposition = ?, mountlevel = ?, mountexp = ?, mounttiredness= ?, equipslots = ?, useslots = ?, setupslots = ?, etcslots = ?,  monsterbookcover = ?, vanquisherStage = ?, dojoPoints = ?, lastDojoStage = ?, finishedDojoTutorial = ?, vanquisherKills = ?, matchcardwins = ?, matchcardlosses = ?, matchcardties = ?, omokwins = ?, omoklosses = ?, omokties = ?, dataString = ?, fquest = ?, jailexpire = ?, partnerId = ?, marriageItemId = ?, lastExpGainTime = ?, ariantPoints = ?, partySearch = ? WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
+            ps = con.prepareStatement("UPDATE characters SET level = ?, fame = ?, str = ?, dex = ?, luk = ?, `int` = ?, exp = ?, gachaexp = ?, hp = ?, mp = ?, maxhp = ?, maxmp = ?, sp = ?, ap = ?, gm = ?, skincolor = ?, gender = ?, job = ?, hair = ?, face = ?, map = ?, meso = ?, hpMpUsed = ?, spawnpoint = ?, party = ?, buddyCapacity = ?, messengerid = ?, messengerposition = ?, mountlevel = ?, mountexp = ?, mounttiredness= ?, equipslots = ?, useslots = ?, setupslots = ?, etcslots = ?,  monsterbookcover = ?, vanquisherStage = ?, dojoPoints = ?, lastDojoStage = ?, finishedDojoTutorial = ?, vanquisherKills = ?, matchcardwins = ?, matchcardlosses = ?, matchcardties = ?, omokwins = ?, omoklosses = ?, omokties = ?, dataString = ?, fquest = ?, jailexpire = ?, partnerId = ?, marriageItemId = ?, lastExpGainTime = ?, ariantPoints = ?, partySearch = ?, secondJob = ?, currentJob = ? WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, level);    // thanks CanIGetaPR for noticing an unnecessary "level" limitation when persisting DB data
             ps.setInt(2, fame);
             
@@ -8194,7 +8253,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             ps.setInt(15, gmLevel);
             ps.setInt(16, skinColor.getId());
             ps.setInt(17, gender);
-            ps.setInt(18, job.getId());
+            ps.setInt(18, getFirstJob());
             ps.setInt(19, hair);
             ps.setInt(20, face);
             if (map == null || (cashshop != null && cashshop.isOpened())) {
@@ -8273,7 +8332,9 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             ps.setTimestamp(53, new Timestamp(lastExpGainTime));
             ps.setInt(54, ariantPoints);
             ps.setBoolean(55, canRecvPartySearchInvite);
-            ps.setInt(56, id);
+            ps.setInt(56, getSecondJob());
+            ps.setInt(57, getCurrentJob());
+            ps.setInt(58, id);
 
             int updateRows = ps.executeUpdate();
             ps.close();
@@ -8282,6 +8343,11 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
                 throw new RuntimeException("Character not in database (" + id + ")");
             }
             
+            ps = con.prepareStatement("UPDATE accounts SET levelpoints = ? WHERE id = ?");
+            ps.setInt(1, levelPoints);
+            ps.setInt(2, accountid);
+            ps.executeUpdate();
+            ps.close();
             List<MaplePet> petList = new LinkedList<>();
             petLock.lock();
             try {
@@ -10392,10 +10458,28 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
         if (getLevel() != 200) {
             return;
         }
+        for (MapleData skill_ : MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/" + "String.wz")).getData("Skill.img").getChildren()) {
+            try {
+                Skill skill = SkillFactory.getSkill(Integer.parseInt(skill_.getName()));
+                if(!skill.isFourthJob())
+                {
+                    this.changeSkillLevel(skill, (byte) skill.getMaxLevel(), skill.getMaxLevel(), -1);   
+                }
+            } catch (NumberFormatException nfe) {
+                nfe.printStackTrace();
+                break;
+            } catch (NullPointerException npe) { }
+        }
+                
         addReborns();
         changeJob(MapleJob.BEGINNER);
         setLevel(0);
+        resetStats();
+        setCurrentJob(1);
+
         levelUp(true);
+        saveCharToDB();
+        
     }
     
     //EVENTS
@@ -10577,5 +10661,73 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     public int getLanguage() {
         return getClient().getLanguage();
     }
+    
+    
+    public int getCurrentJob() {
+        return currentJob;
+}
+
+    public void setCurrentJob(int currentJob) {
+        this.currentJob = currentJob;
+    }
+
+    public int getSecondJob() {
+        return secondJob;
+    }
+
+    public void setSecondJob(int secondJob) {
+        this.secondJob = secondJob;
+    }
+    
+    public int getFirstJob() {
+        return firstJob;
+    }
+
+    public void setFirstJob(int firstJob) {
+        this.firstJob = firstJob;
+    }
+    
+    public void switchJobs(){
+        if(getCurrentJob() == 0)
+        {
+            this.setFirstJob(this.getJob().getId());
+            this.changeJob(MapleJob.getById(this.getSecondJob()));
+            setCurrentJob(1);
+        }
+        else
+        {
+            this.setSecondJob(this.getJob().getId());
+            this.changeJob(MapleJob.getById(this.getFirstJob()));
+            setCurrentJob(0);
+        }
+        this.saveCharToDB(true);
+        
+    }
+
+    public int getLevelPoints() {
+        return levelPoints;
+    }
+
+    public void setLevelPoints(int levelPoints) {
+        this.levelPoints = levelPoints;
+    }
+    
+    public void updateLevelPoints()
+    {
+        try {
+            Connection con = DatabaseConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement("UPDATE accounts SET levelpoints = ? WHERE id = ?");
+            ps.setInt(1, getLevelPoints());
+            ps.setInt(2, getAccountID());
+            ps.executeQuery();
+            ps.close();
+            con.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(MapleCharacter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
+    
+    
     
 }

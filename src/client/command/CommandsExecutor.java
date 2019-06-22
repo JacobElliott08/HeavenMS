@@ -210,6 +210,9 @@ public class CommandsExecutor {
         addCommand("mylawn", MapOwnerClaimCommand.class);
         addCommand("bosshp", BossHpCommand.class);
         addCommand("mobhp", MobHpCommand.class);
+        addCommand("rebirth", RebirthCommand.class);
+        addCommand("switch", SwitchCommand.class);
+        addCommand("jobs", JobsCommand.class);
         
         commandsNameDesc.add(levelCommandsCursor);
     }
@@ -397,7 +400,7 @@ public class CommandsExecutor {
         addCommand("addworld", 6, ServerAddWorldCommand.class);
         addCommand("removechannel", 6, ServerRemoveChannelCommand.class);
         addCommand("removeworld", 6, ServerRemoveWorldCommand.class);
-        
+        addCommand("deletecharacter", 6, DeleteCharacterCommand.class);
         commandsNameDesc.add(levelCommandsCursor);
     }
 
