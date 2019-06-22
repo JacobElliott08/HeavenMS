@@ -113,7 +113,7 @@ public enum ItemFactory {
         equip.setExpiration(rs.getLong("expiration"));
         equip.setGiftFrom(rs.getString("giftFrom"));
         equip.setRingId(rs.getInt("ringid"));
-        
+        equip.setLevelUpgraded((short) rs.getInt("upgraded"));
         return equip;
     }
     
@@ -235,7 +235,7 @@ public enum ItemFactory {
                     ps.setString(12, item.getGiftFrom());
                     ps.executeUpdate();
 
-                    pse = con.prepareStatement("INSERT INTO `inventoryequipment` VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                    pse = con.prepareStatement("INSERT INTO `inventoryequipment` VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
                     if (mit.equals(MapleInventoryType.EQUIP) || mit.equals(MapleInventoryType.EQUIPPED)) {
                         rs = ps.getGeneratedKeys();
@@ -270,6 +270,7 @@ public enum ItemFactory {
                         pse.setInt(21, equip.getItemLevel());
                         pse.setInt(22, equip.getItemExp());
                         pse.setInt(23, equip.getRingId());
+                        pse.setInt(24, equip.getLevelUpgraded());
                         pse.executeUpdate();
                     }
                     
@@ -426,7 +427,7 @@ public enum ItemFactory {
                     pse.close();
 
                     if (mit.equals(MapleInventoryType.EQUIP) || mit.equals(MapleInventoryType.EQUIPPED)) {
-                        pse = con.prepareStatement("INSERT INTO `inventoryequipment` VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                        pse = con.prepareStatement("INSERT INTO `inventoryequipment` VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
                         pse.setInt(1, genKey);
 						
                         Equip equip = (Equip) item;
@@ -452,6 +453,7 @@ public enum ItemFactory {
                         pse.setInt(21, equip.getItemLevel());
                         pse.setInt(22, equip.getItemExp());
                         pse.setInt(23, equip.getRingId());
+                        pse.setInt(24, equip.getLevelUpgraded());
                         pse.executeUpdate();
                         
                         pse.close();

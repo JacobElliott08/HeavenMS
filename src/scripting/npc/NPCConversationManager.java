@@ -1007,7 +1007,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
                 return "You cannot start an Ariant tournament from outside the Battle Arena Entrance.";
             }
             
-            MapleExpedition exped = this.getMap().getChannelServer().getExpedition(expedType);
+            MapleExpedition exped = this.getMap().getChannelServer().getFirstOpenExpedition(expedType);
             if (exped == null) {
                 return "Please register on an expedition before attempting to start an Ariant tournament.";
             }

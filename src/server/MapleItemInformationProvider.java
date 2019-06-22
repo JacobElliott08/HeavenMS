@@ -213,25 +213,26 @@ public class MapleItemInformationProvider {
             theData = cashStringData;
         } else if (itemId >= 2000000 && itemId < 3000000) {
             theData = consumeStringData;
-        } else if ((itemId >= 1010000 && itemId < 1040000) || (itemId >= 1122000 && itemId < 1123000) || (itemId >= 1132000 && itemId < 1133000) || (itemId >= 1142000 && itemId < 1143000)) {
+        } else if ((itemId >= 1010000 && itemId < 1040000) || (itemId >= 1122000 && itemId < 1123000) || (itemId >= 1132000 && itemId < 1133000) || (itemId >= 1142000 && itemId < 1143000) ||
+                   (itemId >= 1152001 && itemId <= 1152201) || (itemId >= 1162000 && itemId <= 1162084) || (itemId >= 1182004 && itemId <= 1182285) || (itemId >= 1190300 && itemId <= 1191109)) {
             theData = eqpStringData;
             cat = "Eqp/Accessory";
         } else if (itemId >= 1000000 && itemId < 1010000) {
             theData = eqpStringData;
             cat = "Eqp/Cap";
-        } else if (itemId >= 1102000 && itemId < 1103000) {
+        } else if (itemId >= 1100000 && itemId < 1103200) {
             theData = eqpStringData;
             cat = "Eqp/Cape";
         } else if (itemId >= 1040000 && itemId < 1050000) {
             theData = eqpStringData;
             cat = "Eqp/Coat";
-        } else if (itemId >= 20000 && itemId < 22000) {
+        } else if (itemId >= 20000 && itemId < 29000) {
             theData = eqpStringData;
             cat = "Eqp/Face";
         } else if (itemId >= 1080000 && itemId < 1090000) {
             theData = eqpStringData;
             cat = "Eqp/Glove";
-        } else if (itemId >= 30000 && itemId < 35000) {
+        } else if (itemId >= 30000 && itemId < 48108) {
             theData = eqpStringData;
             cat = "Eqp/Hair";
         } else if (itemId >= 1050000 && itemId < 1060000) {
@@ -255,7 +256,7 @@ public class MapleItemInformationProvider {
         } else if (itemId >= 1900000 && itemId < 2000000) {
             theData = eqpStringData;
             cat = "Eqp/Taming";
-        } else if (itemId >= 1300000 && itemId < 1800000) {
+        } else if (itemId >= 1212000 && itemId < 1800000) {
             theData = eqpStringData;
             cat = "Eqp/Weapon";
         } else if (itemId >= 4000000 && itemId < 5000000) {

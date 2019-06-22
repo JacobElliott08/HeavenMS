@@ -65,7 +65,7 @@ public class Equip extends Item {
     
     private byte upgradeSlots;
     private byte level, flag, itemLevel;
-    private short str, dex, _int, luk, hp, mp, watk, matk, wdef, mdef, acc, avoid, hands, speed, jump, vicious;
+    private short str, dex, _int, luk, hp, mp, watk, matk, wdef, mdef, acc, avoid, hands, speed, jump, vicious, levelUpgraded;
     private float itemExp;
     private int ringid = -1;
     private boolean wear = false;
@@ -664,4 +664,15 @@ public class Equip extends Item {
     public byte getItemLevel() {
         return itemLevel;
     }
+
+    public short getLevelUpgraded() {
+        return levelUpgraded;
+}
+
+    public void setLevelUpgraded(short levelUpgraded) {
+        this.levelUpgraded = levelUpgraded;
+    }
+    
+    
+    
 }

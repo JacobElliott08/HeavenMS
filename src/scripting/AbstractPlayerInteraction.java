@@ -54,6 +54,7 @@ import server.quest.MapleQuest;
 import tools.MaplePacketCreator;
 import client.MapleCharacter;
 import client.MapleClient;
+import client.MapleJob;
 import client.MapleQuestStatus;
 import client.SkillFactory;
 import client.inventory.Equip;
@@ -1081,13 +1082,27 @@ public class AbstractPlayerInteraction {
 		getPlayer().getClient().getChannelServer().removeExpedition(exped);
 	}
 
-	public MapleExpedition getExpedition(MapleExpeditionType type) {
-                return getPlayer().getClient().getChannelServer().getExpedition(type);
+	public MapleExpedition getFirstExpedition(MapleExpeditionType type) {
+                return getPlayer().getClient().getChannelServer().getFirstExpedition(type);
 	}
+        
+        public MapleExpedition getFirstOpenExpedition(MapleExpeditionType type)
+        {
+            return getPlayer().getClient().getChannelServer().getFirstOpenExpedition(type);        
+        }
+        
+        public MapleExpedition getExpeditionByName() {
+                return getPlayer().getClient().getChannelServer().getExpeditionByCharacterName(getPlayer().getName());
+	}
+        
+        public MapleExpedition getExpeditionByLeader(String leader) {
+                return getPlayer().getClient().getChannelServer().getExpeditionByLeaderName(leader);
+	}
+        
         
         public String getExpeditionMemberNames(MapleExpeditionType type) {
                 String members = "";
-                MapleExpedition exped = getExpedition(type);
+                MapleExpedition exped = getExpeditionByName();
                 for (String memberName : exped.getMembers().values()) {
                        members += "" + memberName + ", ";
                 }
@@ -1095,7 +1110,7 @@ public class AbstractPlayerInteraction {
         }
 
         public boolean isLeaderExpedition(MapleExpeditionType type) {
-                MapleExpedition exped = getExpedition(type);
+                MapleExpedition exped = getExpeditionByName();
                 return exped.isLeader(getPlayer());
         }
         
@@ -1179,4 +1194,107 @@ public class AbstractPlayerInteraction {
         public long getCurrentTime() {
                 return Server.getInstance().getCurrentTime();
         }    
+        
+    public boolean upgradeItemWithLevelPoints (byte slot, MapleCharacter player, int levelPoints, int statInc) {
+        MapleInventory equip = player.getInventory(MapleInventoryType.EQUIP);
+        Equip eu = (Equip) equip.getItem(slot);
+        int item = equip.getItem(slot).getItemId();
+        short hand = eu.getHands();
+        byte level = eu.getLevel();
+        if(eu.getLevelUpgraded() > 0){
+            return false;
+        }
+        Equip nItem = new Equip(item, equip.getNextFreeSlot());
+        
+        
+        
+        int statUp = 0;
+        
+        if(statInc == 5 || statInc == 6)
+        {
+            statUp = (int)(levelPoints * 0.5);
+        }
+        else
+        {
+            statUp = (int)(levelPoints * 3);
+        }
+        nItem.setStr((short)  eu.getStr()); 
+        nItem.setDex((short)  eu.getDex()); 
+        nItem.setInt((short)  eu.getInt()); 
+        nItem.setLuk((short)  eu.getLuk()); 
+        nItem.setWatk((short) eu.getWatk());
+        nItem.setMatk((short) eu.getMatk());
+        
+        switch(statInc)
+        {
+            //Str
+            case 1:
+                nItem.setStr((short) (eu.getStr() + statUp));     
+            //dex
+            case 2:
+                nItem.setDex((short)  (eu.getDex() + statUp));         
+            //int
+            case 3:
+                nItem.setInt((short)  (eu.getInt() + statUp));        
+            //luk
+            case 4:
+                nItem.setLuk((short)  (eu.getLuk() + statUp));
+            //watk
+            case 5:
+                nItem.setWatk((short)  (eu.getWatk() + statUp));
+            //matk
+            case 6:
+                nItem.setMatk((short)  (eu.getMatk() + statUp));
+        }
+        
+        nItem.setUpgradeSlots((byte) eu.getUpgradeSlots());
+        nItem.setHands(hand);
+        nItem.setLevel(level);
+        nItem.setRingId(-1);
+        nItem.setLevelUpgraded((short)1);
+        player.getInventory(MapleInventoryType.EQUIP).addItemFromDB(nItem);
+        
+        player.setLevelPoints(player.getLevelPoints() - levelPoints);
+        player.updateLevelPoints();
+        return true;
+    }
+
+    public String EquipList(MapleClient c) 
+    {
+        StringBuilder str = new StringBuilder();
+        MapleInventory equip = c.getPlayer().getInventory(MapleInventoryType.EQUIP);
+        List<String> stra = new LinkedList<>();
+        for (Item item : equip.list()) 
+        {
+            stra.add("#L"+item.getPosition()+"##v"+item.getItemId()+"##l");
+        }
+        for (String strb : stra) 
+        {
+            str.append(strb);
+        }
+        
+        return str.toString();
+    }
+    
+    
+    public String equipListLevelPoints(MapleClient c)
+    {
+        StringBuilder str = new StringBuilder();
+        MapleInventory equip = c.getPlayer().getInventory(MapleInventoryType.EQUIP);
+        List<String> stra = new LinkedList<>();
+        for (Item item : equip.list()) 
+        {
+            if(((Equip)item).getLevelUpgraded() == 0)
+            {
+                stra.add("#L"+item.getPosition()+"##v"+item.getItemId()+"##l\n");    
+            }
+        }
+        for (String strb : stra) 
+        {
+            str.append(strb);
+        }
+        
+        return str.toString();
+    }
+    
 }

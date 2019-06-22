@@ -26,6 +26,7 @@ import java.net.InetSocketAddress;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Collections;
 import java.util.HashSet;
@@ -63,6 +64,7 @@ import org.apache.mina.filter.codec.ProtocolCodecFilter;
 import org.apache.mina.transport.socket.SocketSessionConfig;
 import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
 
+import provider.MapleDataProviderFactory;
 import scripting.event.EventScriptManager;
 import server.TimerManager;
 import server.events.gm.MapleEvent;
@@ -75,6 +77,7 @@ import server.maps.MapleMiniDungeon;
 import tools.MaplePacketCreator;
 import tools.Pair;
 import client.MapleCharacter;
+import client.command.commands.gm3.ExpedsCommand;
 import client.status.MonsterStatusEffect;
 import constants.ServerConstants;
 import server.maps.MapleMiniDungeonInfo;
@@ -98,7 +101,7 @@ public final class Channel {
     private Map<Integer, MapleHiredMerchant> hiredMerchants = new HashMap<>();
     private final Map<Integer, Integer> storedVars = new HashMap<>();
     private Set<Integer> playersAway = new HashSet<>();
-    private Map<MapleExpeditionType, MapleExpedition> expeditions = new HashMap<>();
+    private List <MapleExpedition> expeditions = new ArrayList<>();
     private List<MapleExpeditionType> expedType = new ArrayList<>();
     private Set<MapleMap> ownedMaps = Collections.synchronizedSet(Collections.newSetFromMap(new WeakHashMap<MapleMap, Boolean>()));
     private MapleEvent event;
@@ -455,29 +458,78 @@ public final class Channel {
     
     public boolean addExpedition(MapleExpedition exped) {
         synchronized (expeditions) {
-            if (expeditions.containsKey(exped.getType())) {
-                return false;
-            }
-            
-            expeditions.put(exped.getType(), exped);
+            expeditions.add(exped);
             return true;
         }
     }
     
     public void removeExpedition(MapleExpedition exped) {
         synchronized (expeditions) {
-            expeditions.remove(exped.getType());
+            for(MapleExpedition ex : expeditions)
+            {
+                if(ex.getLeader().getName().equalsIgnoreCase(exped.getLeader().getName()))
+                {
+                    expeditions.remove(ex);
+                }
+            }
         }
     }
     
-    public MapleExpedition getExpedition(MapleExpeditionType type) {
-        return expeditions.get(type);
+    public MapleExpedition getFirstExpedition(MapleExpeditionType type) {
+        synchronized (expeditions) {
+            for(MapleExpedition ex : expeditions)
+            {
+                if(ex.getType() == type)
+                {
+                    return ex;
+                }
+            }
+            return null;
+        }
     }
+    
+    public MapleExpedition getFirstOpenExpedition(MapleExpeditionType type) {
+        synchronized (expeditions) {
+            for(MapleExpedition ex : expeditions)
+            {
+                if(ex.getType() == type && !ex.isInProgress())
+                {
+                    return ex;
+                }
+            }
+            return null;
+        }
+    }
+
     
     public List<MapleExpedition> getExpeditions() {
         synchronized (expeditions) {
-            return new ArrayList<>(expeditions.values());
+            return expeditions;
         }
+    }
+    
+    public MapleExpedition getExpeditionByCharacterName(String name) {
+        synchronized (expeditions){
+            for(MapleExpedition ex : expeditions)
+            {
+                if(ex.getMembers().containsValue(name)){
+                    return ex;
+                }
+            }
+        }
+        return null;
+    }
+    
+    public MapleExpedition getExpeditionByLeaderName(String name) {
+        synchronized (expeditions){
+            for(MapleExpedition ex : expeditions)
+            {
+                if(ex.getLeader().getName().equalsIgnoreCase(name)){
+                    return ex;
+                }
+            }
+        }
+        return null;
     }
     
     public boolean isConnected(String name) {
