@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `votepoints` int(11) NOT NULL DEFAULT '0',
   `hwid` varchar(12) NOT NULL DEFAULT '',
   `language` int(1) NOT NULL DEFAULT '2',
+  `levelpoints` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`),
   KEY `ranking1` (`id`,`banned`),
@@ -186,6 +187,9 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `lastExpGainTime` timestamp NOT NULL DEFAULT '2015-01-01 05:00:00',
   `partySearch` tinyint(1) NOT NULL DEFAULT '0',
   `jailexpire` bigint(20) NOT NULL DEFAULT '0',
+  `firstjob` int(12) NOT NULL DEFAULT '0',
+  `secondjob` int(12) NOT NULL DEFAULT '0',
+  `currentjob` int(12) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `accountid` (`accountid`),
   KEY `party` (`party`),
@@ -12928,6 +12932,7 @@ CREATE TABLE IF NOT EXISTS `inventoryequipment` (
   `itemlevel` int(11) NOT NULL DEFAULT '1',
   `itemexp` int(11) unsigned NOT NULL DEFAULT '0',
   `ringid` int(11) NOT NULL DEFAULT '-1',
+  `upgraded` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`inventoryequipmentid`),
   KEY `INVENTORYITEMID` (`inventoryitemid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
