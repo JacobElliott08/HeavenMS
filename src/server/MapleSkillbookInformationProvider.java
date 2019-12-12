@@ -19,11 +19,8 @@
 */
 package server;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -38,6 +35,11 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import client.MapleCharacter;
+import provider.MapleData;
+import provider.MapleDataProvider;
+import provider.MapleDataProviderFactory;
+import provider.MapleDataTool;
 import tools.DatabaseConnection;
 
 /**
@@ -45,6 +47,7 @@ import tools.DatabaseConnection;
  * @author RonanLana
  */
 public class MapleSkillbookInformationProvider {
+    
     private final static MapleSkillbookInformationProvider instance = new MapleSkillbookInformationProvider();
     
     public static MapleSkillbookInformationProvider getInstance() {
@@ -56,195 +59,109 @@ public class MapleSkillbookInformationProvider {
     public enum SkillBookEntry {
         UNAVAILABLE,
         QUEST,
+        QUEST_BOOK,
+        QUEST_REWARD,
         REACTOR,
         SCRIPT
     }
     
-    static String host = "jdbc:mysql://localhost:3306/heavenms";
-    static String driver = "com.mysql.jdbc.Driver";
-    static String username = "root";
-    static String password = "";
-
-    static String wzPath = "wz";
-    static String rootDirectory = ".";
+    private static String host = "jdbc:mysql://localhost:3306/heavenms";
+    private static String driver = "com.mysql.jdbc.Driver";
+    private static String username = "root";
+    private static String password = "";
     
-    static InputStreamReader fileReader = null;
-    static BufferedReader bufferedReader = null;
+    private static String rootDirectory = ".";
     
-    static int initialStringLength = 50;
+    private static int skillbookMinItemid = 2280000;
+    private static int skillbookMaxItemid = 2300000;  // exclusively
     
-    static int skillbookMinItemid = 2280000;
-    static int skillbookMaxItemid = 2300000;  // exclusively
-    
-    static byte status = 0;
-    static int questId = -1;
-    static int isCompleteState = 0;
-    
-    static int currentItemid = 0;
-    static int currentCount = 0;
+    private static Set<Integer> questSkills = new HashSet<>();
     
     static {
         loadSkillbooks();
     }
-
-    private static String getName(String token) {
-        int i, j;
-        char[] dest;
-        String d;
-        
-        i = token.lastIndexOf("name");
-        i = token.indexOf("\"", i) + 1; //lower bound of the string
-        j = token.indexOf("\"", i);     //upper bound
-
-        if(j < i) {           //node value containing 'name' in it's scope, cheap fix since we don't deal with strings anyway
-            System.out.println("[CRITICAL] Found this '" + token + "'");
-            return "0";
-        }
-        
-        dest = new char[initialStringLength];
-        token.getChars(i, j, dest, 0);
-
-        d = new String(dest);
-        return(d.trim());
+    
+    private static boolean is4thJobSkill(int itemid) {
+        return itemid / 10000 % 10 == 2;
     }
     
-    private static String getValue(String token) {
-        int i, j;
-        char[] dest;
-        String d;
-
-        i = token.lastIndexOf("value");
-        i = token.indexOf("\"", i) + 1; //lower bound of the string
-        j = token.indexOf("\"", i);     //upper bound
-
-        dest = new char[initialStringLength];
-        token.getChars(i, j, dest, 0);
-
-        d = new String(dest);
-        return(d.trim());
-    }
-    
-    private static void forwardCursor(int st) {
-        String line = null;
-
-        try {
-            while(status >= st && (line = bufferedReader.readLine()) != null) {
-                simpleToken(line);
-            }
-        }
-        catch(Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private static void simpleToken(String token) {
-        if(token.contains("/imgdir")) {
-            status -= 1;
-        }
-        else if(token.contains("imgdir") && !token.endsWith("/>")) {    // '\>' XML node description not being accounted, issue found thanks to Robin Schulz, CanIGetaPR
-            status += 1;
-        }
-    }
-    
-    private static void inspectQuestItemList(int st) {
-        String line = null;
-
-        try {
-            while(status >= st && (line = bufferedReader.readLine()) != null) {
-                readItemToken(line);
-            }
-        }
-        catch(Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static boolean isSkillBook(int itemid) {
+    private static boolean isSkillBook(int itemid) {
         return itemid >= skillbookMinItemid && itemid < skillbookMaxItemid;
     }
     
-    private static void processCurrentItem() {
-        try {
-            if(isSkillBook(currentItemid)) {
-                if(currentCount > 0) {
-                    foundSkillbooks.put(currentItemid, SkillBookEntry.QUEST);
-                }
-            }
-        } catch(Exception e) {}
+    private static boolean isQuestBook(int itemid) {
+        return itemid >= 4001107 && itemid <= 4001114 || itemid >= 4161015 && itemid <= 4161023;
     }
     
-    private static void readItemToken(String token) {
-        if(token.contains("/imgdir")) {
-            status -= 1;
-            
-            processCurrentItem();
-            
-            currentItemid = 0;
-            currentCount = 0;
-        }
-        else if(token.contains("imgdir") && !token.endsWith("/>")) {
-            status += 1;
-        }
-        else {
-            String d = getName(token);
-            
-            if(d.equals("id")) {
-                currentItemid = Integer.parseInt(getValue(token));
-            } else if(d.equals("count")) {
-                currentCount = Integer.parseInt(getValue(token));
-            }
-        }
-    }
-
-    private static void translateActToken(String token) {
-        String d;
-        int temp;
-
-        if(token.contains("/imgdir")) {
-            status -= 1;
-        }
-        else if(token.contains("imgdir") && !token.endsWith("/>")) {
-            if(status == 1) {           //getting QuestId
-                d = getName(token);
-                questId = Integer.parseInt(d);
-            }
-            else if(status == 2) {      //start/complete
-                d = getName(token);
-                isCompleteState = Integer.parseInt(d);
-            }
-            else if(status == 3) {
-                d = getName(token);
-
-                if(d.contains("item")) {
-                    temp = status;
-                    inspectQuestItemList(temp);
-                } else {
-                    forwardCursor(status);
+    private static int fetchQuestbook(MapleData checkData, String quest) {
+        MapleData questStartData = checkData.getChildByPath(quest).getChildByPath("0");
+        
+        MapleData startReqItemData = questStartData.getChildByPath("item");
+        if (startReqItemData != null) {
+            for (MapleData itemData : startReqItemData.getChildren()) {
+                int itemid = MapleDataTool.getInt("id", itemData, 0);
+                if (isQuestBook(itemid)) {
+                    return itemid;
                 }
             }
-
-            status += 1;
         }
+            
+        MapleData startReqQuestData = questStartData.getChildByPath("quest");
+        if (startReqQuestData != null) {
+            Set<Integer> reqQuests = new HashSet<>();
+            
+            for (MapleData questStatusData : startReqQuestData.getChildren()) {
+                int reqQuest = MapleDataTool.getInt("id", questStatusData, 0);
+                if (reqQuest > 0) {
+                    reqQuests.add(reqQuest);
+                }
+            }
+            
+            for (Integer reqQuest : reqQuests) {
+                int book = fetchQuestbook(checkData, Integer.toString(reqQuest));
+                if (book > -1) {
+                    return book;
+                }
+            }
+        }
+        
+        return -1;
     }
     
     private static void fetchSkillbooksFromQuests() {
-        String line = "";
-        int lineNumber = 0; // add line number, thanks to Alex (CanIGetaPR)
+        MapleDataProvider questDataProvider = MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/" + "Quest.wz"));
+        MapleData actData = questDataProvider.getData("Act.img");
+        MapleData checkData = questDataProvider.getData("Check.img");
         
-        try {
-            fileReader = new InputStreamReader(new FileInputStream(wzPath + "/Quest.wz/Act.img.xml"), "UTF-8");
-            bufferedReader = new BufferedReader(fileReader);
-
-            while((line = bufferedReader.readLine()) != null) {
-                lineNumber++;
-                translateActToken(line);
+        for (MapleData questData : actData.getChildren()) {
+            for (MapleData questStatusData : questData.getChildren()) {
+                for (MapleData questNodeData : questStatusData.getChildren()) {
+                    String actNodeName = questNodeData.getName();
+                    if (actNodeName.contentEquals("item")) {
+                        for (MapleData questItemData : questNodeData.getChildren()) {
+                            int itemid = MapleDataTool.getInt("id", questItemData, 0);
+                            int itemcount = MapleDataTool.getInt("count", questItemData, 0);
+                            
+                            if (isSkillBook(itemid) && itemcount > 0) {
+                                int questbook = fetchQuestbook(checkData, questData.getName());
+                                if (questbook < 0) {
+                                    foundSkillbooks.put(itemid, SkillBookEntry.QUEST);
+                                } else {
+                                    foundSkillbooks.put(itemid, SkillBookEntry.QUEST_BOOK);
+                                }
+                            }
+                        }
+                    } else if (actNodeName.contentEquals("skill")) {
+                        for (MapleData questSkillData : questNodeData.getChildren()) {
+                            int skillid = MapleDataTool.getInt("id", questSkillData, 0);
+                            if (is4thJobSkill(skillid)) {
+                                // negative itemids are skill rewards
+                                foundSkillbooks.put(-skillid, SkillBookEntry.QUEST_REWARD);
+                            }
+                        }
+                    }
+                }
             }
-
-            bufferedReader.close();
-            fileReader.close();
-        } catch(IOException ioe) {
-            System.out.println("Failed to read Quest.wz file. Line " + lineNumber + ": " + line);
-            ioe.printStackTrace();
         }
     }
     
@@ -356,6 +273,25 @@ public class MapleSkillbookInformationProvider {
     public SkillBookEntry getSkillbookAvailability(int itemid) {
         SkillBookEntry sbe = foundSkillbooks.get(itemid);
         return sbe != null ? sbe : SkillBookEntry.UNAVAILABLE;
+    }
+    
+    public List<Integer> getTeachableSkills(MapleCharacter chr) {
+        List<Integer> list = new ArrayList<>();
+        
+        for (Integer book : foundSkillbooks.keySet()) {
+            if (book >= 0) {
+                continue;
+            }
+            
+            int skillid = -book;
+            if (skillid / 10000 == chr.getJob().getId()) {
+                if (chr.getMasterLevel(skillid) == 0) {
+                    list.add(-skillid);
+                }
+            }
+        }
+        
+        return list;
     }
     
 }

@@ -145,10 +145,15 @@ public enum RecvOpcode {
     WEDDING_TALK_MORE(0x8B),
     ALLIANCE_OPERATION(0x8F),
     DENY_ALLIANCE_REQUEST(0x90),
+    OPEN_FAMILY_PEDIGREE(0x91),
     OPEN_FAMILY(0x92),
     ADD_FAMILY(0x93),
+    SEPARATE_FAMILY_BY_SENIOR(0x94),
+    SEPARATE_FAMILY_BY_JUNIOR(0x95),
     ACCEPT_FAMILY(0x96),
     USE_FAMILY(0x97),
+    CHANGE_FAMILY_MESSAGE(0x98),
+    FAMILY_SUMMON_RESPONSE(0x99),
     BBS_OPERATION(0x9B),
     ENTER_MTS(0x9C),
     USE_SOLOMON_ITEM(0x9D),
@@ -168,8 +173,10 @@ public enum RecvOpcode {
     DAMAGE_SUMMON(0xB1),
     BEHOLDER(0xB2),
     MOVE_DRAGON(0xB5),
+    CHANGE_QUICKSLOT(0xB7),//CP_QuickslotKeyMappedModified
     MOVE_LIFE(0xBC),
     AUTO_AGGRO(0xBD),
+    FIELD_DAMAGE_MOB(0xBF),
     MOB_DAMAGE_MOB_FRIENDLY(0xC0),
     MONSTER_BOMB(0xC1),
     MOB_DAMAGE_MOB(0xC2),
@@ -196,6 +203,7 @@ public enum RecvOpcode {
     MTS_OPERATION(0xFD),
     USE_MAPLELIFE(0x100),
     USE_HAMMER(0x104);
+    
     private int code = -2;
 
     private RecvOpcode(int code) {

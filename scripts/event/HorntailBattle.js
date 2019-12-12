@@ -127,8 +127,8 @@ function scheduledTimeout(eim) {
 function changedMap(eim, player, mapid) {
     if (mapid < minMapId || mapid > maxMapId) {
 	if (eim.isExpeditionTeamLackingNow(true, minPlayers, player)) {
-            eim.dropMessage(5, "[Expedition] Either the leader has quit the expedition or there is no longer the minimum number of members required to continue it.");
             eim.unregisterPlayer(player);
+            eim.dropMessage(5, "[Expedition] Either the leader has quit the expedition or there is no longer the minimum number of members required to continue it.");
             end(eim);
         }
         else {
@@ -156,8 +156,8 @@ function playerRevive(eim, player) {
 
 function playerDisconnected(eim, player) {
     if (eim.isExpeditionTeamLackingNow(true, minPlayers, player)) {
-        eim.dropMessage(5, "[Expedition] Either the leader has quit the expedition or there is no longer the minimum number of members required to continue it.");
         eim.unregisterPlayer(player);
+        eim.dropMessage(5, "[Expedition] Either the leader has quit the expedition or there is no longer the minimum number of members required to continue it.");
         end(eim);
     }
     else {
@@ -214,7 +214,7 @@ function monsterKilled(mob, eim) {
         eim.showClearEffect(mob.getMap().getId());
         eim.clearPQ();
         
-        eim.dispatchUpdateQuestMobCount(8810018, 240060200);
+        eim.dispatchRaiseQuestMobCount(8810018, 240060200);
         mob.getMap().broadcastHorntailVictory();
     } else if(isHorntailHead(mob)) {
         var killed = eim.getIntProperty("defeatedHead");

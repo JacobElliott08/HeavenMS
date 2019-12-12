@@ -24,9 +24,8 @@ package server.quest.actions;
 import client.MapleCharacter;
 import client.MapleClient;
 import client.inventory.Item;
-import client.inventory.MapleInventory;
 import client.inventory.MapleInventoryType;
-import constants.ItemConstants;
+import constants.inventory.ItemConstants;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -35,8 +34,10 @@ import java.util.List;
 import provider.MapleData;
 import provider.MapleDataTool;
 import client.inventory.manipulator.MapleInventoryManipulator;
+import server.MapleItemInformationProvider;
 import server.quest.MapleQuest;
 import server.quest.MapleQuestActionType;
+import tools.FilePrinter;
 import tools.MaplePacketCreator;
 import tools.Pair;
 import tools.Randomizer;
@@ -60,6 +61,7 @@ public class ItemAction extends MapleQuestAction {
 		for (MapleData iEntry : data.getChildren()) {
 			int id = MapleDataTool.getInt(iEntry.getChildByPath("id"));
 			int count = MapleDataTool.getInt(iEntry.getChildByPath("count"), 1);
+                        int period = MapleDataTool.getInt(iEntry.getChildByPath("period"), 0);
 			
 			Integer prop = null;
 			MapleData propData = iEntry.getChildByPath("prop");
@@ -74,7 +76,7 @@ public class ItemAction extends MapleQuestAction {
 			if (iEntry.getChildByPath("job") != null)
 				job = MapleDataTool.getInt(iEntry.getChildByPath("job"));
 			
-			items.add(new ItemData(Integer.parseInt(iEntry.getName()), id, count, prop, job, gender));
+			items.add(new ItemData(Integer.parseInt(iEntry.getName()), id, count, prop, job, gender, period));
 		}
                 
                 Collections.sort(items, new Comparator<ItemData>()
@@ -89,8 +91,8 @@ public class ItemAction extends MapleQuestAction {
 	
 	@Override
 	public void run(MapleCharacter chr, Integer extSelection) {
-                List<Pair<Integer, Integer>> takeItem = new LinkedList<>();
-                List<Pair<Integer, Integer>> giveItem = new LinkedList<>();
+                List<ItemData> takeItem = new LinkedList<>();
+                List<ItemData> giveItem = new LinkedList<>();
             
                 int props = 0, rndProps = 0, accProps = 0;
 		for(ItemData item : items) {
@@ -107,6 +109,7 @@ public class ItemAction extends MapleQuestAction {
 			if (!canGetItem(iEntry, chr)) {
 				continue;
 			}
+                        
 			if(iEntry.getProp() != null) {
 				if(iEntry.getProp() == -1) {
 					if(extSelection != extNum++)
@@ -123,34 +126,38 @@ public class ItemAction extends MapleQuestAction {
 			}
 			
 			if(iEntry.getCount() < 0) { // Remove Item
-				takeItem.add(new Pair<>(iEntry.getId(), iEntry.getCount()));
+				takeItem.add(iEntry);
 			} else {                    // Give Item
-                                giveItem.add(new Pair<>(iEntry.getId(), iEntry.getCount()));
+                                giveItem.add(iEntry);
 			}
 		}
                 
                 // must take all needed items before giving others
                 
-                for(Pair<Integer, Integer> iPair: takeItem) {
-                        MapleInventoryType type = ItemConstants.getInventoryType(iPair.getLeft());
-                        int quantity = iPair.getRight() * -1; // Invert
+                for(ItemData iEntry: takeItem) {
+                        int itemid = iEntry.getId(), count = iEntry.getCount();
+                    
+                        MapleInventoryType type = ItemConstants.getInventoryType(itemid);
+                        int quantity = count * -1; // Invert
                         if(type.equals(MapleInventoryType.EQUIP)) {
-                                if(chr.getInventory(type).countById(iPair.getLeft()) < quantity) {
+                                if(chr.getInventory(type).countById(itemid) < quantity) {
                                         // Not enough in the equip inventoty, so check Equipped...
-                                        if(chr.getInventory(MapleInventoryType.EQUIPPED).countById(iPair.getLeft()) > quantity) {
+                                        if(chr.getInventory(MapleInventoryType.EQUIPPED).countById(itemid) > quantity) {
                                                 // Found it equipped, so change the type to equipped.
                                                 type = MapleInventoryType.EQUIPPED;
                                         }
                                 }
                         }
 
-                        MapleInventoryManipulator.removeById(chr.getClient(), type, iPair.getLeft(), quantity, true, false);
-                        chr.announce(MaplePacketCreator.getShowItemGain(iPair.getLeft(), (short) iPair.getRight().shortValue(), true));
+                        MapleInventoryManipulator.removeById(chr.getClient(), type, itemid, quantity, true, false);
+                        chr.announce(MaplePacketCreator.getShowItemGain(itemid, (short) count, true));
                 }
                 
-                for(Pair<Integer, Integer> iPair: giveItem) {
-                        MapleInventoryManipulator.addById(chr.getClient(), iPair.getLeft(), (short) iPair.getRight().shortValue(), "", -1);
-                        chr.announce(MaplePacketCreator.getShowItemGain(iPair.getLeft(), (short) iPair.getRight().shortValue(), true));
+                for(ItemData iEntry: giveItem) {
+                        int itemid = iEntry.getId(), count = iEntry.getCount(), period = iEntry.getPeriod();    // thanks Vcoc for noticing quest milestone item not getting removed from inventory after a while
+                        
+                        MapleInventoryManipulator.addById(chr.getClient(), itemid, (short) count, "", -1, period > 0 ? (System.currentTimeMillis() + period * 60 * 1000) : -1);
+                        chr.announce(MaplePacketCreator.getShowItemGain(itemid, (short) count, true));
                 }
 	}
 	
@@ -179,11 +186,11 @@ public class ItemAction extends MapleQuestAction {
                                 }
 				
 			} else {
-                                if(item.getCount() > 0) {
-                                        // Make sure they can hold the item.
-                                        Item toItem = new Item(item.getId(), (short) 0, (short) item.getCount());
-                                        gainList.add(new Pair<>(toItem, type));
-                                } else {
+                                // Make sure they can hold the item.
+                                Item toItem = new Item(item.getId(), (short) 0, (short) item.getCount());
+                                gainList.add(new Pair<>(toItem, type));
+                            
+                                if(item.getCount() < 0) {
                                         // Make sure they actually have the item.
                                         int quantity = item.getCount() * -1;
                                         
@@ -192,7 +199,7 @@ public class ItemAction extends MapleQuestAction {
                                                 if(type.equals(MapleInventoryType.EQUIP) && chr.getInventory(MapleInventoryType.EQUIPPED).countById(item.getId()) > quantity)
                                                         continue;
                                                 
-                                                chr.dropMessage(1, "Please check if you have enough items in your inventory.");
+                                                announceInventoryLimit(Collections.singletonList(item.getId()), chr);
                                                 return false;
                                         } else {
                                                 int idx = type.getType() - 1;   // more slots available from the given items!
@@ -214,7 +221,7 @@ public class ItemAction extends MapleQuestAction {
                             
                                 result = MapleInventoryManipulator.checkSpaceProgressively(c, it.getLeft().getItemId(), it.getLeft().getQuantity(), "", rndUsed.get(idx), false);
                                 if(result % 2 == 0) {
-                                    chr.dropMessage(1, "Please check if you have enough space in your inventory.");
+                                    announceInventoryLimit(Collections.singletonList(it.getLeft().getItemId()), chr);
                                     return false;
                                 }
                                 
@@ -227,12 +234,50 @@ public class ItemAction extends MapleQuestAction {
                         gainList.add(selected);
                 }
                 
-		if (!MapleInventory.checkSpots(chr, gainList, allSlotUsed, false)) {
-			chr.dropMessage(1, "Please check if you have enough space in your inventory.");
+                if (!canHold(chr, gainList)) {
+                        List<Integer> gainItemids = new LinkedList<>();
+                        for (Pair<Item, MapleInventoryType> it : gainList) {
+                                gainItemids.add(it.getLeft().getItemId());
+                        }
+                    
+			announceInventoryLimit(gainItemids, chr);
 			return false;
 		}
 		return true;
 	}
+        
+        private void announceInventoryLimit(List<Integer> itemids, MapleCharacter chr) {
+                for (Integer id : itemids) {
+                        if (MapleItemInformationProvider.getInstance().isPickupRestricted(id) && chr.haveItemWithId(id, true)) {
+                                chr.dropMessage(1, "Please check if you already have a similar one-of-a-kind item in your inventory.");
+                                return;
+                        }
+                }
+                
+                chr.dropMessage(1, "Please check if you have enough space in your inventory.");
+        }
+        
+        private boolean canHold(MapleCharacter chr, List<Pair<Item, MapleInventoryType>> gainList) {
+                List<Integer> toAddItemids = new LinkedList<>();
+                List<Integer> toAddQuantity = new LinkedList<>();
+                List<Integer> toRemoveItemids = new LinkedList<>();
+                List<Integer> toRemoveQuantity = new LinkedList<>();
+                
+                for (Pair<Item, MapleInventoryType> item : gainList) {
+                        Item it = item.getLeft();
+
+                        if (it.getQuantity() > 0) {
+                                toAddItemids.add(it.getItemId());
+                                toAddQuantity.add((int) it.getQuantity());
+                        } else {
+                                toRemoveItemids.add(it.getItemId());
+                                toRemoveQuantity.add(-1 * ((int) it.getQuantity()));
+                        }
+                }
+                
+                // thanks onechord for noticing quests unnecessarily giving out "full inventory" from quests that also takes items from players
+                return chr.getAbstractPlayerInteraction().canHoldAllAfterRemoving(toAddItemids, toAddQuantity, toRemoveItemids, toRemoveQuantity);
+        }
 	
 	private boolean canGetItem(ItemData item, MapleCharacter chr) {
 		if (item.getGender() != 2 && item.getGender() != chr.getGender()) {
@@ -250,20 +295,47 @@ public class ItemAction extends MapleQuestAction {
                     }
                     return jobFound;
                 }
-        return true;
-    }
+                
+                return true;
+        }
+        
+        public boolean restoreLostItem(MapleCharacter chr, int itemid) {
+            if (!MapleItemInformationProvider.getInstance().isQuestItem(itemid)) {
+                return false;
+            }
+            
+            // thanks danielktran (MapleHeroesD)
+            for (ItemData item : items) {
+                if (item.getId() == itemid) {
+                    int missingQty = item.getCount() - chr.countItem(itemid);
+                    if (missingQty > 0) {
+                        if (!chr.canHold(itemid, missingQty)) {
+                            chr.dropMessage(1, "Please check if you have enough space in your inventory.");
+                            return false;
+                        }
+                        
+                        MapleInventoryManipulator.addById(chr.getClient(), item.getId(), (short) missingQty);
+                        FilePrinter.print(FilePrinter.QUEST_RESTORE_ITEM, chr + " obtained " + itemid + " qty. " + missingQty + " from quest " + questID);
+                    }
+                    return true;
+                }
+            }
+            
+            return false;
+        }
 	
 	private class ItemData {
-		private final int map, id, count, job, gender;
+		private final int map, id, count, job, gender, period;
 		private final Integer prop;
 		
-		public ItemData(int map, int id, int count, Integer prop, int job, int gender) {
+		public ItemData(int map, int id, int count, Integer prop, int job, int gender, int period) {
 			this.map = map;
                         this.id = id;
 			this.count = count;
 			this.prop = prop;
 			this.job = job;
 			this.gender = gender;
+                        this.period = period;
 		}
 		
 		public int getId() {
@@ -284,6 +356,10 @@ public class ItemAction extends MapleQuestAction {
 		
 		public int getGender() {
 			return gender;
+		}
+                
+                public int getPeriod() {
+			return period;
 		}
 	}
 } 
