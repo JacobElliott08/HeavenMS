@@ -1,6 +1,6 @@
 /*
     This file is part of the HeavenMS MapleStory Server
-    Copyleft (L) 2016 - 2018 RonanLana
+    Copyleft (L) 2016 - 2019 RonanLana
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
@@ -88,7 +88,7 @@ function setEventRewards(eim) {
 function afterSetup(eim) {}
 
 function setup(channel) {
-    var eim = em.newInstance("Horntail" + channel);     // thanks Thora for reporting an issue with misleading event name here
+    var eim = em.newInstance("Horntail" + channel);     // thanks Thora (Arufonsu) for reporting an issue with misleading event name here
     eim.setProperty("canJoin", 1);
     eim.setProperty("defeatedBoss", 0);
     eim.setProperty("defeatedHead", 0);

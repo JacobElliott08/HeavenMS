@@ -1,6 +1,6 @@
 /*
     This file is part of the HeavenMS MapleStory Server
-    Copyleft (L) 2016 - 2018 RonanLana
+    Copyleft (L) 2016 - 2019 RonanLana
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
@@ -27,7 +27,7 @@ import net.server.PlayerStorage;
 /**
  * @author Ronan
  */
-public class CharacterAutosaverTask extends BaseTask implements Runnable {  // thanks Alex (Alex09) for noticing these runnable classes are tasks, "workers" runs them
+public class CharacterAutosaverTask extends BaseTask implements Runnable {  // thanks Alex09 (Alex-0000) for noticing these runnable classes are tasks, "workers" runs them
     
     @Override
     public void run() {

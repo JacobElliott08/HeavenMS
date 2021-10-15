@@ -1061,7 +1061,7 @@ public class MapleMap {
         return count;
     }
     
-    public void pickItemDrop(byte[] pickupPacket, MapleMapItem mdrop) { // mdrop must be already locked and not-pickedup checked by now
+    public void pickItemDrop(byte[] pickupPacket, MapleMapItem mdrop) { // mdrop must be already locked and not-pickedup checked at this point
         broadcastMessage(pickupPacket, mdrop.getPosition());
         
         droppedItemCount.decrementAndGet();
@@ -2017,7 +2017,7 @@ public class MapleMap {
         if (getEventInstance() != null) {
             getEventInstance().registerMonster(monster);
         }
-
+        
         spawnAndAddRangedMapObject(monster, new DelayedPacketCreation() {
             @Override
             public void sendPackets(MapleClient c) {
@@ -2108,7 +2108,7 @@ public class MapleMap {
                 c.announce(MaplePacketCreator.spawnFakeMonster(monster, 0));
             }
         });
-
+        
         spawnedMonstersOnMap.incrementAndGet();
         addSelfDestructive(monster);
     }
@@ -2116,7 +2116,6 @@ public class MapleMap {
     public void makeMonsterReal(final MapleMonster monster) {
         monster.setFake(false);
         broadcastMessage(MaplePacketCreator.makeMonsterReal(monster));
-        monster.broadcastMonsterStatus();
         monster.aggroUpdateController();
         updateBossSpawn(monster);
     }
@@ -3081,8 +3080,6 @@ public class MapleMap {
         for (MapleMapObject o : objects) {
             if (isNonRangedType(o.getType())) {
                 o.sendSpawnData(c);
-            } else if (o.getType() == MapleMapObjectType.MONSTER) {
-                ((MapleMonster) o).aggroUpdateController();
             } else if (o.getType() == MapleMapObjectType.SUMMON) {
                 MapleSummon summon = (MapleSummon) o;
                 if (summon.getOwner() == chr) {
@@ -3110,6 +3107,10 @@ public class MapleMap {
                 } else {
                     o.sendSpawnData(chr.getClient());
                     chr.addVisibleMapObject(o);
+                    
+                    if (o.getType() == MapleMapObjectType.MONSTER) {
+                        ((MapleMonster) o).aggroUpdateController();
+                    }
                 }
             }
         }
@@ -3222,7 +3223,7 @@ public class MapleMap {
     }
     
     public void removeMonsterSpawn(int mobId, int x, int y) {
-        // assumption: spawn points are identified by tuple (lifeid, x, y)
+        // assumption: spawn points identifies by tuple (lifeid, x, y)
         
         Point checkpos = calcPointBelow(new Point(x, y));
         checkpos.y -= 1;
@@ -3245,7 +3246,7 @@ public class MapleMap {
     }
     
     public void removeAllMonsterSpawn(int mobId, int x, int y) {
-        // assumption: spawn points are identified by tuple (lifeid, x, y)
+        // assumption: spawn points identifies by tuple (lifeid, x, y)
         
         Point checkpos = calcPointBelow(new Point(x, y));
         checkpos.y -= 1;

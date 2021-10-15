@@ -144,7 +144,6 @@ import client.processor.action.PetAutopotProcessor;
 import constants.game.ExpTable;
 import constants.game.GameConstants;
 import constants.inventory.ItemConstants;
-import constants.net.ServerConstants;
 import constants.skills.Aran;
 import constants.skills.Beginner;
 import constants.skills.Bishop;
@@ -2262,7 +2261,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     
     public static boolean deleteCharFromDB(MapleCharacter player, int senderAccId) {
             int cid = player.getId();
-            if(!Server.getInstance().haveCharacterEntry(senderAccId, cid)) {    // thanks zera (EpiphanyMS) for pointing a critical exploit with non-authored character deletion request
+            if(!Server.getInstance().haveCharacterEntry(senderAccId, cid)) {    // thanks zera (EpiphanyMS) for pointing a critical exploit with non-authed character deletion request
                     return false;
             }
             
@@ -2819,7 +2818,14 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
         dispelDebuff(MapleDisease.WEAKEN);
         dispelDebuff(MapleDisease.SLOW);    // thanks Conrad for noticing ZOMBIFY isn't dispellable
     }
-
+    
+    public void purgeDebuffs() {
+        dispelDebuff(MapleDisease.SEDUCE);
+        dispelDebuff(MapleDisease.ZOMBIFY);
+        dispelDebuff(MapleDisease.CONFUSE);
+        dispelDebuffs();
+    }
+    
     public void cancelAllDebuffs() {
         chrLock.lock();
         try {
@@ -3282,7 +3288,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
         }
     }
     
-    public boolean canHoldMeso(int gain) {  // thanks lucasziron found pointing out a need to check space availability for mesos on player transactions
+    public boolean canHoldMeso(int gain) {  // thanks lucasziron for pointing out a need to check space availability for mesos on player transactions
         long nextMeso = (long) meso.get() + gain;
         return nextMeso <= Integer.MAX_VALUE;
     }
@@ -3581,7 +3587,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
                 p = new Pair<>(mbs, 0);
             }
             
-            if (!isSingletonStatup(mbs)) {   // thanks resinate, Egg Daddy for pointing out morph issues when updating it along with other statups
+            if (!isSingletonStatup(mbs)) {   // thanks resinate, Daddy Egg for pointing out morph issues when updating it along with other statups
                 ret.add(p);
             } else {
                 singletonStatups.add(p);
@@ -7404,7 +7410,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
                 rs = ps.executeQuery();
                 while (rs.next()) {
                     Skill pSkill = SkillFactory.getSkill(rs.getInt("skillid"));
-                    if(pSkill != null)  // edit reported by shavit, thanks Zein for noticing an NPE here
+                    if(pSkill != null)  // edit reported by Shavit (=＾● ⋏ ●＾=), thanks Zein for noticing an NPE here
                     {
                         ret.skills.put(pSkill, new SkillEntry(rs.getByte("skilllevel"), rs.getInt("masterlevel"), rs.getLong("expiration")));
                     }
@@ -8002,7 +8008,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
                 client.announce(MaplePacketCreator.updatePlayerStats(hpmpupdate, true, this));
             }
 
-            if (oldmaxhp != localmaxhp) {   // thanks Wh1SK3Y for pointing out a deadlock occuring related to party members HP
+            if (oldmaxhp != localmaxhp) {   // thanks Wh1SK3Y (Suwaidy) for pointing out a deadlock occuring related to party members HP
                 updatePartyMemberHP();
             }
         } finally {
@@ -9420,26 +9426,27 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     }
 
     public boolean gainSlots(int type, int slots, boolean update) {
-        boolean ret = gainSlotsInternal(type, slots, update);
-        if (ret) {
+        int newLimit = gainSlotsInternal(type, slots);
+        if (newLimit != -1) {
             this.saveCharToDB();
             if (update) {
-                client.announce(MaplePacketCreator.updateInventorySlotLimit(type, slots));
+                client.announce(MaplePacketCreator.updateInventorySlotLimit(type, newLimit));
             }
+            return true;
+        } else {
+            return false;
         }
-        
-        return ret;
     }
     
-    private boolean gainSlotsInternal(int type, int slots, boolean update) {
+    private int gainSlotsInternal(int type, int slots) {
         inventory[type].lockInventory();
         try {
             if (canGainSlots(type, slots)) {
-                slots += inventory[type].getSlotLimit();
-                inventory[type].setSlotLimit(slots);
-                return true;
+                int newLimit = inventory[type].getSlotLimit() + slots;
+                inventory[type].setSlotLimit(newLimit);
+                return newLimit;
             } else {
-                return false;
+                return -1;
             }
         } finally {
             inventory[type].unlockInventory();
@@ -10044,7 +10051,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             if (!mquest.isSameDayRepeatable() && !MapleQuest.isExploitableQuest(questid)) {
                 awardQuestPoint(YamlConfig.config.server.QUEST_POINT_PER_QUEST_COMPLETE);
             }
-            qs.setCompleted(qs.getCompleted() + 1);   // count quest completed Jayd's idea
+            qs.setCompleted(qs.getCompleted() + 1);   // Jayd's idea - count quest completed
 
             announceUpdateQuest(DelayedQuestUpdate.COMPLETE, questid, qs.getCompletionTime());
             //announceUpdateQuest(DelayedQuestUpdate.INFO, qs); // happens after giving rewards, for non-next quests only
@@ -10652,6 +10659,12 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
                     client = null;  // clients still triggers handlers a few times after disconnecting
                     map = null;
                     setListener(null);
+                    
+                    // thanks Shavit for noticing a memory leak with inventories holding owner object
+                    for (int i = 0; i < inventory.length; i++) {
+                        inventory[i].dispose();
+                    }
+                    inventory = null;
                 }
             }, 5 * 60 * 1000);
         }

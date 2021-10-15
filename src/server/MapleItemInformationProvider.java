@@ -60,7 +60,6 @@ import client.inventory.Item;
 import client.inventory.MapleInventory;
 import client.inventory.MapleInventoryType;
 import client.inventory.MapleWeaponType;
-import constants.net.ServerConstants;
 import constants.inventory.EquipSlot;
 import constants.inventory.ItemConstants;
 import constants.skills.Assassin;
@@ -919,10 +918,14 @@ public class MapleItemInformationProvider {
             }
         }
     }
-
+    
+    /*
+        Issue with clean slate found thanks to Masterrulax
+        Vicious added in the clean slate check thanks to Crypter (CrypterDEV)
+    */
     public boolean canUseCleanSlate(Equip nEquip) {
         Map<String, Integer> eqstats = this.getEquipStats(nEquip.getItemId());
-        return YamlConfig.config.server.USE_ENHANCED_CLNSLATE || nEquip.getUpgradeSlots() < (byte) (eqstats.get("tuc") + nEquip.getVicious());  // issue with clean slate found thanks to Masterrulax, vicious added in the check thanks to Crypter (CrypterDEV)
+        return YamlConfig.config.server.USE_ENHANCED_CLNSLATE || nEquip.getUpgradeSlots() < (byte) (eqstats.get("tuc") + nEquip.getVicious());
     }
 
     public Item scrollEquipWithId(Item equip, int scrollId, boolean usingWhiteScroll, int vegaItemId, boolean isGM) {
@@ -1543,7 +1546,7 @@ public class MapleItemInformationProvider {
         }
     }
 
-    public Pair<Integer, List<RewardItem>> getItemReward(int itemId) {//Thanks Celino, used some stuffs :)
+    public Pair<Integer, List<RewardItem>> getItemReward(int itemId) {//Thanks Celino - used some stuffs :)
         if (rewardCache.containsKey(itemId)) {
             return rewardCache.get(itemId);
         }
@@ -2067,7 +2070,7 @@ public class MapleItemInformationProvider {
             ps.setInt(1, itemId);
             ResultSet rs = ps.executeQuery();
 
-            if(rs.next()) {   // cost is 13.6363~ % of the original value trimmed by 1000.
+            if(rs.next()) {   // cost is 13.6363~ % of the original value, trim by 1000.
                 float val = (float) (rs.getInt("req_meso") * 0.13636363636364);
                 fee = (int) (val / 1000);
                 fee *= 1000;
@@ -2113,7 +2116,7 @@ public class MapleItemInformationProvider {
             ResultSet rs = ps.executeQuery();
             while(rs.next()) {
                 String resultName = MapleMonsterInformationProvider.getInstance().getMobNameFromId(rs.getInt("dropperid"));
-                if (resultName != null) {
+                if (!resultName.isEmpty()) {
                     list.add(resultName);
                 }
             }

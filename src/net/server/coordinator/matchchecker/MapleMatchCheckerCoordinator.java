@@ -1,6 +1,6 @@
 /*
     This file is part of the HeavenMS MapleStory Server
-    Copyleft (L) 2016 - 2018 RonanLana
+    Copyleft (L) 2016 - 2019 RonanLana
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
@@ -354,7 +354,7 @@ public class MapleMatchCheckerCoordinator {
                             
                             if (mmce != null) {
                                 synchronized (mmce) {
-                                    if (!mmce.isMatchActive()) {    // thanks Alex (CanIGetaPR) for noticing that exploiters could stall on match checking
+                                    if (!mmce.isMatchActive()) {    // thanks Alex (Alex-0000) for noticing that exploiters could stall on match checking
                                         matchEntries.remove(cid);
                                         mmce = null;
                                     } else {

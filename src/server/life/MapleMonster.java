@@ -518,7 +518,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
             avgExpReward += exp;
         }
         
-        // thanks Simon for finding an issue with solo party player gaining yellow EXP when soloing mobs
+        // thanks Simon (HarborMS) for finding an issue with solo party player gaining yellow EXP when soloing mobs
         avgExpReward /= totalEntries;
         
         float varExpReward = 0.0f;
@@ -658,7 +658,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         
         double sdevRatio = calcExperienceStandDevThreshold(entryExpRatio, totalEntries);
         
-        // GMS-like player and party split calculations found thanks to Russt, KaidaTan, Dusk, AyumiLove. Src: https://ayumilovemaple.wordpress.com/maplestory_calculator_formula/
+        // GMS-like player and party split calculations found thanks to Russt, KaidaTan, Dusk, AyumiLove - src: https://ayumilovemaple.wordpress.com/maplestory_calculator_formula/
         Set<MapleCharacter> underleveled = new HashSet<>();
         for (Entry<MapleCharacter, Long> chrParticipation : soloExpDist.entrySet()) {
             float exp = chrParticipation.getValue() * expPerDmg;
@@ -1040,23 +1040,6 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         return isBoss() && getTagColor() > 0;
     }
     
-    public void broadcastMonsterStatus() {
-        Collection<MonsterStatusEffect> mseList = this.getStati().values();
-        for (MapleCharacter chr : map.getAllPlayers()) {
-            announceMonsterStatusInternal(chr.getClient(), mseList);
-        }
-    }
-    
-    public void announceMonsterStatus(MapleClient client) {
-        announceMonsterStatusInternal(client, this.getStati().values());
-    }
-    
-    public void announceMonsterStatusInternal(MapleClient client, Collection<MonsterStatusEffect> mseList) {
-        for (MonsterStatusEffect mse : mseList) {
-            client.announce(MaplePacketCreator.applyMonsterStatus(getObjectId(), mse, null));
-        }
-    }
-    
     @Override
     public void sendSpawnData(MapleClient client) {
         if (hp.get() <= 0) { // mustn't monsterLock this function
@@ -1067,8 +1050,6 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         } else {
             client.announce(MaplePacketCreator.spawnMonster(this, false));
         }
-        
-        announceMonsterStatus(client);
         
         if (hasBossHPBar()) {
             client.announceBossHpBar(this, this.hashCode(), makeBossHPBarPacket());
@@ -1934,7 +1915,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
      * Removes controllability status from the current controller of this mob.
      * 
      */
-    private Pair<MapleCharacter, Boolean> aggroRemoveController() {
+    public Pair<MapleCharacter, Boolean> aggroRemoveController() {
         MapleCharacter chrController;
         boolean hadAggro;
         
@@ -1951,7 +1932,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         }
         
         if (chrController != null) { // this can/should only happen when a hidden gm attacks the monster
-            chrController.announce(MaplePacketCreator.stopControllingMonster(this.getObjectId()));
+            if (!this.isFake()) chrController.announce(MaplePacketCreator.stopControllingMonster(this.getObjectId()));
             chrController.stopControllingMonster(this);
         }
         
@@ -2123,9 +2104,12 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         MapleCharacter chrController = this.getActiveController();
         
         if (chrController == null) {
-        this.aggroSwitchController(player, true);
+            this.aggroSwitchController(player, true);
         } else if (chrController.getId() == player.getId()) {
             this.setControllerHasAggro(true);
+            if (!YamlConfig.config.server.USE_AUTOAGGRO_NEARBY) {   // thanks Lichtmager for noticing autoaggro not updating the player properly
+                aggroMonsterControl(player.getClient(), this, true);
+            }
         }
     }
     
@@ -2149,7 +2133,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
             
             /*
             For some reason, some mobs loses aggro on controllers if other players also attacks them.
-            Maybe it was intended by Nexon to interchange controllers at every attack...
+            Maybe Nexon intended to interchange controllers at every attack...
             
             else if (chrController != null) {
                 chrController.announce(MaplePacketCreator.stopControllingMonster(this.getObjectId()));
@@ -2164,9 +2148,6 @@ public class MapleMonster extends AbstractLoadedMapleLife {
     
     private static void aggroMonsterControl(MapleClient c, MapleMonster mob, boolean immediateAggro) {
         c.announce(MaplePacketCreator.controlMonster(mob, false, immediateAggro));
-        
-        // thanks BHB for noticing puppets disrupting mobstatuses for bowmans
-        mob.announceMonsterStatus(c);
     }
     
     private void aggroRefreshPuppetVisibility(MapleCharacter chrController, MapleSummon puppet) {
@@ -2185,7 +2166,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         chrController.announce(MaplePacketCreator.removeSummon(puppet, false));
         
         MapleClient c = chrController.getClient();
-        for (MapleMonster mob : puppetControlled) {
+        for (MapleMonster mob : puppetControlled) { // thanks BHB for noticing puppets disrupting mobstatuses for bowmans
             aggroMonsterControl(c, mob, mob.isControllerKnowsAboutAggro());
         }
         chrController.announce(MaplePacketCreator.spawnSummon(puppet, false));
