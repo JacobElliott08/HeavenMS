@@ -1,6 +1,12 @@
 ﻿/logs/**
 .idea/
 
+# local/agent artifacts
+/copilot_work/
+
+# Maven output
+/target/
+
 # build files
 
 /build/
