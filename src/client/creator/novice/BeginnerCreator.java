@@ -42,7 +42,7 @@ public class BeginnerCreator extends CharacterFactory {
         }
         
         public static int createCharacter(MapleClient c, String name, int face, int hair, int skin, int top, int bottom, int shoes, int weapon, int gender) {
-                int status = createNewCharacter(c, name, face, hair, skin, gender, createRecipe(MapleJob.BEGINNER, 1, 10000, top, bottom, shoes, weapon));
+                int status = createNewCharacter(c, name, face, hair, skin, gender, createRecipe(MapleJob.BEGINNER, 1, 40000, top, bottom, shoes, weapon));
                 return status;
         }
 }

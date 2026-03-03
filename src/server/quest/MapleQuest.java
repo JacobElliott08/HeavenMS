@@ -661,21 +661,20 @@ public class MapleQuest {
 		try {
 			for(MapleData quest : questInfo.getChildren()) {
 				int questID = Integer.parseInt(quest.getName());
-				
-                                MapleQuest q = new MapleQuest(questID);
-				quests.put(questID, q);
-                                
-                                int infoNumber;
-                                
-                                infoNumber = q.getInfoNumber(Status.STARTED);
-                                if (infoNumber > 0) {
-                                        infoNumberQuests.put(infoNumber, questID);
-                                }
-                                
-                                infoNumber = q.getInfoNumber(Status.COMPLETED);
-                                if (infoNumber > 0) {
-                                        infoNumberQuests.put(infoNumber, questID);
-                                }
+                MapleQuest q = new MapleQuest(questID);
+                quests.put(questID, q);
+                
+                int infoNumber;
+                
+                infoNumber = q.getInfoNumber(Status.STARTED);
+                if (infoNumber > 0) {
+                        infoNumberQuests.put(infoNumber, questID);
+                }
+                
+                infoNumber = q.getInfoNumber(Status.COMPLETED);
+                if (infoNumber > 0) {
+                        infoNumberQuests.put(infoNumber, questID);
+                }
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();

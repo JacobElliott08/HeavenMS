@@ -1,7 +1,10 @@
 #!/bin/bash
-# launch script
-cores=$(echo cores/*)
-cores=${cores// /:}
-cp=.:dist:$cores
+set -eu
+(set -o pipefail) 2>/dev/null && set -o pipefail
 
-java -Xmx2048m -Dwzpath=wz -cp $cp net.server.Server
+if [ ! -d "target/dependency" ]; then
+	mvn -DskipTests dependency:copy-dependencies -DoutputDirectory=target/dependency
+fi
+
+cp=".:target/classes:target/dependency/*"
+java -Xmx2048m -Dwzpath=wz -cp "$cp" net.server.Server

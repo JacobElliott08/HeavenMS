@@ -27,7 +27,7 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.script.ScriptEngineFactory;
 import javax.script.ScriptEngineManager;
-import jdk.nashorn.api.scripting.NashornScriptEngine;
+import org.openjdk.nashorn.api.scripting.NashornScriptEngine;
 import scripting.AbstractScriptManager;
 import server.maps.MaplePortal;
 import tools.FilePrinter;

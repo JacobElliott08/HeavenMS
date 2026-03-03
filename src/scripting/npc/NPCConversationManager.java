@@ -154,6 +154,60 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
                 getClient().announce(MaplePacketCreator.enableActions());
 	}
 
+        /**
+         * Creates a data-oriented {@link ReplyBuilder} bound to this NPC conversation.
+         *
+         * <p>The builder writes directly into a pre-allocated byte buffer
+         * (thread-local pooled — zero heap allocation on the hot path) and
+         * serializes to a binary {@code NPC_DIALOGUE} packet on the terminal
+         * {@code send*()} call.  There are no markup strings.</p>
+         *
+         * <h3>Script usage</h3>
+         * <pre>{@code
+         * // Selection menu
+         * cm.createReply()
+         *   .text("Hello adventurer!")
+         *   .linebreak()
+         *   .selection("I want to train")
+         *   .selection("I want to shop", NpcColor.RED)
+         *   .selection("Tell me about this item", 2000005)
+         *   .selection("Epic Option", NpcColor.GREEN, 1302000)
+         *   .customTag(42, "Special Event")
+         *   .send();
+         *
+         * // Yes/No dialogue
+         * cm.createReply()
+         *   .text("Are you sure you want to reset your stats?")
+         *   .sendYesNo();
+         *
+         * // Numeric input
+         * cm.createReply()
+         *   .text("How many potions would you like?")
+         *   .sendGetNumber(1, 1, 100);
+         * }</pre>
+         *
+         * <p><strong>Pool contract:</strong> do not retain the returned instance
+         * past the {@code send*()} call; the instance is reused on the next
+         * {@code createReply()} call on the same thread.</p>
+         *
+         * @return a fresh {@link ReplyBuilder} ready for method chaining
+         */
+        public ReplyBuilder createReply() {
+                return ReplyBuilder.acquire(getClient(), npc);
+        }
+
+        /**
+         * Same as {@link #createReply()} with an explicit speaker type.
+         *
+         * @param speakerType one of {@link ReplyBuilder#SPEAKER_NPC_LEFT},
+         *                    {@link ReplyBuilder#SPEAKER_NPC_RIGHT}, or
+         *                    {@link ReplyBuilder#SPEAKER_PLAYER}
+         * @return a fresh {@link ReplyBuilder} ready for method chaining
+         */
+        public ReplyBuilder createReply(byte speakerType) {
+                return ReplyBuilder.acquire(getClient(), npc, speakerType);
+        }
+
 	public void sendNext(String text) {
 		getClient().announce(MaplePacketCreator.getNPCTalk(npc, (byte) 0, text, "00 01", (byte) 0));
 	}

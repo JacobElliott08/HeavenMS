@@ -403,9 +403,12 @@ public class MapleMonster extends AbstractLoadedMapleLife {
     public boolean damage(MapleCharacter attacker, int damage, boolean stayAlive) {
         boolean lastHit = false;
         
+        System.out.println("[MapleMonster->damage] Monster: " + this.getId() + ", OID: " + this.getObjectId() + ", Damage: " + damage + ", CurrentHP: " + hp.get() + ", Attacker: " + attacker.getName());
+        
         this.lockMonster();
         try {
             if (!this.isAlive()) {
+                System.out.println("[MapleMonster->damage] Monster " + this.getObjectId() + " is already dead, returning false");
                 return false;
             }
 
@@ -435,6 +438,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
             if (damage > 0) {
                 this.applyDamage(attacker, damage, stayAlive, false);
                 if (!this.isAlive()) {  // monster just died
+                    System.out.println("[MapleMonster->damage] Monster " + this.getObjectId() + " just died! Setting lastHit=true, HP: " + hp.get());
                     lastHit = true;
                 }
             }
@@ -442,6 +446,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
             this.unlockMonster();
         }
         
+        System.out.println("[MapleMonster->damage] Monster " + this.getObjectId() + " damage() returning lastHit=" + lastHit);
         return lastHit;
     }
     

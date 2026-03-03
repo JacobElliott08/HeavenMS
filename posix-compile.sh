@@ -1,11 +1,7 @@
 #!/bin/bash
 # compilation script for posix-compliant systems
+set -eu
+(set -o pipefail) 2>/dev/null && set -o pipefail
 
-src=src
-dist=dist
-
-cores=$(echo cores/*)
-cores=${cores// /:}
-
-mkdir -p $dist
-javac -d $dist -cp $cores $(find $src -name "*.java")
+mvn -DskipTests package
+mvn -DskipTests dependency:copy-dependencies -DoutputDirectory=target/dependency

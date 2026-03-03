@@ -51,6 +51,10 @@ public final class PlayerMapTransitionHandler extends AbstractMaplePacketHandler
             chr.announce(MaplePacketCreator.giveBuff(1, beaconid, stat));
         }
         
+        // COMMENTED OUT: This was causing duplicate SPAWN/KILL packets when player loads into map
+        // Monster spawning and controller assignment is already handled in sendObjectPlacement() during addPlayer()
+        // The below code was destroying and respawning all monsters unnecessarily
+        /*
         if (!chr.isHidden()) {  // thanks Lame (Conrad) for noticing hidden characters controlling mobs
             for (MapleMapObject mo : chr.getMap().getMonsters()) {    // thanks BHB, IxianMace, Jefe for noticing several issues regarding mob statuses (such as freeze)
                 MapleMonster m = (MapleMonster) mo;
@@ -68,5 +72,6 @@ public final class PlayerMapTransitionHandler extends AbstractMaplePacketHandler
                 }
             }
         }
+        */
     }
 }

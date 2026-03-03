@@ -1,20 +1,32 @@
-version: '3'
 services:
   maplestory:
-    network_mode: "host"
     build: .
     depends_on:
       - db
     environment:
-      WAIT_HOSTS: localhost:3306
+      WAIT_HOSTS: db:3306
+    ports:
+      - "8484:8484"
+      - "7575:7575"
+      - "7576:7576"
+      - "7577:7577"
+    volumes:
+      - ./config.docker.yaml:/mnt/config.yaml:ro
+    networks:
+      - heavenms
     
   db:
-    network_mode: "host"
     image: mysql:5.6
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_DATABASE: "heavenms"
-      MYSQL_USER: "root"
-      MYSQL_PASSWORD: ""
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    networks:
+      - heavenms
+
+networks:
+  heavenms:
+    driver: bridge

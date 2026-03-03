@@ -31,7 +31,7 @@ import java.util.Map;
 
 import javax.script.ScriptException;
 
-import jdk.nashorn.api.scripting.NashornScriptEngine;
+import org.openjdk.nashorn.api.scripting.NashornScriptEngine;
 import net.server.world.MaplePartyCharacter;
 
 import scripting.AbstractScriptManager;

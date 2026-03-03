@@ -1,6 +1,11 @@
 @echo off
 @title HeavenMS
-set PATH=C:\Program Files\Java\jdk1.8.0_211\bin;%PATH%
-set CLASSPATH=.;dist\*
+REM Prefer JAVA_HOME (e.g., JDK 21) if set
+if not "%JAVA_HOME%"=="" (
+	set "PATH=%JAVA_HOME%\bin;%PATH%"
+)
+
+REM Support both legacy NetBeans dist/ layout and Maven target/ layout
+set "CLASSPATH=.;dist\*;target\classes;target\dependency\*;target\*"
 java -Xmx2048m -Dwzpath=wz\ net.server.Server
 pause

@@ -1352,6 +1352,8 @@ public class MapleMap {
     }
     
     public boolean damageMonster(final MapleCharacter chr, final MapleMonster monster, final int damage) {
+        System.out.println("[MapleMap->damageMonster] Monster: " + monster.getId() + ", OID: " + monster.getObjectId() + ", Damage: " + damage + ", Attacker: " + chr.getName() + ", Controller: " + (monster.getController() != null ? monster.getController().getName() : "null"));
+        
         if (monster.getId() == 8800000) {
             for (MapleMapObject object : chr.getMap().getMapObjects()) {
                 MapleMonster mons = chr.getMap().getMonsterByOid(object.getObjectId());
@@ -1364,6 +1366,7 @@ public class MapleMap {
         }
         if (monster.isAlive()) {
             boolean killed = monster.damage(chr, damage, false);
+            System.out.println("[MapleMap->damageMonster] After monster.damage(), killed=" + killed);
             
             selfDestruction selfDestr = monster.getStats().selfDestruction();
             if (selfDestr != null && selfDestr.getHp() > -1) {// should work ;p
@@ -1373,10 +1376,12 @@ public class MapleMap {
                 }
             }
             if (killed) {
+                System.out.println("[MapleMap->damageMonster] Monster " + monster.getObjectId() + " was killed, calling killMonster()");
                 killMonster(monster, chr, true);
             }
             return true;
         }
+        System.out.println("[MapleMap->damageMonster] Monster " + monster.getObjectId() + " is not alive, returning false");
         return false;
     }
     
@@ -1421,12 +1426,17 @@ public class MapleMap {
     }
 
     public void killMonster(final MapleMonster monster, final MapleCharacter chr, final boolean withDrops, int animation) {
+        System.out.println("[MapleMap->killMonster] Called for monster: " + (monster != null ? monster.getObjectId() : "null") + ", animation: " + animation + ", withDrops: " + withDrops + ", killer: " + (chr != null ? chr.getName() : "null") + ", controller: " + (monster != null && monster.getController() != null ? monster.getController().getName() : "null"));
+        
         if (monster == null) {
+            System.out.println("[MapleMap->killMonster] Monster is null, returning");
             return;
         }
         
         if (chr == null) {
+            System.out.println("[MapleMap->killMonster] No killer specified for monster " + monster.getObjectId());
             if (removeKilledMonsterObject(monster)) {
+                System.out.println("[MapleMap->killMonster] Broadcasting kill packet for monster " + monster.getObjectId() + " (no killer)");
                 monster.dispatchMonsterKilled(false);
                 broadcastMessage(MaplePacketCreator.killMonster(monster.getObjectId(), animation), monster.getPosition());
                 monster.aggroSwitchController(null, false);
@@ -1506,11 +1516,15 @@ public class MapleMap {
                         }
                     }
                 } catch (Exception e) {
+                    System.out.println("[MapleMap->killMonster] Exception during kill processing for monster " + monster.getObjectId());
                     e.printStackTrace();
                 } finally {     // thanks resinate for pointing out a memory leak possibly from an exception thrown
+                    System.out.println("[MapleMap->killMonster] Broadcasting kill packet for monster " + monster.getObjectId() + " (with killer)");
                     monster.dispatchMonsterKilled(true);
                     broadcastMessage(MaplePacketCreator.killMonster(monster.getObjectId(), animation), monster.getPosition());
                 }
+            } else {
+                System.out.println("[MapleMap->killMonster] removeKilledMonsterObject returned false for monster " + monster.getObjectId());
             }
         }
     }
@@ -2914,15 +2928,25 @@ public class MapleMap {
     private void broadcastMessage(MapleCharacter source, final byte[] packet, double rangeSq, Point rangedFrom) {
         chrRLock.lock();
         try {
+            int sentCount = 0;
             for (MapleCharacter chr : characters) {
                 if (chr != source) {
                     if (rangeSq < Double.POSITIVE_INFINITY) {
                         if (rangedFrom.distanceSq(chr.getPosition()) <= rangeSq) {
                             chr.getClient().announce(packet);
+                            sentCount++;
                         }
                     } else {
                         chr.getClient().announce(packet);
+                        sentCount++;
                     }
+                }
+            }
+            // Only log for KILL_MONSTER packets (starts with opcode)
+            if (packet.length >= 2) {
+                int opcode = ((packet[0] & 0xFF) | ((packet[1] & 0xFF) << 8));
+                if (opcode == 0xED) { // KILL_MONSTER opcode
+                    System.out.println("[MapleMap->broadcastMessage] Sent KILL_MONSTER packet to " + sentCount + " players on map " + this.getId());
                 }
             }
         } finally {

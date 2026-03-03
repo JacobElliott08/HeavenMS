@@ -159,6 +159,18 @@ public enum RecvOpcode {
     USE_SOLOMON_ITEM(0x9D),
     USE_GACHA_EXP(0x9E),
     NEW_YEAR_CARD_REQUEST(0x9F),
+
+    /**
+     * New binary NPC dialogue response — replaces legacy NPC_TALK_MORE (0x3C).
+     *
+     * Client→Server format:
+     *   [u16 LE opcode=0xA0][u8 action][u8 dialogue_type]
+     *   [conditional payload — see NpcDialogueResponseHandler]
+     *
+     * Handled by NpcDialogueResponseHandler.
+     */
+    NPC_DIALOGUE_RESPONSE(0xA0), // new — binary dialogue response
+
     CASHSHOP_SURPRISE(0xA1),
     CLICK_GUIDE(0xA2),
     ARAN_COMBO_COUNTER(0xA3),

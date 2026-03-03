@@ -6,7 +6,7 @@ Besides myself for maintaining this repository, credits are to be given to Wizet
 
 Regarding distributability and usage of the code presented here: like it was before, this MapleStory server is open-source. By that, it is meant that anyone is **free to install, use, modify and redistribute the contents**, as long as there is **no kind of commercial trading involved** and the **credits to the original creators are maintained** within the codes.
 
-This server source should be built and run on Java 8 in order to run properly -- used to be ran in Java 7, thanks kolakcc (Familiar) for the Java 8 support!
+This server source should be built and run on Java 21 in order to run properly -- used to be ran in Java 7/8, thanks kolakcc (Familiar) for the Java 8 support!
 
 Consider using an IDE for setting up the server source into a project. Once mounted the project, build it on your machine and run the server using the "launch.bat" application.
 
