@@ -1,0 +1,39 @@
+{
+  "questId": 2314,
+  "info": {
+    "name": "Exploring Mushroom Forest (1)",
+    "descriptions": {
+      "notStarted": "In order to break through the barrier in Mushroom Forest and rescue the princess…",
+      "inProgress": "You should investigate the barrier inside Mushroom Forest and report the results to the #bSecretary of Domestic Affairs#k.\\r\\n#bInvestigate the barrier in Mushroom Forest : #R2314# / 1 complete.",
+      "completed": "You looked at the obstruction and saw that it was a powerful magic barrier that cannot be physically broken through. The Secretary of Magic of Mushking Empire might know what to do."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300003,
+      "minLevel": 30,
+      "startScript": "q2314s",
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2313,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300003,
+      "infoNumber": 2314,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 2315,
+      "experience": 8300
+    }
+  }
+}

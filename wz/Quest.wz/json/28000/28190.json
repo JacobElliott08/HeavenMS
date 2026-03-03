@@ -1,0 +1,61 @@
+{
+  "questId": 28190,
+  "info": {
+    "name": "Delivering the Cold Medicine",
+    "parent": "Don\u0027t Catch a Cold!",
+    "descriptions": {
+      "notStarted": "#b#@1012003:##k in #bHenesys#k says she must deliver the #rCold Medicine#k to #b#@1012100:##k. Let\u0027s go over to #b#@1012003:##k.",
+      "inProgress": "Deliver the Cold Medicine to #b#@1012100:##k in #bHenesys#k.",
+      "completed": "You have successfully helped the people of #bHenesys#k with the #rCold Medicine#k."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012003,
+      "prerequisiteQuests": [
+        {
+          "questId": 28189,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1012100,
+      "items": [
+        {
+          "itemId": 4032490
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032490
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

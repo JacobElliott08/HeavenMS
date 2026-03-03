@@ -1,0 +1,76 @@
+{
+  "questId": 28235,
+  "info": {
+    "name": "So the Demons Like Noise?",
+    "parent": "Solomon\u0027s Bow",
+    "descriptions": {
+      "notStarted": "#b#@1052001:##k in #bKerning City#k says he\u0027s discovered the location of the demon, but you can\u0027t enter without a certain item. Let\u0027s talk to him.",
+      "inProgress": "You must have a noisy instrument in order to enter the Dark Portal in #b#m104040002##k.\\nHe says he\u0027ll make you a loud instrument if you bring him the following materials.\\n\\n#rOrange Mushroom Cap#k(a drop item from #rOrange Mushrooms#k)#rOctopus Leg Stick#k(a drop item from #rOctopuses#k. There is a portal near the yellow barricade in #b#m103010000##k which leads to a hidden map where many Octopuses can be found.)\\n#rPumpkin Head#k(a drop item from #rRibbon Pigs#k that can be easily found in #b#m103020100##k.)\\n\\nReport back to #b#@1052001:##k in #bKerning City#k when you finish collecting all the items.",
+      "completed": "#b#@1052001:##k in #bKerning City#k say he has located the demon but has no way of catching him. Let\u0027s talk to him first."
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "prerequisiteQuests": [
+        {
+          "questId": 28234,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1052001,
+      "items": [
+        {
+          "itemId": 4001349,
+          "count": 2
+        },
+        {
+          "itemId": 4001350
+        },
+        {
+          "itemId": 4000001,
+          "count": 15
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1400,
+      "items": [
+        {
+          "itemId": 4000001,
+          "count": -15
+        },
+        {
+          "itemId": 4001349,
+          "count": -2
+        },
+        {
+          "itemId": 4001350,
+          "count": -1
+        },
+        {
+          "itemId": 4032482
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "questId": 28223,
+  "info": {
+    "name": "Reporting the Training Results to Athena Pierce",
+    "descriptions": {
+      "notStarted": "#b#@9201118:##k in #bHenesys#k says you must report the training results.",
+      "inProgress": "Let\u0027s go over to #b#@1012100:##k in #bHenesys#k and report the results.",
+      "completed": "You have successfully completed both training courses with #b#p9201118##k in #bHenesys#k and reported to #b#p1012100##k."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201118,
+      "prerequisiteQuests": [
+        {
+          "questId": 28221,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 28222,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1012100
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 100
+        },
+        {
+          "itemId": 2000003,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

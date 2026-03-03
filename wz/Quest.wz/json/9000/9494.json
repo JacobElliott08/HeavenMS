@@ -1,0 +1,34 @@
+{
+  "questId": 9494,
+  "info": {
+    "name": "키노코노코의 마지막 부탁",
+    "descriptions": {
+      "notStarted": "#b#p9110002##k가 부탁이 있다고 한다. 다시 말을 걸어보자.",
+      "inProgress": "세계여행가이드 #b#p9000020##k을 통해 상해로 떠나 #b#p9310011##k를 만나보자. ",
+      "completed": "#b#p9310011##k를 만났다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9110002,
+      "minLevel": 10,
+      "startDate": "2006101600",
+      "endDate": "2006110100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9493,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9310011
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 250
+    }
+  }
+}

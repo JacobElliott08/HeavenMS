@@ -1,0 +1,30 @@
+{
+  "questId": 9891,
+  "info": {
+    "name": "카산드라의 마법",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 새로운 마법을 연마했다고 하는데..",
+      "inProgress": "#b#p9010010##k의 마법으로 몬스터 사냥시 보너스 경험치를 받을 수 있다. 마법은 9월 2일까지 지속된다.\\r\\n#r#M9891##b 사냥시 추가 경험치  #r#x9891# #b획득#k ",
+      "completed": "#b#p9010010##k의 마법으로 몬스터 사냥시 보너스 경험치를 얻었다. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2007090100",
+      "endDate": "2007090300",
+      "startScript": "selectedMob2"
+    },
+    "complete": {
+      "npc": 9010010,
+      "prerequisiteQuests": [
+        {
+          "questId": 9625,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  }
+}

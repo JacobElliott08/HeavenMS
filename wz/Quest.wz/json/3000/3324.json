@@ -1,0 +1,53 @@
+{
+  "questId": 3324,
+  "info": {
+    "name": "Ericsson\u0027s Ingredients",
+    "parent": "The Fairy in Despair 1",
+    "descriptions": {
+      "inProgress": "Amazingly, #p2012018# is #p2111004#\u0027s little brother! Incredible!  But in all seriousness, #p2012018# was eager to help his sister out, and asked me to get #b10 #t4000068#s#k and #b100 #t4000060#s#k for him. Those are the main ingredients for the medicine.\\n\\n#i4000068##t4000068# #b#c4000068##k/10   \\n#i4000060##t4000060# #b#c4000060##k/100",
+      "completed": "When I gathered up all the ingredients for #p2012018#, he asked me to wait for a bit."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012018,
+      "minLevel": 45,
+      "prerequisiteQuests": [
+        {
+          "questId": 3323,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012018,
+      "items": [
+        {
+          "itemId": 4000068,
+          "count": 10
+        },
+        {
+          "itemId": 4000060,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4000060,
+          "count": -100
+        },
+        {
+          "itemId": 4000068,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

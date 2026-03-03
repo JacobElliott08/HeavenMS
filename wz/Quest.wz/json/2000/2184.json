@@ -1,0 +1,40 @@
+{
+  "questId": 2184,
+  "info": {
+    "name": "Black Bark\u0027s Worry",
+    "parent": "For Kyrin",
+    "descriptions": {
+      "notStarted": "The Nautilus\u0027 First Officer and handsome muscle man, Black Bark has a worry? I should go talk to him in the conference room of The Nautilus\u0027 central corridor. ",
+      "inProgress": "Black Bark wants to give Kyrin a pretty dress for her birthday, something that would express everyone\u0027s warmest regards toward her. He\u0027s apparently asked his old friend and dressmaker, Mrs. Ming Ming to make the dress, but she\u0027s run out of bright white material. She says that a table cloth made of junior lace is best for the dress she\u0027s making... I should gather #b40 table cloths#k and bring it to #bMrs. Ming Ming#k. \\n\\n#i4000035##t4000035#  #b#c4000035#/40#k",
+      "completed": "I\u0027ve collected the table cloths and have brought them to Mrs. Ming Ming. I wonder what the dress will look like!"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092006,
+      "minLevel": 30
+    },
+    "complete": {
+      "npc": 1012106,
+      "items": [
+        {
+          "itemId": 4000035,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 12000,
+      "items": [
+        {
+          "itemId": 4000035,
+          "count": -40
+        }
+      ]
+    }
+  }
+}

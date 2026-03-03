@@ -1,0 +1,53 @@
+{
+  "questId": 6141,
+  "info": {
+    "name": " The Night Warrior",
+    "parent": "The One Hidden in the Shadow",
+    "descriptions": {
+      "notStarted": " #p1052001# says he has a good suggestion and has offered to tell me more. Perhaps I should accept. I\u0027ve heard it is unwise to refuse a request from the Dark Lord.",
+      "inProgress": "#b#p1052001##k said he wanted me to be his disciple and has entrusted me with disciplining his other students.  He told me to defeat his other #b6 disciples#k who are disguised as him and earn their loyalty.  He told me if I\u0027m interested to come back to him and ask #bI want to know about being a Thief#k...Is this some sort of game? The Dark Lord is known for his wily tricks and deceitful ways, but also for great power...I will see where this path leads me, hopefully to a new skill! \\n\\n#o9300088# #r#a61411##k",
+      "completed": " I defeated the imposters and earned their loyalty. I made #o9300088#, a powerful Thief, into my shadow partner. I can now use him and the other five students in battle to great effect. My enemies will never know what hit them..."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "jobs": [
+        412,
+        422
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6140,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052001,
+      "monsters": [
+        {
+          "monsterId": 9300088,
+          "count": 6
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2700000,
+      "skills": [
+        {
+          "skillId": 4221004,
+          "masterLevel": 10
+        },
+        {
+          "skillId": 4121004,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

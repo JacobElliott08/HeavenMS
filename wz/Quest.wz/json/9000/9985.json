@@ -1,0 +1,36 @@
+{
+  "questId": 9985,
+  "info": {
+    "name": "Making Maple Syrup",
+    "descriptions": {
+      "notStarted": "I should go see #p9010010# and learn how to make #b#t01012098##k better.",
+      "inProgress": "#bMaple Syrup#k?  I should get this done right away.  I can enhance my Maple Leaf by doing just that?  What a bargain!.\\n\\n#i04001126# #t04001126#  #b#c04001126##k / 25",
+      "completed": "#p9010010# really made the Maple Syrup for me just like that.  I wonder if she didn\u0027t already have it pre-made.   #p9010010# said to come back in 30 minutes and she\u0027ll make Maple Syrup for me again.  \\n I did hear that Maple Syrup can corrode the #t01012098# so I should use it carefully."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 30,
+      "endDate": "2009061623",
+      "prerequisiteQuests": [
+        {
+          "questId": 9984,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q9985e",
+      "items": [
+        {
+          "itemId": 4001126,
+          "count": 25
+        }
+      ]
+    }
+  }
+}

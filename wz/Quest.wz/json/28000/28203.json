@@ -1,0 +1,46 @@
+{
+  "questId": 28203,
+  "info": {
+    "name": "Meeting Jay",
+    "parent": "The Lost Book",
+    "descriptions": {
+      "notStarted": "#b#@1052001:##k in #bKerning City#k says something has happened in #bHenesys#k.",
+      "inProgress": "You must go talk to #b#@1012109:##k in #bHenesys#k and find out what he\u0027s lost and help him retrieve it.",
+      "completed": "#b#@1012109:##k in #bHenesys#k has asked you for help in finding his Lost Book."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "prerequisiteQuests": [
+        {
+          "questId": 28202,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1012109
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

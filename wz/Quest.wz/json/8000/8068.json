@@ -1,0 +1,77 @@
+{
+  "questId": 8068,
+  "info": {
+    "name": "Ray of Light",
+    "parent": "Freed From Darkness",
+    "descriptions": {
+      "notStarted": "After handing #p9120011# the doll, #b#t04000148#k also disappeared! #b#p9120011##k said she\u0027ll tell me a story...",
+      "inProgress": "#p9120011# suggested that I go to where #b#p1012109##k is and look for it. That\u0027s true, since standing pat doesn\u0027t do anything for me. I better go back and discuss this with him.",
+      "completed": "Apparently, #t04000148# and #t04000147# were both moved by warmth and compassion #p9120011# exudes. Isn\u0027t that nice to see? Just the way #p1012109# said, if everyone genuinely loves everything around them, then there would be no monster to begin with...? Anyway, it was nice to hear that #p1012109# may be ready to write the next chapter in the book. I\u0027m can\u0027t wait~!"
+    },
+    "area": 48,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120011,
+      "minLevel": 90,
+      "prerequisiteQuests": [
+        {
+          "questId": 8067,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012109
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": 10000,
+      "items": [
+        {
+          "itemId": 2043005,
+          "probability": 1
+        },
+        {
+          "itemId": 2043205,
+          "probability": 1
+        },
+        {
+          "itemId": 2043105,
+          "probability": 1
+        },
+        {
+          "itemId": 2044305,
+          "probability": 1
+        },
+        {
+          "itemId": 2044405,
+          "probability": 1
+        },
+        {
+          "itemId": 2044505,
+          "probability": 1
+        },
+        {
+          "itemId": 2044605,
+          "probability": 1
+        },
+        {
+          "itemId": 2043305,
+          "probability": 1
+        },
+        {
+          "itemId": 2044705,
+          "probability": 1
+        },
+        {
+          "itemId": 2040809,
+          "probability": 1
+        }
+      ],
+      "experience": 33000
+    }
+  }
+}

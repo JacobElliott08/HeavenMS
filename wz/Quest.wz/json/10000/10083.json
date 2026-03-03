@@ -1,0 +1,31 @@
+{
+  "questId": 10083,
+  "info": {
+    "name": "장로스탄의 응원",
+    "descriptions": {
+      "notStarted": "장로스탄이 그린캠페인을 응원하려고 기다리고 있다.",
+      "inProgress": "장로스탄이 그린캠페인을 응원해 준다.",
+      "completed": "장로스탄이 그린캠페인을 응원해 주었다."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012003,
+      "startDate": "2008111300",
+      "endDate": "2008121900",
+      "minLevel": 13,
+      "prerequisiteQuests": [
+        {
+          "questId": 10082,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012003,
+      "endScript": "q10083e"
+    }
+  }
+}

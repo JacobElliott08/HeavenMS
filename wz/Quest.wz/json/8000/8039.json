@@ -1,0 +1,39 @@
+{
+  "questId": 8039,
+  "info": {
+    "name": "Lionel\u0027s Necklace 3",
+    "parent": "Lionel\u0027s Necklace",
+    "descriptions": {
+      "inProgress": " After handing Teo the items, he sent it to the jeweler, who made it for him fairly quickly. A beautiful necklace with Alligator and Dragon skin. I better show this to Maya now.",
+      "completed": "With the necklace, Lionel sure doesn\u0027t look like a monster now. Phew!"
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002001,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 8038,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012101
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000,
+      "items": [
+        {
+          "itemId": 2050004,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

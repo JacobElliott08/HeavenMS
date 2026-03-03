@@ -1,0 +1,45 @@
+{
+  "questId": 8292,
+  "info": {
+    "name": "A Very Merry Maplemas",
+    "descriptions": {
+      "notStarted": "Now that I have Little Suzy\u0027s Wishlist, I need to give it to either Maple Claws or O-Pongo.  I\u0027m thinking I should give it to Maple Claws; I should go see her in Happyville.",
+      "inProgress": "I can give Little Suzy\u0027s Wishlist to Maple Claws.  In doing so, she\u0027ll be counting on me to help me recover her presents for her this year.  All I have to do now is to give Maple Claws the list to cement my decision. Yes... it\u0027s going to be a very Merry Maplemas this year!",
+      "completed": "I thought that Maplemas was the better holiday so I gave #bLittle Suzy\u0027s Wishlist#k to Maple Claws.  In return, she gave me a red #bMaplemas Hat#k that I can wear proudly to show my Maplemas Spirit!  Every time I help Maple Claws recover the presents stolen by monsters, she\u0027ll reward me; I\u0027ll now be able to redeem presents with her in batches of #b10, 20, 30, 40, 60, 90, or 100#k.  I\u0027ll get different rewards at different tiers; the more presents I bring at one time, the better the rewards!  I\u0027ll need to bring her presents appropriate to my level though.\\r\\nBringing Maple Claws more presents will also help me earn #bMaplemas Spirit#k!  If the total amount of #bMaplemas Spirit#k accumulated on my world beats out the total amount of #bVersalmas Cheer#k, Maple Claws will have a special something for me at the end of the event!a"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201030,
+      "minLevel": 10,
+      "endDate": "2009012100",
+      "items": [
+        {
+          "itemId": 4031877
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201030,
+      "items": [
+        {
+          "itemId": 4031877
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031877,
+          "count": -1
+        },
+        {
+          "itemId": 1002881
+        }
+      ]
+    }
+  }
+}

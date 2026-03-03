@@ -1,0 +1,58 @@
+{
+  "questId": 3236,
+  "info": {
+    "name": "Assembling a Toy",
+    "descriptions": {
+      "notStarted": "I should go see #p2041018# at Toy Factory.",
+      "inProgress": "I ran into #bHans#k, the toy assembler at the Toy Factory in Ludibrium. He made a proposal where if I get him some parts for a toy, then he\u0027ll assemble it and make something fun out of it. This is sweet! The things I\u0027ll need are #b20 cheap batteries from the Robo, 20 metal hearts of Master Robo, and 30 cogs of Chronos#k. \\n\\n#t4000111# #b#c4000111##k/20\\n#t4000112# #b#c4000112##k/20\\n#t4000115# #b#c4000115##k/30",
+      "completed": "At the toy factory in Ludibrium, I gave Hans the parts needed to assemble a toy. Hans put together the parts and made a very unique sack out of it. He said he put some toys inside, but... I don\u0027t know, something may pop up that\u0027ll scare the daylight out of me. I better be careful with it..."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041018,
+      "minLevel": 36
+    },
+    "complete": {
+      "npc": 2041018,
+      "items": [
+        {
+          "itemId": 4000111,
+          "count": 20
+        },
+        {
+          "itemId": 4000112,
+          "count": 20
+        },
+        {
+          "itemId": 4000115,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9500,
+      "items": [
+        {
+          "itemId": 4000111,
+          "count": -20
+        },
+        {
+          "itemId": 4000112,
+          "count": -20
+        },
+        {
+          "itemId": 4000115,
+          "count": -30
+        },
+        {
+          "itemId": 2100018,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

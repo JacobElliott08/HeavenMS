@@ -1,0 +1,35 @@
+{
+  "questId": 29011,
+  "info": {
+    "name": "Minar Forest Explorer",
+    "descriptions": {
+      "notStarted": "You can earn the #b\u003cMinar Forest Explorer\u003e#k by exploring the Minar Forest.",
+      "inProgress": "#b#eTitle - Minar Forest Explorer#k#n\\r\\nExplore the 10 main regions of Minar Forest.\\r\\n#b● Status : #R27016# / 10 Completed.",
+      "completed": "You have earned the #b\u003cMinar Forest Explorer\u003e#k title for exploring the dangerous region of Minar Forest. "
+    },
+    "area": 51,
+    "medalItemId": 1142118
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 60,
+      "npc": 9000066
+    },
+    "complete": {
+      "npc": 9000040,
+      "infoNumber": 27016,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142118
+        }
+      ]
+    }
+  }
+}

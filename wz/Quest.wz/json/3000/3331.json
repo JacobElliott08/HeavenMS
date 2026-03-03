@@ -1,0 +1,45 @@
+{
+  "questId": 3331,
+  "info": {
+    "name": "Keeny\u0027s Research on D.Roid!!",
+    "descriptions": {
+      "notStarted": "#b#p2111005##k is the little Fairy who aspires to be an alchemist. Where will her studies and research take her next? I better check it out for myself!",
+      "inProgress": "#p2111005# told me she wanted to thoroughly check out the powerful #r#o7110300##k. I told her she must be really into alchemy, and #p2111005# said there\u0027s a reason for all this, and proceeded to ask me to get her #b1 #t4000362##k from #o7110300#. \\n\\n#i4000362##t4000362# #b#c4000362##k/1 ",
+      "completed": "#p2111005# told me the reason she had been studying so hard on these mechanical dolls is because of her friend #p2111003#. She wants to fulfill his wish to become a human being, and that\u0027s what\u0027s driving her into alchemy. Will #p2111005# be able to turn #p2111003# into a living, breathing human being?"
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111005,
+      "minLevel": 70,
+      "repeatIntervalMinutes": 4320,
+      "prerequisiteQuests": [
+        {
+          "questId": 3330,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "items": [
+        {
+          "itemId": 4000362
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1082222
+        },
+        {
+          "itemId": 4000362,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

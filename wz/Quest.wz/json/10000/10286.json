@@ -1,0 +1,50 @@
+{
+  "questId": 10286,
+  "info": {
+    "name": "Cassandra\u0027s Gift",
+    "descriptions": {
+      "notStarted": "Cassandra says she\u0027ll give you a pair of gloves to celebrate MapleStory\u0027s 6th Anniversary. Go talk to Cassandra to find out more.",
+      "inProgress": "Cassandra claims that she can make gloves out of maple leaves. Go collect some maple leaves!",
+      "completed": "You were told if you have Maple Gage currently equipped or in your Inventory, you can\u0027t receive it again. Failed equipment should be thrown away."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "normalAutoStart": true,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2009040900",
+      "endDate": "2009052800",
+      "minLevel": 13,
+      "items": [
+        {
+          "itemId": 1082252
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "items": [
+        {
+          "itemId": 4001126,
+          "count": 800
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1082252
+        },
+        {
+          "itemId": 4001126,
+          "count": -800
+        }
+      ]
+    }
+  }
+}

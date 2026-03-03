@@ -1,0 +1,63 @@
+{
+  "questId": 6945,
+  "info": {
+    "name": "Tatamo\u0027s Suggestion",
+    "descriptions": {
+      "notStarted": "#b#p2081500##k tells me that I should go see #b#p2081000##k in Leafre if I want to rescue #b#t4031517##k and #b#t4031518##k using my intelligence. ",
+      "inProgress": "#b#p2081000##k tells me to bring him #b#t4031348##k if I want #b#t4031517##k and #b#t4031518##k. Apparently the scroll shop clerks in the other towns know about the secret spell scroll... \\r\\n#i4031348##t4031348##k #b#c4031348#/1",
+      "completed": "I brought the #b#t4031348##k to him and received #b#t4031517##k and #b#t4031518##k in return."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081000,
+      "minLevel": 120,
+      "repeatIntervalMinutes": 0,
+      "jobs": [
+        511,
+        521
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6944,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031861
+        },
+        {
+          "itemId": 4031860
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081000,
+      "items": [
+        {
+          "itemId": 4031348
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031348,
+          "count": -1
+        },
+        {
+          "itemId": 4031860,
+          "jobRestriction": 63
+        },
+        {
+          "itemId": 4031861,
+          "jobRestriction": 63
+        }
+      ]
+    }
+  }
+}

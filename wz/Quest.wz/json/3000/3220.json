@@ -1,0 +1,121 @@
+{
+  "questId": 3220,
+  "info": {
+    "name": "Roly-Poly 10",
+    "parent": "Just Another Day at Work",
+    "descriptions": {
+      "inProgress": "I found the last Roly-Poly working hard, so I took a picture of him with the camera that #p2040015# gave me.",
+      "completed": "I took the pictures of all 10 roly-polys working at Eos Tower and gave them to #p2040015# of the Toy Factory in Ludibrium. It looks like Roly-Poly 6 is in need of help... I should check him out."
+    },
+    "area": 37,
+    "order": 11
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040013,
+      "prerequisiteQuests": [
+        {
+          "questId": 3219,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040015,
+      "items": [
+        {
+          "itemId": 4031088
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031088
+        },
+        {
+          "itemId": 4031078
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 4131000,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 4131001,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 4131002,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 4131003,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 4131004,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 4131005,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 4131006,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 4131007,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 4131008,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 4131009,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 4131010,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 4131011,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 4131012,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 4131013,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 4031078,
+          "count": -1
+        },
+        {
+          "itemId": 4031088,
+          "count": -1
+        },
+        {
+          "itemId": 4131014,
+          "jobRestriction": 32800
+        },
+        {
+          "itemId": 4131015,
+          "jobRestriction": 32800
+        }
+      ]
+    }
+  }
+}

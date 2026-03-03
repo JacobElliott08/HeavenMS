@@ -1,0 +1,50 @@
+{
+  "questId": 3237,
+  "info": {
+    "name": "Rocky\u0027s Parts",
+    "descriptions": {
+      "notStarted": "I better go talk to #p2041019#",
+      "inProgress": "I met up with #p2041019# at the Toy Factory in Ludibrium Clocktower. Rocky seemed to be swamped with work due to a sudden increase in monsters destroying parts here and there. He was worried about running out of essential parts, so he asked me if I could gather up #b50 cogs#k and #b30 screws#k. .\\n\\n#t4003000# #b#c4003000##k/30\\n#t4000115# #b#c4000115##k/50",
+      "completed": "At the Toy Factory in Ludibrium, I gave Rocky the cogs and screws needed for him to fix anything that is broken. Hopefully that was enough to undo the damages done by those pesky monsters."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041019,
+      "minLevel": 34
+    },
+    "complete": {
+      "npc": 2041019,
+      "items": [
+        {
+          "itemId": 4003000,
+          "count": 30
+        },
+        {
+          "itemId": 4000115,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 4000115,
+          "count": -50
+        },
+        {
+          "itemId": 4003000,
+          "count": -30
+        },
+        {
+          "itemId": 2002010,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

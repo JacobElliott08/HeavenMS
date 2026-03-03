@@ -1,0 +1,37 @@
+{
+  "questId": 3726,
+  "info": {
+    "name": "Policeman in Danger",
+    "parent": "Year 2099- The Harbor",
+    "descriptions": {
+      "inProgress": "The Policeman you met at Midnight Harbor in the year 2099 wants you to help him eliminate some monsters that have been taking over the harbor. Specifically, 50 Overlord A and 40 Overlord B monsters.",
+      "completed": "The Policeman you met at Midnight Harbor in the year 2099 asked you to help him eliminate some monsters, so you eliminated Overlord A and Overlord B monsters."
+    },
+    "area": 41,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082007,
+      "minLevel": 73
+    },
+    "complete": {
+      "npc": 2082007,
+      "monsters": [
+        {
+          "monsterId": 7120106,
+          "count": 50
+        },
+        {
+          "monsterId": 7120107,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 72000
+    }
+  }
+}

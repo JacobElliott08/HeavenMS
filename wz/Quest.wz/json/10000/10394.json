@@ -1,0 +1,27 @@
+{
+  "questId": 10394,
+  "info": {
+    "name": "Perfect Pitch - Level Up Event",
+    "descriptions": {
+      "notStarted": "Music is enjoyed by all people of all ages! Receive a #b#t4310000##k by leveling up during the event.",
+      "inProgress": "Music is enjoyed by all people of all ages! Receive a #b#t4310000##k by leveling up during the event.",
+      "completed": "You can take a #b#t4310000##k to #b#p9000069##k in Henesys and trade it for a rare item."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 2,
+      "startDate": "2010030300",
+      "endDate": "2010033100",
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 9010000,
+      "endScript": "q10394e"
+    }
+  }
+}

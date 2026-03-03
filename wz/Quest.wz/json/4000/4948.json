@@ -1,0 +1,60 @@
+{
+  "questId": 4948,
+  "info": {
+    "name": "A Father\u0027s Love",
+    "descriptions": {
+      "notStarted": "Jonas gave me a new doll he made to give to his daughter.  I don\u0027t think Sophilia\u0027ll like it as much her favorite one, but I guess I should give it to her anyway, per her father\u0027s wishes.",
+      "inProgress": "I gave Sophilia the new doll her father made.  It made her sad.  She asked me give Annabelia, the first doll Jonas made for her, back to her father.",
+      "completed": "Jonas was very confused by the doll I gave him. He was almost speechless. I hope he is not going any more insane than he is right now."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201078,
+      "minLevel": 15,
+      "endDate": "2007103123",
+      "prerequisiteQuests": [
+        {
+          "questId": 4947,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031768
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201077,
+      "items": [
+        {
+          "itemId": 4031811
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031811
+        },
+        {
+          "itemId": 4031768,
+          "count": -1
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 4000,
+      "items": [
+        {
+          "itemId": 4031811,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

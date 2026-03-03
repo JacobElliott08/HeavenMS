@@ -1,0 +1,50 @@
+{
+  "questId": 29301,
+  "info": {
+    "name": "Title Challenge - Ultimate Magician",
+    "descriptions": {
+      "notStarted": "#b#eTitle Challenge - Ultimate Magician#n\\n#kThe Monk of Honor, Dalair, said those who reach the highest level in their job will each receive their own unique title.  Warriors will get the title, #e#bGallant Warrior#k#n, Magicians, #e#bWiseman#k#n, Archers, #e#bLord Sniper#k#n, Thieves, #e#bLegendary Thief#k#n and Pirates, #e#bKing Pirate#k#n.  If I\u0027m qualified enough to be selected by the God of Honor, I should go see Dalair and take the test. ",
+      "inProgress": "#b#eTitle Challenge - Ultimate Magician#n\\n#k\\n - Level : #b#jlevel##k / 200",
+      "completed": "#b#eTitle Challenge - Ultimate Magician#n\\n#k\\n - Level : #b#jlevel##k / 200\\n\\nThe Monk of Honor, Dalair, presented me with the Ultimate Magician title \u0027#bWiseman#k\u0027 after I reached level 200."
+    },
+    "area": 10,
+    "medalItemId": 1142010
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000040,
+      "minLevel": 180,
+      "repeatIntervalMinutes": 0,
+      "items": [
+        {
+          "itemId": 1142010
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232
+      ]
+    },
+    "complete": {
+      "npc": 9000040
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142010,
+          "jobRestriction": 4
+        }
+      ]
+    }
+  }
+}

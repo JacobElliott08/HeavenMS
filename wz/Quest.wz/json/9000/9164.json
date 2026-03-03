@@ -1,0 +1,36 @@
+{
+  "questId": 9164,
+  "info": {
+    "name": "추석 상식 5. 음력 추석",
+    "parent": "한국의 명절 추석",
+    "descriptions": {
+      "inProgress": "음력으로 추석은 언제일까요?",
+      "completed": "추석은 음력으로 8월 15일입니다."
+    },
+    "area": 50,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2006092600",
+      "endDate": "2006101600",
+      "prerequisiteQuests": [
+        {
+          "questId": 9163,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1700,
+      "nextQuest": 9165
+    }
+  }
+}

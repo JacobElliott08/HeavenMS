@@ -1,0 +1,47 @@
+{
+  "questId": 3410,
+  "info": {
+    "name": "Hoony\u0027s Toothache",
+    "descriptions": {
+      "notStarted": "I should go see Hoony of Omega Sector.",
+      "inProgress": "I met with Hoony again at a field around Omega Sector. Hoony seemed to have an affinity for sweets, and it did not do his teeth any good. Now, he needed Pain Reliever to relieve the excruciating pain on his teeth. My job now is to get the #bPain Releiver#k from the Omega Sector, and give it to Hoony.",
+      "completed": "I purchased the #bPain Reliever#k from Dr. Pepper at the Omega Sector Silo, and gave it to Hoony, who was at a field around Omega Sector. Seriously, enough with the sweets!"
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050006,
+      "minLevel": 31,
+      "prerequisiteQuests": [
+        {
+          "questId": 3404,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050006,
+      "items": [
+        {
+          "itemId": 2002011
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6500,
+      "items": [
+        {
+          "itemId": 2002011,
+          "count": -1
+        },
+        {
+          "itemId": 2048001,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

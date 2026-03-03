@@ -1,0 +1,42 @@
+{
+  "questId": 9743,
+  "info": {
+    "name": "체프의 선물",
+    "descriptions": {
+      "notStarted": "발렌타인데이에 초콜릿을 받은 보답으로 #b#p1002006##k가 뭔가 선물을 하고 싶다고 한다. 선물이라면 사양할 필요 없겠지?",
+      "inProgress": "#p1002006#는 초콜릿에 대한 보답으로 자장면을 주겠다며 잠시만 기다려 달라고 했다.",
+      "completed": "#p1002006#가 직접 만든 자장면을 받았다. 뭔가 깊은 감정이 서린 자장면인데... 맛있게 먹을 수 있을까?"
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002006,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2008041000",
+      "endDate": "2008042100",
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 9670,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1002006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 2022156
+        }
+      ]
+    }
+  }
+}

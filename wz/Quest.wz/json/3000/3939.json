@@ -1,0 +1,51 @@
+{
+  "questId": 3939,
+  "info": {
+    "name": "Tigun\u0027s Hair",
+    "descriptions": {
+      "notStarted": "#I promised p2101010#에 to get a piece of hair from #p2101004#, so I have to get one... so how am I going to do that? I better go see #b#p2101004##k.",
+      "inProgress": "#p2101004# vehemently said no to hair, but agreed to give me a piece of his beard... as long as I give him #b1 #t4010007##k, a very expensive item...\\n\\n#i4010007# #t4010007# #b#c4010007#/1#k",
+      "completed": "I gave #p2101004# #t4010007#, and return, I got a piece of beard. It\u0027s not hair, but... it\u0027s still from the same body. I better go see #p2101010# right now."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101004,
+      "minLevel": 29,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3938,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031570
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101004,
+      "items": [
+        {
+          "itemId": 4010007
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4010007,
+          "count": -1
+        },
+        {
+          "itemId": 4031570
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "questId": 3367,
+  "info": {
+    "name": "Organizing the Lab Report",
+    "descriptions": {
+      "notStarted": "To help Yulete out, I volunteered to assist him on his research. What can I do for him? I better go see #bYulete#k.",
+      "inProgress": "Yulete asked me to organize his Lab Report. At his #bLab 2#k, there are so many reports that he had written that have been spread out all over the place, that it needs to be organized in the worst way. I better start gathering up some #breports#k. \\n\\n#i4031797##t4031797# #b#c4031797##k/20 ",
+      "completed": "I gathered up the reports and gave to Yulete. Organizing all these reports will keep Yulete busy for a while."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2112014,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3365,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2112014,
+      "items": [
+        {
+          "itemId": 4031797,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4031797,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

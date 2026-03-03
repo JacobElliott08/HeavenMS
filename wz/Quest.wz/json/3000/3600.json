@@ -1,0 +1,44 @@
+{
+  "questId": 3600,
+  "info": {
+    "name": "Tae Gong\u0027s Love For His Wife",
+    "descriptions": {
+      "notStarted": "I should go visit Tae Gong, who\u0027s gone fishing floating around in the middle of Aqua Road.",
+      "inProgress": "Tae Gong, who\u0027s in the middle of the ocean fishing on a raft, was concerned that he couldn\u0027t gather up #t4000166# for his wife. I made a deal with him to gather up #b20 #t4000166#s#k for him and deliver them to his wife #bGrandma Yeon#k at the Korean Folk Town.\\n\\n#t4000166# #b#c4000166##k/20",
+      "completed": "Tae Gong, who was busy fishing in the middle of the ocean, requested that I gather up 20 #t4000166#s and deliver them to his wife Grandma Yeon, which I did. Grandma Yeon was very thankful, yet sorry that I had to go through all kinds of trouble just for her."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060002,
+      "minLevel": 35,
+      "startDate": "2005122400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9290
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071007,
+      "items": [
+        {
+          "itemId": 4000166,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 4000166,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

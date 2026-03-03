@@ -1,0 +1,80 @@
+{
+  "questId": 3080,
+  "info": {
+    "name": "Kenta\u0027s Research 1",
+    "descriptions": {
+      "notStarted": "#p2060005#, the animal instructor at the Aquarium Zoo, has a quandary. I should go talk to him and see what\u0027s up.",
+      "inProgress": "#b#p2060005##k, a veteran animal instructor at the Aquarium Zoo, seemed to be concerned over the fact that the animals at Aqua Road have been acting strangely since the storm that occurred not too long ago. I couldn\u0027t see the difference myself, but I\u0027m sure the expert sees it differently. \\n#b#p2060005##k wanted to investigate this phenomenon, and asked me to gather up the DNA samples of the animals at Aqua Road.",
+      "completed": "I gave #p2060005#, the animal trainer at Aquarium, the DNA samples of some of the animals at Aquarium. If it\u0027s indeed true that some animals have started to act differently since the storm, then how is he going to prove it through research? I\u0027m anxious to find out..."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "minLevel": 17
+    },
+    "complete": {
+      "npc": 2060005,
+      "items": [
+        {
+          "itemId": 4031259
+        },
+        {
+          "itemId": 4031260
+        },
+        {
+          "itemId": 4031261
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2060005,
+      "minLevel": 17
+    },
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4031259,
+          "count": -1
+        },
+        {
+          "itemId": 4031260,
+          "count": -1
+        },
+        {
+          "itemId": 4031261,
+          "count": -1
+        },
+        {
+          "itemId": 2002002,
+          "count": 30,
+          "jobRestriction": 132097
+        },
+        {
+          "itemId": 2002005,
+          "count": 30,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 2002001,
+          "count": 30,
+          "jobRestriction": 1180673
+        },
+        {
+          "itemId": 2002004,
+          "count": 30,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 2002000,
+          "count": 30,
+          "jobRestriction": 49200
+        }
+      ]
+    }
+  }
+}

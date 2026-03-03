@@ -1,0 +1,44 @@
+{
+  "questId": 3948,
+  "info": {
+    "name": "Sejan\u0027s Good Habit",
+    "descriptions": {
+      "notStarted": "#b#p2101011##k in #b#m260000200##k seems to be in some kind of trouble... I should go pay him visit.",
+      "inProgress": "I met with #b#p2101011##k.  He said because he hadn\u0027t been feeling good, he didn\u0027t collect his arrows for a week and now he has lost some.  I promised #b#p2101011##k that I would collect and bring him back all his missing arrows.  But I didn\u0027t know it was that many.  How many arrows does #b#p2101011##k shoot everyday? \\n I thought I heard somewhere that they sell #b#t02060001##k in either #r#m220000000##k or #r#m222000000##k...",
+      "completed": "#b#p2101011##k started practicing shooting arrows again.   I wanted to ask #b#p2101011##k how many arrows he shoots on average in one day... but he looked so focused as he was training to fight against the queen, I felt like I shouldn\u0027t bother him."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101011,
+      "minLevel": 53,
+      "prerequisiteQuests": [
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101011,
+      "items": [
+        {
+          "itemId": 2060001,
+          "count": 10000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 2060001,
+          "count": -10000
+        }
+      ]
+    }
+  }
+}

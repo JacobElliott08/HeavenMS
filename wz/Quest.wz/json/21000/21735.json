@@ -1,0 +1,48 @@
+{
+  "questId": 21735,
+  "info": {
+    "name": "The Seal Stone of Victoria Island",
+    "descriptions": {
+      "notStarted": "You weren\u0027t able to gather any information on the #t4032323#, but #p1002104# seems strangely confident about where you stand. Go talk to #b#p1002104##k.",
+      "inProgress": "#p1002104# says that ever since he got ambushed by the #o9300346#s, he\u0027s been using any means necessary to find the Seal Stone. He feels that holding on to the Seal Stone would be dangerous, so he wants to store it in #b#m140000000##k, the deserted island. I\u0027d better deliver the #bSeal Stone to #p1201000##k.",
+      "completed": "#t4032323#. No one knows what its purpose is, but it is obvious that Black Wings want it. Desperately. You can\u0027t let that happen… Just as you\u0027re thinking this, #p1201000# hands you a new skill called the #bCombo Drain#k."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 37,
+      "startScript": "q21735s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21734,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1201000,
+      "endScript": "q21735e",
+      "items": [
+        {
+          "itemId": 4032323
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032323
+        }
+      ]
+    }
+  }
+}

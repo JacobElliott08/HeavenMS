@@ -1,0 +1,36 @@
+{
+  "questId": 21010,
+  "info": {
+    "name": "The Return of the Hero",
+    "descriptions": {
+      "notStarted": "Where is this? What\u0027s going on? You don\u0027t even know who you are.",
+      "inProgress": "#p1202001# seems to be really excited at having met a hero. A hero? Who…you? Judging from what #p1201000# is saying, maybe you really were a hero in your past life. But you have no recollection of it…",
+      "completed": "Since drinking the potion, your HP recovered quite a bit. You still don\u0027t know what\u0027s going on, but considering how nicely everyone\u0027s been treating you, they must have good intentions. You should have no trouble going back to town now..."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1202001,
+      "startScript": "q21010s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21001,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2000
+      ]
+    },
+    "complete": {
+      "npc": 1202001,
+      "endScript": "q21010e",
+      "items": [
+        {
+          "itemId": 2000022
+        }
+      ]
+    }
+  }
+}

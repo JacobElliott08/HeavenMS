@@ -1,0 +1,48 @@
+{
+  "questId": 4542,
+  "info": {
+    "name": "Too Hot!",
+    "parent": "Malek\u0027s Joy of Music",
+    "descriptions": {
+      "notStarted": "Boy... The Weather is hotter than ever!",
+      "inProgress": "#b#p9270061##k says that the villagers need 100 more of those #b#t4000465##k to cool themselves down. \\n\\n#t4000465# #r#c4000465#/100#k",
+      "completed": "The villagers are happy now to cool down with nice cool coconut juice! Cool refreshment was what exactly they needed. "
+    },
+    "area": 49,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270061,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 4541,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270061,
+      "items": [
+        {
+          "itemId": 4000465,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000,
+      "meso": 5000,
+      "fame": 5,
+      "items": [
+        {
+          "itemId": 4000465,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "questId": 2180,
+  "info": {
+    "name": "Find Fresh Milk",
+    "parent": "Special Recipe for The Nautilus",
+    "descriptions": {
+      "notStarted": "According to those who\u0027ve tasted Tangyoon\u0027s cooking, Tangyoon\u0027s dishes give you a mystical experience... They say that Tangyoon\u0027s dishes will either transport you to the happiest moment of your life or make you experience a flood-like rush of fantasy the moment you take a bite of it. What IS his secret? ",
+      "inProgress": "The secret behind Tangyoon\u0027s cooking is none other than fresh ingredients! So I guess that means that freshness is the basis of all great cooking? Tangyoon is so serious about making sure that he has the freshest ingredients that he actually raises his own milk cows on The Nautilus for milk... Now that\u0027s impressive! Tangyoon wants me to go milk the cows and bring him some milk if I want to try some of his newest dish. Well, I definitely want to try some of his food, so I guess I\u0027ll go milk the cows and fill this bottle with milk. I\u0027d better remember that I can only fill up 1/3rd of the bottle from a single mother cow.  \\n\\n#i4031850##t4031850# #b#c4031850##k / 1",
+      "completed": "Wow! I can\u0027t believe I\u0027m telling you this, but Tangyoon\u0027s dish was truly amazing. I was touched!"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092000,
+      "minLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 2179,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092000,
+      "items": [
+        {
+          "itemId": 4031850
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3600,
+      "items": [
+        {
+          "itemId": 4031850,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

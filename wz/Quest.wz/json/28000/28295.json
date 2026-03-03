@@ -1,0 +1,36 @@
+{
+  "questId": 28295,
+  "info": {
+    "name": "Witch\u0027s Dark Token",
+    "descriptions": {
+      "notStarted": "Witch Malady is in need of #bDark Tokens#k. Collect them and bring them to her.",
+      "inProgress": "Witch Malady is in need of #bDark Tokens#k. Collect them and bring them to her.",
+      "completed": "Witch Malady is in need of Dark Tokens. Collect them and bring them to her."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201142,
+      "minLevel": 11,
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 4000524
+        }
+      ],
+      "endDate": "2009112500"
+    },
+    "complete": {
+      "npc": 9201142
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 9201142
+    }
+  }
+}

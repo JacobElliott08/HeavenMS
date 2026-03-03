@@ -1,0 +1,31 @@
+{
+  "questId": 4999,
+  "info": {
+    "name": "Elpam\u0027s Gift",
+    "descriptions": {
+      "notStarted": "Looks like Elpam is celebrating a new holiday. I should head over to New Leaf City and check it out!",
+      "inProgress": "Elpam is celebrating the holiday known as Versalmas! He\u0027d like me to speak with O-Pongo, the Versalmas Mouse, and the one who gives presents. Looks like Elpam has received his gift from O-Pongo, who is also in New Leaf City, so doing this shouldn\u0027t be too tough...",
+      "completed": "Elpam offered me a slab of #bMelting Cheese#k as a Versalmas gift! Er, a strange gift but I gladly accepted this as a token of friendship! He also said that I should speak with O-Pongo to learn more about this Versal tradition..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201055,
+      "minLevel": 10,
+      "endDate": "2008011500"
+    },
+    "complete": {
+      "npc": 9201055
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2020012
+        }
+      ]
+    }
+  }
+}

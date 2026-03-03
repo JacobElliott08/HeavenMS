@@ -1,0 +1,61 @@
+{
+  "questId": 2155,
+  "info": {
+    "name": "Snail Hunt",
+    "parent": "Legend of the Snail",
+    "descriptions": {
+      "inProgress": "Wing the Fairy not only knew about Alloy, but also knew of the snail with #r#t2210006#, Mano#k. Wing offered to give Mano\u0027s location on one condition; save the #bsnail shells#k.\\n\\n#i4000019##t4000019# #b#c4000019#/10#k\\n#i4000000##t4000000# #b#c4000000#/10#k\\n#i4000016##t4000016# #b#c4000016#/10#k",
+      "completed": "Gave snail shells to Wing the Fairy and in return got information that Mano frequently appeared near the thicket around the beach. Let\u0027s go back to #bPia#k."
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032106,
+      "minLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 2154,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032106,
+      "items": [
+        {
+          "itemId": 4000000,
+          "count": 10
+        },
+        {
+          "itemId": 4000016,
+          "count": 10
+        },
+        {
+          "itemId": 4000019,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4000019,
+          "count": -10
+        },
+        {
+          "itemId": 4000016,
+          "count": -10
+        },
+        {
+          "itemId": 4000000,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

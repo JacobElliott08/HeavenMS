@@ -1,0 +1,41 @@
+{
+  "questId": 8021,
+  "info": {
+    "name": "Yoona\u0027s Quiz on Shopping 1",
+    "parent": "Yoona\u0027s Quiz on Shopping",
+    "descriptions": {
+      "notStarted": "I better solve Yoona\u0027s 1st question on shopping.",
+      "inProgress": "What\u0027s the 1st question on Yoona\u0027s Quiz on Shopping? I have to remember if I want to get it right...",
+      "completed": "I learned something about expanding the inventory through Cash Shop.  I can store extra equipment and items using this method!"
+    },
+    "area": 20,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 20100,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 8020,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 20100
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8022
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "questId": 3504,
+  "info": {
+    "name": "The One Who Walks Down Memory Lane4",
+    "descriptions": {
+      "notStarted": "I received permission to go all the way to #m270010400#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test.",
+      "inProgress": "#p2140000# said if I want to go in further, go to #b#m270010400##k and take out #r999 #o8200004##k. \\n\\n#o8200004# #r#a35041##k",
+      "completed": "I defeated 999 #o8200004#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270010500#. "
+    },
+    "area": 46
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140000,
+      "minLevel": 101,
+      "prerequisiteQuests": [
+        {
+          "questId": 3503,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2140000,
+      "monsters": [
+        {
+          "monsterId": 8200004,
+          "count": 999
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 323500,
+      "items": [
+        {
+          "itemId": 4021003
+        }
+      ]
+    }
+  }
+}

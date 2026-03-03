@@ -1,0 +1,120 @@
+{
+  "questId": 6034,
+  "info": {
+    "name": "What Meren Dropped",
+    "parent": "Meren\u0027s Third Round of Teaching!",
+    "descriptions": {
+      "notStarted": "It\u0027s been a while since I started producing items. I think I am now at the point where Meren is starting to acknowledge my item-producing skills. He seems to be devoting all of his time to creating a new item. I better stop by and say hello...",
+      "inProgress": "Meren had been devoting all of his time to creating a new item. When I visited him at Magatia, he seemed so into his work that he didn\u0027t even realize I was there, and kept on mumbling illegible things. That\u0027s whn I noticed something dropped behind his back. What is that?",
+      "completed": "I visited Meren at a lab in Magatia, but he seemed very much into his work that he didn\u0027t notice me wakling in. That\u0027s when I noticed a piece of paper dropped from behind his back. The note contained a whole bunch of notes. What does it say?"
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2110004,
+      "minLevel": 105,
+      "prerequisiteQuests": [
+        {
+          "questId": 6033,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112,
+        2200,
+        2210,
+        2211,
+        2212,
+        2213,
+        2214,
+        2215,
+        2216,
+        2217,
+        2218
+      ]
+    },
+    "complete": {
+      "npc": 2112017
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2110004,
+      "minLevel": 105,
+      "skills": [
+        {
+          "skillId": 1007
+        }
+      ]
+    },
+    "onComplete": {
+      "nextQuest": 6035
+    }
+  }
+}

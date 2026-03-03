@@ -1,0 +1,50 @@
+{
+  "questId": 2423,
+  "info": {
+    "name": "Slime\u0027s Weakness",
+    "descriptions": {
+      "notStarted": "Power B. Fore, the instructor at the training center, claims to know the weakness of Slimes. You\u0027d better go hear what he\u0027s got to say.",
+      "inProgress": "You acquired the Slime\u0027s Weakness skill. You should take advantage of the skill when hunting Slimes.\\r\\n\\r\\n#o210100# #a24231#\\r\\n\\r\\n",
+      "completed": "You used Slime\u0027s Weakness to effectively hunt Slimes."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032113,
+      "maxLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 2411,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232
+      ]
+    },
+    "complete": {
+      "npc": 1032113,
+      "monsters": [
+        {
+          "monsterId": 210100,
+          "count": 60
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

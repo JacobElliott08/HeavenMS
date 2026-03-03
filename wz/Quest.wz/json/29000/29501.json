@@ -1,0 +1,35 @@
+{
+  "questId": 29501,
+  "info": {
+    "name": "Title Challenge - Horned Tail Slayer",
+    "descriptions": {
+      "notStarted": "#b#eTitle Challenge - Horned Tail Slayer#n(Special Title)\\n#k#e#bHorned Tail Slayer#k#n, the title given to the person who slays the most Horned Tails!  Dalair said that if I hunt a Horned Tail and don\u0027t report it to him, it won\u0027t count.",
+      "inProgress": "#b#eTitle Challenge - Horned Tail Slayer#n(Special Title)\\n#k\\n - Horned Tail Hunting Record that Dalair knows about : #r#jmon##k \\n\\nAfter everyone reports to Dalair how many Horned Tails they hunted, the one who hunted the most will receive this title.  But... wait?  If I give up, I have to start all over when I try out again next time?!",
+      "completed": "#b#eTitle Challenge - Horned Tail Slayer#n(Special Title)\\n#k\\n - Horned Tail Hunting Record that Dalair knows about : #r#jmon##k \\n\\nThe honorable \u0027#bHorned Tail Slayer#k\u0027 title is given to the one person who slays the most Horned Tails."
+    },
+    "area": 51,
+    "medalItemId": 1142007
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000040,
+      "repeatIntervalMinutes": 0,
+      "startScript": "q29501s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3707,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000040,
+      "endScript": "q29501e"
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 9000040
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "questId": 2211,
+  "info": {
+    "name": "Deliver the Tattered Map to Black Bark",
+    "descriptions": {
+      "notStarted": "I wonder what it is that Bartol wants me to do?",
+      "inProgress": "I should deliver this #bTattered Map#k to #bBlack Bark#k in the #bCentral Conference Room of The Nautilus#k.",
+      "completed": "I\u0027ve delivered the Tattered Map to Black Bark. "
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092011,
+      "prerequisiteQuests": [
+        {
+          "questId": 2208,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092006,
+      "items": [
+        {
+          "itemId": 4031892
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031892
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031892,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

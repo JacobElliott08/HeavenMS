@@ -1,0 +1,33 @@
+{
+  "questId": 2279,
+  "info": {
+    "name": "Hair Stylist, Booked!",
+    "descriptions": {
+      "notStarted": "Thanks to your hard work, Marshall agreed to take the gig. Give #bLana#k the good news.",
+      "inProgress": "Lana suggested that you ask #bLala#k, Blake\u0027s number one fan, for help with the costumes.",
+      "completed": "#bLala#k was thrilled to hear that Blake was finally make a debut, and asked you to give her some time to brainstorm."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052121,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2278,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052119
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1280
+    }
+  }
+}

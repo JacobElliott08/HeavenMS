@@ -1,0 +1,45 @@
+{
+  "questId": 2005,
+  "info": {
+    "name": "Arcon\u0027s Blood?",
+    "parent": "Maya and the Weird Medicine",
+    "descriptions": {
+      "inProgress": "I found Manji at Perion. Just as I thought, he was unwilling to give away #bArcon\u0027s blood#k for free. He wants me to go to the underground tunnel in the middle of the island and gather up #b40 Charms of the Undead#k for him ... by the way, who does he think he is, treating me like that??? I\u0027m starting to regret saying yes to Maya in the first place ...",
+      "completed": "Manji asked for the Charms of the Undead in return to Arcon\u0027s Blood."
+    },
+    "area": 30,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022002,
+      "minLevel": 15,
+      "prerequisiteQuests": [
+        {
+          "questId": 2004,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022002,
+      "items": [
+        {
+          "itemId": 4000008,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 2006,
+      "items": [
+        {
+          "itemId": 4000008,
+          "count": -40
+        }
+      ]
+    }
+  }
+}

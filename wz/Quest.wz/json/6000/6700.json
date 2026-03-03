@@ -1,0 +1,29 @@
+{
+  "questId": 6700,
+  "info": {
+    "name": "The Bowman\u0027s Road",
+    "descriptions": {
+      "notStarted": " They say there\u0027s a special gift that Athena gives to those whose finished the Bowman\u0027s job.",
+      "inProgress": "They say she bids the Bowman success and gives a special gift.",
+      "completed": " Athena bid me success as a Bowman and gave me an arrow as a gift."
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012100,
+      "minLevel": 10,
+      "maxLevel": 30,
+      "endDate": "2005051102",
+      "jobs": [
+        300
+      ]
+    },
+    "complete": {
+      "npc": 1012100,
+      "endScript": "q6700e"
+    }
+  }
+}

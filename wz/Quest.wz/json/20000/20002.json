@@ -1,0 +1,60 @@
+{
+  "questId": 20002,
+  "info": {
+    "name": "Kiku the Training Instructor",
+    "descriptions": {
+      "notStarted": "As stated by #p1101002#, I\u0027ll have to first raise my level to 10 and become a Knight-in-Training. I\u0027ll have to visit #b#p1102000# the Training Instructor#k and enter the Training Forest.",
+      "inProgress": "I met with #p1102000# at the entrance of the Training Forest. According to #p1102000#, Ereve is bereft of monsters, and instead, we train against a fantasy creature created by #p1101001# called \u0027Mimi\u0027. He then proceeded to give me a potion called #p1102000#...",
+      "completed": "#p1102000# shot a warning saying that I will be having a tough time training. I better pack up the potions that he gave me and get ready for the training."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102000,
+      "startScript": "q20002s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20001,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 20010
+        },
+        {
+          "questId": 20011
+        },
+        {
+          "questId": 20012
+        },
+        {
+          "questId": 20013
+        },
+        {
+          "questId": 20014
+        },
+        {
+          "questId": 20015
+        },
+        {
+          "questId": 20016
+        },
+        {
+          "questId": 20017
+        },
+        {
+          "questId": 20018
+        },
+        {
+          "questId": 20019
+        },
+        {
+          "questId": 20020
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    }
+  }
+}

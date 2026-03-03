@@ -1,0 +1,73 @@
+{
+  "questId": 20702,
+  "info": {
+    "name": "2nd Acclimation Training",
+    "descriptions": {
+      "notStarted": "I shall receive the 2nd Acclimation Training from #b#p1102000##k.",
+      "inProgress": "This time, the monsters in question for Acclimation Training are #r#o9300272#s#k. I\u0027ll need to enter #bthe 1st Drill Hall#k and battle against #o9300272#s... \\n\\n#o9300272##r #a207021##k",
+      "completed": "I managed to defeat 30 #o9300272#s."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102000,
+      "minLevel": 10,
+      "maxLevel": 15,
+      "prerequisiteQuests": [
+        {
+          "questId": 20701,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1102000,
+      "monsters": [
+        {
+          "monsterId": 9300272,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "items": [
+        {
+          "itemId": 2000020,
+          "count": 40,
+          "jobRestriction": 64512
+        },
+        {
+          "itemId": 2000021,
+          "count": 40,
+          "jobRestriction": 64512
+        }
+      ]
+    }
+  }
+}

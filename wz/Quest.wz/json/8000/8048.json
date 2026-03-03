@@ -1,0 +1,42 @@
+{
+  "questId": 8048,
+  "info": {
+    "name": "Arwen and Ellinia",
+    "descriptions": {
+      "notStarted": "#p1032100# of #m101000000# seems to be depressed these days...",
+      "inProgress": "#p1032100# of #m101000000# was recently attacked by a monster on her way back to #m101000000#. Since then, she\u0027d been too afraid to venture outside #m101000000#, and wanted me to take care of the monsters for her. Time for a full-body workout!\\n\\n#o1110100#  #r#a80481##k",
+      "completed": "By the request of #p1032100# of #m101000000#, I took out the Green Mushrooms that were wandering around near Ellinia. In return, #p1032100# gave me an item that the fairies really cherish. It\u0027s so beautiful and sparkling that it looks like an item used to make something very special."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032100,
+      "minLevel": 15
+    },
+    "complete": {
+      "npc": 1032100,
+      "monsters": [
+        {
+          "monsterId": 9101000,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 400,
+      "items": [
+        {
+          "itemId": 4003003,
+          "probability": 1
+        },
+        {
+          "itemId": 4003002,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

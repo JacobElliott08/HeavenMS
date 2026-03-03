@@ -1,0 +1,36 @@
+{
+  "questId": 2291,
+  "info": {
+    "name": "Admission to the VIP Zone",
+    "descriptions": {
+      "notStarted": "Could it be...? Is it really the VIP Zone in Kerning Square? Rush over to #bJune#k!",
+      "inProgress": "He says he\u0027ll let you enter the VIP Zone if you bring him VIP Tickets. He says you can get them from any monster in Kerning Square.",
+      "completed": "He says the VIP Zone can be entered once every 30 minutes. Go see #bJune#k when the 30 minutes are up."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052125,
+      "repeatIntervalMinutes": 30,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2290,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052125,
+      "endScript": "q2291e",
+      "items": [
+        {
+          "itemId": 4032521,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

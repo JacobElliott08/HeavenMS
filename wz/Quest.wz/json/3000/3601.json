@@ -1,0 +1,46 @@
+{
+  "questId": 3601,
+  "info": {
+    "name": "The Brothers\u0027 Stack of Rice 1",
+    "parent": "Brotherly Love",
+    "descriptions": {
+      "notStarted": "I better go visit Chil Sung at the Korean Folk Town.",
+      "inProgress": "Chil Sung and Chil Nam are brothers living in Korean Folk Town. Chil Sung was worried that his brother Chil Nam didn\u0027t have much food with him, and asked me if I could secretly place his sack of rice on Chil Nam\u0027s stacks.",
+      "completed": "I received a sack of rice from Chil Sung, and placed it on top of a stack of rice in front of Chil Nam\u0027s house."
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071005,
+      "minLevel": 37
+    },
+    "complete": {
+      "npc": 2072001,
+      "items": [
+        {
+          "itemId": 4031229
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031229
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4031229,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

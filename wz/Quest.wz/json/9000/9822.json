@@ -1,0 +1,35 @@
+{
+  "questId": 9822,
+  "info": {
+    "name": "켄타의 부탁",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 도움이 더 필요하다고 하는데...",
+      "inProgress": "#b#p9010010##k는 아쿠아로드의 동물원에 있는 #b#p2060005##k에게서 도움이 필요하다는 연락을 받았지만 어린이날 준비로 바쁘다고 했다. #b#p9010010##k 대신 #b#p2060005##k를 도와주자. #b#p2060005##k는 아쿠아로드 어딘가에 살고 있다고 했는데..",
+      "completed": "#b#p2060005##k는 도움이 필요하다며 잠시 후 말을 걸어 달라는데..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 25,
+      "maxLevel": 70,
+      "startDate": "2007050400",
+      "endDate": "2007051400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9820,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

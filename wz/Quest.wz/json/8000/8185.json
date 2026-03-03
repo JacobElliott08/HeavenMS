@@ -1,0 +1,36 @@
+{
+  "questId": 8185,
+  "info": {
+    "name": "Pet\u0027s Evolution2",
+    "descriptions": {
+      "notStarted": "I have sufficiently proved my love for the Baby Dragon. However, Karnox stated that special materials are required in order to evolve the Dragon...",
+      "inProgress": "In order to evolve the Baby Dragon, I\u0027ll need to deliver 1 #b#t5380000##k and 10,000 mesos to Karnox.",
+      "completed": "The Baby Dragon has successfully evolved and has grown up rather nicely."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9102001,
+      "minPetTameness": 1642,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 8184,
+          "state": "COMPLETED"
+        }
+      ],
+      "petRequirement": {}
+    },
+    "complete": {
+      "minPetTameness": 1642,
+      "endScript": "q8185e",
+      "petRequirement": {},
+      "items": [
+        {
+          "itemId": 5380000
+        }
+      ]
+    }
+  }
+}

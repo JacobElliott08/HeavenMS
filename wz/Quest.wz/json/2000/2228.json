@@ -1,0 +1,29 @@
+{
+  "questId": 2228,
+  "info": {
+    "name": "Reef\u0027s Gratitude",
+    "descriptions": {
+      "notStarted": "#p1032100# and #p1032001#, #m101000000# and #o5220002#. And Reef... The air seems to have been cleared. Although Faust still loiters around the forest,  #b#p1032108##k probably feels relieved for the time being. Let\u0027s go find #p1032108#.",
+      "inProgress": "Appeased, #p1032108# thanks you for your work.",
+      "completed": "Appeased, #p1032108# thanks you for your work."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032108,
+      "startScript": "q2228s",
+      "prerequisiteQuests": [
+        {
+          "questId": 2227,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "fame": 8
+    }
+  }
+}

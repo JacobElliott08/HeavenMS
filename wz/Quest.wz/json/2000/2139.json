@@ -1,0 +1,68 @@
+{
+  "questId": 2139,
+  "info": {
+    "name": "Beginner Bowman\u0027s Last Training Session",
+    "descriptions": {
+      "notStarted": "I\u0027m starting to look like a Bowman. #b#p1012100##k wants to help me out with a final training session...",
+      "inProgress": "#p1012100# wanted to test me and asked me to get #r15 #o1210101##k. #o1210101# is much stronger than #o0210100#. I should be alert. \\n\\n#o1210101# #r#a21391##k",
+      "completed": "I\u0027m done with 15 #o1210101#. wasn\u0027t easy but successful. I became a real Bowman recognized by former Bowman trainer, Helena."
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012100,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 2138,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012100,
+      "monsters": [
+        {
+          "monsterId": 1210101,
+          "count": 15
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 840,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 50
+        },
+        {
+          "itemId": 2000003,
+          "count": 50
+        },
+        {
+          "itemId": 2030000,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

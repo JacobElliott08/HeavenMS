@@ -1,0 +1,33 @@
+{
+  "questId": 3092,
+  "info": {
+    "name": "Aqua Road Photo Album",
+    "parent": "The View of the Ocean",
+    "descriptions": {
+      "notStarted": "I heard #b#p2060006##k of Aquarium sells #t4031310#...",
+      "inProgress": "I met with #p2060006#, the person who sells #t4031310#. Unfortunately, she mentioned that the photo album is sold out. After relentlessly asking her questions about it, she relented and told me she\u0027ll give me the photo album that she kept for herself. In return, she wanted me to show her #t4031312#, since she\u0027s never seen snow before in her life. #b#t4031312##k is made by #r#p2020005##k of El Nath.",
+      "completed": "After receiving the request from #p2060006# to see the Snow Crystal Sphere, I headed off to El Nath to see #p2020005#."
+    },
+    "area": 33,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060006,
+      "prerequisiteQuests": [
+        {
+          "questId": 3091,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000
+    }
+  }
+}

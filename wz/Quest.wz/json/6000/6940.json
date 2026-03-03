@@ -1,0 +1,50 @@
+{
+  "questId": 6940,
+  "info": {
+    "name": "Pedro\u0027s Introduction",
+    "parent": "The Ultimate Stage of the Pirate",
+    "descriptions": {
+      "notStarted": "My training as a Pirate has reached its limit. Is this as far as I can go? I should go find #b#p2020013##k who helped me make my 3rd level advancement and ask about life as a Pirate.",
+      "inProgress": "#b#p2020013##k is telling me to go talk to #b#p2081500##k, the Priest of the Minar Forest, to find the secrets of the final path of a Pirate.",
+      "completed": "#b#p2081500##k is telling me that he will teach me how to gain the greatest power of the Pirate."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020013,
+      "minLevel": 120,
+      "jobs": [
+        511,
+        521
+      ]
+    },
+    "complete": {
+      "npc": 2081500,
+      "items": [
+        {
+          "itemId": 4031859
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031859
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 20000,
+      "items": [
+        {
+          "itemId": 4031859,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

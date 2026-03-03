@@ -1,0 +1,40 @@
+{
+  "questId": 21736,
+  "info": {
+    "name": "Orbis",
+    "descriptions": {
+      "notStarted": "As soon as you reach Level 45, you receive a message from #b#p1002104##k.",
+      "inProgress": "#p1002104# notifies you of some new information regarding the Black Wings and asks you to head to #b#m200000000##k to meet #b#p2012012# the fairy#k. #p2012012# will probably have some more details about this.",
+      "completed": "You met #p2012012# the fairy in #m200000000#."
+    },
+    "area": 6,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 45,
+      "normalAutoStart": true,
+      "startScript": "q21736s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21735,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2012012
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500
+    }
+  }
+}

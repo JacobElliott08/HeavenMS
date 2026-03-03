@@ -1,0 +1,45 @@
+{
+  "questId": 8570,
+  "info": {
+    "name": "Finding the Ghost",
+    "descriptions": {
+      "notStarted": "Now that I have the Chinese Firecrackers with mysterious powers laden in it, the next stop for me is to go find a town where the ghosts are, and eliminate them with the firecrackers.",
+      "inProgress": "These Chinese Firecrackers with mysterious powers have to be set off near the ghosts. These ghosts are not necessarily easy to find, so I better keep my eyes open. \\n\\n#o9500197#  #r#a85701##k",
+      "completed": "Awesome... this should bring peace and happiness to this year."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9300010,
+      "repeatIntervalMinutes": 120,
+      "startDate": "2009012100",
+      "endDate": "2009021123",
+      "items": [
+        {
+          "itemId": 2022281
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9300010,
+      "monsters": [
+        {
+          "monsterId": 9500197
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50,
+      "meso": 888,
+      "items": [
+        {
+          "itemId": 2000005,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

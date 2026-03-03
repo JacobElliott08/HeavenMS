@@ -1,0 +1,42 @@
+{
+  "questId": 3245,
+  "info": {
+    "name": "Spider\u0027s Out at Eos Tower",
+    "descriptions": {
+      "notStarted": "The King\u0027s #b#p2041022##k is in need of help. What must it be? I better head over to #b#m220000400##k.",
+      "inProgress": "#p2041022# received an order to deliver the king\u0027s royal letter to #m221000000#. The problem is, he\u0027s hesitant to go, because to go to #m221000000#, he\u0027ll have to go through Eos Tower, and is afraid of descending down the Tower because of the spiders. Oh well, I\u0027ll have to kill off #r20 #o2230103#s#k #r20 #o2230104#s#k for #p2041022#.   \\n\\n#o2230103# #r#a32451##k   \\n#o2230104# #r#a32452##k",
+      "completed": "I was able to eliminate #o2230103# and #o2230104#. I\u0027m sure now #p2041022# can do his job. I thought #p2041022# was unafraid of anything else in life besides the King. Spiders? That was unexpected..."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041022,
+      "minLevel": 28
+    },
+    "complete": {
+      "npc": 2041022,
+      "monsters": [
+        {
+          "monsterId": 2230103,
+          "count": 20
+        },
+        {
+          "monsterId": 2230104,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5600,
+      "items": [
+        {
+          "itemId": 4004004,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

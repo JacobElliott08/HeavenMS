@@ -1,0 +1,54 @@
+{
+  "questId": 4939,
+  "info": {
+    "name": "Winston\u0027s Scheme Part 1",
+    "parent": "Winston\u0027s Scheme",
+    "descriptions": {
+      "notStarted": "a",
+      "inProgress": "b",
+      "completed": "c"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022006,
+      "minLevel": 35,
+      "endDate": "2005050505",
+      "prerequisiteQuests": [
+        {
+          "questId": 2117,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4928,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022006,
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031447,
+          "count": 0
+        }
+      ]
+    }
+  }
+}

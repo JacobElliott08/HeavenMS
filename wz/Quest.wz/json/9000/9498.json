@@ -1,0 +1,34 @@
+{
+  "questId": 9498,
+  "info": {
+    "name": "양씨 아저씨의 부탁",
+    "descriptions": {
+      "notStarted": "#b#p9310010##k께 다시 말을 걸어보자.",
+      "inProgress": "#b#p9310010##k의 부탁대로 #b대만의 서문정#k으로 가서 #b#p9330005##k가 잘 지내는지 알아보자.",
+      "completed": "#b#p9330005##k를 만났다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9310010,
+      "minLevel": 10,
+      "startDate": "2006101600",
+      "endDate": "2006110100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9497,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9330005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 250
+    }
+  }
+}

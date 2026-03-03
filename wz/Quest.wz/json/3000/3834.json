@@ -1,0 +1,38 @@
+{
+  "questId": 3834,
+  "info": {
+    "name": "Eliminating the Escaped Pot",
+    "descriptions": {
+      "notStarted": "#b#p2092001##k of #b#m251000000##k seems to be concerned about something...",
+      "inProgress": "#p2092001# seemed concerned about the fact that the #o4230505#s prepared to place herbs in have instead been inhabited by an unknown creature, causing havoc around the area. He asked me to eliminate #r400 #o4230505#s#k for him.\\n\\n#o4230505# #r#a38341##k",
+      "completed": "After defeating 400 #o4230505#s, #p2092001# seemed very pleased. I still havce no idea, however, what exactly was inside it..."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2092001,
+      "minLevel": 49
+    },
+    "complete": {
+      "npc": 2092001,
+      "monsters": [
+        {
+          "monsterId": 4230505,
+          "count": 400
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 44600,
+      "items": [
+        {
+          "itemId": 2001000,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

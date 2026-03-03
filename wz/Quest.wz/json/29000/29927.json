@@ -1,0 +1,30 @@
+{
+  "questId": 29927,
+  "info": {
+    "name": "Aran of Hope",
+    "descriptions": {
+      "notStarted": "You finally managed to put the enraged Maha to sleep.",
+      "inProgress": "You finally managed to put the enraged Maha to sleep.",
+      "completed": "You finally managed to put the enraged Maha to sleep."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142132
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "normalAutoStart": true,
+      "startScript": "q29927s",
+      "minLevel": 120,
+      "items": [
+        {
+          "itemId": 1142132
+        }
+      ],
+      "jobs": [
+        2112
+      ]
+    }
+  }
+}

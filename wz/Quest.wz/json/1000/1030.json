@@ -1,0 +1,32 @@
+{
+  "questId": 1030,
+  "info": {
+    "name": "Maria\u0027s Map Reading",
+    "descriptions": {
+      "notStarted": "I\u0027m at a crossroads. Where should I go? I should\u0027ve seen the sign. Hhhhh! Let\u0027s ask Maria for help.",
+      "inProgress": "Maria showed me how to read the World Map. If I press W, the world map will appear. I can see some places that I haven\u0027t been...",
+      "completed": "I think the world map will make it easier to go around Maple World."
+    },
+    "area": 20,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2103,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 11
+    }
+  }
+}

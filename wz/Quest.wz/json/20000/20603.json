@@ -1,0 +1,52 @@
+{
+  "questId": 20603,
+  "info": {
+    "name": "A New Skill for Wind Archer",
+    "descriptions": {
+      "notStarted": "If I think long and hard about #p1101002#\u0027s words, that means I may be able to learn a new skill from #b#p1101005##k...",
+      "inProgress": "#p1101005# told me there is indeed a new skill, but it\u0027s dangerous for me to learn the skill right now based on my level. He also proceeded to challenge me to prove that I deserve to learn the new skill. To prove it, I must head over to #m130020000#, enter #bthe 3rd Drill Hall#k, and bring back #b#t4032121##k... \\n\\n#i4032122# #t4032122# #b#c4032122# / 1#k",
+      "completed": "I was able to defeat the boss monster and bring back #t4032122#. #p1101005# told me that I deserved to learn the new skill and taught me something called the Hurricane."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 100,
+      "npc": 1101005,
+      "prerequisiteQuests": [
+        {
+          "questId": 20600,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1101005,
+      "items": [
+        {
+          "itemId": 4032122
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032122,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 13111002,
+          "masterLevel": 20
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "questId": 2192,
+  "info": {
+    "name": "How to Become a Gunslinger",
+    "descriptions": {
+      "notStarted": "In order to become a Gunslinger, I must see Kyrin. ",
+      "inProgress": "Kyrin says that she wants to test how far I have gotten on my training before she will help me job advance into a Gunslinger. I must first hunt down the #rOctopirates#k and collect #b15 power wind crystals#k . I must remember to use the #rDouble Shot#k skill in order to defeat the Octopirates. ",
+      "completed": "I\u0027ve passed Kyrin\u0027s test! I can now become a Gunslinger!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 2191
+        }
+      ],
+      "jobs": [
+        500
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "items": [
+        {
+          "itemId": 4031857,
+          "count": 15
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031857,
+          "count": -15
+        }
+      ]
+    }
+  }
+}

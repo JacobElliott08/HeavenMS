@@ -1,0 +1,24 @@
+{
+  "questId": 9695,
+  "info": {
+    "name": "초성퀴즈 2월 18일",
+    "descriptions": {
+      "notStarted": "드디어 설날이다. 설날을 기념해 #b#p9010010##k가 새로운 이벤트를 준비한 것 같은데...",
+      "inProgress": "#b#p9010010##k는 초성퀴즈 이벤트를 준비했다고 한다. 쉬운 문제가 나와야 하는데...",
+      "completed": "가뿐히 문제를 풀었다. 매일 풀면 더 좋은 선물을 받을 수 있다고 했으니, 매일 참여해야겠는 걸?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "startDate": "2007021800",
+      "endDate": "2007021900"
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "quiz1_6"
+    }
+  }
+}

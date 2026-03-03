@@ -1,0 +1,46 @@
+{
+  "questId": 2153,
+  "info": {
+    "name": "The Old Snail",
+    "parent": "Legend of the Snail",
+    "descriptions": {
+      "notStarted": "Heard #bPia#k in #bHenesys#k got her hands on a strange book. What kind of book could it be? Let\u0027s go see her. ",
+      "inProgress": "The book is about the #boldest snail#k in Maple World and its #b#t2210006##k. It looks like Pia is interested in the snail\u0027s shell because it makes wishes come true. Jay is the original owner of the book; he must know something about the author. Let\u0027s go see him. \\n\\n#i4161035##t4161035# #b#c4161035#/1#k",
+      "completed": "Jay said that the author of Legend of the Snail was his great-grandfather, also known as \\n#bAlloy, Mrs. Ming Ming\u0027s grandfather, Alloy#k. "
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012102,
+      "minLevel": 20
+    },
+    "complete": {
+      "npc": 1012109,
+      "items": [
+        {
+          "itemId": 4161035
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4161035
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 5,
+      "items": [
+        {
+          "itemId": 4161035,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

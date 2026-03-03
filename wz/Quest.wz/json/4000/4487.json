@@ -1,0 +1,69 @@
+{
+  "questId": 4487,
+  "info": {
+    "name": "Delivery of Rina cleaning device",
+    "parent": "Helping to Clean Chimney ",
+    "descriptions": {
+      "inProgress": "You\u0027ve successfully borrowed a Chimney Sweep and Flashlight from #p1010100#k. Let\u0027s take them to #b#p9201030##k in Happyville.\\n\\n#t4031882# #b#c4031882##k/1 \\n#t4031883# #b#c4031883##k/1",
+      "completed": "You brought #b#p9201030##k a Chimney Sweep and a Flashlight. He thanked you and asked for permission to clean the Chimney."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1010100,
+      "minLevel": 25,
+      "endDate": "2010010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 4486,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201030,
+      "items": [
+        {
+          "itemId": 4031882
+        },
+        {
+          "itemId": 4031883
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031882,
+          "gender": 2
+        },
+        {
+          "itemId": 4031883,
+          "gender": 2
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 2000,
+      "fame": 2,
+      "items": [
+        {
+          "itemId": 4031885,
+          "gender": 2
+        },
+        {
+          "itemId": 4031883,
+          "count": -1
+        },
+        {
+          "itemId": 4031882,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "questId": 3535,
+  "info": {
+    "name": "The Goddess\u0027 Blessing",
+    "parent": "Road to Oblivion ",
+    "descriptions": {
+      "notStarted": "I received permission from #p2140000#, but once I went deep inside the temple, something was stopping me and I couldn\u0027t go further.  What did I lose this time?  I should go see #b#p2140000##k.",
+      "inProgress": "#p2140000# scratched his head and said he didn\u0027t know what happened this time.  He said unless I lost my Oblivion, which doesn\u0027t make sense, there should be no reason I can\u0027t pass through the Road to Oblivion. \\n\\nHe suggested that maybe the #bGoddess\u0027 Promise#k has been broken and told me to go see  #b#p2140003##k to check the records of the promise.",
+      "completed": "I met with #p2140003#.  He said he was waiting for me and began explaining things to me as if he already knew what happened.  He said that the blessing of the Goddess of Time, will never disappear or be taken away, and it was still valid... However, he said that there is another reason why I can\u0027t go deep into the temple."
+    },
+    "area": 46,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140000,
+      "minLevel": 120,
+      "prerequisiteQuests": [
+        {
+          "questId": 3534,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 2140003
+    }
+  }
+}

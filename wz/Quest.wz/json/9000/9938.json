@@ -1,0 +1,36 @@
+{
+  "questId": 9938,
+  "info": {
+    "name": "결정을 번복하고 싶다 ",
+    "descriptions": {
+      "notStarted": "아무래도 완벽한 인형을 만들려면 필요한 것은 방금 선택했던 것이 아닌 것 같다... #b#p2120004##k에게 말을 걸어 결정을 #b번복#k하겠다고 말하자.",
+      "inProgress": "#p2120004#는 근심어린 표정으로 원한다면 다시 한 번 선택해도 좋다고 말했다.",
+      "completed": "자, 대답을 들은 #p2120004#가 무슨 말을 하는지 들어 보자."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120004,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2008110600",
+      "startScript": "q9938s",
+      "infoNumber": 7643,
+      "infoEx": [
+        null
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 9929,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9930
+        },
+        {
+          "questId": 9931
+        }
+      ]
+    }
+  }
+}

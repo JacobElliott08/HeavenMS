@@ -1,0 +1,66 @@
+{
+  "questId": 6180,
+  "info": {
+    "name": "A Shield\u0027s True Power",
+    "descriptions": {
+      "notStarted": "I heard there\u0027s a #p2081009# in Leafre Forest that really loves shields!",
+      "inProgress": "#p2081009# gets upset at those who think the shield is weak. He developed a new shield skill and said to get used to fighting with the shield if I want to learn the new skill. He told me to hunt 200 #r#o9300096##k at the training ground he prepared...\\n\\n#o9300096# #r#a61801##k",
+      "completed": " After I got 200 #o9300096#,  #p2081009# taught me the skill known as Guardian!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081009,
+      "jobs": [
+        112,
+        122
+      ]
+    },
+    "complete": {
+      "npc": 2081009,
+      "monsters": [
+        {
+          "monsterId": 9300096,
+          "count": 200
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1092041
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 1092041
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1000000,
+      "items": [
+        {
+          "itemId": 1092042
+        },
+        {
+          "itemId": 1092041,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 1120005,
+          "masterLevel": 10
+        },
+        {
+          "skillId": 1220006,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

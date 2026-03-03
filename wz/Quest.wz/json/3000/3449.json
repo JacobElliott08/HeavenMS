@@ -1,0 +1,109 @@
+{
+  "questId": 3449,
+  "info": {
+    "name": "Mason the Collector Ⅱ",
+    "parent": "Mason the Collector",
+    "descriptions": {
+      "notStarted": "It seems like Mason the Collector has a favor to ask other than that of Aurora Marbles.",
+      "inProgress": "Mason the Collector took a look at the Aurora Marble, and wondered... how it would it look like in an original state of form? It looks like Buffy\u0027 marble have been shaped in such way through an outside force... nn#t4031195# #b#c4031195#/10#kn#t4000129# #b#c4000129#/50#k",
+      "completed": "Just like Mason the collecting fanatic wanted, I managed to gather up more Lazy Buffy marbles and Aurora marbles. In return, I received an item from him that looks quite useful..."
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041027,
+      "prerequisiteQuests": [
+        {
+          "questId": 3448,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041027,
+      "items": [
+        {
+          "itemId": 4031195,
+          "count": 10
+        },
+        {
+          "itemId": 4000129,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 38000,
+      "items": [
+        {
+          "itemId": 4000129,
+          "count": -50
+        },
+        {
+          "itemId": 4031195,
+          "count": -10
+        },
+        {
+          "itemId": 4131005,
+          "probability": 5
+        },
+        {
+          "itemId": 4131006,
+          "probability": 5
+        },
+        {
+          "itemId": 4131007,
+          "probability": 5
+        },
+        {
+          "itemId": 4131008,
+          "probability": 5
+        },
+        {
+          "itemId": 4131009,
+          "probability": 5
+        },
+        {
+          "itemId": 4131010,
+          "probability": 5
+        },
+        {
+          "itemId": 4131011,
+          "probability": 5
+        },
+        {
+          "itemId": 4131012,
+          "probability": 5
+        },
+        {
+          "itemId": 4131013,
+          "probability": 5
+        },
+        {
+          "itemId": 4131003,
+          "probability": 5
+        },
+        {
+          "itemId": 4131004,
+          "probability": 5
+        },
+        {
+          "itemId": 2070009,
+          "probability": 3
+        },
+        {
+          "itemId": 4131014,
+          "probability": 5
+        },
+        {
+          "itemId": 4131015,
+          "probability": 5
+        }
+      ]
+    }
+  }
+}

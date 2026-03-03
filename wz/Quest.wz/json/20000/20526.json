@@ -1,0 +1,64 @@
+{
+  "questId": 20526,
+  "info": {
+    "name": "Re-raising Mimiana",
+    "descriptions": {
+      "notStarted": "I lost #t1902005#. What should I do? I better talk to #b#p1102002# the Mount Trainer#k about this situation.",
+      "inProgress": "#t1902005# is a fantasy creature that naturally dissolves if it stays away from its master for a prolonged period of time. In short, if I want #t1902005# back, I\u0027ll have to #bawaken the creature from the egg stage, starting over from scratch#k. #p1102002# said he can get the Supplements for me, but I\u0027ll have to pay for it again... sigh. I\u0027ll have to rack up enough experience to awaken #t1902005# once more.",
+      "completed": "I was able to awaken #t1902005# once more. I better not lose it again."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102002,
+      "minLevel": 50,
+      "repeatIntervalMinutes": 0,
+      "startScript": "q20526s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20523,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1902005
+        },
+        {
+          "itemId": 1902006
+        },
+        {
+          "itemId": 1902007
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1102002,
+      "endScript": "q20526e"
+    }
+  }
+}

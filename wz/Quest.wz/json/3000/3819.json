@@ -1,0 +1,55 @@
+{
+  "questId": 3819,
+  "info": {
+    "name": "Making Mind \u0026 Heart Medicine2",
+    "parent": "Making Mind \u0026 Heart Medicine",
+    "descriptions": {
+      "notStarted": "Is #b#p2091002##k done with #t2022142#? I better go ask him.",
+      "inProgress": "I finally received #b#t4031553##k from #p2091002#. Yuck... it smells DISGUSTING. For #p2091001# to heat this up and drink it... wow, that\u0027s amazing. Anyway, I better give this to #b#p2091001##k immediately.",
+      "completed": "I gave #p2091001# #t2022142#, which smells so bad that a mere sniffing can certainly wake up an average person."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091002,
+      "prerequisiteQuests": [
+        {
+          "questId": 3818,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091001,
+      "items": [
+        {
+          "itemId": 4031553
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031553
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 20000,
+      "items": [
+        {
+          "itemId": 4031553,
+          "count": -1
+        },
+        {
+          "itemId": 2022142,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

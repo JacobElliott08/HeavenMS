@@ -1,0 +1,61 @@
+{
+  "questId": 6301,
+  "info": {
+    "name": " A Piece of Will",
+    "parent": "Strong Will",
+    "descriptions": {
+      "inProgress": "When I asked #p2060100# to give back the human\u0027s will power, she said she threw it away in the crack of a dimension. She said if I want it back, go to #b#m923000000##k and get it myself. She says #m923000000# can be opened by #b#t4000175##k as many times as I want....As long as I have #t4000175#, she said she would open the dimension.  Arite, well, let\u0027s get #t4000175# first then. \\r\\n#i4031472##t4031472# #b#c4031472#/40#k",
+      "completed": " #p2060100# said that the separated will power can\u0027t be simply absorbed back."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060100,
+      "jobs": [
+        112,
+        122,
+        132,
+        212,
+        222,
+        232,
+        312,
+        322,
+        412,
+        422,
+        512,
+        522,
+        2112,
+        2217,
+        2218
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6300,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060100,
+      "items": [
+        {
+          "itemId": 4031472,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200000,
+      "items": [
+        {
+          "itemId": 4031472,
+          "count": -40
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "questId": 9471,
+  "info": {
+    "name": "견우 직녀를 위한 오작교!!",
+    "descriptions": {
+      "notStarted": "오르비스의 #b#p2012012##k를 찾아가 견우직녀 이야기를 들어보자.",
+      "inProgress": "견우와 직녀가 칠석에 만날 수 있도록 다리를 만드는 것을 도와주자. \\n\\n#t4000051# #b#c4000051#/70#k\\n#t4000052# #b#c4000052#/10#k",
+      "completed": "견우와 직녀가 은하수를 건너 만나는 것을 도와 주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012012,
+      "minLevel": 41,
+      "startDate": "2006072000",
+      "endDate": "2006080100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9470
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071006,
+      "items": [
+        {
+          "itemId": 4000051,
+          "count": 70
+        },
+        {
+          "itemId": 4000052,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 12500,
+      "items": [
+        {
+          "itemId": 4000051,
+          "count": -70
+        },
+        {
+          "itemId": 4000052,
+          "count": -10
+        },
+        {
+          "itemId": 4004000,
+          "count": 4,
+          "probability": 200
+        },
+        {
+          "itemId": 4004001,
+          "count": 4,
+          "probability": 200
+        },
+        {
+          "itemId": 4004002,
+          "count": 4,
+          "probability": 200
+        },
+        {
+          "itemId": 4004003,
+          "count": 4,
+          "probability": 200
+        },
+        {
+          "itemId": 2020013,
+          "count": 30,
+          "probability": 300
+        },
+        {
+          "itemId": 2020014,
+          "count": 30,
+          "probability": 300
+        },
+        {
+          "itemId": 2040901,
+          "probability": 100
+        },
+        {
+          "itemId": 2040801,
+          "probability": 100
+        },
+        {
+          "itemId": 2041022,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "questId": 3208,
+  "info": {
+    "name": "Nemi\u0027s Second Ingredient",
+    "descriptions": {
+      "notStarted": "I should go see Nemi, who\u0027s in Ludibrium...",
+      "inProgress": "I met up with Nemi again at a small house in Ludibrium. This time, she was preparing a lunchbox for her dad, and she wanted to get him some eggs for lunch. She asked me if I could get her #b15 #t4000116#s#k by taking out the #b#o3230308#s#k. They are a bunch of pink birds that should be flying around the outer wall of Eos Tower. \\n\\n#t4000116# #b#c4000116##k/15",
+      "completed": "I got Nemi the #b#t4000116#s#k that she wanted. I wonder what kind of lunch she\u0027s making for her dad..."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041005,
+      "minLevel": 28,
+      "prerequisiteQuests": [
+        {
+          "questId": 3207,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041005,
+      "items": [
+        {
+          "itemId": 4000116,
+          "count": 15
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 4000116,
+          "count": -15
+        },
+        {
+          "itemId": 1032006
+        }
+      ]
+    }
+  }
+}

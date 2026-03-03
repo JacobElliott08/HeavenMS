@@ -1,0 +1,35 @@
+{
+  "questId": 29005,
+  "info": {
+    "name": "Beginner Explorer",
+    "descriptions": {
+      "notStarted": "Let\u0027s begin the exploration! You can earn the #b\u003cBeginner Explorer\u003e#k title by exploring the villages in Victoria.",
+      "inProgress": "#b#eTitle - Beginner Explorer#k#n\\r\\nExplore the 20 main regions of Victoria Island.\\r\\n#b● Status : #R27010# / 20 Completed#k",
+      "completed": "You have earned the #b\u003cBeginner Explorer\u003e#k title for exploring various places in Victoria Island, where all adventures begin."
+    },
+    "area": 51,
+    "medalItemId": 1142127
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 15,
+      "npc": 9000066
+    },
+    "complete": {
+      "npc": 9000040,
+      "infoNumber": 27010,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142127
+        }
+      ]
+    }
+  }
+}

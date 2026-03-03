@@ -1,0 +1,56 @@
+{
+  "questId": 3912,
+  "info": {
+    "name": "Deliver the Fancy Sword",
+    "parent": "Dancer Sword",
+    "descriptions": {
+      "inProgress": "I have received #t4031569# from #p2100001#. Unlike other swords, this blade is dull, yet light and beautifully decorated. It should look good on #p2101000#.",
+      "completed": "After receiving the new sword, #p2101000# confidently declared she will one day perform in the castle. Will all this preparation, she should be accepted into the palace..."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2100001,
+      "minLevel": 32,
+      "prerequisiteQuests": [
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3911,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101000,
+      "items": [
+        {
+          "itemId": 4031569
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031569
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 8000,
+      "fame": 3,
+      "items": [
+        {
+          "itemId": 4031569,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

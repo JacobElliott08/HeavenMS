@@ -1,0 +1,35 @@
+{
+  "questId": 3030,
+  "info": {
+    "name": "Restoring the Map",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "notStarted": "",
+      "inProgress": "So I need the #bMemory Powder#k to put the map pieces back as one...I better talk to #bCorporal Easy of Alpha Platoon#k and see if he has it. ",
+      "completed": ""
+    },
+    "area": 33,
+    "order": 27
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3029,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "nextQuest": 3031
+    }
+  }
+}

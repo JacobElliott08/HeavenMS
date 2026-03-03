@@ -1,0 +1,44 @@
+{
+  "questId": 2162,
+  "info": {
+    "name": "The Half-written Letter",
+    "parent": "The Lost Letter",
+    "descriptions": {
+      "notStarted": "I found a letter in the trash, all crumpled up in a ball. It looked like someone was in the middle of writing the letter when they decided to throw it away...It\u0027s hard to read what\u0027s written there because of all the creases everywhere, but I think I see the name \u0027\u0027Athena Pierce\u0027\u0027 faintly across the page. I wonder if I can find the person to whom this letter belongs?",
+      "inProgress": "While I was trying to read the letter, Muirhat approached me with a suspicious look and started asking why I am reading Kyrin\u0027s letter. I told him that I had found it in the trash, and to that, he asked if I would be interested in delivering Kyrin\u0027s letter to #bAthena Pierce#k in #bHenesys#k.",
+      "completed": "I\u0027ve delivered the letter to Athena Pierce as Muirhat had asked me to."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092007,
+      "minLevel": 10,
+      "items": [
+        {
+          "itemId": 4031839
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012100,
+      "items": [
+        {
+          "itemId": 4031839
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4031839,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "questId": 3090,
+  "info": {
+    "name": "The Sprayer Elma Borrowed 2",
+    "parent": "Orbis in Danger",
+    "descriptions": {
+      "inProgress": "I received #t4031308# from Elma the Housekeeper. It looks like a significant amount of time has passed since I came here. I better get back to #p2032001#\u0027s house immediately.\\n\\n#t4031308# #b#c4031308##k / 1",
+      "completed": "I received the Cloud Sprayer from Elma the Housewife. The cloud fixing should be a breeze now with this in store. This better stop the freefall of Orbis."
+    },
+    "area": 33,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012010,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3089,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2032000,
+      "items": [
+        {
+          "itemId": 4031308
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031308
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4031308,
+          "count": -1
+        },
+        {
+          "itemId": 2000002,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

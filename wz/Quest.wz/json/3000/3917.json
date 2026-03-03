@@ -1,0 +1,40 @@
+{
+  "questId": 3917,
+  "info": {
+    "name": "The Little Prince that Loves Roses",
+    "parent": "For the Little Prince",
+    "descriptions": {
+      "notStarted": "There was a strange boy in the middle of the Nihal Desert. Dressed unlike those in the desert, with a blonde hair that matched the color of the sand... I better go to #b#m260010500##k and talk to him.",
+      "inProgress": "The strange boy seemed concerned about his wilting rose. A rose? Who cares about a rose? I\u0027m more concerned about you sitting in the middle of the desert like this. Anyway, I better get him some #b#t2022155##k for his roses... but more so for him. \\n\\n#i2022155# #t2022155#  #b#c2022155##k/5",
+      "completed": "I gave the strange boy some #t2022155#. He smiled a smile of relief. Who is this kid anyway? What\u0027s he doing here?"
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101006,
+      "minLevel": 32
+    },
+    "complete": {
+      "npc": 2101006,
+      "items": [
+        {
+          "itemId": 2022155,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4200,
+      "items": [
+        {
+          "itemId": 2022155,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

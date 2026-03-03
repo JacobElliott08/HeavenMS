@@ -1,0 +1,30 @@
+{
+  "questId": 10069,
+  "info": {
+    "name": "유령 T는 누구일까?",
+    "parent": "페토와 집사 그리고 유령T",
+    "descriptions": {
+      "inProgress": "이 저택에서 나오는 모든 물건을 유령 T에게 가져다 주자!!",
+      "completed": "#b유령 T#k가 #b페토#k 였다니. 이 저택에는 무슨 일이 있었던 거지?"
+    },
+    "area": 50,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120008,
+      "startDate": "2008101600",
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10068,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120008,
+      "endScript": "q10069e"
+    }
+  }
+}

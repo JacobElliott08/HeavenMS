@@ -1,0 +1,26 @@
+{
+  "questId": 9879,
+  "info": {
+    "name": "매드의 선물",
+    "descriptions": {
+      "notStarted": "마가티아의 #b브로커 한#k이 전할 말이 있다고 하는데...",
+      "inProgress": "알카드노 협회의 #b매드#k에게 가보면 좋은 일이 있을 거라고 했다.",
+      "completed": "#b매드#k는 마가티아를 찾아온 것을 매우 고마워 하며 선물을 준비 했다고 한다. 홈페이지에서 당첨자 발표를 확인해 보도록 하자."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111007,
+      "endDate": "2007080100"
+    },
+    "complete": {
+      "npc": 2111001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

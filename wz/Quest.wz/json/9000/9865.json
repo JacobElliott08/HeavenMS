@@ -1,0 +1,110 @@
+{
+  "questId": 9865,
+  "info": {
+    "name": "친구의 선물",
+    "parent": "1000일, 그리고 그 이상의... ",
+    "descriptions": {
+      "inProgress": "1000일 기념 깃발을 준 사람. 그는 오랫동안 메이플 월드를 여행해 온 그윈이었다. 그윈은 다시 그를 찾아주어서 기쁘다며 무언가 만들어 주고 싶다고 했다. 하지만 그 재료가 약간 모자라니 재료를 구해 달라는데...  \\n\\n#i4000021# #t4000021#  #b#c4000021##k/2 \\n#i4000003# #t4000003#  #b#c4000003##k/10 ",
+      "completed": "그윈은 다시 그를 찾아주어서 기쁘다며 메이플 1500일 기념 깃발을 만들어 주었다. 메이플 월드를 1000일이나 여행하는 그가 대단하게 느껴졌었는데... 벌써 그 때부터 시간이 꽤 흘렀는걸."
+    },
+    "area": 50,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061013,
+      "startDate": "2007060600",
+      "endDate": "2007061800",
+      "prerequisiteQuests": [
+        {
+          "questId": 9864,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061013,
+      "items": [
+        {
+          "itemId": 4000003,
+          "count": 10
+        },
+        {
+          "itemId": 4000021,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1500,
+      "items": [
+        {
+          "itemId": 4000021,
+          "count": -2
+        },
+        {
+          "itemId": 4000003,
+          "count": -10
+        },
+        {
+          "itemId": 1302066,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1312033,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1322055,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1332057,
+          "jobRestriction": 16
+        },
+        {
+          "itemId": 1382040,
+          "jobRestriction": 4
+        },
+        {
+          "itemId": 1402040,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1412028,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1422032,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1442052,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1452046,
+          "jobRestriction": 8
+        },
+        {
+          "itemId": 1462041,
+          "jobRestriction": 8
+        },
+        {
+          "itemId": 1472056,
+          "jobRestriction": 16
+        },
+        {
+          "itemId": 1302067,
+          "jobRestriction": 1
+        },
+        {
+          "itemId": 1432041,
+          "jobRestriction": 2
+        }
+      ]
+    }
+  }
+}

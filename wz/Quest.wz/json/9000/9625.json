@@ -1,0 +1,23 @@
+{
+  "questId": 9625,
+  "info": {
+    "name": "초성퀴즈",
+    "descriptions": {
+      "notStarted": "초성퀴즈",
+      "inProgress": "초성퀴즈",
+      "completed": "초성퀴즈"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 200,
+      "startDate": "2030123100",
+      "endDate": "2030123101"
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  }
+}

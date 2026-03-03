@@ -1,0 +1,34 @@
+{
+  "questId": 10200,
+  "info": {
+    "name": "Richie Gold is Here",
+    "descriptions": {
+      "notStarted": "A new, potentially powerful individual is creating a lot of buzz in the world of Maple. Let\u0027s click on the light bulb that\u0027s flashing on top of the individual\u0027s head.",
+      "inProgress": "Let\u0027s try to make a deal with #b#p2084001##k.",
+      "completed": "I engaged in a transaction with #b#p2084001##k."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2084001,
+      "minLevel": 20,
+      "normalAutoStart": true,
+      "endDate": "2007112700"
+    },
+    "complete": {
+      "npc": 2084001,
+      "infoNumber": 10201,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": 5000
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "questId": 4911,
+  "info": {
+    "name": "Welcome to New Leaf City Quiz 12",
+    "parent": "Welcome to New Leaf City Quiz",
+    "descriptions": {
+      "notStarted": "Let\u0027s solve Icebyrd Slimm\u0027s 12nd Quiz.",
+      "inProgress": "What would be Icebyrd Slimm\u0027s 12nd Quiz?",
+      "completed": "3.000000"
+    },
+    "area": 45,
+    "order": 12
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201050,
+      "prerequisiteQuests": [
+        {
+          "questId": 4910,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201050
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 333,
+      "nextQuest": 4923,
+      "items": [
+        {
+          "itemId": 2000004,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

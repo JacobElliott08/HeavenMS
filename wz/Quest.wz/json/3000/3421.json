@@ -1,0 +1,51 @@
+{
+  "questId": 3421,
+  "info": {
+    "name": "Collecting Meteorite Samples",
+    "descriptions": {
+      "notStarted": "I better go see Yellow Mesoranger at the Safety Zone.",
+      "inProgress": "I met up with Yellow Mesoranger again at a field around Omega Sector. Displaying her faith in me, she requested that I pick up #b6 Meteorite Samples#k that\u0027s been scattered all over Kulan Field for further investigation. If I take care of this mission, I\u0027ll probably gain some more of her trust... \\n\\n#t4031117# #b#c4031117##k/6",
+      "completed": "I gathered up the meteorite samples from the Kulan Field and gave them to Yellow Mesoranger, who was at a field around Omega Sector. Hopefully this will jumpstart the studies."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041011,
+      "minLevel": 44,
+      "prerequisiteQuests": [
+        {
+          "questId": 3420,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041011,
+      "items": [
+        {
+          "itemId": 4031117,
+          "count": 6
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "info": "000000"
+    },
+    "onComplete": {
+      "experience": 16000,
+      "items": [
+        {
+          "itemId": 4031117,
+          "count": -6
+        },
+        {
+          "itemId": 2022003,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

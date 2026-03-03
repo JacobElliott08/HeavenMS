@@ -1,0 +1,51 @@
+{
+  "questId": 6241,
+  "info": {
+    "name": "Phoenix",
+    "parent": "The Legendary Fire Bird",
+    "descriptions": {
+      "inProgress": "#b#p2081001##k said I\u0027ll have to take the egg to the highest nest in the sky to wake up #b#t4001113##k... \\n\\n#o9300089# #r#a62411#",
+      "completed": " I battled #o9300089# after it hatched from the egg and I put him under my control."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081001,
+      "jobs": [
+        312
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6240,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4001113
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081001,
+      "monsters": [
+        {
+          "monsterId": 9300089
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200000,
+      "skills": [
+        {
+          "skillId": 3121006,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "questId": 20532,
+  "info": {
+    "name": "The Mount in Danger",
+    "parent": "The Birth of Shinjo",
+    "descriptions": {
+      "notStarted": "Let\u0027s show your #t1902006# to #b#p1102002#, the Mount Instructor#k.",
+      "inProgress": "#p1102002# says your Mount is suffering because you\u0027ve gotten too strong for your Mount to keep up. He says he can try to recover your weakened Mount by putting the Mount inside a special Incubator, which will cost you a usage fee of #b50,000,000 Mesos#k.",
+      "completed": "You have given 50,000,000 Mesos to #p1102002#."
+    },
+    "area": 15,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102002,
+      "prerequisiteQuests": [
+        {
+          "questId": 20531,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1112,
+        1212,
+        1312,
+        1412,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1102002,
+      "items": [
+        {
+          "itemId": 1902006
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -50000000,
+      "nextQuest": 20533
+    }
+  }
+}

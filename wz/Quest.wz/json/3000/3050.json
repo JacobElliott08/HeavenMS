@@ -1,0 +1,53 @@
+{
+  "questId": 3050,
+  "info": {
+    "name": "Alfonse\u0027s Smile",
+    "parent": "The Chaos behind Alfonse Green and the Nependeath Juice",
+    "descriptions": {
+      "notStarted": "I better go see Alfonse right now. I\u0027m sure he\u0027s been dying to see me!",
+      "inProgress": "I got Alfonse Green exactly what he wanted, the Nependeath Juice.",
+      "completed": "I\u0027ve never seen anyone so happy over a glass of juice as Alfonse Green was with his glass of Nependeath Juice."
+    },
+    "area": 33,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012010,
+      "prerequisiteQuests": [
+        {
+          "questId": 3048,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031202
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012020,
+      "items": [
+        {
+          "itemId": 4031202
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 13200,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4031202,
+          "count": -1
+        },
+        {
+          "itemId": 1002006
+        }
+      ]
+    }
+  }
+}

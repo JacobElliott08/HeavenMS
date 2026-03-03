@@ -1,0 +1,52 @@
+{
+  "questId": 6291,
+  "info": {
+    "name": "Magic of the Spirit",
+    "parent": "Spirit Healing",
+    "descriptions": {
+      "inProgress": "#b#p2041021##k explained about #r#q1321007##k and told me to bring #b#t4031453##k if I want to wake #q1321007#\u0027s power.\\n\\n#i4031453##t4031453# #b#c4031453# / 1#k",
+      "completed": "We woke up the black spirit\u0027s power with #t4031453# "
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041021,
+      "jobs": [
+        132
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6290,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041021,
+      "items": [
+        {
+          "itemId": 4031453
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300000,
+      "items": [
+        {
+          "itemId": 4031453,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 1320008,
+          "masterLevel": 5
+        }
+      ]
+    }
+  }
+}

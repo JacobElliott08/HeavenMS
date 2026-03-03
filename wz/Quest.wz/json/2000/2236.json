@@ -1,0 +1,44 @@
+{
+  "questId": 2236,
+  "info": {
+    "name": "How to Shoo Away the Evil",
+    "descriptions": {
+      "notStarted": "Chrishrama in Sleepywood claims that he\u0027s felt an ominous energy. Let\u0027s go talk to him.",
+      "inProgress": "Chrishrama says he feels the forces of evil coming from the dungeon and asks that you place a Charm on each of the Shaman Rocks nearby. It sounds a bit superstitious, but let\u0027s make him happy and do this favor for him.",
+      "completed": "Chrishrama says he feels the forces of evil coming from the dungeon and asks that you place a Charm on each of the Shaman Rocks nearby. It sounds a bit superstitious, but let\u0027s make him happy and do this favor for him. Since you\u0027ve stuck an Charm on all 6 of the Shaman Rocks, let\u0027s go see Chrishrama."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061000,
+      "minLevel": 50
+    },
+    "complete": {
+      "npc": 1061000,
+      "items": [
+        {
+          "itemId": 4032263
+        }
+      ],
+      "infoNumber": 2236,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "info": "000000",
+      "items": [
+        {
+          "itemId": 4032263,
+          "count": 6
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 60000
+    }
+  }
+}

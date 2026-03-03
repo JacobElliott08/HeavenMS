@@ -1,0 +1,59 @@
+{
+  "questId": 3829,
+  "info": {
+    "name": "Captain Lord Pirate",
+    "descriptions": {
+      "notStarted": "#b#p2092001##k, who\u0027s in charge of freight for #b#m251000000##k, seems to know something about #b#t4031438##k...",
+      "inProgress": "#p2092001# told me the location of #t4031551# is written in here, and wanted me to find #t4031551#. The box of #t4031551# is located at a relatively unknown place inside the Pirate Ship, at #bthe deck where the bellflowers are guarding#k, and I\u0027ll need #t4031437# to open it... I guess I\u0027ll have to get #b#t4031437##k first. In order to get #t4031437#, I\u0027ll have to enter the lair of  Lord Pirate.\\n\\n#i4031551##t4031551#  #b#c4031551##k/1",
+      "completed": "I opened the box of #t4031551#, took out all the treasures, and gave them to #p2092001#."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2092001,
+      "minLevel": 55,
+      "maxLevel": 100,
+      "items": [
+        {
+          "itemId": 4031438
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2092001,
+      "items": [
+        {
+          "itemId": 4031551
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031438,
+          "count": -1
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 60000,
+      "items": [
+        {
+          "itemId": 4031551,
+          "count": -1
+        },
+        {
+          "itemId": 2040804,
+          "probability": 7
+        },
+        {
+          "itemId": 2040805,
+          "probability": 3
+        }
+      ]
+    }
+  }
+}

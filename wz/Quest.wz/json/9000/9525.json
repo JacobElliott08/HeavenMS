@@ -1,0 +1,51 @@
+{
+  "questId": 9525,
+  "info": {
+    "name": "미라 의상 만들기!!",
+    "descriptions": {
+      "notStarted": "#b#p1022006##k에게 다시 말을 걸어보자.",
+      "inProgress": "미라 의상을 만들 수 있도록 재료를 모아가자.\\n\\n#t4000205# #b#c4000205#/100#k",
+      "completed": "아이들에게 나누어줄 미라 의상의 재료를 모아갔다.하지만, 아직 많이 부족하다고 하니 시간이 날 때마다 도와주자."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022006,
+      "minLevel": 46,
+      "repeatIntervalMinutes": 30,
+      "startDate": "2006102600",
+      "endDate": "2006110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 9524,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022006,
+      "items": [
+        {
+          "itemId": 4000205,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 17100,
+      "items": [
+        {
+          "itemId": 2022043,
+          "count": 10
+        },
+        {
+          "itemId": 4000205,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

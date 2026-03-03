@@ -1,0 +1,75 @@
+{
+  "questId": 9714,
+  "info": {
+    "name": "궁수학교 입학통지서",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 사람들에게 급히 도움을 청하고 있다고 한다. 무슨 일일까?",
+      "inProgress": "새학기를 맞아 새로운 학생들을 맞기 위해, 입학 대상자들에게 입학통지서를 보내기로 한 #b#p1012100#.#k 하지만 발송할 입학통지서만 준비해 놓고, 우표는 준비하지 않는 실수를 저지르고 말았다. 당황한 그녀는 카산드라에게 도움을 청했다는데... 헬레나가 실수를? 의외인걸? 몬스터에게서 우표를 모아 #b#p1012100##k에게 가져다 주자. \\n\\n#i4031561##t4031561# #b#c4031561#/10#k",
+      "completed": "#b#p1012100##k에게 우표를 전달했다. 이걸로 더 많은 궁수들이 메이플 월드를 모험하게 되겠지? 어쩐지 기대되는걸?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2007022600",
+      "endDate": "2007031200",
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322
+      ]
+    },
+    "complete": {
+      "npc": 1012100,
+      "items": [
+        {
+          "itemId": 4031561,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 777,
+      "items": [
+        {
+          "itemId": 4031561,
+          "count": -10
+        },
+        {
+          "itemId": 2002005,
+          "count": 10,
+          "probability": 50000
+        },
+        {
+          "itemId": 2002008,
+          "count": 10,
+          "probability": 40000
+        },
+        {
+          "itemId": 2044500,
+          "probability": 3
+        },
+        {
+          "itemId": 2044600,
+          "probability": 3
+        },
+        {
+          "itemId": 2044501,
+          "probability": 1
+        },
+        {
+          "itemId": 2044601,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

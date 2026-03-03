@@ -1,0 +1,46 @@
+{
+  "questId": 4109,
+  "info": {
+    "name": "정경찰의 부탁",
+    "descriptions": {
+      "notStarted": "#b#p9310005##k에게 말을 걸어보자.",
+      "inProgress": "#b#p9310005##k의 부탁대로 #r#o9600008##k을 물리치고 증거물을 가져가자. \\n\\n#i4000194##t4000194# #b#c4000194#/50#k",
+      "completed": "#b#p9310005##k을 도왔다."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9310005,
+      "minLevel": 45,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4103,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9310005,
+      "items": [
+        {
+          "itemId": 4000194,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 4000194,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "questId": 10073,
+  "info": {
+    "name": "페토 변신 준비",
+    "parent": "페토의 용서",
+    "descriptions": {
+      "inProgress": "페토 변신을 부탁 했지만, 가면신사는 저주를 푸는 것을 별로 좋아하지 않는 것 같다.",
+      "completed": "변신 물약을 얻었다. 이 아이템을 먹으면 페토로 변신 할 수 있다."
+    },
+    "area": 50,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120008,
+      "startDate": "2008101600",
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10072,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120000,
+      "items": [
+        {
+          "itemId": 4032085
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032085
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 50,
+      "items": [
+        {
+          "itemId": 4032085,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

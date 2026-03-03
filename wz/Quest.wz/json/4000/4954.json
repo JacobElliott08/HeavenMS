@@ -1,0 +1,51 @@
+{
+  "questId": 4954,
+  "info": {
+    "name": "Reparations",
+    "descriptions": {
+      "notStarted": "Jonas was very confused by the doll I gave him. He was almost speechless. I hope he is not going any more insane than he is right now.",
+      "inProgress": "When I gave Sophilia\u0027s favorite doll to Jonas, it seemed to have awaken him from his madness.  He\u0027s realized that his Toy Machine has been corrupted and is churned out twisted versions of his former creations.  Because the machine can\u0027t be destroyed, Jonas has asked me to destroy as many of his creations as possible.  For every 50 Psycho Jacks, 50 Nightmares, or 50 Sophilia Dolls I destroy, Jonas has promised to reward me with something special.",
+      "completed": "Jonas gave me all of his Toymaker Gear in return for helping him destroy his twisted creations.  He also gave me the key to his Toy Workshop, asking me to give it to someone who will help keep it safe and find a way to restore the Prendergast name."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201077,
+      "minLevel": 15,
+      "endDate": "2007103123",
+      "prerequisiteQuests": [
+        {
+          "questId": 4948,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201077,
+      "prerequisiteQuests": [
+        {
+          "questId": 4955,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4956,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4957,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031772
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "questId": 6321,
+  "info": {
+    "name": "Maple Warrior Skill Book",
+    "descriptions": {
+      "notStarted": " If I lost the Maple Warrior Skill Book, I should go talk to #b#p2081200##k..",
+      "inProgress": "This should be good enough.  Let\u0027s try talking to #b#p2081200##k again.",
+      "completed": " I received another Maple Warrior Skill book from #b#p2081200##k "
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081200,
+      "repeatIntervalMinutes": 0,
+      "jobs": [
+        212,
+        222,
+        232
+      ],
+      "items": [
+        {
+          "itemId": 2280003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081200
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2280003
+        }
+      ]
+    }
+  }
+}

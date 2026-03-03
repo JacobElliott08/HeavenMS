@@ -1,0 +1,31 @@
+{
+  "questId": 28284,
+  "info": {
+    "name": "Cassandra\u0027s Trick or Treat",
+    "descriptions": {
+      "notStarted": "They say that Cassandra has prepared a fun event in commemoration of the Halloween Season. Would you like to learn more about it?",
+      "inProgress": "Cassandra has asked that you bring her 31 Green Halloween Stick Candies. The candies are carried by Monsters during the Halloween season, and Cassandra says that the monsters in the Haunted Mansion have more than others. Who knew that Cassandra had such a craving for sweets, but this should be easy, right?\\n\\n#i4032444:# #t4032444:# #c4032444# / 31 ",
+      "completed": "It\u0027s not certain whether Cassandra was happy because she received the candies or because she pulled off a trick... Regardless, it always feels good to help someone, no? You can receive another Halloween task if you return to Cassandra after 1 hour."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 11,
+      "maxLevel": 30,
+      "repeatIntervalMinutes": 60,
+      "endDate": "2009112500"
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q28284e",
+      "items": [
+        {
+          "itemId": 4032444,
+          "count": 31
+        }
+      ]
+    }
+  }
+}

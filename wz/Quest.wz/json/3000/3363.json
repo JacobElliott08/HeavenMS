@@ -1,0 +1,35 @@
+{
+  "questId": 3363,
+  "info": {
+    "name": "Studying Frankenroid 1",
+    "parent": "Keeny\u0027s Research on Frankenroid",
+    "descriptions": {
+      "notStarted": "Magatia\u0027s diminutive Fairy alchemist, #bKeeny#k, is lately studying hard on mechanical dolls, Roids.",
+      "inProgress": "Keeny said she heard a rumor that the mysterious alchemist #bYulete#k invented a new type of Roid, and wanted to study more on his Frankenroid. Good thinking, except finding Yulete, who has been virtually banished from Magatia, and actually #btalking#k to him might be difficult...",
+      "completed": "While helping Romeo and Juliet out, I was able to learn of Yulete\u0027s true intentions and was able to meet with him."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111005,
+      "minLevel": 70,
+      "maxLevel": 85,
+      "prerequisiteQuests": [
+        {
+          "questId": 3331,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2112014
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100
+    }
+  }
+}

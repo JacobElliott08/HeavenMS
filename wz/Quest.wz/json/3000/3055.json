@@ -1,0 +1,43 @@
+{
+  "questId": 3055,
+  "info": {
+    "name": "Fairy\u0027s Horn Flute II",
+    "descriptions": {
+      "notStarted": "Lisa of Orbis made me a horn flute. Hopefully this will help me finally understand what Moppie is saying ...",
+      "inProgress": "Should I try this horn flute on Moppie?",
+      "completed": "I used the horn flute for fairies on Moppie, and I could finally understand what he\u0027s saying!!"
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012012,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3054,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012019,
+      "items": [
+        {
+          "itemId": 4031190
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4031190,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

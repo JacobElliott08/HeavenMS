@@ -1,0 +1,49 @@
+{
+  "questId": 4943,
+  "info": {
+    "name": "A Cold Hearth",
+    "descriptions": {
+      "notStarted": "I heard there\u0027s an old butler in the Haunted House. Maybe he needs help cleaning it...",
+      "inProgress": "I spoke with Edmunds, Butler of the Prendergast Estate.  It seems that he\u0027 run out of #t4000018# to heat the house, which would explain the chill.  I\u0027ve agreed to help him out and bring back #b60 #t4000018##k so he can refill the fireplaces throughout the house and re-heat the mansion.",
+      "completed": "I brought back #b60 #t4000018##k to Edmunds; he can get the fireplaces going again now.  Hmmm... It seems like there are quite a few fireplaces around this labyrinthine house."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201080,
+      "minLevel": 15,
+      "endDate": "2007103123",
+      "prerequisiteQuests": [
+        {
+          "questId": 4941,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201080,
+      "items": [
+        {
+          "itemId": 4000018,
+          "count": 60
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7500,
+      "items": [
+        {
+          "itemId": 4000018,
+          "count": -60
+        },
+        {
+          "itemId": 2022246,
+          "count": 8
+        }
+      ]
+    }
+  }
+}

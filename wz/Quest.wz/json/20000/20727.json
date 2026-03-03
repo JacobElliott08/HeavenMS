@@ -1,0 +1,61 @@
+{
+  "questId": 20727,
+  "info": {
+    "name": "Sabitrama\u0027s Information",
+    "descriptions": {
+      "notStarted": "Maybe #b#p1061005##k of #m105040300# can tell me something useful about #o9300285#...",
+      "inProgress": "#p1061005# told me he can give a useful information on #o9300285# if I can eliminate #r200 #o2230100#s#k for him. \\n\\n#o2230100##r #a207271##k",
+      "completed": "According to #p1061005#, #o9300285# lives somewhere around the Cave of #o2230100#."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061005,
+      "minLevel": 28,
+      "prerequisiteQuests": [
+        {
+          "questId": 20725,
+          "state": "STARTED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1061005,
+      "monsters": [
+        {
+          "monsterId": 2230100,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6500
+    }
+  }
+}

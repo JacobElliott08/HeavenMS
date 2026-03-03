@@ -1,0 +1,55 @@
+{
+  "questId": 9262,
+  "info": {
+    "name": "클리프가 주는 선물",
+    "parent": "앤의 크리스마스 선물",
+    "descriptions": {
+      "notStarted": "#t04031426#를 받은 #p2001000#는 뭔가 #p1012110#에게 줄 선물을 준비한 모양인데...",
+      "inProgress": "#m209000000#에서 #p2001000#에게 #t04031426#를 전달하였다. 다행히도 #p2001000#는 #p1012110#을 알고 있었고, #b선물#k도 주었다. 그러니까 마을 안에 얌전히 있었어야지, 왜 항상 마을 밖에서 놀고 있는 거야, #p1012110#은? 그나저나, 이 선물을 이제 다시 #b#p1012110##k에게 가져다 주어야 하는데… ",
+      "completed": "선물을 받은 #p1012110#은 모처럼 활짝 웃으며 기뻐했다. 그러니까 마을 안에 얌전히 있지 그랬니…"
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2001000,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 259200,
+      "startDate": "2006112300",
+      "endDate": "2007030100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9261,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012110,
+      "items": [
+        {
+          "itemId": 4031427
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031427
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 820,
+      "items": [
+        {
+          "itemId": 4031427,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

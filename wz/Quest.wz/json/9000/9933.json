@@ -1,0 +1,41 @@
+{
+  "questId": 9933,
+  "info": {
+    "name": "좋은 음악",
+    "descriptions": {
+      "notStarted": "파티에서 가장 중요한 것은 분위기를 살리는 #b좋은 음악#k이라고 생각한다. 그렇게 #b#p2120006##k에게 답하자 그녀는 새침하게 웃었다.",
+      "inProgress": "#p2120006#는 그녀의 저택에 좋은 피아니스트가 있다면서 #b#m229000220##k의 #r책#k들을 뒤져 #b#t4031836##k를 찾아 홀의 #r#p2121005##k 위에 올려 놓으라고 말했다. 그러면 피아니스트가 알아서 #t4031836#를 연주할 거라며... ",
+      "completed": "#p2121005# 위에 #t4031836#를 올려 놓았다. 그러자 울리는 기괴한 피아노음... 연주자가 없는데 왜 #p2121005#가 울리는 거지? 놀라 #p2120006#에게 그 이야기를 했지만 그녀는 들은 척도 하지 않는다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120006,
+      "minLevel": 10,
+      "endDate": "2008110600",
+      "infoNumber": 7645,
+      "infoEx": [
+        null
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 9932,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120006,
+      "endScript": "q9933e",
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "info": "0"
+    }
+  }
+}

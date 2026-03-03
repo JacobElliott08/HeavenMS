@@ -1,0 +1,61 @@
+{
+  "questId": 3837,
+  "info": {
+    "name": "Do Gong\u0027s Spell",
+    "parent": "The Forgotten Master",
+    "descriptions": {
+      "inProgress": "Do Gong thinks Tae Roon had been weakening the grip the spell has on him through meditation, so he believes that with his own set of spells, the previously-unbreakable spell of Master Goblin might finally be broken. In order for Do Gong to do the spell, however, he\u0027ll need some items to work with... \\n\\n#i4000288# #t4000288# #b#c4000288##k/10 \\n#i4000298# #t4000298# #b#c4000298##k/10 \\n#i4000282# #t4000282# #b#c4000282##k/50",
+      "completed": "Do Gong started casting the spell... only to no avail. I better notify this to No Gong."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091001,
+      "minLevel": 71,
+      "prerequisiteQuests": [
+        {
+          "questId": 3836,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091001,
+      "items": [
+        {
+          "itemId": 4000288,
+          "count": 10
+        },
+        {
+          "itemId": 4000298,
+          "count": 10
+        },
+        {
+          "itemId": 4000282,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1500,
+      "items": [
+        {
+          "itemId": 4000298,
+          "count": -10
+        },
+        {
+          "itemId": 4000288,
+          "count": -10
+        },
+        {
+          "itemId": 4000282,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

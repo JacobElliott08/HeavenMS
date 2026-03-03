@@ -1,0 +1,52 @@
+{
+  "questId": 10076,
+  "info": {
+    "name": "소필리아의 뉘우침",
+    "parent": "행복한 가족",
+    "descriptions": {
+      "inProgress": "페토로 변신하여 소필리아의 저주를 풀어주자.",
+      "completed": "페토로 변신하여 소필리아의 저주를 풀어주었다."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120004,
+      "startDate": "2008101600",
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10075,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120005,
+      "endScript": "q10076e",
+      "items": [
+        {
+          "itemId": 4032084
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032084
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032084,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

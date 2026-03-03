@@ -1,0 +1,37 @@
+{
+  "questId": 29000,
+  "info": {
+    "name": "Title Challenge - PQ Mania",
+    "descriptions": {
+      "notStarted": "#b#eTitle Challenge - PQ Mania#n\\n#kYIf I achieve rank S in 5 party quests, I can get the #e#bPQ Mania#k# title? Dalair is waiting for a Warrior that can earn this honorable title.",
+      "inProgress": "#b#eTitle Challenge - PQ Mania#n\\n#k \\n - Party Quest S Rank : #b#jscnt##k / 5 \\n                              #jgaugePqS# #jperPqS# %",
+      "completed": "#b#eTitle Challenge - PQ Mania#n\\n#k \\n - Party Quest S Rank : #b#jscnt##k / 5 \\n                              #jgaugePqS# #jperPqS# %\\n\\nI got rank S in 5 party quests!  Dalair, the representative or the God of Honor, gave me the title of \u0027#bPQ Mania#k\u0027.  He said this title is only for a small number of explorers like me who devote themselves to party quests."
+    },
+    "area": 51,
+    "medalItemId": 1142001
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000040,
+      "minLevel": 15,
+      "repeatIntervalMinutes": 0,
+      "items": [
+        {
+          "itemId": 1142001
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000040
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142001
+        }
+      ]
+    }
+  }
+}

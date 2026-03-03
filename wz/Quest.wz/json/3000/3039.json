@@ -1,0 +1,46 @@
+{
+  "questId": 3039,
+  "info": {
+    "name": "A Request from Staff Sergeant Charlie",
+    "parent": "Alpha Platoon\u0027s Network of Communication",
+    "descriptions": {
+      "inProgress": "I found Staff Sergeant Charlie at Orbis, and he asked me to get him #b2 refined #t4011005#s#k while giving me an item which is to be given to Master Sergeant Fox.",
+      "completed": "I gave Orihalcon to Sergeant Charlie. What would he give Master Sergeant Fox?"
+    },
+    "area": 33,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2010000,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 3000,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2010000,
+      "items": [
+        {
+          "itemId": 4011005,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "nextQuest": 3001,
+      "items": [
+        {
+          "itemId": 4011005,
+          "count": -2
+        }
+      ]
+    }
+  }
+}

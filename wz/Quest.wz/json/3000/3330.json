@@ -1,0 +1,44 @@
+{
+  "questId": 3330,
+  "info": {
+    "name": "Keeny\u0027s Research on Neo Huroid!",
+    "descriptions": {
+      "notStarted": "#b#p2111005##k is the little Fairy who studies alchemy. She seems to be in need of help...",
+      "inProgress": "#p2111005#\u0027s studies have now taken her ahead of #o5110301# and on to #o5110302#. #p2111005# said in order to thoroughly investigate #r#o5110302##k, she\u0027ll need #b#t4000365##k... \\n\\n#i4000365##t4000365# #b#c4000365##k/160 ",
+      "completed": "I gave #p2111005# all the #t4000365#s she asked for. She revealed that she learned alchemy from the Zenumist alchemists, but slowly found Alcadno\u0027s work fascinating, and is now conducting studies secret from the alchemists that have taught her."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111005,
+      "minLevel": 60,
+      "prerequisiteQuests": [
+        {
+          "questId": 3329,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111005,
+      "items": [
+        {
+          "itemId": 4000365,
+          "count": 160
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 48900,
+      "items": [
+        {
+          "itemId": 4000365,
+          "count": -160
+        }
+      ]
+    }
+  }
+}

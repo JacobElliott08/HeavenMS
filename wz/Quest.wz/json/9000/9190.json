@@ -1,0 +1,45 @@
+{
+  "questId": 9190,
+  "info": {
+    "name": "엘마의 추석",
+    "parent": "엘마의 추석",
+    "descriptions": {
+      "notStarted": "NPC 메이플 운영자가 내게 무슨 부탁이 있는 건 아닐까? 만나보는 것이 좋을 것 같다.",
+      "inProgress": "엘마가 추석을 어떻게 보내고 있는지 찾아가볼까? 그전에 우선 메이플 운영자가 내는 문제부터 풀어보자.",
+      "completed": "메이플 운영자는 엘마가 추석을 어떻게 보내고 있을지 궁금하다고 했다. 더 자세한 정보를 얻기 위해 다시 메이플 운영자에게 말을 걸어보자."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 41,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2007092000",
+      "endDate": "2007100800",
+      "prerequisiteQuests": [
+        {
+          "questId": 9180
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9600,
+      "nextQuest": 9191,
+      "items": [
+        {
+          "itemId": 2030002
+        },
+        {
+          "itemId": 2030012
+        }
+      ]
+    }
+  }
+}

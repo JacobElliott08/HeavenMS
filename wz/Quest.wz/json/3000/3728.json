@@ -1,0 +1,53 @@
+{
+  "questId": 3728,
+  "info": {
+    "name": "Temporary Relief",
+    "parent": "Year 2099- The Harbor",
+    "descriptions": {
+      "inProgress": "When you meet Captain Edmond in 2099, he asks you bring him 20 Overlord A Radar Devices and 40 Overlord B Radar Devices to temporarily stop the monsters at the harbor.",
+      "completed": "When you met Captain Edmond in 2099, he complained that he didn\u0027t approve of the monsters that overtook the harbor. He then asked that you bring him their radar devices, which you did."
+    },
+    "area": 41,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082008,
+      "minLevel": 75,
+      "prerequisiteQuests": [
+        {
+          "questId": 3727,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082008,
+      "items": [
+        {
+          "itemId": 4000548,
+          "count": 20
+        },
+        {
+          "itemId": 4000549,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 75000,
+      "items": [
+        {
+          "itemId": 4000548,
+          "count": -20
+        },
+        {
+          "itemId": 4000549,
+          "count": -40
+        }
+      ]
+    }
+  }
+}

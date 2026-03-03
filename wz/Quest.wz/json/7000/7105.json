@@ -1,0 +1,41 @@
+{
+  "questId": 7105,
+  "info": {
+    "name": "The Lost Piece of Crack",
+    "descriptions": {
+      "notStarted": "If I ever lose the piece of cracked dimension, then I better go see Mr. Bouffon again.",
+      "inProgress": "I told #rMr. Bouffon#k that I lost the piece of cracked dimension. He told me he was going to give me another chance and that I should go see #rFlo#k immediately.",
+      "completed": "I was able to regain the lost piece of dimension from Flo. I should seriously take care of Papulatus this time."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041021,
+      "repeatIntervalMinutes": 1440,
+      "prerequisiteQuests": [
+        {
+          "questId": 7103,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031179
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041023
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031179
+        }
+      ]
+    }
+  }
+}

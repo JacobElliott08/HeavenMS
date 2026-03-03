@@ -1,0 +1,74 @@
+{
+  "questId": 4004,
+  "info": {
+    "name": "죽 요리 배달",
+    "parent": "껌팔이 소녀의 효심",
+    "descriptions": {
+      "notStarted": "#b#p9330018##k를 찾아가 #b#p9330017##k의 할머니께 드릴 음식을 얻자",
+      "inProgress": "#b#p9330017##k의 할머니인 오르비스의 스피루나를 찾아가 죽을 전해 주자. \\n\\n#t4031355#  #b#c4031355#/1#k ",
+      "completed": "#b#p9330017##k의 할머니가 빨리 나으실 수 있도록 영양가 많은 죽을 가져다 드렸다."
+    },
+    "area": 48,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9330018,
+      "minLevel": 35,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4003,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2032001,
+      "items": [
+        {
+          "itemId": 4031355
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031355
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 3000,
+      "items": [
+        {
+          "itemId": 4031355,
+          "count": -1
+        },
+        {
+          "itemId": 4004000,
+          "probability": 5
+        },
+        {
+          "itemId": 4004001,
+          "probability": 5
+        },
+        {
+          "itemId": 4004003,
+          "probability": 5
+        },
+        {
+          "itemId": 4004002,
+          "probability": 5
+        },
+        {
+          "itemId": 4004004,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

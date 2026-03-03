@@ -1,0 +1,43 @@
+{
+  "questId": 21742,
+  "info": {
+    "name": "The Black Scroll",
+    "descriptions": {
+      "notStarted": "So what does #b#m250000000##k have to do with the Black Wings? You should talk to #b#p2090004##k to find out.",
+      "inProgress": "#p2090004# received a #t4220151# a few days ago from a man who claimed to be the #r#o9300351##k of the Black Wings. But because he took such poor care of the #t4220151#, the contents of the scroll seems to have faded away. You think the only way chance to restore the content is through #b#p2091008# the painter#k.",
+      "completed": "You gave the restored #t4220151# to #p2090004#."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2090004,
+      "minLevel": 54,
+      "startScript": "q21742s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21741,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2090004,
+      "endScript": "q21742e",
+      "items": [
+        {
+          "itemId": 4220151
+        },
+        {
+          "itemId": 4032342,
+          "count": 8
+        }
+      ]
+    }
+  }
+}

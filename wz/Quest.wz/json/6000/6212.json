@@ -1,0 +1,53 @@
+{
+  "questId": 6212,
+  "info": {
+    "name": "Porter\u0027s Durable Battery",
+    "descriptions": {
+      "notStarted": " If I need #b#t4031478##k, I should go see #b#p2050013##k in #b#p2050013##k in#m221000000#.",
+      "inProgress": "#p2012017# said he left #b#t4031478##k with #b#p2050013##k and told me to get it from him. But #p2050013# says that he doesn\u0027t remember anything about #t4031478# but he might if I bring him #b#t4001084##k. ...He\u0027s cunning, I certianly wouldn\u0027t guessed that by looking at him.\\n\\n#i4001084##t4001084# #b#c4001084# / 1#k",
+      "completed": " I gave him #t4001084# and received #t4031478#. At last!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050013,
+      "repeatIntervalMinutes": 0,
+      "jobs": [
+        422
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6210,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031478
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050013,
+      "items": [
+        {
+          "itemId": 4001084
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4001084,
+          "count": -1
+        },
+        {
+          "itemId": 4031478
+        }
+      ]
+    }
+  }
+}

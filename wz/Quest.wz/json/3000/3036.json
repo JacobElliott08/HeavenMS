@@ -1,0 +1,35 @@
+{
+  "questId": 3036,
+  "info": {
+    "name": "Traces of Nick",
+    "parent": "Nick, the Son of Scadur the Hunter",
+    "descriptions": {
+      "notStarted": "I should go see Scadur the Hunter in El Nath.",
+      "inProgress": "I got to see Scadur again, first time we really got to talk since the whole Book of Ancient fiasco. He told me a story of how, a long time ago, a bunch of monsters from the dead mine claimed the life of his wife, enraging his son Nick. 3 years later, he went into the dead mine, hoping to avenge his mother\u0027s death, but haven\u0027t been heard since. He wanted me to find #bNick\u0027s Ring#k somewhere at the innermost part of the lava cave. He also wants me to grant his dying wish, which would be collecting #b100 Cerebes\u0027 teeth#k. This will be VERY tough to do ...",
+      "completed": "I went into the innermost part of the lava cave, where I found a chipped part of a statue. I have a feeling something is in here."
+    },
+    "area": 33,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020007,
+      "minLevel": 65,
+      "prerequisiteQuests": [
+        {
+          "questId": 3020,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030007
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "nextQuest": 3037
+    }
+  }
+}

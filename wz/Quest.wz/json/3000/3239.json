@@ -1,0 +1,29 @@
+{
+  "questId": 3239,
+  "info": {
+    "name": "The Missing Mechanical Parts",
+    "parent": "",
+    "descriptions": {
+      "notStarted": "I better go see Cheng the Assistant, who should be somewhere around Toy Factory",
+      "inProgress": "At the Toy Factory in Ludibrium, I found Cheng the Assistant riding around on a white wooden horse. Chang was concerned about the sudden disappearance of the mechanic parts all over the factory, and wanted me to find those parts for him. I should head over to Toy Factory \u003cMain Construction1\u003e Part 4 with help from Cheng, where the parts are hidden. I need to gather up 10 Mechanical Parts and bring them back to Cheng.",
+      "completed": "I found the 10 missing parts in the Toy Factory and gave them back to Cheng the Assisntant. Hopefully this will help the Factory run as smoothly as it should be. "
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040003,
+      "minLevel": 30
+    },
+    "complete": {
+      "npc": 2040003,
+      "endScript": "q3239e",
+      "items": [
+        {
+          "itemId": 4031092,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

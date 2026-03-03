@@ -1,0 +1,46 @@
+{
+  "questId": 2212,
+  "info": {
+    "name": "The Path of Pirate",
+    "descriptions": {
+      "notStarted": "What do I need to do to make the job advancement to becoming a Pirate? I should talk to #p1002101# in Lith Harbor.",
+      "inProgress": "#p1002101# says that you can job advance to become a #bPirate#k once you reach #bLevel 10#k by choosing to become a Pirate in Lith Harbor. They say that in order to become a Pirate, you have to talk to #r#p1090000##k of #rThe Nautilus#k... I\u0027d better figure out how to get to The Nautilus on the World Map (#rW#k) so I don\u0027t get lost on the way.",
+      "completed": "I learned a lot about becoming a Pirate from #p1090000#. From here, my journey begins..."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002101,
+      "prerequisiteQuests": [
+        {
+          "questId": 2079
+        },
+        {
+          "questId": 2080
+        },
+        {
+          "questId": 2081,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2077
+        },
+        {
+          "questId": 2078
+        }
+      ],
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 1090000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

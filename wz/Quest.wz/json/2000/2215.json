@@ -1,0 +1,46 @@
+{
+  "questId": 2215,
+  "info": {
+    "name": "Find the Crumpled Piece of Paper Again",
+    "descriptions": {
+      "notStarted": "You have lost the list of informants you retrieved from the hut in the swamp region. What to do...? Let\u0027s go see #bJM#k again.",
+      "inProgress": "JM scowls and clicks his tongue at you. He says he\u0027ll provide you with the list of informants again, but asks you to pay #ba fee of  2000 Mesos#k and instructs you to leave it inside the trash can. Let\u0027s head over to #b#m107000300##k.",
+      "completed": "You have taken the list of informants out and left 2000 Mesos inside the trash can."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052002,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 2214,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2220
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031894
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052108,
+      "endScript": "q2215e"
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -2000,
+      "items": [
+        {
+          "itemId": 4031894
+        }
+      ]
+    }
+  }
+}

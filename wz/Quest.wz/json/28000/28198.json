@@ -1,0 +1,76 @@
+{
+  "questId": 28198,
+  "info": {
+    "name": "Marbas the Demon!",
+    "descriptions": {
+      "notStarted": "#b#@1032001:##k in #bEllinia#k says #rMarbas#k must be defeated. Let\u0027s talk to him.",
+      "inProgress": "If you go to #b#m101010103##k, you will find the Dark Portal where #rMarbas#k is hiding. You will be able to enter by equipping yourself with #rMarbas\u0027s Emblem#k.\\n\\nDefeat #rMarbas#k.\\n\\nReport back to #b#@1032001:##k in #bEllinia#k after defeating #rMarbas#k.",
+      "completed": "You have defeated #rMarbas#k whose seal had been broken. However, who or what is responsible for releasing the seal remains a mystery."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "prerequisiteQuests": [
+        {
+          "questId": 28197,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "monsters": [
+        {
+          "monsterId": 9400612
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032495
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032495
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 1003032
+        },
+        {
+          "itemId": 4032496
+        },
+        {
+          "itemId": 4032495,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

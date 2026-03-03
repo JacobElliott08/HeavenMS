@@ -1,0 +1,33 @@
+{
+  "questId": 3017,
+  "info": {
+    "name": "The Small Grave That\u0027s Hidden",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "I gave Jade the pendant from Hella, and I could immediately sense that he was pleased to know that his friend is alright after all. That small grave Jade mentioned should be somewhere in the snowfield."
+    },
+    "area": 33,
+    "order": 14
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020006,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3016,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030004
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3500,
+      "nextQuest": 3018
+    }
+  }
+}

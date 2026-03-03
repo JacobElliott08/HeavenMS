@@ -1,0 +1,51 @@
+{
+  "questId": 2278,
+  "info": {
+    "name": "Legendary Scissors",
+    "descriptions": {
+      "notStarted": "Open the #bLocker#k again.",
+      "inProgress": "When you open the Locker, you find the #bLegendary Scissors#k. Hurry and deliver the scissors to Marshall.",
+      "completed": "#bMarshall#k was ecstatic when you delivered the Legendary Scissors and agreed to style Blake\u0027s hair in a heartbeat. Give #bLana#k the good news."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052118,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2277,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052124,
+      "items": [
+        {
+          "itemId": 4032510
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032510
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1560,
+      "items": [
+        {
+          "itemId": 4032510,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

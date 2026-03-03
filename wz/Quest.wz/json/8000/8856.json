@@ -1,0 +1,79 @@
+{
+  "questId": 8856,
+  "info": {
+    "name": "Amoria : Cupid\u0027s Courier - Warrior",
+    "parent": "Cupid\u0027s Courier - Warrior",
+    "descriptions": {
+      "notStarted": "Okay, so now I gotta go see the sailor himself. Where must he be?",
+      "inProgress": "I delivered everything to Richard and he asked me delivered his letter to his wife.",
+      "completed": "I delivered everything to Richard and returned to Angelique. She gave me something nice, and I can go back to here anytime for a quick job."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201038,
+      "minLevel": 35,
+      "repeatIntervalMinutes": 1440,
+      "prerequisiteQuests": [
+        {
+          "questId": 8851,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031564
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201036,
+      "prerequisiteQuests": [
+        {
+          "questId": 8851,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031564
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2001000,
+          "count": 2,
+          "probability": 25
+        },
+        {
+          "itemId": 4020007,
+          "count": 3,
+          "probability": 15
+        },
+        {
+          "itemId": 2000005,
+          "count": 3,
+          "probability": 25
+        },
+        {
+          "itemId": 4031564,
+          "count": -1
+        },
+        {
+          "itemId": 2020025,
+          "probability": 18
+        },
+        {
+          "itemId": 2020026,
+          "probability": 17
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "questId": 6294,
+  "info": {
+    "name": "The Forgotten Blessing Power",
+    "parent": "Spirit Blessing",
+    "descriptions": {
+      "notStarted": "Since my last job, I got a strange spirit named #r#q1321007##k.  For a spirit, it doesn\u0027t have any special powers but I just kept him with me.  But supposedly #b#p2081100##k knows about a special blessing power that this spirit has...",
+      "inProgress": " #p2081100# said #q1321007# has great power that simply needs to be awakened. He told me to go see #b#p2041023##k if I want to awaken his power.",
+      "completed": "#p2041023# seems to know how to use #q1321007#\u0027s power."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081100,
+      "jobs": [
+        132
+      ]
+    },
+    "complete": {
+      "npc": 2041023
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000
+    }
+  }
+}

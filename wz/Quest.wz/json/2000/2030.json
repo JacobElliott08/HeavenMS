@@ -1,0 +1,58 @@
+{
+  "questId": 2030,
+  "info": {
+    "name": "Shumi\u0027s Request",
+    "parent": "Nella \u0026 Kerning City Citizen\u0027s Request",
+    "descriptions": {
+      "notStarted": "",
+      "inProgress": "I got the second request from Nella. Shumi wants to make a house for her little puppy. To make a puppy house, she needs #b5 Processed Woods#k and #b5 Screws#k. I need to get those ASAP. ",
+      "completed": "I gave what Shumi asked for and I got bunch of cakes for return. Now, Shumi\u0027s little puppy has her own house~ I should get back to Nella for more requests."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052103,
+      "minLevel": 15,
+      "prerequisiteQuests": [
+        {
+          "questId": 2029,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052103,
+      "items": [
+        {
+          "itemId": 4003000,
+          "count": 5
+        },
+        {
+          "itemId": 4003001,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 900,
+      "items": [
+        {
+          "itemId": 4003001,
+          "count": -5
+        },
+        {
+          "itemId": 4003000,
+          "count": -5
+        },
+        {
+          "itemId": 2020002,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

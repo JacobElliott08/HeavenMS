@@ -1,0 +1,39 @@
+{
+  "questId": 4104,
+  "info": {
+    "name": "사진기사 조씨의 부탁",
+    "descriptions": {
+      "notStarted": "#b#p9310012##k를 찾아가 보자.",
+      "inProgress": "#b#p9310010##k를 만나 농사일을 도우면 #b#p9310012##k가 잃어버린 물건을 얻을수 있다는데... \\n\\n#i4031290##t4031290# #b#c4031290#/1#k",
+      "completed": "#b#p9310012##k가 잃어버린 물건을 찾아주었다."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9310012,
+      "minLevel": 30,
+      "startDate": "2000010100",
+      "endDate": "2000010200"
+    },
+    "complete": {
+      "npc": 9310012,
+      "items": [
+        {
+          "itemId": 4031290
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1800,
+      "items": [
+        {
+          "itemId": 4031290,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

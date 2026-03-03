@@ -1,0 +1,57 @@
+{
+  "questId": 1016,
+  "info": {
+    "name": "Mai\u0027s Training",
+    "parent": "Mai\u0027s Training",
+    "descriptions": {
+      "notStarted": "Mai in Maple Island seems like a Martial -Art specialist, who can train the beginners to boost up the strength...",
+      "inProgress": "I decided to get trained under the Famous Sword-Master, Mai, in Amherst. I guess hunting the weakest monsters is a good idea. Should I hunt Snail, Blue Snail, and Shroom in order?\\n\\n#o100100# #r#a10161# #k\\n#o100101#  #r#a10162# #k\\n#o120100# #r#a10163##k\\n\\n Ah, Mai told me to meet with #p20002# in Southperry and try training together...",
+      "completed": "Mai trained me, and I feel I\u0027m a lot stronger."
+    },
+    "area": 20,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 12100,
+      "maxLevel": 7,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1019,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 12100,
+      "monsters": [
+        {
+          "monsterId": 100100,
+          "count": 5
+        },
+        {
+          "monsterId": 100101,
+          "count": 5
+        },
+        {
+          "monsterId": 120100,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 70,
+      "nextQuest": 1017
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "questId": 8871,
+  "info": {
+    "name": "Circle of Trust - Repaired Ring",
+    "descriptions": {
+      "notStarted": "I\u0027ve lost the Ring I got from Moony on the way back to Gary and Shatima. Maybe Moony can help me out...",
+      "inProgress": "Moony has the Ring! I am saved. This time I should be very careful.",
+      "completed": "I got the Repaired Ring from Moony again, and now Gary and Shatima can get married! Phew, a lot of work, but well worth it!"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201000,
+      "repeatIntervalMinutes": 60,
+      "prerequisiteQuests": [
+        {
+          "questId": 8867,
+          "state": "STARTED"
+        },
+        {
+          "questId": 8868,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031526,
+          "count": 0
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031526
+        }
+      ]
+    }
+  }
+}

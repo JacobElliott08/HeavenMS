@@ -1,0 +1,36 @@
+{
+  "questId": 9168,
+  "info": {
+    "name": "추석 상식 9. 조상의 묘",
+    "parent": "한국의 명절 추석",
+    "descriptions": {
+      "inProgress": "조상의 묘의 잡초를 제거하고 돌보는 것을 무엇이라고 하죠?",
+      "completed": "조상의 묘를 찾아가 잡초를 베어주는 것을 벌초라고 한다."
+    },
+    "area": 50,
+    "order": 9
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2006092600",
+      "endDate": "2006101600",
+      "prerequisiteQuests": [
+        {
+          "questId": 9167,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3300,
+      "nextQuest": 9169
+    }
+  }
+}

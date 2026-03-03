@@ -1,0 +1,35 @@
+{
+  "questId": 10342,
+  "info": {
+    "name": "Vague Aran Memories",
+    "descriptions": {
+      "notStarted": "For questions about Aran, you\u0027d better go talk to #bCassandra#k.",
+      "inProgress": "She says in order to obtain the Aran Memory Fragments, you have to first collect Vague Aran Memories.",
+      "completed": "You collected the Vague Aran Memories. Cassandra mentioned a girl that\u0027s been waiting patiently at Rien for Aran\u0027s revival. What was her name again… Was it Lilin?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 13,
+      "endDate": "2009010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 10341,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10342e",
+      "items": [
+        {
+          "itemId": 4032366,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "questId": 4107,
+  "info": {
+    "name": "노점상 주인 여씨와 물물교환 1",
+    "descriptions": {
+      "notStarted": "상해 와이탄의 #b#p9310011##k를 찾아가보자.",
+      "inProgress": "#b#p9310011##k에게 #b#t4000187##k을 가져가자.\\n\\n#i4000187##t4000187# #b#c4000187#/100#k",
+      "completed": "#b#p9310011##k에게 #b#t4000187##k을 주고 맛있는 #b#t2022064##k를 받았다."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9310011,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2000010100",
+      "endDate": "2000010200"
+    },
+    "complete": {
+      "npc": 9310011,
+      "items": [
+        {
+          "itemId": 4000187,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000187,
+          "count": -100
+        },
+        {
+          "itemId": 2022064,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

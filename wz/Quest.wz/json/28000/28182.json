@@ -1,0 +1,59 @@
+{
+  "questId": 28182,
+  "info": {
+    "name": "Rigorous Training-2",
+    "descriptions": {
+      "notStarted": "#b#@9201121:##k in #bEllinia#k says he\u0027ll begin the second training.",
+      "inProgress": "For #b#@9201121:##k\u0027s second training, you must hunt #rSlimes#k and collect #rSquishy Liquids#k.",
+      "completed": "You\u0027ve completed #bLucci#k\u0027s second training!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201121,
+      "prerequisiteQuests": [
+        {
+          "questId": 28180,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 9201121,
+      "items": [
+        {
+          "itemId": 4000004,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800,
+      "items": [
+        {
+          "itemId": 4000004,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

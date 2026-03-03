@@ -1,0 +1,49 @@
+{
+  "questId": 1122,
+  "info": {
+    "name": "팜의 사랑의 증표",
+    "descriptions": {
+      "notStarted": "#t4031690#를 받으려면 팜을 찾아가보자.",
+      "inProgress": "팜은 나의 사랑을 증명하라면서 #b#t4000226# 10#k개를 가져오라고 했다.\\n\\n#i4000226##t4000226# #b#c4000226# / 10#k",
+      "completed": "팜에게 사랑의 증표를 얻었다."
+    },
+    "area": 41
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081004,
+      "repeatIntervalMinutes": 0,
+      "infoNumber": 1100,
+      "infoEx": [
+        null
+      ],
+      "items": [
+        {
+          "itemId": 4031690
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081004,
+      "items": [
+        {
+          "itemId": 4000226,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000226,
+          "count": -10
+        },
+        {
+          "itemId": 4031690
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "questId": 3333,
+  "info": {
+    "name": "A Present for Keeny",
+    "parent": "A Present for Keeny",
+    "descriptions": {
+      "inProgress": "#p2111003# made a present for #p2111005#. What, he\u0027s not human, but he can perform alchemy? \\n\\nAnyway, #p2111003# made #t4031693#. I didn\u0027t think the present seemed girly enough, but in the world of alchemy, this might be the norm... I better give this to #b#p2111005##k right now.",
+      "completed": "#p2111005# was very ecstatic to receive this gift. She must be really close with #p2111003#."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111003,
+      "minLevel": 45,
+      "prerequisiteQuests": [
+        {
+          "questId": 3332,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111005,
+      "items": [
+        {
+          "itemId": 4031693
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031693
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 20000,
+      "items": [
+        {
+          "itemId": 4031693,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "questId": 28173,
+  "info": {
+    "name": "Heading Over to The Nautilus!",
+    "parent": "Who is the suspect?",
+    "descriptions": {
+      "notStarted": " #b#@1012003:##k, who has been keeping an eye on #r#t4001341:##k, says he needs some help. Let\u0027s talk to him.",
+      "inProgress": "He says to go over to #b#@1092012:##k in #b#m120000200##k and investigate #r#t4001341:##k.",
+      "completed": "#b#@1092012:##k in #b#m120000200##k says he\u0027s finished analyzing the clues. Let\u0027s talk to him."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012003,
+      "prerequisiteQuests": [
+        {
+          "questId": 28172,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1092012
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

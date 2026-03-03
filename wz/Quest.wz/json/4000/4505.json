@@ -1,0 +1,56 @@
+{
+  "questId": 4505,
+  "info": {
+    "name": "Stop the Speeder!",
+    "descriptions": {
+      "notStarted": "#p9270028# in CBD is really concerned about growing number of  speeding violations.  Let go find him and see what is happening in CBD!",
+      "inProgress": "#p9270028# asked me to collect #b#t4000371# and #t4000370##k to warn people how important it is to follow the law.  He emphasized that this is only to keep us safe from any danger.\\n\\n#t4000371#  #r#c4000371#/100#k\\n#t4000370#  #r#c4000370#/100#k",
+      "completed": "I feel so good that I have contributed myself making Singapore a better and safer place to live in."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270028,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 4504,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270028,
+      "items": [
+        {
+          "itemId": 4000371,
+          "count": 100
+        },
+        {
+          "itemId": 4000370,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 2043701,
+          "probability": 1
+        },
+        {
+          "itemId": 4000370,
+          "count": -100
+        },
+        {
+          "itemId": 4000371,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

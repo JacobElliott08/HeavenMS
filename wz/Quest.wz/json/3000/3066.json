@@ -1,0 +1,71 @@
+{
+  "questId": 3066,
+  "info": {
+    "name": "Hughes\u0027s Weird Invention",
+    "descriptions": {
+      "notStarted": "#p2012017#, the mad scientist who lives at the basement of Orbis Tower, apparently has invented something incredible. ",
+      "inProgress": "I went to the basement of the Orbis Tower to see the mad scientist, Hughes. He claimed to have invented an equipment that will allow us to breathe underwater. Not bad... He said with a few materials, he can also make one for me. I better start gathering up.... \\n\\n#t4000153# #b#c4000153##k/50\\n#t2022040# #b#c2022040##k/50\\n#t4011001# #b#c4011001##k/5\\n#t4003000# #b#c4003000##k/30",
+      "completed": "I went to the basement of the Orbis Tower where Hughes lives, gave Hughes all the materials needed, and got #b#t1102061##k in return, to breathe underwater."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012017,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 3065,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012017,
+      "items": [
+        {
+          "itemId": 4003000,
+          "count": 30
+        },
+        {
+          "itemId": 2022040,
+          "count": 50
+        },
+        {
+          "itemId": 4011001,
+          "count": 5
+        },
+        {
+          "itemId": 4000153,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "items": [
+        {
+          "itemId": 4000153,
+          "count": -50
+        },
+        {
+          "itemId": 2022040,
+          "count": -50
+        },
+        {
+          "itemId": 4011001,
+          "count": -5
+        },
+        {
+          "itemId": 4003000,
+          "count": -30
+        },
+        {
+          "itemId": 1102061
+        }
+      ]
+    }
+  }
+}

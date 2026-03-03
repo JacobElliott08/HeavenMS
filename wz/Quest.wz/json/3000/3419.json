@@ -1,0 +1,42 @@
+{
+  "questId": 3419,
+  "info": {
+    "name": "Trading with Alien Gray",
+    "descriptions": {
+      "notStarted": "I better go take a look at Alien Gray, who\u0027s somewhere around Kulan Field.",
+      "inProgress": "I ran into #bAlien Gray#k at Kulan Field around Omega Sector. He claimed that it\u0027s the Omega Sector, not them, that\u0027s been the bad one, and it asked me to help it invade the Sector by getting a number of materials from the Omega Sector Silo. I really don\u0027t feel good about helping it, but... oh well... I\u0027ll need to enter the Omega Sector Silo and bring out #b3 Secret Documents#k. \\n\\n#t4031116# #b#c4031116##k/3",
+      "completed": "I got the 3 secret documents out of the Silo and handed them to #bAlien Gray#k, which was at Kulan Field of Omega Sector. I was richly rewarded for my effort, but I can\u0027t believe I fell for Gray\u0027s lies... I better hope the Omega Sector does not find out about the fact that I actually helped out the aliens..."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050002,
+      "minLevel": 44
+    },
+    "complete": {
+      "npc": 2050002,
+      "items": [
+        {
+          "itemId": 4031116,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 14000,
+      "items": [
+        {
+          "itemId": 4031116,
+          "count": -3
+        },
+        {
+          "itemId": 2100017,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

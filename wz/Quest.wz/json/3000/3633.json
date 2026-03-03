@@ -1,0 +1,41 @@
+{
+  "questId": 3633,
+  "info": {
+    "name": "Retrieving the Storybook : Shim Chung",
+    "descriptions": {
+      "notStarted": "I heard the Helios Tower Library has been ruined. I need to go check it out...",
+      "inProgress": "Wiz the Librarian seemed very concerned about the mix-up of the storybook on Shim Chung, and he wished to get the story straight and find the storybook that actually does present the story in the right order.",
+      "completed": "Through the request from Wiz the Librarian, I have managed to straighten out the Story of Shim Chung and #p2071009#, and acquired the fixed storybook, afterwhich I headed back to Wiz and gave him the book."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040052,
+      "minLevel": 35
+    },
+    "complete": {
+      "npc": 2040052,
+      "items": [
+        {
+          "itemId": 4031280
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 4031280,
+          "count": -1
+        },
+        {
+          "itemId": 2020012,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

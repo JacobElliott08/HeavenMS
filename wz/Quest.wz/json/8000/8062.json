@@ -1,0 +1,86 @@
+{
+  "questId": 8062,
+  "info": {
+    "name": "Doll in the Dark 2",
+    "parent": "Doll in the Dark",
+    "descriptions": {
+      "notStarted": "#b#p2041022##k said he looked for some subjects that may go along with the book that\u0027s being written. What do I need to do now? I better ask him.",
+      "inProgress": "#p2041022# requested me to defeat #b#o6230400##k and collect #b50 #t04000143#s#k so I can hand them to #b#p1012109##k. I don\u0027t know if #p1012109# wants to be in on this, but I\u0027ll ask first.",
+      "completed": "Just the way #p2041022# ordered, I gathered up #b50 #t04000143#s#k from #b#o6230400##k, and gave them to #p1012109# of #m100000000#. #p1012109# seemed very ecstatic, and rewarded me for my effort, but will that really help him write the next chapter?"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041022,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 8061,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012109,
+      "items": [
+        {
+          "itemId": 4000143,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 4000143,
+          "count": -50
+        },
+        {
+          "itemId": 2041031,
+          "probability": 1
+        },
+        {
+          "itemId": 2040609,
+          "probability": 1
+        },
+        {
+          "itemId": 2040409,
+          "probability": 1
+        },
+        {
+          "itemId": 2040011,
+          "probability": 1
+        },
+        {
+          "itemId": 2040813,
+          "probability": 1
+        },
+        {
+          "itemId": 2040909,
+          "probability": 1
+        },
+        {
+          "itemId": 2041037,
+          "probability": 1
+        },
+        {
+          "itemId": 2040013,
+          "probability": 1
+        },
+        {
+          "itemId": 2041035,
+          "probability": 1
+        },
+        {
+          "itemId": 2040407,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

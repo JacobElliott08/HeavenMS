@@ -1,0 +1,46 @@
+{
+  "questId": 8076,
+  "info": {
+    "name": "The Committee Challenges",
+    "parent": "The Committee Challenges",
+    "descriptions": {
+      "notStarted": "Sabitrama of Sleepywood has been looking for me. Something must have happened. I should drop by when there\u0027s time.",
+      "inProgress": "Sabitrama found the clues needed for the 3rd Herb.\\nThe message was still too hard to understand. The archive said something like this! ...\\nWhat kind of an ominous herb is this?? This herb cannot be placed near a human being, so seal up the force in a spherical object, and never let it see the day of light again...\\n\\nIf it\u0027s anything like the herbs before, then I\u0027ll still have to obtain this through monsters again. Arrgh, this is frustrating!",
+      "completed": "We found the 3rd Herb, but it is tightly sealed inside Lazy Buffy\u0027s Marble. It seems like it\u0027s been attached for so long, that I don\u0027t think we can just pluck it out of the sphere. Sabitrama then mentioned something like applying modern science to opening this. We\u0027ve come so far, that there\u0027s no way we\u0027re about to give up.\\nBut then again, who am I supposed to find?\""
+    },
+    "area": 48,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061005,
+      "minLevel": 85,
+      "prerequisiteQuests": [
+        {
+          "questId": 8075,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061005,
+      "items": [
+        {
+          "itemId": 4000129,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 4000129,
+          "count": -200
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "questId": 9510,
+  "info": {
+    "name": "서문정 거리구경",
+    "descriptions": {
+      "notStarted": "대만에 살고 있는 #b#p9330004##k을 만나 보자.",
+      "inProgress": "서문정 거리를 구경하고 그 증거로 들개를 퇴치하고 서문정 거리의 #b#p9330003##k을 만나자. \\n\\n#o9410000# #r#a95101##k",
+      "completed": "서문정 거리의 #b#p9330003##k을 만났다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9330004,
+      "minLevel": 10,
+      "startDate": "2006101600",
+      "endDate": "2006110100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9499,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9330003,
+      "monsters": [
+        {
+          "monsterId": 9410000,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200
+    }
+  }
+}

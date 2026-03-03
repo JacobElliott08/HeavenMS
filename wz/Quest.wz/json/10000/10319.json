@@ -1,0 +1,29 @@
+{
+  "questId": 10319,
+  "info": {
+    "name": "Artifact Hunt 1000 points acquired!",
+    "descriptions": {
+      "notStarted": "You have acquired 1000 points in Artifact Hunt.",
+      "inProgress": "You have acquired 1000 points in Artifact Hunt.",
+      "completed": "When you reached 1000 points in Artifact Hunt, the Maple Admin said he\u0027d give you twice the points until you reach 3000 points. Not bad! He also says he\u0027ll give you another present when you reach 2500 points."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "startDate": "2010022200",
+      "endDate": "2010030800",
+      "startScript": "q10319s",
+      "normalAutoStart": true,
+      "infoNumber": 10310,
+      "infoEx": [
+        null
+      ]
+    },
+    "complete": {
+      "endScript": "q10319e"
+    }
+  }
+}

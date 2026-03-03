@@ -1,0 +1,51 @@
+{
+  "questId": 28162,
+  "info": {
+    "name": "Meeting the Training Instructor",
+    "descriptions": {
+      "notStarted": "#b#@1022000:##k in #b#m102000000##k says he will help you train.",
+      "inProgress": "He says you can receive additional training from #b#@9201119:##k in #b#m102000000##k.",
+      "completed": "The Path of a Warrior.."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "prerequisiteQuests": [
+        {
+          "questId": 2131,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 9201119
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

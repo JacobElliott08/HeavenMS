@@ -1,0 +1,42 @@
+{
+  "questId": 8832,
+  "info": {
+    "name": "Graham Cracked",
+    "descriptions": {
+      "notStarted": "What is that old man doing over there with all those Graham Crackers?",
+      "inProgress": "I spoke with the old man, Mr. Kit Kat, and he wants to build a Graham Cracker house, but the monsters keep eating them...not that I blame them, they look delicious...despite my hunger, I\u0027ve agreed to get 50 Graham Crackers for him so he can build his dream house.",
+      "completed": "I got all the Graham Cracker pieces (and resisted the temptation to eat them), returned to Mr. Kit Kat and he gave me something tasty?Banana Graham Pie. 2 of them!"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201032,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2008011500"
+    },
+    "complete": {
+      "npc": 9201032,
+      "items": [
+        {
+          "itemId": 4031446,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031446,
+          "count": -50
+        },
+        {
+          "itemId": 2022123,
+          "count": 2
+        }
+      ]
+    }
+  }
+}

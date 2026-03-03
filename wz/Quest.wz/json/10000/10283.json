@@ -1,0 +1,48 @@
+{
+  "questId": 10283,
+  "info": {
+    "name": "인기 몬스터의 초상화 : 옥토퍼스",
+    "descriptions": {
+      "notStarted": "매일 매일 인기 몬스터의 초상화를 그려 #b#p9010010##k에게 가져다 주면 푸짐한 선물을 준다고 한다.",
+      "inProgress": "#t04032303#를 모아 #b옥토퍼스#k의 초상화를 완성 시키자.",
+      "completed": "#b#p9010010##k를 위해 인기 몬스터의 초상을 그려 가져다 주었다."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 31,
+      "maxLevel": 70,
+      "endDate": "2009052800",
+      "normalAutoStart": true,
+      "startScript": "q10283s"
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10283e",
+      "infoNumber": 10289,
+      "infoEx": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "items": [
+        {
+          "itemId": 4220149
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4220149
+        }
+      ]
+    }
+  }
+}

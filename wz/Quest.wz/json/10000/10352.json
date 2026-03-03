@@ -1,0 +1,34 @@
+{
+  "questId": 10352,
+  "info": {
+    "name": "Flickering Aran Memories",
+    "descriptions": {
+      "notStarted": "You are short one Aran Memory Fragment. You\u0027ll have to ask Cassandra for even the very last one, right?",
+      "inProgress": "You\u0027d better locate those Flickering Aran Memories for Cassandra.",
+      "completed": "Finally… You gathered all 12 Aran Memory Fragments, but what now?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2009010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 10351,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10352e",
+      "items": [
+        {
+          "itemId": 4032371,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

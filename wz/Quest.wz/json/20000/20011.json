@@ -1,0 +1,36 @@
+{
+  "questId": 20011,
+  "info": {
+    "name": "I\u0027ll Show You How to Hunt",
+    "descriptions": {
+      "notStarted": "Let\u0027s get some information on hunting from #b#p1102005##k.",
+      "inProgress": "#p1102005# briefly explained the basics of hunting and asked that you hunt #r#o100120##ks, the weakest creatures in Ereve, as a test. He says you can attack by pressing the #bCtrl key#k, so let\u0027s try it out!",
+      "completed": "You have come back after hunting the #o0100120#s. #p1102005# says you can meet his brother #p1102006# if you continue to your left."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102005,
+      "startScript": "q20011s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20010,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    },
+    "complete": {
+      "npc": 1102005,
+      "endScript": "q20011e",
+      "monsters": [
+        {
+          "monsterId": 9300328
+        }
+      ]
+    }
+  }
+}

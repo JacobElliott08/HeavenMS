@@ -1,0 +1,52 @@
+{
+  "questId": 9523,
+  "info": {
+    "name": "유령 옷 만들기!!",
+    "descriptions": {
+      "notStarted": "#b#p1012106##k에게 다시 말을 걸어보자.",
+      "inProgress": "유령 옷을 만들 수 있도록 재료를 구해가자. \\n\\n#t4000035# #b#c4000035#/100#k",
+      "completed": "#b#p1012106##k이 유령 옷을 만들 수 있도록 도와주었다. 하지만, 아직 많이 부족하다고 하니 시간이 날 때마다 도와주자."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012106,
+      "minLevel": 30,
+      "maxLevel": 45,
+      "repeatIntervalMinutes": 30,
+      "startDate": "2006102600",
+      "endDate": "2006110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 9522,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012106,
+      "items": [
+        {
+          "itemId": 4000035,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3800,
+      "items": [
+        {
+          "itemId": 2022043,
+          "count": 5
+        },
+        {
+          "itemId": 4000035,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

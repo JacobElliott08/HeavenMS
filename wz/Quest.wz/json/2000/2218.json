@@ -1,0 +1,29 @@
+{
+  "questId": 2218,
+  "info": {
+    "name": "Information from Nella",
+    "descriptions": {
+      "notStarted": "According to the information provided on the crumpled piece of paper, #p1052103# is one of the informants that JM wants you to go see. Let\u0027s go find #b#p1052103##k.",
+      "inProgress": "According to #p1052103#,  #b#p9020000##k the magician in #m103000000# seem rather anxious... Hmmm does she have something to do with the scheme?",
+      "completed": "According to #p1052103#,  #b#p9020000##k the magician in #m103000000# seem rather anxious... Hmmm does she have something to do with the scheme?"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052103,
+      "startScript": "q2218s",
+      "prerequisiteQuests": [
+        {
+          "questId": 2214,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031894
+        }
+      ]
+    }
+  }
+}

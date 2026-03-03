@@ -1,0 +1,46 @@
+{
+  "questId": 1008,
+  "info": {
+    "name": "Pio\u0027s Collecting Recycled Goods",
+    "descriptions": {
+      "notStarted": "When I see Pio, he asks me to help collecting recycled goods.",
+      "inProgress": "I ran into Pio who is famous in Amherst for fixing broken goods. Pio tells me to break down scrap boxes from here and there in the village and bring back a #t4031161# and an #t4031162#. I think I saw some scrap boxes in the village...\\n\\n#t4031162# #c4031162# / #r1#k\\n#t4031161# #c4031161# / #r1#k",
+      "completed": "As Pio asked me, I broke down some useless boxes that were lying here and there in the village, and returned it to him. It was fun collecting them because I could find some useful stuff in them as well."
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 10000,
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "items": [
+        {
+          "itemId": 4031162
+        },
+        {
+          "itemId": 4031161
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "meso": 200,
+      "items": [
+        {
+          "itemId": 4031162,
+          "count": -1
+        },
+        {
+          "itemId": 4031161,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

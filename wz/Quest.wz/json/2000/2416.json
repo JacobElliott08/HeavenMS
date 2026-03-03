@@ -1,0 +1,49 @@
+{
+  "questId": 2416,
+  "info": {
+    "name": "Using Magic Claw",
+    "descriptions": {
+      "notStarted": "Power B. Fore at the training center wants you to learn how to use a new skill.",
+      "inProgress": "Power B. Fore is teaching you how to use a new skill. Use Magic Claw to eliminate some Slimes.\\r\\n\\r\\n#o210100# #a24161# (Use Magic Claw)",
+      "completed": "You used Magic Claw to eliminate some Slimes."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032113,
+      "prerequisiteQuests": [
+        {
+          "questId": 2411,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232
+      ]
+    },
+    "complete": {
+      "npc": 1032113,
+      "monsters": [
+        {
+          "monsterId": 210100,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200
+    }
+  }
+}

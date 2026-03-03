@@ -1,0 +1,32 @@
+{
+  "questId": 2151,
+  "info": {
+    "name": "Truth of the Rumor- Dances with Balrog",
+    "descriptions": {
+      "notStarted": "Let\u0027s ask elder #b#p1022000##k in #m102000000# about the rumor.",
+      "inProgress": "Let\u0027s ask elder #b#p1022000##k in #m102000000# about the rumor.",
+      "completed": "Asked #p1022000# about the rumor."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "startScript": "q2151s",
+      "prerequisiteQuests": [
+        {
+          "questId": 2144,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10
+    }
+  }
+}

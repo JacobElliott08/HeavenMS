@@ -1,0 +1,42 @@
+{
+  "questId": 4541,
+  "info": {
+    "name": "A Bright and Sunny Day",
+    "parent": "Malek\u0027s Joy of Music",
+    "descriptions": {
+      "notStarted": "It is such a sunny day! I really need something to cool down!",
+      "inProgress": "#b#p9270061##k says that with the #b#o9420527#s#k running outside the village, we won\u0027t be able to go out of the Kampung. They want me to help get rid of them and collect #b50 #t4000465#s#k. \\n\\n#t4000465# #r#c4000465#/50#k",
+      "completed": "After getting the #b#t4000465##k they felt less heaty."
+    },
+    "area": 49,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270061,
+      "minLevel": 50
+    },
+    "complete": {
+      "npc": 9270061,
+      "items": [
+        {
+          "itemId": 4000465,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "meso": 3000,
+      "fame": 3,
+      "items": [
+        {
+          "itemId": 4000465,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

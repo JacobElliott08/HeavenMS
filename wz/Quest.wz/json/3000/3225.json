@@ -1,0 +1,72 @@
+{
+  "questId": 3225,
+  "info": {
+    "name": "Fixing Eos Tower",
+    "descriptions": {
+      "notStarted": "I should go check out Roly-Poly 10 at Eos Tower.",
+      "inProgress": "I met up with Roly-Poly 10 again at Eos Tower. He asked if I could get him #b30 Yellow Toy Blocks#k and #b15 Blue Toy Blocks#k to fix the tower. I think I can get those by taking out the Block Golems...\\n\\n#t4000101# #b#c4000101##k/30\\n#t4000102# #b#c4000102##k/15",
+      "completed": "I gave Roly-Poly 10 the yellow blocks and blue blocks needed to fix this place up. A toy block used to fix a castle...where else can this happen but here in Ludibrium?"
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040013,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 3220,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040013,
+      "items": [
+        {
+          "itemId": 4000101,
+          "count": 30
+        },
+        {
+          "itemId": 4000102,
+          "count": 15
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9000,
+      "items": [
+        {
+          "itemId": 4000101,
+          "count": -30
+        },
+        {
+          "itemId": 4000102,
+          "count": -15
+        },
+        {
+          "itemId": 1102000,
+          "probability": 1
+        },
+        {
+          "itemId": 1102001,
+          "probability": 1
+        },
+        {
+          "itemId": 1102002,
+          "probability": 1
+        },
+        {
+          "itemId": 1102003,
+          "probability": 1
+        },
+        {
+          "itemId": 1102004,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

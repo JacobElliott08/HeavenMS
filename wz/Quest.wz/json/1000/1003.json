@@ -1,0 +1,35 @@
+{
+  "questId": 1003,
+  "info": {
+    "name": "What Sen wants to eat",
+    "parent": "Nina and Sen\u0027s Dinner Menu",
+    "descriptions": {
+      "notStarted": "Let\u0027s talk to Nina.",
+      "inProgress": "I ran into Nina who was thinking about what to make for Dinner for her brother, Sen. I have to go and talk to Sen who is next to Nina, and find out what he wants to have for dinner.",
+      "completed": "I asked Sen, Nina\u0027s brother, what he wants to have for dinner. He answers he wants to have a #bMushroom Soup#k."
+    },
+    "area": 20,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2102,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 1004
+    }
+  }
+}

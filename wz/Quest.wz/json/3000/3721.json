@@ -1,0 +1,75 @@
+{
+  "questId": 3721,
+  "info": {
+    "name": "Dangerous Slimes",
+    "parent": "Year 2021- Just Another Day",
+    "descriptions": {
+      "inProgress": "The year is 2021. Eliminate 50 Slimes that are threatening the boy and another 50 Slimes that are threatening the girl. Then collect 30 dropped items from each group of Slimes to prevent the Slimes from reviving and report back to the Brainy Boy.",
+      "completed": "You worked hard to eliminate so many Slimes, but the population of the Slimes has not gotten any smaller. Where are these monsters coming from?"
+    },
+    "area": 41,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082005,
+      "minLevel": 71,
+      "prerequisiteQuests": [
+        {
+          "questId": 3720,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082005,
+      "items": [
+        {
+          "itemId": 4000545,
+          "count": 30
+        },
+        {
+          "itemId": 4000546,
+          "count": 30
+        },
+        {
+          "itemId": 4000547,
+          "count": 30
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 7120103,
+          "count": 50
+        },
+        {
+          "monsterId": 7120104,
+          "count": 50
+        },
+        {
+          "monsterId": 7120105,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 4000545,
+          "count": -30
+        },
+        {
+          "itemId": 4000546,
+          "count": -30
+        },
+        {
+          "itemId": 4000547,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "questId": 3930,
+  "info": {
+    "name": "Sejan\u0027s Sand Bandits",
+    "parent": "Sand Bandits According to Sejan",
+    "descriptions": {
+      "notStarted": "I have passed all of #p2101011#\u0027s tests. Now all that I got to do is become a member of the Sand Bandits, right? I better go to #b#p2101011##k and talk to him about it.",
+      "inProgress": "#p2101011# said if I am a true member, even if I have a lot, I shouldn\u0027t be too caught up by it, and use that wealth to help the people at #m260000000#, and immediately asked me if I can fork over #b10000 mesos#k for the members of the Sand Bandits.",
+      "completed": "It took me a while to get that much money, but I donated 10,000 mesos to the residents of #m260000000#. That\u0027s when he told me I have now passed all of his test. That also means I have to pass other peoples\u0027 tests, too. Come to think of it, that wall of secret mentioned bow and arrows, iron hammer, and dagger."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101011,
+      "minLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 3929,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101011
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "meso": -10000,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 100
+        },
+        {
+          "itemId": 2000006,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

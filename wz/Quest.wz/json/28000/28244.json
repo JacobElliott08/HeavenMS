@@ -1,0 +1,58 @@
+{
+  "questId": 28244,
+  "info": {
+    "name": "Grendel the Really Tipsy",
+    "parent": "Unveiling the Map",
+    "descriptions": {
+      "notStarted": "#b#@1032001:##k in #bEllinia#k says he may know of a way to unveil the rest of the map. Let\u0027s talk to him.",
+      "inProgress": "#b#@1032001:##k in #bEllinia#k says there is no free lunch! He asks you to bring him some #rPork#k that would complement the fancy wine he just received as a gift.\\nHe says it\u0027s a drop item that can be acquired from #rRibbon Pigs#k, which can be easily found in #b#m100030000##k.\\n\\nReport back to #b#@1032001:##k in #bEllinia#k upon completion.",
+      "completed": "#b#@1020000:##k in #bPerion#k says he may be able to uncover the red portion of the #rDirty Treasure Map#k. Let\u0027s talk to him."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "prerequisiteQuests": [
+        {
+          "questId": 28243,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "items": [
+        {
+          "itemId": 4001357,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1400,
+      "items": [
+        {
+          "itemId": 4001357,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

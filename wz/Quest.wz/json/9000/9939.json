@@ -1,0 +1,36 @@
+{
+  "questId": 9939,
+  "info": {
+    "name": "잘못 대답한 것 같다",
+    "descriptions": {
+      "notStarted": "다시 생각해 보니 파티에서 가장 중요한 것은 다른 것 같다. #b#p2120006##k에게 #b잘못된 대답#k을 한 것 같다고 말하자. ",
+      "inProgress": "#p2120006#는 화를 내면서도 다시 한 번 대답할 기회를 주겠다고 말했다. 이번에는 신중하게 답하자.",
+      "completed": "좋아, 대답을 들은 #p2120006#가 뭐라고 할지 말을 걸어보자."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120006,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2008110600",
+      "startScript": "q9939s",
+      "infoNumber": 7643,
+      "infoEx": [
+        null
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 9932,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9933
+        },
+        {
+          "questId": 9934
+        }
+      ]
+    }
+  }
+}

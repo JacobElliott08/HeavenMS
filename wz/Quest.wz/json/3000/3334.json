@@ -1,0 +1,55 @@
+{
+  "questId": 3334,
+  "info": {
+    "name": "Humanoid A",
+    "parent": "Humanoid Just Wants to be Human",
+    "descriptions": {
+      "notStarted": "#p2111003# is the one being that cannot be fully categorized as either a robot, or a human. He apparently has something he desires more than anything else. I better go see #p2111003#.",
+      "inProgress": "#p2111003#. He wanted to give #p2111004# a present, #t4031695# by that. He then asked me to get him #b50 #t4000353#s#k, #b100 #t4000359#s#k, and #b#t4031696##k. #t4000353# can be found through #r#o3110300##k, #t4000359# through #r#o4110302##k, and #b#t4031696##k through #b#p2020005##k.  \\n\\n#i4000353##t4000353# #b#c4000353##k/50   \\n#i4000359##t4000359# #b#c4000359##k/100   \\n#i4031696##t4031696# #b#c4031696##k/1  ",
+      "completed": "Once I got him all the materials, #p2111003# gave me a sincere thanks for the work. He seemed so happy... but why does he want to give Phyllia a present? Does he love her...?"
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111003,
+      "minLevel": 65
+    },
+    "complete": {
+      "npc": 2111003,
+      "items": [
+        {
+          "itemId": 4031696
+        },
+        {
+          "itemId": 4000359,
+          "count": 100
+        },
+        {
+          "itemId": 4000353,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 14500,
+      "items": [
+        {
+          "itemId": 4000353,
+          "count": -50
+        },
+        {
+          "itemId": 4031696,
+          "count": -1
+        },
+        {
+          "itemId": 4000359,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

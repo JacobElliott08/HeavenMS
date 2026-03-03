@@ -1,0 +1,53 @@
+{
+  "questId": 1005,
+  "info": {
+    "name": "Letter for Lucas",
+    "parent": "Please bring this letter to Lucas",
+    "descriptions": {
+      "notStarted": "I heard Maria need a help...",
+      "inProgress": "I met Maria who was desperately looking for help. She gave me a letter and asked me to bring this to Lucas in Amherst...",
+      "completed": "I gave Maria\u0027s letter to Lucas in Amherst."
+    },
+    "area": 20,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2103,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 12000,
+      "items": [
+        {
+          "itemId": 4031000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031000
+        }
+      ]
+    },
+    "onComplete": {
+      "nextQuest": 1006,
+      "items": [
+        {
+          "itemId": 4031000,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

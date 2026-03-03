@@ -1,0 +1,52 @@
+{
+  "questId": 3612,
+  "info": {
+    "name": "Chil Sung\u0027s Roasted Pork",
+    "descriptions": {
+      "notStarted": "Apparently, the place that makes the best roasted pork in Korean Folk Town is Chil Sung\u0027s...",
+      "inProgress": "I went to Chil Sung\u0027s place because he was apparently the best at making roasted pork in Folk Town. He asked for 5 Moon Bunny\u0027s Pounders and 1,000 mesos in return for roasted pork.\\n\\n#t4000169# #b#c4000169##k/5",
+      "completed": "I gave Chil Sung 5 #t4000169#s and 1,000 mesos for 1 roasted pork."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071005,
+      "minLevel": 37,
+      "repeatIntervalMinutes": 120,
+      "prerequisiteQuests": [
+        {
+          "questId": 3605,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071005,
+      "items": [
+        {
+          "itemId": 4000169,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2071005,
+      "intervalMinutes": 1440
+    },
+    "onComplete": {
+      "meso": -1000,
+      "items": [
+        {
+          "itemId": 4000169,
+          "count": -5
+        },
+        {
+          "itemId": 2022050
+        }
+      ]
+    }
+  }
+}

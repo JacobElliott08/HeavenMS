@@ -1,0 +1,51 @@
+{
+  "questId": 3058,
+  "info": {
+    "name": "Lisa\u0027s Special Medicine III",
+    "descriptions": {
+      "notStarted": "With Lisa\u0027s Special Medicine, Moppie\u0027s injuries should be taken care of in an instant ... I better get to Moppie ASAP.",
+      "inProgress": "With Lisa\u0027s Special Medicine, Moppie\u0027s injuries should be taken care of in an instant...I better get to Moppie ASAP.",
+      "completed": "Thanks to Lisa\u0027s Special Medicine, Moppie is completely healed!"
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012012,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3057,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012019,
+      "items": [
+        {
+          "itemId": 4031205
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031205
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1000,
+      "fame": 5,
+      "items": [
+        {
+          "itemId": 4031205,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

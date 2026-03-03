@@ -1,0 +1,63 @@
+{
+  "questId": 1041,
+  "info": {
+    "name": "Mai\u0027s First Training",
+    "parent": "Mai\u0027s Training!",
+    "descriptions": {
+      "notStarted": "I was finally introduced to the person that\u0027ll train me through Lucas. Apparently, at the #bEast Field of Amherst#k, I can find #bMai#k training by herself. I better head East.",
+      "inProgress": "Mai instructed me to work on my hunting by first working on easy monsters. She then instructed me to hunt #r5 Stumps#k and collect #b3 Tree Branches#k. \\n\\nStump #r#a10411##k #i4000003# #t4000003# #b#c4000003# #k/3",
+      "completed": "I managed to hunt 5 Stumps, gathered all the branches, and reported them to Mai."
+    },
+    "area": 20,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 12100,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1040,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 12100,
+      "items": [
+        {
+          "itemId": 4000003,
+          "count": 3
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 130100,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 1332066
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 150,
+      "nextQuest": 1042,
+      "items": [
+        {
+          "itemId": 4000003,
+          "count": -3
+        }
+      ]
+    }
+  }
+}

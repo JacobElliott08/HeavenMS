@@ -1,0 +1,41 @@
+{
+  "questId": 2209,
+  "info": {
+    "name": "Bring a Lemon for Shulynch",
+    "descriptions": {
+      "notStarted": "I wonder what it is that Bartol wants me to do?",
+      "inProgress": "Bartol wants me to take this lemon to #bShulynch, who is in the ship\u0027s Training Room on the upper deck#k.  \\n\\n#i 2010004##t 2010004#  #b#c 2010004#/1#k",
+      "completed": "I\u0027ve delivered the lemon to Shulynch."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092011,
+      "prerequisiteQuests": [
+        {
+          "questId": 2208,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092008,
+      "items": [
+        {
+          "itemId": 2010004
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2010004,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

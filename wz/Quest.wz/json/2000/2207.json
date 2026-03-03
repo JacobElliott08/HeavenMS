@@ -1,0 +1,38 @@
+{
+  "questId": 2207,
+  "info": {
+    "name": "Lazy Little Calico",
+    "descriptions": {
+      "notStarted": "At The Nautilus, there\u0027s a kid who is forever curious and loves to make pranks. Bartol tells me now he has a good prank to pull on someone. If I want to join in, I better head over to the middle hallway of The Nautilus to find Bartol!",
+      "inProgress": "All #bCalico#k ever does is sleep, sleep, sleep, when what he should be doing is keeping an eye out on the crew\u0027s bedrooms. Bartol thinks it would be funny to throw an #bEvil Eye Tail#k onto Calico and see how he reacts. Might be a fun little prank, no? \\n\\n#i 4000007##t 4000007#  #b#c 4000007#/10#k ",
+      "completed": "Calico awakes, in total shock. C\u0027mon, Calico, you\u0027ve got to stop falling asleep!"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092011,
+      "minLevel": 25
+    },
+    "complete": {
+      "npc": 1092004,
+      "items": [
+        {
+          "itemId": 4000007,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "items": [
+        {
+          "itemId": 4000007,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

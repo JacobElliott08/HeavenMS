@@ -1,0 +1,41 @@
+{
+  "questId": 9962,
+  "info": {
+    "name": "화이트 마우스 머리띠",
+    "descriptions": {
+      "notStarted": "2008 무자년기념 화이트 마우스 머리띠가 얻고 싶다면 #b카산드라#k에게로~",
+      "inProgress": "치즈창고에서 맛있는 #b#t04031895##k을 구해 가자. 치즈창고에 들어가려면 먼저 #b#p9010015##k의 허락을 받아야겠지?\\n\\n#i04031895# #t04031895#  #b#c04031895#/20#k",
+      "completed": "귀여운 #b#t01002737##k를 얻었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "endDate": "2008030100"
+    },
+    "complete": {
+      "npc": 9010010,
+      "items": [
+        {
+          "itemId": 4031895,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1002737
+        },
+        {
+          "itemId": 4031895,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

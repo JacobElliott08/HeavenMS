@@ -1,0 +1,95 @@
+{
+  "questId": 10425,
+  "info": {
+    "name": "달은 어떻게 생겼죠?",
+    "descriptions": {
+      "notStarted": "달이 어떻게 생겼는지 궁금해 하는 귀여운 #b아기 월묘#k를 찾아가 보자.",
+      "inProgress": "대체 달은 어떻게 생긴거죠? 마을 어딘가에 보름달이 보인다고 했는데.. 보름달 가까이 가면 #i2430031:#를 더블클릭하여 달사진을 찍어오자.  사진찍는데, 실패했다면 #b아기 월묘#k에게 부탁하여 폴라로이드를 다시 얻을 수 있다.",
+      "completed": "달사진을 보고 신기해 하는 월묘는  달사진을 보자 매우 기뻐했다. 하루에 한번씩 아기 월묘를 찾아가서 사진을 찍어주자."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9001102,
+      "endDate": "2009101900",
+      "minLevel": 13,
+      "items": [
+        {
+          "itemId": 2430031
+        },
+        {
+          "itemId": 4032430
+        },
+        {
+          "itemId": 4032431
+        },
+        {
+          "itemId": 4032432
+        },
+        {
+          "itemId": 4032433
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9001102,
+      "items": [
+        {
+          "itemId": 4032433
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 2430031,
+          "expirationDate": "2009101900"
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032433,
+          "count": -1
+        },
+        {
+          "itemId": 3010081,
+          "probability": 5
+        },
+        {
+          "itemId": 3010082,
+          "probability": 5
+        },
+        {
+          "itemId": 3010083,
+          "probability": 10
+        },
+        {
+          "itemId": 3010084,
+          "probability": 10
+        },
+        {
+          "itemId": 1002812,
+          "probability": 10
+        },
+        {
+          "itemId": 2210018,
+          "count": 3,
+          "probability": 50
+        },
+        {
+          "itemId": 2430008,
+          "probability": 8
+        },
+        {
+          "itemId": 1122017,
+          "probability": 2
+        }
+      ]
+    }
+  }
+}

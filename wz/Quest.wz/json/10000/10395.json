@@ -1,0 +1,26 @@
+{
+  "questId": 10395,
+  "info": {
+    "name": "류호의 이주민",
+    "descriptions": {
+      "notStarted": "류호월드의 주민이라면 마을에 있는 #b카산드라#k를 찾아가 보자.",
+      "inProgress": "20레벨을 달성을 하면 마을에 있는 #b카산드라#k를 찾아가 보자.   #n\\n#k\\n - 레벨 : #b#jlevel##k / 20",
+      "completed": "20레벨을 달성하여, #b카산드라#k에게 선물을 받았다."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2009102900",
+      "minLevel": 13,
+      "startScript": "q10395s",
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10395e"
+    }
+  }
+}

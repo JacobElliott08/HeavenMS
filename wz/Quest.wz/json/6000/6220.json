@@ -1,0 +1,58 @@
+{
+  "questId": 6220,
+  "info": {
+    "name": "The End of Attributes...?",
+    "parent": " Inverse Attributes",
+    "descriptions": {
+      "notStarted": " I have reached the highest level of the elemental attributes. Is there a stronger attribute magic that I can learn? Let\u0027s go ask #b#p2020005##k.",
+      "inProgress": " #b#p2020005##k mentioned about inverse attributes, and suggested that we research it. He wants me to bring him the ingredients for the research....\\r\\n#i4000181##t4000181# #b#c4000181#/30#k\\n#i4000150##t4000150# #b#c4000150#/40#k\\n#i4000185##t4000185# #b#c4000185#/30",
+      "completed": " I gathered all ingredients for the inverse attributes. But does #b#p2020005##k know what he\u0027s doing?"
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "jobs": [
+        212
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "items": [
+        {
+          "itemId": 4000181,
+          "count": 30
+        },
+        {
+          "itemId": 4000150,
+          "count": 40
+        },
+        {
+          "itemId": 4000185,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 400000,
+      "items": [
+        {
+          "itemId": 4000150,
+          "count": -40
+        },
+        {
+          "itemId": 4000185,
+          "count": -30
+        },
+        {
+          "itemId": 4000181,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

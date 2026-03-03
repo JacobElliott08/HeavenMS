@@ -1,0 +1,106 @@
+{
+  "questId": 3379,
+  "info": {
+    "name": "Romeo Proposes",
+    "descriptions": {
+      "notStarted": "Romeo is an alchemist in Magatia that\u0027s currently dating Juliet like there\u0027s no tomorrow. He has finally decided to pop the question to Juliet. I better go visit #bRomeo#k.",
+      "inProgress": "Romeo told me although he may not be perfect, he\u0027s sure that Juliet will understand and take him regardless, and that\u0027s how he came to conclusion to propose to her. He then asked me to find a perfect engagement ring for her. The ring can be purchased at #bWedding Village#k through #bAllegro#k.\\n\\n#i4031806##t4031806# #b#c4031806##k/1 ",
+      "completed": "I got the engagement ring and gave it to Romeo. Now, all he has to do is come up to her and propose successfully. They may be an odd couple, but they do fit like a glove. Hopefully their love will come to fruition."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2112004,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3378,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2112004,
+      "items": [
+        {
+          "itemId": 4031806
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4031806,
+          "count": -1
+        },
+        {
+          "itemId": 2043101,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2043201,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2043301,
+          "jobRestriction": 1197073
+        },
+        {
+          "itemId": 2043701,
+          "jobRestriction": 5379077
+        },
+        {
+          "itemId": 2043001
+        },
+        {
+          "itemId": 2043801,
+          "jobRestriction": 5379077
+        },
+        {
+          "itemId": 2044001,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2044101,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2044201,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2044301,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2044401,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2044501,
+          "jobRestriction": 1188873
+        },
+        {
+          "itemId": 2044601,
+          "jobRestriction": 1188873
+        },
+        {
+          "itemId": 2044701,
+          "jobRestriction": 1197073
+        },
+        {
+          "itemId": 2044801,
+          "jobRestriction": 1213473
+        },
+        {
+          "itemId": 2044901,
+          "jobRestriction": 1213473
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "questId": 3430,
+  "info": {
+    "name": "Collecting 100 Mateon Tentacles",
+    "parent": "The Antidote",
+    "descriptions": {
+      "notStarted": "I should go see Rice the Medic at the Omega Sector.",
+      "inProgress": "I met Rice the Medic at the Omega Sector, and he asked for my help to gather up some items to make various kinds of medicine. He said he needed #b100 Mateon Tentacles#k, which can be obtained by taking out the aliens. It\u0027s quite amusing to think that the alien tentacles can be used as an ingredient to make medicines. Rice really wanted me to keep it a secret, since this was something even the famous Dr. Pepper was unaware of, and he\u0027s thinking of making a patent out of it. Well, time to collect some tentacles! \\n\\n#t4000120# #b#c4000120##k/100",
+      "completed": "Rice the Medic of Omega Sector requested the #b100 Mateon Tentacles#k, and I gathered up all of them. Will the research start now? I wonder what kind of the antidote this will produce. I should go see Rice right about the time when the tentacles run out."
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050010,
+      "minLevel": 40
+    },
+    "complete": {
+      "npc": 2050010,
+      "items": [
+        {
+          "itemId": 4000120,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9000,
+      "items": [
+        {
+          "itemId": 4000120,
+          "count": -100
+        },
+        {
+          "itemId": 2050003,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

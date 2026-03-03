@@ -1,0 +1,53 @@
+{
+  "questId": 1028,
+  "info": {
+    "name": "To Lith Harbor!",
+    "parent": "For a new world",
+    "descriptions": {
+      "notStarted": "To deliver a message of #p12000# to #p1002101#, I need to go to Victoria Island. The only way I can get there is to pay #p22000# in #m60000#... Fortunately, #p12000# said he will ask #p22000# a favor. Let\u0027s not worry and go to #b#p22000##k.",
+      "inProgress": "#p22000# let me on board for free as he heard from #p12000#. Good, now let\u0027s go to Victoria Island! #m104000000#! Now I only have to find  #b#p1002101##k? much bigger than Maple Island..can I find it?",
+      "completed": "I met  #p1002101# in #m104000000#. Hmmm~ This tough and stubborn guy is a friend of #p12000#! Amazing! Fortunately,  #p1002101# would do a favor of #p12000#. Hope I can find a nice guy so that my first trip to the Maple World ends well..."
+    },
+    "area": 20,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 22000,
+      "maxLevel": 10,
+      "startScript": "q1028s",
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1027,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1002101
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 130,
+      "items": [
+        {
+          "itemId": 2010001,
+          "count": 10
+        },
+        {
+          "itemId": 2010004,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

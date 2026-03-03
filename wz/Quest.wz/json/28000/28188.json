@@ -1,0 +1,49 @@
+{
+  "questId": 28188,
+  "info": {
+    "name": "Finding Chief Stan in Henesys",
+    "parent": "Don\u0027t Catch a Cold!",
+    "descriptions": {
+      "notStarted": "#b#@1072008:##k in #bNautilus#k says she has a favor to ask. Let\u0027s talk to her.",
+      "inProgress": "Let\u0027s hear what #b#@1012003:##k in #bHenesys#k has to say.",
+      "completed": "#b#@1012003:##k in #bHenesys#k has asked you to find the ingredients he needs to make Cold Medicine. Let\u0027s talk to him."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28187,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1012003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

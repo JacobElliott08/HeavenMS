@@ -1,0 +1,38 @@
+{
+  "questId": 2158,
+  "info": {
+    "name": "Helping Riel",
+    "descriptions": {
+      "notStarted": "Riel, Rael and Roel starts betting on who will be offered to King Clang. The winner gets to be the sacrifice! How can I help these girls get to their senses? Let\u0027s first meet with #bRiel#k.",
+      "inProgress": "Riel secretly asks to help her win the bet. Her deal is to defeat #r50 Clangs#k. How do I get myself into these situations? I\u0027d better help her with this, and then talk about how ridiculous this bet is.\\n\\n#o4230104# #r#a21581##k",
+      "completed": "Defeated all Clangs for Riel."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1081100,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2157,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1081100,
+      "monsters": [
+        {
+          "monsterId": 4230104,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

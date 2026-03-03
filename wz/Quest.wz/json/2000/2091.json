@@ -1,0 +1,62 @@
+{
+  "questId": 2091,
+  "info": {
+    "name": "I\u0027m Bored 2",
+    "parent": "I\u0027m Bored",
+    "descriptions": {
+      "notStarted": "I answered all the questions that Icarus of Kerning City asked. That was easy.",
+      "inProgress": "I answered all of Icarus\u0027s questions, but he still seemed bored out of his mind. He asked me if I could get him a toy that he could play around with. \\n\\n #t4000003# #b#c4000003##k/40 \\n#t4000004# #b#c4000004##k/40",
+      "completed": "I had fun playing around with Icarus."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052106,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 2090,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052106,
+      "items": [
+        {
+          "itemId": 4000003,
+          "count": 40
+        },
+        {
+          "itemId": 4000004,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 250,
+      "items": [
+        {
+          "itemId": 4000003,
+          "count": -40
+        },
+        {
+          "itemId": 4000004,
+          "count": -40
+        },
+        {
+          "itemId": 2000000,
+          "count": 25
+        },
+        {
+          "itemId": 2000003,
+          "count": 15
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "questId": 3826,
+  "info": {
+    "name": "Swallow Isn\u0027t Alone",
+    "parent": "Do Gong Seeking Swallow",
+    "descriptions": {
+      "notStarted": "Did #b#p2091002##k finish making the medicine for #p2071006#? I better go see #p2091002# right now...",
+      "inProgress": "#p2091002# seemed very concerned about #p2071006#\u0027s injury, and worked hard to make #b#t4031555##k for it. Now all I need to do is deliver this medicine to #b#p2071006##k...",
+      "completed": "I managed to deliver the medicine to #p2071006#. People from all over the area seem to really go out of their way to help #p2071006# out. Hopefully it manages to feed off the love from those people and be able to fly high once more...!"
+    },
+    "area": 44,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091002,
+      "prerequisiteQuests": [
+        {
+          "questId": 3825,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071006,
+      "items": [
+        {
+          "itemId": 4031555
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031555
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 4031555,
+          "count": -1
+        },
+        {
+          "itemId": 2030000,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

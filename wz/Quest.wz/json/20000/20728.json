@@ -1,0 +1,67 @@
+{
+  "questId": 20728,
+  "info": {
+    "name": "Chrishrama\u0027s Information",
+    "descriptions": {
+      "notStarted": "Maybe #b#p1061000##k of #m105040300# can tell me something useful about #o9300285#...",
+      "inProgress": "#p1061000# told me he can give a useful information on #o9300285# if I can collect #b100 #t4000015#s#k for him. \\n\\n#i4000015# #t4000015# #b#c4000015# / 100#k",
+      "completed": "According to #p1061000#, #o9300285# seems to doodle in front of #p1061006# when busy. If I look closely into #p1061006#, I may be able to find something..."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061000,
+      "minLevel": 28,
+      "prerequisiteQuests": [
+        {
+          "questId": 20725,
+          "state": "STARTED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1061000,
+      "items": [
+        {
+          "itemId": 4000015,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3400,
+      "items": [
+        {
+          "itemId": 4000015,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

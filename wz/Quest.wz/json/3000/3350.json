@@ -1,0 +1,42 @@
+{
+  "questId": 3350,
+  "info": {
+    "name": "Re-acquiring Dr. De Lang\u0027s Notes",
+    "descriptions": {
+      "notStarted": "Oh no... I was going to give #t4161033# to Zenumist, but I misplaced it. What should I do? If that book ends up in the wrong hands, then that spells disaster. I better talk to #b#p2020005##k.",
+      "inProgress": "Clearly flustered, #p2020005# yelled at me never to misplace it again. Fortunately, with his magic powers, it is easy to spot #t4161033#, so I\u0027ll just have to wait until he finds it.",
+      "completed": "Now that I\u0027ve received #t4161033# from #p2020005#, I better head back to #p2111000# of Zenumist Society. I still have a chance to change my mind and take a different route."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "minLevel": 75,
+      "repeatIntervalMinutes": 4320,
+      "prerequisiteQuests": [
+        {
+          "questId": 3347,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4161034
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4161034
+        }
+      ]
+    }
+  }
+}

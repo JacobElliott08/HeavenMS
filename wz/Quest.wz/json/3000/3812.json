@@ -1,0 +1,42 @@
+{
+  "questId": 3812,
+  "info": {
+    "name": "Eliminating the Pirates",
+    "descriptions": {
+      "notStarted": "I heard #b#p2094000##k the bellflower is planning something. What would that be?",
+      "inProgress": "#p2094000# had a plan to release the Bellflower that were being treated as slaves to the pirates. Unfortunately, he couldn\u0027t do it by himself, and asked me if I could go up to the pirate ship and defeat #r200 #o9300117#s#k and #r200 #o9300118#s#k. There are many different types of pirates under Lord Pirate, and the ones in command act differently from others. Apparently, they only make a quick appearance, then disappear. I better remember how they look, and eliminate the right ones. \\n\\n#o9300117#  #r#a38121##k\\n#o9300118#  #r#a38122##k",
+      "completed": "I was able to defeat the #o9300117#s and #o9300118#s at the pirate ship. Unfortunately, there are still plenty of pirates, and Lord Pirate is still alive and well. Wiill this be enough to save those Bellflowers?"
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2094000,
+      "minLevel": 55,
+      "maxLevel": 100
+    },
+    "complete": {
+      "npc": 2094000,
+      "monsters": [
+        {
+          "monsterId": 9300117,
+          "count": 200
+        },
+        {
+          "monsterId": 9300118,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 40000,
+      "items": [
+        {
+          "itemId": 2040708
+        }
+      ]
+    }
+  }
+}

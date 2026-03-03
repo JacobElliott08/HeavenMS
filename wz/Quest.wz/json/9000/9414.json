@@ -1,0 +1,105 @@
+{
+  "questId": 9414,
+  "info": {
+    "name": "An Immovable Sword",
+    "descriptions": {
+      "notStarted": "I heard there\u0027s a #bMysterious Sword#k at Perion. I should check it out.",
+      "inProgress": "I saw a long sword stuck in a pile of ashes, so as I approached it, I heard a deep voice resonating the area. The voice introduced itself as the rightful owner of the sword, and asked me to free him from the sword by pulling it out of the ashes. In order to do so, I\u0027ll need #bMonster Eraser#k and #b#t4001115##k...\\n\\n#t4001115# #b#c4001115#/1#k\\n#t4001038# #b#c4001038#/1#k\\n#t4001039# #b#c4001039#/1#k\\n#t4001040# #b#c4001040#/1#k\\n#t4001041# #b#c4001041#/1#k\\n#t4001042# #b#c4001042#/1#k\\n#t4001043# #b#c4001043#/1#k",
+      "completed": "After bringing both the Monster Eraser and #t4001115#, the power of the sword seemed to have come back, and freed the sword from the ashes. In the end, I was able to get my hands on #t01302063#. Hopefully the owner of the sword is also set free in the process."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022008,
+      "repeatIntervalMinutes": 0,
+      "items": [
+        {
+          "itemId": 4001038
+        },
+        {
+          "itemId": 4001039
+        },
+        {
+          "itemId": 4001040
+        },
+        {
+          "itemId": 4001041
+        },
+        {
+          "itemId": 4001042
+        },
+        {
+          "itemId": 4001043
+        },
+        {
+          "itemId": 4001115
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022008,
+      "items": [
+        {
+          "itemId": 4001038
+        },
+        {
+          "itemId": 4001039
+        },
+        {
+          "itemId": 4001040
+        },
+        {
+          "itemId": 4001041
+        },
+        {
+          "itemId": 4001042
+        },
+        {
+          "itemId": 4001043
+        },
+        {
+          "itemId": 4001115
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4001038,
+          "count": -1
+        },
+        {
+          "itemId": 4001039,
+          "count": -1
+        },
+        {
+          "itemId": 4001040,
+          "count": -1
+        },
+        {
+          "itemId": 4001041,
+          "count": -1
+        },
+        {
+          "itemId": 4001042,
+          "count": -1
+        },
+        {
+          "itemId": 4001043,
+          "count": -1
+        },
+        {
+          "itemId": 4001115,
+          "count": -1
+        },
+        {
+          "itemId": 1302063
+        }
+      ]
+    }
+  }
+}

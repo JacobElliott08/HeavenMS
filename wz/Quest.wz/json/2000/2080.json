@@ -1,0 +1,46 @@
+{
+  "questId": 2080,
+  "info": {
+    "name": "The Path of a Magician",
+    "descriptions": {
+      "notStarted": "What do I have to do to make the job advancement as a Magician? I\u0027ll have to go see #p1002101# of Lith Harbor and find out myself. ",
+      "inProgress": "#p1002101# of Lith Harbor tells me I can choose to become a #bMagicianr#k if I\u0027m at least on #blevel 8#k. He tells me I\u0027ll need to see #rGrendel the Really Old#k of #rEllinia#k ... but how do I get there? I\u0027ll have to check on the world map. (#rW#k)",
+      "completed": "I have learned what it takes to become a true Magician through the chief of all wizards, Grendel the Really Old. Hope this is the right path I\u0027m taking..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002101,
+      "prerequisiteQuests": [
+        {
+          "questId": 2079
+        },
+        {
+          "questId": 2081,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2212
+        },
+        {
+          "questId": 2077
+        },
+        {
+          "questId": 2078
+        }
+      ],
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 1032001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

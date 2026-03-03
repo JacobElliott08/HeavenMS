@@ -1,0 +1,43 @@
+{
+  "questId": 20103,
+  "info": {
+    "name": "Path of a Wind Archer",
+    "descriptions": {
+      "notStarted": "The time has come. If I want to find out more about Wind Archers, the Bowmen of the Wind, I should talk to #b#p1101005#, the Chief Knight of the Wind#k.",
+      "inProgress": "If I want to become a Cygnus Knight as a Wind Archer with broad perspectives on life, I should select #p1101005#.",
+      "completed": "I am now a Wind Archer!"
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101005,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 20102
+        },
+        {
+          "questId": 20104
+        },
+        {
+          "questId": 20105
+        },
+        {
+          "questId": 20100,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 20101
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    },
+    "complete": {
+      "npc": 1101005,
+      "endScript": "q20103e"
+    }
+  }
+}

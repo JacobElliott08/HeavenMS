@@ -1,0 +1,83 @@
+{
+  "questId": 20714,
+  "info": {
+    "name": "Mission in Kerning City Complete",
+    "descriptions": {
+      "notStarted": "Agent #b#p1103002##k of #m103000000# told me he had something to tell me...",
+      "inProgress": "#p1103002# told me this wraps up my work in #m103000000# and that I\u0027ll need to hand in the Mission Report and #t4032140# to #b#p1101002##k.",
+      "completed": "After receiving the report and the doll, #p1101002# told me one of Black Mage\u0027s men is indeed a Puppeteer, and that this may all stem from him. He then told me this still needs more investigation and asked me to train harder so that I can make myself useful for the upcoming missions."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103002,
+      "minLevel": 17,
+      "prerequisiteQuests": [
+        {
+          "questId": 20712,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1101002,
+      "items": [
+        {
+          "itemId": 4032140
+        },
+        {
+          "itemId": 4032141
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032140
+        },
+        {
+          "itemId": 4032141
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 2500,
+      "items": [
+        {
+          "itemId": 4032140,
+          "count": -1
+        },
+        {
+          "itemId": 4032141,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

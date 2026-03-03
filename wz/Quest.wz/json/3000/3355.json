@@ -1,0 +1,33 @@
+{
+  "questId": 3355,
+  "info": {
+    "name": "The Memories of Humanoid A",
+    "parent": "Who is De Lang?",
+    "descriptions": {
+      "inProgress": "#p2111001# seemed to think long and hard about #p2111002#\u0027s research, then said maybe #b#p2111003##k might know something about the medicine. #p2111003#? The one who can\u0027t even remember his past? How??",
+      "completed": "When I asked #p2111003# about #p2111002#, he had no clue who he was. However, he did mention something about this medicine that he held on from the moment he opened his eyes."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111001,
+      "minLevel": 75,
+      "prerequisiteQuests": [
+        {
+          "questId": 3354,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100
+    }
+  }
+}

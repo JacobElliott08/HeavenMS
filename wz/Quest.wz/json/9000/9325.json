@@ -1,0 +1,44 @@
+{
+  "questId": 9325,
+  "info": {
+    "name": "잃어버린 그윈의 일기장",
+    "descriptions": {
+      "notStarted": "그윈의 일기장을 잃어버렸다... 만지에게 솔직하게 말해볼까?",
+      "inProgress": "잃어버린 일기장에 대해 사실대로 만지에게 말하였다.",
+      "completed": "잃어버린 일기장을 만지가 갖고 있었다. 큰 실망이라는 표정으로.. 어쩔 수 없다는 듯 갖고 있던 일기장을 주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022002,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2006020100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9321,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4161000
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "fame": -2,
+      "items": [
+        {
+          "itemId": 4161000,
+          "expirationDate": "2006020100"
+        }
+      ]
+    }
+  }
+}

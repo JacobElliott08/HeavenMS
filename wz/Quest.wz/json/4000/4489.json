@@ -1,0 +1,41 @@
+{
+  "questId": 4489,
+  "info": {
+    "name": "Delivery the word Thank ",
+    "parent": "To sleep Icarus",
+    "descriptions": {
+      "inProgress": "You delivered a glass of warm milk to #b#p1052106##k. Hope he can go to bed early from now on. You should tell #b#p9220005##k in Happyville about this delivery, as he was worried.",
+      "completed": "You told Dalphs#b#p9220005##k that the glass of warm milk was successfully delivered to Icarus."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052106,
+      "minLevel": 25,
+      "endDate": "2010010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 4488,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9220005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "fame": 2,
+      "items": [
+        {
+          "itemId": 4031885,
+          "gender": 2
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "questId": 21753,
+  "info": {
+    "name": "The Lost Seal Stone of Ellin Forest",
+    "descriptions": {
+      "notStarted": "It turns out that the Seal Stone of Ellin Forest was taken by #o9300353# of the Black Wings. How did this happen? You\u0027d better go talk to #b#p2131000##k in Ellin Forest.",
+      "inProgress": "#p2131000# reveals that she has a letter that contains information about another Seal Stone and promises to hand it to you. Unfortunately, you can\u0027t take the letter since #b#p2131000# and you are from two separate times#k. \\n\\nJust when you think it\u0027s all over, #p2131000# tells you that she\u0027s a fairy with a very long life, and that she will in fact carry the letter to your time. What you need to do now is leave Ellin Forest and #bmeet #p2131000# in your own time#k. You wonder where #p2131000# is? You\u0027d better ask #b#p1002104##k.",
+      "completed": "You asked #p1002104# whether he knew anyone named #p2131000#. It turned out that #p1002104# is one of the most well-known people in all of Victoria Island. You should head to #m100000201# in #m100000000# to meet Athena Pierce at the Bowman Instructional School."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2131000,
+      "minLevel": 63,
+      "startScript": "q21753s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21751,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1002104
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000
+    }
+  }
+}

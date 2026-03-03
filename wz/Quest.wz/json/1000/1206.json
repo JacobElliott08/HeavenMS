@@ -1,0 +1,63 @@
+{
+  "questId": 1206,
+  "info": {
+    "name": "Forest of Poison Haze",
+    "descriptions": {
+      "notStarted": "A time in the past where one can travel to through the broken Gate of Time. Fairy of Ellin Forest is awaiting a hero who will one day save the polluted forest. But...should anyone interfere with history?\\n\\n - #eTime Limit#n : 30 minutes\\n - #eNumber of Participants#n : 3 ~ 5 people\\n ",
+      "inProgress": "From the Time Control Room on top of Halios Tower, you can travel back to the past by passing through the broken Gate of Time.\\nAnother Maple World awaits beyond the gate. It looks like Victoria Island of the past. But what\u0027s this? A mysterious person is going around polluting Ellin Forest? Then of course you should help! But no on should interfere with history... Perhaps borrowing Ellin\u0027s magic will allow you to save the forest without changing history? Let\u0027s make a #b#t1032060##k by collecting #b#t4001198#, the reward for saving the forest.\\n#eQuest Record#n\\n      Complete / Challenge        #r#jcmp# #k/ #b#jtry# #k\\n      Best Time           #b#jmin# #kminute(s) #b#jsec# #ksecond(s) ( #jdate# )\\n      #b#i1032060# #t1032060# #k             #r #jhave0# #k\\n      #b#i1032061# #t1032061# #k   #r #jhave1# #k\\n      Rank\\n                                         #b#jrank#   #kRANK \\n\\n\\n#eSummary#n\\nA time in the past where one can travel to through the broken Gate of Time. Fairy of Ellin Forest is awaiting a hero who will one day save the polluted forest. But...should anyone interfere with history?                                                ",
+      "completed": "By transforming into one of the five past heroes who used to protect Victoria Island, you were able to save Ellin Forest. Of course, it\u0027s their name that will be recorded in history... But that\u0027s fine. Ellin promised to remember you.\\n#eQuest Record#n\\n        Complete / Challenge        #r#jcmp# #k/ #b#jtry# #k\\n      Best Time           #b#jmin# #kminute(s) #b#jsec# #ksecond(s) ( #jdate# )\\n      #b#i1032060# #t1032060# #k             #r #jhave0# #k\\n      #b#i1032061# #t1032061# #k   #r #jhave1# #k\\n      Rank\\n                                         #b#jrank#   #kRANK \\n\\n\\n#eSummary#n\\nA time in the past where one can travel to through the broken Gate of Time. Fairy of Ellin Forest is awaiting a hero who will one day save the polluted forest. But...should anyone interfere with history?"
+    },
+    "area": 47
+  },
+  "requirements": {
+    "start": {
+      "npc": 2133000,
+      "minLevel": 45,
+      "maxLevel": 55,
+      "jobs": [
+        0,
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522
+      ]
+    }
+  }
+}

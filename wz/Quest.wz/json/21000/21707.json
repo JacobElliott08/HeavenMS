@@ -1,0 +1,65 @@
+{
+  "questId": 21707,
+  "info": {
+    "name": "Teo\u0027s Information",
+    "descriptions": {
+      "notStarted": "For the time being, you\u0027re working as an informant for #p1002104#. Your first task is to approach #b#p1002001##k and ask about any rumors circulating among the crewmembers.",
+      "inProgress": "#p1002001# tells you that revealing a rumor is no big deal, but he\u0027ll only do it under one condition. Turns out he wants some snail shells to treat his arthritis. Fair enough. The area surrounding #m104000000# is infested with snails, so this shouldn\u0027t be hard. \\r\\n\\r\\n#i4000019# #t4000019# #b#c4000019# / 10#k\\r\\n#i4000000# #t4000000# #b#c4000000# / 10#k\\r\\n#i4000016# #t4000016# #b#c4000016# / 10#k",
+      "completed": "You gave him all the #t4000019#s, and in return, he told you that the crew is currently stressed about the certain revival of the Black Mage. You\u0027d better relay this bit of info to #p1002104#."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002001,
+      "minLevel": 13,
+      "prerequisiteQuests": [
+        {
+          "questId": 21706,
+          "state": "STARTED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1002001,
+      "items": [
+        {
+          "itemId": 4000019,
+          "count": 10
+        },
+        {
+          "itemId": 4000000,
+          "count": 10
+        },
+        {
+          "itemId": 4000016,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000019,
+          "count": -10
+        },
+        {
+          "itemId": 4000000,
+          "count": -10
+        },
+        {
+          "itemId": 4000016,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

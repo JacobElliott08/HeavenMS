@@ -1,0 +1,52 @@
+{
+  "questId": 9306,
+  "info": {
+    "name": "\u0027카이린\u0027님께 인사드리기",
+    "parent": "새해 문안 인사",
+    "descriptions": {
+      "inProgress": "#p9010000#로부터 빅토리아 아일랜드에 있는 #b5명의 현자#k에게 새해 문안인사를 드리고 마지막에 주시는 #b어떤 물건#k을 받아와 달라는 부탁을 받았다. #p9010000#의 지시대로 페리온에 계신 #p1022000#와 엘리니아에 있는 #p1032001#, 헤네시스에 있는 #p1012100#, 커닝시티에 있는 다크로드를 찾아가 인사를 드리자 #b연하장#k을 주면서 #b노틸러스호#k에 계시는 #b#p1072008##k님을 찾아가서 문안 인사를 하라고 했다.",
+      "completed": "다크로드의 부탁으로 노틸러스호에 계시는 #p1072008#님께 문안인사를  드렸다."
+    },
+    "area": 50,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "endDate": "2008021400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9303,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "items": [
+        {
+          "itemId": 4031668
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031668
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 450,
+      "nextQuest": 9304,
+      "items": [
+        {
+          "itemId": 4031668,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

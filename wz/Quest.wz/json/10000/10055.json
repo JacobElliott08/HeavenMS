@@ -1,0 +1,60 @@
+{
+  "questId": 10055,
+  "info": {
+    "name": "에릭손의 모험담",
+    "descriptions": {
+      "notStarted": "메이플 운영자가 나를 위해서 해줄 말이 있다고 한다.",
+      "inProgress": "메이플 운영자의 조언대로 오시리아 대륙의 씩씩한 모험가 에릭손씨를 찾아가서 직접 듣는 것이 좋겠다. 오르비스에 있는 #b에릭손씨를 찾아가자.#k 선물로 그가 기르는 애완동물에게 줄 #b맛좋은 사료 1개#k를 들고 가는 것이 좋을 거라는 메이플 운영자의 충고도 잊지 말자.",
+      "completed": "오시리아의 유명한 모험가 에릭손씨의 모험담은 그를 보지 못한 사람들 사이에서조차 유명하다. 그의 고양이 네로에게 줄 맛좋은 사료를 들고 가서 선물로 주고 그의 모험담을 얻었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 30,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2008101300",
+      "endDate": "2008103000",
+      "infoNumber": 10057,
+      "infoEx": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 10052,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4001205
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012018,
+      "items": [
+        {
+          "itemId": 2120008
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4001205
+        },
+        {
+          "itemId": 2120008,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

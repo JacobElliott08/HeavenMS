@@ -1,0 +1,44 @@
+{
+  "questId": 8869,
+  "info": {
+    "name": "Spot On : An Interesting Chore",
+    "parent": "Spot On",
+    "descriptions": {
+      "notStarted": "Mom and Dad need some help at home. I\u0027d better go visit and see how I can help them.",
+      "inProgress": "I visited Mom and Dad and they looked pretty happy to see me. They need a #bMouse#k for their new computer, and heard that Mr. Spot would have one. He\u0027s in Kerning City, so I\u0027d better get a move on. ",
+      "completed": "I returned to Mom and Dad with the #bMouse#k, and they gave me #bAllowance#k. Now I can return to Mr. Spot and get a #bNexon Prepaid!#k"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201003,
+      "minLevel": 1,
+      "repeatIntervalMinutes": 1440,
+      "endDate": "2007012423"
+    },
+    "complete": {
+      "npc": 9201003,
+      "items": [
+        {
+          "itemId": 4031542
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4031542,
+          "count": -1
+        },
+        {
+          "itemId": 4031529
+        }
+      ]
+    }
+  }
+}

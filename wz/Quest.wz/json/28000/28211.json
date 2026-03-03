@@ -1,0 +1,46 @@
+{
+  "questId": 28211,
+  "info": {
+    "name": "Next Stop, Ellinia",
+    "parent": "A Strange Burglary Case",
+    "descriptions": {
+      "notStarted": " #b#@1092002:##k in #bNautilus#k says there has been a case of burglary in #bEllinia#k as well. Let\u0027s talk to him.",
+      "inProgress": "There has been a case of burglary in #bEllinia#k. Let\u0027s go see #b#@1032001:##k in #bEllinia#k.",
+      "completed": " #b#@1032001:##k in #bEllinia#k says there has been a huge burglary case in the village. Let\u0027s talk to him."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092002,
+      "prerequisiteQuests": [
+        {
+          "questId": 28210,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1032001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

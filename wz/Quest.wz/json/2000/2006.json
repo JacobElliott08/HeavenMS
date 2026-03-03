@@ -1,0 +1,75 @@
+{
+  "questId": 2006,
+  "info": {
+    "name": "Getting Arcon\u0027s Blood",
+    "parent": "Maya and the Weird Medicine",
+    "descriptions": {
+      "inProgress": "I gathered up #b40 Charms of the Undead#k from the underground tunnel and got them to Manji of Perion. Still cocky, still arrogant, but following through his promise, he hands over #bArcon\u0027s blood#k to me. Maybe he isn\u0027t so horrible a guy afterall. Anyway, now I need to gather up #b50 squishy liquids, 50 leaves, 20 octopus legs, and 1 Arcon\u0027s blood#k for Sophia.",
+      "completed": "I brought the Charms of the Undead to Manji and I finally got Arcon\u0027s Blood. I should hurry back to Sophia..."
+    },
+    "area": 30,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022002,
+      "minLevel": 15,
+      "prerequisiteQuests": [
+        {
+          "questId": 2005,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022100,
+      "items": [
+        {
+          "itemId": 4000006,
+          "count": 20
+        },
+        {
+          "itemId": 4031005
+        },
+        {
+          "itemId": 4000004,
+          "count": 50
+        },
+        {
+          "itemId": 4000005,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031005
+        }
+      ]
+    },
+    "onComplete": {
+      "nextQuest": 2007,
+      "items": [
+        {
+          "itemId": 4031005,
+          "count": -1
+        },
+        {
+          "itemId": 4000004,
+          "count": -50
+        },
+        {
+          "itemId": 4000005,
+          "count": -50
+        },
+        {
+          "itemId": 4000006,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

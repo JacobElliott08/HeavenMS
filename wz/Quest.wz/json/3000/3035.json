@@ -1,0 +1,72 @@
+{
+  "questId": 3035,
+  "info": {
+    "name": "Alcaster and the Dark Crystal",
+    "descriptions": {
+      "notStarted": "I should go check up on Alcaster in El Nath soon.",
+      "inProgress": "Alcaster of El Nath told me in order to seal up the #bBook of Ancient#k, he\u0027ll need a #bDark Crystal#k and a #bStar Rock#k. So here I am, looking for those two. The Dark Crystal is supposedly only available through evil-minded monsters, and the ores can be refined through Spiruna of Orbis Park.",
+      "completed": "I got Alcaster the #bDark Crystal#k and the #bStar Rock#k. He may have been drained and exhausted from sealing up the #bBook of Ancient#k, but he seems peaceful at heart"
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "minLevel": 60,
+      "prerequisiteQuests": [
+        {
+          "questId": 3034,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "prerequisiteQuests": [
+        {
+          "questId": 3034,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4021009
+        },
+        {
+          "itemId": 4005004
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 18410,
+      "items": [
+        {
+          "itemId": 4005004,
+          "count": -1
+        },
+        {
+          "itemId": 4021009,
+          "count": -1
+        },
+        {
+          "itemId": 1102015,
+          "probability": 1
+        },
+        {
+          "itemId": 1102016,
+          "probability": 1
+        },
+        {
+          "itemId": 1102017,
+          "probability": 1
+        },
+        {
+          "itemId": 1102018,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

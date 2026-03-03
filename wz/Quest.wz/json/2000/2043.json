@@ -1,0 +1,102 @@
+{
+  "questId": 2043,
+  "info": {
+    "name": "Maya\u0027s Last Collection",
+    "parent": "Collecting For Maya",
+    "descriptions": {
+      "notStarted": "",
+      "inProgress": "Maya requested, for the last time, #b50 each of Clang\u0027s claws, Dark Stone Gollem\u0027s pieces of rock, the eyes of Wild Kargo, and Tauromacis\u0027s horns, along with one diamond#k. Apparently I can get those through monsters at the beach, deep forest, and deep into the ant tunnel ... this is RIDICULOUS! It\u0027s too hard !! ",
+      "completed": "I got all the items Maya requested for the last time...or is it? As a sign of appreciation, she gave me a pair of shoes her grandma made for Athena Pierce, the chief of this town. It may be really old, but it still looks solid like brand new!!"
+    },
+    "area": 30,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012101,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2042,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1012101,
+      "items": [
+        {
+          "itemId": 4021007
+        },
+        {
+          "itemId": 4000025,
+          "count": 50
+        },
+        {
+          "itemId": 4000027,
+          "count": 50
+        },
+        {
+          "itemId": 4000044,
+          "count": 50
+        },
+        {
+          "itemId": 4000028,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 4000044,
+          "count": -50
+        },
+        {
+          "itemId": 4000025,
+          "count": -50
+        },
+        {
+          "itemId": 4000027,
+          "count": -50
+        },
+        {
+          "itemId": 4000028,
+          "count": -50
+        },
+        {
+          "itemId": 4021007,
+          "count": -1
+        },
+        {
+          "itemId": 1072144,
+          "probability": 1
+        },
+        {
+          "itemId": 1072145,
+          "probability": 1
+        },
+        {
+          "itemId": 1072146,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

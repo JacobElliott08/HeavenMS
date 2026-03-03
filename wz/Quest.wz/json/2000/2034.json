@@ -1,0 +1,70 @@
+{
+  "questId": 2034,
+  "info": {
+    "name": "Cutthroat Manny\u0027s Request",
+    "parent": "Nella \u0026 Kerning City Citizen\u0027s Request",
+    "descriptions": {
+      "inProgress": "I got the third request from Nella. Cutthroat Manny wants to get #b150 Evil Eye Tails#k for his dinner. He wanted to make a bowl of Evil Eye Stew. Now that sounds delicious!",
+      "completed": "I gave what Cutthroat Manny asked for and I got shoes for return. Now... Cutthroat Manny doesn\u0027t have to worry about his dinner menu for a while. I should get back to Nella for more request."
+    },
+    "area": 30,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052103,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 2033,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052103,
+      "items": [
+        {
+          "itemId": 4000007,
+          "count": 150
+        }
+      ],
+      "endScript": "q2034e"
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2200,
+      "items": [
+        {
+          "itemId": 1072018,
+          "jobRestriction": 1180673
+        },
+        {
+          "itemId": 1072003,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 1072077,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 1072081,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 1072035,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 1072294,
+          "jobRestriction": 32800
+        },
+        {
+          "itemId": 4000007,
+          "count": -150
+        }
+      ]
+    }
+  }
+}

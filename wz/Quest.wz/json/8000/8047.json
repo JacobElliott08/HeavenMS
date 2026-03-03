@@ -1,0 +1,42 @@
+{
+  "questId": 8047,
+  "info": {
+    "name": "Tsuri \u0026 the Gourmet Dish",
+    "descriptions": {
+      "notStarted": "Tsuri of Showa Town apparently is going to make a \"fantastic gourmet dish\". Interesting...",
+      "inProgress": "Tsuri said, in order to make the fantastic gourmet dish, he\u0027ll need #b100 #t04000157#s#k. I can\u0027t wait to see what comes out of this!  #k#n#t04000157#  #b#c04000157##k/100",
+      "completed": "Gourmet dish? This is nothing more than junk food! *sigh*"
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120008,
+      "minLevel": 35
+    },
+    "complete": {
+      "npc": 9120008,
+      "items": [
+        {
+          "itemId": 4000157,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000157,
+          "count": -100
+        },
+        {
+          "itemId": 2020006,
+          "count": 50
+        }
+      ],
+      "experience": 22000
+    }
+  }
+}

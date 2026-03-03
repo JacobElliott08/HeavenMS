@@ -1,0 +1,58 @@
+{
+  "questId": 28212,
+  "info": {
+    "name": "The Clue to Ellinia\u0027s Burglary Case",
+    "parent": "A Strange Burglary Case",
+    "descriptions": {
+      "notStarted": " #b#@1032001:##k in #bEllinia#k says there has been a huge burglary case in the village. Let\u0027s talk to him.",
+      "inProgress": "Let\u0027s go find #b#@1032104:##k in #bEllinia#k and ask her about the #rGolden Feather#k.",
+      "completed": "#b#@1032104:##k in #bEllinia#k says she\u0027s not sure what the #rGolden Feather#k is."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "prerequisiteQuests": [
+        {
+          "questId": 28211,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1032104,
+      "items": [
+        {
+          "itemId": 4001355
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4001355
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

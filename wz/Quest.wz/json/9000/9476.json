@@ -1,0 +1,59 @@
+{
+  "questId": 9476,
+  "info": {
+    "name": "까막산 도깨비 소동",
+    "descriptions": {
+      "notStarted": "메이플 월드를 떠도는 이상한 소문이 궁금하다면 #b#p2040050##k를 찾아가 보자.",
+      "inProgress": "사람들을 놀라게 하는 도깨비불이 나타나지 않도록 하자. \\n\\n#t04000208# #b#c04000208#/70#k  \\n#t04000206# #b#c04000206#/30#k \\n#t04000207# #b#c04000207#/30#k",
+      "completed": "까막산에 떠도는 소문에 대해 알아보았다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040050,
+      "minLevel": 70,
+      "startDate": "2006072000",
+      "endDate": "2006090100"
+    },
+    "complete": {
+      "npc": 2040050,
+      "items": [
+        {
+          "itemId": 4000206,
+          "count": 30
+        },
+        {
+          "itemId": 4000207,
+          "count": 30
+        },
+        {
+          "itemId": 4000208,
+          "count": 70
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 47200,
+      "items": [
+        {
+          "itemId": 4000208,
+          "count": -70
+        },
+        {
+          "itemId": 4000206,
+          "count": -30
+        },
+        {
+          "itemId": 4000207,
+          "count": -30
+        },
+        {
+          "itemId": 2100030
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "questId": 2407,
+  "info": {
+    "name": "The Lost Letter of Commendation",
+    "descriptions": {
+      "notStarted": "Power B. Fore has lost his precious letter of commendation. You\u0027d better give him a hand at the training center.",
+      "inProgress": "He says he\u0027s sure the monsters at the training center are guilty of stealing his precious letter. He wants you to get it back.",
+      "completed": "You were able to retrieve Power B. Fore\u0027s precious letter of commendation and returned it to him."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012118,
+      "minLevel": 10,
+      "maxLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 2403,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322
+      ]
+    },
+    "complete": {
+      "npc": 1012118,
+      "items": [
+        {
+          "itemId": 4032377
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200,
+      "items": [
+        {
+          "itemId": 4032377,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

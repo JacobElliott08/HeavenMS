@@ -1,0 +1,19 @@
+{
+  "questId": 1201,
+  "info": {
+    "name": "First Time Together",
+    "descriptions": {
+      "notStarted": "#b#p9020000##k of #b#m103000000##k is apparently in search of brave explorers. Join forces with others to utlize the power and wisdom to complete the missions and defeat the powerful #r#o9300003##k in the end! \\n#o9300003# will make its appearance after we complete such quizzes like gathering up enough passes to answer questions, and selecting the correct location for the answer, and etc. \\n\\n  - #eTime Limit#n : 30 min\\n  - #eParticipants#n : 4\\n",
+      "inProgress": "Join forces to solve the quiz, then defeat #r#o9300003##k! \\n#eMission#n\\n      Complete / In Progress        #r#jcmp# #k/ #b#jtry# #k\\n      Fastest Time   #b#jmin# #k min #b#jsec# #k sec ( #jdate# ) \\n      #b#i1072369# #t1072369# #k         #r #jhave# #k\\n      Record\\n                                         #b#jrank#   #kRANK \\n\\n\\n#eSummary#n\\n#b#p9020000##k of #b#m103000000##k is apparently in search of brave explorers. Join forces with others to utlize the power and wisdom to complete the missions and defeat the powerful #r#o9300003##k in the end! \\n#o9300003# will make its appearance after we complete such quizzes like gathering up enough passes to answer questions, and selecting the correct location for the answer, and etc.",
+      "completed": "The key to defeating #o9300003# were teamwork and wisdom. As long as we don\u0027t forget this, we\u0027ll be able to survive anything that comes in our way!\\n#eMission#n\\n      Complete / In Progress        #r#jcmp# #k/ #b#jtry# #k\\n       Fastest Time  #b#jmin# #k min #b#jsec# #k sec ( #jdate# ) \\n      #b#i1072369# #t1072369# #k         #r #jhave# #k\\n      Record\\n                                         #b#jrank#   #kRANK \\n\\n\\n#eSummary#n\\n#b#p9020000##k of #b#m103000000##k is apparently in search of brave explorers. Join forces with others to utlize the power and wisdom to complete the missions and defeat the powerful #r#o9300003##k in the end! \\n#o9300003# will make its appearance after we complete such quizzes like gathering up enough passes to answer questions, and selecting the correct location for the answer, and etc."
+    },
+    "area": 47
+  },
+  "requirements": {
+    "start": {
+      "npc": 9020000,
+      "minLevel": 21,
+      "maxLevel": 30
+    }
+  }
+}

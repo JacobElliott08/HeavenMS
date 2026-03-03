@@ -1,0 +1,33 @@
+{
+  "questId": 3005,
+  "info": {
+    "name": "Hella\u0027s Missing",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "Alcaster told me to go to Hella\u0027s house in Orbis, to no avail. She wasn\u0027t anywhere to be found, as I had to resort to talking to her housekeeper, #bElma#k. According to her, Hella hadn\u0027t been home in months, and no one knows where she went or why. She did tell me to go see her best friend, #bJade of El Nath#k, so I should go there immediately."
+    },
+    "area": 33,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012010,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3004,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "nextQuest": 3006
+    }
+  }
+}

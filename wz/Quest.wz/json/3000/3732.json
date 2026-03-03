@@ -1,0 +1,33 @@
+{
+  "questId": 3732,
+  "info": {
+    "name": "Rambunctious Robots",
+    "parent": "Year 2215- The Bombing",
+    "descriptions": {
+      "inProgress": "You meet May in the middle of the Bombed City Center in the year 2215. What\u0027s she doing in the destroyed City Center? In any case, she asks you to defeat the Robbies that appeared after the bombing. She says they\u0027re so loud and rambunctious that she\u0027s about to have a nervous breakdown.",
+      "completed": "You met May in the middle of the Bombed City Center in the year 2215. She asked you to defeat the Robbies that appeared after the bombing. She said they were so loud and rambunctious that she was about to have a nervous breakdown. Well, that worked out since you were thinking about getting rid of those noisy robots anyway."
+    },
+    "area": 41,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082009,
+      "minLevel": 77
+    },
+    "complete": {
+      "npc": 2082009,
+      "monsters": [
+        {
+          "monsterId": 7120108,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 90000
+    }
+  }
+}

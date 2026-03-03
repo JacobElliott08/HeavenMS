@@ -1,0 +1,45 @@
+{
+  "questId": 3312,
+  "info": {
+    "name": "Russellon\u0027s Items for Experiment",
+    "descriptions": {
+      "notStarted": "#p2111009#, the alchemist for Alcadno, seems to be in need of something for his experiment. I better go visit #b#p2111009##k.",
+      "inProgress": "#p2111009#, an alchemist who works on fighting diseases, asked me to get #b#t4031694##k for him, a crucial ingredient for his medicine. #t4031694# can be found through #o3110302#, and I better take note of the advice that getting it from #o3110303# is much easier than through #o3110302#.\\n\\n#i4031694##t4031694# #b#c4031694##k/10",
+      "completed": "Once I gave him all the #t4031694#s, #p2111009# seemed ecstatic and started working on his experiment. ...What kind of a medicine would that be?"
+    },
+    "area": 44,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111009,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 3304,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111009,
+      "items": [
+        {
+          "itemId": 4031694,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 16000,
+      "items": [
+        {
+          "itemId": 4031694,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

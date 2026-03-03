@@ -1,0 +1,46 @@
+{
+  "questId": 4437,
+  "info": {
+    "name": "Rooney\u0027s Breaking News",
+    "descriptions": {
+      "notStarted": "#b#p9250052##k is apparently handing out flyers that contain the breaking news...",
+      "inProgress": "Just received a flyer from #b#p9250052##k. The flyer stated that Happyville is in a state of emergency, and for more details, I have to visit #p1022101#.",
+      "completed": "I asked #b#p1022101##k to inquire more on the stuff written on the flyer."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250052,
+      "startDate": "2007112700",
+      "endDate": "2008011523"
+    },
+    "complete": {
+      "npc": 1022101,
+      "items": [
+        {
+          "itemId": 4031876
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031876,
+          "expirationDate": "2008011600"
+        }
+      ]
+    },
+    "onComplete": {
+      "meso": 500,
+      "items": [
+        {
+          "itemId": 4031876,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

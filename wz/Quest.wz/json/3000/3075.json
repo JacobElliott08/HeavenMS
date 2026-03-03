@@ -1,0 +1,33 @@
+{
+  "questId": 3075,
+  "info": {
+    "name": "Carta the Sea Witch",
+    "parent": "Carta the Sea Witch",
+    "descriptions": {
+      "notStarted": "#p2060006#, who works at the Aquarium Zoo, asked me for help, and wanted me to go see her at the Aquarium. What does she need from me...?",
+      "inProgress": "#b#p2060006##k, who works at the Aquarium Zoo, asked me to go see her. #b#p2060006##k said she wanted to find out the whereabouts of her boyfriend #bGail#k, who has volunteered to be part of the exploration team that heads deep in the underwater, and asked me if I could go talk to #b#p2060100##k the sea witch about him.",
+      "completed": "At the request of #p2060006#, I went to see #p2060100# the sea witch. #p2060100# lived inside the cave at #m230040000#."
+    },
+    "area": 33,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060006,
+      "minLevel": 90
+    },
+    "complete": {
+      "npc": 2060100
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2060100,
+      "minLevel": 90
+    },
+    "onComplete": {
+      "experience": 1000,
+      "nextQuest": 3076
+    }
+  }
+}

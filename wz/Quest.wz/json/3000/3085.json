@@ -1,0 +1,52 @@
+{
+  "questId": 3085,
+  "info": {
+    "name": "Muse is Cooking",
+    "descriptions": {
+      "notStarted": "Is #p2060006# done cooking?",
+      "inProgress": "#p2060006# made what seemed like a very tasty dish from the ingredients I got for her. I couldn\u0027t see the dish because it was inside a box, but judging from the tasty aroma that filled the room, I knew this was indeed a winner. #p2060006# warned me that this was best eaten when hot, and wanted me to get this to #b#p2060000##k before it turned cold. Basically, I have #r1 hour#k to deliver this to #b#p2060000##k. Can I do this?",
+      "completed": "I delivered the food that #p2060006# made to #p2060000# on time. I had to really run to make it here in 1 hour. Phew, at least seeing #p2060000# chow down on the dish made it all worthwhile."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060006,
+      "prerequisiteQuests": [
+        {
+          "questId": 3084,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060000,
+      "items": [
+        {
+          "itemId": 4031281
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031281
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 200,
+      "items": [
+        {
+          "itemId": 2040805
+        },
+        {
+          "itemId": 4031281,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

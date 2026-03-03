@@ -1,0 +1,42 @@
+{
+  "questId": 4934,
+  "info": {
+    "name": "Manji\u0027s Approval",
+    "descriptions": {
+      "notStarted": "a",
+      "inProgress": "b",
+      "completed": "c"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022002,
+      "minLevel": 35,
+      "endDate": "2005050505",
+      "prerequisiteQuests": [
+        {
+          "questId": 2006,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4928,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022002,
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    }
+  }
+}

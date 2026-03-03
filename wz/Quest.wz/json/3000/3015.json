@@ -1,0 +1,33 @@
+{
+  "questId": 3015,
+  "info": {
+    "name": "The Truth Comes Out...",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "Spiruna was utterly ecstatic over receiving the #bFairy Dust#k, and proceeded to tell me everything she knew about Hella. Oh my goodness ... are you kidding me? That assistant there is the Hella I\u0027ve been looking for all this time??"
+    },
+    "area": 33,
+    "order": 12
+  },
+  "requirements": {
+    "start": {
+      "npc": 2032001,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3014,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2032000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4610,
+      "nextQuest": 3016
+    }
+  }
+}

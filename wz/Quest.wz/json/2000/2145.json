@@ -1,0 +1,47 @@
+{
+  "questId": 2145,
+  "info": {
+    "name": "Stump Research",
+    "parent": "The Old Tree",
+    "descriptions": {
+      "inProgress": "Doctor #p1022006# thought the reason why all the stumps in #m102000000# were dry was due to \\n#b#o3220000##k. To prove his theory, he wanted to do research on the stumps\u0027 #b#t4031773##k.\\n\\n#i4031773##t4031773#  #b#c4031773##k/100",
+      "completed": "Gave Doctor #p1022006# the collected #t4031773#. Wonder when the research results of #p1022006# will surface?"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022006,
+      "prerequisiteQuests": [
+        {
+          "questId": 2144,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022006,
+      "items": [
+        {
+          "itemId": 4031773,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 1022006
+    },
+    "onComplete": {
+      "experience": 50,
+      "items": [
+        {
+          "itemId": 4031773,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

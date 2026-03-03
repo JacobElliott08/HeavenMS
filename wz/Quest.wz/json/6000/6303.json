@@ -1,0 +1,68 @@
+{
+  "questId": 6303,
+  "info": {
+    "name": "Making a Mithril Bracelet",
+    "parent": "Strong Will",
+    "descriptions": {
+      "inProgress": "#p2040050# knew about #p2060100#.  However, he/she said that I shouldn\u0027t deal with her.  But I really need the will power... #p2040050# said he needs #p2060100#, #b#t04031464##k and #b10 #t4011002##k to make #p2060100#..Griffey would have old bracelet. \\n\\n#i4031464##t4031464# #b#c4031464#/1#k \\n#i4011002##t4011002# #b#c4011002#/10#k",
+      "completed": " #p2040050# told me that it\u0027ll take some time to build #t4011002#."
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040050,
+      "jobs": [
+        112,
+        122,
+        132,
+        212,
+        222,
+        232,
+        312,
+        322,
+        412,
+        422,
+        512,
+        522,
+        2112,
+        2217,
+        2218
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6302,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040050,
+      "items": [
+        {
+          "itemId": 4031464
+        },
+        {
+          "itemId": 4011002,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200000,
+      "items": [
+        {
+          "itemId": 4031464,
+          "count": -1
+        },
+        {
+          "itemId": 4011002,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

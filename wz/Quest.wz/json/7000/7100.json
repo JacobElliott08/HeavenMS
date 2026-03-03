@@ -1,0 +1,42 @@
+{
+  "questId": 7100,
+  "info": {
+    "name": "Protect Ludibrium",
+    "parent": "Protect Ludibrium",
+    "descriptions": {
+      "notStarted": "A mysterious power appeared in Ludibrium, then suddenly disappeared. Chaos ensued. Now is the time to straighten up the screwed-up time of Ludibrium. I\u0027ll need to go see #b#p2041021##k, who\u0027s at the #bPath of Time#k under Ludibrium.",
+      "inProgress": "I met up with #b#p2041021##k at the Path of Time. I promised him to find a new source of energy that may replace the original Time Sphere, which had been the main source of powerfor Ludibrium.",
+      "completed": "I gathered up enough #b#t4031170#s#k and gave them to #b#p2041021##k as a replacement for the Time Sphere. I think he can make a new source of power with #i4031170#. "
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041021,
+      "minLevel": 60
+    },
+    "complete": {
+      "npc": 2041021,
+      "items": [
+        {
+          "itemId": 4031170,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2700,
+      "meso": 3270,
+      "nextQuest": 7101,
+      "items": [
+        {
+          "itemId": 4031170,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

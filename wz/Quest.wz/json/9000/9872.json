@@ -1,0 +1,43 @@
+{
+  "questId": 9872,
+  "info": {
+    "name": "박첨지의 수박 되찾기",
+    "descriptions": {
+      "notStarted": "#b카산드라#k에게 도움이 필요하다고 하는데...",
+      "inProgress": "카산드라에게 수박밭으로 보내 달라고 부탁해 수박밭으로 가서, 원두막에서 수박을 찾아다 #b박첨지#k에게 가져다 주자.\\n\\n#t04031701# #b#c04031701#/1#k",
+      "completed": "#b박첨지#k에게 수박을 가져다 주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2007071600",
+      "endDate": "2007082000"
+    },
+    "complete": {
+      "npc": 2071000,
+      "items": [
+        {
+          "itemId": 4031701
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031701,
+          "count": -1
+        },
+        {
+          "itemId": 2001000,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

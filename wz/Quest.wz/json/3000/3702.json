@@ -1,0 +1,50 @@
+{
+  "questId": 3702,
+  "info": {
+    "name": "Yaku\u0027s Request",
+    "descriptions": {
+      "notStarted": "I\u0027d better go see #p2081003# at #m240000000#.",
+      "inProgress": "#p2081003#, who takes great care of the egg at Leafre, desires to beautifully decorate the nest. She seemed excited by the prospect of the baby dragon hatching out of the egg and seeing the beautiful nest for the very first time, and asked me if I could gather up #b50 #t4000238#s#k and #b30 #t4000239#s#k to help her decorate the nest.\\n\\n#i4000238##t4000238#  #b#c4000238##k / 50\\n#i4000239##t4000239#  #b#c4000239##k / 30",
+      "completed": "As requested by #p2081003#, I gathered up 50 #t4000238#s and 30 #t4000239#s. #p2081003# went to work immediately, decorating the nest with soft, sparkling feathers."
+    },
+    "area": 41
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081003,
+      "minLevel": 80
+    },
+    "complete": {
+      "npc": 2081003,
+      "items": [
+        {
+          "itemId": 4000238,
+          "count": 50
+        },
+        {
+          "itemId": 4000239,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 47000,
+      "items": [
+        {
+          "itemId": 4000238,
+          "count": -50
+        },
+        {
+          "itemId": 4000239,
+          "count": -30
+        },
+        {
+          "itemId": 2000004,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

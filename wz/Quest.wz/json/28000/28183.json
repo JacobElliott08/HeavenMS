@@ -1,0 +1,53 @@
+{
+  "questId": 28183,
+  "info": {
+    "name": "Rigorous Training-3",
+    "descriptions": {
+      "notStarted": "#b#@9201121:##k in #bEllinia#k says he\u0027ll begin the third training.",
+      "inProgress": "#b#@9201121:##k\u0027s third training requires you to hunt #rStumps#k. You can easily find them in #b#m100050000##k.\\n\\nLet\u0027s go back to #b#@9201121:##k in #bEllinia#k upon completion.",
+      "completed": "You\u0027ve completed #bLucci#k\u0027s third training!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201121,
+      "prerequisiteQuests": [
+        {
+          "questId": 28180,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 9201121,
+      "monsters": [
+        {
+          "monsterId": 130100,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 600
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "questId": 3026,
+  "info": {
+    "name": "Athena Pierce and Her Recovery",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "notStarted": "",
+      "inProgress": "The wiseman of Henesys, #bAthena Pierce#k, promised to give me the old piece of map in exchange for #b2 DEX Crystals#k. ",
+      "completed": ""
+    },
+    "area": 33,
+    "order": 23
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012100,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3025,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012100,
+      "items": [
+        {
+          "itemId": 4005002,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8320,
+      "nextQuest": 3027,
+      "items": [
+        {
+          "itemId": 4005002,
+          "count": -2
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "questId": 21607,
+  "info": {
+    "name": "The Adolescent Wolf",
+    "descriptions": {
+      "notStarted": "#b#p1202007##k, a penguin from #b#m140000000##k, wants to talk to you about something.",
+      "inProgress": "According to the data #p1202007# has studied, wolves go through a kind of puberty during their adolescent years. They say that if you don\u0027t take special care of wolves during this time, they might not grow properly! #p1202007# then mentions that in order to raise #t1902015# well, you should ask advice from some veterans of wolf-raising.\\r\\n\\r\\n#y21608# #b(#u21608#)#k\\r\\n#y21610# #b(#u21610#)#k",
+      "completed": "After listening to everyone\u0027s advice on how to raise a wolf, you noticed that your #t1902016# had grown a bit. You need to take good care of your wolf now that it is going through puberty."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1202007,
+      "minLevel": 100,
+      "prerequisiteQuests": [
+        {
+          "questId": 21604,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1902015
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1202007,
+      "prerequisiteQuests": [
+        {
+          "questId": 21608,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 21610,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1902015
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1902015,
+          "count": -1
+        },
+        {
+          "itemId": 1902016
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "questId": 3438,
+  "info": {
+    "name": "The Ore of Dark Crystal",
+    "descriptions": {
+      "notStarted": "I should go visit General Maestro at the Omega Sector..",
+      "inProgress": "I met General Maestro, who\u0027s in command of a humongous army at the Omega Sector. The general said we\u0027ll be able to obtain the powerless, lightless #bDull Crystal#k that have been used up at the Eos Tower from #bDrum Bunnies#k. While most would dismiss the item as nothing more than a useless crystal, the general believed it had something important hidden in it, and that he requested me to gather up #b20 Dull crystals#k at the Eos Tower. I\u0027ll need to get those crystals from the Drum Bunnies at the tower.\\n\\n#t4031135# #b#c4031135##k/20",
+      "completed": "Just like the way General Mastro instructed, I went to Eos Tower, took out took out the Drum Bunnies, and gathered up #b20 Dull crystals#k for him. While looking at the crystal, he mentioned that there must be something inside these crystals to turn these previously-adorable Drum Bunnies to something of a menace. I wonder exactly what\u0027s inside it."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050008,
+      "minLevel": 31
+    },
+    "complete": {
+      "npc": 2050008,
+      "items": [
+        {
+          "itemId": 4031135,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3800,
+      "meso": 13000,
+      "items": [
+        {
+          "itemId": 4031135,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

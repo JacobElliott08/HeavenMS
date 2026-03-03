@@ -1,0 +1,35 @@
+{
+  "questId": 9282,
+  "info": {
+    "name": "메이플 상식 : 길드",
+    "descriptions": {
+      "notStarted": "즐거운 새해 아침이 밝았다. 메이플 운영자를 찾아가보자.",
+      "inProgress": "길드에 가입할 수 있는 최대 인원에 관한 문제입니다.",
+      "completed": "NPC 헤라클을 통해 가입가능한 길드원을 100명까지 늘릴 수 있습니다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2007010100",
+      "endDate": "2007010200"
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 2022006,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

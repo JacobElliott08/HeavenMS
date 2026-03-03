@@ -1,0 +1,25 @@
+{
+  "questId": 28287,
+  "info": {
+    "name": "Witch Malady\u0027s Secret Mission",
+    "descriptions": {
+      "notStarted": "Witch Malady has appeared in town. This is the busiest time for Witches, so why has she appeared here? Let\u0027s ask Witch Malady for an explanation.",
+      "inProgress": "Witch Malady has appeared in town. This is the busiest time for Witches, so why has she appeared here? Let\u0027s ask Witch Malady for an explanation.",
+      "completed": "Witch Malady has appeared in town. This is the busiest time for Witches, so why has she appeared here? Let\u0027s ask Witch Malady for an explanation."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201142,
+      "minLevel": 11,
+      "normalAutoStart": true,
+      "endDate": "2009112500"
+    },
+    "complete": {
+      "npc": 9201142
+    }
+  }
+}

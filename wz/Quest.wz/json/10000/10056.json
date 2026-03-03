@@ -1,0 +1,49 @@
+{
+  "questId": 10056,
+  "info": {
+    "name": "카산드라의 메이플 스카프",
+    "descriptions": {
+      "notStarted": "카산드라가 나에게 할 이야기가 있다고 한다. 온 동네 소문에 밝은 카산드라가 이번에는 무슨 일일까?",
+      "inProgress": "카산드라는 무언가 재밌는 일이 없는지 항상 궁금한가보다. 이번에는 몬스터들이 주는 소소한 이야기들을 100개나 모아달라고 하는데 왜 그렇게 다른 사람들의 이야기에 관심이 많은걸까...",
+      "completed": "카산드라에게 소소한 이야기 100개를 모아다 주고 메이플 스카프를 얻었다. 이걸 목에 두르고 있으면 정말 따뜻하겠는걸~"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 13,
+      "startDate": "2008101300",
+      "endDate": "2008103000",
+      "prerequisiteQuests": [
+        {
+          "questId": 10052,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "items": [
+        {
+          "itemId": 2022422,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000,
+      "items": [
+        {
+          "itemId": 1122015
+        },
+        {
+          "itemId": 2022422,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

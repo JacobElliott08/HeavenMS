@@ -1,0 +1,32 @@
+{
+  "questId": 6943,
+  "info": {
+    "name": "Samuel\u0027s Revelation of the Third Truth",
+    "parent": "The Ultimate Stage of the Pirate",
+    "descriptions": {
+      "inProgress": "#b#p2081500##k says that he will tell me the final Truth and tells me to come back to talk to him when I\u0027m ready.",
+      "completed": "#b#p2081500##k has told me the story about the Lake in which time had stopped, the Third Truth. He told me to come back to talk to him when I\u0027m ready to prove my skills. "
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081500,
+      "minLevel": 120,
+      "jobs": [
+        511,
+        521
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6942,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081500
+    }
+  }
+}

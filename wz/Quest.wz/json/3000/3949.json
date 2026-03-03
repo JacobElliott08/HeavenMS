@@ -1,0 +1,49 @@
+{
+  "questId": 3949,
+  "info": {
+    "name": "Jiyur\u0027s Palace Entry Pass",
+    "parent": "In Search for His Sister",
+    "descriptions": {
+      "notStarted": "#b#p2101001##k says he is going to see his sister.  I\u0027m worried since he\u0027s just a kid.  Maybe I should go see him.",
+      "inProgress": "I didn\u0027t really believe it when #p2101001# said he was going inside the palace to see his sister... The plan #p2101001# thought of was to buy #b#t04031582##k from #b#p2101004##k.  Since I already said I would pay for it knowing that #p2101001# has no money... I guess I need to keep the promise now.\\n\\n#i04031582# #t04031582#  #b#c04031582##k / 1",
+      "completed": "#p2101001# looked so happy when he received the #b#t04031582##k ... Then just like that, he ran off to the palace.  I\u0027ll have to ask him later if he was able to meet his sister.  But... was he supposed to write his name on the #t04031582#?  I\u0027ve never heard of that before."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101001,
+      "minLevel": 48,
+      "prerequisiteQuests": [
+        {
+          "questId": 3908,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101001,
+      "items": [
+        {
+          "itemId": 4031582
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 4031582,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "questId": 9671,
+  "info": {
+    "name": "외로운 에스텔",
+    "descriptions": {
+      "notStarted": "수정구슬을 통해 메이플 월드 곳곳에서 일어나는 일을 살피는 카산드라가 뭔가를 봤다고 하는데, 무슨 일인지 #b#p9010010##k를 찾아가 보자.",
+      "inProgress": "화이트 데이인데도 사탕을 못 받은 #b#p1032105##k에게 #b#t4140102##k를 선물하자. 사탕은 뭐니뭐니해도 제과사 #b#p2041017##k가 만든 것이 최고겠지?\\n\\n#t4140102# #b#c4140102#/1#k",
+      "completed": "#b#p1032105##k에게 #t4140102#을 선물했다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2009030600",
+      "endDate": "2009031600"
+    },
+    "complete": {
+      "npc": 1032105,
+      "items": [
+        {
+          "itemId": 4140102
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1500,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4140102,
+          "count": -1
+        },
+        {
+          "itemId": 4140201
+        }
+      ]
+    }
+  }
+}

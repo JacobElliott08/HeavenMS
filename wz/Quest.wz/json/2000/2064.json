@@ -1,0 +1,45 @@
+{
+  "questId": 2064,
+  "info": {
+    "name": "Estelle\u0027s Request",
+    "parent": "Mrs. Ming Ming\u0027s Second Worry",
+    "descriptions": {
+      "inProgress": "I ran into #bEstelle#k near Ellinia. She was making a necklace for her mother\u0027s birthday present. If I can get her #b1 Garnet#k, she was willing to give me the special sauce.",
+      "completed": "I got #b1 Garnet#k for Estelle, who I met near Ellinia, for making her mother\u0027s birthday present. She gave me #bEstelle\u0027s Special Sauce#k. I better collect other materials and return to Mrs. Ming Ming."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032105,
+      "minLevel": 21,
+      "prerequisiteQuests": [
+        {
+          "questId": 2063,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032105,
+      "items": [
+        {
+          "itemId": 4021000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "nextQuest": 2076,
+      "items": [
+        {
+          "itemId": 4021000,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

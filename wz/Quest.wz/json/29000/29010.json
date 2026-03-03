@@ -1,0 +1,35 @@
+{
+  "questId": 29010,
+  "info": {
+    "name": "Nihal Desert Explorer",
+    "descriptions": {
+      "notStarted": "You can earn the #b\u003cNihal Desert Explorer\u003e#k title by exploring the Nihal Desert.",
+      "inProgress": "#b#eTitle - Nihal Desert Explorer#k#n\\r\\nExplore the 10 main regions of Nihal Desert.\\r\\n#b● Status : #R27015# / 10 Completed.",
+      "completed": "You have completed exploring Nihal Desert and earned the #b\u003cNihal Desert Explorer\u003e#k title."
+    },
+    "area": 51,
+    "medalItemId": 1142117
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 25,
+      "npc": 9000066
+    },
+    "complete": {
+      "npc": 9000040,
+      "infoNumber": 27015,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142117
+        }
+      ]
+    }
+  }
+}

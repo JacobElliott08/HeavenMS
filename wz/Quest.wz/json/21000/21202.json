@@ -1,0 +1,42 @@
+{
+  "questId": 21202,
+  "info": {
+    "name": "In Search of the Ultimate Weapon",
+    "descriptions": {
+      "notStarted": "You look into the Mirror of Desire. There\u0027s a split second when you think you\u0027ve lost your mind, but then… Where are you? Are you in the past? This feels like deja vu. You remember this, from a long, long time ago, when you begged #b#p1203000##k to make you the best polearm in the world.",
+      "inProgress": "When you ask #p1203000# for the best polearm available, #p1203000# takes a  long look at you and says you\u0027ll need to prove your worth. Your mission is to battle the  #r#o9001012#s and defeat them. You also have to gather #b#t4032311#s#k.",
+      "completed": "You managed to gather all the #t4032311#s required. #p1203000# liked you fearless attitude, and handed you the  polearm wrapped in cloth. The polearm, #p1201002#, and… Unfortunately, that was the extent of your memories."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1203000,
+      "minLevel": 30,
+      "startScript": "q21202s",
+      "infoNumber": 21203,
+      "infoEx": [
+        null
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 21201,
+          "state": "STARTED"
+        }
+      ],
+      "jobs": [
+        2100
+      ]
+    },
+    "complete": {
+      "npc": 1203000,
+      "endScript": "q21202e",
+      "items": [
+        {
+          "itemId": 4032311,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

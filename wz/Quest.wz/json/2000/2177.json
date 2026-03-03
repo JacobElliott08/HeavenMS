@@ -1,0 +1,45 @@
+{
+  "questId": 2177,
+  "info": {
+    "name": "Cleaning The Nautilus 2",
+    "descriptions": {
+      "notStarted": "Mrs. Reade, who is in charge of keeping The Nautilus clean, says she\u0027s worried about the sanitary conditions of the ship because there has been a huge influx of mice on The Nautilus since the ship has been docked at Victoria Island. Should I help Mrs. Reade get rid of the mice?",
+      "inProgress": "The Nautilus has been docked at Victoria Island for some time now, and apparently that causes more rats to board the ship. Mrs. Reade is hyper-anxious having had to deal with all the vermin. I think I\u0027ll bring her 50 #bRat Traps#k. I\u0027ve heard that I could buy mouse traps from the Roches in Ludibrium... \\n\\n#i4000095##t4000095# #b#c4000095##k / 50",
+      "completed": "We set up 50 mouse traps. I don\u0027t think we\u0027ll see any more mice around here... would we?"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092009,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 2176,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092009,
+      "items": [
+        {
+          "itemId": 4000095,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7000,
+      "nextQuest": 2177,
+      "items": [
+        {
+          "itemId": 4000095,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "questId": 6191,
+  "info": {
+    "name": "Spiruna\u0027s advice",
+    "parent": "Conspiracy of kidnapping Tylus",
+    "descriptions": {
+      "inProgress": "#p2032001# looked in the crystal ball and told me that #r#o8140000##k has the other half of the kidnapping plan, masterminded by #p2020008#. #o8140000#? That means #o8150000# and #o8140000# conspired together? Let\u0027s get the note that #o8140000# has and go back to  #b#p2081100##k.\\n\\n#i4031477##t4031477# #b#c4031477# / 1#k",
+      "completed": " I went to Harmonia with the rest of the paper that I got from #o8140000#. Harmonia asked me to immediately go and protect Tylus. I\u0027m on my way..."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2032001,
+      "jobs": [
+        112,
+        122,
+        132
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6190,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081100,
+      "items": [
+        {
+          "itemId": 4031477
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 600000,
+      "items": [
+        {
+          "itemId": 4031477,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

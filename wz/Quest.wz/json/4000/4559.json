@@ -1,0 +1,52 @@
+{
+  "questId": 4559,
+  "info": {
+    "name": "Gift for Brother",
+    "parent": "Away from Kampung",
+    "descriptions": {
+      "notStarted": "When #b#p9270062##k was in the city for travel, he was so excited that left the gift he got for his brother waiting in Kampung village. Little brother must be so disappointed to find out thre is no gift at all.",
+      "inProgress": "#b#p9270062##k must hurry and bring back those forgotten gift for his brother. \\n\\n#o9420538# #r#a45591##k \\n#t4000476# #r#c4000476#/200#k",
+      "completed": "#b#p9270062##k\u0027s little brother was so thrilled to receive #b#t4000476##k as a gift. What a joy of giving presents to someone you really care for."
+    },
+    "area": 49,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270062,
+      "minLevel": 85,
+      "prerequisiteQuests": [
+        {
+          "questId": 4558,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270062,
+      "items": [
+        {
+          "itemId": 4000476,
+          "count": 200
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9420538,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 44500,
+      "items": [
+        {
+          "itemId": 4000476,
+          "count": -200
+        }
+      ]
+    }
+  }
+}

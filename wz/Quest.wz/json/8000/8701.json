@@ -1,0 +1,51 @@
+{
+  "questId": 8701,
+  "info": {
+    "name": "2006 Easter : Mad Bunny\u0027s Easter(Yellow)",
+    "descriptions": {
+      "notStarted": "I heard Mad Bunny isn\u0027t too happy with Easter. I should go talk to him and see what\u0027s up...",
+      "inProgress": "Mad Bunny needs #b10 Yellow Easter Eggs#k and an #bEaster Basket#k from me. He may be one angry bunny, but he did promise to pay me well for my service...\\n\\n#t2022065# #b#c2022065#/10#k\\n#t4031283# #b#c4031283#/1#k",
+      "completed": "I gave him #b10 Yellow Easter Eggs#k with the #rEaster Basket#k and he gave me an #bEaster Charm#k with some EXP. Not bad..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9200001,
+      "minLevel": 8,
+      "maxLevel": 29,
+      "repeatIntervalMinutes": 1440,
+      "endDate": "2006041200"
+    },
+    "complete": {
+      "npc": 9200001,
+      "items": [
+        {
+          "itemId": 4031283
+        },
+        {
+          "itemId": 2022065,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3100,
+      "items": [
+        {
+          "itemId": 4140903
+        },
+        {
+          "itemId": 2022065,
+          "count": -10
+        },
+        {
+          "itemId": 4031283,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

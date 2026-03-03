@@ -1,0 +1,47 @@
+{
+  "questId": 28197,
+  "info": {
+    "name": "Returning to Ellinia",
+    "descriptions": {
+      "notStarted": "#b#@1022000:##k in #bPerion#k says #rMarbas#k must be eliminated. Let\u0027s go find him.",
+      "inProgress": "Let\u0027s go see #b#@1032001:##k in #bEllinia#k and hear what he knows about #rMarbas#k.",
+      "completed": "The person who sealed #rMarbas#k the demon was #b#p1032001##k in #bEllinia#k."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28196,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1032001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "questId": 3418,
+  "info": {
+    "name": "The Completion of the Alarm Clock",
+    "parent": "Delivering the Alarm Clock",
+    "descriptions": {
+      "inProgress": "I received the #bSuper Alarm Clock#k from #bKevin the Soldier#k, who was at the Omega Sector, for Pink Mesoranger. Now all I have to do is deliver this to her.",
+      "completed": "#bKevin the Soldier#k made the #bsuper alarm clock#k for Pink Mesoranger, stationed at a field around Omega Sector, and I delivered it to her. Hopefully this will enable her to wake up on time."
+    },
+    "area": 37,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050011,
+      "minLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 3417,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041012,
+      "items": [
+        {
+          "itemId": 4031108
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4031108
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 3200,
+      "items": [
+        {
+          "itemId": 4031108,
+          "count": -1
+        },
+        {
+          "itemId": 2030011,
+          "count": 3
+        },
+        {
+          "itemId": 2030012,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

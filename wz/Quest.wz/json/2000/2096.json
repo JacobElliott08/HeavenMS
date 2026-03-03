@@ -1,0 +1,44 @@
+{
+  "questId": 2096,
+  "info": {
+    "name": "A Spell that Seals Up a Critical Danger I",
+    "parent": "A Spell that Seals Up a Critical Danger",
+    "descriptions": {
+      "notStarted": "Apparently a strange vibe has been permeating deep inside the dungeon of Victoria Island. I should meet up with the Insignificant Being for details.",
+      "inProgress": "I need to gather up 33 Cold Steam from Cold Eye that\u0027ll be used in a spell that can only be conducted by the Insignificant Being.\\n\\n#t4031212# #b#c4031212#/33#k",
+      "completed": "The Insignificant Being finally gave me a chance. Where can I gether up the items needed for the spell?"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061012,
+      "minLevel": 50
+    },
+    "complete": {
+      "npc": 1061012,
+      "items": [
+        {
+          "itemId": 4031212,
+          "count": 33
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 12000,
+      "items": [
+        {
+          "itemId": 4031212,
+          "count": -33
+        },
+        {
+          "itemId": 2000005,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

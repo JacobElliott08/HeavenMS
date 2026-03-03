@@ -1,0 +1,47 @@
+{
+  "questId": 28186,
+  "info": {
+    "name": "The Journey of the Nautilus",
+    "descriptions": {
+      "notStarted": " #b#@1032001:##k in #bEllinia#k suggests you broaden your horizon and says he\u0027ll tell you the location of your next destination. Let\u0027s talk to him.",
+      "inProgress": "Let\u0027s meet #b#@1072008:##k in #bNautilus#k located in the sea south of #bEllinia#k.",
+      "completed": "You have met #b#p1072008##k in #bNautilus#k!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "prerequisiteQuests": [
+        {
+          "questId": 28185,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1090000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

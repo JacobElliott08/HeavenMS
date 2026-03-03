@@ -1,0 +1,44 @@
+{
+  "questId": 3345,
+  "info": {
+    "name": "The Black Magician\u0027s Magic Pentagram",
+    "parent": "Dr. De Lang\u0027s Notes",
+    "descriptions": {
+      "inProgress": "#p2020005# said that because of #p2111002#\u0027s experiment, the Black Magician\u0027s Magic Pentagram that sustained #m261000000# was shaken to its core, which unstabilized the Pentagram. He also mentioned that if this is kept as it is, then soon, the Magic Pentagram will explode. In order to prevent this from happeninng, he instructed me to find #b3 Magic Rocks and place them in sequence to soothe the Magic Pentagram, then apply pressure to the center of the Magic Pentagram#k... \\n\\n#i4031739##t4031739# #b#c4031739##k/1 \\n#i4031740##t4031740# #b#c4031740##k/1 \\n#i4031741##t4031741# #b#c4031741##k/1\\n\\nI received one of the Magic Rocks from #p2020005#, but the rest will have to be found through the #rmonsters of #m261000000##k. I better find 3, and then head off to the Black Magician\u0027s Lab. That lab is only accessible through the secret passage that connects Zenumist and Alcadno.",
+      "completed": "After successfully putting Magic Pentagram under control, I went to see #p2020005#, the 3rd president of the Alchemist Union, again. I wonder what he\u0027s thinking, with that soothing smile that instinctively let us put our guards down...?"
+    },
+    "area": 44,
+    "order": 7
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "minLevel": 75,
+      "prerequisiteQuests": [
+        {
+          "questId": 3344,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "info": "0",
+      "items": [
+        {
+          "itemId": 4031739
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 2200
+    }
+  }
+}

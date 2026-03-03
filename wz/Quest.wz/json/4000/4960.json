@@ -1,0 +1,45 @@
+{
+  "questId": 4960,
+  "info": {
+    "name": "Eat This!",
+    "descriptions": {
+      "notStarted": "I keep seeing these fireplaces around the house. I wonder if they lead anywhere...maybe Edmunds knows?  He mentioned something about a key.  I should press him a bit more.",
+      "inProgress": "My hunch was right.  The fireplaces are interconnected through the mansion\u0027s Chimney; perhaps I can use them as an alternate way of navigating through the house.  However, they\u0027re locked and Edmunds holds the only key.  He will reluctantly give me the key if I collect #b20 of each type of Gummy Slimes#k. There\u0027s Red, Green, Purple and Orange ones; so I\u0027ll need to hunt all over the house to get them.  It\u0027ll be tempting to eat them first.",
+      "completed": "Edmunds reluctantly gave me the #dOmni Key#k after I collected the Gummy Slimes for him.  With it, I can enter the fireplaces throughout the house and the Chimney to which they all connect. Hmmm... who knows where all these fireplaces lead? "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201080,
+      "endDate": "2007103123",
+      "prerequisiteQuests": [
+        {
+          "questId": 4943,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201080,
+      "items": [
+        {
+          "itemId": 2022247,
+          "count": 20
+        },
+        {
+          "itemId": 2022248,
+          "count": 20
+        },
+        {
+          "itemId": 2022249,
+          "count": 20
+        },
+        {
+          "itemId": 2022250,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

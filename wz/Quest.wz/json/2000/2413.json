@@ -1,0 +1,61 @@
+{
+  "questId": 2413,
+  "info": {
+    "name": "Regaining Confidence",
+    "descriptions": {
+      "notStarted": "You handed Power B. Fore his precious letter of commendation, but he seems upset that there\u0027s a stain on it.",
+      "inProgress": "He\u0027s so enraged about the stain that he wants you to get revenge on the monsters.\\r\\n\\r\\n\\r\\n#i4000003:# #t4000003:# #c4000003# / 10\\r\\n",
+      "completed": "You got revenge, as requested. He finally seemed satisfied."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052113,
+      "minLevel": 13,
+      "maxLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 2408,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422
+      ]
+    },
+    "complete": {
+      "npc": 1052113,
+      "items": [
+        {
+          "itemId": 4000003,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4000003,
+          "count": -10
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 9001,
+          "skillLevel": 1,
+          "masterLevel": 1
+        }
+      ]
+    }
+  }
+}

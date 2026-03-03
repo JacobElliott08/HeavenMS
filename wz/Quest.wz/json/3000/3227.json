@@ -1,0 +1,47 @@
+{
+  "questId": 3227,
+  "info": {
+    "name": "The Man in the Black Suit",
+    "parent": "Korin\u0027s Memory",
+    "descriptions": {
+      "inProgress": "I met #bAgent Marco#k at the Omega Sector. I asked him some questions regarding Korin, and I was able to find out that she had been kidnapped by a group of aliens that invaded the Omega Sector. He also said that in order to recover Korin\u0027s lost memories, I\u0027ll have to defeat the #bMateons#k and collect #b5 Memory Pieces#k that contain her lost memories... I\u0027ll have to head over to the Boswell Field quickly.\\n\\n#t4031090# #b#c4031090##k/5",
+      "completed": "I defeated the aliens that took Korin\u0027s memories, gathered up the memory pieces, and gave them to Agent Marco. He then put the pieces together and made it into one whole piece."
+    },
+    "area": 37,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050012,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 3226,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050012,
+      "items": [
+        {
+          "itemId": 4031090,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2150,
+      "meso": 5500,
+      "nextQuest": 3228,
+      "items": [
+        {
+          "itemId": 4031090,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

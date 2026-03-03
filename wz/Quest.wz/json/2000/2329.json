@@ -1,0 +1,45 @@
+{
+  "questId": 2329,
+  "info": {
+    "name": "Sending Provisions (2)",
+    "descriptions": {
+      "notStarted": "#b#p1300005##k tells you his troops need some more equipment…",
+      "inProgress": "You need to eliminate the #bRoyal Guard Pepes#k and collect #b200 #t4000503#s#k.",
+      "completed": "You gave #b#p1300005##k #b200 #t4000503#s#k."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300005,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2328,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300005,
+      "items": [
+        {
+          "itemId": 4000503,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 17800,
+      "items": [
+        {
+          "itemId": 4000503,
+          "count": -200
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "questId": 9878,
+  "info": {
+    "name": "Magatia, the City of Alchemy",
+    "descriptions": {
+      "notStarted": "A new region has been discovered recently. If you wish to find out about the city of alchemy, talk to Cassandra, who claims to know everything about Maple World.",
+      "inProgress": "Cassandra says she can use her magic to send you over to Magatia. If you are determined to go to Magatia, talk to #bCassandra#k.",
+      "completed": "You have arrived in Magatia, the city of alchemy."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2007080100"
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q9878e"
+    }
+  }
+}

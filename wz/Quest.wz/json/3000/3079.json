@@ -1,0 +1,45 @@
+{
+  "questId": 3079,
+  "info": {
+    "name": "The Lost Nependeath Juice",
+    "descriptions": {
+      "notStarted": "If I ever lost the Nependeath Juice, at least I know who to talk to... Elma.",
+      "inProgress": "I went to see Elma to get another glass of Nependeath Juice that I lost.",
+      "completed": "I got a new glass of Nependeath Juice from Elma."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012010,
+      "repeatIntervalMinutes": 60,
+      "prerequisiteQuests": [
+        {
+          "questId": 3048,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3050
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031202
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -300000,
+      "items": [
+        {
+          "itemId": 4031202
+        }
+      ]
+    }
+  }
+}

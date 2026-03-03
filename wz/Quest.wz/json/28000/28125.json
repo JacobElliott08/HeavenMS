@@ -1,0 +1,86 @@
+{
+  "questId": 28125,
+  "info": {
+    "name": "Cleaning Up The Streets - Continued  ",
+    "descriptions": {
+      "notStarted": "There\u0027s a new sheriff in New Leaf City. I should go see who it is!",
+      "inProgress": "I met the new sheriff, Lita Lawless. She\u0027s an old friend of Icebyrd\u0027s, and has taken over as the new sheriff. I\u0027ve agreed to help her get this town in order, by wiping out #b200 Electrophants and 200 Gryphons#k in New Leaf City. I\u0027d better get started!",
+      "completed": "I...I did it! 200 of Electrophants and Gryphons has fallen to my might! In addition to that, I got a cool item from Lita as a \u0027Thank You!\u0027 I can return and help her anytime I want from now on..."
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201054,
+      "minLevel": 50,
+      "repeatIntervalMinutes": 0,
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 28106,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201054,
+      "monsters": [
+        {
+          "monsterId": 9400544,
+          "count": 200
+        },
+        {
+          "monsterId": 9400543,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9000
+    }
+  }
+}

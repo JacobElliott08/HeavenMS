@@ -1,0 +1,60 @@
+{
+  "questId": 1007,
+  "info": {
+    "name": "Bigg\u0027s Collection of Items",
+    "descriptions": {
+      "notStarted": "Let\u0027s start looking for Biggs.",
+      "inProgress": "I met Biggs at Southperry. He asked me if I can get him #b10 orange mushroom caps and 30 blue snail shells#k and that he\u0027ll reward me with a nice item if I do so. He doesn\u0027t look too convinced that I can do this, but... it looks like a piece of cake to me.",
+      "completed": "I got Biggs from Southperry #b10 mushroom caps and 30 blue snail shells#k. How is he going to do business out of this anyway? Well, he did get me a decent weapon to use. I guess I can travel for a while with this..."
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 20002,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 20002,
+      "items": [
+        {
+          "itemId": 4000000,
+          "count": 5
+        },
+        {
+          "itemId": 4000001
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50,
+      "items": [
+        {
+          "itemId": 1332007,
+          "probability": 1
+        },
+        {
+          "itemId": 1332005,
+          "probability": 1
+        },
+        {
+          "itemId": 4000000,
+          "count": -5
+        },
+        {
+          "itemId": 4000001,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

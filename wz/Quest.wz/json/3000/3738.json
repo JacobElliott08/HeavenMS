@@ -1,0 +1,37 @@
+{
+  "questId": 3738,
+  "info": {
+    "name": "Disturbing the Army of Robots",
+    "parent": "Year 2216- The Ruins",
+    "descriptions": {
+      "inProgress": "You have traveled to the year 2216 on your fourth time travel. Thanks to Ken, who assumes you are from the support unit, you must eliminate monsters. Things keep coming up and hindering you from doing what you\u0027re here to do. Keep in mind that you are here for a reason.",
+      "completed": "You traveled to the year 2216 on your fourth time travel. Thanks to Ken, who just assumed that you were from the support unit, you had to eliminate monsters. Conditions in the city appear to be deteriorating."
+    },
+    "area": 41,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082017,
+      "minLevel": 81
+    },
+    "complete": {
+      "npc": 2082017,
+      "monsters": [
+        {
+          "monsterId": 8120102,
+          "count": 50
+        },
+        {
+          "monsterId": 8120103,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 105000
+    }
+  }
+}

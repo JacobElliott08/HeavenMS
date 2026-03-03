@@ -1,0 +1,78 @@
+{
+  "questId": 6314,
+  "info": {
+    "name": "Huckle\u0027s Spirit Pouch",
+    "descriptions": {
+      "notStarted": "#b#p2012017##k says that #b#p2030012##k will know how to make the spirit\u0027s pouch. #b#p2030012##k seems to be a real expert on magical ingredients.",
+      "inProgress": " #b#p2030012##k told me that he would make #b#t4031468##k if I bring all ingredients to him. \\r\\n#i04000144##t04000144# #b#c04000144#/50#k\\n#i04000146##t04000146# #b#c04000146#/50#k\\n#i04000148##t04000148# #b#c04000148#/30#k\\n#i04006001##t04006001# #b#c04006001#/30",
+      "completed": "After I gathered all the ingredients, #b#p2030012##k made the spirit\u0027s pouch for me."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030012,
+      "repeatIntervalMinutes": 0,
+      "jobs": [
+        222
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6312,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031488
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030012,
+      "items": [
+        {
+          "itemId": 4000144,
+          "count": 50
+        },
+        {
+          "itemId": 4006001,
+          "count": 30
+        },
+        {
+          "itemId": 4000146,
+          "count": 50
+        },
+        {
+          "itemId": 4000148,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000144,
+          "count": -50
+        },
+        {
+          "itemId": 4000146,
+          "count": -50
+        },
+        {
+          "itemId": 4000148,
+          "count": -30
+        },
+        {
+          "itemId": 4006001,
+          "count": -30
+        },
+        {
+          "itemId": 4031488
+        }
+      ]
+    }
+  }
+}

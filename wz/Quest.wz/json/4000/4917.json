@@ -1,0 +1,48 @@
+{
+  "questId": 4917,
+  "info": {
+    "name": "ReVersal",
+    "descriptions": {
+      "notStarted": "Elpam has adjusted his compass, but he still needs my help. I should travel back and see what he needs!",
+      "inProgress": "I went back to Elpam for more information, and he\u0027s explained that while he was able to adjust the compass, he needs to head back to the moment of his travel glitch to get back to his home safely. I have to hunt down #b60 Temporal Fragments#k and hand them over. That\u0027s a full minute and the perfect amount of time for him to travel back. The Tick-Tock monsters should have them, since they tend to keep time. HA!",
+      "completed": "I got all #b60 Temporal Fragments#k and returned them to Elpam. In return, he\u0027s given me a very nice prize he found floating in the rift...!"
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201055,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 4916,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201055,
+      "items": [
+        {
+          "itemId": 4031675,
+          "count": 60
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9500,
+      "fame": 5,
+      "items": [
+        {
+          "itemId": 4031675,
+          "count": -60
+        },
+        {
+          "itemId": 2040810
+        }
+      ]
+    }
+  }
+}

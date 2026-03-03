@@ -1,0 +1,64 @@
+{
+  "questId": 4207,
+  "info": {
+    "name": "완성된 파티복과 유리구두",
+    "parent": "파티에 가고 싶은 폰라",
+    "descriptions": {
+      "notStarted": "이쯤이면 장로의 부인이 멋진 파티복을 만들었겠지? 어서 다시 #b#p9250014##k에게 말을 걸어보자.",
+      "inProgress": "#p9250014#의 부인이 멋진 파티복을 만들어 주었다. 하지만 예쁜 구두는 #r리게이터#k들이 가져갔다고 한다. 파티용 구두를 구해서 파티복과 함께 #b#p9250000##k에게 가져가자. \\n\\n#i4031382##t4031382# #b#c4031382 #/1#k \\n#i4031405##t4031405# #b#c4031405#/1#k",
+      "completed": "#b#p9250000##k에게 멋진 파티복과 구두를 구해다 주었다."
+    },
+    "area": 48,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250014,
+      "minLevel": 25,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4206,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9250000,
+      "items": [
+        {
+          "itemId": 4031405
+        },
+        {
+          "itemId": 4031382
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031382
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 4031382,
+          "count": -1
+        },
+        {
+          "itemId": 4031405,
+          "count": -1
+        },
+        {
+          "itemId": 1072275
+        }
+      ]
+    }
+  }
+}

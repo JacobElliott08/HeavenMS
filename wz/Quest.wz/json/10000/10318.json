@@ -1,0 +1,31 @@
+{
+  "questId": 10318,
+  "info": {
+    "name": "An Old Shoe",
+    "descriptions": {
+      "notStarted": "You have found an interesting artifact.",
+      "inProgress": "You have found an Old Shoe that belongs to a Maple Admin. How in the world does anyone lose a shoe?",
+      "completed": "The Maple Admin says he lost his shoe when he was chasing after someone who was using an illegal macro program. He has given you a reward for returning his shoe to him."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9040000,
+      "minLevel": 13,
+      "startDate": "2010022200",
+      "endDate": "2010030800",
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 4001310
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "endScript": "q10318e"
+    }
+  }
+}

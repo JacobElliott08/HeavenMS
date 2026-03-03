@@ -1,0 +1,55 @@
+{
+  "questId": 3940,
+  "info": {
+    "name": "Mission Complete!",
+    "parent": "First Mission of Sand Bandits",
+    "descriptions": {
+      "notStarted": "Right about now, #p2101010# should be done with the Tigun Transformation Potion. I better go see #b#p2101010##k right now.",
+      "inProgress": "I have received the transformation potion that allows me to change to #p2101004#. It looked odd, but I guess once I drink this, I\u0027ll look like #p2101004#. I better take the #p2101004#  transformation potion, head to #b#m260010600##k, and steal some #bsilk#k from #b#p2101013##k.\\n\\n#i4031571# #t4031571# #b#c4031571#/1#k",
+      "completed": "I have received the queen\u0027s order of silk from #p2101004# and gave them to #p2101010#. Awesome! My first mission as a Sand Bandit complete!"
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101010,
+      "minLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 3938,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101010,
+      "items": [
+        {
+          "itemId": 4031571
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 2210005
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 4000,
+      "items": [
+        {
+          "itemId": 4031571,
+          "count": -1
+        },
+        {
+          "itemId": 2040701
+        }
+      ]
+    }
+  }
+}

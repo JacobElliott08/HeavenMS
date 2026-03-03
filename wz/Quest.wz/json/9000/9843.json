@@ -1,0 +1,30 @@
+{
+  "questId": 9843,
+  "info": {
+    "name": "Garden of Three Shades",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k seems to have something urgent to tell you.",
+      "inProgress": "#b#p9010010##k seems to have something urgent to tell you.",
+      "completed": "It appeared to have been enchanted by #b#p9010010##k\u0027s magic."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "repeatIntervalMinutes": 180,
+      "startDate": "2007052900",
+      "endDate": "2007061800"
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "buffItemId": 2022152
+    }
+  }
+}

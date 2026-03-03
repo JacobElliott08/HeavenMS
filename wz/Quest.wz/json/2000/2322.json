@@ -1,0 +1,39 @@
+{
+  "questId": 2322,
+  "info": {
+    "name": "Over the Castle Walls (2)",
+    "descriptions": {
+      "notStarted": "The #bSecretary of Domestic Affairs#k seems to have something to tell you regarding somehow infiltratating the castle.",
+      "inProgress": "You should investigate the Mushking Empire and report the results to the #bSecretary of Domestic Affairs#k.\\r\\n#bInvestigate the Outer Walls of the Castle : #R2322# / 1 Complete.",
+      "completed": "You studied the castle wall and realized it won\u0027t be easy to get passed it."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300003,
+      "minLevel": 30,
+      "startScript": "q2322s",
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2321,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300003,
+      "infoNumber": 2322,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 11000,
+      "nextQuest": 2323
+    }
+  }
+}

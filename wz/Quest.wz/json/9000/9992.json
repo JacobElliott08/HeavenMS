@@ -1,0 +1,55 @@
+{
+  "questId": 9992,
+  "info": {
+    "name": "Vanished Mysterious Fabric",
+    "descriptions": {
+      "notStarted": "The Mysterious Fabric disappeared from me all of a sudden.  I should go talk to Arwen. ",
+      "inProgress": "The Mysterious Fabric disappeared from me all of a sudden.  I went to go see Arwen and she said if the Mysterious Fabric isn\u0027t kept properly, it can melt away and disappear... She could make me another one but she would need more materials this time.  As Arwen requests, I should gather #b12 Snow Silks#k and bring it to her.\\n\\n#i4001166# #t4001166# #b#c4001166# / 12",
+      "completed": "The Mysterious Fabric disappeared from me all of a sudden.  Arwen said it was because I didn\u0027t properly take care of it.  I brought her 12 more Snow Silks and she made me another one. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032100,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2009061623",
+      "prerequisiteQuests": [
+        {
+          "questId": 9987,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9988
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031945
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032100,
+      "items": [
+        {
+          "itemId": 4001166,
+          "count": 12
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4001166,
+          "count": -12
+        },
+        {
+          "itemId": 4031945
+        }
+      ]
+    }
+  }
+}

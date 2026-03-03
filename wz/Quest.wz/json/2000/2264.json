@@ -1,0 +1,30 @@
+{
+  "questId": 2264,
+  "info": {
+    "name": "Mr. Lim and the Subway",
+    "descriptions": {
+      "notStarted": "#eJake#k, who works at the #eKerning Ciy Subway Turnstile#k, wants to ask you for a favor. You\u0027d better go talk to him.\\r\\n#bTip - At the entrance of the subway station in Kerning City, you\u0027ll see Shumi sitting down in front.",
+      "inProgress": "Jake at the Kerning City subway station needs help. Up north, there\u0027s a #e#bsubway station that stopped midway through construction#k#n. Apparently the place is infested with monsters. #e#bMr. Lim#k#n has been sent there to assess the damage, and Jake wants you to follow to see how bad the damage is.\\r\\nYou should head over to the #e#bConstruction Site North of Kerning City#k#n and find the subway station that\u0027s under construction, so you can find Mr. Lim.",
+      "completed": "Jake, who works at the Kerning City subway station, requested that you meet Mr. Lim at the Construction Site North of Kerning City. Mr. Lim then pleaded with you to check out the old subway platforms for him."
+    },
+    "area": 30,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052006,
+      "minLevel": 25,
+      "maxLevel": 30,
+      "endDate": "2009010100",
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 1052115
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

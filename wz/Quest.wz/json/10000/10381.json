@@ -1,0 +1,55 @@
+{
+  "questId": 10381,
+  "info": {
+    "name": "Lilin\u0027s Present 3",
+    "descriptions": {
+      "notStarted": "You have reached Level 70 and #b#p9010000##k starts a conversation with you...",
+      "inProgress": "#p9010000# tells you since you have reached Level 70, you can receive a #bspecial gift#k from #p1201000#.\\n\\n#i1112405:# \\n\\nYou are told to go straight to #b#m140000000##k and meet #b#p1201000##k.",
+      "completed": "Your received #t1112405# from #p1201000#. A special ring that can be worn by any character within the same account. It looks like an item that is not just for an Aran, but for any character."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 70,
+      "endDate": "2010061000",
+      "normalAutoStart": true,
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 28336,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1201000,
+      "items": [
+        {
+          "itemId": 1112414
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1112405
+        },
+        {
+          "itemId": 1112414,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

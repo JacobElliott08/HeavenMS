@@ -1,0 +1,46 @@
+{
+  "questId": 4503,
+  "info": {
+    "name": "Clear the Rubbish",
+    "descriptions": {
+      "notStarted": "I should go see #b#p9270039##k in Singapore Airport.  She needs to say something about our beautiful Singapore.",
+      "inProgress": "She asked me to clean up the streets of Singapore.  As she works at the Singapore Airport, she sees lots of foreigners complaining that the city does not look the same as before.  I should impress foreign visitors again by cleaning up the wastes.\\n\\n#t4000366#  #r#c4000366# / 20#k\\n#t4000367#  #r#c4000367# / 20#k",
+      "completed": "I feel much better now that I did contribute myself in making Singapore even cleaner."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270039,
+      "minLevel": 15
+    },
+    "complete": {
+      "npc": 9270039,
+      "items": [
+        {
+          "itemId": 4000366,
+          "count": 20
+        },
+        {
+          "itemId": 4000367,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 450,
+      "items": [
+        {
+          "itemId": 4000366,
+          "count": -20
+        },
+        {
+          "itemId": 4000367,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

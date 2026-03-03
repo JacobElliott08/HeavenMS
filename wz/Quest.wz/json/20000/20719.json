@@ -1,0 +1,73 @@
+{
+  "questId": 20719,
+  "info": {
+    "name": "Mission in Ellinia Complete",
+    "descriptions": {
+      "notStarted": "I better talk to Agent #b#p1103003##k of #m101000000#, who wanted to talk to me about something.",
+      "inProgress": "#p1103003# told me this makes it clear that #p1032001# is not guilty and that this assignment has been wrapped up for now. She then handed me the Mission Report on the black shadow and asked me to hand it in to #b#p1101002##k.",
+      "completed": "I handed #t4032144# in to #p1101002#. #p1101002# seemed worried that the power of the Puppeteer seems to be growing by day and that I\u0027ll need to get stronger in order to one day stop the Puppeteer cold in his tracks. He then ordered me to keep training until the next assignment becomes available."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103003,
+      "minLevel": 19,
+      "prerequisiteQuests": [
+        {
+          "questId": 20718,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1101002,
+      "items": [
+        {
+          "itemId": 4032144
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032144
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 4032144,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

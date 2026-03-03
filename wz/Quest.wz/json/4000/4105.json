@@ -1,0 +1,49 @@
+{
+  "questId": 4105,
+  "info": {
+    "name": "양씨 아저씨의 농사일 돕기",
+    "descriptions": {
+      "notStarted": "#b#p9310010##k를 찾아가 보자.",
+      "inProgress": "#b#p9310010##k의 일손을 돕자.\\n\\n#i4000193##t4000193# #b#c4000193#/100#k",
+      "completed": "#b#p9310010##k의 일손을 돕고 #b#p9310012##k가 잃어버린 물건을 받았다."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9310010,
+      "minLevel": 30,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4104,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9310010,
+      "items": [
+        {
+          "itemId": 4000193,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6500,
+      "items": [
+        {
+          "itemId": 4000193,
+          "count": -100
+        },
+        {
+          "itemId": 4031290
+        }
+      ]
+    }
+  }
+}

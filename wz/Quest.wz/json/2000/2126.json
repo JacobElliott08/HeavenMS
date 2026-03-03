@@ -1,0 +1,42 @@
+{
+  "questId": 2126,
+  "info": {
+    "name": "A Supply from the Sand Crew!",
+    "parent": "Assignment of a Sand Crew!",
+    "descriptions": {
+      "inProgress": "I ran into a stray dog #p2012019# at #m200000000#. #p2012019# was carrying a small box around its neck, and the box had a message saying #b\u0027To #p2101002# of #m260000000#...\u0027#k.",
+      "completed": "I gave the box that was hanging around #p2012019#\u0027s neck safely to #p2101002# of #m260000000#."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012019,
+      "prerequisiteQuests": [
+        {
+          "questId": 2125,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101002,
+      "items": [
+        {
+          "itemId": 4031619
+        }
+      ],
+      "endScript": "q2126e"
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031619
+        }
+      ]
+    }
+  }
+}

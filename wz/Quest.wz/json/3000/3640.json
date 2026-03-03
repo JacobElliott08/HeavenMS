@@ -1,0 +1,61 @@
+{
+  "questId": 3640,
+  "info": {
+    "name": "The Storybook on the Story of Axes",
+    "descriptions": {
+      "notStarted": "I\u0027m sure I received the storybook from the Mountain God after returning the axe to the tree cutter. Where did it go? Should I go see the Mountain God again?",
+      "inProgress": "#b#p2040052# from Helios Tower Library has requested me to get the storybook on the Story of the Axes. II\u0027m pretty sure I received it the last time I helped the Mountain God out, but I can\u0027t seem to find it. After discussing the matters with the Mountain God, he promised to give me the storybook if I gather up #b1 gold ore#k and #b1 silver ore#k.\\n\\n#t4010006#  #b#c4010006##k / 1\\n#t4010004#  #b#c4010004##k / 1",
+      "completed": "To reacquire the storybook on the Story of the Axes, I brought 1 gold ore and 1 silver ore to the Mountain God, just the way he requested."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071010,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3636,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3639,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031298
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071010,
+      "items": [
+        {
+          "itemId": 4010006
+        },
+        {
+          "itemId": 4010004
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4010006,
+          "count": -1
+        },
+        {
+          "itemId": 4010004,
+          "count": -1
+        },
+        {
+          "itemId": 4031298
+        }
+      ]
+    }
+  }
+}

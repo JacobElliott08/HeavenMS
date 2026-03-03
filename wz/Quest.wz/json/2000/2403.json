@@ -1,0 +1,36 @@
+{
+  "questId": 2403,
+  "info": {
+    "name": "Training Center for Beginner Bowmen",
+    "descriptions": {
+      "notStarted": "After making a job advancement as a Bowman, you need to find a training center that\u0027ll help you level up faster.",
+      "inProgress": "After making a job advancement as a Bowman, you should follow the arrows from Henesys that lead you to a training center. You won\u0027t be able to enter once you reach Level 20.",
+      "completed": "You found the training center for beginner Bowmen. You\u0027ll be able to receive your first set of training lessons from the trainer, Power B. Fore."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012100,
+      "minLevel": 10,
+      "maxLevel": 19,
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322
+      ]
+    },
+    "complete": {
+      "npc": 1012118
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 900
+    }
+  }
+}

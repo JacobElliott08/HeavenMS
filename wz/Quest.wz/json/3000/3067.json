@@ -1,0 +1,42 @@
+{
+  "questId": 3067,
+  "info": {
+    "name": "A Healthy Snack for the Huskies",
+    "descriptions": {
+      "notStarted": "I should go see #p2060000#, who\u0027s at the Whale Island that\u0027s covered in snow.",
+      "inProgress": "I met #p2060000#, who lived with his huskies at the snow-covered Whale Island.  #p2060000# asked me if I could get him #b50 #t4000157#s#k for his huskies.\\n\\n#t4000157# #b#c4000157##k/50",
+      "completed": "With Nanuke\u0027s request, I brought 50 #t4000157#s over to the snow-covered Whale Island for his huskies."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060000,
+      "minLevel": 40
+    },
+    "complete": {
+      "npc": 2060000,
+      "items": [
+        {
+          "itemId": 4000157,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4000157,
+          "count": -50
+        },
+        {
+          "itemId": 2020007,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "questId": 29933,
+  "info": {
+    "name": "Lith Harbor Donor",
+    "descriptions": {
+      "completed": "Charity is key to a prosperous life. Acquired the title #b\u003cLith Harbor Donor\u003e#k.\\r\\n"
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142030
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "normalAutoStart": true,
+      "startScript": "q29933s",
+      "items": [
+        {
+          "itemId": 1142030
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000066
+    }
+  }
+}

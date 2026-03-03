@@ -1,0 +1,39 @@
+{
+  "questId": 2253,
+  "info": {
+    "name": "Studying the Mushroom Signals 2 (Repeatable)",
+    "descriptions": {
+      "notStarted": "The Rememberer requests your help so he can continue making progress in his research.",
+      "inProgress": "The Rememberer requests your help so he can continue making progress in his research.",
+      "completed": "The Rememberer requested your help so he could continue making progress in his research."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "maxLevel": 25,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 2251,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "monsters": [
+        {
+          "monsterId": 2230131,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000
+    }
+  }
+}

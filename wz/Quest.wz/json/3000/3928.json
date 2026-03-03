@@ -1,0 +1,62 @@
+{
+  "questId": 3928,
+  "info": {
+    "name": "The Man with a Bow",
+    "parent": "Sand Bandits According to Sejan",
+    "descriptions": {
+      "notStarted": "The word bow written on the wall at #p2103001#... I think it\u0027s pointing at someone. I think I saw someone carrying a bow in #m260000000#... Was his name #p2101011#?",
+      "inProgress": "#p2101011# was really a member of the Sand Bandits. He seemed reluctant to offer me a spot, since he\u0027s seen his share of spies from the queen, and told me if I really want to be a member, then I need to get some food. Food in this case would be something like #b#t4000325##k, #b#t2010000#, and #t2010002##k, right?\\n\\n#i2010000# #t2010000# #b#c2010000# / 10#k\\n#i2010002# #t2010002# #b#c2010002# / 10#k\\n#i4000325# #t4000325# #b#c4000325# / 50#k",
+      "completed": "When I gave #p2101011# the food, he told me this does not prove that I am not a spy, and I\u0027ll have to do a lot more for #m260000000# in order to earn his trust. Fine, then I\u0027ll have to visit #p2101011# again."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101011,
+      "minLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 3927,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101011,
+      "items": [
+        {
+          "itemId": 4000325,
+          "count": 50
+        },
+        {
+          "itemId": 2010000,
+          "count": 10
+        },
+        {
+          "itemId": 2010002,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4000325,
+          "count": -50
+        },
+        {
+          "itemId": 2010000,
+          "count": -10
+        },
+        {
+          "itemId": 2010002,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

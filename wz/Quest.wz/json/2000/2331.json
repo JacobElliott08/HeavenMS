@@ -1,0 +1,44 @@
+{
+  "questId": 2331,
+  "info": {
+    "name": "The Seal of the Empire",
+    "descriptions": {
+      "notStarted": "Seems like #b#p1300003##k wants to tell you something…",
+      "inProgress": "You need to find the stolen Royal Seal of the Mushking Empire and bring it to #b#p1300003##k.",
+      "completed": "You found the #bPrime Minister#k, who stole the #bRoyal Seal of the Mushking Empire#k. You reclaimed the seal and returned it to #b#p1300003##k."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300003,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2323,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300003,
+      "items": [
+        {
+          "itemId": 4001318
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 22000,
+      "items": [
+        {
+          "itemId": 4001318,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

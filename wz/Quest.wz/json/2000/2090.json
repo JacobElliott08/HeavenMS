@@ -1,0 +1,28 @@
+{
+  "questId": 2090,
+  "info": {
+    "name": "I\u0027m Bored 1",
+    "parent": "I\u0027m Bored",
+    "descriptions": {
+      "notStarted": "I should go see Icarus, who\u0027s at the top of a building in Kerning City. He seems to be bored out of his mind. ",
+      "inProgress": "I got to talk to Icarus of Kerning City. Just what exactly is he doing staring aimlessly at the sky anyway? He seemed to be really bored, and asked me if I can answer his set of questions.",
+      "completed": "I answered all the questions that Icarus of Kerning City asked. That was easy."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052106,
+      "minLevel": 10
+    },
+    "complete": {
+      "npc": 1052106
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 2091
+    }
+  }
+}

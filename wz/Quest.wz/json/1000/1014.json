@@ -1,0 +1,37 @@
+{
+  "questId": 1014,
+  "info": {
+    "name": "Rain\u0027s Maple Quiz 6",
+    "parent": "Rain\u0027s Maple Quiz",
+    "descriptions": {
+      "notStarted": "Shall we solve #b#p12101##k\u0027s sixth Quiz?",
+      "inProgress": "Finally, it\u0027s the 6th Quiz. I\u0027m happy that my Maple knowledge can be used here like this. Why don\u0027t I go for the 6th Quiz? ",
+      "completed": "I learned that every time my level goes up, I get 5 Ability Points(AP) that I can upgrade my abilities. I can see the detail with the hot-key \"S\"."
+    },
+    "area": 20,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 12101,
+      "prerequisiteQuests": [
+        {
+          "questId": 1013,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 12101
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10,
+      "nextQuest": 1015
+    }
+  }
+}

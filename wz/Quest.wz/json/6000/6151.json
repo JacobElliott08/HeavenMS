@@ -1,0 +1,48 @@
+{
+  "questId": 6151,
+  "info": {
+    "name": "Griffey\u0027s Necklace",
+    "parent": "Song of forgotten warrior",
+    "descriptions": {
+      "inProgress": "#p2081000# knows about Sayram but doesn\u0027t know anything about the singing shield. He says that I might be able to find some information on it from the #b#t04031479##k which Sayram gave to Griffey, whom he dearly loved. So I\u0027ll head to Minar Forest and find the necklace from the #o8180001#. Should be a piece of cake...yea, right...\\n\\n#i4031479##t4031479# #b#c4031479#/1",
+      "completed": " I found #t4031479#, and after some \"persuasion\", obtained the necklace. Now to return to Chief Tatamo and see what he says about this."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081000,
+      "jobs": [
+        112,
+        122,
+        132
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6150,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081000,
+      "items": [
+        {
+          "itemId": 4031479
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500000,
+      "items": [
+        {
+          "itemId": 4031479,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

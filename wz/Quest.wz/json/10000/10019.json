@@ -1,0 +1,42 @@
+{
+  "questId": 10019,
+  "info": {
+    "name": "Invade the Watermelon Field!",
+    "parent": "Today\u0027s Mission!     ",
+    "descriptions": {
+      "inProgress": "Today\u0027s Mission!!\\r\\n\u003cObtain #bChumji\u0027s Watermelon#k from the watermelon field!\u003e\\n\\nToday\u0027s mission is to obtain Chumji\u0027s watermelons.  There has been intelligence that #rMaster#k has planted a bomb in Chumji\u0027s watermelons.  Therefore, the watermelon field is currently being managed by the #bMaple Admin#k.  Get into the watermelon field through the Maple Admin and bring back the watermelons!",
+      "completed": "Today\u0027s mission has been completed."
+    },
+    "area": 50,
+    "order": 1,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000036,
+      "minLevel": 10,
+      "startDate": "2009060100",
+      "endDate": "2009082600",
+      "infoNumber": 10028,
+      "infoEx": [
+        null
+      ]
+    },
+    "complete": {
+      "npc": 9000036,
+      "infoNumber": 10028,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2022336
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "questId": 8865,
+  "info": {
+    "name": "Amoria : Red Dahlia - Bowman",
+    "descriptions": {
+      "notStarted": "Hmm, there\u0027s a man who looks a little distraught... should I help him?",
+      "inProgress": "I went and spoke with Ben, and he\u0027s trying to make a special flower for his wife called the Red Dahlia. He got injured and needs someone to collect the materials for him. I agreed to help, and bring back #b30 Stiff Feathers#k and #b3 Diamond Ore#k he needs to make the flower. Seems like a nice enough guy, shame he got injured, but I can get him what he wants...",
+      "completed": "I retrieved all the materials Ben needed and he\u0027ll be able to make the Red Dahlia. In return for my help, he gave me a scroll that will help me in my travels."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201034,
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322
+      ],
+      "minLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 8862,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201034,
+      "items": [
+        {
+          "itemId": 4020007,
+          "count": 3
+        },
+        {
+          "itemId": 4003004,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 4020007,
+          "count": -3
+        },
+        {
+          "itemId": 4003004,
+          "count": -30
+        },
+        {
+          "itemId": 2040801
+        }
+      ]
+    }
+  }
+}

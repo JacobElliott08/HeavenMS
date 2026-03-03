@@ -1,0 +1,120 @@
+{
+  "questId": 6036,
+  "info": {
+    "name": "A Surprise Outcome",
+    "parent": "Meren\u0027s Third Round of Teaching!",
+    "descriptions": {
+      "inProgress": "The piece of paper Meren dropped contained scribbles that seemed like a manual for a Gold Anvil. A Gold Anvil... sounds like something that\u0027d be fun to make. Meren doesn\u0027t seem like he wants to make it... so maybe I should try it.\\n\\n#i4031980# #t4031980# #b#c4031980# / 1",
+      "completed": "I managed to make a Gold Anvil and gave it to Meren. He seemed astounded by the fact that I was able to make it, and gave me a major praise for being able to do so."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2110004,
+      "minLevel": 105,
+      "prerequisiteQuests": [
+        {
+          "questId": 6035,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112,
+        2200,
+        2210,
+        2211,
+        2212,
+        2213,
+        2214,
+        2215,
+        2216,
+        2217,
+        2218
+      ]
+    },
+    "complete": {
+      "npc": 2110004,
+      "endScript": "q6036e",
+      "items": [
+        {
+          "itemId": 4031980
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031979
+        }
+      ]
+    }
+  }
+}

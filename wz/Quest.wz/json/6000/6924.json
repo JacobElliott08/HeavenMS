@@ -1,0 +1,55 @@
+{
+  "questId": 6924,
+  "info": {
+    "name": "Hero\u0027s Quality",
+    "parent": "The Bowman\u0027s Extreme Path",
+    "descriptions": {
+      "inProgress": " #b#p2081300##k said if I want to advance to the 4th job, I would have to prove that I am a true hero. He said to bring him #b#t4031344##k and #b#t4031343##k to prove that I am a true hero.\\r\\n#i4031515##t4031515# #b#c4031515#/1#k\\n#i4031514##t4031514# #b#c4031514#/1",
+      "completed": "When I brought #b#t4031343##k and #b#t4031344##k to him, he said I have proved that I\u0027m a true hero and told me to come back and talk to him when I\u0027m ready for the 4th job."
+    },
+    "area": 10,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081300,
+      "minLevel": 120,
+      "jobs": [
+        311,
+        321
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6923,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081300,
+      "items": [
+        {
+          "itemId": 4031514
+        },
+        {
+          "itemId": 4031515
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000,
+      "items": [
+        {
+          "itemId": 4031515,
+          "count": -1
+        },
+        {
+          "itemId": 4031514,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "questId": 3739,
+  "info": {
+    "name": "Isabella\u0027s Search",
+    "parent": "Year 2216- The Ruins",
+    "descriptions": {
+      "inProgress": "Ken, who you met in the ruins of the city in the year 2216, requests that you investigate the eastern regions where he received a rescue signal. You must hurry and find the person who he suspects to be a teenage female. Begin your search right away.",
+      "completed": "Ken, whom you met in the ruins of the city in year 2216, requested that you investigate the eastern regions where he received a rescue signal. You found a teenage female who appeared to be passed out from exhaustion. Fortunately, she was conscious when you talked to her."
+    },
+    "area": 41,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082017,
+      "minLevel": 82,
+      "prerequisiteQuests": [
+        {
+          "questId": 3738,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082016
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000
+    }
+  }
+}

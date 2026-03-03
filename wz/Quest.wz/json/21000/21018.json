@@ -1,0 +1,41 @@
+{
+  "questId": 21018,
+  "info": {
+    "name": "Basic Fitness Test",
+    "descriptions": {
+      "notStarted": "You think you have gained some much needed stamina through training. You should talk to #b#p1201000##k and receive the test for the final stage of your Basic Fitness Training.",
+      "inProgress": "#p1201000# told you battle #r#o0100134#s#k.  This time, you need to head to the other side, to the west side of town where #b#m140010200##k is. Fortunately, that doesn\u0027t seem too hard.",
+      "completed": "You eliminated the #o0100134#s. You can see how much your stamina and power have improved. What next?"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201000,
+      "startScript": "q21018s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21017,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2000
+      ]
+    },
+    "complete": {
+      "npc": 1201000,
+      "monsters": [
+        {
+          "monsterId": 100134,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200
+    }
+  }
+}

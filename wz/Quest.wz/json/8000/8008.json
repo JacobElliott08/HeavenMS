@@ -1,0 +1,34 @@
+{
+  "questId": 8008,
+  "info": {
+    "name": "Sakura\u0027s Request",
+    "parent": "Sakura, the Kitty, and the Orange Marble",
+    "descriptions": {
+      "notStarted": "I better go talk to #bSakura#k, who\u0027s crying in front of the police station.",
+      "inProgress": "#bSakura#k wanted me to find the #bBoss Kitty#k that stole her Orange Marble, and retrieve it from it.",
+      "completed": " I will have to get the orange marble for #bSakura#k.  I am sure she is looking for it.  So what should be my next move? Perhaps confrontation..."
+    },
+    "area": 48,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120011,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 8018,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120013
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8009
+    }
+  }
+}

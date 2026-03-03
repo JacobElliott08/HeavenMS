@@ -1,0 +1,45 @@
+{
+  "questId": 3221,
+  "info": {
+    "name": "The Drumming Bunny",
+    "descriptions": {
+      "notStarted": "I should go see Roly-Poly Worker 5 at Eos Tower",
+      "inProgress": "I met up with Roly-Poly Worker 5 again at Eos Tower. He was complaining about the Drumming Bunnies that seem to be bothering him at the 60th floor, and requested that I collect #b100 Toy Drums#k for him. If I get this for him, then there may be more work in store...\\n\\n#t4000127# #b#c4000127##k/100",
+      "completed": "Just the way the Roly-Poly Worker 5 asked, I took out the drumming bunnies and collected the toy drums. He said his work got easier when I\u0027m around, and he wants me to help him out on some other stuff. Maybe I should chill here and help these guys out for a change. "
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040008,
+      "minLevel": 31,
+      "prerequisiteQuests": [
+        {
+          "questId": 3220,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040008,
+      "items": [
+        {
+          "itemId": 4000127,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "meso": 12000,
+      "items": [
+        {
+          "itemId": 4000127,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

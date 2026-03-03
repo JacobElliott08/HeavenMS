@@ -1,0 +1,42 @@
+{
+  "questId": 2116,
+  "info": {
+    "name": "Planting Trees",
+    "descriptions": {
+      "notStarted": "I heard #p1022006# is looking for ways to liven up the barren grounds of Perion.",
+      "inProgress": "Thanks to the excavation project, Perion and its surrounding areas have been rapidly deteriorating. To liven up the area, #p1022006# wanted me to get him Seedlings to plant around the area. Get #p1022006# #b54 #t4000195#s#k from #b#o1140100#s#k at #rExcavation Sites#k.  \\n\\n#t4000195# #b#c4000195##k/54",
+      "completed": "I defeated #o1140100# and collected #t4000195#. #p1022006# promised to liven up the currently-barren Perion by planting lots of trees around the area, and he\u0027ll be the first to start it."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022006,
+      "minLevel": 20
+    },
+    "complete": {
+      "npc": 1022006,
+      "items": [
+        {
+          "itemId": 4000195,
+          "count": 54
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 2000000,
+          "count": 30
+        },
+        {
+          "itemId": 4000195,
+          "count": -54
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "questId": 21611,
+  "info": {
+    "name": "Rebellious Wolf",
+    "descriptions": {
+      "notStarted": "The wolf that you lost, then recovered, seems to have decreased in size and has quite an attitude too. What should you do? Better head to #b#m140000000##k and talk to #b#p1202007##k.",
+      "inProgress": "According to #p1202007#, a wolf who has lost its way is often unable to get over its trauma, to the point where it shrinks and even acquires a rebellious attitude. The owner, apparently, needs to re-teach the wolf some life lessons. They say you need to invest in some educational expenses...\\r\\n\\r\\n#b80,000,000 mesos#k",
+      "completed": "You paid the educational fees and let the wolf just enjoy himself for once. Fortunately, the wolf seemed to be back to normal size."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1202007,
+      "minLevel": 100,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 21607,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1902015
+        },
+        {
+          "itemId": 1902016
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1202007,
+      "items": [
+        {
+          "itemId": 1902015
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -80000000,
+      "items": [
+        {
+          "itemId": 1902015,
+          "count": -1
+        },
+        {
+          "itemId": 1902016
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "questId": 8002,
+  "info": {
+    "name": "Grako\u0027s Request",
+    "parent": "Find Mariwaka\u0027s Purse!",
+    "descriptions": {
+      "notStarted": "I need to go see Grako!!",
+      "inProgress": "Grako of Showa Town has a stomach ache which seems to have stemmed from indigestion. I wanted to get Grako some medicine, but she said she doesn\u0027t think she\u0027ll need a medicine; instead, she wants to drink soft cider. I should go get some cider for her..\\n\\n#t2022002#  #b#c2022002##k/1",
+      "completed": "I gave Grako the cider, but... oh man, he\u0027s been FAKING IT! Arrrgh... and anyway, he said he actually wants to ask for another favor, this one being REAL. Should I trust him this time?"
+    },
+    "area": 48,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120018,
+      "minLevel": 45
+    },
+    "complete": {
+      "npc": 9120018,
+      "items": [
+        {
+          "itemId": 2022002
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8003,
+      "items": [
+        {
+          "itemId": 2022002,
+          "count": -1
+        }
+      ],
+      "experience": 5000
+    }
+  }
+}

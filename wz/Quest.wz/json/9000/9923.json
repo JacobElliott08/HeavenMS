@@ -1,0 +1,48 @@
+{
+  "questId": 9923,
+  "info": {
+    "name": "Collect Pumpkin Pieces",
+    "descriptions": {
+      "notStarted": "#p2120000# is hosting a Halloween party at the #rHaunted #m229000000##k. The friendly yet slightly eerie looking #r#p2120003##k awaits your arrival...",
+      "inProgress": "#p2120003# wants me to collect and bring her the #b#t2022255##k left over from making halloween Jack-o\u0027-Lanterns. She says that she will give me a #b#t1002699##k which she made herself, as a gift in return. Let me follow #p2120003# to go make a Jack-o\u0027-Latern. \\n\\n#i2022255# #t2022255#  #b#c2022255#/50#k.",
+      "completed": " I brought the #t2022255# to #p2120003# and received a #t1002699# in return. Apparently, only 1 pumpkin hat is made per day, so I should go get myself a pumpkin hat to wear to the party."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120003,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 1440,
+      "endDate": "2008111100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9920,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120003,
+      "items": [
+        {
+          "itemId": 2022255,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1002699
+        },
+        {
+          "itemId": 2022255,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

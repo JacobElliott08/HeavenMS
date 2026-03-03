@@ -1,0 +1,54 @@
+{
+  "questId": 6361,
+  "info": {
+    "name": "Papulatus\u0027 Key",
+    "parent": "The Secret Behind Space-Time Transformations",
+    "descriptions": {
+      "inProgress": "I should take Papulatus\u0027 key to the #bOrigin of the Clocktower#k.",
+      "completed": "Where am I? There\u0027s someone here!"
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092012,
+      "minLevel": 120,
+      "jobs": [
+        512
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6360,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2043000,
+      "items": [
+        {
+          "itemId": 4031870
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031870
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 200000,
+      "items": [
+        {
+          "itemId": 4031870,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

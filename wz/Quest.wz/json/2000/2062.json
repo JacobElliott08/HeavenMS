@@ -1,0 +1,54 @@
+{
+  "questId": 2062,
+  "info": {
+    "name": "Mrs. Ming Ming\u0027s First Worry",
+    "descriptions": {
+      "notStarted": "I hear that Mrs. Ming Ming in Henesys is worried about something...",
+      "inProgress": "I ran into Mrs. Ming Ming in Henesys, who flushed with concerns here and there. She said there is not enough decoration for the village festival, and asked me to get #b50 Bubbling\u0027s Huge Bubble, 20 Slime Bubbles, and 100 Pig\u0027s Ribbons#k. \\n\\nBubblings Huge Bubbles : #c4000037#/50\\nSlime Bubbles : #c4000010#/20\\nPig\u0027s Ribbons : #c4000002#/100",
+      "completed": "I brought back all the stuff Mrs. Ming Ming asked me for, but I\u0027m sure these decorations are not the only things needed for the festival..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012106,
+      "minLevel": 20
+    },
+    "complete": {
+      "npc": 1012106,
+      "items": [
+        {
+          "itemId": 4000002,
+          "count": 100
+        },
+        {
+          "itemId": 4000010,
+          "count": 20
+        },
+        {
+          "itemId": 4000037,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "items": [
+        {
+          "itemId": 4000002,
+          "count": -100
+        },
+        {
+          "itemId": 4000037,
+          "count": -50
+        },
+        {
+          "itemId": 4000010,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

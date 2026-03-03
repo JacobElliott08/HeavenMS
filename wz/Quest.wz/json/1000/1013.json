@@ -1,0 +1,37 @@
+{
+  "questId": 1013,
+  "info": {
+    "name": "Rain\u0027s Maple Quiz 5",
+    "parent": "Rain\u0027s Maple Quiz",
+    "descriptions": {
+      "notStarted": "#b#p12101##k\u0027s fifth Quiz. What would it be about?",
+      "inProgress": "What would be the 5th Quiz?",
+      "completed": "Rain gave me a Quiz about Job Advancements. For Warriors, Thieves, and Bowmen, you need to be at least level 10, while for Magicians, you can advance at Level 8."
+    },
+    "area": 20,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 12101,
+      "prerequisiteQuests": [
+        {
+          "questId": 1012,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 12101
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10,
+      "nextQuest": 1014
+    }
+  }
+}

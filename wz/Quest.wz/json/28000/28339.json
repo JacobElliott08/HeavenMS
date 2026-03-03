@@ -1,0 +1,58 @@
+{
+  "questId": 28339,
+  "info": {
+    "name": "Mardi Gras Green Masks",
+    "descriptions": {
+      "notStarted": "Go see #bGaga#k if you want #ra Green Mask#k to wear to the festival!",
+      "inProgress": "I\u0027ll make you #ra Green Mask#k you can wear to the festival if you bring me #b10 Green Mardi Gras Feathers!#k",
+      "completed": "You received #ra Green Mask#k by collecting 10 Green Mardi Gras Feathers."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 60,
+      "startDate": "2010021000",
+      "endDate": "2010022200",
+      "prerequisiteQuests": [
+        {
+          "questId": 28338,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000021,
+      "items": [
+        {
+          "itemId": 4032576,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2400,
+      "items": [
+        {
+          "itemId": 4032576,
+          "count": -10
+        },
+        {
+          "itemId": 1012184,
+          "probability": 1,
+          "gender": 2
+        },
+        {
+          "itemId": 1012181,
+          "probability": 99,
+          "gender": 2
+        }
+      ]
+    }
+  }
+}

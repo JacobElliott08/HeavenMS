@@ -1,0 +1,37 @@
+{
+  "questId": 21012,
+  "info": {
+    "name": "Abilities Lost",
+    "descriptions": {
+      "notStarted": "You should talk to #b#p1202004##k, standing on the road to town.",
+      "inProgress": "#p1202004# says that it makes perfect sense that you don\u0027t know how to hold a weapon, since you\u0027ve lost your memory. He then tells you that maybe battling a monster would jog your memory and asks you to defeat #r#o9300383##k. You wonder if you can do it.",
+      "completed": "You defeated #o9300383#, but it hasn\u0027t jogged any memories. You have a feeling that your skills and abilities were lost, just like your memories. What kind of a hero are you if you have no abilities?"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1202004,
+      "startScript": "q21012s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21011,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2000
+      ]
+    },
+    "complete": {
+      "npc": 1202004,
+      "endScript": "q21012e",
+      "monsters": [
+        {
+          "monsterId": 9300383,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

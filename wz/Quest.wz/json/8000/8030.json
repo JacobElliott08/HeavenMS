@@ -1,0 +1,53 @@
+{
+  "questId": 8030,
+  "info": {
+    "name": "Movie Star",
+    "descriptions": {
+      "notStarted": " I should talk to Furano, a world-famous movie director. I wonder what he\u0027s made? I hope it wasn\u0027t something awful, like \"Rampage of the Merciless Onions\"...",
+      "inProgress": " The final audition is pretty simple. I need to just take on #b#o6130101##k at the inner corner of Henesys. I\u0027ll have to destroy it at all costs! \\n#o6130101#  #r#a80301##k",
+      "completed": "No way, I\u0027m in the movie already? Darn! No Makeup or anything! If I had known about this, then I would have at least tried to look a bit nicer. Anyways, I can\u0027t wait to see how my awesome array of skills come out on film--maybe I\u0027ll even get a close-up! "
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120007,
+      "maxLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 8029,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120007,
+      "monsters": [
+        {
+          "monsterId": 6130101
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": 30000,
+      "fame": 3,
+      "items": [
+        {
+          "itemId": 2040009,
+          "probability": 1
+        },
+        {
+          "itemId": 2040011,
+          "probability": 1
+        },
+        {
+          "itemId": 2040013,
+          "probability": 1
+        }
+      ],
+      "experience": 8000
+    }
+  }
+}

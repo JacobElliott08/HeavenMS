@@ -1,0 +1,29 @@
+{
+  "questId": 28142,
+  "info": {
+    "name": "Spirit Week Event - Cassandra\u0027s Candle ",
+    "descriptions": {
+      "notStarted": "Cassandra said she would reward me if I hold onto her Candle and keep it burning for 1 hour.",
+      "inProgress": "Cassandra said she would reward me if I hold onto her Candle and keep it burning for 1 hour.",
+      "completed": "Cassandra said she would reward me if I hold onto her Candle and keep it burning for 1 hour."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "startDate": "2009100600",
+      "endDate": "2009100700",
+      "repeatIntervalMinutes": 60,
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 28138,
+          "state": "STARTED"
+        }
+      ],
+      "startScript": "q28142s"
+    }
+  }
+}

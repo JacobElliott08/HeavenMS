@@ -1,0 +1,54 @@
+{
+  "questId": 4214,
+  "info": {
+    "name": "플로팅마켓 수호대 가입하기4",
+    "parent": "플로팅마켓 수호대 가입하기",
+    "descriptions": {
+      "notStarted": "아무래도 #b#p9250013##k은 너무 어설퍼 보인다. 하지만 수호대의 우수요원이라고 하니, 믿고 도장을 받는 수 밖에.. ",
+      "inProgress": "#b#p9250013##k이 귀띔 해 준 다음 요원은 마을의 장로인 #b#p9250014##k라고 한다. 내가 알기론 장로의 집은 이 곳에서 늪지대를 지나 외딴 곳에 있다고 하는데…, 어쨌든 출발!",
+      "completed": "마을의 장로를 찾아갔다."
+    },
+    "area": 48,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250013,
+      "minLevel": 10,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4213,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9250014,
+      "items": [
+        {
+          "itemId": 4031385
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031385
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 200,
+      "items": [
+        {
+          "itemId": 4031385,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "questId": 3362,
+  "info": {
+    "name": "Alcadno and the Ostracized Research",
+    "descriptions": {
+      "notStarted": "Apparently, #bRussellon#k, an alchemist from Alcadno, wants something...",
+      "inProgress": "Russellon mentioned that there was an alchemist that has been ostracized by everyone for trying to combine the works of Zenumist and Alcadno, #bYulete#k, and he was interested in obtaining the Lab Report. He wanted me to acquire #b#t4031774##k for him, and in order to do so, I\u0027ll have to find someone that is aware of #p2112014#\u0027s current whereabouts... \\n\\n#i4031796##t4031796# #b#c4031796##k/1 ",
+      "completed": "I was able to find Yulete\u0027s Lab Report, and gave it to Russellon. According to him, Yulete\u0027s studies were released at the height oc the conflict between Zenumist and Alcadno, and mentioned that if he released it at an opportune time, then he could have received a much more favorable response."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111009,
+      "minLevel": 70,
+      "maxLevel": 85,
+      "prerequisiteQuests": [
+        {
+          "questId": 3361
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111009,
+      "items": [
+        {
+          "itemId": 4031796
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 40000,
+      "meso": 50000,
+      "items": [
+        {
+          "itemId": 4031796,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

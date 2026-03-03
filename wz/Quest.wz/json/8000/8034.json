@@ -1,0 +1,63 @@
+{
+  "questId": 8034,
+  "info": {
+    "name": "Maya\u0027s Concerns 1",
+    "parent": "Maya\u0027s Concerns",
+    "descriptions": {
+      "notStarted": " By the way, how\u0027s Maya doing? I better go check her out!",
+      "inProgress": "Maya was attending a baby monster that\u0027s been deeply wounded. I know this is not what people would want us to do, but Maya wanted to do it, and I have to help her out. Oh well... in order to fix the wound, she said she needs #b50 #t02050003#s#k, #b20 #t04000086#s#k, and #b20 #t04000023#s#k. \\n\\n#t02050003# #b#c02050003##k/50\\n#t04000086#  #b#c04000086##k/20\\n#t04000023#  #b#c04000023##k/20",
+      "completed": "The wound is sanitized, but the baby Lioner should rest.  It seems very tired from the ordeal."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012101,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 2008,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012101,
+      "items": [
+        {
+          "itemId": 4000086,
+          "count": 20
+        },
+        {
+          "itemId": 4000023,
+          "count": 20
+        },
+        {
+          "itemId": 2050003,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8035,
+      "items": [
+        {
+          "itemId": 4000086,
+          "count": -20
+        },
+        {
+          "itemId": 4000023,
+          "count": -20
+        },
+        {
+          "itemId": 2050003,
+          "count": -50
+        }
+      ],
+      "experience": 15000
+    }
+  }
+}

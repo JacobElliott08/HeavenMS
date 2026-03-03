@@ -1,0 +1,66 @@
+{
+  "questId": 3064,
+  "info": {
+    "name": "Protect Nero!",
+    "descriptions": {
+      "notStarted": "I should check #p2012018# out at Orbis Park.",
+      "inProgress": "#p2012018# had been livid towards the monsters right outside Orbis that have made life miserable for Nero. He wanted me to teach those monsters a lesson by taking out #b50 #o3210200#s, 50 #o3210201#s, and 50 #o3210202##k while bring back #b50 #t4000073#s#k with me.",
+      "completed": "Ericsson was livid towards the fact that the monsters outside Orbis had been making his cat Nero\u0027s life miserable, so with his blessing, I proceeded to teach those monsters a lesson or two."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012018,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 3063,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012018,
+      "items": [
+        {
+          "itemId": 4000073,
+          "count": 50
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 3210200,
+          "count": 50
+        },
+        {
+          "monsterId": 3210201,
+          "count": 50
+        },
+        {
+          "monsterId": 3210202,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 2048002,
+          "probability": 3
+        },
+        {
+          "itemId": 2048001,
+          "probability": 7
+        },
+        {
+          "itemId": 4000073,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

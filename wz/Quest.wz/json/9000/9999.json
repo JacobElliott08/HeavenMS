@@ -1,0 +1,38 @@
+{
+  "questId": 9999,
+  "info": {
+    "name": "개발테스트용",
+    "descriptions": {
+      "notStarted": "1",
+      "inProgress": "2",
+      "completed": "3"
+    },
+    "area": 10,
+    "timeLimit": 600,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010017,
+      "repeatIntervalMinutes": 0
+    },
+    "complete": {
+      "npc": 9010017,
+      "prerequisiteQuests": [
+        {
+          "questId": 1041,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000000
+        }
+      ]
+    }
+  }
+}

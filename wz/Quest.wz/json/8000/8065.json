@@ -1,0 +1,41 @@
+{
+  "questId": 8065,
+  "info": {
+    "name": "The Ghost Whereabout",
+    "parent": "Freed From Darkness",
+    "descriptions": {
+      "notStarted": "#b#p1012109##k of #b#p1012109##k\u0027s book should be ready by now. I should go talk to him.",
+      "inProgress": "Apparenlty the #b#t4000144#s#k have disappeared to the direction of #b#m801000000##k. I need to find it and return it to its original state.",
+      "completed": "Apparently, #p9120011#\u0027s doll just went about on its one way. Maybe this has something to do with #b#t4000144##k that #p1012109# is looking for..."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012109,
+      "minLevel": 90,
+      "prerequisiteQuests": [
+        {
+          "questId": 8064,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120011
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "fame": 5,
+      "nextQuest": 8066,
+      "items": [
+        {
+          "itemId": 2000004
+        }
+      ]
+    }
+  }
+}

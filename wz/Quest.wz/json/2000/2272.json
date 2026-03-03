@@ -1,0 +1,62 @@
+{
+  "questId": 2272,
+  "info": {
+    "name": "Convince Robby Fray",
+    "descriptions": {
+      "notStarted": "#bRobby Fray#k needs a favor? If that\u0027s what it takes to convince a seven star chef to cater Blake\u0027s party, then that\u0027s what it takes. Get to it!",
+      "inProgress": "Robby Fray needs Bubbles to make his specialty cocktails. Head over to the 1st-2nd floor of Kerning Square and collect Bubbles from the Bubble Teas.",
+      "completed": "#bRobby Fray#k needs a favor? Well, you gotta do what you gotta do to help Blake make his debut. Talk to Robby Fray again."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052123,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2271,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052123,
+      "items": [
+        {
+          "itemId": 4000539,
+          "count": 30
+        },
+        {
+          "itemId": 4000540,
+          "count": 30
+        },
+        {
+          "itemId": 4000541,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 2273,
+      "experience": 14800,
+      "items": [
+        {
+          "itemId": 4000539,
+          "count": -30
+        },
+        {
+          "itemId": 4000540,
+          "count": -30
+        },
+        {
+          "itemId": 4000541,
+          "count": -40
+        }
+      ]
+    }
+  }
+}

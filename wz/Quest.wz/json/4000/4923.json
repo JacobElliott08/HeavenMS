@@ -1,0 +1,34 @@
+{
+  "questId": 4923,
+  "info": {
+    "name": "Welcome to New Leaf City Quiz - END",
+    "parent": "Welcome to New Leaf City Quiz",
+    "descriptions": {
+      "notStarted": "I\u0027ve successfully solve all the questions but I am still curious of some things...",
+      "inProgress": "I was talking with Icebyrd Slimm and wow, there is more to this land of Masteria and New Leaf City than what I learned from the quiz. I want to know more of what happened in this place.",
+      "completed": "I\u0027ve asked about the old fable of Masteria and Icebyrd Slimm didn\u0027t quite answer my question. Maybe when I become stronger, he will tell me more about it."
+    },
+    "area": 45,
+    "order": 13
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201050,
+      "prerequisiteQuests": [
+        {
+          "questId": 4911,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201050
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 333,
+      "fame": 2
+    }
+  }
+}

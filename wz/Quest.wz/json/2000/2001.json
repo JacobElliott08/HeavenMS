@@ -1,0 +1,45 @@
+{
+  "questId": 2001,
+  "info": {
+    "name": "Building a New House For \"Blackbull\"",
+    "descriptions": {
+      "notStarted": "I heard that \"Blackbull\" in Perion is building a new house...",
+      "inProgress": "I ran into \"Blackbull\" again, the guy I helped fix his house. He was surprised at how strong I looked, and asked me for a much harder favor. His cousins from Henesys are all trying to move to Perion, and so he needed to build a new house! To build a new house, he said he needed #b100 pieces of rock from Stone Golem, 30 screws, 30 processed wood, and Blackbull\u0027s deed to the land#k. His son had the deed to the land, only to have it stolen by Curse Eye neaer Sleepywood...hmmm...I should be looking for those wandering around the deep forest...",
+      "completed": "To move all of \"Blackbull\"\u0027s cousins to Perion, I got him all the items he requested: #b100 pieces of rock from Stone Gollem, 30 screws, 30 refined wood, and 1 deed to the land#k. I got him all these...and yet what if he asks me to actually BUILD a house for him next time up?? Anyway for that, he gave me a little bit of EXP, 15,000 mesos, and a scroll for weapon with 10% success rate. Even my fame went up +2...not bad..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1020000,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 2000,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1020000,
+      "items": [
+        {
+          "itemId": 4000022,
+          "count": 100
+        },
+        {
+          "itemId": 4003000,
+          "count": 30
+        },
+        {
+          "itemId": 4003001,
+          "count": 30
+        },
+        {
+          "itemId": 4001004
+        }
+      ],
+      "endScript": "q2001e"
+    }
+  }
+}

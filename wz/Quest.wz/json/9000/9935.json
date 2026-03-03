@@ -1,0 +1,28 @@
+{
+  "questId": 9935,
+  "info": {
+    "name": "소필리아의 눈물",
+    "descriptions": {
+      "notStarted": "#p2120005#의 부탁으로 저택 이곳저곳을 다니며 그녀를 아는 사람을 찾으러 다녔다. 하지만 #p2120005#를 기억하는 사람들에게서 #p2120005#를 보러 오겠다는 말을 듣지는 못했는데... 어쩐다... #b#p2120005##k에게 가자. ",
+      "inProgress": "#p2120005#에게 지금까지의 이야기를 전하자 그녀의 표정이 변했다.",
+      "completed": "아직 어린 데다가 울보이기까지 한 #p2120005#인데 왜 아무도 그녀를 찾으러 오지 않는 걸까...? 어딘가 이상하다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120005,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2008110600",
+      "infoNumber": 7646,
+      "infoEx": [
+        null
+      ]
+    },
+    "complete": {
+      "npc": 2120005,
+      "endScript": "q9935e"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "questId": 3950,
+  "info": {
+    "name": "Dealing with Tigun",
+    "parent": "In Search for His Sister",
+    "descriptions": {
+      "inProgress": "I feel bad for #p2101001#.  He really wanted to get in the palace...  I should step in and try to convince #b#p2101004##k.  A fine of #b50000 mesos#k... I\u0027ll pay it off instead and ask for him to let #p2101001# to meet his sister.\\n\\n#b50000 mesos#k",
+      "completed": "It is unfortunate that #p2101001# wasn\u0027t able to meet his sister but it\u0027s good to know that they can at least send and receive letters from each other.  But, #p2101004#!  Don\u0027t you think the delivery fee is a bit ridiculous?"
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101001,
+      "prerequisiteQuests": [
+        {
+          "questId": 3949,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101004
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 35000,
+      "meso": -50000
+    }
+  }
+}

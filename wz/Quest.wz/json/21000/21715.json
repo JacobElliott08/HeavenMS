@@ -1,0 +1,38 @@
+{
+  "questId": 21715,
+  "info": {
+    "name": "Tree Witness",
+    "descriptions": {
+      "notStarted": "This is your second assignment as an informant and the question remains, who planted the puppet on the #o1110100#s? Talk to #b#p1032101##k in #b#m101000000##k for some answers.",
+      "inProgress": "#p1032101# believes that #b#p1032112##k in #m100040000# may have witnessed someone placing a puppet on a #o1110100# and tells you to ask the tree.",
+      "completed": "#p1032112# stated that recently a little kid was seen carrying puppets in the South Forest. Since then, the #o1110100#s have gotten much more aggressive."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032101,
+      "minLevel": 18,
+      "prerequisiteQuests": [
+        {
+          "questId": 21714,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1032112
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100
+    }
+  }
+}

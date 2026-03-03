@@ -1,0 +1,25 @@
+{
+  "questId": 28161,
+  "info": {
+    "name": "Spirit Week Event - October 26th",
+    "descriptions": {
+      "notStarted": "I think #b#p9010010##k has something special for me.",
+      "inProgress": "#b#p9010010##k says I can trade in a scroll for a scroll cast with her magic spell, which will increase my Success Rate by 5%. I must make wise decisions, since I can only trade 5 times today.",
+      "completed": "#b#p9010010##k has given me a scroll with a higher success rate in return. She\u0027s got a kind heart."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "startDate": "2007102600",
+      "endDate": "2007102700",
+      "repeatIntervalMinutes": 0
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q28161e"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "questId": 8064,
+  "info": {
+    "name": "Soul in the Dark",
+    "parent": "Soul in the Dark",
+    "descriptions": {
+      "notStarted": "I should ask #b#p1012109##k of #m100000000# how the book is coming along.",
+      "inProgress": "Just as I suspected, the stuff I gathered up for him last time didn\u0027t help much. This time, he wanted me to defeat #b#o6230500##k and gather up #b50 #t4000144#s#k for #p1012109# of #m100000000#.\\n\\n#t4000144#  #b#c4000144#/50#k",
+      "completed": "I gave #p1012109# of #m100000000# #b50 #t4000144#s#k. Hopefully THIS will help me finish up the book."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012109,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 8062,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012109,
+      "items": [
+        {
+          "itemId": 4000144,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000144,
+          "count": -50
+        },
+        {
+          "itemId": 2040607,
+          "probability": 1
+        },
+        {
+          "itemId": 2040715,
+          "probability": 1
+        },
+        {
+          "itemId": 2040717,
+          "probability": 1
+        },
+        {
+          "itemId": 2041039,
+          "probability": 1
+        },
+        {
+          "itemId": 2040713,
+          "probability": 1
+        },
+        {
+          "itemId": 2040307,
+          "probability": 1
+        },
+        {
+          "itemId": 2040811,
+          "probability": 1
+        },
+        {
+          "itemId": 2040509,
+          "probability": 1
+        },
+        {
+          "itemId": 2040305,
+          "probability": 1
+        },
+        {
+          "itemId": 2040519,
+          "probability": 1
+        }
+      ],
+      "experience": 15000
+    }
+  }
+}

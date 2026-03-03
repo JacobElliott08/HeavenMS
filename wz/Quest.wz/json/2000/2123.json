@@ -1,0 +1,35 @@
+{
+  "questId": 2123,
+  "info": {
+    "name": "A Special Assignment",
+    "parent": "Assignment of a Sand Crew",
+    "descriptions": {
+      "notStarted": "#p1022002# of #m102000000# seems to have something to tell me...",
+      "inProgress": "#p1022002# received a word from a group of strangers to relay a message to me. #b\u0027Go visit #p2012019# of #m200000000#.\u0027#k. #p1022002# tells me he doesn\u0027t know anything else.",
+      "completed": "At #m200000000#, I met #p2012019#, carrying a small box around its neck."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022002,
+      "minLevel": 18,
+      "maxLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 2127,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012019
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 2124
+    }
+  }
+}

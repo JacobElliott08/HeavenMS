@@ -1,0 +1,55 @@
+{
+  "questId": 20729,
+  "info": {
+    "name": "Mysterious Statue\u0027s Information",
+    "descriptions": {
+      "notStarted": "According to #p1061000#, there may be some clues of #o9300285# on the surface of #b#p1061006##k. I\u0027ll have to talk to #p1061006#.",
+      "inProgress": "Something seems to be written on it, but it\u0027s hard to see. I\u0027ll have to move #p1061006# around.",
+      "completed": "At the back of #p1061006#, I found some writings on it with a horrible handwriting. It said: The password is XXXXXXX is a genius #o9300285#!"
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061006,
+      "minLevel": 28,
+      "prerequisiteQuests": [
+        {
+          "questId": 20728,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1061006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "questId": 2044,
+  "info": {
+    "name": "Looking for the Red Cape",
+    "parent": "Pia\u0027s Present For a Friend",
+    "descriptions": {
+      "notStarted": "Let\u0027s go to Pia in Henesys",
+      "inProgress": "I ran into that same teddy-bear-costume-wearig Pia at the Henesys Park. I did her a favor and took care of the blue mushrooms before. This time, she wants to make a present for a friend in Ellinia who wants to go out on a journey. The claw that she wants to make for her consists of #b15 silver plates, 50 dragon skins, and 40 screws#k...and for the friend, she also wanted me to get back the #bRed Cape#k that Rina of Henesys borrowed. If I get her all these...am I going to be richly rewarded?",
+      "completed": "I decided to go to Rina to get the #bRed Cape#k back, which she has borrowed from Pia."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012102,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2009,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1010100
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 2045
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "questId": 2320,
+  "info": {
+    "name": "Friendship with Bruce",
+    "descriptions": {
+      "notStarted": "#bScarrs#k says that he has something for you.",
+      "inProgress": "You need to hand a #bSample of Killer Mushroom Spore Potion#k to #bBruce#k in #bHenesys#k.",
+      "completed": "You handed a #bSample of Killer Mushroom Spore Potion#k to #bBruce#k."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300007,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2318,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012111,
+      "items": [
+        {
+          "itemId": 4032389
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032389
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 8800,
+      "items": [
+        {
+          "itemId": 4032389,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

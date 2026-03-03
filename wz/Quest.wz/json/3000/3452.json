@@ -1,0 +1,27 @@
+{
+  "questId": 3452,
+  "info": {
+    "name": "Blocktopus is an Alien?",
+    "descriptions": {
+      "notStarted": "I heard that #p2050001# of #m221000000# has something new to research, and is in need of help...",
+      "inProgress": "As someone who tirelessly studied life in space, #p2050001# wondered if a monster from Eos Tower, #b#o3230302##k, is in fact an alien. He said details could be found out by having an octopus key chain......\\n\\n#i4000099##t4000099# #b#c4000099#/1#k\\n\\nThen... if there\u0027s a more definite evidence than #t4000099#, maybe we\u0027ll find out a more accurate answer.",
+      "completed": "Gave #p2050001# #t4000099#. Will #p2050001# be able to find the correlations betwee #o3230302# and aliens?"
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050001,
+      "minLevel": 35
+    },
+    "complete": {
+      "npc": 2050001,
+      "endScript": "q3452e",
+      "items": [
+        {
+          "itemId": 4000099
+        }
+      ]
+    }
+  }
+}

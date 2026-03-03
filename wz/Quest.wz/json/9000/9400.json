@@ -1,0 +1,29 @@
+{
+  "questId": 9400,
+  "info": {
+    "name": "Maple GM\u0027s Congrats on the 3 year Anniversary",
+    "descriptions": {
+      "notStarted": "#b#p9010000##k wanted to show his appreciation to everyone in MapleStory for the support, and wants people to see him.",
+      "inProgress": " MapleStory is now 3 years old all thanks to you!",
+      "completed": "Hope you enjoy MapleStory for many years to come! The best is yet to come!"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 90,
+      "startDate": "2008042900",
+      "endDate": "2008061700"
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "buffItemId": 2022070
+    }
+  }
+}

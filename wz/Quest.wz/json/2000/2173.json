@@ -1,0 +1,54 @@
+{
+  "questId": 2173,
+  "info": {
+    "name": "The Truth Behind the Black Shadow",
+    "parent": "A Mysterious Presence On-board The Nautilus",
+    "descriptions": {
+      "inProgress": "Baine\u0027s eyes lit up as he read Bart\u0027s report. It was as if he discovered something! He thinks that the ominous feeling he\u0027s been getting as of late may have something to do with the Disciples of the Black Magician... Baine thinks it is possible that the Black Magician\u0027s Disciples are still in Victoria Island, and asks me to hunt down 20 #rred snails#k and 20 #rpigs#k and to bring back 1 #bBlack Magician\u0027s Token#k. \\n\\n#i4031846##t4031846# #b#c4031846##k / 1 \\n#o130101# #r#a21731##k\\n#o1210100# #r#a21732##k",
+      "completed": "I\u0027ve hunted down the monsters and found the Black Magician\u0027s Token, and brought it to Baine. I\u0027m afraid there\u0027s something much bigger going on than it appears. "
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092002,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 2172,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092002,
+      "items": [
+        {
+          "itemId": 4031846
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 130101,
+          "count": 20
+        },
+        {
+          "monsterId": 1210100,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 400,
+      "items": [
+        {
+          "itemId": 4031846,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

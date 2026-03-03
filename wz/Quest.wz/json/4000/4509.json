@@ -1,0 +1,66 @@
+{
+  "questId": 4509,
+  "info": {
+    "name": "Angie\u0027s Beloved Costume 3",
+    "parent": "Angie\u0027s Beloved Costume",
+    "descriptions": {
+      "notStarted": "What? #p9270032# in CBD is looking for me again? I wonder what could it be this time!",
+      "inProgress": "No surprise to find out that she wants a new dress! She asked me to gather 50 #t4000035#, 50 #t4000021#, and 10 #t4021003# this time.  I really hope that she is satisfied with her dress!\\n\\n#t4000035#  #r#c4000035#/50#k\\n#t4000021#  #r#c4000021#/50#k\\n#t4021003#  #r#c4021003#/10#k",
+      "completed": "Phew... Finally, #p9270032# was able to get all dresses she ever wanted! But speaking of fashion, I am sure that I look much better!"
+    },
+    "area": 48,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270032,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 4508,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270032,
+      "items": [
+        {
+          "itemId": 4000035,
+          "count": 50
+        },
+        {
+          "itemId": 4021003,
+          "count": 10
+        },
+        {
+          "itemId": 4000021,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "fame": 3,
+      "items": [
+        {
+          "itemId": 2043702
+        },
+        {
+          "itemId": 4000035,
+          "count": -50
+        },
+        {
+          "itemId": 4021003,
+          "count": -10
+        },
+        {
+          "itemId": 4000021,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

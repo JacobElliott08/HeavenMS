@@ -1,0 +1,37 @@
+{
+  "questId": 3507,
+  "info": {
+    "name": "Memory Keeper",
+    "parent": "Memory Lane",
+    "descriptions": {
+      "inProgress": "I went to go see #p2140001# just as #p2140000# told me to.  He immediately knew that I lost my memory and said in order to retrieve the lost memory, I would need to go back to the beginning where my adventure began... ",
+      "completed": "After talking to the Memory Keeper, I went to my previous job post at Victoria Island to retrieve my memory.  I wonder if I got my memory back?  I guess I\u0027ll know when I try to go past Memory Lane..."
+    },
+    "area": 46,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140001,
+      "minLevel": 103,
+      "prerequisiteQuests": [
+        {
+          "questId": 3506,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2140001,
+      "infoNumber": 7081,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 359900
+    }
+  }
+}

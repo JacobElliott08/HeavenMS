@@ -1,0 +1,25 @@
+{
+  "questId": 8297,
+  "info": {
+    "name": "A secret that Mr. Moneybags knows.",
+    "descriptions": {
+      "notStarted": "There\u0027s a legendary necklace called the \"Mind of Maple\" that everyone would like to have their hands on.......",
+      "inProgress": "There\u0027s a legendary necklace called the \"Mind of Maple\" that everyone would like to have their hands on... Once the Gate of Time opens, Mr. Moneybags will bring the blessing to everyone. Do you have the Mind of Maple? Only Mr. Moneybags knows the secret behind the necklace. Go visit Mr. Moneybags immediately.",
+      "completed": "Go ask Mr. Moneybags for more information about the Mind of Maple."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9300010,
+      "minLevel": 10,
+      "endDate": "2009022423",
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 9300010
+    }
+  }
+}

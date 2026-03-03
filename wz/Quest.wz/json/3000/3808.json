@@ -1,0 +1,44 @@
+{
+  "questId": 3808,
+  "info": {
+    "name": "Intruder - The Herb Farm 2",
+    "parent": "Intruder - The Herb Farm",
+    "descriptions": {
+      "notStarted": "Apparently, there was a thief at #p2092000#\u0027s herb farm at #m251000000#...",
+      "inProgress": "#p2092000# claimed that someone had entered his herb farm and stole some of his herbs. #p2092000# seemed confident that it was the work of the red-nosed pirates, and asked me to defeat #r#o7130104##k and #r#o6130208##k.\\n\\n#o7130104#  #r#a38080##k \\n#o6130208#  #r#a38081##k",
+      "completed": "I was able to defeat #o6130208# and #o7130104#. Now that I have apprehended the suspects, #p2092000# should enjoy a nice, long sleep tonight."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2092000,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 3807,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2092000,
+      "monsters": [
+        {
+          "monsterId": 7130104,
+          "count": 80
+        },
+        {
+          "monsterId": 6130208,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 33500
+    }
+  }
+}

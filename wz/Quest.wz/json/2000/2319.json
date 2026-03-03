@@ -1,0 +1,52 @@
+{
+  "questId": 2319,
+  "info": {
+    "name": "Killer Mushroom Spores (3)",
+    "descriptions": {
+      "notStarted": "#bScarrs#k says he has something to tell you.",
+      "inProgress": "You need to bring a #bSample of Killer Mushroom Spore Potion#k to the #bSecretary of Magic#k.",
+      "completed": "You brought a #bSample of Killer Mushroom Spore Potion#k to the #bSecretary of Magic#k."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300007,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2318,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300004,
+      "items": [
+        {
+          "itemId": 4032389
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032389
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 4200,
+      "nextQuest": 2321,
+      "items": [
+        {
+          "itemId": 4032389,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

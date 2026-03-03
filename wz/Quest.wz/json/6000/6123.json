@@ -1,0 +1,54 @@
+{
+  "questId": 6123,
+  "info": {
+    "name": "Bahamut\u0027s Power 3",
+    "parent": "Dragon Heart",
+    "descriptions": {
+      "notStarted": "The feeling I had within was confirmed by #b#p2081007##k. There is a way to unlock more of the dragon\u0027s power. I will not rest until I have discovered it. Raul has been helpful thus far--I wonder if he\u0027d be willing to assist me again...",
+      "inProgress": "Raul has agreed to help me again. I\u0027m to gather #b35 #t04031484##k if I want to raise #q2321003#\u0027s power. \\n\\n#i4031484##t4031484# #b#c4031484#/35#k",
+      "completed": "Another long, but successful hunt. I gave Raul #t04031484#, and he increased #q2321003#\u0027s power even more. When will the dragon reach its full power? It seems to be limitless... "
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081007,
+      "jobs": [
+        232
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6122,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081007,
+      "items": [
+        {
+          "itemId": 4031484,
+          "count": 35
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200000,
+      "items": [
+        {
+          "itemId": 4031484,
+          "count": -35
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 2321003,
+          "masterLevel": 25
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "questId": 9429,
+  "info": {
+    "name": "북극곰 형제의 이글루 짓기",
+    "descriptions": {
+      "notStarted": "코-크 타운의 소문난 의좋은 형제 포치와 푸치가 살고 있는 이글루가 많이 훼손 되었다고 한다. 도와 줄 일은 없는지 #b#p9001005##k를 찾아가 보자.",
+      "inProgress": "푸치와 포치가 새 이글루를 만드는 것을 도와주자.\\n\\n#t04000218:# #b#c04000218#/100#k \\n#t04000219:# #b#c04000219#/50#k \\n#t04000220:# #b#c04000220#/40#k ",
+      "completed": "북극곰 형제 푸치와 포치가 이글루를 짓는 것을 도와주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9001005,
+      "minLevel": 50,
+      "startDate": "2006070300",
+      "endDate": "2007122300",
+      "prerequisiteQuests": [
+        {
+          "questId": 9428,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9001005,
+      "items": [
+        {
+          "itemId": 4000220,
+          "count": 40
+        },
+        {
+          "itemId": 4000218,
+          "count": 100
+        },
+        {
+          "itemId": 4000219,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 18500,
+      "items": [
+        {
+          "itemId": 4000218,
+          "count": -100
+        },
+        {
+          "itemId": 4000219,
+          "count": -50
+        },
+        {
+          "itemId": 4000220,
+          "count": -40
+        },
+        {
+          "itemId": 2022075,
+          "count": 17
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "questId": 3444,
+  "info": {
+    "name": "The Binding",
+    "descriptions": {
+      "notStarted": "The number of ghosts have increased dramatically, that it got to the point of #p2041026# being sent to Ludibrium to do something about it. I should go see him.",
+      "inProgress": "I was able to meet #p2041026# past the Path of Time of Ludibrium. He wanted me to eliminate the bindings of #o7130300#, and collect the bindings for him. \\n\\n#t4000148# #b#c4000148#/20#k",
+      "completed": "I helped #p2041026#, who was hastily sent to Ludibrium, eliminate the bindings that enclosed #o7130300#."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041026,
+      "minLevel": 84
+    },
+    "complete": {
+      "npc": 2041026,
+      "items": [
+        {
+          "itemId": 4000148,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 42000,
+      "items": [
+        {
+          "itemId": 4000148,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

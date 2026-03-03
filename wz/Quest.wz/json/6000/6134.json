@@ -1,0 +1,52 @@
+{
+  "questId": 6134,
+  "info": {
+    "name": "Resurrection",
+    "parent": "Caron\u0027s Notebook",
+    "descriptions": {
+      "inProgress": "When I asked #p1061011# to teach me how to resurrect the dead, he told me that I have to experience death.  He told me to go to the dark place across from the Door of death, guarded by #bThanatos#k, at the #bBottom of Ludibrium clock tower#k. I\u0027m a bit scared, but my spirit is telling me that this is the path to take.\\n\\n#i4031448##t4031448# #b#c4031448#/1#k",
+      "completed": " That was a tough test, but somehow, I survived. I received the supremely powerful skill known as #b#q2321006##k.  #p1061011# said those who obtain such power should never abuse it. This technique, while powerful, breaks one of nature\u0027s most sacred laws, that of life and death. I should be careful..."
+    },
+    "area": 10,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "jobs": [
+        232
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6133,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "items": [
+        {
+          "itemId": 4031448
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000000,
+      "items": [
+        {
+          "itemId": 4031448,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 2321006,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

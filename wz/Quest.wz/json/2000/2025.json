@@ -1,0 +1,80 @@
+{
+  "questId": 2025,
+  "info": {
+    "name": "Collecting 200 Cursed Dolls",
+    "parent": "Rowen the Fairy and the Cursed Doll",
+    "descriptions": {
+      "inProgress": "Rowen asked me again, this time #b200 cursed dolls#k. Well, that\u0027s easy...",
+      "completed": "I took down a bunch of Zombie Lupin\u0027s on a forest near Ellinia, and collected all #b200 cursed dolls#k for Rowen. In return, she gave me 10 ores. Will the forest really return to normal with this?"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032101,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 2024,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032101,
+      "items": [
+        {
+          "itemId": 4000031,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4000031,
+          "count": -200
+        },
+        {
+          "itemId": 4020000,
+          "count": 10
+        },
+        {
+          "itemId": 4020001,
+          "count": 10,
+          "probability": 1
+        },
+        {
+          "itemId": 4020002,
+          "count": 10,
+          "probability": 1
+        },
+        {
+          "itemId": 4020003,
+          "count": 10,
+          "probability": 1
+        },
+        {
+          "itemId": 4020004,
+          "count": 10,
+          "probability": 1
+        },
+        {
+          "itemId": 4020005,
+          "count": 10,
+          "probability": 1
+        },
+        {
+          "itemId": 4020006,
+          "count": 10,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

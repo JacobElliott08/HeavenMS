@@ -1,0 +1,42 @@
+{
+  "questId": 20012,
+  "info": {
+    "name": "How Well Do You Know Your Skills?",
+    "descriptions": {
+      "notStarted": "Let\u0027s get some information on skills from #b#p1102006##k. ",
+      "inProgress": "#p1102006# informed you that you can open your Skill window by pressing the #bK key#k and suggested that you hunt #r3 #o100121#s#k and bring #b1 #t4000483##k to prove that you know how to use your skills.",
+      "completed": "You\u0027ve come back after hunting the #o0100121#s and brought back a #o0100121#\u0027s feather. #p1102006# says #p1102007# is waiting for you. Proceed to the left."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102006,
+      "startScript": "q20012s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20011,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    },
+    "complete": {
+      "npc": 1102006,
+      "endScript": "q20012e",
+      "items": [
+        {
+          "itemId": 4000483
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 100121,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

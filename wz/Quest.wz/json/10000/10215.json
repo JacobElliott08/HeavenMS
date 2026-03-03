@@ -1,0 +1,26 @@
+{
+  "questId": 10215,
+  "info": {
+    "name": "Gaga\u0027s Analysis",
+    "descriptions": {
+      "notStarted": "Gather up some #t4001238#s and hand them over to Gaga.",
+      "inProgress": "Gather up some #t4001238#s and hand them over to Gaga."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 31,
+      "maxLevel": 60,
+      "endDate": "2009082523",
+      "npc": 9010010,
+      "startScript": "q10215s",
+      "items": [
+        {
+          "itemId": 4001238,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

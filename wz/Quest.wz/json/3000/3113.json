@@ -1,0 +1,38 @@
+{
+  "questId": 3113,
+  "info": {
+    "name": "Talk with Eliza",
+    "parent": "Goddess\u0027s Pet",
+    "descriptions": {
+      "inProgress": "#bEliza#k was angry when she heard that her goddess was kidnapped right after she awoke, and she couldn\u0027t control her anger. Now she realizes that it was foolish of her, and regrets being angry. #bEliza#k herself is at peace now, but her #rClone#k, which was created through her angry impulses, is still roaming about and attacking innocent people. #bEliza#k asks me to defeat the #rEliza#k up in #b Stairway to the Sky II#k. \\n\\n#o8220000# #r#a31131##k",
+      "completed": "#bEliza#k is relieved of hearing that her clone is no longer able to do any harm."
+    },
+    "area": 33,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012026,
+      "minLevel": 83,
+      "prerequisiteQuests": [
+        {
+          "questId": 3112,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012026,
+      "monsters": [
+        {
+          "monsterId": 8220000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 384000
+    }
+  }
+}

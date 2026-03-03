@@ -1,0 +1,36 @@
+{
+  "questId": 8053,
+  "info": {
+    "name": "Traveling Around Maple 1",
+    "parent": "Traveling Around Maple",
+    "descriptions": {
+      "notStarted": "Olaf of Lith Harbor offered to take me to numerous famous spots in the Maple World.",
+      "inProgress": "According to Olaf, Riel will take me to the next stop. Where must that be?",
+      "completed": "I was able to meet up with Riel. Where will I go next?"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002101,
+      "maxLevel": 1,
+      "startDate": "2005010100",
+      "endDate": "2005010200"
+    },
+    "complete": {
+      "npc": 1081100
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8054,
+      "items": [
+        {
+          "itemId": 2001000,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

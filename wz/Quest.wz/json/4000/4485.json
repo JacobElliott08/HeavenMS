@@ -1,0 +1,42 @@
+{
+  "questId": 4485,
+  "info": {
+    "name": "Torr\u0027s Whereabouts",
+    "parent": "Cliff\u0027s Rudolph",
+    "descriptions": {
+      "notStarted": "You took the picture as Cliff had requested, but Torr was not there! Cliff began to worry greatly about Torr. Let\u0027s listen to his unfinished story.",
+      "inProgress": "Cliff asked you to check if the reindeer crying around the corner of Happyville is Torr. And if it is, he asked you to #btell Torr#k that he will be waiting on the 2nd floor at the Center Tower of Happyville.",
+      "completed": "You\u0027ve sent Torr back to lonely old man Cliff. It will be a warm and happy holiday, at least for those two."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2001000,
+      "minLevel": 25,
+      "endDate": "2010010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 4484,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2002002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "fame": 2,
+      "items": [
+        {
+          "itemId": 4031885,
+          "gender": 2
+        }
+      ]
+    }
+  }
+}

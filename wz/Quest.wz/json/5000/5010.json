@@ -1,0 +1,246 @@
+{
+  "questId": 5010,
+  "info": {
+    "name": "Giant Snowman\u0027s Blue Box",
+    "descriptions": {
+      "notStarted": "Bill is frantically looking for a Blue box. I wonder why...",
+      "inProgress": "If I find the Blue box for Bill, she promised to open the box for me. I wonder what\u0027s inside that box...",
+      "completed": "Bill was gracious enough to open the Blue box for me. It also felt good to contribute 50 mesos towards kids that are less fortunate in MapleStory. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9220006,
+      "repeatIntervalMinutes": 5,
+      "startDate": "2007112700",
+      "endDate": "2008011500",
+      "items": [
+        {
+          "itemId": 4000424
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9220006,
+      "items": [
+        {
+          "itemId": 4000424
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -50,
+      "items": [
+        {
+          "itemId": 4010006,
+          "count": 10,
+          "probability": 156
+        },
+        {
+          "itemId": 4020007,
+          "count": 10,
+          "probability": 156
+        },
+        {
+          "itemId": 4020008,
+          "count": 10,
+          "probability": 156
+        },
+        {
+          "itemId": 4004000,
+          "count": 4,
+          "probability": 117
+        },
+        {
+          "itemId": 4004001,
+          "count": 4,
+          "probability": 117
+        },
+        {
+          "itemId": 4004002,
+          "count": 4,
+          "probability": 117
+        },
+        {
+          "itemId": 4004003,
+          "count": 4,
+          "probability": 117
+        },
+        {
+          "itemId": 2020012,
+          "count": 50,
+          "probability": 117
+        },
+        {
+          "itemId": 2020013,
+          "count": 50,
+          "probability": 117
+        },
+        {
+          "itemId": 2020014,
+          "count": 50,
+          "probability": 117
+        },
+        {
+          "itemId": 2020015,
+          "count": 50,
+          "probability": 117
+        },
+        {
+          "itemId": 4010004,
+          "count": 15,
+          "probability": 50
+        },
+        {
+          "itemId": 1002086,
+          "probability": 36
+        },
+        {
+          "itemId": 1002218,
+          "probability": 36
+        },
+        {
+          "itemId": 1002214,
+          "probability": 36
+        },
+        {
+          "itemId": 1002210,
+          "probability": 36
+        },
+        {
+          "itemId": 1032013,
+          "probability": 36
+        },
+        {
+          "itemId": 1072135,
+          "probability": 36
+        },
+        {
+          "itemId": 1072143,
+          "probability": 36
+        },
+        {
+          "itemId": 1072125,
+          "probability": 36
+        },
+        {
+          "itemId": 1072130,
+          "probability": 36
+        },
+        {
+          "itemId": 1082009,
+          "probability": 36
+        },
+        {
+          "itemId": 1082081,
+          "probability": 36
+        },
+        {
+          "itemId": 1082084,
+          "probability": 36
+        },
+        {
+          "itemId": 1082065,
+          "probability": 36
+        },
+        {
+          "itemId": 4003000,
+          "count": 5,
+          "probability": 351
+        },
+        {
+          "itemId": 2000004,
+          "count": 30,
+          "probability": 117
+        },
+        {
+          "itemId": 4010002,
+          "count": 15,
+          "probability": 216
+        },
+        {
+          "itemId": 2022000,
+          "count": 100,
+          "probability": 351
+        },
+        {
+          "itemId": 4010000,
+          "count": 15,
+          "probability": 216
+        },
+        {
+          "itemId": 4010001,
+          "count": 15,
+          "probability": 216
+        },
+        {
+          "itemId": 4010003,
+          "count": 15,
+          "probability": 216
+        },
+        {
+          "itemId": 4010005,
+          "count": 15,
+          "probability": 216
+        },
+        {
+          "itemId": 4020000,
+          "count": 15,
+          "probability": 216
+        },
+        {
+          "itemId": 4020001,
+          "count": 15,
+          "probability": 216
+        },
+        {
+          "itemId": 4020002,
+          "count": 15,
+          "probability": 216
+        },
+        {
+          "itemId": 4020003,
+          "count": 15,
+          "probability": 216
+        },
+        {
+          "itemId": 4020004,
+          "count": 15,
+          "probability": 216
+        },
+        {
+          "itemId": 4020005,
+          "count": 15,
+          "probability": 216
+        },
+        {
+          "itemId": 4020006,
+          "count": 15,
+          "probability": 216
+        },
+        {
+          "itemId": 2000000,
+          "count": 100,
+          "probability": 1200
+        },
+        {
+          "itemId": 2000002,
+          "count": 100,
+          "probability": 1200
+        },
+        {
+          "itemId": 2000003,
+          "count": 100,
+          "probability": 1200
+        },
+        {
+          "itemId": 4000424,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

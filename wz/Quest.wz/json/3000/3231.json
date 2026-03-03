@@ -1,0 +1,52 @@
+{
+  "questId": 3231,
+  "info": {
+    "name": "The Broken Clocktower",
+    "parent": "A Delivery to a Lost Time",
+    "descriptions": {
+      "notStarted": "I should go see Olson the Toy Soldier, who\u0027s at Eos Tower",
+      "inProgress": "Olson the Toy Soldier from the 100th floor of Eos Tower wanted me to get the #b#t4031094##k obtained from the monster disguised as the dollhouse to #p2040029# at the Lost Time somewhere inside the Clocktower. Apparently the #p2040029# should be able to fix him.",
+      "completed": "I found Grandpa Clock standing around somewhere in the lost time, but he looks very lethargic, as if he\u0027s about to stop."
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040002,
+      "minLevel": 33,
+      "prerequisiteQuests": [
+        {
+          "questId": 3230,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040029,
+      "items": [
+        {
+          "itemId": 4031094
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031094
+        }
+      ]
+    },
+    "onComplete": {
+      "nextQuest": 3232,
+      "items": [
+        {
+          "itemId": 4031094,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

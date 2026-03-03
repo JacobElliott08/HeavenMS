@@ -1,0 +1,33 @@
+{
+  "questId": 3428,
+  "info": {
+    "name": "Where is the Dropship?",
+    "parent": "The Missing Dropship",
+    "descriptions": {
+      "inProgress": "I was able to hand #bPorter#k\u0027s letter from the Command Center in the Omega Sector to #bKay the Engineer#k, who was at the Omega Sector Silo, on time. I was expecting it to be a love letter, to no avail. Instead, it was about the missing dropship, and its current location. That\u0027s boring... anyway, Kay requested that I find the Dropship, which should be somewhere around Boswell Field, and check out the pilot\u0027s livelihood.",
+      "completed": "I found an empty dropship at the Boswell Field, and it appeared to have mislanded here. The pilot is nowhere to be found; a letter was found instead."
+    },
+    "area": 37,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2051001,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 3427,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050020
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 3429
+    }
+  }
+}

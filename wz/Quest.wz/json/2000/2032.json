@@ -1,0 +1,57 @@
+{
+  "questId": 2032,
+  "info": {
+    "name": "Dr. Faymus\u0027s Request",
+    "parent": "Nella \u0026 Kerning City Citizen\u0027s Request",
+    "descriptions": {
+      "inProgress": "Nella said I look much stronger than last time. First request is to get ingredients for Dr. Faymus, the owner of potion shop. He needs #b100 Horny Mushroom Caps#k and #b50 Jr. Necki Skins#k. Taking on Jr. Necki\u0027s might be little tough, but I will give it a try.",
+      "completed": "I gave what Dr. Faymus asked for and I got bunch of white potions for return. I wonder what kind of potion would Dr. Faymus make by using those materials. I should get back to Nella for more request."
+    },
+    "area": 30,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052103,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 2031,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052103,
+      "items": [
+        {
+          "itemId": 4000015,
+          "count": 100
+        },
+        {
+          "itemId": 4000034,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "items": [
+        {
+          "itemId": 4000015,
+          "count": -100
+        },
+        {
+          "itemId": 4000034,
+          "count": -50
+        },
+        {
+          "itemId": 2000002,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

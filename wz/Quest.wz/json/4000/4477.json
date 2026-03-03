@@ -1,0 +1,28 @@
+{
+  "questId": 4477,
+  "info": {
+    "name": "News Special Report",
+    "descriptions": {
+      "notStarted": "People are saying that there is shocking news on the front page of the Maple Herald. What could it be?",
+      "inProgress": "You were unable to buy the newspaper because it was already sold out.  However, you were able to read from the newspaper clippings behind the sales clerk. They say that Santa Claus will not be coming to Maple World this year. Is it true that he\u0027s not coming to town because Maplers stopped believing in Santa Claus? There must be some other reason. #bRooney#k is from Happyville and should know about what\u0027s happening. You should go ask.",
+      "completed": "You wished Rooney a Merry Christmas! Now, you should ask about Santa Claus."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250052,
+      "minLevel": 25,
+      "endDate": "2010010100"
+    },
+    "complete": {
+      "npc": 1022101
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "meso": 1000
+    }
+  }
+}

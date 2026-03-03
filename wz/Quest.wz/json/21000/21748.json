@@ -1,0 +1,33 @@
+{
+  "questId": 21748,
+  "info": {
+    "name": "The Stolen Seal Stone of Mu Lung",
+    "descriptions": {
+      "notStarted": "You lost the Seal Stone of Mu Lung. What does this mean? You\u0027d better head over to #b#m104000000##k and talk to #b#p1002104##k to get some advice.",
+      "inProgress": "When you tell #p1002104# about everything that took place in #m250000000#, #p1002104# felt it was necessary for you to tell #b#p1201000##k in #b#m140000000##k about it.",
+      "completed": "#p1201000# stated that you did get something significant out of this, in that you found out the heroes were the ones that personally delivered the Seal Stone to those towns, and that by making that connection, you can focus on studying those heroes which will in turn lead you to new information. She then gave you a newly-decoded skill called #bFinal Charge#k!"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 54,
+      "prerequisiteQuests": [
+        {
+          "questId": 21747,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1201000,
+      "endScript": "q21748e"
+    }
+  }
+}

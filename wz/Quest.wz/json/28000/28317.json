@@ -1,0 +1,62 @@
+{
+  "questId": 28317,
+  "info": {
+    "name": "Olivia: \"Find My Daddy\"",
+    "descriptions": {
+      "notStarted": "Those monsters have been defeated, but it looks like Olivia has something else to request.",
+      "inProgress": "In order to find the right key to the Piano Room, you must first obtain #b25 Silver Keys, 25 Gold Keys, and 25 Brass Keys#k. Though it would be easier if you could just break that door open instead...",
+      "completed": "You collected the #b25 Silver Keys, 25 Gold Keys, and 25 Brass Keys#k. But there\u0027s still more work to be done before you can relax."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201136,
+      "prerequisiteQuests": [
+        {
+          "questId": 28316,
+          "state": "COMPLETED"
+        }
+      ],
+      "endDate": "2009112500"
+    },
+    "complete": {
+      "npc": 9201136,
+      "items": [
+        {
+          "itemId": 4000518,
+          "count": 25
+        },
+        {
+          "itemId": 4000519,
+          "count": 25
+        },
+        {
+          "itemId": 4000520,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000518,
+          "count": -25
+        },
+        {
+          "itemId": 4000519,
+          "count": -25
+        },
+        {
+          "itemId": 4000520,
+          "count": -25
+        },
+        {
+          "itemId": 4032443
+        }
+      ]
+    }
+  }
+}

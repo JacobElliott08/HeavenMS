@@ -1,0 +1,59 @@
+{
+  "questId": 6390,
+  "info": {
+    "name": "Observe the Gigantic Spirit Vikings",
+    "descriptions": {
+      "notStarted": "I\u0027ve learned the Battleship Skill but I don\u0027t really know how to use it freely as of yet. I can\u0027t figure out what the problem is! I\u0027d better ask Kyrin.",
+      "inProgress": "So I guess I still need to learn some more skills before I can use the Battleship Skill, plus I need to learn how to properly control and attack from the battleship while riding on it before I can learn how to use the skill itself... Let me go watch the Gigantic Spirit Vikings in Ludibrium, and to prove that I\u0027ve completed my training, I must defeat #r150 Gigantic Spirit Vikings#k and bring back #b50 Vikings\u0027 Token#k for Kyrin. \\n\\n#i4031874##t4031874#  #b#c4031874# / 50#k \\n#o8141100#  #r#a63901##k",
+      "completed": "I took the proof of my training to Kyrin and she taught me the Battleship Torpedo Skill in return. "
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "minLevel": 120,
+      "jobs": [
+        522
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6370,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "items": [
+        {
+          "itemId": 4031874,
+          "count": 50
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 8141100,
+          "count": 150
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000000,
+      "items": [
+        {
+          "itemId": 4031874,
+          "count": -50
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 5221008,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

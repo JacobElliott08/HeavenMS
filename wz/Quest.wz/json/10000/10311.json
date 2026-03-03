@@ -1,0 +1,31 @@
+{
+  "questId": 10311,
+  "info": {
+    "name": "A Petrified Mouse",
+    "descriptions": {
+      "notStarted": "You have found an interesting artifact.",
+      "inProgress": "If you take this Mouse to a Maple Admin, you will receive something as a token of appreciation.",
+      "completed": "You have taken the Mouse, which was once involved in a Macro, to a Maple Admin. The Maple Admin thanked you and reminded you that MapleStory is much more fun when you actually play the game than when you use some illegal program to play it for you. "
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9040000,
+      "minLevel": 13,
+      "startDate": "2010022200",
+      "endDate": "2010030800",
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 4001303
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "endScript": "q10311e"
+    }
+  }
+}

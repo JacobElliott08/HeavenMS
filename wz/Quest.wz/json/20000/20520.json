@@ -1,0 +1,44 @@
+{
+  "questId": 20520,
+  "info": {
+    "name": "Knight\u0027s Dignity",
+    "descriptions": {
+      "notStarted": "#p1101002# seemed eager to talk to me about something...",
+      "inProgress": "#p1101002# told me that for a Level 50 knight to walk around to various destinations seems beneath my rank, and gave me information on #bMonster Mount#k. According to him, there might be a Mount that\u0027s available exclusively for the knights.",
+      "completed": "#p1101002# told me that for a Level 50 knight to walk around to various destinations seems beneath my rank, and gave me an information on Monster Mount. According to him, there might be a Mount that\u0027s available exclusively for the knights. I better head off to #m130000000# and hear the story in detail."
+    },
+    "area": 15,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "minLevel": 50,
+      "normalAutoStart": true,
+      "startScript": "q20520s",
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    }
+  }
+}

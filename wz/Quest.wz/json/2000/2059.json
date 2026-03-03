@@ -1,0 +1,61 @@
+{
+  "questId": 2059,
+  "info": {
+    "name": "Special Taste of Florina Beach II",
+    "descriptions": {
+      "notStarted": "Riel in Florina Beach askes me a question about Florina Beach. Piece of cake~ I can answer that  before I start my work.",
+      "inProgress": "I have to prepare the recipe for 12 people, and bring it to Riel in Florina Beach.\\n\\n#t4000136# #c4000136#/#r12#k \\n#t4000043# #c4000043#/#r130#k\\n #t4000029# #c4000029#/#r12#k",
+      "completed": "I answered all the questions that Riel gave me. I passed Riel\u0027s tests and she took the recipe for 12 people."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1081100,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 2058,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1081100,
+      "items": [
+        {
+          "itemId": 4000029,
+          "count": 12
+        },
+        {
+          "itemId": 4000136,
+          "count": 12
+        },
+        {
+          "itemId": 4000043,
+          "count": 130
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "meso": 7500,
+      "items": [
+        {
+          "itemId": 4000136,
+          "count": -12
+        },
+        {
+          "itemId": 4000029,
+          "count": -12
+        },
+        {
+          "itemId": 4000043,
+          "count": -130
+        }
+      ]
+    }
+  }
+}

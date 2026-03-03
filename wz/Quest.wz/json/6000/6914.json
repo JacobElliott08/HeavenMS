@@ -1,0 +1,56 @@
+{
+  "questId": 6914,
+  "info": {
+    "name": "A Hero\u0027s Quality",
+    "parent": "The Magician\u0027s Extreme Path",
+    "descriptions": {
+      "inProgress": " #b#p2081200##k said if I want to advance to the 4th job, I would have to prove that I am a true hero. He said to bring him #b#t4031512##k and #b#t4031511##k to prove that I am a true hero.\\r\\n#i4031512##t4031512# #b#c4031512#/1#k\\n#i4031511##t4031511# #b#c4031511#/1",
+      "completed": " When I brought #b#t4031512##k and #b#t4031511##k to him, he said I have proved that I\u0027m a true hero and told me to come back and talk to him when I\u0027m ready for the 4th job."
+    },
+    "area": 10,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081200,
+      "minLevel": 120,
+      "jobs": [
+        211,
+        221,
+        231
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6913,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081200,
+      "items": [
+        {
+          "itemId": 4031512
+        },
+        {
+          "itemId": 4031511
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000,
+      "items": [
+        {
+          "itemId": 4031512,
+          "count": -1
+        },
+        {
+          "itemId": 4031511,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

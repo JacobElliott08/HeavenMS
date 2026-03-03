@@ -1,0 +1,63 @@
+{
+  "questId": 29012,
+  "info": {
+    "name": "Ossyria Explorer",
+    "descriptions": {
+      "notStarted": "Let\u0027s explore the continent of Ossyria!\\r\\nEl Nath Mts. Explorer\\nLudus Lake Explorer\\nUndersea Explorer\\nMu Lung Explorer\\nNihal Desert Explorer\\nMinar Forest Explorer\\r\\nYou must earn a total of 6 titles.",
+      "inProgress": "#b#eTitle - Ossyria Explorer#n#k\\r\\n● Requirement(s)\\nCan acquire after earning a total of 6 titles: El Nath Mts. Explorer, Ludus Lake Explorer, Undersea Explorer, Mu Lung Explorer, Nihal Desert Explorer, and Minar Forest Explorer\\r\\n#b● Status\\n#y29006# : #u29006#\\n#y29007# : #u29007#\\n#y29008# : #u29008#\\n#y29009# : #u29009#\\n#y29010# : #u29010#\\n#y29011# : #u29011#",
+      "completed": "You have finally acquired the #b\u003cOssyria Explorer\u003e#k title upon earning all of the explorer titles in Ossyria."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142119
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "normalAutoStart": true,
+      "minLevel": 60,
+      "infoNumber": 27020,
+      "infoEx": [
+        null
+      ]
+    },
+    "complete": {
+      "npc": 9000040,
+      "prerequisiteQuests": [
+        {
+          "questId": 29006,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 29007,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 29008,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 29009,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 29010,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 29011,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142119
+        }
+      ]
+    }
+  }
+}

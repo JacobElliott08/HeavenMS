@@ -1,0 +1,54 @@
+{
+  "questId": 28194,
+  "info": {
+    "name": "Find the Clues!",
+    "parent": "The Cause of Sickness",
+    "descriptions": {
+      "notStarted": "#b#@9201120:##k in #bKerning City#k says he might have seen something strange near the Water Pipe.",
+      "inProgress": "He says he might have seen something strange near the Water Pipe.\\nLet\u0027s go over to #b#m102050000##k and inspect the Fire Hydrants. Report back to #b#@9201120:##k in #bKerning City#k when you find the clue.",
+      "completed": "Someone had been spreading the virus through the Water Pipe. There must be some twisted figure behind all of this!"
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201120,
+      "prerequisiteQuests": [
+        {
+          "questId": 28193,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 9201120,
+      "items": [
+        {
+          "itemId": 4001366
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 700
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "questId": 28242,
+  "info": {
+    "name": "Reporting the Training Results to Kyrin",
+    "descriptions": {
+      "notStarted": "#b#@1092007:##k in #bNautilus#k says you must report the results to #b#@1072008:##k. First, let\u0027s go find #b#@1092007:##k.",
+      "inProgress": "Let\u0027s go over to #b#@1072008:##k in #bNautilus#k and report the training results.",
+      "completed": "You\u0027ve successfully completed both of #b#p1092007##k\u0027s additional training courses."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092007,
+      "prerequisiteQuests": [
+        {
+          "questId": 28240,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 28241,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1090000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 100
+        },
+        {
+          "itemId": 2000003,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

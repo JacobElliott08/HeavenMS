@@ -1,0 +1,50 @@
+{
+  "questId": 3110,
+  "info": {
+    "name": "Restoring the Spirit of the Snow Sculpture",
+    "parent": "Snowfield Giant",
+    "descriptions": {
+      "inProgress": "Alcaster says he has everything set to restore the sculpture, and gives me an Ice Crystal. He says that a magic spell is cast onto this crystal, and will help restore the sculpture.\\n\\n#i4031791##t4031791#  #b#c4031791#/1",
+      "completed": "The snowman seems to have returned to its gentle self as soon as the Spirit of the Snow Sculpture was restored. No worries about the Snowman attacking anyone else, right?"
+    },
+    "area": 33,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "prerequisiteQuests": [
+        {
+          "questId": 3109,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020012,
+      "items": [
+        {
+          "itemId": 4031791
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031791
+        }
+      ]
+    },
+    "onComplete": {
+      "fame": 20,
+      "items": [
+        {
+          "itemId": 4031791,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

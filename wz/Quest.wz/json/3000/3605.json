@@ -1,0 +1,37 @@
+{
+  "questId": 3605,
+  "info": {
+    "name": "Brotherly Love",
+    "parent": "Brotherly Love",
+    "descriptions": {
+      "inProgress": "While I was busy secretly placing sacks of rice on both Chil Sung\u0027s and Chil Nam\u0027s stacks back and forth, I was finally caught red-handed by Chil Sung. Chil Sung thanked me for strengthening the love and bond between the brothers even more. He also said that Chil Nam might have noticed it himself, and wanted me to go see him.",
+      "completed": "I was busy transfering multiple sacks of rice for Chil Sung and Chil Nam on each other\u0027s stacks, but was caught red-handed. The brothers seemed genuinely thankful for helping them strengthening the love and bond between the brothers even more. He also said that Chil Nam might have noticed it himself, and wanted me to go see him."
+    },
+    "area": 37,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071005,
+      "prerequisiteQuests": [
+        {
+          "questId": 3604,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4000,
+      "items": [
+        {
+          "itemId": 4031237
+        }
+      ]
+    }
+  }
+}

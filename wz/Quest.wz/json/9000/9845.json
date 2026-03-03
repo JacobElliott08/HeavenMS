@@ -1,0 +1,32 @@
+{
+  "questId": 9845,
+  "info": {
+    "name": "The Wailing White Fang",
+    "descriptions": {
+      "notStarted": "#b#p2030001##k seems to have something to tell you.",
+      "inProgress": "Eliminate the White Fang and report to #bCassandra#k. \\n\\n#o5140000# #r#a98451##k",
+      "completed": "You defeated the White Fang that was wailing loudly."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030001,
+      "minLevel": 50,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2007052900",
+      "endDate": "2007061800"
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "huntUP5",
+      "monsters": [
+        {
+          "monsterId": 5140000,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "questId": 20407,
+  "info": {
+    "name": "The Curse of the Black Witch",
+    "descriptions": {
+      "notStarted": "...Wait, is this Ereve? But Ereve\u0027s usually not like this. And why are the Chief Knights standing like that? No one\u0027s answering! Only #p1101001# seemed to be barely awake. I better talk to #b#p1101001##k.",
+      "inProgress": "#p1101001# told me the lady in front is actually #r#p1104002# the #o9001010##k and that she has put a curse on everyone in Ereve. He mentioned that most of them on the island should be able to weather it, but the Empress might be in grave danger... I better defeat #o9001010# and break the curse now! \\n\\n#o9001010##r #a204071##k",
+      "completed": "The cunning #o9001010#, after realizing that Ereve, which is protected by #p1101001#, may be hard to enter, used #p1103000# to throw in cursed items, then cursed the whole island through that! Fortunately, after defeating #o9001010#, the curse seems to have been lifted."
+    },
+    "area": 15,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1104208,
+      "minLevel": 120,
+      "prerequisiteQuests": [
+        {
+          "questId": 20406,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1104208,
+      "monsters": [
+        {
+          "monsterId": 9001010
+        }
+      ]
+    }
+  }
+}

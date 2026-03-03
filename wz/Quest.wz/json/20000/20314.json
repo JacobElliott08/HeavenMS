@@ -1,0 +1,28 @@
+{
+  "questId": 20314,
+  "info": {
+    "name": "Shinsoo\u0027s Teardrop",
+    "descriptions": {
+      "notStarted": "It seems like #p1101006# has something to say about the recovered treasure...",
+      "inProgress": "For defeating #o9001009# and recovering Shinsoo\u0027s Teardrop, I was promoted to Advanced Knight.",
+      "completed": "For defeating #o9001009# and recovering Shinsoo\u0027s Teardrop, I was promoted to Advanced Knight. I\u0027ll need to keep my beliefs and fate in tact, like an Advanced Knight would, while delving further into darkness."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101006,
+      "minLevel": 70,
+      "startScript": "q20314s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20304,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1410
+      ]
+    }
+  }
+}

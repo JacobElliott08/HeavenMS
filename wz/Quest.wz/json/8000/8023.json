@@ -1,0 +1,38 @@
+{
+  "questId": 8023,
+  "info": {
+    "name": "Yoona\u0027s Quiz on Shopping 3",
+    "parent": "Yoona\u0027s Quiz on Shopping",
+    "descriptions": {
+      "notStarted": "I better solve Yoona\u0027s 3rd question on shopping.",
+      "inProgress": "Almost halfway done! Time to solve question number 3! I have to get it right...",
+      "completed": " I learned something about expiration dates. I can move my cursor over my acquired items and view the expiration date, so I know when I have to change style or re-select it!"
+    },
+    "area": 20,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 20100,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 8022,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8024
+    }
+  }
+}

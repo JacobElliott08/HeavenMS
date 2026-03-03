@@ -1,0 +1,53 @@
+{
+  "questId": 3073,
+  "info": {
+    "name": "Robinson\u0027s ID",
+    "parent": "Lost in the Ocean",
+    "descriptions": {
+      "inProgress": "I met Robinson in the middle of the island right at the center of the ocean, and he said that he used be a pilot for the army of Omega Sector, but while in a combat against the aliens, he ran away from the scene, only to be swept by strong currents that led you to where you were. He wishes to get back to the Omega Sector, but currently we have no idea where we are, and he\u0027s been covered with scars. As a result, he asked me if I can go to the Omega Sector, notify #b#p2051001##k of his troubles, and ask for some relief. Where is the Omega Sector?",
+      "completed": "I went to see #b#p2051001##k at the Omega Sector, and handed him a card of Robinson\u0027s ID. He said everyone\u0027s been wondering of his whereabouts, and wanted me to describe the position of the island in detail."
+    },
+    "area": 33,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060001,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 3072,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2051001,
+      "items": [
+        {
+          "itemId": 4031210
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031210
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 10000,
+      "fame": 2,
+      "nextQuest": 3074,
+      "items": [
+        {
+          "itemId": 4031210,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

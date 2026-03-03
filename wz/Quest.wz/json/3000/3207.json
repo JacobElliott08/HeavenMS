@@ -1,0 +1,48 @@
+{
+  "questId": 3207,
+  "info": {
+    "name": "Nemi\u0027s First Ingredient",
+    "descriptions": {
+      "notStarted": "I should go see Nemi, who\u0027s in Ludibrium...",
+      "inProgress": "I met up with Nemi again at a small house in Ludibrium. She was preparing dinner for her dad, who should be home from work soon, and she wanted to make him a nice bowl of soup. She asked me if I could get her #b10 slices of #t4031129##k by taking out the #bRatz#k in Eos Tower. \\n\\n#t4031129# #b#c4031129##k/10",
+      "completed": "I got Nemi the #b10 slices of #t4031129##k that she wanted. I wonder what kind of soup she\u0027s making for her dad..."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041005,
+      "minLevel": 28,
+      "prerequisiteQuests": [
+        {
+          "questId": 3206,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041005,
+      "items": [
+        {
+          "itemId": 4031129,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4200,
+      "items": [
+        {
+          "itemId": 4031129,
+          "count": -10
+        },
+        {
+          "itemId": 2020004,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

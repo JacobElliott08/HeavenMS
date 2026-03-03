@@ -1,0 +1,38 @@
+{
+  "questId": 3737,
+  "info": {
+    "name": "Central Robot Aufheben",
+    "parent": "Year 2216 - The Ruins",
+    "descriptions": {
+      "inProgress": "Andy has requested that you travel to the ruins of the city in the year 2216 and defeat Aufheben, the central robot that controls all electronic devices in the city. Andy says if Dunas was an android, it is very likely that Aufheben is also an android.",
+      "completed": "Andy requested that you travel to the ruins of the city in the year 2216 and defeat Aufheben, the central robot that controlled all electronic devices in the city. As suspected, Aufheben was an android. The battle between humans and robots seems interminable."
+    },
+    "area": 41,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082004,
+      "minLevel": 81,
+      "prerequisiteQuests": [
+        {
+          "questId": 3736,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082004,
+      "monsters": [
+        {
+          "monsterId": 8220011
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 170000
+    }
+  }
+}

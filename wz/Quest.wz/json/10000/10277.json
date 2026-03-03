@@ -1,0 +1,31 @@
+{
+  "questId": 10277,
+  "info": {
+    "name": "메이플 6주년 파티준비!!!",
+    "descriptions": {
+      "notStarted": "#p9010010#가 메이플스토리 6주년을 맞아 거창한 파티를 준비 중인데 필요한 재료가 만만치 않다고 한다.",
+      "inProgress": "#t04032301#을 모아 카산드라에게 가져다 주자.",
+      "completed": "#p9010010#에게 파티용품을 전달했다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 71,
+      "maxLevel": 200,
+      "endDate": "2009052800",
+      "repeatIntervalMinutes": 0
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10277e",
+      "items": [
+        {
+          "itemId": 4032301,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

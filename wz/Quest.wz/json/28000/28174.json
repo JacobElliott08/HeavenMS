@@ -1,0 +1,53 @@
+{
+  "questId": 28174,
+  "info": {
+    "name": "Investigation in Progress",
+    "parent": "Who is the suspect?",
+    "descriptions": {
+      "notStarted": "#b#@1092012:##k in #b#m120000200##k says he\u0027s finished analyzing the clues. Let\u0027s talk to him.",
+      "inProgress": "Although #b#p1032001##k in Ellinia has received a request to further investigate the matter, he doesn\u0027t like talking to strangers.\\n\\n You may be able to find what he likes, however, if you go see #b#@1092002:##k in the #b#m120000300##k. Let\u0027s rush over!",
+      "completed": "#b#@1092002:##k says he\u0027ll make something #b#@1032001:##k likes. Let\u0027s go find him at the #b#m120000300##k."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092012,
+      "prerequisiteQuests": [
+        {
+          "questId": 28173,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1092002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

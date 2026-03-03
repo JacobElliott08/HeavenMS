@@ -1,0 +1,55 @@
+{
+  "questId": 28195,
+  "info": {
+    "name": "To Perion!",
+    "parent": "Unveiling the Secret",
+    "descriptions": {
+      "notStarted": "#b#@9201120:##k in #bKerning City#k says there are a few people that know the strange emblems really well. Let\u0027s talk to him.",
+      "inProgress": "Let\u0027s go see #b#@1022000:##k in #bPerion#k and find out what meaning the emblem carries.",
+      "completed": "#b#@1022000:##k in #bPerion#k says he\u0027s identified the emblem. Let\u0027s go see what he\u0027s discovered."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201120,
+      "prerequisiteQuests": [
+        {
+          "questId": 28194,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1022000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 4001366,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

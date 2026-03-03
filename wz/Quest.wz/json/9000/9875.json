@@ -1,0 +1,26 @@
+{
+  "questId": 9875,
+  "info": {
+    "name": "Growing a Sprout",
+    "descriptions": {
+      "notStarted": "#bCassandra#k is handing out a pretty Pot. Head over to #bCassandra#k.",
+      "inProgress": "The sprout in the Pot grows every time you hunt, but she says it\u0027ll grow even faster if you double-click the Pot and let it receive sunlight.",
+      "completed": "You have delivered a Pot to #bCassandra#k."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 360,
+      "startDate": "2007071600",
+      "endDate": "2007082000",
+      "startScript": "q9875s"
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q9875e"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "questId": 6281,
+  "info": {
+    "name": "Whereabouts of the Grail",
+    "descriptions": {
+      "notStarted": " #p2081100# told me to go see #p2060101# if I want to know about #t4031454#\u0027s whereabouts.",
+      "inProgress": " #p2060101#, the one I met in the deep sea said he\u0027ll give me #b#t4031454##k, which he got during his exploration, if I get him 10 #t4000180#\u0027s #b#o8150100##k to produce exploration tools.\\n\\n#i4000180##t4000180# #b#c4000180#/10#k",
+      "completed": "I gave #p2060101#  10 #o8150100#\u0027s #t4000180# and received #t4031454#.."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060101,
+      "repeatIntervalMinutes": 0,
+      "jobs": [
+        122
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6280,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031454
+        },
+        {
+          "itemId": 4031455
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060101,
+      "items": [
+        {
+          "itemId": 4000180,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000180,
+          "count": -10
+        },
+        {
+          "itemId": 4031454
+        }
+      ]
+    }
+  }
+}

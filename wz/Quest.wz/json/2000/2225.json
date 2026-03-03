@@ -1,0 +1,27 @@
+{
+  "questId": 2225,
+  "info": {
+    "name": "The Cause and Effect",
+    "parent": "The Forest of Evil",
+    "descriptions": {
+      "inProgress": "#p1032107#, once an apprentice of #p1032001#, wanted to get close to Arwen, but Arwen could not even remember #p1032107#, and #p1032107# began to take revenge by casting an evil spell on #o4230101# to turn it into #o5220002#... Let\u0027s go inform #bArwen#k.",
+      "completed": "At first, Arwen is shocked and upset at what #p1032107# has done, but seems deep in thought now... "
+    },
+    "area": 30,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032107,
+      "prerequisiteQuests": [
+        {
+          "questId": 2224,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032100
+    }
+  }
+}

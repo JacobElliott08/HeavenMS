@@ -1,0 +1,35 @@
+{
+  "questId": 3514,
+  "info": {
+    "name": "The Sorcerer Who Sells Emotions",
+    "parent": "Road of Regrets",
+    "descriptions": {
+      "inProgress": "I met with #p2140002#.  He noticed right away that my emotions had been frozen and told me to buy his #bpotion#k if I want to thaw out my emotions.  He says it\u0027s not cheap but it will definitely work.  However, there\u0027s just one side effect to the potion...",
+      "completed": "I drank #p2140002#\u0027s potion.  Due to the side effect, all of my HP and MP were drained, making me temporarily unavailable for combat, but I think I found my emotions back.  I should try going past the Road of Regrets now."
+    },
+    "area": 46,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140002,
+      "minLevel": 120,
+      "prerequisiteQuests": [
+        {
+          "questId": 3513,
+          "state": "COMPLETED"
+        }
+      ],
+      "startScript": "q3514s"
+    },
+    "complete": {
+      "npc": 2140002,
+      "endScript": "q3514e",
+      "items": [
+        {
+          "itemId": 2022337
+        }
+      ]
+    }
+  }
+}

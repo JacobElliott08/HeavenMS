@@ -1,0 +1,51 @@
+{
+  "questId": 6900,
+  "info": {
+    "name": "Tylus\u0027 introduction letter",
+    "parent": "The Warrior\u0027s Extreme Path",
+    "descriptions": {
+      "notStarted": "I\u0027ve reached a limit to my training as a warrior. Is there a level beyond this? I should ask  #b#p2020008##k who helped me with the third job advancement.",
+      "inProgress": "#b#p2020008##k told me to see the bishop  #b#p2081100##k in Minar Forest if I want to find the path of becoming a greater warrior.",
+      "completed": " #b#p2081100##k said he will guide me to the path that will lead me to the warriors\u0027 extreme power."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020008,
+      "minLevel": 120,
+      "jobs": [
+        111,
+        121,
+        131
+      ]
+    },
+    "complete": {
+      "npc": 2081100,
+      "items": [
+        {
+          "itemId": 4031342
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031342
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 20000,
+      "items": [
+        {
+          "itemId": 4031342,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

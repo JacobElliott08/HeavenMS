@@ -1,0 +1,46 @@
+{
+  "questId": 2156,
+  "info": {
+    "name": "A rainbow snail shell that makes wishes come true!?",
+    "parent": "Legend of the Snail",
+    "descriptions": {
+      "inProgress": "Pia asked me to go to the thicket around the beach and take out #rMano#k. I\u0027m to bring back #b#t2210006##k. So you get to stay here while I do all the work for you again? Don\u0027t you think this is a bit too much? I might use all of the #t2210006# for myself!",
+      "completed": "#t2210006# wasn\u0027t an item that makes dreams come true. It turns people who use it into snails. Phew... learned a good lesson not to believe in rumors, otherwise I would be the one crawling about."
+    },
+    "area": 30,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012102,
+      "minLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 2155,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012102,
+      "items": [
+        {
+          "itemId": 2210006
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7500,
+      "meso": 30000,
+      "fame": 3,
+      "items": [
+        {
+          "itemId": 2210006,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

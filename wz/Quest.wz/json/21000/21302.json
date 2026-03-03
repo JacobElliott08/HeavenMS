@@ -1,0 +1,36 @@
+{
+  "questId": 21302,
+  "info": {
+    "name": "Making Red Jade",
+    "descriptions": {
+      "notStarted": "You think you may have to make a new #t4032312# for #p1201002#, but you don\u0027t know where to start, since you don\u0027t know what to use or how to make it. Maybe #b#p1201000##k knows a thing or two?",
+      "inProgress": "#p1201000# tells you to head over to #m140030000# and use the Mirror of Desire to discover how to make a #t4032312#. That seems to be the only possible solution. Oh well…you should go to #b#m140030000##k.\\r\\n\\r\\n#i4032312# #t4032312# #b#c4032312# / 1#k ",
+      "completed": "You successfully made a #t4032312#. Thankfully, #p1201002# seemed quite satisfied with it. Having recovered the powers of the Red Jade, #p1201002# unlocked more abilities for you."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201000,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 21301,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110
+      ]
+    },
+    "complete": {
+      "npc": 1201002,
+      "endScript": "q21302e",
+      "items": [
+        {
+          "itemId": 4032312
+        }
+      ]
+    }
+  }
+}

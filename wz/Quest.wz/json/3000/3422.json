@@ -1,0 +1,42 @@
+{
+  "questId": 3422,
+  "info": {
+    "name": "Fuel for MT-09",
+    "descriptions": {
+      "notStarted": "I should go see Kay the engineer at the Omega Sector.",
+      "inProgress": "I met an engineer named Kay at the Omega Sector Silo. She said she\u0027d been looking for an assistant, and asked if I could help her out. For my first task, since she\u0027s trying to develop a new machine that recycles MT-09\u0027s fuel, she wanted me to collect #b5 MT-09\u0027s Fuels#k.\\n\\n#t4000126# #b#c4000126##k/5",
+      "completed": "I went around and collected the fuel for MT-09. This was for Kay the Engineer, who was at the Silo of the Omega Sector. I wonder what kind of a machine Kay will make with the fuel..."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2051001,
+      "minLevel": 50
+    },
+    "complete": {
+      "npc": 2051001,
+      "items": [
+        {
+          "itemId": 4000126,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 4000126,
+          "count": -5
+        },
+        {
+          "itemId": 4003000,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

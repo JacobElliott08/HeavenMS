@@ -1,0 +1,51 @@
+{
+  "questId": 6169,
+  "info": {
+    "name": "Genesis",
+    "descriptions": {
+      "notStarted": " I wonder if #p2022003#\u0027s is feeling up to a conversation...I should pay him a visit...",
+      "inProgress": "As I approached #p2022003# to check if he\u0027s okay, he seemed to be more alert, as if part of his memory returned. He told me to bring him #b#t4031461##k... Let\u0027s go to the #bCave of Life#k. \\n\\n#i4031461##t4031461# #b#c4031461# / 1#k",
+      "completed": " I learned a new magic spell! This is the magic that #p2022003# studied...it\u0027s powerful magic that I will use to emerge victorious in battle!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2022003,
+      "jobs": [
+        232
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6166,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2022003,
+      "items": [
+        {
+          "itemId": 4031461
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1300000,
+      "items": [
+        {
+          "itemId": 4031461,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 2321008,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

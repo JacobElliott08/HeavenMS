@@ -1,0 +1,54 @@
+{
+  "questId": 3094,
+  "info": {
+    "name": "Snow Crystal 2",
+    "parent": "The View of the Ocean",
+    "descriptions": {
+      "notStarted": "Is #t4031312# made? I better go see #p2020005# and find out for myself.",
+      "inProgress": "I finally got #t4031312# from #p2020005#. I have a feeling #p2060006#\u0027s going to LOVE seeing this. I better head back to Aquarium and see #r#p2060006##k.",
+      "completed": "I gave #p2060006# the #t4031312#, and in return, got myself the Official Aqua Road Photo Album. Now it\u0027s time for me to show this to Kriel in Orbis."
+    },
+    "area": 33,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "prerequisiteQuests": [
+        {
+          "questId": 3093,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060006,
+      "items": [
+        {
+          "itemId": 4031312
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031312
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4031312,
+          "count": -1
+        },
+        {
+          "itemId": 4031310
+        }
+      ]
+    }
+  }
+}

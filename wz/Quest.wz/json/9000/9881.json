@@ -1,0 +1,31 @@
+{
+  "questId": 9881,
+  "info": {
+    "name": "현상수배 : 스텀피",
+    "descriptions": {
+      "notStarted": "#b카산드라#k가 전해 줄 소식이 있다고 한다. 어서 그녀를 찾아가 보자.",
+      "inProgress": "스텀프들을 마음대로 조종하는 스텀피를 퇴치하고 #b카산드라#k에게 돌아가자. \\n\\n#o3220000##r #a98811##k ",
+      "completed": "#b카산드라#k의 부탁을 들어주었다. 9월 19일까지는 하루에 한번씩 그녀를 찾아가 도와주어야겠다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 31,
+      "maxLevel": 40,
+      "startDate": "2007081600",
+      "endDate": "2007092000",
+      "startScript": "q9881s"
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q9881e",
+      "monsters": [
+        {
+          "monsterId": 3220000
+        }
+      ]
+    }
+  }
+}

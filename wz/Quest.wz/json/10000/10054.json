@@ -1,0 +1,60 @@
+{
+  "questId": 10054,
+  "info": {
+    "name": "그윈의 모험담",
+    "descriptions": {
+      "notStarted": "메이플 운영자가 나를 위해서 해줄 말이 있다고 한다.",
+      "inProgress": "메이플 운영자의 조언대로 메이플 월드의 최초 모험자들과 함께 모험을 시작한 \u0027불굴의 모험가\u0027의 그윈씨 이야기를 직접 듣는 것이 좋겠다. 지원물품인 #b드레이크의 피#k를 1개 가지고, 빅토리아 중앙던전 어딘가에 있는 #b그윈씨를 찾아가자.#k",
+      "completed": "메이플 월드의 최초 모험자의 일원인 그윈은 아직도 그 모험을 멈출 줄 모른다. 그윈에게 지원물품인 드레이크의 피를 구해다 주고 그윈의 모험담을 얻었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 50,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2008101300",
+      "endDate": "2008103000",
+      "infoNumber": 10057,
+      "infoEx": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 10052,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4001204
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061013,
+      "items": [
+        {
+          "itemId": 2012000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4001204
+        },
+        {
+          "itemId": 2012000,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

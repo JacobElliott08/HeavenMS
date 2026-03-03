@@ -1,0 +1,64 @@
+{
+  "questId": 2138,
+  "info": {
+    "name": "Beginner Bowman\u0027s Third Training Session",
+    "descriptions": {
+      "notStarted": " I\u0027m getting used to being a Bowman but still need to be trained. #b#p1012100##k wants to help me out.",
+      "inProgress": "#p1012100# says Bowman should be calm and have strong willpower. For further training, she ordered me to hunt #r65 #o0210100##k. 65 #o0210100# ... Quite a few... \\n\\n#o0210100# #r#a21381##k",
+      "completed": "I got 65 #o0210100# . Phew... Wasn\u0027t easy, but I did it!"
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012100,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 2137,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012100,
+      "monsters": [
+        {
+          "monsterId": 210100,
+          "count": 65
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 645,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 30
+        },
+        {
+          "itemId": 2000003,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

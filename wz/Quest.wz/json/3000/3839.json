@@ -1,0 +1,51 @@
+{
+  "questId": 3839,
+  "info": {
+    "name": "Tae Soo\u0027s Reward",
+    "parent": "The Forgotten Master",
+    "descriptions": {
+      "inProgress": "After listening to Tae Roon\u0027s story, Tae Soo felt that since he owes Tae Roon a debt of gratitude, he wanted to give him a Peach from this farm. How can I successfully give Tae Soo\u0027s Peach to Tae Roon? Maybe there\u0027s a place to drop the Peach at the #bWild Bear Area#k...",
+      "completed": "A small note of thank you on the table... after handing Tae Soo the note, he flashed a big smile so genuine he must have felt like flying. This small piece of paper may well be the truth about Tae Roon."
+    },
+    "area": 44,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091003,
+      "minLevel": 71,
+      "prerequisiteQuests": [
+        {
+          "questId": 3838,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091003,
+      "items": [
+        {
+          "itemId": 2022252
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031794
+        }
+      ]
+    },
+    "onComplete": {
+      "fame": 15,
+      "items": [
+        {
+          "itemId": 2022252,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

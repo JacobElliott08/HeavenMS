@@ -1,0 +1,74 @@
+{
+  "questId": 29900,
+  "info": {
+    "name": "Beginner Adventurer",
+    "descriptions": {
+      "notStarted": "You can earn the #b\u003cBeginner Adventurer\u003e#k title by completing your 1st Job Advancement as an Adventurer.",
+      "inProgress": "Adventurers who complete the 1st Job Advancement will receive the #b\u003cBeginner Adventurer\u003e#k title. Go find NPC #p9000040#, who can be found in every town.",
+      "completed": "You have earned the #b\u003cBeginner Adventurer\u003e#k title by completing the 2nd Job Advancement as an Adventurer."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142107
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 8,
+      "normalAutoStart": true,
+      "npc": 9000040,
+      "startScript": "q29900s",
+      "items": [
+        {
+          "itemId": 1142107
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522
+      ]
+    },
+    "complete": {
+      "npc": 9000040,
+      "endScript": "q29900e"
+    }
+  }
+}

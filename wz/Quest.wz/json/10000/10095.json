@@ -1,0 +1,31 @@
+{
+  "questId": 10095,
+  "info": {
+    "name": "스카두르의 응원",
+    "descriptions": {
+      "notStarted": "스카두르가 그린캠페인을 응원하기 위해 기다리고 있다.",
+      "inProgress": "스카두르가 그린캠페인을 응원해준다.",
+      "completed": "스카두르가 그림캠페인을 응원해 주었다."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "startDate": "2008111300",
+      "endDate": "2008121900",
+      "npc": 2020007,
+      "minLevel": 13,
+      "prerequisiteQuests": [
+        {
+          "questId": 10082,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020007,
+      "endScript": "q10095e"
+    }
+  }
+}

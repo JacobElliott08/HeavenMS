@@ -1,0 +1,51 @@
+{
+  "questId": 3842,
+  "info": {
+    "name": "Do Gong\u0027s in Trouble",
+    "parent": "Eliminating King Sage Cat",
+    "descriptions": {
+      "inProgress": "Master Goblin, who calls himself the King Sage Cat, proclaims that he\u0027s the true Master, and althought he may have been ridiculed by Do Gong, he was willing to let it slide and offer a truce. Also wanted to offer a miracle medicine to #bDo Gong#k as a sign of truce. Well, I better give Do Gong the red marble like he said.",
+      "completed": "The stuff Master Goblin gave to Do Gong wasn\u0027t the Miracle Medicine!!! It\u0027s a POISON!!! Will Do Gong be able to survive this? I better check his pulse right now."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091004,
+      "minLevel": 77,
+      "prerequisiteQuests": [
+        {
+          "questId": 3841,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091001,
+      "items": [
+        {
+          "itemId": 4031788
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031788
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 750,
+      "items": [
+        {
+          "itemId": 4031788,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

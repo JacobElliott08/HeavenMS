@@ -1,0 +1,53 @@
+{
+  "questId": 4010,
+  "info": {
+    "name": "영원의 눈물",
+    "descriptions": {
+      "notStarted": "주걸균의 부탁대로 #b#p9330004##k을 찾아가 보자.",
+      "inProgress": "채이림이 길거리 원숭이들의 습격을 받아 잃어버린 핸드폰을 찾아주자. \\n\\n#i4031296##t4031296#  #b#c4031296#/1#k",
+      "completed": "채이림에게 받은 #b#t4031293##k을 #b#p9330003##k에게 가져다 주자."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9330004,
+      "minLevel": 42,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4006,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031293
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9330004,
+      "items": [
+        {
+          "itemId": 4031296
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031296,
+          "count": -1
+        },
+        {
+          "itemId": 4031293
+        }
+      ]
+    }
+  }
+}

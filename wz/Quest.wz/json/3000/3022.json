@@ -1,0 +1,45 @@
+{
+  "questId": 3022,
+  "info": {
+    "name": "Dances with Balrog and His Recovery",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "I went to Perion and met up with #bDances with Balrog#k. After I showed him the ring, he conceded that he may have an item that\u0027ll provide enough clues to help me ultimately find the Book of Ancient. Of course, he also didn\u0027t want to just give it away like that. Since he\u0027s spent too much energy trying to help other warriors, he wanted #b2 Power Crystals#k to recover his strength, in return for handing me the item that holds the clue."
+    },
+    "area": 33,
+    "order": 19
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3021,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022000,
+      "items": [
+        {
+          "itemId": 4005000,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8320,
+      "nextQuest": 3023,
+      "items": [
+        {
+          "itemId": 4005000,
+          "count": -2
+        }
+      ]
+    }
+  }
+}

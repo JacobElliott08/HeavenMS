@@ -1,0 +1,64 @@
+{
+  "questId": 28178,
+  "info": {
+    "name": "Who Changed Him?",
+    "parent": "Revealing Secrets",
+    "descriptions": {
+      "notStarted": "#b#@1012003:##k in #b#m100000000##k says to rush over to see the #b#@9201119:##k in #b#m102000000##k.",
+      "inProgress": "Let\u0027s find the #b#@9201119:##k in #b#m102000000##k and get to the bottom of this!",
+      "completed": "The #bTraining Instructor#k had been consumed by demons, which led him to attack #b#p1012003##k. Then, in order to fill his spot, he had changed his face and location with #b#p1040000##k.\\nAs a result of your persistent chase, you were able to uncover the demon\u0027s evil scheme with a single clue."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012003,
+      "prerequisiteQuests": [
+        {
+          "questId": 28177,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 9201119,
+      "items": [
+        {
+          "itemId": 4032479
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 4032479,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "questId": 9153,
+  "info": {
+    "name": "월묘와 함께하는 풍요로운 한가위",
+    "descriptions": {
+      "notStarted": "#t4031188#에 대한 연구를 하는 사람이 있다던데, 누굴까? #b#p9010000##k를 찾아가 보자.",
+      "inProgress": "#p9010000#는 #b달나라#k에 살고 있는 #b#p9001104##k가 #b#t4031188##k를 구하고 있다고 말했다. 월묘가 #t2022005#라니, 무슨 일일까? #t4031188#를 가지고 달나라로 가보자.",
+      "completed": "#p9001104#는 인간이라는 종족에 대한 근원적인 연구에 몰두중이라며, 그를 위해 인간의 전통음식인 #t2022005#를 구하고 있다고 말했다. 연구를 마치기 전까지 계속 #t4031188#를 구한다고 하니, #t4031188#가 생기는대로 가져다 주자."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 26,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2008090500",
+      "endDate": "2008092600",
+      "items": [
+        {
+          "itemId": 4031188
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9001104,
+      "items": [
+        {
+          "itemId": 4031188
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 23000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4031188,
+          "count": -1
+        },
+        {
+          "itemId": 2190000,
+          "count": 2,
+          "probability": 30
+        },
+        {
+          "itemId": 2000002,
+          "count": 20,
+          "probability": 18
+        },
+        {
+          "itemId": 2048001,
+          "probability": 10
+        },
+        {
+          "itemId": 2048004,
+          "probability": 10
+        },
+        {
+          "itemId": 2041004,
+          "probability": 5
+        },
+        {
+          "itemId": 2041001,
+          "probability": 5
+        },
+        {
+          "itemId": 2040803,
+          "probability": 5
+        },
+        {
+          "itemId": 4031019,
+          "probability": 3
+        },
+        {
+          "itemId": 2050004,
+          "count": 30,
+          "probability": 30
+        }
+      ]
+    }
+  }
+}

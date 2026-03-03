@@ -1,0 +1,52 @@
+{
+  "questId": 4546,
+  "info": {
+    "name": "Running out of Wigs!",
+    "parent": "Chee Wee\u0027s Worries",
+    "descriptions": {
+      "notStarted": "#b#p9270060##k is gloomy than ever at the shocking news that Blondie has lost her wig by accident. He\u0027s in desperate search for someone who can bring some more #b#t4000467##k from #b#o9420529##k.",
+      "inProgress": "#b#p9270060##k needs #b200#k more #b#t4000467#s#k from #b#o9420529##k to cover up Blondie. Hunting #b200 #o9420529#s#k sure is not an easy task. But thinking how much Blondie means to him, it\u0027s no wonder he\u0027s putting all these effort to make Blondie looks pretty again. \\n\\n#o9420529# #r#a45461##k \\n#t4000467# #r#c4000467#/200#k ",
+      "completed": "#b#p9270060##k is so happy to see Blondie as she\u0027s prancing along the street with new golden wig. Maybe she will stay out of danger for a while.."
+    },
+    "area": 49,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270060,
+      "minLevel": 57,
+      "prerequisiteQuests": [
+        {
+          "questId": 4545,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270060,
+      "items": [
+        {
+          "itemId": 4000467,
+          "count": 200
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9420529,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 35000,
+      "items": [
+        {
+          "itemId": 4000467,
+          "count": -200
+        }
+      ]
+    }
+  }
+}

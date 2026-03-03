@@ -1,0 +1,71 @@
+{
+  "questId": 2129,
+  "info": {
+    "name": "Beginner Warrior\u0027s Second Training Session",
+    "descriptions": {
+      "notStarted": "With help from a former Warrior trainer,  I became stronger but still have a long way to go. Let\u0027s go to #b#p1022000##k again.",
+      "inProgress": "#p1022000# told me to continue hunting monsters as I still lack basic training. This time, I have to hunt #r50 #o0130100##k....\\n\\n#o0130100# #r#a21291##k",
+      "completed": "I\u0027ve done 50#o0130100# and reported  #p1022000#. Haha~all 50 monsters...I\u0027m getting stronger!"
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 2128,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1022000,
+      "monsters": [
+        {
+          "monsterId": 130100,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 610,
+      "items": [
+        {
+          "itemId": 2000001,
+          "count": 30
+        },
+        {
+          "itemId": 2000003,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

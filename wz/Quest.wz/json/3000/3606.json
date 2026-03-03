@@ -1,0 +1,40 @@
+{
+  "questId": 3606,
+  "info": {
+    "name": "The Lost Seed",
+    "descriptions": {
+      "notStarted": "Apparently, a Swallow hurt its wing and is laying down around the village shrine. I better go check it out ...",
+      "inProgress": "I met Swallow near the village shrine, its wings clipped. Swallow was on a delivery, but lost the item that it was suppose to deliver: a rare seed, and Swallow wanted me to find the seed for it. Apparently, it dropped the seed somewhere around where a bunch of suspicious rabbits looked on. Maybe the rabbits took it...\\n\\n#t4031241# #b#c4031241##k/1",
+      "completed": "I met Swallow near the village shrine, its wings clipped. Swallow was desperate to find the lost seed, and asked me for help. Swallow claimed to have lost the seed where a bunch of suspicious-looking rabbits gathered up, so I asked each and every one of them about the whereabouts of the seed. The seed was eventually found, and I gave them back to Swallow."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071006,
+      "minLevel": 37
+    },
+    "complete": {
+      "npc": 2071006,
+      "items": [
+        {
+          "itemId": 4031241
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4031241,
+          "count": -1
+        },
+        {
+          "itemId": 4031225
+        }
+      ]
+    }
+  }
+}

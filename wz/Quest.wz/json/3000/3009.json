@@ -1,0 +1,33 @@
+{
+  "questId": 3009,
+  "info": {
+    "name": "Spiruna\u0027s Black Crystal",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "Spiruna promised to tell me everything that she knows, as long as I find the #bBlack Crystal#k that she lost in the snowfield while on a search for some materials for spells. Now where in the snowfield must that be..."
+    },
+    "area": 33,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2032001,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3008,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3500,
+      "nextQuest": 3010
+    }
+  }
+}

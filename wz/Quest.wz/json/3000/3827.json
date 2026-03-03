@@ -1,0 +1,28 @@
+{
+  "questId": 3827,
+  "info": {
+    "name": "Tae Sang\u0027s Request",
+    "parent": "Operation Eliminate Red-Nosed Pirates",
+    "descriptions": {
+      "notStarted": "The resident pharmacist of #b#m250000000##k, #b#p2091002##k, would like to request something. I wonder what that is...",
+      "inProgress": "#p2091002# talked to me about the dastardly ways the #rRed-Nosed Pirates#k used to steal some herbs by attacking the ships traveling from #m250000000# to #m251000000#. He asked me to join forces with #b#p2092001##k, who\u0027s in charge of freight on #b#m251000000##k and protect it.",
+      "completed": "#b#p2092001##k seems to be very experienced here. If I work well with him, defeating the disciples of Lord Pirate should not be too difficult."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091002,
+      "minLevel": 70
+    },
+    "complete": {
+      "npc": 2092001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000
+    }
+  }
+}

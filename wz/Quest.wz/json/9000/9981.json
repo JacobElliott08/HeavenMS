@@ -1,0 +1,26 @@
+{
+  "questId": 9981,
+  "info": {
+    "name": "4 Year Anniversary Level Up event",
+    "descriptions": {
+      "notStarted": "When you level up, I will give you a Maple Leaf that is crucial for the 4 Year Anniversary event. ",
+      "inProgress": "When you level up, I will give you a Maple Leaf that is crucial for the 4 Year Anniversary event. ",
+      "completed": "When you level up, I will give you a Maple Leaf that is crucial for the 4 Year Anniversary event. "
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 2,
+      "endDate": "2009061623",
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 9010000,
+      "endScript": "q9981e"
+    }
+  }
+}

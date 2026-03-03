@@ -1,0 +1,28 @@
+{
+  "questId": 2233,
+  "info": {
+    "name": "Raise the Rep!",
+    "parent": "Captain Al\u0027s Passing of Knowledge",
+    "descriptions": {
+      "notStarted": " ",
+      "inProgress": "#bCaptain Al#k\u0027s next mission is for me to reach #r1,000 Rep#k! It\u0027s not an easy task by any means. According to Captain Al, this number cannot be achieved without the leadership and the overall support I provide to the Juniors. Captain Al gave me a clue in that I should help Juniors acquire EXP and help them Level Up as much as they can. EXP... leveling up... HOW?\\n\\n#rAchieve 1,000 Rep#k\\n(Open the Family window to check the Rep)",
+      "completed": "I finally reached 1,000 in Rep! ...I have to thank the Juniors that really helped me get there."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002103,
+      "prerequisiteQuests": [
+        {
+          "questId": 2232,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "endScript": "q2233e"
+    }
+  }
+}

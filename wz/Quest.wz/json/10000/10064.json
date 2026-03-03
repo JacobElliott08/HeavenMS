@@ -1,0 +1,47 @@
+{
+  "questId": 10064,
+  "info": {
+    "name": "루드밀라의 사진첩",
+    "parent": "조이의 정체",
+    "descriptions": {
+      "notStarted": "루드밀라에게 사진첩을 받아야 한다.",
+      "inProgress": "소필리아의 부탁을 들어주는 내가 한가해 보이나 보다. 일단은 사진첩을 받아야 하니 천조각을 모아보자.",
+      "completed": "소필리아에게 사진첩을 보여주자."
+    },
+    "area": 50,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120006,
+      "startDate": "2008101600",
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10063,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120006,
+      "items": [
+        {
+          "itemId": 4031838,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4031838,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

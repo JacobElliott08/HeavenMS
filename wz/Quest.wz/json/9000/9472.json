@@ -1,0 +1,49 @@
+{
+  "questId": 9472,
+  "info": {
+    "name": "삼미호 이야기",
+    "descriptions": {
+      "notStarted": "메이플 월드를 떠도는 이상한 소문이 궁금하다면 #b#p2040050##k를 찾아가 보자.",
+      "inProgress": "삼미호를 물리친 용자를 위한 위령제를 준비하는 것을 도와주자. \\n\\n#o1210100# #r#a94721##k \\n#t04000017# #b#c04000017#/1#k",
+      "completed": "삼미호를 물리친 용자들을 위한 위령제를 준비하였다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040050,
+      "minLevel": 8,
+      "maxLevel": 29,
+      "startDate": "2006072000",
+      "endDate": "2006090100"
+    },
+    "complete": {
+      "npc": 2040050,
+      "items": [
+        {
+          "itemId": 4000017
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 1210100,
+          "count": 60
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1500,
+      "items": [
+        {
+          "itemId": 4000017,
+          "count": -1
+        },
+        {
+          "itemId": 2100028
+        }
+      ]
+    }
+  }
+}

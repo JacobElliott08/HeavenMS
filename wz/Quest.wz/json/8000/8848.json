@@ -1,0 +1,64 @@
+{
+  "questId": 8848,
+  "info": {
+    "name": "Amoria : The Sakura Garden 1",
+    "parent": "Amoria : The Sakura Garden",
+    "descriptions": {
+      "notStarted": "I see Jacob, the garden caretaker over there! Why does he look so worried? Maybe I can lend him a hand.",
+      "inProgress": "I talked with Jacob, who\u0027s trying to expand his garden. He\u0027s sent me to gather #b25 Cherry Blossom seeds#k, #b10 Silk Feathers#k and #b10 Leather#k. I\u0027ve heard that Sakura celions might have the blossom seeds. In return for this, he\u0027s agreed to give me some high-quality potions. I bet they taste delicious...",
+      "completed": "I got the materials that Jacob needed to expand the garden. He mentioned he might have more work for me if I needed it. I\u0027ll pay him a visit soon!"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201035,
+      "minLevel": 35
+    },
+    "complete": {
+      "npc": 9201035,
+      "items": [
+        {
+          "itemId": 4031523,
+          "count": 25
+        },
+        {
+          "itemId": 4031524,
+          "count": 10
+        },
+        {
+          "itemId": 4000021,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4500,
+      "items": [
+        {
+          "itemId": 4031523,
+          "count": -25
+        },
+        {
+          "itemId": 4031524,
+          "count": -10
+        },
+        {
+          "itemId": 4000021,
+          "count": -10
+        },
+        {
+          "itemId": 2000001,
+          "count": 5
+        },
+        {
+          "itemId": 2000006,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

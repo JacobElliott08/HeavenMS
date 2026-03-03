@@ -1,0 +1,44 @@
+{
+  "questId": 3234,
+  "info": {
+    "name": "The Clocktower Headache",
+    "descriptions": {
+      "notStarted": "I should check on #p2040029#, who is working hard at the Lost Time.",
+      "inProgress": "Deep in the Lost Time of Ludibrium, I met up with #p2040029#. He seemed to be annoyed by the fact that the tiny Ticks have been going inside the clocktower and destroy parts of it, making his job much harder than it should have been. For the sake of #p2040029#, I\u0027ll need to take out #b80 Ticks#k. \\n\\n#o3210207# #r#a32341#",
+      "completed": "I took care of the request #p2040029# made, by taking out the #bTicks#k. The Ticks were another one of the reasons the clocktower seemed to have something wrong at all times, so this should give #p2040029# a good night\u0027s sleep."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040029,
+      "minLevel": 34,
+      "prerequisiteQuests": [
+        {
+          "questId": 3233,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040029,
+      "monsters": [
+        {
+          "monsterId": 3210207,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7000,
+      "items": [
+        {
+          "itemId": 2000010,
+          "count": 120
+        }
+      ]
+    }
+  }
+}

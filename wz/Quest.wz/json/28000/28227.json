@@ -1,0 +1,57 @@
+{
+  "questId": 28227,
+  "info": {
+    "name": "The Cost of Delivery",
+    "parent": "Antique Search",
+    "descriptions": {
+      "notStarted": "Let\u0027s take the Antique to  #b#@9201118:##k in #bHenesys#k.",
+      "inProgress": "Take the Antique you received from #b#@1072008:##k in #bNautilus#k over to #b#@9201118:##k in #bHenesys#k.",
+      "completed": "You have gone to #b#p1072008##k in #bNautilus#k at the request of #b#p9201118##k in #bHenesys#k, and have come back with the #rAntique#k from Leafre.\\n\\nBut the Antique looks much older than anticipated."
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201118,
+      "prerequisiteQuests": [
+        {
+          "questId": 28226,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4001353
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 9201118
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 4001353,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

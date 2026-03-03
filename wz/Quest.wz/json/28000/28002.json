@@ -1,0 +1,45 @@
+{
+  "questId": 28002,
+  "info": {
+    "name": "A Secret Note",
+    "descriptions": {
+      "notStarted": "A secret note came from the Snow Spirit of Happyville. I wonder what happened?",
+      "inProgress": "I finally realized the true intent of the Snow Spirit as she strives to protect Happyville from disaster. In order to ruin Scrooge\u0027s plan, she asked Alcaster of El Nath for some much needed help. I better go find him immediately!",
+      "completed": "I gave Alcaster a note from Snow Spirit. Now it\u0027s time for me to wait for his reply."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9105003,
+      "maxLevel": 51,
+      "minLevel": 21
+    },
+    "complete": {
+      "npc": 2020005,
+      "items": [
+        {
+          "itemId": 4032091
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032091
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032091,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

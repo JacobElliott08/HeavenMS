@@ -1,0 +1,43 @@
+{
+  "questId": 2223,
+  "info": {
+    "name": "The Name He Calls",
+    "parent": "The Forest of Evil",
+    "descriptions": {
+      "inProgress": "#p1040002# knew exactly who #r#o5220002##k the black monkey monster was. #o5220002# seems to have something to do with Arwen...  #p1040002# says to bring back #b#t4031925##k from #r#o5300100##k if you wish to find out more about #o5220002#. \\n\\n#i4031925##t4031925#  #b#c4031925##k/10 #k",
+      "completed": "When given #t4031925#s, #p1040002# says to wait while it finds the entrance to the #m910100000#."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1040002,
+      "prerequisiteQuests": [
+        {
+          "questId": 2222,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1040002,
+      "items": [
+        {
+          "itemId": 4031925,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031925,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

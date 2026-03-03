@@ -1,0 +1,77 @@
+{
+  "questId": 3048,
+  "info": {
+    "name": "Elma\u0027s Nependeath Juice",
+    "parent": "The Chaos behind Alfonse Green and the Nependeath Juice",
+    "descriptions": {
+      "notStarted": "I should ask Elma the Housekeeper to make a glass of Nependeath Juice.",
+      "inProgress": "Elma promised me to fix me a nice Nependeath Juice, but she\u0027ll need the following ingredients to do so...\\n\\n #t4031201# #b#c4031201##k/1 \\n #t2022039# #b#c2022039##k/1 \\n #t4000136# #b#c4000136##k/20",
+      "completed": "Elma fixed me a tasty-looking Nependeath Juice. I better get this to Alfonse Green quickly!"
+    },
+    "area": 33,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012010,
+      "prerequisiteQuests": [
+        {
+          "questId": 3047,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031200
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012010,
+      "items": [
+        {
+          "itemId": 2022039
+        },
+        {
+          "itemId": 4000136,
+          "count": 20
+        },
+        {
+          "itemId": 4031201
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031200,
+          "count": -1
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 7500,
+      "meso": -20000,
+      "nextQuest": 3050,
+      "items": [
+        {
+          "itemId": 4031202
+        },
+        {
+          "itemId": 4031201,
+          "count": -1
+        },
+        {
+          "itemId": 4000136,
+          "count": -20
+        },
+        {
+          "itemId": 2022039,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

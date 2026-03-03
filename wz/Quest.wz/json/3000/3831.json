@@ -1,0 +1,49 @@
+{
+  "questId": 3831,
+  "info": {
+    "name": "No Gong\u0027s Test",
+    "descriptions": {
+      "notStarted": "The Head Physical Trainer of #b#m250000000##k, #b#p2091000##k, wants to test the students willing to become the Master...",
+      "inProgress": "#p2091000# told us the test consists of defeating both #r#o5120500# and #o6130203##k. #o5120500# and #o6130203# may be animals, but they have both been training hard to become Masters, so this may not be a easy fight...\\n\\n#o5120500#  #r#a38311##k \\n#o6130203#  #r#a38312##k",
+      "completed": "After successfully defeating #o5120500# and #o6130203#, I went back to #p2091000# to tell him the good news, only to listen to him tell me that I still have ways to go before becoming the true Master. What the, he\u0027s doing this again... is he really going to make me a Master, or what?"
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091000,
+      "minLevel": 60,
+      "startDate": "2007061800",
+      "prerequisiteQuests": [
+        {
+          "questId": 3802,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091000,
+      "monsters": [
+        {
+          "monsterId": 5120500,
+          "count": 100
+        },
+        {
+          "monsterId": 6130203,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 56160,
+      "items": [
+        {
+          "itemId": 2020012,
+          "count": 15
+        }
+      ]
+    }
+  }
+}

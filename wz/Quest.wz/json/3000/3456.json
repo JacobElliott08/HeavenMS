@@ -1,0 +1,40 @@
+{
+  "questId": 3456,
+  "info": {
+    "name": "The Endangered Lives of Grays",
+    "descriptions": {
+      "notStarted": "Let\u0027s to talk to #b#p2050002##k with the new #t4031927#.",
+      "inProgress": "While hiding the #t4031927# behind your back, you approached #p2050002#. #p2050002# says nothing is going on but says something completely different through the ultrasonic waves. \\n\\n According to the #t4031927#, it seems that the Grays have broken the console which controls #o6220001#. Oh my... no wonder #o6220001# has been acting out of control.",
+      "completed": "The #p2050002# becomes flustered as soon as he recognizes the #t4031927# you\u0027re holding, but informs you that  #m221000000# will be in danger if nothing is done to control #o6220001# soon. Let\u0027s go tell Dr. Kim."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050002,
+      "prerequisiteQuests": [
+        {
+          "questId": 3457
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031928
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050002
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031928,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

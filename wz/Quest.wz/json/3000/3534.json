@@ -1,0 +1,65 @@
+{
+  "questId": 3534,
+  "info": {
+    "name": "There\u0027s no reason to believe that yet, but we should check just in case.  Go visit #b#p2140003##k and ask what happened to the Goddess\u0027 promise.  He is the Record Keeper of everything, so he is the only one who would be able to tell you.",
+    "descriptions": {
+      "notStarted": "I received permission to go all the way to #m270030500#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test. ",
+      "inProgress": "#p2140000# said if I want to go in further, go to #b#m270030500##k and defeat the Guardian of the Temple, #r#o8220006##k. \\n\\n#o8220006# #r#a35191##k",
+      "completed": "I defeated #o8220006#.  #p2140000# granted me permission.  I should be able to go past the Road to Oblivion now."
+    },
+    "area": 46
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140000,
+      "minLevel": 120,
+      "prerequisiteQuests": [
+        {
+          "questId": 3533,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 2140000,
+      "monsters": [
+        {
+          "monsterId": 8220006
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1984500,
+      "items": [
+        {
+          "itemId": 4005004
+        }
+      ]
+    }
+  }
+}

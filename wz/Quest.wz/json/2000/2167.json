@@ -1,0 +1,49 @@
+{
+  "questId": 2167,
+  "info": {
+    "name": "Sea Firefly1",
+    "descriptions": {
+      "notStarted": "Sharyl, the Prince of Whales, hanging out on the lower deck of The Nautilus, says he\u0027s got another problem. Let me see what he has to say.  ",
+      "inProgress": "Sharyl, the Prince of Whales tells me some mystical story about a Sea Firefly. I guess there are many other mystical objects on The Nautilus besides the Shining Stone? Anyway, according to Sharyl, the Prince of Whales, the mystical Sea Firefly\u0027s powers are diminishing, which is making him worried. I\u0027d better help Sharyl, the Prince of Whales by going to the #bMuse#k of the #bAquarium#k to fill the magic flask with some  #bVigor of the Sea#k. ",
+      "completed": "I went to see the Muse who filled the magic flask with the Vigor of the Sea."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092003,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 2166,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060006,
+      "items": [
+        {
+          "itemId": 4031841
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031841
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031841,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

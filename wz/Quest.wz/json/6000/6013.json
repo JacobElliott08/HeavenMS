@@ -1,0 +1,49 @@
+{
+  "questId": 6013,
+  "info": {
+    "name": "Dragon Rider",
+    "descriptions": {
+      "notStarted": "You have now reached the apex of the Maple World, the one who is considered the ultimate Pirate. To commemorate your incredible accomplishment of reaching level 200,  #b#p2081500##k has something in store for you.",
+      "inProgress": " It\u0027s the one thing that countless Pirates, the undisputed masters of the sea, strived for, but couldn\u0027t get...but now, #p2081500# is introducing me to #t1902002#... I heard only the very best in the world of Maple can be friends with #p2081100#",
+      "completed": "At a point where I never thought I could go any higher, I made a new friend that certainly put me over the top!  With him at my side, nothing can stop me!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081500,
+      "minLevel": 200,
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522
+      ]
+    },
+    "complete": {
+      "npc": 2081500,
+      "items": [
+        {
+          "itemId": 1902001
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1902001,
+          "count": -1
+        },
+        {
+          "itemId": 1902002,
+          "jobRestriction": 63
+        }
+      ]
+    }
+  }
+}

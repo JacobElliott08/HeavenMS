@@ -1,0 +1,61 @@
+{
+  "questId": 20020,
+  "info": {
+    "name": "5 Different Paths of Cygnus Knights",
+    "descriptions": {
+      "notStarted": "Talk to #b#p1101002##k and see if he accepts you as a Knight-in-Training.",
+      "inProgress": "#p1101002# showed you the 5 different paths of Cygnus Knights, suggesting that you decide what kind of knight you wish to become. A Dawn Warrior of sword and soul, a Blaze Wizard of magic and flame, a Wind Archer of bow and storm, a Night Walker of night and darkness, or a Thunder Breaker of knuckle and lightning. Which fits you the best? The choice is entirely up to you.",
+      "completed": "#p1101002# showed you the 5 different paths of Cygnus Knights, suggesting that you decide what kind of knight you wish to become. A Dawn Warrior of sword and soul, a Blaze Wizard of magic and flame, a Wind Archer of bow and storm, a Night Walker of night and darkness, or a Thunder Breaker of knuckle and lightning. Which fits you the best? The choice is entirely up to you."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "startScript": "q20020s",
+      "minLevel": 10,
+      "infoNumber": 20022,
+      "infoEx": [
+        null
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 20000
+        },
+        {
+          "questId": 20001
+        },
+        {
+          "questId": 20002
+        },
+        {
+          "questId": 20003
+        },
+        {
+          "questId": 20004
+        },
+        {
+          "questId": 20005
+        },
+        {
+          "questId": 20006
+        },
+        {
+          "questId": 20007
+        },
+        {
+          "questId": 20008
+        },
+        {
+          "questId": 20100
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    },
+    "complete": {
+      "npc": 1101002
+    }
+  }
+}

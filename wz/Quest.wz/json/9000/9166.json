@@ -1,0 +1,33 @@
+{
+  "questId": 9166,
+  "info": {
+    "name": "추석 상식 7. 추석 명절 놀이",
+    "parent": "한국의 명절 추석",
+    "descriptions": {
+      "inProgress": "추석에 하는 대표적인 명절 놀이는 어떤 것일까요?",
+      "completed": "해마다 음력 8월 한가윗날 밤에, 곱게 단장한 부녀자들이 수십 명씩 일정한 장소에 모여 손에 손을 잡고 원형으로 늘어서서,‘강강술래’라는 후렴이 붙은 노래를 부르며 빙글빙글 돌면서 뛰노는 놀이이다."
+    },
+    "area": 50,
+    "order": 7
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2006092600",
+      "endDate": "2006101600",
+      "prerequisiteQuests": [
+        {
+          "questId": 9165,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2760,
+      "nextQuest": 9167
+    }
+  }
+}

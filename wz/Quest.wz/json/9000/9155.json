@@ -1,0 +1,50 @@
+{
+  "questId": 9155,
+  "info": {
+    "name": "추석 화양적 한 접시 만들기",
+    "descriptions": {
+      "notStarted": "#t2022352# 30개를 모아 #b#t4032040##k를 만들어 보면 어떨까?",
+      "inProgress": "#b#p9010000##k는 #b#t2022352# 30개#k를 주면 예쁜 그릇에 담아 #b#t4032040##k로 만들어 주겠다고 말했다.  \\n\\n#k#i2022352##t2022352# #b#c2022352#/30#k",
+      "completed": "#t2022352# 30개를 모아 맛도 모양도 좋은 #t4032040#로 만들었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 51,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2008090500",
+      "endDate": "2008092600",
+      "items": [
+        {
+          "itemId": 2022352,
+          "count": 30
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 2022352,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 2022352,
+          "count": -30
+        },
+        {
+          "itemId": 4032040
+        }
+      ]
+    }
+  }
+}

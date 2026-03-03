@@ -1,0 +1,50 @@
+{
+  "questId": 8012,
+  "info": {
+    "name": "Sakura, the Kitty, and the Orange Marble",
+    "parent": "Sakura, the Kitty, and the Orange Marble",
+    "descriptions": {
+      "notStarted": "Hmm, I could understand what he is saying. Well, time to make that trade proposal into action.",
+      "inProgress": "I will need to gather up #b300 fried chickens#k for each time it get it wrong and answer all the questions right, then I\u0027ll receive the Orange Marble. I better take it back to Sakura.\\n\\n#i4031064# #t4031064# #b#c4031064#/1",
+      "completed": "I was able to safely hand the #bOrange Marble#k back to Sakura."
+    },
+    "area": 30,
+    "order": 7
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120013,
+      "prerequisiteQuests": [
+        {
+          "questId": 8010,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120011,
+      "items": [
+        {
+          "itemId": 4031064
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031064,
+          "count": -1
+        },
+        {
+          "itemId": 2040715
+        },
+        {
+          "itemId": 2040011
+        }
+      ],
+      "experience": 17000
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "questId": 29400,
+  "info": {
+    "name": "Title Challenge - Veteran Hunter",
+    "descriptions": {
+      "notStarted": "#b#eTitle Challenge - Veteran Hunter#n\\n#kHunt #r1,000,000#k monsters that are higher level than you within 30 days!  The Monk of Honor, Dalair, is looking for a clever hunter who has stamina.  Anyone who completes this task will receive the title, #e#bVeteran Hunter#k#n.  I heard that the person with the highest score will receive another title called #e#bLegendary Hunter(Special Title)#n#k...",
+      "inProgress": "#b#eTitle Challenge - Veteran Hunter#b#n\\n\\n#k - Time Left : #Qdaylimit#Days #Qhourlimit#Hours #Qminlimit#Minutes #Qseclimit#Seconds\\n - Hunted Monsters: #r#jmon##k / #jmg# #k\\n                             #jgaugeHunt# #jperHunt# %\\n\\n* Only monsters that are higher level than you count \\n   (Characters that are level 120 or higher must hunt monsters that are level 120 or higher\\n   in order for it to count)\\n\\n#b#eTitle Challenge - Legendary Hunter#n(Special Title)#k\\n\\n - Hunted Monster Count #1\\n",
+      "completed": "#b#eTitle Challenge - Veteran Hunter#b#n\\n\\n#k - Time Left : #Qdaylimit#Days #Qhourlimit#Hours #Qminlimit#Minutes #Qseclimit#Seconds\\n - Hunted Monsters: #r#jmon##k / #jmg# #k\\n                             #jgaugeHunt# #jperHunt# %\\n\\n* Only monsters that are higher leveled than you count \\n   (Characters that are level 120 or higher must hunt monsters that are level 120 or higher\\n   in order for it to count)\\n\\n#b#eTitle Challenge - Legendary Hunter#n(Special Title)#k\\n\\n - Hunted Monster Count #1\\n\\nI tried out for the Veteran Hunter title, which you get by hunting as many monsters your level or higher that you can within a specific time limit.  Dalair said that if I want to become the \u0027#bLegendary Hunter#k\u0027, don\u0027t forget the hunting record resets every 1st day of each month.  Oh, he also said if I lose the Veteran Hunter medal, I have to redo the challenge so I should make sure to take good care of it."
+    },
+    "area": 51,
+    "timeLimit2": 2592000,
+    "medalItemId": 1142004
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000040,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 0,
+      "startScript": "q29400s"
+    },
+    "complete": {
+      "npc": 9000040,
+      "endScript": "q29400e"
+    }
+  }
+}

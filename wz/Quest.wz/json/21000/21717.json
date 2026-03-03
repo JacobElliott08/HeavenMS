@@ -1,0 +1,59 @@
+{
+  "questId": 21717,
+  "info": {
+    "name": "Rowen\u0027s Request 1",
+    "descriptions": {
+      "notStarted": "You wonder how #p1032101# is doing overseeing the forest. You feel like you should head to #b#m101000000##k to see her.",
+      "inProgress": "It seems like the kid with the puppets was once again seen in #m100040000#. Time to eliminate the #r#o1110100#s#k so you can retrieve the #bpuppet#k. \\r\\n\\r\\n\\r\\nRegardless of Personality #o9101000##r #a217171##k\\r\\n#i4032317##t4032317# #b#c4032317# / 1#k",
+      "completed": "You defeated the #o1110100#s and retrieve the #t4032316#, but you were unable to apprehend the actual criminal. Hopefully the kid will show up again…"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032101,
+      "minLevel": 19,
+      "prerequisiteQuests": [
+        {
+          "questId": 21716,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1032101,
+      "items": [
+        {
+          "itemId": 4032317
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9101000,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2100,
+      "items": [
+        {
+          "itemId": 4032317,
+          "count": -1
+        },
+        {
+          "itemId": 2050004,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

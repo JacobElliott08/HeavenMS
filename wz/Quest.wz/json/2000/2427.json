@@ -1,0 +1,49 @@
+{
+  "questId": 2427,
+  "info": {
+    "name": "Team Training is Fun! (Party)",
+    "descriptions": {
+      "notStarted": "They say if you train in a group, the journey becomes more fun for everyone. Get details from Power B. Fore.",
+      "inProgress": "They say if you train in a group, the journey becomes more fun for everyone. The journey is long, but if you work with others, you\u0027ll all be able to achieve your goals!",
+      "completed": "You were able to successfully complete Power B. Fore\u0027s training sessions."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022104,
+      "prerequisiteQuests": [
+        {
+          "questId": 2410,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132
+      ]
+    },
+    "complete": {
+      "npc": 1022104,
+      "monsters": [
+        {
+          "monsterId": 130100,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2500
+    }
+  }
+}

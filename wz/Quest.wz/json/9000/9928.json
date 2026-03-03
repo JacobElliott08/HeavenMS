@@ -1,0 +1,40 @@
+{
+  "questId": 9928,
+  "info": {
+    "name": "이상한 소녀",
+    "descriptions": {
+      "notStarted": "#p2120000#의 말대로 저택의 #b좌측 방#k에 들어가 그 곳에 있는 사람들과 대화를 나눠 보자.",
+      "inProgress": "방 안에는 이상한 소녀, #r#p2120005##k만이 서 있다. 어딘가 창백해 보이는 그녀에게 말을 걸어 할로윈 파티인데 뭘 하냐고 묻자, 그녀는 깜짝 놀라며 할로윈 파티가 열리고 있는지 몰랐다며 그녀에게도 #b#t2022256##k를 달라고 말했다.\\n\\n#i2022256# #t2022256#  #b#c2022256#/5#k",
+      "completed": "#p2120005#에게 #t2022256#를 건네주었다. #t2022256#를 받은 그녀는 사람들이 모두 그녀를 잊어버리는 것 같다며 우울해 하는데... "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120005,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2008110600",
+      "infoNumber": 7649,
+      "infoEx": [
+        null
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 9927,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120005,
+      "endScript": "q9928e",
+      "items": [
+        {
+          "itemId": 2022256,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "questId": 9946,
+  "info": {
+    "name": "호박주스 만들기",
+    "descriptions": {
+      "notStarted": "루드밀라는 #b#m229000000##k에 있는 #b#p2120003##k에게 #t4031833#를 가져 오라고 했다. #p2120003#에게 가보자.",
+      "inProgress": "#p2120003#는 안타깝게도 #t4031833#가 거의 다 떨어졌다고 말했다. 하지만 호박조각을 구해다 준다면 #t4031833#를 만들어 줄 수 있다는데... 그럼 어서 #b#t2022255##k을 구해보자. \\n\\n#i2022255# #t2022255#  #b#c2022255#/10#k",
+      "completed": "#p2120003#에게 #t2022255#을 가져다 주었다. 그러자 #p2120003#는 순식간에 달콤한 #t4031833#를 만들어 주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120003,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 9934,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031833
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120003,
+      "items": [
+        {
+          "itemId": 2022255,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2022255,
+          "count": -10
+        },
+        {
+          "itemId": 4031833
+        }
+      ]
+    }
+  }
+}

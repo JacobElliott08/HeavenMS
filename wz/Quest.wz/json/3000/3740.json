@@ -1,0 +1,44 @@
+{
+  "questId": 3740,
+  "info": {
+    "name": "What Was That I Saw?",
+    "parent": "Year 2216- The Ruins",
+    "descriptions": {
+      "inProgress": "When she regained consciousness, Isabella kept rambling nonsense about how she saw an angel to the east, where the high rise collapsed. An angel? Is she insane? The only way to confirm that is to go over and see for yourself. You may even find a Time Sand.",
+      "completed": "When she regained consciousness, Isabella kept rambling nonsense about how she saw an angel. The only way to confirm that was to go over and see for yourself. You did, and even found a Time Sand."
+    },
+    "area": 41,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082016,
+      "minLevel": 82,
+      "prerequisiteQuests": [
+        {
+          "questId": 3739,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082004,
+      "items": [
+        {
+          "itemId": 4032517
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 70000,
+      "items": [
+        {
+          "itemId": 4032517,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

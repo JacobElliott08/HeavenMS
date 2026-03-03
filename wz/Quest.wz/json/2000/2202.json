@@ -1,0 +1,46 @@
+{
+  "questId": 2202,
+  "info": {
+    "name": "Eliminate the Drakes",
+    "descriptions": {
+      "notStarted": "Muirhat is worried about the evil spirits that have infiltrated Victoria Island as of late. I wonder what I could do to help? I should go see Muirhat on the top deck of The Nautilus.",
+      "inProgress": "Victoria Island has already been infused with evil spirits. But I refuse to give up like this. I need to eliminate #r50 Drakes#k and #r50 Ice Drakes#k to stop these evil creatures from further spreading their evilness in Victoria Island. \\n\\n#o 5130100# #r#a22022##k\\n#o 6230600# #r#a22021##k",
+      "completed": "I\u0027ve eliminated 50 Red Drakes and 50 Ice Drakes. I wonder if I\u0027ve made a difference in Victoria Island?"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092007,
+      "minLevel": 64,
+      "prerequisiteQuests": [
+        {
+          "questId": 2201,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092007,
+      "monsters": [
+        {
+          "monsterId": 6230600,
+          "count": 50
+        },
+        {
+          "monsterId": 5130100,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 1092007,
+      "minLevel": 64
+    },
+    "onComplete": {
+      "experience": 140000
+    }
+  }
+}

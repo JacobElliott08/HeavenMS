@@ -1,0 +1,44 @@
+{
+  "questId": 10035,
+  "info": {
+    "name": "The Great Maple Book Drive",
+    "descriptions": {
+      "notStarted": "#b#p9010014##k in #b#m100000200##k has lost her books she collected for the Great Maple Book Drive.",
+      "inProgress": "#p9010014#, has asked me to help her find #b#t4000515##k . She says she\u0027ll show me #bfireworks#k if I help her.",
+      "completed": "#p9010014#, has asked me to help her find #b#t4000515##k . She says she\u0027ll show me fireworks if I help her."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010014,
+      "minLevel": 13,
+      "endDate": "2009092300",
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 4000515
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010014
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2022004,
+          "count": 20
+        },
+        {
+          "itemId": 2022005,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

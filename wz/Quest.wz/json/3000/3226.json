@@ -1,0 +1,28 @@
+{
+  "questId": 3226,
+  "info": {
+    "name": "The Girl Who Lost Her Memory",
+    "parent": "Korin\u0027s Memory",
+    "descriptions": {
+      "notStarted": "I heard something happened to Korin of Ludibrium... I better go check up on her.",
+      "inProgress": "I met a girl named #bKorin#k at a small house nearby Ludibrium. Korin had been missing for 10 months, and she did not remember anything that occurred during that time. She wanted me to find these men wearing the black suit that visited her the other day, and ask him whatever happened to her the last 10 months. A man wearing black suit... I don\u0027t think he\u0027d be at Ludibrium nor Eos Tower.",
+      "completed": "I met Korin, who was suffering from partial loss of memory, at Ludibrium. I was able to meet Agent Marco at the Omega Sector. He\u0027s the man wearing the black suit who held the clue regarding her lost memory."
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041015,
+      "minLevel": 25
+    },
+    "complete": {
+      "npc": 2050012
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 3227
+    }
+  }
+}

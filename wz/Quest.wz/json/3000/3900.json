@@ -1,0 +1,32 @@
+{
+  "questId": 3900,
+  "info": {
+    "name": "Learning the Culture of Ariant",
+    "descriptions": {
+      "notStarted": "#m260000000#, a town built in the middle of the desert. This town feels much different from anything else I\u0027ve experienced. Are the people in #m260000000# just aloof? Or not really talkative? These people are hard to start a conversation with... I hear #b#p2101005##k is researching at #m260000000#, so I better ask him for help.",
+      "inProgress": "#p2101005# told me the people in #m260000000# are very guarded, and that the best way to break the ice is by drinking their water from the oasis. Then they\u0027ll accept me as part of them. I better head over to the #boasis near the palace#k right now.",
+      "completed": "Returning to #p2101005# after drinking the water, he told me that\u0027d be enough to be accepted by the people in #m260000000#, and explained to me what\u0027s going on at #m260000000#. #m260000000# seems a bit complex... I better be careful"
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101005,
+      "minLevel": 15
+    },
+    "complete": {
+      "npc": 2101005,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "info": "4"
+    },
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

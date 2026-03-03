@@ -1,0 +1,50 @@
+{
+  "questId": 28304,
+  "info": {
+    "name": "Olivia: \"Bring My Daddy\"",
+    "descriptions": {
+      "notStarted": "Is she still looking through those keys? Maybe she could benefit from some helping hands.",
+      "inProgress": "Olivia handed you her letter asking that you deliver it to her father right away. You can rescue Joe by using the key inside the letter. Now, let’s see where this place is and get him out of there quick!",
+      "completed": "There must be some relief since you were able to unlock the Piano Room and get that letter to her father. But wait, you might just have another monkey on your back..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201136,
+      "prerequisiteQuests": [
+        {
+          "questId": 28303,
+          "state": "COMPLETED"
+        }
+      ],
+      "endDate": "2009112500"
+    },
+    "complete": {
+      "npc": 9201137,
+      "endScript": "q28304e",
+      "items": [
+        {
+          "itemId": 4032441
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032441
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032441,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

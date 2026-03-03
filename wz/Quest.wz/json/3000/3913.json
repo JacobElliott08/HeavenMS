@@ -1,0 +1,34 @@
+{
+  "questId": 3913,
+  "info": {
+    "name": "Schegerazade\u0027s Fear",
+    "parent": "Schegerazade the Storyteller",
+    "descriptions": {
+      "notStarted": "Inside #b#m260000300##k, there\u0027s a storyteller who know so many stories that she has enough to go nonstop for the next 1,000 days; her name is #b#p2101008##k. I better go see her.",
+      "inProgress": "#p2101008# was unjustly dragged over to the palace simply for knowing so many stories. She seemed worried that one day, her stories might run out. For sake of her, #p2101008#, I better go to the place with the most books in Maple, #b#m222020000##k, and rent a book there.",
+      "completed": "I told #p2040052# about #p2101008#. She seemed genuinely shocked."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101008,
+      "minLevel": 36,
+      "prerequisiteQuests": [
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040052
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500
+    }
+  }
+}

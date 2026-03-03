@@ -1,0 +1,82 @@
+{
+  "questId": 28175,
+  "info": {
+    "name": "A Special Wine",
+    "parent": "Who is the suspect?",
+    "descriptions": {
+      "notStarted": "#b#@1092002:##k says he\u0027ll make something #b#@1032001:##k likes. Let\u0027s go find him at the Basement of the Nautilus.",
+      "inProgress": "He says he needs the following ingredients in order to make the #rV.I. Orange Mushroom Wine#k.\\n\\n1 #rPig Shaped Bottle#k (a drop item from Ribbon Pigs)\\n1 #rPig Ribbon#k (a drop item from Ribbon Pigs)\\n20 #rOrange Mushroom Caps#k (a drop item from Orange Mushrooms)\\n\\nReport back to #b#@1092002:##k in #bthe Nautilus#k when you collect all the items.",
+      "completed": "#b#@1032001:##k in #b#m101000000##k is known to love wine. Let\u0027s go find him."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092002,
+      "prerequisiteQuests": [
+        {
+          "questId": 28174,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1092002,
+      "items": [
+        {
+          "itemId": 4000001,
+          "count": 20
+        },
+        {
+          "itemId": 4001342
+        },
+        {
+          "itemId": 4000002
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4000002,
+          "count": -1
+        },
+        {
+          "itemId": 4000001,
+          "count": -20
+        },
+        {
+          "itemId": 4001342,
+          "count": -1
+        },
+        {
+          "itemId": 4032478
+        }
+      ]
+    }
+  }
+}

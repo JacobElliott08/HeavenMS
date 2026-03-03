@@ -1,0 +1,37 @@
+{
+  "questId": 2338,
+  "info": {
+    "name": "Killer Mushroom Spores, Again",
+    "descriptions": {
+      "notStarted": "If you\u0027ve lost the #bKiller Mushroom Spore Potion#k, go visit #bScarrs#k.",
+      "inProgress": "You\u0027re visiting Scarrs to get another #bKiller Mushroom Spore Potion#k.",
+      "completed": "You received a new #bKiller Mushroom Spore Potion#k."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300007,
+      "startScript": "q2338s",
+      "maxLevel": 38,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 2318,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2322
+        }
+      ],
+      "items": [
+        {
+          "itemId": 2430014
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300007
+    }
+  }
+}

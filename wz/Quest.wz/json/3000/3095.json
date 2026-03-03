@@ -1,0 +1,61 @@
+{
+  "questId": 3095,
+  "info": {
+    "name": "The Lost Photo Album",
+    "descriptions": {
+      "notStarted": "I think I lost the Official Aqua Road Photo Album that Muse gave me. I better go see her again.",
+      "inProgress": "Muse said she can make another one for me, but this time, it\u0027ll cost me 10,000 mesos. 10,000 mesos? Man, that\u0027s expensive...",
+      "completed": "I gave Muse 10,000 mesos for the Official Aqua Road Photo Album."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060006,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3091,
+          "state": "STARTED"
+        },
+        {
+          "questId": 3094,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031310
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060006,
+      "prerequisiteQuests": [
+        {
+          "questId": 3091,
+          "state": "STARTED"
+        },
+        {
+          "questId": 3094,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031310
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -10000,
+      "items": [
+        {
+          "itemId": 4031310
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "questId": 3056,
+  "info": {
+    "name": "Lisa\u0027s Special Medicine",
+    "descriptions": {
+      "notStarted": "Thanks to the horn flute, I can clearly comprehend what Moppie is saying. What kind of help is Moppie looking for...?",
+      "inProgress": "Thanks to the horn flute, I could finally understand what Moppie was saying. Apparently he was just sitting at the same spot waiting for his master until one day, he decided to take matters into his own hands (or paws) and wandered out of town. He was attacked by a monster, and he\u0027s been hurt ever since. I need to find someone that can help Moppie get healthy again.",
+      "completed": "I found that someone that can make the ultimate medicine for Moppie."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012019,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3055,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012012
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500
+    }
+  }
+}

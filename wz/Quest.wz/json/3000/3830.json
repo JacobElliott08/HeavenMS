@@ -1,0 +1,46 @@
+{
+  "questId": 3830,
+  "info": {
+    "name": "Mr. Do\u0027s Book on Herbal Medicine",
+    "descriptions": {
+      "notStarted": "I heard there\u0027s a suspicious pharmacist by the name of #b#p2090004##k at #b#m250000000##k...",
+      "inProgress": "#p2090004# claimed that he\u0027s the true student of #p2091002# and is a great pharmacist himself. The more I look at this character, the more I feel suspicious about him... anyway, he told me he\u0027s been working on combining rare herbs found at #m250000000#, and asked me to grab some #r#o5120506#s#k and give him #b#t4000298##k along the way. \\n\\n#i4000298# #t4000298#  #b#c4000298##k/25",
+      "completed": "Once I gave him all the #t4000298#s needed for this, #p2090004# gave me a book that he authored, #b#t4161030##k, and told me if I bring this book to him when I visit him, he\u0027ll make the medicine for me in a heartbeat. He may not seem trustworthy, but I don\u0027t see what\u0027s wrong with asking him for a medicine every once in a while..."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2090004,
+      "minLevel": 40,
+      "repeatIntervalMinutes": 0,
+      "items": [
+        {
+          "itemId": 4161030
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2090004,
+      "items": [
+        {
+          "itemId": 4000298,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4161030
+        },
+        {
+          "itemId": 4000298,
+          "count": -25
+        }
+      ]
+    }
+  }
+}

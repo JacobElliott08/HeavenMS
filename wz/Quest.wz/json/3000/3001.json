@@ -1,0 +1,42 @@
+{
+  "questId": 3001,
+  "info": {
+    "name": "Missing Sergeant Bravo",
+    "parent": "Alpha Platoon\u0027s Network of Communication",
+    "descriptions": {
+      "notStarted": "",
+      "inProgress": "Inside El Nath, I found #bMaster Sergeant Fox#k, who seemed to have crashlanded here. He asked if I can find 3 of his men and if they are doing their job whereever they are. The ones I need to meet up are #bStaff Sergeant Charlie, Corporal Easy, and Sergeant Bravo#k, and they should be around Ossyria. He\u0027d prefer that I meet them in the order of their ranks. I found #bStaff Sergeant Charlie#k at Orbis. Now I have to find #bSergeant Bravo#k next.",
+      "completed": "I found #bSergeant Bravo#k in the middle of a snowfield far from El Nath. He said he\u0027s been doing his duties and that, while investigating around the area, he found this piece of an ancient document that he wants me to deliver to Master Sergeant Fox."
+    },
+    "area": 33,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2010000,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 3039,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030001
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031049
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1200,
+      "nextQuest": 3040
+    }
+  }
+}

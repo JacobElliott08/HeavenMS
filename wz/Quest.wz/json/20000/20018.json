@@ -1,0 +1,50 @@
+{
+  "questId": 20018,
+  "info": {
+    "name": "The Second Knight Training",
+    "descriptions": {
+      "notStarted": "Let\u0027s start the second knight training with #b#p1102000##k.",
+      "inProgress": "The second knight training requires you to hunt #r#o100123#s#k. You must hunt #r20#k of them, which is a little more than what you had to do for your first training. Let\u0027s head over to #m130010100# and hunt #o100123#s.",
+      "completed": "You have come back after hunting all 20 #o0100123#s. Let\u0027s continue with the next training."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102000,
+      "prerequisiteQuests": [
+        {
+          "questId": 20017,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    },
+    "complete": {
+      "npc": 1102000,
+      "monsters": [
+        {
+          "monsterId": 100123,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 520,
+      "items": [
+        {
+          "itemId": 2000020,
+          "count": 15
+        },
+        {
+          "itemId": 2000021,
+          "count": 15
+        }
+      ]
+    }
+  }
+}

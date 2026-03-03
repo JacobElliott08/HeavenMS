@@ -1,0 +1,44 @@
+{
+  "questId": 8051,
+  "info": {
+    "name": "An Unknown Love",
+    "descriptions": {
+      "notStarted": " An unknown lady in Kerning City spends yet another day shivering in coldness. I should hear her side of the story.",
+      "inProgress": "Am I even allowed to take these...? I do feel like helping her find true love though... Whoever that may be... well, these are dropped by #b#o7130300##k, alright. \\n#t04000148#  #b#c04000148##k/100",
+      "completed": " I surely wish she makes a good couple with that special someone. Hahaha...But then again, it\u0027s a little disturbing, come to think of it. I better ask her what\u0027s up next time."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052105,
+      "minLevel": 85
+    },
+    "complete": {
+      "npc": 1052105,
+      "items": [
+        {
+          "itemId": 4000148,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4000148,
+          "count": -100
+        },
+        {
+          "itemId": 2040809
+        },
+        {
+          "itemId": 2040519
+        }
+      ]
+    }
+  }
+}

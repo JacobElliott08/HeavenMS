@@ -1,0 +1,86 @@
+{
+  "questId": 2048,
+  "info": {
+    "name": "Rewakening the Gladius",
+    "parent": "Manji\u0027s Old Gladius",
+    "descriptions": {
+      "inProgress": "I found Chrishrama of Sleepywood, and showed him the #bOld Gladius#k that Manji gave me. He claimed to have made it himself, and that he needs a #bstar rock, 1 piece of ice, 1 ancient scroll, and 1 flamed feather#k. I\u0027ve never heard of any of those, so I don\u0027t know how I\u0027m going to even start with this...Chrishrama said they only way I can get is to talk to Mike who\u0027s guarding the entrance of the dungeon.",
+      "completed": "I got all the materials needed to reawaken the sword to Chrishrama. He couldn\u0027t believe his eyes, but went on with it, and reawoke the sword into #bHero\u0027s Gladius#k. It gives off a mystic light...and it\u0027s a really nice sword! Hmmm...I don\u0027t know if I should really give it to him..."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061000,
+      "minLevel": 45,
+      "prerequisiteQuests": [
+        {
+          "questId": 2047,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1302014
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061000,
+      "prerequisiteQuests": [
+        {
+          "questId": 2047,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4001006
+        },
+        {
+          "itemId": 1302014
+        },
+        {
+          "itemId": 4003002
+        },
+        {
+          "itemId": 4021009
+        },
+        {
+          "itemId": 4001005
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 4021009,
+          "count": -1
+        },
+        {
+          "itemId": 4003002,
+          "count": -1
+        },
+        {
+          "itemId": 4001005,
+          "count": -1
+        },
+        {
+          "itemId": 4001006,
+          "count": -1
+        },
+        {
+          "itemId": 1302014,
+          "count": -1
+        },
+        {
+          "itemId": 4031144
+        }
+      ]
+    }
+  }
+}

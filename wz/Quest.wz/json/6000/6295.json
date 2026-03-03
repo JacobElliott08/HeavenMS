@@ -1,0 +1,52 @@
+{
+  "questId": 6295,
+  "info": {
+    "name": " Contract of the Spirit",
+    "parent": "Spirit Blessing",
+    "descriptions": {
+      "inProgress": " After Flo explained to me about #q1321007# I was told to bring #b#t4031474##k to awaken #q1321007#\u0027s power.\\n\\n#i4031474##t4031474# #b#c4031474# / 1#k",
+      "completed": "Flo used #t4031474# to awaken #q1321007#\u0027s power."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041023,
+      "jobs": [
+        132
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6294,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041023,
+      "items": [
+        {
+          "itemId": 4031474
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300000,
+      "items": [
+        {
+          "itemId": 4031474,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 1320009,
+          "masterLevel": 5
+        }
+      ]
+    }
+  }
+}

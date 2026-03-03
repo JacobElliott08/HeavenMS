@@ -1,0 +1,30 @@
+{
+  "questId": 2332,
+  "info": {
+    "name": "Where\u0027s Violetta?",
+    "descriptions": {
+      "inProgress": "You need to find #b#p1300002##k, who is probably trapped inside the wedding hall.\\r\\n\\r\\n\\r\\n#b#e- Limit - #n\\r\\nMust be alone. (Leave Party)",
+      "completed": "You found #bPrincess #p1300002##k trapped inside the wedding hall."
+    },
+    "area": 30,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300002,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "startScript": "q2332s",
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 4032388
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300002,
+      "endScript": "q2332e"
+    }
+  }
+}

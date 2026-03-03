@@ -1,0 +1,72 @@
+{
+  "questId": 2012,
+  "info": {
+    "name": "Jane\u0027s Second Challenge",
+    "parent": "Jane the Alchemist",
+    "descriptions": {
+      "inProgress": "This time, Jane promised she\u0027ll make a better item, and wants me to get #b1 Mushmom\u0027s spore, 3 of Drake\u0027s blood, 100 medicine with weird vibes, and 30 Malady\u0027s experimental frogs#k. She said something about making a Power Elixir, the one that can restore both HP and MP at once...",
+      "completed": "I got all the materials needed for Jane to make the elixir. If she does it well, then maybe I can get myself a nice elixir, but what if she fails...then I don\u0027t know if really want to take it...blehhh..."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002100,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 2011,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1002100,
+      "items": [
+        {
+          "itemId": 2012000,
+          "count": 3
+        },
+        {
+          "itemId": 4000040
+        },
+        {
+          "itemId": 4000041,
+          "count": 30
+        },
+        {
+          "itemId": 4000036,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6800,
+      "items": [
+        {
+          "itemId": 4000040,
+          "count": -1
+        },
+        {
+          "itemId": 2012000,
+          "count": -3
+        },
+        {
+          "itemId": 4000036,
+          "count": -100
+        },
+        {
+          "itemId": 4000041,
+          "count": -30
+        },
+        {
+          "itemId": 2000005,
+          "count": 15
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "questId": 8042,
+  "info": {
+    "name": "Fox So Foxy",
+    "parent": "Monster Rumor Mill",
+    "descriptions": {
+      "notStarted": " In order to gather up the information regarding the monster, I\u0027ll have to do Master Sergeant Fox a favor. Are you kidding me?",
+      "inProgress": " In order to find out more about the monster, I\u0027ll have to give Master Sergeant Fox #b50 #t04000129#s#k. \\n#t04000129#  #b#c04000129##k/50",
+      "completed": " No wonder ... according to him, Omega Sector may also be on the move to defeat the monster. He said I\u0027ll find out more about it by eavesdropping on General Maestro. That won\u0027t be easy..."
+    },
+    "area": 48,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020003,
+      "minLevel": 80,
+      "prerequisiteQuests": [
+        {
+          "questId": 8041,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020003,
+      "items": [
+        {
+          "itemId": 4000129,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000129,
+          "count": -50
+        },
+        {
+          "itemId": 2000004
+        }
+      ],
+      "experience": 30000
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "questId": 2321,
+  "info": {
+    "name": "Over the Castle Walls (1)",
+    "descriptions": {
+      "notStarted": "The #bSecretary of Magic#k told you he had something for you.",
+      "inProgress": "You should visit the #bSecretary of Domestic Affairs#k.",
+      "completed": "You stopped by to see the #bSecretary of Domestic Affairs#k. He\u0027s been thinking of ways for you to somehow enter the castle."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300004,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2319,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2500,
+      "nextQuest": 2322
+    }
+  }
+}

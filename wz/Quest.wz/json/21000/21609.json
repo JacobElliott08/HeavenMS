@@ -1,0 +1,50 @@
+{
+  "questId": 21609,
+  "info": {
+    "name": "Kenta\u0027s Adolescent Wolf Vitamins",
+    "descriptions": {
+      "notStarted": "You\u0027ve decided to prepare a bowl of Adolescent Wolf Vitamins for #t1902015#. Head to #b#m230000003##k to buy ingredients from #b#p2060005##k.",
+      "inProgress": "#p2060005# claims to have the vitamins necessary for Adolescent Wolves and agrees to sell them to you for 40 million mesos. *Sigh* It\u0027s a lot of money, but you should buy them for the sake of your wolf\u0027s health and well-being.\\r\\n\\r\\n#b40,000,000 mesos#k",
+      "completed": "You paid 40 million mesos and bought some of Adolescent Wolf Vitamins from #p2060005#."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "minLevel": 100,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 21608,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032333
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2060005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -40000000,
+      "items": [
+        {
+          "itemId": 4032333
+        }
+      ]
+    }
+  }
+}

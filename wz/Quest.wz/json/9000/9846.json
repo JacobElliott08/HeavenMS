@@ -1,0 +1,36 @@
+{
+  "questId": 9846,
+  "info": {
+    "name": "The Clocktower",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k seems to have something urgent to tell you.",
+      "inProgress": "Take care of the problem at the Clocktower and report to #b#p2040029##k. \\n\\n#o4230113# #r#a98461##k \\n#o4230114# #r#a98462##k",
+      "completed": "You took care of the problem at the Clocktower."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 35,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2007052900",
+      "endDate": "2007061800"
+    },
+    "complete": {
+      "npc": 2040029,
+      "endScript": "huntUP6",
+      "monsters": [
+        {
+          "monsterId": 4230113,
+          "count": 50
+        },
+        {
+          "monsterId": 4230114,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

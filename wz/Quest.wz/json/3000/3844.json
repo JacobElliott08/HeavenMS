@@ -1,0 +1,50 @@
+{
+  "questId": 3844,
+  "info": {
+    "name": "Eliminating King Sage Cat",
+    "parent": "Eliminating King Sage Cat",
+    "descriptions": {
+      "inProgress": "After I shared my unfortunate conversation with King Sage Cat, Do Gong told me that was to be expected. I guess I won\u0027t be able to obtain the Antidote Marble with the Sage Cat by negotiation. There\u0027s no other way now... I\u0027ll have to take it by force. I\u0027ll have to eliminate the #rKing Sage Cat#k and obtain the #bAntidote Marble#k! \\n\\n#o7220002# #r#a38441##k  \\n#i4031789# #t4031789# #b#c4031789##k/1.",
+      "completed": "After defeating the King Sage Cat, I grabbed the Antidote Marble and gave it to Do Gong. Fortunately, the marble was legit, and Do Gong seems to have been cured from poisoning. I better make it a habit of not being so gullible against others with suspect motives."
+    },
+    "area": 49,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091001,
+      "minLevel": 77,
+      "prerequisiteQuests": [
+        {
+          "questId": 3843,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091001,
+      "items": [
+        {
+          "itemId": 4031789
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 7220002
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 278700,
+      "fame": 17,
+      "items": [
+        {
+          "itemId": 4031789,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

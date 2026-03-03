@@ -1,0 +1,29 @@
+{
+  "questId": 2147,
+  "info": {
+    "name": "스텀피의 묘목 기르기",
+    "descriptions": {
+      "inProgress": "dd",
+      "completed": "dd"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022006,
+      "startDate": "2007010100",
+      "endDate": "2007010200",
+      "startScript": "q2147s",
+      "prerequisiteQuests": [
+        {
+          "questId": 2146,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022006,
+      "endScript": "q2147e"
+    }
+  }
+}

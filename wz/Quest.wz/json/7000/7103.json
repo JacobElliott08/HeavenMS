@@ -1,0 +1,60 @@
+{
+  "questId": 7103,
+  "info": {
+    "name": "Papulatus",
+    "parent": "Protect Ludibrium",
+    "descriptions": {
+      "notStarted": "Everything is ready. Now all we need to do is eliminate the evil force that is #o8500001#.",
+      "inProgress": "Enter the power-generating room by finding the #b#t4031172:##k by defeating the monsters guarding the gate. I also need to place #b#t4031179:##k at the crack to call #o8500001# out.\\n\\n#t4031172:# #r#c4031172#/1#k\\nEliminate #o8500001# #r#a71031##k",
+      "completed": "Finally got to eliminate #o8500001#, the evil force-dripping monster that was hogging the Time Sphere and stealing out all kinds of power through Ludarium! The Clocktower shall emit forces of nature, and Ludibrium shall be brought in peace."
+    },
+    "area": 37,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041021,
+      "minLevel": 80,
+      "prerequisiteQuests": [
+        {
+          "questId": 7102,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 7104,
+          "state": "COMPLETED"
+        }
+      ],
+      "startScript": "q7103s"
+    },
+    "complete": {
+      "npc": 2041021,
+      "items": [
+        {
+          "itemId": 4031172
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 8500002
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 78000,
+      "meso": 150000,
+      "fame": 30,
+      "items": [
+        {
+          "itemId": 1102057
+        },
+        {
+          "itemId": 4031172,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

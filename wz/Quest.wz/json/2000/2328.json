@@ -1,0 +1,46 @@
+{
+  "questId": 2328,
+  "info": {
+    "name": "Sending Provisions (1)",
+    "descriptions": {
+      "notStarted": "Is there a way you can help the soldiers of Mushking Empire, who are running low on supplies? #b#p1300003##k says he wants to have a word with you.",
+      "inProgress": "You need to gather #b200 #t4000502#s#k for #b#p1300005##k.",
+      "completed": "You gathered 200 #b#t4000502#s#k and gave them to #b#p1300005##k to help lessen their supply shortage."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300003,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2323,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300005,
+      "items": [
+        {
+          "itemId": 4000502,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 17500,
+      "nextQuest": 2329,
+      "items": [
+        {
+          "itemId": 4000502,
+          "count": -200
+        }
+      ]
+    }
+  }
+}

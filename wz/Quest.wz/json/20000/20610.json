@@ -1,0 +1,36 @@
+{
+  "questId": 20610,
+  "info": {
+    "name": "Training Still Never Ends ",
+    "descriptions": {
+      "notStarted": "#p1101002# seems to want to talk to me about something...",
+      "inProgress": "#p1101002# asked me if I had mastered all the skills I possessed, and he also confided in me that the Chief Knights came up with new skills again. Then he challenged me to learn that as well.",
+      "completed": "#p1101002# asked me if I had mastered all the skills I possessed, and he also confided in me that the Chief Knights came up with new skills again. Then he challenged me to learn that as well."
+    },
+    "area": 15,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "minLevel": 110,
+      "normalAutoStart": true,
+      "startScript": "q20610s",
+      "jobs": [
+        1111,
+        1112,
+        1211,
+        1212,
+        1311,
+        1312,
+        1411,
+        1412,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1101002
+    }
+  }
+}

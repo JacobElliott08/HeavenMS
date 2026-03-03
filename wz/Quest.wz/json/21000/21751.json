@@ -1,0 +1,54 @@
+{
+  "questId": 21751,
+  "info": {
+    "name": "Seal Stone of Ellin Forest",
+    "descriptions": {
+      "notStarted": "You ran into someone from the past who apparently knew you. Maybe #p2131000# in Ellin Forest knows something about the Seal Stone. You\u0027d better go talk to #b#p2131000##k and find out.",
+      "inProgress": "#p2131000# says that she did store a rock in #m300000011#, which the heroes left for her, and says the rock might be the Seal Stone. Entering #m300000011# to verify whether the rock is actually a Seal Stone requires a #b#t4032325##k. #p2132000# in #b#m300010400##k apparently has it.\\r\\n\\r\\n#i4032325# #t4032325# #b#c4032325# / 1#k",
+      "completed": "You received the #t4032325# from #p2132000#. #p2131000# told you to head to the #m300000011#."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2131000,
+      "minLevel": 63,
+      "prerequisiteQuests": [
+        {
+          "questId": 21750,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2131000,
+      "prerequisiteQuests": [
+        {
+          "questId": 21752,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032325
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 56800,
+      "items": [
+        {
+          "itemId": 4032325,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

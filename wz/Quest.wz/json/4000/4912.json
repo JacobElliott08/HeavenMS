@@ -1,0 +1,39 @@
+{
+  "questId": 4912,
+  "info": {
+    "name": "Urban Jungle ",
+    "descriptions": {
+      "notStarted": "There\u0027s a Masked Man in New Leaf City... what\u0027s his deal?",
+      "inProgress": "I spoke with Jack Masque, he\u0027s a bandit prince from Amoria. He\u0027s in love with Princess Restless, and is trying to win her love from afar. He\u0027s got a passionate hatred for Wolf Spiders, as one bit her just as she was giving him a kiss. So, I\u0027ve agreed to hunt down 100 Wolf Spiders in return for his thanks and something special he picked up. I should be able to find them in the MesoGears...",
+      "completed": "+Phew* I wiped out 100 of those pesky Wolf Spiders, and in return, I received a Leaf Crystal from Jack Masque. I can come back every 72 hours to help him if I want. I wonder what he did to get kicked out of Amoria...?"
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201053,
+      "minLevel": 80
+    },
+    "complete": {
+      "npc": 9201053,
+      "monsters": [
+        {
+          "monsterId": 9400545,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 55000,
+      "fame": 5,
+      "items": [
+        {
+          "itemId": 2022194,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

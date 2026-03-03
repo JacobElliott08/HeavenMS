@@ -1,0 +1,34 @@
+{
+  "questId": 3417,
+  "info": {
+    "name": "A Sleeping Monster",
+    "parent": "Delivering the Alarm Clock",
+    "descriptions": {
+      "notStarted": "I should go see Pink Mesoranger, who\u0027s somewhere around Boswell Field.",
+      "inProgress": "I ran into Pink Mesoranger again at Boswell Field, near the Omega Sector. She said that the items I gathered up for her last time has been sent to #bKevin the Soldier#k of Omega Sector, and that he should be ready with the #bSuper Alarm Clock#k. My task is to get it from him for her. I hope she\u0027ll be able to wake up on time with this baby.",
+      "completed": "I received a request from Pink Mesoranger to receive the Alarm Clock from Kevin the Soldier for her. The clock looks very well-made."
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041012,
+      "minLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 3416,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050011
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 3418
+    }
+  }
+}

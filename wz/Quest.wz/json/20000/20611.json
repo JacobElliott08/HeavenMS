@@ -1,0 +1,52 @@
+{
+  "questId": 20611,
+  "info": {
+    "name": "Another New Skill for Dawn Warriors",
+    "descriptions": {
+      "notStarted": "I better ask #b#p1101003##k about this new skill per comments from #p1101002#.",
+      "inProgress": "#p1101003#told me that if I wanted to learn a new skill, I\u0027ll have to prove my skills again by entering #bHall #4#k at #m130020000#, where a tougher test will take place... \\n\\n#i4032125# #t4032125# #b#c4032125# / 1#k",
+      "completed": "I managed to defeat the boss monster again and brought back #t4032125# in return. #p1101003# told me I have proven that I deserve to learn the new skill and taught me Advanced Combo Attack."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101003,
+      "minLevel": 110,
+      "prerequisiteQuests": [
+        {
+          "questId": 20610,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1111,
+        1112
+      ]
+    },
+    "complete": {
+      "npc": 1101003,
+      "items": [
+        {
+          "itemId": 4032125
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032125,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 11110005,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

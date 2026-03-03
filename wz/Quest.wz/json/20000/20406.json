@@ -1,0 +1,47 @@
+{
+  "questId": 20406,
+  "info": {
+    "name": "The Knight That Disappeared",
+    "descriptions": {
+      "notStarted": "I may have failed the assignment of providing support for #p1103000#, since he already completed his assignment before I could reach him. I better return to #bEreve#k and report the results to #b#p1101002##k.",
+      "inProgress": "I was going to complain to #p1101002# about doing all that work for nothing, but he seemed more concerned that #p1103000# hasn\u0027t come back and that something might be up. He then asked me if I could return to the #bCave of the #o9001010##k and find out if there\u0027s another note somewhere inside.",
+      "completed": "#p1101002# told me #p1103000# has not yet come back and that something might be up. He then asked me if I could return to the #bCave of the #o9001010##k and find out if there\u0027s another note somewhere inside."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "minLevel": 120,
+      "startScript": "q20406s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20405,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    }
+  }
+}

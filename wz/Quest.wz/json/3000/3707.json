@@ -1,0 +1,31 @@
+{
+  "questId": 3707,
+  "info": {
+    "name": " The Last Hour of Horntail",
+    "descriptions": {
+      "notStarted": " I hear #b#p2081006##k, who\u0027s locked up in prison, has a request for me...",
+      "inProgress": "The incarcerated #b#p2081006##k wanted me to kill Horntail in revenge for Nine Spirit and the Dragon Squad and bring peace in Minar Forest.\\n\\nKill Horntail #r#a37071##k",
+      "completed": "I killed Horntail as #b#p2081006##k requested, but will this really bring peace in Minar Forest?"
+    },
+    "area": 41
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081006,
+      "minLevel": 80
+    },
+    "complete": {
+      "npc": 2081006,
+      "monsters": [
+        {
+          "monsterId": 8810018
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 80000
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "questId": 3054,
+  "info": {
+    "name": "Fairy\u0027s Horn Flute",
+    "descriptions": {
+      "notStarted": "According to Lisa, there is a way to communicate with Moppie the dog, as long as the horn flute is there. They are usually featured by the fairies.",
+      "inProgress": "With the fairies\u0027 horn flute, I can talk to Moppie with ease...and Lisa promised to make one for me, as long as I gather up the necessary materials for it. \\n\\n#t4000073# #b#c4000073#/80#k\\n#t4003004# #b#c4003004#/15#k\\n#t4000021# #b#c4000021#/5#k",
+      "completed": "The horn flute for the fairies is finally made. Wow, this thing feels weird..."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012012,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3053,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012012,
+      "items": [
+        {
+          "itemId": 4000073,
+          "count": 80
+        },
+        {
+          "itemId": 4003004,
+          "count": 15
+        },
+        {
+          "itemId": 4000021,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "items": [
+        {
+          "itemId": 4031190
+        },
+        {
+          "itemId": 1032011
+        },
+        {
+          "itemId": 2050004,
+          "count": 10
+        },
+        {
+          "itemId": 4003004,
+          "count": -15
+        },
+        {
+          "itemId": 4000073,
+          "count": -80
+        },
+        {
+          "itemId": 4000021,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

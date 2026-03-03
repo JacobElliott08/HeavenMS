@@ -1,0 +1,38 @@
+{
+  "questId": 4300,
+  "info": {
+    "name": "Kino Konoko\u0027s Concern",
+    "descriptions": {
+      "notStarted": "#b#p9110002##k is responsible for taking care of a small altar over in Mushroom Shrine. She seems to be concerned about something...",
+      "inProgress": "Tired of cleaning up after those pesky #o9400000#s, #p9110002# wants me to gather #b100 #t4000064#s#k. I\u0027d hate to see the #m800000000# covered in filth, so I\u0027ve decided to help her. Time to pluck some #t4000064#s!\\n\\n#t4000064# #b#c4000064#/100",
+      "completed": "I gave #p9110002# a whole bunch of #t4000064#s. It felt good seeing her being ecstatic over a bunch of #p9110002#s. Hopefully this will restore #m800000000#\u0027s beauty..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9110002,
+      "minLevel": 20
+    },
+    "complete": {
+      "npc": 9110002,
+      "items": [
+        {
+          "itemId": 4000064,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "items": [
+        {
+          "itemId": 4000064,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "questId": 3908,
+  "info": {
+    "name": "A Present for His Sister",
+    "parent": "Jiyur\u0027s Sister",
+    "descriptions": {
+      "inProgress": "After receiving #p2101008#\u0027s letter, #p2101001# wanted to get her some #t4000331# to soothe her vocal chords, which is constantly on the works thanks to all that storytelling... I better get #b#t4000331##k for the sake of #p2101001# and #p2101008#.. \\n\\n#i4000331# #t4000331#  #b#c4000331##k/20",
+      "completed": "When she received #t4000331#, #p2101008# let out a smile that was brighter than anything I\u0027ve seen from her. These two really care for each other... and for them to be separated like this... the queen must be really heartless."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101001,
+      "minLevel": 28,
+      "prerequisiteQuests": [
+        {
+          "questId": 3907,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101008,
+      "items": [
+        {
+          "itemId": 4000331,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4900,
+      "items": [
+        {
+          "itemId": 4000331,
+          "count": -20
+        },
+        {
+          "itemId": 4010007,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "questId": 2287,
+  "info": {
+    "name": "Composition Fee",
+    "descriptions": {
+      "notStarted": "You found and returned Maestro Rho\u0027s MP3 player. That ought to be enough to get a new song, right? Ask #bMaestro Rho#k for a new song Blake can perform during his debut concert.",
+      "inProgress": "A composition fee? Well, that\u0027s somewhat understandable since he\u0027s a brilliant composer. Find the Fancy Amplifier Cables on the 7th-8th floor and deliver them to #bMaestro Rho#k.",
+      "completed": "You have paid the fee, but he still seems reluctant to give you the song. What\u0027s up with that? Talk to #bMaestro Rho#k again."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052120,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2286,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052120,
+      "items": [
+        {
+          "itemId": 4000537,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 13200,
+      "items": [
+        {
+          "itemId": 4000537,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

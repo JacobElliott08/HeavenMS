@@ -1,0 +1,52 @@
+{
+  "questId": 3201,
+  "info": {
+    "name": "Cleaning Up the Inner Parts of Eos Tower",
+    "descriptions": {
+      "notStarted": "I should go see Marcel now...",
+      "inProgress": "Marcel asked me to take care of  #b40 #o2230103#s#k and #b40 #o3210205#s#k living in Eos Tower.\\n\\n#o2230103# #r#a32011##k\\n#o3210205# #r#a32012#",
+      "completed": "I took care of the #b50 #o2230103#s#k and #b50 #o3210205#s#k, just the way Marcel wanted, but it seems like there\u0027s more outside..."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041004,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3200,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041004,
+      "monsters": [
+        {
+          "monsterId": 2230103,
+          "count": 40
+        },
+        {
+          "monsterId": 3210205,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2500,
+      "items": [
+        {
+          "itemId": 2000009,
+          "count": 50
+        },
+        {
+          "itemId": 2000011,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

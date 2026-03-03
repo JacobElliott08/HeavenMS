@@ -1,0 +1,50 @@
+{
+  "questId": 10262,
+  "info": {
+    "name": "순결한 향수 만들기3",
+    "descriptions": {
+      "notStarted": "어린 모험가들이 겁에 질려있어~! 도대체 무슨 일이 일어난걸까? #p9010010#를 찾아가 자세히 알아보자.",
+      "inProgress": "#p9010010#는 어린 아이를 괴롭히는 몬스터가 숨어있다고 한다. 몸집이 거대한 이 녀석은 냄새를 맡고 어린아이를 구분한다고 한다. 어린 아이로 위장하려면 어린 아이의 향기가 필요한데..",
+      "completed": "어린 아이의 향기가 나는 #t2430009#를 만들었다. 이 향수를 뿌리면 몬스터가 어린 아인줄 알고 나타나겠지~"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 51,
+      "maxLevel": 80,
+      "startDate": "2009030100",
+      "endDate": "2009041300",
+      "repeatIntervalMinutes": 0,
+      "items": [
+        {
+          "itemId": 2430009
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10262e",
+      "items": [
+        {
+          "itemId": 4032276,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032276,
+          "count": -30
+        },
+        {
+          "itemId": 2430009
+        }
+      ]
+    }
+  }
+}

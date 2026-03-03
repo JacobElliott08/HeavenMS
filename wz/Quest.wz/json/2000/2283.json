@@ -1,0 +1,42 @@
+{
+  "questId": 2283,
+  "info": {
+    "name": "Freesia Scent",
+    "descriptions": {
+      "notStarted": "Lana says the rose scent is perfect for the Kid Mannequin\u0027s Bunny Suit. Time to let #bLala#k know.",
+      "inProgress": "Rush to #bLana#k before the scent fades and ask her which costume this freesia scent would best complement.",
+      "completed": "#bLana#k said the freesia scent would go best with the Female Mannequin\u0027s Wig. Go tell #bLala#k."
+    },
+    "area": 30,
+    "timeLimit": 40
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052119,
+      "forbiddenBuffs": [],
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2282,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2284
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052121,
+      "requiredBuffs": []
+    }
+  },
+  "actions": {
+    "onStart": {
+      "buffItemId": 2022632
+    },
+    "onComplete": {
+      "experience": 2300
+    }
+  }
+}

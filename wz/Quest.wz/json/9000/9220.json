@@ -1,0 +1,36 @@
+{
+  "questId": 9220,
+  "info": {
+    "name": "수능 끝! 행복 시작!",
+    "descriptions": {
+      "notStarted": "대학수학능력 시험이 끝남과 동시에 축복을 빌어주는 쿠키를 나눠주고 있다고 한다. 운영자 NPC를 만나보자.",
+      "inProgress": "엘리니아의 요정 윙이 쿠키를 나눠주고 있다는데.... 그를 만나볼까?",
+      "completed": "엘리니아의 요정 윙이 나눠주는 쿠키를 받았다. 이 자그마한 쿠키가 어떤 효과를??"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "maxLevel": 24,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2006111300",
+      "endDate": "2006112000"
+    },
+    "complete": {
+      "npc": 1032106
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200,
+      "items": [
+        {
+          "itemId": 2022042,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

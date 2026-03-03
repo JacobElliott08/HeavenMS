@@ -1,0 +1,44 @@
+{
+  "questId": 3063,
+  "info": {
+    "name": "Nero\u0027s Necklace",
+    "descriptions": {
+      "notStarted": "I heard somewhere around Orbis Park, there\u0027s a guy strolling along with a black cat on his head. I should check him out.",
+      "inProgress": "I met #p2012018# at Orbis Park, and despite his intimidating appearance, seemed like a genuinely nice guy who has an affinity for cats. He was concerned about the fact that his cat Nero wandered around and came back without the necklace that he personally made for him. #p2012018# asked if I could buy the materials necessary for him to make a new necklace for Nero at the store. \\n\\n#t4031191# #b#c4031191##k/1\\n#t4031192# #b#c4031192##k/1",
+      "completed": "As a favor from #p2012018# of Orbis Park, I purchased the necessary materials for #p2012018# to make a new necklace for Nero."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012018,
+      "minLevel": 20
+    },
+    "complete": {
+      "npc": 2012018,
+      "items": [
+        {
+          "itemId": 4031191
+        },
+        {
+          "itemId": 4031192
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4000,
+      "items": [
+        {
+          "itemId": 4031191,
+          "count": -1
+        },
+        {
+          "itemId": 4031192,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

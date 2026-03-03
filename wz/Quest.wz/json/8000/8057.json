@@ -1,0 +1,41 @@
+{
+  "questId": 8057,
+  "info": {
+    "name": "Traveling Around Maple 5",
+    "parent": "Traveling Around Maple",
+    "descriptions": {
+      "notStarted": " After I get done touring around Ludibrium, I should start up a conversation with Marcel",
+      "inProgress": "Marcel offered to take me to El Nath. Once I get there, he advised me to look for Scadur...",
+      "completed": "I was able to meet up with Scadur. Where will I go next?"
+    },
+    "area": 40,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041004,
+      "startDate": "2005010100",
+      "endDate": "2005010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 8056,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020007
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8058,
+      "items": [
+        {
+          "itemId": 2022026,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

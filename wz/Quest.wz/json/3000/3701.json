@@ -1,0 +1,71 @@
+{
+  "questId": 3701,
+  "info": {
+    "name": "Kumo\u0027s Request",
+    "descriptions": {
+      "notStarted": "I\u0027d better go see #p2081001# at #m240000000#.",
+      "inProgress": "I ran into #p2081001# at #m240000000#. #p2081001# seemed concerned by the fact that the egg he\u0027s taking care of is about to be hatched, and is constantly moving, in danger of dropping any minute. He wanted to make a supporting block to fully support the egg, and asked me for help. I better start gathering up #b48 #t4000236#s#k and #b28 #t4000237#s#k.\\n\\n#i4000236##t4000236#  #b#c4000236##k / 48\\n#i4000237##t4000237#  #b#c4000237##k / 28",
+      "completed": "As requested by #p2081001#, I gathered up 48 #t4000236#s and 28 #t4000237#s for him. #p2081001# was concerned about building a sturdy support block for the egg, and has started doing so."
+    },
+    "area": 41
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081001,
+      "minLevel": 75
+    },
+    "complete": {
+      "npc": 2081001,
+      "items": [
+        {
+          "itemId": 4000236,
+          "count": 48
+        },
+        {
+          "itemId": 4000237,
+          "count": 28
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 42000,
+      "items": [
+        {
+          "itemId": 4000236,
+          "count": -48
+        },
+        {
+          "itemId": 4000237,
+          "count": -28
+        },
+        {
+          "itemId": 4004000,
+          "count": 5,
+          "probability": 1
+        },
+        {
+          "itemId": 4004001,
+          "count": 5,
+          "probability": 1
+        },
+        {
+          "itemId": 4004002,
+          "count": 5,
+          "probability": 1
+        },
+        {
+          "itemId": 4004003,
+          "count": 5,
+          "probability": 1
+        },
+        {
+          "itemId": 4004004,
+          "count": 5,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

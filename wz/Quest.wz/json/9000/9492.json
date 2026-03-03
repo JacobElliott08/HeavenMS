@@ -1,0 +1,45 @@
+{
+  "questId": 9492,
+  "info": {
+    "name": "맛있는 어묵(꼬치)",
+    "descriptions": {
+      "notStarted": "#b#p9110002##k에게 다시 말을 걸어보자.",
+      "inProgress": "#b#p9110002##k가 먹고 싶어하는 따끈한 #b#t2022021##k을 구해가자. \\n\\n#t2022021# #b#c2022021#/1#k",
+      "completed": "#b#p9110002##k에게 맛있는 따끈한 #b#t2022021##k을 구해다 주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9110002,
+      "minLevel": 10,
+      "startDate": "2006101600",
+      "endDate": "2006110100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9491,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9110002,
+      "items": [
+        {
+          "itemId": 2022021
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 2022021,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

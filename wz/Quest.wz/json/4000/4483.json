@@ -1,0 +1,71 @@
+{
+  "questId": 4483,
+  "info": {
+    "name": "Socks Hanging",
+    "descriptions": {
+      "notStarted": "You\u0027ve successfully completed the Socks. Mrs. Claus thinks that Santa Claus will be satisfied with them. Now, you must hang the socks in a good location so that it will be seen easily by Santa Claus.",
+      "inProgress": "You\u0027ve found a Christmas tree where you can hang the socks. This tree must be the one that Santa Claus used to visit whenever he was worried. Obviously, this is not a normal tree since it can talk! The tree tells you that doing good deeds will allow you to receive better gifts from Santa. You should go around town to see if there is anything you can do to help.\\n\\n#t4031885# #b#c4031885##k/4",
+      "completed": "You\u0027ve helped the people in Happyville and also received a present from Santa Claus. Here\u0027s hoping that everyone will have a Merry Christmas!"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250053,
+      "minLevel": 25,
+      "endDate": "2010010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 4482,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031886
+        },
+        {
+          "itemId": 4161040
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9250053,
+      "endScript": "q4483e",
+      "prerequisiteQuests": [
+        {
+          "questId": 4485,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4487,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4489,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4490,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031885,
+          "count": 4
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031886,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "questId": 3906,
+  "info": {
+    "name": "Jiyur\u0027s Sister",
+    "parent": "Jiyur\u0027s Sister",
+    "descriptions": {
+      "notStarted": "A little kid from #b#m260000000##k, #b#p2101001##k, actually has an older sister. Then why is #p2101001# standing by himself? I better ask him...",
+      "inProgress": "#p2101001# had an older sister who told him fun stories on a regular basis, but was dragged into the castle by the guards one day. Concerned about his sister, #p2101001# asked me to say hello to her for him if I get in the palace. Alright, I\u0027ll go in the palace as requested by #p2101001#. \\n\\nWait, I forgot to ask him for her name though, but I have a feeling who the #bsister of #p2101001##k is.",
+      "completed": "#p2101001#\u0027s storytelling sister is indeed #p2101008#."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101001,
+      "minLevel": 28,
+      "prerequisiteQuests": [
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101008
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 450,
+      "nextQuest": 3907
+    }
+  }
+}

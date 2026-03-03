@@ -1,0 +1,38 @@
+{
+  "questId": 2107,
+  "info": {
+    "name": "DANGER! \u003c3-Z. Mushroom\u003e",
+    "descriptions": {
+      "notStarted": "I heard there\u0027s a warning sign on monsters somewhere around Ant Tunnel...",
+      "inProgress": "Eliminate #b99#k #o2230101#s, then find \"The Rememberer.\" \\n \\n#o2230101# #r#a21071##k",
+      "completed": "I tried eliminating the #o2230101#s all-together, but the number didn\u0027t seem to decrease at all."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1063007,
+      "minLevel": 22
+    },
+    "complete": {
+      "npc": 1061011,
+      "monsters": [
+        {
+          "monsterId": 9101001,
+          "count": 99
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5500,
+      "items": [
+        {
+          "itemId": 2000006,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

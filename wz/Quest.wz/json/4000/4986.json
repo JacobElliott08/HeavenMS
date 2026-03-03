@@ -1,0 +1,58 @@
+{
+  "questId": 4986,
+  "info": {
+    "name": "Game On! \u003cBest Buy\u003e 2",
+    "descriptions": {
+      "notStarted": "I helped Mom and Dad with Thanksgiving dinner and received my #bAllowance#k! Now I can head to #bHenesys, Amoria, and New Leaf City#k and obtain a #bNexon Game Card#k from one of the Vendors! ",
+      "inProgress": "I have my #bAllowance#k, and I\u0027m on my way to #bHenesys, Amoria, and New Leaf City#k! I just have to speak with one of the Vendors there to receive a #bNexon Game Card#k! Just have to make sure I have some room in my ETC slot for it...",
+      "completed": "I spoke with one of the vendors, and in return for my #bAllowance#k, I received a #bNexon Game Card#k! I can also take this to any of the Store Vendors in #bHenesys, Amoria, or New Leaf City#k if one store happens to be sold out. I can help Mom and Dad everyday until the end of the event, receive #bAllowance#k and get another #bNexon Game Card#k. I should get as many as possible, because when the event ends, it will turn into MaplePoints that I can use in the Cash Shop! Free money! WOO HOO! "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201090,
+      "minLevel": 20,
+      "endDate": "2007121000",
+      "prerequisiteQuests": [
+        {
+          "questId": 4969,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031864
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201090,
+      "items": [
+        {
+          "itemId": 4031864
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031864,
+          "count": -1
+        },
+        {
+          "itemId": 4031865,
+          "probability": 95,
+          "expirationDate": "2007122001"
+        },
+        {
+          "itemId": 4031866,
+          "probability": 5,
+          "expirationDate": "2007122000"
+        }
+      ]
+    }
+  }
+}

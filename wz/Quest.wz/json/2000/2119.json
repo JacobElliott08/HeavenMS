@@ -1,0 +1,199 @@
+{
+  "questId": 2119,
+  "info": {
+    "name": "Notice from the Excavation Team",
+    "descriptions": {
+      "notStarted": "Someone\u0027s telling me there\u0027s an urgent notice posted on the bulletin board at the excavation camp.",
+      "inProgress": "I read the notice posted on the board at #m101030104#. Apparently, many of the excavators were attacked by the Army of Skeletons around the tomb site, and wanted someone to eliminate #r200 Skeleton soldiers, 100 Skeleton officers, and 40 Skeleton commanders#k. In addition, the board stated that as evidence, whoever eliminated those monsters will have to bring #b60 ribs, 40 pelvic bones, and 20 horse skulls#k. \\n\\n#o5150001#  #r#a21193##k\\n#o6230602#  #r#a21191##k\\n#o7130103#  #r#a21192##k\\n\\n#t4000206#  #b#c4000206##k/60\\n#t4000207#  #b#c4000207##k/40\\n#t4000208#  #b#c4000208##k/20",
+      "completed": "I eliminated the skeletons at the tomb site and collected their bones to show them to Shawn the excavator."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022102,
+      "minLevel": 60,
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 9040002,
+      "items": [
+        {
+          "itemId": 4000206,
+          "count": 60
+        },
+        {
+          "itemId": 4000207,
+          "count": 40
+        },
+        {
+          "itemId": 4000208,
+          "count": 20
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 6230602,
+          "count": 100
+        },
+        {
+          "monsterId": 7130103,
+          "count": 40
+        },
+        {
+          "monsterId": 5150001,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 25000,
+      "items": [
+        {
+          "itemId": 2043002,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 2043102,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 2043202,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 2043302,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 2043702,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 2043802,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 2044002,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 2044102,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 2044202,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 2044302,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 2044402,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 2044502,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 2044602,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 2044702,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 4000206,
+          "count": -60
+        },
+        {
+          "itemId": 4000207,
+          "count": -40
+        },
+        {
+          "itemId": 4000208,
+          "count": -20
+        },
+        {
+          "itemId": 2044802,
+          "jobRestriction": 32800
+        },
+        {
+          "itemId": 2044902,
+          "jobRestriction": 32800
+        }
+      ]
+    }
+  }
+}

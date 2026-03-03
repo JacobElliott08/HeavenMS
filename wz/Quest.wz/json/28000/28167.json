@@ -1,0 +1,65 @@
+{
+  "questId": 28167,
+  "info": {
+    "name": "Inspecting the Water Pipe",
+    "parent": "Drought in Perion",
+    "descriptions": {
+      "notStarted": "#b#@9201120:##k in #b#m103000000##k says there might be a problem with the Water Pipe.",
+      "inProgress": "Please inspect the  Fire Hydrants to identify the cause of the problem.\\n\\nGo to #b#m102040000##k and inspect the  Fire Hydrants, and bring 3 #r#t4001340#s#k.\\n(Attack the  Fire Hydrants with your weapon.)\\n\\nReport back to #b#@9201120:##k in Kerning City upon completion.",
+      "completed": "#b#@9201120:##k in #b#m103000000##k says he knows the reason why the Water Pipe is clogged."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201120,
+      "prerequisiteQuests": [
+        {
+          "questId": 28166,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 9201120,
+      "items": [
+        {
+          "itemId": 4001340,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 700,
+      "items": [
+        {
+          "itemId": 4001340,
+          "count": -3
+        }
+      ]
+    }
+  }
+}

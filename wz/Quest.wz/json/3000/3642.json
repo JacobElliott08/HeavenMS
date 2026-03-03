@@ -1,0 +1,47 @@
+{
+  "questId": 3642,
+  "info": {
+    "name": "Chil Sung\u0027s Request",
+    "parent": "Legends of Hometown",
+    "descriptions": {
+      "inProgress": "Went to Chil Sung and told him that Chil Nam said something about a fox and Chil Sung tells of a Samiho living in Kamak Mountain. The Samiho may hold more clues. Let\u0027s go and hunt down a #rSamiho#k.",
+      "completed": "Retrieved a strange piece of cloth after hunting a Samiho and showed it to Chil Sung. He is suddenly surprised, and says this is a piece of the Kamak Mountain\u0027s God of Mountains. Why do the Samihos have the god\u0027s cloth? Let\u0027s hurry and meet with the #bGod of Mountains#k."
+    },
+    "area": 37,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071005,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3641,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071005,
+      "items": [
+        {
+          "itemId": 4031790
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2071005
+    },
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4031790,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "questId": 2417,
+  "info": {
+    "name": "Using Arrow Blow",
+    "descriptions": {
+      "notStarted": "Power B. Fore at the training center wants you to learn how to use a new skill.",
+      "inProgress": "Power B. Fore is teaching you how to use a new skill. Use Arrow Blow to eliminate some Slimes.\\r\\n\\r\\n#o210100# #a24171# (Use Arrow Blow)",
+      "completed": "You used Arrow Blow to eliminate some Slimes."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012118,
+      "prerequisiteQuests": [
+        {
+          "questId": 2412,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322
+      ]
+    },
+    "complete": {
+      "npc": 1012118,
+      "monsters": [
+        {
+          "monsterId": 210100,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200
+    }
+  }
+}

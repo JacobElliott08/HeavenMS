@@ -1,0 +1,44 @@
+{
+  "questId": 3902,
+  "info": {
+    "name": "Queen\u0027s Make-up Kit",
+    "descriptions": {
+      "notStarted": "#b#p2101007##k, the queen of #b#m260000000##k, apparently needs something.",
+      "inProgress": "Queen #p2101007#, with her sensitive fairy skin acting up with the sand dust, demanded me to slay some #r#o4230600##k to make #b#t4000332##k, the most expensive, rare make-up item one can find. \\n\\n#i4000332# #t4000332#  #b#c4000332##k/20",
+      "completed": "Once I got her #t4000332#, #p2101007# seemed quite satisfied. I wonder why she\u0027s the only fairy that puts on a heavy make-up. Other fairies don\u0027t even wear one."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101007,
+      "minLevel": 41,
+      "prerequisiteQuests": [
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101007,
+      "items": [
+        {
+          "itemId": 4000332,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 4000332,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

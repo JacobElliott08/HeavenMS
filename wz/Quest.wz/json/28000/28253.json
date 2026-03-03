@@ -1,0 +1,46 @@
+{
+  "questId": 28253,
+  "info": {
+    "name": "Where Are the Treasures?",
+    "parent": "The Completed Treasure Map",
+    "descriptions": {
+      "notStarted": "#b#@1012003:##k in #bHenesys#k says it is necessary that you look into the emblem on the #rOld Worn-out Paper#k. Let\u0027s talk to him.",
+      "inProgress": "He tells you to find #b#@1072008:##k in #bNautilus#k in order to further investigate the emblem on the #rOld Worn-out Paper#k.",
+      "completed": "#b#@1072008:##k in #bNautilus#k says the emblem signifies a demon. Let\u0027s talk to her."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012003,
+      "prerequisiteQuests": [
+        {
+          "questId": 28252,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1090000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

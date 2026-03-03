@@ -1,0 +1,38 @@
+{
+  "questId": 3805,
+  "info": {
+    "name": "Eliminating the Spirited Monkeys",
+    "parent": "Protecting the Peach Farm",
+    "descriptions": {
+      "notStarted": "#b#p2091002##k, who owns a Peach Farm at #b#m250000000##k, seems to be concerned about something.",
+      "inProgress": "#p2091002# seemed wary of fighting off the #o6130207#s that have stolen his peaches, and wanted me to eliminate #r50 #o6130207#s#k for him.\\n\\n#o6130207#  #r#a38051##k",
+      "completed": "I managed to eliminate the #o6130207#s that were stealing peaches. Hopefully the Peach Farm will be alright now..."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091002,
+      "minLevel": 60
+    },
+    "complete": {
+      "npc": 2091002,
+      "monsters": [
+        {
+          "monsterId": 6130207,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2091002,
+      "minLevel": 60
+    },
+    "onComplete": {
+      "experience": 25600
+    }
+  }
+}

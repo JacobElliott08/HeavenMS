@@ -1,0 +1,51 @@
+{
+  "questId": 2100,
+  "info": {
+    "name": "Two Ways to Get to Korean Folk Town",
+    "parent": "Looking for the Korean Folk Town...",
+    "descriptions": {
+      "inProgress": "The letter that was sent to Camila was written by her pen pal, and it said she might not be able to write her again. Camila sensed something wrong might have happened to her friend, and asked me if I could visit her at Korean Folk Town, where she lived, and check on her.",
+      "completed": "At Korean Folk Town, I was able to meet Camila\u0027s pen pal, Kong Ji. She looked ecstatic after I gave her Camila\u0027s reply letter."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012108,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 2099,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071004,
+      "items": [
+        {
+          "itemId": 4031240
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031240
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 800,
+      "items": [
+        {
+          "itemId": 4031240,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

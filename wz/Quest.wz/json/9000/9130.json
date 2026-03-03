@@ -1,0 +1,42 @@
+{
+  "questId": 9130,
+  "info": {
+    "name": "깜짝이벤트 : 스페셜 알파벳?",
+    "descriptions": {
+      "notStarted": "추석 당일 메이플 운영자가 한과 알파벳 중 스페셜 알파벳을 선물로 준다는데? 추석날 하루 뿐이라니 찾아가볼까?",
+      "inProgress": "추석 당일에만 깜짝 이벤트로 스페셜 알파벳 중 원하는 알파벳을 1종 준다고 한다.",
+      "completed": "추석날  깜짝 이벤트로 스페셜 알파벳을 받았다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 13,
+      "repeatIntervalMinutes": 86400,
+      "startDate": "2008091400",
+      "endDate": "2008091500"
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 3994013,
+          "expirationDate": "2008092600"
+        },
+        {
+          "itemId": 3994012,
+          "expirationDate": "2008092600"
+        },
+        {
+          "itemId": 3994014,
+          "expirationDate": "2008092600"
+        }
+      ]
+    }
+  }
+}

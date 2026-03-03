@@ -1,0 +1,51 @@
+{
+  "questId": 28003,
+  "info": {
+    "name": "Alcaster\u0027s Reply",
+    "descriptions": {
+      "notStarted": "Alcaster says he has something for Snow Spirit.",
+      "inProgress": "He handed me a reply letter to Snow Spirit, a note that contains the exact method we should take to defeat Scrooge. I better go see her right now!",
+      "completed": "I gave the Snow Spirit Alcaster\u0027s reply letter. She stood quietly for a moment, then gave me something called Force of the Spirit, which she said was the key to defeating Scrooge. What exactly is this?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "prerequisiteQuests": [
+        {
+          "questId": 28002,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9105003,
+      "items": [
+        {
+          "itemId": 4032093
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032093
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032093,
+          "count": -1
+        },
+        {
+          "itemId": 4032092
+        }
+      ]
+    }
+  }
+}

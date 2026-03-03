@@ -1,0 +1,41 @@
+{
+  "questId": 2190,
+  "info": {
+    "name": "Unidentified Strangers",
+    "descriptions": {
+      "notStarted": "#b#p1012003##k of #b#m100000000##k seems to be facing a pretty serious problem...",
+      "inProgress": "#p1012003# says that a group of unidentified strangers have appeared on the eastern coast of #m100000000#, and wants me to find out who they are. I should go to #b#m100030000##k.",
+      "completed": "There\u0027s a huge wooden entryway leading into #m100030000# which I\u0027d never seen before. It almost looks like an entryway to a fortress...I should try talking to #p1094000#, who was standing in front of me. I remember him telling me that a #bpirate #p1072008##k fort is being built here.  PIRATES!?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012003,
+      "minLevel": 10,
+      "endDate": "2008111100",
+      "prerequisiteQuests": [
+        {
+          "questId": 3246
+        },
+        {
+          "questId": 3381
+        },
+        {
+          "questId": 3115
+        },
+        {
+          "questId": 3713
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1094000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500
+    }
+  }
+}

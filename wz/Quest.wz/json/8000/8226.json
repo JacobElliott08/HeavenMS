@@ -1,0 +1,45 @@
+{
+  "questId": 8226,
+  "info": {
+    "name": "The Fallen Warriors",
+    "descriptions": {
+      "notStarted": "I should speak to Taggrin to see if he has another task for me.",
+      "inProgress": "Taggrin has one more task for me: he wants me to hunt down the #bElder Wraiths#k and collect #b50 of their Elder Ashes#k.  Warning me that this would be no easy task, he explained that the wraiths are the souls of brave Crimsonwood Keep warriors who fell in battle in the forest, protecting the Keep from the invading Krakians.  Never given a proper burial, they have become mindless undead, threatening the Keep\u0027s foes and innocent travelers alike.  With these ashes, Taggrin intends to give these noble lost souls the final rest they so rightfully deserve.",
+      "completed": "Taggrin was impressed that I manage to collect the ashes from the Elder Wraiths.  I can now speak to #bFiona#k about #bupgrading any Raven Ninja gear#k I may have!  Taggrin also mentioned that the talented ninja smith has experimented with some weapon designs of her own; I should speak to her about the possibility of #bcrafting new items#k from scratch. "
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201100,
+      "minLevel": 80,
+      "startScript": "q8226s",
+      "prerequisiteQuests": [
+        {
+          "questId": 8225,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201100,
+      "items": [
+        {
+          "itemId": 4032010,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 4032010,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

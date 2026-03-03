@@ -1,0 +1,43 @@
+{
+  "questId": 3501,
+  "info": {
+    "name": "The One Who Walks Down Memory Lane1",
+    "descriptions": {
+      "notStarted": "I went inside the temple through the broken Door to the Past, but I kept circling back to the same place.  This Temple of Time...I can\u0027t go forward unless I get permission from the Goddess.  How do I get permission from the Goddess?  I should ask #b#p2140000##k.",
+      "inProgress": "He says the Goddess is in eternal sleep but if I get permission from the Goddess\u0027 representative, #p2140000#, I can go through Memory Lane.  #p2140000# said that he needs someone to #binvestigate the break in#k, and that if I agree to do it, he will grant me permission.\\n\\nWhen I said I would gladly do it, #p2140000# said he will have to first #btest#k me and see if I can withstand the flow of energy that governs Memory Lane.  The test is none other than defeating #r999#k #r#o8200001#k in #m270010100#... \\n\\n#o8200001# #r#a35011##k",
+      "completed": "I defeated 999 #o8200001#.  #p2140000# was impressed, and I was able to go further in.  But..."
+    },
+    "area": 46
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140000,
+      "minLevel": 91,
+      "prerequisiteQuests": [
+        {
+          "questId": 3500,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2140000,
+      "monsters": [
+        {
+          "monsterId": 8200001,
+          "count": 999
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 189700,
+      "items": [
+        {
+          "itemId": 4021000
+        }
+      ]
+    }
+  }
+}

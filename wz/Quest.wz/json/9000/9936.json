@@ -1,0 +1,34 @@
+{
+  "questId": 9936,
+  "info": {
+    "name": "새로운 기회",
+    "descriptions": {
+      "notStarted": "#p2120005#를 도와주려다 오히려 그녀의 기분을 더 나쁘게 만들어 버렸다. 휴우... 그녀의 부탁을 들어줄 때 잘못된 선택을 했던 것은 아닐까? 다른 방향으로 움직였으면 좋은 소식을 전할 수 있지 않았을까? #b가면신사#k와 대화해 보자.",
+      "inProgress": "#p2120000#에게 #p2120005#와의 이야기를 말했다. 그러자 #p2120000#는 아무런 대가 없이 당신의 선택을 #r되돌릴 수 있는 기회#k를 주겠다고 말했다. \\n\\n...가면 때문에 보이지는 않지만, 어쩐지 그가 웃고 있다는 기분이 든다.",
+      "completed": "#p2120000#는 이제 다시 #p2120005#에게 말을 걸어 보라고 말했다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120000,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2008110600",
+      "infoNumber": 7642,
+      "infoEx": [
+        null
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 9935,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120000,
+      "endScript": "q9936e"
+    }
+  }
+}

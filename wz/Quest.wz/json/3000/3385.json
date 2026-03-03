@@ -1,0 +1,41 @@
+{
+  "questId": 3385,
+  "info": {
+    "name": "Gordon\u0027s Warm Heart",
+    "descriptions": {
+      "notStarted": "Oh my gosh... I wound up losing #b#t1122013##k! I swear I kept it with me, but while I looked away, I wound up... misplacing it. Sigh, there\u0027s nothing I can do, I better just visit #b#p2020002##k and tell him what happened. Do I really have to go to #b#m211000100##k and face the music?",
+      "inProgress": "He knew I had misplaced it? He picked it up from the streets? I was shocked to hear what #b#p2020002##k told me. Honestly, losing it really made me feel guilty about it, but at least it\u0027s back in my hands now! Phew... I\u0027ll need to start another conversation with him.",
+      "completed": "I really didn\u0027t see it coming. I was totally unaware that he had left #b#m211000100##k and was watching me from the back... thankfully, #p2020002# had the item with him, and he just gave me back the item without much of a lecture. I felt so bad and embarassed that I vowed never to misplace the item ever again."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020002,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3384,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1122013
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1122013
+        }
+      ]
+    }
+  }
+}

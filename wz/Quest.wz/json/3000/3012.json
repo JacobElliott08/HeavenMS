@@ -1,0 +1,33 @@
+{
+  "questId": 3012,
+  "info": {
+    "name": "A Word from the Assistant",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "Spiruna\u0027s assistant quietly tells me that at this point, nothing will bring her back to her senses, unless I bring an item called #bFairy Dust#k, the only item that\u0027ll restore the cracked black crystal to its original state. #bKriel the Fairy#k of Orbis Department Store may have it."
+    },
+    "area": 33,
+    "order": 9
+  },
+  "requirements": {
+    "start": {
+      "npc": 2032000,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3011,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012011
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "nextQuest": 3013
+    }
+  }
+}

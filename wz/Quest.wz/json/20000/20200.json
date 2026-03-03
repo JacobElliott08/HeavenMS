@@ -1,0 +1,31 @@
+{
+  "questId": 20200,
+  "info": {
+    "name": "The End of Knight-in-Training",
+    "descriptions": {
+      "notStarted": "After reaching Level 30, #p1101002# wanted to talk to me about something...",
+      "inProgress": "#p1101002# stated that since my level is significantly high and that I am well-versed in the duties and assignments of a Knight, he suggested that it\u0027s time for me to remove the in-Training by taking the #bKnighthood Exam#k. To become a Knight on the next level, I better head over to Ereve.",
+      "completed": "#p1101002# stated that since my level is significantly high and that I am well-versed in the duties and assignments of a Knight, he suggested that it\u0027s time for me to remove the in-Training by taking the Knighthood Exam. To become a Knight on the next level, I better head over to Ereve."
+    },
+    "area": 15,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "minLevel": 30,
+      "normalAutoStart": true,
+      "startScript": "q20200s",
+      "jobs": [
+        1100,
+        1200,
+        1300,
+        1400,
+        1500
+      ]
+    },
+    "complete": {
+      "npc": 1101002
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "questId": 3006,
+  "info": {
+    "name": "Where\u0027s Hella?",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "notStarted": "",
+      "inProgress": "Jade suspected that Hella may have gone on a search to find the #bkeepsake of her late mother#k, and told me to go see Hella\u0027s housekeeper again. ",
+      "completed": ""
+    },
+    "area": 33,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020006,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3005,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "nextQuest": 3007
+    }
+  }
+}

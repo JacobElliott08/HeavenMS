@@ -1,0 +1,39 @@
+{
+  "questId": 9360,
+  "info": {
+    "name": "원숭이 펫 명령어",
+    "descriptions": {
+      "notStarted": "원숭이 펫을 갖고 있다면 운영자를 찾아가보는 것이 어떨까? 원숭이 펫에게 사용할 수 있는 명령어를 알려줄 것이라고 하는데..",
+      "inProgress": "원숭이 펫의 친밀도를 +2 만큼 상승시키고 다시 찾아오라고 하였다. 명령어가.. 앉아, 사랑해, 응가.. 또 뭐였더라?",
+      "completed": "원숭이 펫의 친밀도를 2만큼 올리고 찾아가니 원숭이 펫의 명령어가 적혀있는 설명서와 약간의 펫 먹이를 받을 수 있었다. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "startDate": "2006010100",
+      "endDate": "2006020100",
+      "petRequirement": {}
+    },
+    "complete": {
+      "npc": 9010000,
+      "minPetTameness": 2,
+      "petRequirement": {}
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "petTameness": 1,
+      "items": [
+        {
+          "itemId": 2120000,
+          "count": 10
+        },
+        {
+          "itemId": 4160010
+        }
+      ]
+    }
+  }
+}

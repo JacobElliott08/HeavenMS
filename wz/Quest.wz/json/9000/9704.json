@@ -1,0 +1,85 @@
+{
+  "questId": 9704,
+  "info": {
+    "name": "황금돼지를 잡아라!",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 새해를 맞아 특별한 이벤트를 준비 했다고 하는데..",
+      "inProgress": "#r황금돼지#k를 잡고 신비한 기운이 깃든 단풍잎을 구해오라고 했다. \\n\\n#i4000313##t4000313# #b#c4000313#/1#k",
+      "completed": "3월 2일 홈페이지에서 이벤트 당첨자 확인하는 것을 잊지 말자."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 60,
+      "startDate": "2007021300",
+      "endDate": "2007022700"
+    },
+    "complete": {
+      "npc": 9010010,
+      "items": [
+        {
+          "itemId": 4000313
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2007,
+      "items": [
+        {
+          "itemId": 4000313,
+          "count": -1
+        },
+        {
+          "itemId": 2000006,
+          "count": 50,
+          "probability": 60
+        },
+        {
+          "itemId": 2001000,
+          "count": 10,
+          "probability": 30
+        },
+        {
+          "itemId": 2001001,
+          "count": 10,
+          "probability": 30
+        },
+        {
+          "itemId": 2001002,
+          "count": 10,
+          "probability": 30
+        },
+        {
+          "itemId": 2020013,
+          "count": 10,
+          "probability": 20
+        },
+        {
+          "itemId": 2020014,
+          "count": 10,
+          "probability": 20
+        },
+        {
+          "itemId": 2020015,
+          "count": 10,
+          "probability": 20
+        },
+        {
+          "itemId": 2022006,
+          "count": 100,
+          "probability": 5
+        },
+        {
+          "itemId": 2000005,
+          "count": 10,
+          "probability": 3
+        }
+      ]
+    }
+  }
+}

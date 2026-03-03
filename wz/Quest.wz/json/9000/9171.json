@@ -1,0 +1,51 @@
+{
+  "questId": 9171,
+  "info": {
+    "name": "넬라의 한복",
+    "parent": "넬라의 추석",
+    "descriptions": {
+      "notStarted": "넬라에게 추석 기분을 복돋아줄 한복을 전해주기로 하였다.",
+      "inProgress": "넬라에게 가기 위해서는 일전에 받은 커닝시티 귀환 주문서를 써 보는게 어떨까?",
+      "completed": "한복을 커닝시티 넬라에게 전해주었다."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2007092000",
+      "endDate": "2007100800",
+      "prerequisiteQuests": [
+        {
+          "questId": 9170,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052103
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031194
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 800,
+      "fame": 1,
+      "nextQuest": 9172,
+      "items": [
+        {
+          "itemId": 4031194,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

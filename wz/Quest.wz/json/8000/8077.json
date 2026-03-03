@@ -1,0 +1,58 @@
+{
+  "questId": 8077,
+  "info": {
+    "name": "The Father of Modern Science",
+    "parent": "The Committee Challenges",
+    "descriptions": {
+      "notStarted": "We found the 3rd Herb, but it is tightly sealed inside Lazy Buffy\u0027s Marble. It seems like it\u0027s been attached for so long, that I don\u0027t think we can just pluck it out of the sphere. Sabitrama then mentioned something like applying modern science to opening this. We\u0027ve come so far, that there\u0027s no way we\u0027re about to give up.\\nBut then again, who am I supposed to find?\"",
+      "inProgress": "He may have talked too candidly on some things, but I think the herb can be plucked out of the marble. As part of the deal, I have to gather up #b500 #t04000133#s#k.\\n\\n\\n#t04000133#  #b#c04000133##k/500",
+      "completed": "The seal is disabled, but since the marble itself isn\u0027t very stable, Dr. Kim made a device called \"Open Sesami\" and sent it to Sabitrama. I should go see him later. \\nAnyway, he\u0027s pretty good at what he does, but man he\u0027s terrible at naming his inventions!"
+    },
+    "area": 48,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050001,
+      "minLevel": 85,
+      "prerequisiteQuests": [
+        {
+          "questId": 8076,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050001,
+      "items": [
+        {
+          "itemId": 4000133,
+          "count": 500
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000133,
+          "count": -500
+        },
+        {
+          "itemId": 2040809,
+          "probability": 1
+        },
+        {
+          "itemId": 2040519,
+          "probability": 1
+        },
+        {
+          "itemId": 2000005,
+          "probability": 2
+        }
+      ],
+      "experience": 80000
+    }
+  }
+}

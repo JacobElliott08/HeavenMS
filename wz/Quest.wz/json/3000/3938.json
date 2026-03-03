@@ -1,0 +1,45 @@
+{
+  "questId": 3938,
+  "info": {
+    "name": "First Mission",
+    "parent": "First Mission of Sand Bandits",
+    "descriptions": {
+      "notStarted": "San Bandits are here to work for the residents of #m260000000#. Now that I am a member, I should get my first mission! I better talk to #b#p2101010##k.",
+      "inProgress": "#p2101010# told me his plan is to steal an expensive order of silk that the queen planned to buy, and distribute them among the residents. The plan is, one of us will transform into the guard from the palace to receive the order of silk from the merchant and bring it back! He said as long as I get #b#p2101004#\u0027s hair#k, then he\u0027ll make me a transformation potion. \\n\\n#i4031570# #t4031570# #b#c4031570# /#k1#k",
+      "completed": "I gave #p2101010# #p2101004#\u0027s piece of hair... I mean, a piece of beard. Now I just have to wait for the potion to be completed... I wonder how this will work out."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101010,
+      "minLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 3937,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101010,
+      "items": [
+        {
+          "itemId": 4031570
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4031570,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

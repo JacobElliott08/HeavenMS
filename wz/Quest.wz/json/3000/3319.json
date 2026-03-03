@@ -1,0 +1,46 @@
+{
+  "questId": 3319,
+  "info": {
+    "name": "Parwen\u0027s Lab",
+    "descriptions": {
+      "notStarted": "There\u0027s a ghost at #b#m261000000##k! A lab ghost, #b#p2111006##k! Apparently, even a ghost like him needs help...",
+      "inProgress": "#p2111006# told me he couldn\u0027t stand being next to #r#o6110301##k, and wanted me to slay some #o6110301# for him. He freaks me out even more! But since a request is a request, I\u0027ll have to slay them first.  \\n\\n#o6110301# #r#a33191##k",
+      "completed": "#p2111006# told me as recent as a while ago, some alchemist entered this place and worked hard at his research, and yet he hasn\u0027t shown up since the explosion."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111006,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3309,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3318,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3314,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111006,
+      "monsters": [
+        {
+          "monsterId": 6110301,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 64900
+    }
+  }
+}

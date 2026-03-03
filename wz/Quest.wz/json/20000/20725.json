@@ -1,0 +1,70 @@
+{
+  "questId": 20725,
+  "info": {
+    "name": "Mission in Sleepywood",
+    "descriptions": {
+      "notStarted": "#p1101002# wants to talk to me about an assignment...",
+      "inProgress": "#p1101002# told me he detected a strong force of darkness around #b#m105040300##k and wanted me to look into #r#o9300285##k. The problem is there\u0027s not a single agent currently assigned there, so he wanted me to gather up the information from scratch by myself...",
+      "completed": "I was able to gather up all the information and write up a report to #p1101002#."
+    },
+    "area": 15,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "minLevel": 28,
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 20724,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1101002,
+      "prerequisiteQuests": [
+        {
+          "questId": 20729,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 20726,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 20727,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 20728,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  }
+}

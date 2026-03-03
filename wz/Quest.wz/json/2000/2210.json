@@ -1,0 +1,48 @@
+{
+  "questId": 2210,
+  "info": {
+    "name": "Take the Gold Pouch to Muirhat",
+    "descriptions": {
+      "notStarted": "I wonder what it is that Bartol wants me to do?",
+      "inProgress": "I should bring the #bGold Pouch#k to #bMuirhat#k as Bartol asked me to. Muirhat is standing #bin front of the Control Room on the upper deck#k. ",
+      "completed": "I\u0027ve delivered the Gold Pouch to Muirhat."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092011,
+      "prerequisiteQuests": [
+        {
+          "questId": 2208,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092007,
+      "items": [
+        {
+          "itemId": 4031891
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031891
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031891,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

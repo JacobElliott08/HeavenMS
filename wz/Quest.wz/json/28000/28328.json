@@ -1,0 +1,30 @@
+{
+  "questId": 28328,
+  "info": {
+    "name": "Blue Turkey Egg Hunt",
+    "descriptions": {
+      "notStarted": "Cody\u0027s been busy preparing for the Thanksgiving festivities. He apparently has a special request to ask of you in celebration of Thanksgiving. See what it could be! ",
+      "inProgress": "Cody\u0027s been busy collecting #bBlue Turkey Eggs#k in celebration of Thanksgiving! Hunt the #bTurkey Monsters#k that have been appearing around the #rTowns and Mini-Dungeons of Henesys, Kerning City, Perion, Ellinia, and Orbis#k and collect as many #bBlue Turkey Eggs#k as possible for Cody!  ",
+      "completed": "Cody says he is truly grateful for your help and is asking you to come back and see him again in 30 minutes. Seems like he\u0027s got another favor to request. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9200000,
+      "minLevel": 61,
+      "endDate": "2009120900",
+      "repeatIntervalMinutes": 30
+    },
+    "complete": {
+      "npc": 9200000,
+      "endScript": "q28328e",
+      "items": [
+        {
+          "itemId": 4032524,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

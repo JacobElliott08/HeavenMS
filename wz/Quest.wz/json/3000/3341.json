@@ -1,0 +1,51 @@
+{
+  "questId": 3341,
+  "info": {
+    "name": "Dr. De Lang\u0027s Secret Notes",
+    "parent": "Dr. De Lang\u0027s Notes",
+    "descriptions": {
+      "inProgress": "I found something inside that strange book, and that was #p2111002#\u0027s Secret Notes. Let\u0027s see what\u0027s inside... based on the information inside, I\u0027ll have to figure out #bthe person that #p2111002# trusts the most#k, and then go to that person to clarify it.",
+      "completed": "The person that #p2111002# trusts the most is actually #p2111002#\u0027s friend #p2040050#. When I handed #p2040050# the #t4161031#, he looked concerned as he peered through the notes..."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111016,
+      "minLevel": 75,
+      "prerequisiteQuests": [
+        {
+          "questId": 3340,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040050,
+      "items": [
+        {
+          "itemId": 4161031
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4161031
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 4161031,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

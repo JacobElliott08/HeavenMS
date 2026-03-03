@@ -1,0 +1,35 @@
+{
+  "questId": 6242,
+  "info": {
+    "name": "Frostprey",
+    "parent": "The Legendary Ice Bird",
+    "descriptions": {
+      "notStarted": "#b#p2081003##k says he has an urgent request...",
+      "inProgress": "#b#p2081003##k mentioned  the legendary ice bird, Frostprey, and asked me to go beneath the ice valley in El Nath. \\n\\n#i4001114##t4001114# #b#c4001114#/1#k",
+      "completed": " #b#p2081003##k said he will find out how to hatch the eggs..."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081003,
+      "jobs": [
+        322
+      ]
+    },
+    "complete": {
+      "npc": 2081003,
+      "items": [
+        {
+          "itemId": 4001114
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800000
+    }
+  }
+}

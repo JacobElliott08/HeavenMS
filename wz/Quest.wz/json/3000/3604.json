@@ -1,0 +1,50 @@
+{
+  "questId": 3604,
+  "info": {
+    "name": "The Brothers\u0027 Stack of Rice 4",
+    "parent": "Brotherly Love",
+    "descriptions": {
+      "inProgress": "Chil Nam was puzzled that his stack didn\u0027t seem to decrease, and asked me if I could place another #t4031229# on his brother\u0027s stack.",
+      "completed": "I received a #t4031229# from Chil Nam, and placed it on top of a stack of rice in front of Chil Sung\u0027s house."
+    },
+    "area": 37,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071003,
+      "prerequisiteQuests": [
+        {
+          "questId": 3603,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2072000,
+      "items": [
+        {
+          "itemId": 4031248
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031248
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4031248,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

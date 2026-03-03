@@ -1,0 +1,66 @@
+{
+  "questId": 20716,
+  "info": {
+    "name": "Maybe it\u0027s Arwen!",
+    "descriptions": {
+      "notStarted": "I better talk to Agent #b#p1103003##k of #m101000000# about a new assignment.",
+      "inProgress": "#p1103003# told me she suspects that #b#p1032100##k might be controlled by the Puppeteer, and asked me to give Arwen #b#t4032142##k, which can be purchased at #b#m101010103##k. Her theory was that if Arwen is controlled, then she would dread it; if Arwen is free, then she\u0027d be ecstatic over it... \\n\\n#i4032142# #t4032142# #b#c4032143# / 1#k",
+      "completed": "Arwen thanked me for giving her #t4032142#, for she was very thirsty at the time and proceeded to finish it in one giant gulp."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103003,
+      "minLevel": 18,
+      "prerequisiteQuests": [
+        {
+          "questId": 20715,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1032100,
+      "items": [
+        {
+          "itemId": 4032142
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2500,
+      "items": [
+        {
+          "itemId": 4032142,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

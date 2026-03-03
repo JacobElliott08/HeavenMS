@@ -1,0 +1,32 @@
+{
+  "questId": 6941,
+  "info": {
+    "name": "Samuel\u0027s Revelation of the First Truth",
+    "parent": "The Ultimate Stage of the Pirate",
+    "descriptions": {
+      "inProgress": "#b#p2081500##k says that he will tell me the First Truth and wants me to come back and talk to him when I\u0027m ready.",
+      "completed": "#b#p2081500##k has told me the story of Zakum, the First Truth. "
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081500,
+      "minLevel": 120,
+      "jobs": [
+        511,
+        521
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6940,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081500
+    }
+  }
+}

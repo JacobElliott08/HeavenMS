@@ -1,0 +1,25 @@
+{
+  "questId": 21100,
+  "info": {
+    "name": "The Five Heroes",
+    "descriptions": {
+      "notStarted": "In order to begin real training, you must first figure out which of the five heroes you were, but you don\u0027t remember anything… You\u0027d better discuss this with #b#p1201000##k.",
+      "inProgress": "#p1201000# tells you while she was excavating heroes from ice, she found a weapon used by one of the heroes. She placed it in town. She wonders if it was yours. If it was, then you would be #bAran, the hero that used a polearm#k...",
+      "completed": "#p1201000# told you while she was excavating heroes from ice, she found a weapon used by one of the heroes. She placed it in town. She wondered if it was yours. If it was, then you would be #bAran, the hero that used a polearm#k..."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201000,
+      "minLevel": 10,
+      "startScript": "q21100s",
+      "jobs": [
+        2000
+      ]
+    },
+    "complete": {
+      "npc": 1201000
+    }
+  }
+}

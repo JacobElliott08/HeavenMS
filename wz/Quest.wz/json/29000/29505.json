@@ -1,0 +1,25 @@
+{
+  "questId": 29505,
+  "info": {
+    "name": "The Carnivalian of Absolute Victory",
+    "descriptions": {
+      "notStarted": "If you think you have the most wins under your belt in the 2nd Monster Carnival, acquire the #bAbsolute Victory Carnivalian Medal#k from Spiegelmann!",
+      "inProgress": "If you think you have the most wins under your belt in the 2nd Monster Carnival, acquire the #bAbsolute Victory Carnivalian Medal#k from Spiegelmann!",
+      "completed": "You have acquired the #bAbsolute Victory Carnivalian Medal#k for having the most wins in the 2nd Monster Carnival."
+    },
+    "area": 10,
+    "medalItemId": 1142077
+  },
+  "requirements": {
+    "start": {
+      "npc": 2042005,
+      "startScript": "q29505s",
+      "minLevel": 51,
+      "repeatIntervalMinutes": 0
+    },
+    "complete": {
+      "npc": 2042005,
+      "endScript": "q29505e"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "questId": 8040,
+  "info": {
+    "name": "Lionel\u0027s Journey",
+    "descriptions": {
+      "notStarted": " Is Lionel hanging out outside with Maya right now? I better go check them out at Maya\u0027s house.",
+      "inProgress": " Apparently, the one that scarred Lionel was #b#o5130104##k, and that was why it never left the house, despite the necklace. I better gather up #b100 #t04000051#s#k to boost its confidence. \\n#t04000051#  #b#c04000051##k/100",
+      "completed": " Maya said Lionel\u0027s friends came by and left with it. At least Lionel isn\u0027t alone. Maya may be crying, but I think it\u0027s best for Lionel to go and live among his friends."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012101,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 8039,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012101,
+      "items": [
+        {
+          "itemId": 4000051,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2041001
+        },
+        {
+          "itemId": 4000051,
+          "count": -100
+        }
+      ],
+      "experience": 30000
+    }
+  }
+}

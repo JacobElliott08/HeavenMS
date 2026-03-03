@@ -1,0 +1,46 @@
+{
+  "questId": 3623,
+  "info": {
+    "name": "Grandma Yeon\u0027s Pot",
+    "descriptions": {
+      "notStarted": "Word is that Grandma Yeon of the Folk Town is great at making pots.",
+      "inProgress": "I needed a new pot for Kong Ji, so I went to see Grandma Yeon near water mill. She seemed very appreciative of the fact that I helped her husband get something done in the past, and decided to sell it to me cheap. #b5,000 mesos#k?is that really considered cheap?",
+      "completed": "I was able to purchase Grandma Yeon\u0027s pot for 5,000 mesos."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071007,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3619,
+          "state": "STARTED"
+        },
+        {
+          "questId": 3600,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031230
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071007
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -5000,
+      "items": [
+        {
+          "itemId": 4031230
+        }
+      ]
+    }
+  }
+}

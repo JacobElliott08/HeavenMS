@@ -1,0 +1,33 @@
+{
+  "questId": 3843,
+  "info": {
+    "name": "Master Goblin\u0027s Questions",
+    "parent": "Eliminating King Sage Cat",
+    "descriptions": {
+      "inProgress": "Due to being tricked by Master Goblin, I wound up giving the Red Marble to Do Gong, poisoning him in the process. This isn\u0027t true... how can he lie to me? I better go back to see Master Goblin and ask him what\u0027s up!",
+      "completed": "Master Goblin offered to give me an #bantidote marble#k if I manage to answer all three of questions... but the true answers were NOWHERE to be found. He NEVER meant to give me the antidote!! What should I do? I better go see Do Gong now."
+    },
+    "area": 44,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091001,
+      "minLevel": 77,
+      "prerequisiteQuests": [
+        {
+          "questId": 3842,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091004
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "questId": 2326,
+  "info": {
+    "name": "James\u0027s Whereabouts (2)",
+    "descriptions": {
+      "notStarted": "You should help #b#p1300008##k make his escape.",
+      "inProgress": "You need to bring a #b#t4001317##k to #b#p1300008##k to help him escape.",
+      "completed": "You brought a #b#t4001317##k to #b#p1300008##k to help him escape."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300008,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2325,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300008,
+      "items": [
+        {
+          "itemId": 4001317
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 12000,
+      "nextQuest": 2327,
+      "items": [
+        {
+          "itemId": 4001317,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

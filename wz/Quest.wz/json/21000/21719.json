@@ -1,0 +1,36 @@
+{
+  "questId": 21719,
+  "info": {
+    "name": "The Puppeteer\u0027s Invitation",
+    "descriptions": {
+      "notStarted": "A mysterious figure starts talking to you…",
+      "inProgress": "When you accept the invitation from the mysterious figure, you find yourself in front of a strange-looking cave! Inside the cave...is the kid with the puppets! So that\u0027s the kid responsible for manipulating the monsters in #m100000000# and #m101000000#? Talk to the kid and see what\u0027s up.",
+      "completed": "When you accept the invitation from the mysterious figure, you find yourself in front of a strange-looking cave! Inside the cave...is the kid with the puppets! So that\u0027s the kid responsible for manipulating the monsters in #m100000000# and #m101000000#? Talk to the kid and see what\u0027s up."
+    },
+    "area": 6,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1204000,
+      "startScript": "q21719s",
+      "minLevel": 22,
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 21716,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1002104
+    }
+  }
+}

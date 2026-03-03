@@ -1,0 +1,34 @@
+{
+  "questId": 3321,
+  "info": {
+    "name": "Dr. De Lang, the Missing Alchemist",
+    "parent": "Parwen\u0027s Memory",
+    "descriptions": {
+      "inProgress": "With a sad, yet calm look on his face, #p2111002# did not look like someone that would scare off other people by conducting terrible experiments. Observing the words he candidly spoke, I realized that his wife was #b#p2111004##k! He said he wanted to give Phyllia a #bSilver Pendant#k... \\n\\n ...A Silver Pendant? Come to think of it, didn\u0027t #p2040050# say something like the key to #p2111002#\u0027s secret note is made out of silver? I can\u0027t believe that pendant has been lying around in #p2111002#\u0027s house...",
+      "completed": "Thanks to #p2111006#\u0027s amazing abilities, I was able to talk to #p2111002#."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111002,
+      "minLevel": 70,
+      "startScript": "q3321s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3320,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "questId": 3806,
+  "info": {
+    "name": "Collecting Peach Seeds",
+    "parent": "Protecting the Peach Farm",
+    "descriptions": {
+      "notStarted": "#b#p2091002##k, the owner of the Peach Farm and the resident pharmacist at #b#m250000000##k. He seemed concerned about something...",
+      "inProgress": "#p2091002# seemed relieved that the #o6130207#s have been eliminated, but was very much concerned over the fact that they have already eaten most of the peaches at the farm. He was worried that the crop will be very low. He asked me to collect #b100 more #t4000282#s#k. \\n\\n#i4000282##t4000282#  #b#c4000282##k/100",
+      "completed": "I gathered up #t4000282#s for him. NOW #p2091002# seemed to breathe the sigh of relief."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091002,
+      "minLevel": 60,
+      "prerequisiteQuests": [
+        {
+          "questId": 3805,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091002,
+      "items": [
+        {
+          "itemId": 4000282,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 26000,
+      "items": [
+        {
+          "itemId": 4000282,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

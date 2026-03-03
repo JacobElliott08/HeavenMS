@@ -1,0 +1,60 @@
+{
+  "questId": 29019,
+  "info": {
+    "name": "Title - Saint Exorcist",
+    "descriptions": {
+      "notStarted": "You can apparently acquire the title of #b\u003cSaint Exorcist\u003e#k by eliminating undead monsters and sending them back to nirvana…",
+      "inProgress": "#b#eTitle - Saint Exorcist#k#n\\r\\nEliminate undead monsters and send them back to where they came from.\\n\\n1 #t2386000# \\n1 #t2386004# \\n1 #t2386010# \\n1 #t2387002# \\n1 #t2387003# \\n\\n#o8140600# #a290191#\\n#o8142000# #a290192#\\n#o8143000# #a290193#\\n#o8190003# #a290194#\\n#o8190004# #a290194#\\r\\n",
+      "completed": "You were able to eliminate the undead monsters and acquired the title of #b\u003cSaint Exorcist\u003e#k."
+    },
+    "area": 51,
+    "autoComplete": true,
+    "medalItemId": 1142140
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "minLevel": 92,
+      "prerequisiteQuests": [
+        {
+          "questId": 29018,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "monsters": [
+        {
+          "monsterId": 8140600,
+          "count": 444
+        },
+        {
+          "monsterId": 8142000,
+          "count": 444
+        },
+        {
+          "monsterId": 8143000,
+          "count": 444
+        },
+        {
+          "monsterId": 8190003,
+          "count": 444
+        },
+        {
+          "monsterId": 8190004,
+          "count": 444
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142140
+        }
+      ]
+    }
+  }
+}

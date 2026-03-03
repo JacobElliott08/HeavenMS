@@ -1,0 +1,54 @@
+{
+  "questId": 6223,
+  "info": {
+    "name": " The Summoned Being\u0027s Structure",
+    "parent": " Inverse Attributes",
+    "descriptions": {
+      "notStarted": "#b#p2012017##k asked me to wait while he makes #b#t4031451##k.",
+      "inProgress": "#b#p2012017##k Now that he finished making #b#t4031451##k, #b#p2012017##k said his job was done. I\u0027ll have to go see #b#p2020005##k to learn how to give it magic power.    \\n\\n#i4031451##t4031451# #b#c4031451# / 1#k",
+      "completed": "#b#p2020005##k asked me talk to him later while he works on how to give magical power to #b#t4031451##k. I\u0027ll check on his progress in a little while. "
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012017,
+      "jobs": [
+        212
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6222,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "items": [
+        {
+          "itemId": 4031451
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031451
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 200000,
+      "items": [
+        {
+          "itemId": 4031451,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

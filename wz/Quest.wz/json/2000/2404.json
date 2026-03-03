@@ -1,0 +1,36 @@
+{
+  "questId": 2404,
+  "info": {
+    "name": "Training Center for Beginner Pirates",
+    "descriptions": {
+      "notStarted": "After making a job advancement as a Pirate, you need to find a training center that\u0027ll help you level up faster.",
+      "inProgress": "After making a job advancement as a Pirate, you should follow the arrows from the Nautilus that lead you to a training center. You won\u0027t be able to enter once you reach Level 20.",
+      "completed": "You found the training center for beginner Pirates. You\u0027ll be able to receive your first set of training lessons from the trainer, Power B. Fore."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "minLevel": 10,
+      "maxLevel": 19,
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522
+      ]
+    },
+    "complete": {
+      "npc": 1095001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 900
+    }
+  }
+}

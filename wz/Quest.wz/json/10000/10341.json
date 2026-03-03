@@ -1,0 +1,28 @@
+{
+  "questId": 10341,
+  "info": {
+    "name": "Aran\u0027s Revival",
+    "descriptions": {
+      "notStarted": "Apparently, Aran is returning. Who is he exactly? Why did he disappear from Maple World in the first place? For details, you must talk to #bCassandra#k.",
+      "inProgress": "Cassandra seems to know quite a lot about him…",
+      "completed": "Twelve Aran Memory Fragments... If you go see Cassandra, you\u0027ll be able to find the Aran Memory Fragments, right?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2009010100",
+      "startScript": "q10341s",
+      "prerequisiteQuests": [
+        {
+          "questId": 10340,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  }
+}

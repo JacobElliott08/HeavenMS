@@ -1,0 +1,50 @@
+{
+  "questId": 4553,
+  "info": {
+    "name": "Gift for Dear Daddy",
+    "parent": "Surprise Birthday Party",
+    "descriptions": {
+      "notStarted": "#b#p9270058##k is lost in her thought. Her daddy\u0027s birthday is coming and she wants to give him something special this year.",
+      "inProgress": "#b#p9270058##k\u0027s daddy is a great fan of music, as well as a collector of all sorts of musical instruments. #b#t4000472##k might be the perfect birthday gift for him. \\n\\n#o9420534# #r#a45531##k \\n#t4000472# #r#c4000472#/100#k",
+      "completed": "#b#p9270058##k\u0027s daddy was happy with the gift and he promised to take her out for a exquisite dinner."
+    },
+    "area": 49,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270058,
+      "minLevel": 70
+    },
+    "complete": {
+      "npc": 9270058,
+      "items": [
+        {
+          "itemId": 4000472,
+          "count": 100
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9420534,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 2000005,
+          "count": 10
+        },
+        {
+          "itemId": 4000472,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

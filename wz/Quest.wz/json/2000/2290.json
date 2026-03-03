@@ -1,0 +1,38 @@
+{
+  "questId": 2290,
+  "info": {
+    "name": "Debut Preparations Completed",
+    "descriptions": {
+      "notStarted": "Everything seems to be in order. Confirm one more time with #bLana#k.",
+      "inProgress": "Lana says everything for Blake\u0027s debut performance is good to go and wants you to give #bBlake#k the good news.",
+      "completed": "Blake was beyond happy and gave you a special gift. He then said you should go see #bJune#k at Kerning Square."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052121,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2289,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052117
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 37200,
+      "items": [
+        {
+          "itemId": 1032075
+        }
+      ]
+    }
+  }
+}

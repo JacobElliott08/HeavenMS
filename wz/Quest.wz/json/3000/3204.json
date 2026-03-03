@@ -1,0 +1,47 @@
+{
+  "questId": 3204,
+  "info": {
+    "name": "Peace at Eos Tower",
+    "descriptions": {
+      "notStarted": "I should go see Marcel, who should be in Ludibrium.",
+      "inProgress": "Marcel of Ludibrium asked for one last favor, this time, for me to take down the ultimate monster in Eos Tower, the leader of the monsters inside, #b#o4130103##k. It is found every once in a while in the middle of Eos Tower, at a secret passage.\\n\\n#o4130103# #r#a32041#",
+      "completed": "I took out the leader of all Block Golems, Rombot, just the way Marcel of Ludibrium asked me to do. Hopefully this will bring peace to Eos Tower. "
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041004,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 3203,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041004,
+      "monsters": [
+        {
+          "monsterId": 4130103
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10500,
+      "items": [
+        {
+          "itemId": 2040804,
+          "probability": 1
+        },
+        {
+          "itemId": 2040805,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

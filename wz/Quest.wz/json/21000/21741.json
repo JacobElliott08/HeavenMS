@@ -1,0 +1,40 @@
+{
+  "questId": 21741,
+  "info": {
+    "name": "Investigating Mu Lung",
+    "descriptions": {
+      "notStarted": "As soon as you reach Level 54, you hear from #b#p1002104##k.",
+      "inProgress": "#p1002104# says they\u0027ve just received word regarding the Black Wings and urges you to go to #b#m250000000##k. Talk to #b#p2090004##k in #m250000000# for more details.",
+      "completed": "You met with #p2090004# in #m250000000#."
+    },
+    "area": 6,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 54,
+      "normalAutoStart": true,
+      "startScript": "q21741s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21740,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2090004
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500
+    }
+  }
+}

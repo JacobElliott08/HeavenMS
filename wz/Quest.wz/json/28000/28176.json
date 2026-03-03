@@ -1,0 +1,53 @@
+{
+  "questId": 28176,
+  "info": {
+    "name": "Solving the Mystery",
+    "parent": "Who is the suspect?",
+    "descriptions": {
+      "notStarted": "#b#@1032001:##k in #b#m101000000##k is known to love wine. Let\u0027s go find him.",
+      "inProgress": "The suspect was #b#@1040000:##k in #b#m106010100##k. Let\u0027s rush over to #b#m100000000##k and inform #b#@1012003:##k.",
+      "completed": "You have revealed the hidden secret of the Iron Fragment and found the suspect. It was #b#@1040000:##k in #b#m106010100##k. A random thought: collecting ingredients for the wine was a lot of work."
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "prerequisiteQuests": [
+        {
+          "questId": 28175,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1012003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

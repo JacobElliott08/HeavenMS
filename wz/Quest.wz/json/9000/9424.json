@@ -1,0 +1,50 @@
+{
+  "questId": 9424,
+  "info": {
+    "name": "북극곰 로로의 하늘 구경",
+    "descriptions": {
+      "notStarted": "코-크타운에 살고 있는 #b#p9001001##k를 찾아가보자.",
+      "inProgress": "별을 좋아하는 #b#p9001001##k가 조금 더 가까운 곳에서 별을 볼 수 있도록 발판 만드는 것을 도와주자. \\n\\n#t04000221:# #b#c04000221#/200#k ",
+      "completed": "별을 좋아하는 #b#p9001001##k가 조금 더 가까운 곳에서 별을 볼 수 있도록 도와주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9001001,
+      "minLevel": 15,
+      "startDate": "2006070300",
+      "endDate": "2007112300",
+      "prerequisiteQuests": [
+        {
+          "questId": 9423,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9001001,
+      "items": [
+        {
+          "itemId": 4000221,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 600,
+      "items": [
+        {
+          "itemId": 4000221,
+          "count": -200
+        },
+        {
+          "itemId": 2022075,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

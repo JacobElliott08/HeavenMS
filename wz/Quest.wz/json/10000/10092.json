@@ -1,0 +1,31 @@
+{
+  "questId": 10092,
+  "info": {
+    "name": "베인의 응원",
+    "descriptions": {
+      "notStarted": "베인이 그린캠페인을 응원하기 위해 기다리고 있다.",
+      "inProgress": "베인이 그린캠페인을 응원해 준다.",
+      "completed": "베인이 그린캠페인을 응원해 주었다."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092002,
+      "startDate": "2008111300",
+      "endDate": "2008121900",
+      "minLevel": 13,
+      "prerequisiteQuests": [
+        {
+          "questId": 10082,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092002,
+      "endScript": "q10092e"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "questId": 9984,
+  "info": {
+    "name": "Putting the Maple Leaf in my mouth...",
+    "descriptions": {
+      "notStarted": "I should go see #b#p9010010##k.  She said she was going to tell me some special information in light of MapleStory\u0027s 4 Year Anniversary...",
+      "inProgress": "Collect #t04001126#? It\u0027s hard to believe that it\u0027s a #b#t01012098##k... but it is said to be very potent.  It\u0027s not like I need to collect a large amount.  I should give it a try\\n\\n #i04001126# #t04001126# #b#c04001126##k / 50",
+      "completed": "I got a #b#t01012098##k!  After I put it in my mouth, I feel like my abilities increasing.  It feels invigorating.  Oh, but what if it doesn\u0027t increase the abilities I need?\\n...I\u0027ll just go see #p9010010# in two hours.  I\u0027m sure she\u0027ll know what to do."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 120,
+      "endDate": "2009061623"
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q9984e",
+      "items": [
+        {
+          "itemId": 4001126,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "minLevel": 10,
+      "intervalMinutes": 120
+    }
+  }
+}

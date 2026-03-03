@@ -1,0 +1,43 @@
+{
+  "questId": 3377,
+  "info": {
+    "name": "Han the Broker\u0027s Recipe",
+    "descriptions": {
+      "notStarted": "I better stop Juliet before she accidentally poisons Romeo with her toxic cooking skills. I\u0027ll need to hurry up and see #bHan the Broker#k so I can buy a recipe for a nice food from him.",
+      "inProgress": "Han the Broker was noticeably complaining, and told me if I wanted his #blunchbox recipe#k, then I\u0027ll have to fork over #b20,000 mesos#k. That\u0027s really pricey, but he\u0027s the only way I can acquire the recipe here in Magatia...",
+      "completed": "I got the recipe from Han the Broker. This recipe also gives me this uneasy feeling. This time, it\u0027s not the contents, but the broker himself that worries me..."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111007,
+      "minLevel": 70,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3376,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031785
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111007
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -20000,
+      "items": [
+        {
+          "itemId": 4031785
+        }
+      ]
+    }
+  }
+}

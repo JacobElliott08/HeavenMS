@@ -1,0 +1,90 @@
+{
+  "questId": 6006,
+  "info": {
+    "name": "Silver Mane",
+    "descriptions": {
+      "notStarted": " I\u0027ve heard that #p2060005# has furthered his research and found a way to upgrade my existing mount.  A faster monster to ride?  I should go see #p2060005# in Aqua Road immediately!",
+      "inProgress": " I visited the Aquarium and #p2060005# has indeed found a way to make the mounts bigger, faster and stronger! However, he needs #b#t4000264#, #t4000266#, and #t4000267##k to make the experiement a success.  He asked for a \"donation\" of 50 million mesos to develop the technology for monster and human to co-exist. That\u0027s some expensive research! He must be raking it in...\\n\\n#i4000264##t4000264# #b#c4000264#/600#k\\n#i4000266##t4000266# #b#c4000266#/400#k\\n#i4000267##t4000267# #b#c4000267#/400#k",
+      "completed": " It took a bit of time, but I returned with the needed items and \"donation\" he asked for. #p2060005# made my #t1902000# into a #t1902001#.  What a difference! My mount is so much sharper and stronger than before! I can run over almost anything now!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "repeatIntervalMinutes": 0,
+      "jobs": [
+        112,
+        122,
+        132,
+        212,
+        222,
+        232,
+        312,
+        322,
+        412,
+        422,
+        512,
+        522
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6003,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1902000
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060005,
+      "items": [
+        {
+          "itemId": 1902000
+        },
+        {
+          "itemId": 4000264,
+          "count": 600
+        },
+        {
+          "itemId": 4000266,
+          "count": 400
+        },
+        {
+          "itemId": 4000267,
+          "count": 400
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000,
+      "meso": -50000000,
+      "items": [
+        {
+          "itemId": 4000264,
+          "count": -600
+        },
+        {
+          "itemId": 4000266,
+          "count": -400
+        },
+        {
+          "itemId": 4000267,
+          "count": -400
+        },
+        {
+          "itemId": 1902000,
+          "count": -1
+        },
+        {
+          "itemId": 1902001
+        }
+      ]
+    }
+  }
+}

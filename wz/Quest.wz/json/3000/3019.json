@@ -1,0 +1,45 @@
+{
+  "questId": 3019,
+  "info": {
+    "name": "The Secrets Behind the Ring?",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "Alcaster took time observing the ring, and felt an incredible force emanating from it. He recommended that I go see Scadur the Hunter around El Nath."
+    },
+    "area": 33,
+    "order": 16
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3018,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020007
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031053
+        }
+      ]
+    },
+    "onComplete": {
+      "nextQuest": 3020,
+      "items": [
+        {
+          "itemId": 4031053,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

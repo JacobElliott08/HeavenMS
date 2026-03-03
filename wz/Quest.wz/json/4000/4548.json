@@ -1,0 +1,56 @@
+{
+  "questId": 4548,
+  "info": {
+    "name": "Oly Oly is back!",
+    "parent": "Chee Wee\u0027s Worries",
+    "descriptions": {
+      "notStarted": "#b#p9270060##k has found out that even more tires have been stolen now. It must be those sneaky villain, #b#o9420530##k, back in town!",
+      "inProgress": "This stealing must be stopped now! Let\u0027s put an end to it, once and for all! \\n\\n#o9420530# #r#a45481##k \\n#t4000468# #r#c4000468#/100#k  ",
+      "completed": "#b#p9270060##k was happy to announce that life in the city is back to normal that everybody is getting proper transportation they need. What a releif!"
+    },
+    "area": 49,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270060,
+      "minLevel": 57,
+      "prerequisiteQuests": [
+        {
+          "questId": 4547,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270060,
+      "items": [
+        {
+          "itemId": 4000468,
+          "count": 100
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9420530,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 33300,
+      "items": [
+        {
+          "itemId": 4003000,
+          "count": 20
+        },
+        {
+          "itemId": 4000468,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

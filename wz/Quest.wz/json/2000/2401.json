@@ -1,0 +1,39 @@
+{
+  "questId": 2401,
+  "info": {
+    "name": "Training Center for Beginner Magicians",
+    "descriptions": {
+      "notStarted": "After making a job advancement as a Magician, you need to find a training center that\u0027ll help you level up faster.",
+      "inProgress": "After making a job advancement as a Magician, you should follow the arrows from Ellinia that lead you to a training center. You won\u0027t be able to enter once you reach Level 20.",
+      "completed": "You found the training center for beginner Magicians. You\u0027ll be able to receive your first set of training lessons from the trainer, Power B. Fore."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "minLevel": 8,
+      "maxLevel": 19,
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232
+      ]
+    },
+    "complete": {
+      "npc": 1032113
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 900
+    }
+  }
+}

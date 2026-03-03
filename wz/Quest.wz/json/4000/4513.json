@@ -1,0 +1,58 @@
+{
+  "questId": 4513,
+  "info": {
+    "name": "Fight for the future",
+    "parent": "The Secret of Ghostship",
+    "descriptions": {
+      "notStarted": "I sense something that #p9270030# has not told me all of his secrets. There is still something about this Ghostship. Let\u0027s go find out.",
+      "inProgress": "Believe it or not, #p9270030# told me that there is this Boss Ghost, #r#o9420513##k, who controls all other ghosts in town. Without defeating this monster, the boat quay will never be the same. Let go investigate the Ghostship now. But I must be cautious since he also said the Ghostship itself is a big maze... I will have to eliminate #o9420513# and collect #t4000384# as proof of elimination.\\n\\n#o9420513#  #r#a45131##k\\n#t4000384#  #r#c4000384#/1#k",
+      "completed": "What an experience! I am glad that I brought peace to this town and to the sailors! However, I feel that the ghost has not completely disappeared. I should go check every once in a while."
+    },
+    "area": 48,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270030,
+      "prerequisiteQuests": [
+        {
+          "questId": 4510,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4511,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4512,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270030,
+      "items": [
+        {
+          "itemId": 4000384
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9420513
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100000,
+      "meso": 100000,
+      "items": [
+        {
+          "itemId": 4000384,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

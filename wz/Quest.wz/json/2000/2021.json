@@ -1,0 +1,132 @@
+{
+  "questId": 2021,
+  "info": {
+    "name": "Secret to Unagi Special",
+    "parent": "Mr. Wetbottom\u0027s Secret Book",
+    "descriptions": {
+      "inProgress": "To get the Unagi special and a fresh milk, I need to gather up the ingredients for those. Rina of Henesys requested #b50 Curse Eye tails and 5 pig\u0027s heads#k for the Unagi special. Rowen the fairy of Ellinia asked for a refined piece of glittering #bdiamond#k for a fresh milk. Diamond, huh... how am I supposed to get that rare, expensive item?",
+      "completed": "Inside the tree tunnel of Ellinia, I found #bRonnie#k, the son of Mr. Wetbottom. He was adamant about not giving away the red book, but he seemed very hungry. I wound up making a deal with him where he would give me the red book after I get him #b50 Lupin\u0027s Bananas, Rina\u0027s Special Unagi, and a fresh milk#k. According to Ronnie, Rina can be found at Henesys, and the fresh milk can be obtained through a fairy in Ellinia. This looks like quite a task, but oh well... I should get going."
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1010100,
+      "minLevel": 30,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 2020,
+          "state": "STARTED"
+        },
+        {
+          "questId": 2023
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031014
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1010100,
+      "items": [
+        {
+          "itemId": 4000017,
+          "count": 5
+        },
+        {
+          "itemId": 4000013,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 4000013,
+          "count": -50
+        },
+        {
+          "itemId": 4000017,
+          "count": -5
+        },
+        {
+          "itemId": 4031014
+        }
+      ]
+    }
+  }
+}

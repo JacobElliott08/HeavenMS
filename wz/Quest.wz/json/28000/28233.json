@@ -1,0 +1,59 @@
+{
+  "questId": 28233,
+  "info": {
+    "name": "Putting the Legend to a Test",
+    "parent": "Solomon\u0027s Bow",
+    "descriptions": {
+      "notStarted": "#b#@1022000:##k in #bPerion#k says he has something else he wants to say about #rSolomon\u0027s Bow#k.",
+      "inProgress": "He says to hunt 30 #rStumps#k in order to test the bow first.\\n\\nHe says you can easily find them in #b#m101040000##k as well as in #b#m102010000##k.\\n\\nLet\u0027s report back to #b#@1022000:##k in #bPerion#k upon completion.",
+      "completed": "#b#@1022000:##k in #bPerion#k wants to know more about #rSolomon\u0027s Bow#k."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28232,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1022000,
+      "monsters": [
+        {
+          "monsterId": 130100,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 1452083
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 600
+    }
+  }
+}

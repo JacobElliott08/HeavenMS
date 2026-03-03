@@ -1,0 +1,52 @@
+{
+  "questId": 8184,
+  "info": {
+    "name": "Pet\u0027s Evolution1",
+    "descriptions": {
+      "notStarted": "I heard there\u0027s a rumor that the Baby Dragons can be evolved. Unfortunately, the only way to find out is to meet up with the grotesque-looking Karnox. I better go see him...",
+      "inProgress": "I better protect the Dragon\u0027s egg from the vicious egg hunters such as Lupins and Cold Eyes and need to gather #b50Lupin\u0027s Bananas#k and #b50 Cold Eye Tails#k.",
+      "completed": "Thankfully, Karnox acknowledged my true love for the Baby Dragon and promised to help my pet evolve."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9102001,
+      "minPetTameness": 1642,
+      "petRequirement": {}
+    },
+    "complete": {
+      "npc": 9102001,
+      "minPetTameness": 1642,
+      "items": [
+        {
+          "itemId": 4000029,
+          "count": 50
+        },
+        {
+          "itemId": 4000023,
+          "count": 50
+        }
+      ],
+      "petRequirement": {}
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000023,
+          "count": -50
+        },
+        {
+          "itemId": 4000029,
+          "count": -50
+        },
+        {
+          "itemId": 2120000,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

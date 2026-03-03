@@ -1,0 +1,71 @@
+{
+  "questId": 2130,
+  "info": {
+    "name": "Beginner Warrior\u0027s Third Training Session",
+    "descriptions": {
+      "notStarted": " I\u0027m getting used to being a Warrior..but still have a long way to go.  #b#p1022000##k wants to help me out..",
+      "inProgress": "#p1022000# told me that a Warrior needs to have endurance and patience. He ordered me to hunt #r80 #o0130100##k . 80 #o0130100# ... Not easy, eh? \\n\\n#o0130100# #r#a21301##k",
+      "completed": "I\u0027m done with all 80#o0130100# . Phew... It certainly was not easy."
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 2129,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1022000,
+      "monsters": [
+        {
+          "monsterId": 130100,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 645,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 30
+        },
+        {
+          "itemId": 2000003,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

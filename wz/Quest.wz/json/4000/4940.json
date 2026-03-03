@@ -1,0 +1,44 @@
+{
+  "questId": 4940,
+  "info": {
+    "name": "Winston\u0027s Scheme Part 2",
+    "parent": "Winston\u0027s Scheme",
+    "descriptions": {
+      "notStarted": "a",
+      "inProgress": "b",
+      "completed": "c"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022006,
+      "minLevel": 35,
+      "endDate": "2007072721",
+      "prerequisiteQuests": [
+        {
+          "questId": 4939,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4928,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022006,
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    }
+  }
+}

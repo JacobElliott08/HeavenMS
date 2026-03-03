@@ -1,0 +1,37 @@
+{
+  "questId": 2221,
+  "info": {
+    "name": "Conclusion",
+    "descriptions": {
+      "notStarted": "The evil scheme to put #m103000000# in danger... it only turned out to be #p9020000#\u0027s clumsiness. Let\u0027s go inform #bJM#k.",
+      "inProgress": "JM, numbed by the absurdity, asks you to defeat #o6220000#. He seems to have aged 10 years because of this. Poor JM...\\n\\n#o6220000##r#a22211##k",
+      "completed": "You have defeated #o6220000# and reported your progress to JM."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052002,
+      "prerequisiteQuests": [
+        {
+          "questId": 2220,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052002,
+      "monsters": [
+        {
+          "monsterId": 6220000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 180000,
+      "fame": 12
+    }
+  }
+}

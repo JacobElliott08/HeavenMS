@@ -1,0 +1,59 @@
+{
+  "questId": 21718,
+  "info": {
+    "name": "Rowen\u0027s Request 2",
+    "descriptions": {
+      "notStarted": "You should talk to #b#p1032101##k in #b#m101000000##k and see if the puppet-toting kid has made any more appearances in the South Forest.",
+      "inProgress": "#p1032101# says that the kid with the puppet has showed up once again in #m100040003# and wants you to eliminate the #o1110100#s and retrieve the puppet yet again.\\r\\n\\r\\n\\r\\nRegardless of Personality #o9101000##r #a217181##k\\r\\n#i4032318# #t4032318# #b#c4032318# / 1#k",
+      "completed": "You defeated the #o1110100# and retrieved the #t4032318#. So far, you\u0027ve managed to foil the kid\u0027s plan times times. Perhaps the kid\u0027ll give up now…?"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032101,
+      "minLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 21717,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1032101,
+      "items": [
+        {
+          "itemId": 4032318
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9101000,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2500,
+      "items": [
+        {
+          "itemId": 4032318,
+          "count": -1
+        },
+        {
+          "itemId": 2050004,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

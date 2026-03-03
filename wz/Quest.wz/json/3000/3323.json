@@ -1,0 +1,46 @@
+{
+  "questId": 3323,
+  "info": {
+    "name": "Phyllia\u0027s Concern",
+    "parent": "The Fairy in Despair 1",
+    "descriptions": {
+      "notStarted": "At #b#m261000000##k, there\u0027s a fairy that seems to always wear a sad face, #b#p2111004##k. I wonder what really saddens her.",
+      "inProgress": "#p2111004# says although her daughter #p2111005# may seem exuberant and lively on the outside, she is very much concerned about her failing health. She wants to cure her declining health by acquiring medicine from #b#p2012018##k of #b#m200000000##k.",
+      "completed": "#p2012018# seems to know something about #p2111004#. Maybe he\u0027ll help #p2111004# out."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111004,
+      "minLevel": 45
+    },
+    "complete": {
+      "npc": 2012018,
+      "items": [
+        {
+          "itemId": 4031706
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031706
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4031706,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

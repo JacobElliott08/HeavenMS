@@ -1,0 +1,90 @@
+{
+  "questId": 3088,
+  "info": {
+    "name": "Pixies\u0027 Cloud Pieces",
+    "parent": "Orbis in Danger",
+    "descriptions": {
+      "inProgress": "I talked to the mysterious girl at #p2032001#\u0027s house again. She mentioned that Spiruna has finally found the main reason Orbis is sinking. Orbis floats in the air thanks to the mythical, magical power that\u0027s laden in the clouds, but the Pixie\u0027s have been soaking up that magical power from the clouds to their advantage. The Pixies use that power to increase their magical powers, and by doing so, the clouds have been weakened to the point of Orbis making its freefall. To start the fixing, she wanted me to gather up #b25 #t4031309#s#k from #o3230200#, #o4230106#, and #o5120000# for her.\\n\\n#t4031309#  #b#c4031309##k / 25",
+      "completed": "Just the way the mysterious girl at #p2032001#\u0027s house requested, I gathered up 25 #t4031309#s from the Pixie\u0027s and gave them to her."
+    },
+    "area": 33,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2032000,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3087,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2032000,
+      "items": [
+        {
+          "itemId": 4031309,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 4020000,
+          "count": 5,
+          "probability": 2
+        },
+        {
+          "itemId": 4020001,
+          "count": 5,
+          "probability": 2
+        },
+        {
+          "itemId": 4020002,
+          "count": 5,
+          "probability": 2
+        },
+        {
+          "itemId": 4020003,
+          "count": 5,
+          "probability": 2
+        },
+        {
+          "itemId": 4020004,
+          "count": 5,
+          "probability": 2
+        },
+        {
+          "itemId": 4020005,
+          "count": 5,
+          "probability": 2
+        },
+        {
+          "itemId": 4020006,
+          "count": 5,
+          "probability": 2
+        },
+        {
+          "itemId": 4020007,
+          "count": 5,
+          "probability": 1
+        },
+        {
+          "itemId": 4020008,
+          "count": 5,
+          "probability": 1
+        },
+        {
+          "itemId": 4031309,
+          "count": -25
+        }
+      ]
+    }
+  }
+}

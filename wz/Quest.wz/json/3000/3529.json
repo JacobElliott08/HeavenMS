@@ -1,0 +1,46 @@
+{
+  "questId": 3529,
+  "info": {
+    "name": "In Search for the Lost Memory",
+    "descriptions": {
+      "notStarted": "According to the Memory Keeper, in order to find my lost memory, I need to go back to the starting point of my adventure.  Starting point of my adventure? Let\u0027s see... Wouldn\u0027t that be when I left Maple Island to Victoria Island for the first time and got my job?  I should go see #b#p1101002##k. ",
+      "inProgress": "It had been a long time since I last met with #p1101002#.  He said he remembered when I was just a Noblesse and I knew nothing. He was happy to see how I\u0027ve grown into a great knight.  I was touched that he still remembered our first meeting from such a long time ago.",
+      "completed": "It had been a long time since I last met with #p1101002#.  He said he remembered when I was just a Noblesse and I knew nothing. He was happy to see how I\u0027ve grown into a great knight.  I was touched that he still remembered our first meeting from such a long time ago."
+    },
+    "area": 46
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "startScript": "q3529s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3507,
+          "state": "STARTED"
+        }
+      ],
+      "jobs": [
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    }
+  }
+}

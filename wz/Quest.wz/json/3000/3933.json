@@ -1,0 +1,50 @@
+{
+  "questId": 3933,
+  "info": {
+    "name": "Ardin\u0027s Sand Bandits",
+    "parent": "Sand Bandits According to Ardin",
+    "descriptions": {
+      "notStarted": "I have passed all of #p2101003#\u0027s test. Now I will be accepted as a member of the Sand Bandits, right? I better go talk to #p2101003#.",
+      "inProgress": "#p2101003# told me the Sand Bandits will need to get stronger in order to fight the queen, and told me if I could beat him, then I\u0027ll be accepted as the member of the Sand Bandits... Will I be able to defeat #p2101003#? \\n\\nArdin\u0027s Other Self#r#a39331##k",
+      "completed": "He may look slow and clumsy, but #p2101003# was much more powerful that I envisioned, but I still won the battle, so am I now a member of the Sand Bandits? #p2101003# told me in order to be a member of the Sand Bandits, I have to be approved by two more members. Come to think of it, other than iron hammer, #p2103001# also had bow, arrows, and dagger written on the wall."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101003,
+      "minLevel": 29,
+      "startScript": "q3933s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3932,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101003,
+      "monsters": [
+        {
+          "monsterId": 9100013
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7250,
+      "items": [
+        {
+          "itemId": 2012000,
+          "count": 10
+        },
+        {
+          "itemId": 2012002,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

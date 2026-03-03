@@ -1,0 +1,49 @@
+{
+  "questId": 1119,
+  "info": {
+    "name": "에릭손의 사랑의 증표",
+    "descriptions": {
+      "notStarted": "#t4031687#를 받으려면 에릭손을 찾아가보자.",
+      "inProgress": "에릭손은 나의 사랑을 증명하라면서 #b#t4000070# 20#k개를 가져오라고 했다.\\n\\n#i4000070##t4000070# #b#c4000070# / 20#k",
+      "completed": "에릭손에게 사랑의 증표를 얻었다."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012018,
+      "repeatIntervalMinutes": 0,
+      "infoNumber": 1100,
+      "infoEx": [
+        null
+      ],
+      "items": [
+        {
+          "itemId": 4031687
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012018,
+      "items": [
+        {
+          "itemId": 4000070,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000070,
+          "count": -20
+        },
+        {
+          "itemId": 4031687
+        }
+      ]
+    }
+  }
+}

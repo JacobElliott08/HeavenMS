@@ -1,0 +1,35 @@
+{
+  "questId": 29006,
+  "info": {
+    "name": "El Nath Mts. Explorer",
+    "descriptions": {
+      "notStarted": "You can earn the #b\u003cEl Nath Mts. Explorer\u003e#k title by exploring the El Nath Mts.",
+      "inProgress": "#b#eTitle - El Nath Mts. Explorer#k#n\\r\\nExplore the 10 main regions of El Nath Mts.\\r\\n#b● Status : #R27011# / 10 Completed.",
+      "completed": "You have earned the #b\u003cEl Nath Mts. Explorer\u003e#k title for exploring various places in El Nath Mts."
+    },
+    "area": 51,
+    "medalItemId": 1142113
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 30,
+      "npc": 9000066
+    },
+    "complete": {
+      "npc": 9000040,
+      "infoNumber": 27011,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142113
+        }
+      ]
+    }
+  }
+}

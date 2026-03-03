@@ -1,0 +1,58 @@
+{
+  "questId": 8802,
+  "info": {
+    "name": "Anniversary : Birthday Present (Blue)",
+    "descriptions": {
+      "notStarted": "I should go visit the MapleStory Administrator. I heard MapleStory is celebrating its 1st birthday, and she may have something in store for me...",
+      "inProgress": "The MapleStory Administrator said we\u0027ll be celebrating the anniversary in style and that there is a #bBLUE Birthday Present #kfor me to look for. Now, where must that be...\\n\\n#t4031307# #b#c4031307#/1#k",
+      "completed": "I found the #bBLUE Birthday Present#k, and gave it to the Maple Administrator. She opened the present for me and gave me what was inside. That was pretty sweet!"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 31,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2006060800"
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 4031307
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1002518,
+          "probability": 1
+        },
+        {
+          "itemId": 4031307,
+          "count": -1
+        },
+        {
+          "itemId": 2020032,
+          "probability": 8399
+        },
+        {
+          "itemId": 1002515,
+          "probability": 1000
+        },
+        {
+          "itemId": 1002516,
+          "probability": 500
+        },
+        {
+          "itemId": 1002517,
+          "probability": 100
+        }
+      ]
+    }
+  }
+}

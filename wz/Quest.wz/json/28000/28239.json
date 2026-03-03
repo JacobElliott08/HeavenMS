@@ -1,0 +1,44 @@
+{
+  "questId": 28239,
+  "info": {
+    "name": "Finding Muirhat",
+    "descriptions": {
+      "notStarted": "#b#@1072008:##k in #bNautilus#k says she will help you train further. Let\u0027s talk to her.",
+      "inProgress": "Let\u0027s go find #b#@1092007:##k in #bNautilus#k for additional training.",
+      "completed": "The Path of a Pirate.."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "prerequisiteQuests": [
+        {
+          "questId": 2196,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1092007
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

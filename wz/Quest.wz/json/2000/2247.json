@@ -1,0 +1,39 @@
+{
+  "questId": 2247,
+  "info": {
+    "name": "Raging Horny Mushrooms",
+    "parent": "Strange Mushrooms",
+    "descriptions": {
+      "notStarted": "The Rememberer of Sleepywood claims to be studying the changes that are taking place with the strange-looking Horny Mushrooms and needs some help.",
+      "inProgress": "The Rememberer says that he must continue his research and that the raging Horny Mushrooms must be stopped in the meantime.\\r\\n\\r\\n\\r\\n#o2110200# #a22471#\\r\\n",
+      "completed": "You helped the Remember of Sleepywood with his research again, but you better talk to him about the progress he\u0027s made in his studies on the strange mushrooms."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "prerequisiteQuests": [
+        {
+          "questId": 2246,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "monsters": [
+        {
+          "monsterId": 2110200,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000
+    }
+  }
+}

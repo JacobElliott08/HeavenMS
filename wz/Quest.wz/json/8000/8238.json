@@ -1,0 +1,48 @@
+{
+  "questId": 8238,
+  "info": {
+    "name": "Catch a Bigfoot by the Toe.",
+    "parent": "Bounty Hunter...",
+    "descriptions": {
+      "notStarted": "With all the strange occurrences in Masteria and New Leaf City, Lita Lawless must be busy! I\u0027ll bet that she\u0027s willing to accept my help...maybe I can earn some mesos in the process! A quick jaunt to the Kerning City subway and I\u0027ll be on my way to New Leaf City!",
+      "inProgress": "I spoke with Lita, and I\u0027m pretty sure I\u0027m getting the short end of the stick on this one. I have to venture into the Phantom Forest and find this creature they\u0027ve named Bigfoot and claim its toe as the proof of bounty. Everyone else who\u0027s gone after this thing has never come back-I\u0027d better stock up on potions and keep my guard up-who knows when it could appear?",
+      "completed": "I found this mysterious creature, and Lita wasn\u0027t kidding when she said it wrecked everyone that came after it! Although, when I was fighting it, I got the feeling that the Leprechaun on its back was just luring him into things...maybe it just doesn\u0027t know better? At any rate, I returned the Toe to Lita and claimed the Bounty.  The more mesos, the better!"
+    },
+    "area": 45,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201054,
+      "minLevel": 80,
+      "repeatIntervalMinutes": 2880,
+      "startScript": "q8238s",
+      "prerequisiteQuests": [
+        {
+          "questId": 8237,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201054,
+      "items": [
+        {
+          "itemId": 4032013
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100000,
+      "meso": 150000,
+      "items": [
+        {
+          "itemId": 4032013,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

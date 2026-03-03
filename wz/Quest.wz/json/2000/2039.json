@@ -1,0 +1,108 @@
+{
+  "questId": 2039,
+  "info": {
+    "name": "Last Material for Building a New House",
+    "parent": "Ronnie \u0026 the Fairies Building a New House.",
+    "descriptions": {
+      "inProgress": "Ronnie asked for the last time. This time he wanted #b50 each of medicine with weird vibe, dark stone gollem\u0027s pieces of rock, Wild Kargo\u0027s eyes, and Tauromacis\u0027s horns, along with 1 diamond#k. I can sort of get this, but for me to hunt at subway, deep forest, the ant tunnel ... it sucks!!",
+      "completed": "I got all the materials Ronnie needed for the last time. Is this it? For the reward, he gave me a pair of shoes he got as a gift from the fairies that found it somewhere around the forest. Somehow, he can\u0027t put the shoes on, so I\u0027m getting it ... hopefully it works ... haha"
+    },
+    "area": 30,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061004,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2038,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1061004,
+      "items": [
+        {
+          "itemId": 4021007
+        },
+        {
+          "itemId": 4000025,
+          "count": 50
+        },
+        {
+          "itemId": 4000027,
+          "count": 50
+        },
+        {
+          "itemId": 4000036,
+          "count": 50
+        },
+        {
+          "itemId": 4000028,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 4000036,
+          "count": -50
+        },
+        {
+          "itemId": 4000025,
+          "count": -50
+        },
+        {
+          "itemId": 4000027,
+          "count": -50
+        },
+        {
+          "itemId": 4000028,
+          "count": -50
+        },
+        {
+          "itemId": 4021007,
+          "count": -1
+        },
+        {
+          "itemId": 1072136,
+          "probability": 1
+        },
+        {
+          "itemId": 1072137,
+          "probability": 1
+        },
+        {
+          "itemId": 1072138,
+          "probability": 1
+        },
+        {
+          "itemId": 1072139,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

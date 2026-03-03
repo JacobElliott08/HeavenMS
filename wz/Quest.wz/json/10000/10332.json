@@ -1,0 +1,28 @@
+{
+  "questId": 10332,
+  "info": {
+    "name": "Special Order! Find Agent S!",
+    "descriptions": {
+      "notStarted": "Agent M says to go see Agent S. Get the information you need from the Maple Admin and find out where Agent S is.",
+      "inProgress": "You must answer some questions if you want to become an Honorable Mesoranger. Get your thoughts together and tackle Agent S\u0027s questions.",
+      "completed": "Shall we head over to see Agent O now?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000064,
+      "startScript": "q10332s",
+      "infoNumber": 10330,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2009071600",
+      "infoEx": [
+        null
+      ]
+    },
+    "complete": {
+      "npc": 9000064,
+      "endScript": "q10332e"
+    }
+  }
+}

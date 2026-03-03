@@ -1,0 +1,73 @@
+{
+  "questId": 2055,
+  "info": {
+    "name": "Shumi\u0027s Lost Coin",
+    "descriptions": {
+      "notStarted": "Let\u0027s start looking for Shumi in Kerning City.",
+      "inProgress": "I met this girl name Shumi at Kerning City. She was devasted about losing the lucky coin that she borrowed from a friend and that she was asking me to find it for her. She also told me a bunch of guys draped in white cloth took it from her at the subway, so they may be found at the #bconstuction site B1#k, deep in the station ... I should get in there first ...",
+      "completed": "I found the lost coin that Shumi of Kerning City was looking for, and returned it to her. A precious coin borrowed from her friend, huh ... as a reward, she gave me a whole bunch of the return scrolls ... not bad at all!! She also said other items can be found at #bconstruction site B1#k ... I should check it out later ..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052102,
+      "minLevel": 20
+    },
+    "complete": {
+      "npc": 1052102,
+      "items": [
+        {
+          "itemId": 4031039
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4031039,
+          "count": -1
+        },
+        {
+          "itemId": 2030000,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 2030001,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 2030002,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 2030003,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 2030004,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 2030005,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 2030006,
+          "count": 30,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

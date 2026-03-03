@@ -1,0 +1,58 @@
+{
+  "questId": 4918,
+  "info": {
+    "name": "Featherweights",
+    "descriptions": {
+      "notStarted": "Icebyrd looks like he needs my help. I\u0027d better get over to New Leaf City and see him!",
+      "inProgress": "I spoke with Icebyrd, and he was glad to see me. He\u0027s been trying to build the new areas, but the Gryphons have been wreaking havoc on the construction crews. If that wasn\u0027t enough, those pesky Boomers are also attacking the machines. I\u0027ve agreed to help by taking out #b100 Gryphons#k (located in the Highlands) and #bBoomers#k for #b150 #t4000391##k (located in the Badlands) to show them that this city is off-limits!  ",
+      "completed": "Man, what a day. I de-clawed the Gryphons and defused the Boomers. Now the city can continue building in peace. Icebyrd said that they may act up again, so I should come back to see if they\u0027ve been rowdy..."
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201050,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 4923,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201050,
+      "items": [
+        {
+          "itemId": 4000391,
+          "count": 150
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9400544,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 2002025,
+          "count": 10
+        },
+        {
+          "itemId": 2002024,
+          "count": 10
+        },
+        {
+          "itemId": 4000391,
+          "count": -150
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "questId": 3070,
+  "info": {
+    "name": "Shammos\u0027s Request",
+    "parent": "Ready for Revival",
+    "descriptions": {
+      "notStarted": "I should go meet up with Shammos, who lives somewhere around El Nath.",
+      "inProgress": "I met Shammos at the basement of Chief\u0027s Residence. Apparently a plan from back then had backfired and rendered him to where he is today ... it seems like he was planning up something sinister, and the four chiefs found out about it and sealed him up. Anyway, he looks really intimidating, and he seems to be cooking up something terrible again. He\u0027s not telling me what it is, but he wants me to head over to Perion to get the item he needs. Am I doing the right thing by helping him out?",
+      "completed": "I met up with Manji, who knows a thing or two about the #b#t4031218##k."
+    },
+    "area": 33,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2022003,
+      "minLevel": 55
+    },
+    "complete": {
+      "npc": 1022002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 25000,
+      "nextQuest": 3071
+    }
+  }
+}

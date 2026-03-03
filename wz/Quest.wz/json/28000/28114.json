@@ -1,0 +1,117 @@
+{
+  "questId": 28114,
+  "info": {
+    "name": "Cool as Ice",
+    "descriptions": {
+      "notStarted": "I think it\u0027s about time Icebyrd gave me some answers...I should go speak with him.",
+      "inProgress": "I\u0027ve spoken with Icebyrd, and he seems cryptic-what is he hiding?",
+      "completed": "Icebyrd has revealed the truth to me at last-he was contacted by Subani to establish New Leaf City as well as anchor Masteria to the Maple World.  He was sworn to secrecy, and to this day, can never leave the continent.  It appears that Subani and Icebyrd are the first line of defense against the demonic Naricain, and by defeating his Twisted Masters; I am now his enemy as well.  He also mentioned that our adventures here have just begun...with the Twisted Masters out of the way, what\u0027s next?  Perhaps answers lie within the #bKrakian Jungle#k, and the mysterious city there...only time will tell!"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201050,
+      "minLevel": 90,
+      "prerequisiteQuests": [
+        {
+          "questId": 8221,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8230,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8238,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8222,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8231,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8239,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8223,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8224,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8232,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8225,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8233,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8226,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8234,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8227,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8235,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8219,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8228,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8236,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8220,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8229,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8237,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1122059
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201050
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000000
+    }
+  }
+}

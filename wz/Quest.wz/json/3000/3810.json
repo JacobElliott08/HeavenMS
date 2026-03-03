@@ -1,0 +1,45 @@
+{
+  "questId": 3810,
+  "info": {
+    "name": "The Legendary Being\u0027s Scroll 2",
+    "parent": "The Legendary Being\u0027s Scroll",
+    "descriptions": {
+      "notStarted": "Through #p2071010#\u0027s request, I returned #t4031430# to #b#p2091001##k of #b#m250000000##k. Now I better borrow #b#t4031431##k from him...",
+      "inProgress": "#p2091001# decided to lend me #t4031431:#, in exchange for #b#t4031432:##k. #t4031432# can be apparently found at #r#o5120506##k...\\n\\n#t4031432#  #b#c4031432##k/1",
+      "completed": "I managed to give #p2091001# the #t4031432#."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091001,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3809,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091001,
+      "items": [
+        {
+          "itemId": 4031432
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 21500,
+      "items": [
+        {
+          "itemId": 4031432,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

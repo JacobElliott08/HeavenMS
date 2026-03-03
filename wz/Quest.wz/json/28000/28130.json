@@ -1,0 +1,63 @@
+{
+  "questId": 28130,
+  "info": {
+    "name": "The Legendary Tribal Ring: Circle of Ancient Strength",
+    "descriptions": {
+      "notStarted": "Happy to have found the remnant of the Miwok Artifacts, Kopee says she has something to tell me. Let\u0027s go and see her.",
+      "inProgress": "Kopee offered to make me a Legendary Tribal Ring using the belongings of the Miwok ancestors! I should collect every artifact I find and take my findings to Kopee. ",
+      "completed": "Kopee, using the ancestors\u0027 belongings, made me a ring. I received a Circle of Ancient Strength from her! She told me she\u0027d make me one every time I bring her an artifact. I\u0027d better take what I find to Kopee."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201116,
+      "minLevel": 15,
+      "endDate": "2009082600",
+      "repeatIntervalMinutes": 5,
+      "prerequisiteQuests": [
+        {
+          "questId": 28128,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201116,
+      "items": [
+        {
+          "itemId": 4000512
+        },
+        {
+          "itemId": 4000513,
+          "count": 3
+        },
+        {
+          "itemId": 4000514,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000512,
+          "count": -1
+        },
+        {
+          "itemId": 4000513,
+          "count": -3
+        },
+        {
+          "itemId": 4000514,
+          "count": -2
+        },
+        {
+          "itemId": 1112408
+        }
+      ]
+    }
+  }
+}

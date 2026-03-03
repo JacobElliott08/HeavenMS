@@ -1,0 +1,36 @@
+{
+  "questId": 9162,
+  "info": {
+    "name": "추석 상식 3. 추석의 명칭",
+    "parent": "한국의 명절 추석",
+    "descriptions": {
+      "inProgress": "추석의 명칭에 대한 문제입니다.",
+      "completed": "추석은 가윗날, 한가위, 중추절이라고 불리우기도 한다."
+    },
+    "area": 50,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2006092600",
+      "endDate": "2006101600",
+      "prerequisiteQuests": [
+        {
+          "questId": 9161,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800,
+      "nextQuest": 9163
+    }
+  }
+}

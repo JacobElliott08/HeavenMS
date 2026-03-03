@@ -1,0 +1,77 @@
+{
+  "questId": 9975,
+  "info": {
+    "name": "카산드라의 어린이날선물",
+    "descriptions": {
+      "notStarted": "#b카산드라#k가 어린이날을 기념하여 선물을 나눠 준다고 하는데...",
+      "inProgress": "카산드라가 어린이날 선물을 나누어 준다고 한다. 카산드라에게 가보자.",
+      "completed": "5월 10일까지는 접속만 해도 상품을 준다고 한다."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 13,
+      "startDate": "2009050100",
+      "endDate": "2009051100",
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4001126,
+          "count": 100,
+          "probability": 1
+        },
+        {
+          "itemId": 4001126,
+          "count": 50,
+          "probability": 1
+        },
+        {
+          "itemId": 4001126,
+          "count": 150,
+          "probability": 1
+        },
+        {
+          "itemId": 2000006,
+          "count": 10,
+          "probability": 1
+        },
+        {
+          "itemId": 2020014,
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "itemId": 2020012,
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "itemId": 2001001,
+          "count": 5,
+          "probability": 2
+        },
+        {
+          "itemId": 4001126,
+          "count": 30,
+          "probability": 3
+        },
+        {
+          "itemId": 4001126,
+          "count": 20,
+          "probability": 3
+        }
+      ]
+    }
+  }
+}

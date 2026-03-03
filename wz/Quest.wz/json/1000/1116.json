@@ -1,0 +1,49 @@
+{
+  "questId": 1116,
+  "info": {
+    "name": "로웬의 사랑의 증표",
+    "descriptions": {
+      "notStarted": "#t4031684#를 받으려면 로웬을 찾아가보자.",
+      "inProgress": "요정 로웬은 나의 사랑을 증명하라면서 #b#t4003005# 20#k개를 가져오라고 했다.\\n\\n#i4003005##t4003005# #b#c4003005# / 20#k",
+      "completed": "요정 로웬에게 사랑의 증표를 얻었다."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032101,
+      "repeatIntervalMinutes": 0,
+      "infoNumber": 1100,
+      "infoEx": [
+        null
+      ],
+      "items": [
+        {
+          "itemId": 4031684
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032101,
+      "items": [
+        {
+          "itemId": 4003005,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4003005,
+          "count": -20
+        },
+        {
+          "itemId": 4031684
+        }
+      ]
+    }
+  }
+}

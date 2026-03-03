@@ -1,0 +1,43 @@
+{
+  "questId": 3320,
+  "info": {
+    "name": "What Parwen Knows",
+    "parent": "Parwen\u0027s Memory",
+    "descriptions": {
+      "notStarted": "Maybe the alchemist #p2111006# saw is #r#p2111002##k, the missing alchemist! I better go see #b#p2111006##k.",
+      "inProgress": "#p2111006# tilted his head a bit as if he was having a headache, and frowned. Next thing you know, I was spotted at a different place. This may seem familiar, but this place also seems a bit strange. Where is this? And who\u0027s that #rguy#k?",
+      "completed": "Oh my gosh! The person that\u0027s standing in the lab is indeed #p2111002#! #p2111006#...! Wait, so this place is really #b#p2111002#\u0027s lab#k?"
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111006,
+      "minLevel": 70,
+      "startScript": "q3320s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3317,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3311,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3319,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000
+    }
+  }
+}

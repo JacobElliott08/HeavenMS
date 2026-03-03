@@ -1,0 +1,59 @@
+{
+  "questId": 3038,
+  "info": {
+    "name": "Collecting Huckle\u0027s Magic Ingredients",
+    "descriptions": {
+      "notStarted": "I heard there is an old man called #bHuckle#k inside a hidden secret room in Orbis Tower...",
+      "inProgress": "I met an old man named Huckle at the hidden room in the middle of Orbis Tower. He\u0027s been living in there for 30 years, studying the physics of the self-moving stones. He wants me to gather up #b45 Jr. Sentinel Shellpieces, 20 Ice Sentinel Shellpieces, and 20 Fire Sentinel Shellpieces#k. Alright, let\u0027s do this ...",
+      "completed": "I got Huckle, the old man living in the hidden room at the Orbis Tower, the items he had requested, and in return, got the Statue-Teleporting Scroll. It allows me to teleport between the statue at the 20th floor of Orbis Tower, and the 1st floor. Huckle looks like he needs more samples, so I guess I\u0027ll need to keep looking for those ..."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030012,
+      "minLevel": 20,
+      "repeatIntervalMinutes": 1440
+    },
+    "complete": {
+      "npc": 2030012,
+      "items": [
+        {
+          "itemId": 4000085,
+          "count": 20
+        },
+        {
+          "itemId": 4000083,
+          "count": 45
+        },
+        {
+          "itemId": 4000084,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 4000083,
+          "count": -45
+        },
+        {
+          "itemId": 4000084,
+          "count": -20
+        },
+        {
+          "itemId": 4000085,
+          "count": -20
+        },
+        {
+          "itemId": 4001019,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

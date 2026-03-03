@@ -1,0 +1,51 @@
+{
+  "questId": 3356,
+  "info": {
+    "name": "Who is De Lang?",
+    "parent": "Who is De Lang?",
+    "descriptions": {
+      "inProgress": "I explained to #p2111003# that the medicine might cure #p2111005#, and received the medicine from him. I did bring this half suspecting this might be a scam, but really... is it enough to cure #p2111005#? The president of Alcadno Society, #b#p2111001##k, might correctively find out the list of ingredients for this.",
+      "completed": "#p2111001# said this medicine indeed cures #p2111005#\u0027s sickness... Why in the world was #p2111003# holding on to the medicine #p2111002# made all this time??"
+    },
+    "area": 44,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111003,
+      "minLevel": 75,
+      "prerequisiteQuests": [
+        {
+          "questId": 3355,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111001,
+      "items": [
+        {
+          "itemId": 4031743
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031743
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4031743,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

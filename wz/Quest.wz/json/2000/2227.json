@@ -1,0 +1,37 @@
+{
+  "questId": 2227,
+  "info": {
+    "name": "Defeat Faust",
+    "parent": "The Forest of Evil",
+    "descriptions": {
+      "inProgress": "#p1032001#, who has heard everything about #p1032107#, claims that #p1032107# was once a polite and mild-tempered person... He speculates that it was the power of darkness that has consumed and changed Reef, and blames himself for it. Then, #p1032001# asks you to defeat #o5220002#... \\n\\n#o5220002# #r#a22271##k",
+      "completed": "When you defeat #o5220002# and report your progress to #p1032001#, he says #p1032107#, too, probably feels relieved."
+    },
+    "area": 30,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "prerequisiteQuests": [
+        {
+          "questId": 2226,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "monsters": [
+        {
+          "monsterId": 5220002
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 112800
+    }
+  }
+}

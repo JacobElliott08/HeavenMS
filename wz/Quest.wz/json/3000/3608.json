@@ -1,0 +1,71 @@
+{
+  "questId": 3608,
+  "info": {
+    "name": "Opening Hongbu\u0027s Gourd",
+    "descriptions": {
+      "notStarted": "I have this seed that Swallow gave me. Should I give this to Hongbu?",
+      "inProgress": "I took this seed that Swallow gave me and gave it to Hongbu. When notified that the seed was indeed from Swallow, Hongbu requested that I plant the seed on his rooftop, and when it grows into a gourd, open it and give him whatever that maybe inside.",
+      "completed": "I gave Hongbu the seed that Swallow gave me. Hongbu requested that I plant the seed on his rooftop, and when it grows into a gourd, open it and give him whatever that maybe inside. When the gourd grew and was big enough to open, it contained a chest full of treasures."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071001,
+      "minLevel": 37,
+      "prerequisiteQuests": [
+        {
+          "questId": 3606,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3607
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031225
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071001,
+      "items": [
+        {
+          "itemId": 4031223
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031225,
+          "count": -1
+        },
+        {
+          "itemId": 4031244
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4031223,
+          "count": -1
+        },
+        {
+          "itemId": 1072133
+        },
+        {
+          "itemId": 1072129
+        },
+        {
+          "itemId": 4031235
+        }
+      ]
+    }
+  }
+}

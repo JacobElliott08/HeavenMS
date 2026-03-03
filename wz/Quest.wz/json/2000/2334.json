@@ -1,0 +1,26 @@
+{
+  "questId": 2334,
+  "info": {
+    "name": "The Identity of the Princess",
+    "descriptions": {
+      "notStarted": "You finally get to see the Princess\u0027s face!",
+      "inProgress": "Go find out the true identity of the Princess.",
+      "completed": "You finally saw the princess, whose looks were indescribable, except to say that her looks were the #bstuff of the highest level of mushroom beauty#k."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300002,
+      "startScript": "q2334s",
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2333,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "questId": 28202,
+  "info": {
+    "name": "Reporting the Training Results to Dark Lord",
+    "descriptions": {
+      "notStarted": "#b#@9201120:##k in #bKerning City#k says you\u0027ve finished all the training courses and that you must report the results to #b#@1052001:##k. Let\u0027s head over to #b#@9201120:##k",
+      "inProgress": "Let\u0027s go see #b#@1052001:##k in #bKerning City#k to report the results.",
+      "completed": "You have completed both of #bErvine#k\u0027s additional training courses."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201120,
+      "prerequisiteQuests": [
+        {
+          "questId": 28200,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 28201,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1052001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 100
+        },
+        {
+          "itemId": 2000003,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

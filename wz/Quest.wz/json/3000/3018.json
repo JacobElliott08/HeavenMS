@@ -1,0 +1,46 @@
+{
+  "questId": 3018,
+  "info": {
+    "name": "An Old Ring",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "I found an anonymous grave somewhere deep in the valley of the snowfield. I also removed an old ring from the corpse\u0027s finger. Maybe Alcaster knows what to do with it."
+    },
+    "area": 33,
+    "order": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030004,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3017,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031053
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 2000,
+      "nextQuest": 3019,
+      "items": [
+        {
+          "itemId": 4031053,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

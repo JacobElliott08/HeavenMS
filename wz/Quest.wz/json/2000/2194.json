@@ -1,0 +1,66 @@
+{
+  "questId": 2194,
+  "info": {
+    "name": "The Beginner Pirate\u0027s Second Training Session",
+    "descriptions": {
+      "notStarted": "I\u0027ve become a bit stronger from the training, but I\u0027ve still got a long way to go. I should go ask #bKyrin#k for some help! ",
+      "inProgress": "Kyrin tells me that I still need more training on the basics and suggests that I hunt down some more monsters. She wants me to hunt down #r26 pigs#k this time... \\n\\n#o 1210100# #r#a21941##k",
+      "completed": "I\u0027ve hunted down 26 pigs and reported the results to Kyrin. Hehe, hunting down 26 pigs? It was a total breeze!"
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 2193,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "monsters": [
+        {
+          "monsterId": 1210100,
+          "count": 26
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 610,
+      "items": [
+        {
+          "itemId": 2000001,
+          "count": 30,
+          "jobRestriction": 32
+        },
+        {
+          "itemId": 2000003,
+          "count": 30,
+          "jobRestriction": 32
+        }
+      ]
+    }
+  }
+}

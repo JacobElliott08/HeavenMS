@@ -1,0 +1,29 @@
+{
+  "questId": 19008,
+  "info": {
+    "name": "Combo Master",
+    "descriptions": {
+      "notStarted": "If you get a combo of 200 or more, you will receive the title Combo Master.",
+      "inProgress": "If you get a combo of 200 or more, you will receive the title Combo Master.",
+      "completed": "You got a combo of at least 200 and received the title Combo Master."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142135
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "minLevel": 15,
+      "endDate": "2010012000",
+      "normalAutoStart": true,
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    }
+  }
+}

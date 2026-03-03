@@ -1,0 +1,50 @@
+{
+  "questId": 2168,
+  "info": {
+    "name": "Sea Firefly2",
+    "descriptions": {
+      "notStarted": "Shouldn\u0027t I be getting the bottle back from the Muse and heading back to The Nautilus?",
+      "inProgress": "The Muse gave back the magic flask to me, filled with the Vigor of the Sea. I\u0027d better get the bottle to #bSharyl, the Prince of Whales#k right away, before it starts getting dark. ",
+      "completed": "As the Vigor of the Sea is unleashed in The Nautilus, the overall atmosphere turns bright. But why is it that Sharyl, the Prince of Whales is blushing while saying that Kyrin should be so happy?"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060006,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 2167,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092003,
+      "items": [
+        {
+          "itemId": 4031842
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031842
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 7000,
+      "items": [
+        {
+          "itemId": 4031842,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "questId": 10410,
+  "info": {
+    "name": "Hunter\u0027s Luck - Week 1",
+    "descriptions": {
+      "notStarted": "The time between February and March is what many call the prime hunting season! Receive some hunting pointers from Scadur and become the best hunter on the block!#b\\n\\n\u003cEvent Period\u003e\\nFebruary 19, 2010 - February 21, 2010\\n\\n\u003cHow to Join the Event\u003e\\n1. Receive the 2x EXP item that Scadur hands out once a week.\\n2. Use the item when in need of an extra boost of Luck.\\n3. Hunt away!\\n\\n\u003cNotes\u003e\\n1. 2x EXP item will expire at midnight on Sunday.\\n2. New 2x item will become available the following Monday.",
+      "inProgress": "The time between February and March is what many call the prime hunting season! Receive some hunting pointers from Scadur and become the best hunter on the block!#b\\n\\n\u003cEvent Period\u003e\\nFebruary 19, 2010 - February 21, 2010\\n\\n\u003cHow to Join the Event\u003e\\n1. Receive the 2x EXP item that Scadur hands out once a week.\\n2. Use the item when in need of an extra boost of Luck.\\n3. Hunt away!\\n\\n\u003cNotes\u003e\\n1. 2x EXP item will expire at midnight on Sunday.\\n2. New 2x item will become available the following Monday.",
+      "completed": "The time between February and March is what many call the prime hunting season! Receive some hunting pointers from Scadur and become the best hunter on the block!#b\\n\\n\u003cEvent Period\u003e\\nFebruary 19, 2010 - February 21, 2010\\n\\n\u003cHow to Join the Event\u003e\\n1. Receive the 2x EXP item that Scadur hands out once a week.\\n2. Use the item when in need of an extra boost of Luck.\\n3. Hunt away!\\n\\n\u003cNotes\u003e\\n1. 2x EXP item will expire at midnight on Sunday.\\n2. New 2x item will become available the following Monday."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020007,
+      "minLevel": 13,
+      "startDate": "2010021900",
+      "endDate": "2010022200",
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 2020007
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 2450000,
+          "expirationDate": "2010022200"
+        },
+        {
+          "itemId": 2450000,
+          "expirationDate": "2010022200"
+        },
+        {
+          "itemId": 2450000,
+          "expirationDate": "2010022200"
+        },
+        {
+          "itemId": 2450000,
+          "expirationDate": "2010022200"
+        },
+        {
+          "itemId": 2450000,
+          "expirationDate": "2010022200"
+        },
+        {
+          "itemId": 2450000,
+          "expirationDate": "2010022200"
+        }
+      ]
+    }
+  }
+}

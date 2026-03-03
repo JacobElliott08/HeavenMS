@@ -1,0 +1,54 @@
+{
+  "questId": 6104,
+  "info": {
+    "name": "New Guess",
+    "parent": "Extreme Temptation",
+    "descriptions": {
+      "inProgress": "My hunch was right about #bShammos#k. He knew a bit more and was able to give me further details, but there\u0027s something strange about what #p2022003# said. Let\u0027s ask #b#p2020010##k. Finally getting somewhere! \\n\\n#t4161027#  #b#c4161027# / 1#k ",
+      "completed": " I took the book back to #p2020010# following a lead from #bShammos#k. Rene said that #p2022003# used to be human and that I should pay close attention to what he says--both as a warning and path to discovering more. "
+    },
+    "area": 10,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2022003,
+      "jobs": [
+        312,
+        322
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6103,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020010,
+      "items": [
+        {
+          "itemId": 4161027
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4161027
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 4161027,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "questId": 21750,
+  "info": {
+    "name": "She Remembers Me",
+    "descriptions": {
+      "notStarted": "Just as #p1002104# instructed, you use the #m220000000# clocktower to travel to the past. Just as you arrive in the past, someone calls out your name…",
+      "inProgress": "#p2131002# seems shocked to see you and greets you like a long-lost sibling. Do you know this person? While you stand there dumbfounded, #p2131002# tells you that #b#p2131000##k is also waiting for you, and that you should make your way to the #bCamp Conference Room#k to let #p2131000# know that you are alive and well.",
+      "completed": "You finally met #p2131000# in Ellin Forest. #p2131000# seemed glad to see you alive and well, but then learned that you have no recollection of the past and seemed sad to hear it."
+    },
+    "area": 6,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2131002,
+      "minLevel": 63,
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 21749,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2131000,
+      "endScript": "q21750e"
+    }
+  }
+}

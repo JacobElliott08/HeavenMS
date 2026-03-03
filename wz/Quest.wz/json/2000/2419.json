@@ -1,0 +1,37 @@
+{
+  "questId": 2419,
+  "info": {
+    "name": "Using Flash Fist",
+    "descriptions": {
+      "notStarted": "Power B. Fore at the training center wants you to learn how to use a new skill.",
+      "inProgress": "Power B. Fore is teaching you how to use a new skill. Use Flash Fist to eliminate some Pigs.\\r\\n\\r\\n#o1210100# #a24191# (Use Flash Fist)",
+      "completed": "You used Flash Fist to eliminate some Pigs."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1095001,
+      "prerequisiteQuests": [
+        {
+          "questId": 2414,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1095001,
+      "monsters": [
+        {
+          "monsterId": 1210100,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200
+    }
+  }
+}

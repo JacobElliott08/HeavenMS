@@ -1,0 +1,33 @@
+{
+  "questId": 2335,
+  "info": {
+    "name": "Eliminating the Rest",
+    "descriptions": {
+      "notStarted": "Apparently, the castle is still populated with the minions of the #bPrime Minister#k...",
+      "inProgress": "You need to find the rest of the Prime Minister\u0027s minions. They are apparently hiding in an area that can be reached through #bSkyscraper 3#k.",
+      "completed": "You found the minions of the #bPrime Minister#k and took them all out."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300002,
+      "minLevel": 30,
+      "startScript": "q2335s",
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2334,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300002,
+      "infoNumber": 2335,
+      "infoEx": [
+        null
+      ]
+    }
+  }
+}

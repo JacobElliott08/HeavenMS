@@ -1,0 +1,45 @@
+{
+  "questId": 2248,
+  "info": {
+    "name": "Understanding the Horny Mushroom Signals",
+    "parent": "Strange Mushrooms",
+    "descriptions": {
+      "notStarted": "You\u0027d better check in to see the progress The Rememberer of Sleepywood is making with his research on the strange mushrooms.",
+      "inProgress": "The Rememberer has completed his research, and has suggested that there may be some Horny Mushrooms that have been tainted. He\u0027s asked you to gather some Tainted Horny Mushroom Caps.\\r\\n\\r\\n\\r\\n#i4032390:# #t4032390:# #c4032390# / 20\\r\\n",
+      "completed": "The Rememberer told you that his study of the Horny Mushrooms has been completed, but that he still can\u0027t understood the vague mushroom signals. He told you he still doesn\u0027t know what drove the mushrooms into a rage."
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "prerequisiteQuests": [
+        {
+          "questId": 2247,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "items": [
+        {
+          "itemId": 4032390,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 4032390,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

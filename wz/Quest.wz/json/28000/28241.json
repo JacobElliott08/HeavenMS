@@ -1,0 +1,56 @@
+{
+  "questId": 28241,
+  "info": {
+    "name": "Rigorous Training!-2",
+    "descriptions": {
+      "notStarted": "#b#@1092007:##k in #bNautilus#k says he\u0027ll begin the second training. Let\u0027s talk to him.",
+      "inProgress": "He says to hunt the #rRibbon Pigs#k and collect #rRed Ribbons#k for this training. #rRibbon Pigs#k can be easily found in #b#m100030000##k.\\n\\nReport back to #b#@1092007:##k in #bNautilus#k upon completion.",
+      "completed": "You\u0027ve completed #b#p1092007##k\u0027s second training."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092007,
+      "prerequisiteQuests": [
+        {
+          "questId": 28239,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1092007,
+      "items": [
+        {
+          "itemId": 4000002,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1400,
+      "items": [
+        {
+          "itemId": 4000002,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

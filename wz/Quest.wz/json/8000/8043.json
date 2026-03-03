@@ -1,0 +1,58 @@
+{
+  "questId": 8043,
+  "info": {
+    "name": "Lycanthrope",
+    "parent": "Monster Rumor Mill",
+    "descriptions": {
+      "notStarted": "No wonder ... according to him, Omega Sector may also be on the move to defeat the monster. He said I\u0027ll find out more about it by eavesdropping on General Maestro. That won\u0027t be easy...",
+      "inProgress": "No way... one of the #b#o8140000#s#k could be planning something insidious...I can\u0027t let them create havoc over innocent people here. This may not be what Maya wants to hear, but I\u0027ll have to kill the #b#o8140000#s#k. \\n#t04000054# #b#c04000054##k/50",
+      "completed": "I didn\u0027t find the #b#o8140000##k with the necklace. I\u0027m sure it\u0027s alive somewhere. I know this may sound odd, but I decided to believe that\u0027s true."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050008,
+      "minLevel": 80,
+      "prerequisiteQuests": [
+        {
+          "questId": 8042,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050008,
+      "items": [
+        {
+          "itemId": 4000054,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000054,
+          "count": -50
+        },
+        {
+          "itemId": 2040706,
+          "probability": 1
+        },
+        {
+          "itemId": 2040707,
+          "probability": 1
+        },
+        {
+          "itemId": 2040708,
+          "probability": 1
+        }
+      ],
+      "experience": 30000
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "questId": 4661,
+  "info": {
+    "name": "Educating Smart Pets (Speech by Itself)",
+    "descriptions": {
+      "notStarted": "You have a very smart pet with you. Please take it to Bartos the pet instructor. With his guidance, the pet may even start a conversation...",
+      "inProgress": "In order to request Bartos for help in teaching the evolving pet new language, I\u0027ll need to bring him his favorite drink. The drink can be obtained through merchants.",
+      "completed": "I gave Bartos a drink and taught the evolving pet. Apparently the pet may start the conversation at times...what would it say...?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012006,
+      "repeatIntervalMinutes": 0,
+      "petRequirement": {}
+    },
+    "complete": {
+      "npc": 1012006,
+      "items": [
+        {
+          "itemId": 4031993
+        }
+      ],
+      "petRequirement": {}
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "petSkill": 256,
+      "items": [
+        {
+          "itemId": 4031993,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "questId": 28209,
+  "info": {
+    "name": "Baine Likes...",
+    "parent": "Commotion on the Ship",
+    "descriptions": {
+      "notStarted": "#b#@1072008:##k in #bNautilus#k says there was something very valuable amongst the things she\u0027s lost. She says to go talk to #b#@1092002:##k in #bNautilus#k, but there is also something you need to do first.",
+      "inProgress": "#b#@1072008:##k in #bNautilus#k says you must make something amazing for #b#@1092002:##k.\\nIf you bring her the following materials, she promises to make something special for Baine.\\n\\n#rPig Vein#k(a drop item from #rRibbon Pigs#k that can be easily found in #b#m100020000##k.)\\n#rDark Wooden Board#k(a drop item from #rDark Stumps#k that can be easily found in #b#m100040000##k.)\\n#rYoung Soul#k(a drop item of #rOrange Mushrooms#k.)\\n\\nReport back to #b#@1072008:##k in #bNautilus#k after you collect all the items.",
+      "completed": "Talk to #b#@1092002:##k in #bNautilus#k to deliver #rKyrinvana\u0027s Guitar#k and ask about the #rLost Statue#k."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28208,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "items": [
+        {
+          "itemId": 4001343,
+          "count": 15
+        },
+        {
+          "itemId": 4001344,
+          "count": 10
+        },
+        {
+          "itemId": 4001354
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200,
+      "items": [
+        {
+          "itemId": 4001343,
+          "count": -15
+        },
+        {
+          "itemId": 4001344,
+          "count": -10
+        },
+        {
+          "itemId": 4001354,
+          "count": -1
+        },
+        {
+          "itemId": 4032484
+        }
+      ]
+    }
+  }
+}

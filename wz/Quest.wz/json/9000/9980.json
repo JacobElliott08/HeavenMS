@@ -1,0 +1,21 @@
+{
+  "questId": 9980,
+  "info": {
+    "name": "Tienk\u0027s Monster Card",
+    "descriptions": {
+      "notStarted": "Tienk, who is at Lith Harbor, said he would give me a monster card as a 4 Year Anniversary gift...",
+      "inProgress": "Tienk said he will give me a monster card as a gift if I bring him a Maple Leaf.",
+      "completed": "I gave a Maple Leaf to Tienk and received a Monster Card as a gift."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2006,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 1440,
+      "endDate": "2009061623",
+      "startScript": "q9980s"
+    }
+  }
+}

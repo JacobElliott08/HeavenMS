@@ -1,0 +1,49 @@
+{
+  "questId": 21737,
+  "info": {
+    "name": "The Giant Nependeaths Appear",
+    "descriptions": {
+      "notStarted": "It seems that something related to the Black Wings is happening in #b#m200000000##k. You should talk to #b#p2012012##k.",
+      "inProgress": "#p2012012# the fairy has noticed that the number of #r#o9300347#s#k has been steadily increasing in #b#m200060001##k and wants you to look into the #o9300347#s there. Apparently, if you\u0027re not careful and enter the wrong path from #b#m200060000##k, you may end up in #m200060001# instead, so you should head there right now, eliminate the #o9300347#s, and retrieve any strange items they might drop.\\r\\n\\r\\n#i4032324# #t4032324# #b#c4032324# / 5#k",
+      "completed": "After defeating the #o9300347#s, you brought back a #t4032324#. #p2012012# was curious to see who would do such a thing and seemed to worry even more that the sheer weight of the Nependeaths might cause Orbis to sink. She wanted you to discuss the problem about #m200000000# with someone who might know more."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012012,
+      "minLevel": 45,
+      "prerequisiteQuests": [
+        {
+          "questId": 21736,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2012012,
+      "items": [
+        {
+          "itemId": 4032324,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 29500,
+      "items": [
+        {
+          "itemId": 4032324,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

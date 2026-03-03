@@ -1,0 +1,67 @@
+{
+  "questId": 3034,
+  "info": {
+    "name": "The Book of Ancient is Back!",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "I can\u0027t believe I finally have a hold of the #bBook of Ancient#k. Now I need to turn this over to Alcaster...",
+      "completed": "A lot of time and effort were put into this, but the Book of Ancient is finally back in Alcaster\u0027s hands as he will begin working on the process of sealing up the book for good. As a sign of appreciation, he rewarded me with a special cape. I really hope he finds a way to seal up the book for good."
+    },
+    "area": 33,
+    "order": 31
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030005,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3033,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "items": [
+        {
+          "itemId": 4031056
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031056
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 16170,
+      "items": [
+        {
+          "itemId": 4031056,
+          "count": -1
+        },
+        {
+          "itemId": 1102011,
+          "probability": 1
+        },
+        {
+          "itemId": 1102012,
+          "probability": 1
+        },
+        {
+          "itemId": 1102013,
+          "probability": 1
+        },
+        {
+          "itemId": 1102014,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

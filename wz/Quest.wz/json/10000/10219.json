@@ -1,0 +1,24 @@
+{
+  "questId": 10219,
+  "info": {
+    "name": "카산드라의 두번째 새해선물",
+    "descriptions": {
+      "notStarted": "새해를 맞아 매일매일 접속만 해도 카산드라가 선물을 준다고 하는데... 인심 좋은 카산드라에게 가 보자.",
+      "inProgress": "#b카산드라#k가 준비한 선물은 뭘까~",
+      "completed": "새해를 맞아 #b카산드라#k가 1월 22일까지 접속만 해도 선물을 준다고 한다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "startScript": "q10219s",
+      "minLevel": 13,
+      "endDate": "2009012300",
+      "startDate": "2008122600"
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  }
+}

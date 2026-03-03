@@ -1,0 +1,52 @@
+{
+  "questId": 4555,
+  "info": {
+    "name": "Unexpected Guest",
+    "parent": "Surprise Birthday Party",
+    "descriptions": {
+      "notStarted": "#b#p9270058##k and her daddy were both surprised to see that most of the guests had brought their kids with them to the birthday party. There are no gift prepared for little kids, but #b#p9270058##k doesn\u0027t want to send them home with an empty hand. She must think of something very quickly.",
+      "inProgress": "Since all adults guests had received #b#t4000470##k as a gift, #b#t4000474##k would be just perfect for little guests. Now it\u0027s a matter of time. Enough #b#t4000474##k must be brought back to #b#p9270058##k before the party is over. \\n\\n#o9420536# #r#a45551##k \\n#t4000474# #r#c4000474#/100#k",
+      "completed": "Just before the party was over, all kids at the party received surprised gift and was overjoyed. Though #b#p9270058##k had to rush into preparing gifts for those unexpected guests, afterall, more the marrier."
+    },
+    "area": 49,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270058,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 4554,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270058,
+      "items": [
+        {
+          "itemId": 4000474,
+          "count": 100
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9420536,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 18000,
+      "items": [
+        {
+          "itemId": 4000474,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

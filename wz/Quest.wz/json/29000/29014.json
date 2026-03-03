@@ -1,0 +1,35 @@
+{
+  "questId": 29014,
+  "info": {
+    "name": "Sleepywood Explorer",
+    "descriptions": {
+      "notStarted": "You can earn the #b\u003cSleepywood Explorer\u003e#k title by exploring Sleepywood.",
+      "inProgress": "#b#eTitle - Sleepywood Explorer#k#n\\r\\nExplore the 10 main regions of Sleepywood.\\r\\n#b● Status : #R27019# / 10 Completed.",
+      "completed": "You have earned the #b\u003cSleepywood Explorer\u003e#k title for exploring various places in Sleepywood."
+    },
+    "area": 51,
+    "medalItemId": 1142128
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 40,
+      "npc": 9000066
+    },
+    "complete": {
+      "npc": 9000040,
+      "infoNumber": 27019,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142128
+        }
+      ]
+    }
+  }
+}

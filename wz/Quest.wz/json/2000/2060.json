@@ -1,0 +1,69 @@
+{
+  "questId": 2060,
+  "info": {
+    "name": "Special Taste of Florina Beach III",
+    "descriptions": {
+      "notStarted": "Emergency for the girl living in Florian Beach.",
+      "inProgress": "I have to bring recipe for 25 people to Riel in Florina Beach.\\n\\n#b#t4000136# #c4000136#/25\\n#t4000043# #c4000043#/130\\n#t4000044# #c4000044#/130\\n#t4000029# #c4000029#/25",
+      "completed": "I worked part-time gathering recipes for cooking meals for the tourists coming to Florina Beach."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1081100,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 2059,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1081100,
+      "items": [
+        {
+          "itemId": 4000029,
+          "count": 25
+        },
+        {
+          "itemId": 4000136,
+          "count": 25
+        },
+        {
+          "itemId": 4000043,
+          "count": 130
+        },
+        {
+          "itemId": 4000044,
+          "count": 130
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7000,
+      "meso": 20000,
+      "items": [
+        {
+          "itemId": 4000043,
+          "count": -130
+        },
+        {
+          "itemId": 4000044,
+          "count": -130
+        },
+        {
+          "itemId": 4000029,
+          "count": -25
+        },
+        {
+          "itemId": 4000136,
+          "count": -25
+        }
+      ]
+    }
+  }
+}

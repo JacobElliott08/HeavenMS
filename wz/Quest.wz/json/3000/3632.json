@@ -1,0 +1,41 @@
+{
+  "questId": 3632,
+  "info": {
+    "name": "Mr. Shim\u0027s Request",
+    "descriptions": {
+      "notStarted": "I should go visit Mr. Shim in Folk Town. I heard he hasn\u0027t been doing well lately...",
+      "inProgress": "At the Korean Folk Town, I met with #b#p2071009##k, who\u0027s a loving father to his only daughter, Shim Chung. Lately, however, he\u0027s been worried that his eyesight is rapidly failing him, and that he was worried he might one day become blind. He wanted to buy a pair of Reading Glasses, but the astronomical price tag calls for #b300 #t4031279#s#k per pair, he wanted to borrow them from me. How am I going to find #t4031279#, though?\\nAhh, Mr. Shim said I can find it through #r#o3210208##k at #bHelios Tower#k... \\n\\n#t4031279#  #b#c4031279##k / 300",
+      "completed": "I ran into #p2071009#, who was concerned about his rapidly failing eyesight, at Korean Folk Town. After hearing his story, I promised to lend him 300 #t4031279#s. The problem is, I don\u0027t have any rice ... but thankfully, after gettin #o3210208#, I was able to get 300 #t4031279#s. As a sign of thanks, #p2071009# gave me #t4031280#."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071009,
+      "minLevel": 35
+    },
+    "complete": {
+      "npc": 2071009,
+      "items": [
+        {
+          "itemId": 4031279,
+          "count": 300
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9500,
+      "items": [
+        {
+          "itemId": 4031279,
+          "count": -300
+        },
+        {
+          "itemId": 4031280
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "questId": 2337,
+  "info": {
+    "name": "King Pepe\u0027s Scroll",
+    "descriptions": {
+      "notStarted": "King Pepe may be no more, but #b#p1300005##k still seems concerned about the future. You\u0027d better go talk to him.",
+      "inProgress": "You\u0027re asked to eliminate King Pepe\u0027s remaining army.\\r\\n\\r\\n#o3300000# #a23371#\\r\\n#o3300001# #a23372#\\r\\n#o3300002# #a23373#\\r\\n#o3300003# #a23374#\\r\\n#o3300004# #a23375#\\r\\n\\r\\n",
+      "completed": "You helped eliminate the remaining minions of King Pepe."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300005,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 2336,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300005,
+      "monsters": [
+        {
+          "monsterId": 3300000,
+          "count": 200
+        },
+        {
+          "monsterId": 3300001,
+          "count": 200
+        },
+        {
+          "monsterId": 3300002,
+          "count": 300
+        },
+        {
+          "monsterId": 3300003,
+          "count": 400
+        },
+        {
+          "monsterId": 3300004,
+          "count": 400
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4400,
+      "items": [
+        {
+          "itemId": 2043021,
+          "jobRestriction": 1180673
+        },
+        {
+          "itemId": 2043116,
+          "jobRestriction": 2050
+        },
+        {
+          "itemId": 2043216,
+          "jobRestriction": 2050
+        },
+        {
+          "itemId": 2043311,
+          "jobRestriction": 18450
+        },
+        {
+          "itemId": 2044024,
+          "jobRestriction": 2050
+        },
+        {
+          "itemId": 2044116,
+          "jobRestriction": 2050
+        },
+        {
+          "itemId": 2044216,
+          "jobRestriction": 2050
+        },
+        {
+          "itemId": 2044316,
+          "jobRestriction": 2050
+        },
+        {
+          "itemId": 2044416,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 2043711,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 2043811,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 2044511,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 2044611,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 2044711,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 2044816,
+          "jobRestriction": 32800
+        },
+        {
+          "itemId": 2044909,
+          "jobRestriction": 32800
+        }
+      ]
+    }
+  }
+}

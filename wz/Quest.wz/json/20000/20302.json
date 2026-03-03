@@ -1,0 +1,50 @@
+{
+  "questId": 20302,
+  "info": {
+    "name": "The Master of Disguise",
+    "descriptions": {
+      "notStarted": "The detailed instructions on searching for the thief will be given by #b#p1101004##k, the Chief Knight of Fire. I better talk to #p1101004#.",
+      "inProgress": "Apparently, the member of the Black Wings has yet to escape Ereve. If we just search the island thoroughly, we may be able to find the culprit. First, I\u0027ll need to visit #b#p1101002##k and receive a #bInvestigation Permit#k, followed by a thorough search of Ereve to find #r#o9001009##k. Once I find him, I\u0027ll need to defeat him in a battle and bring back #b#t4032101##k in the process. The problem is that the enemy, being the #o9001009#, is adept at transforming into different persons, so I better talk to each and every one of them to figure out who\u0027s real or fake. \\n\\n#o9001009##r #a203021##k\\n#i4032102# #t4032102# #b#c4032102# / 1#k",
+      "completed": "I was able to defeat #p1104001# the #o9001009#, a member of the Black Wings, and managed to recover #t4032102#."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101004,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 20300,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1210
+      ]
+    },
+    "complete": {
+      "npc": 1101004,
+      "items": [
+        {
+          "itemId": 4032102
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9001009
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032102,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

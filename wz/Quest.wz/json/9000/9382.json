@@ -1,0 +1,152 @@
+{
+  "questId": 9382,
+  "info": {
+    "name": "이얀에게 보내는 선물",
+    "descriptions": {
+      "notStarted": "\u0027#p9000009#\u0027이 항해를 마치고 돌아왔다고 하는데..",
+      "inProgress": "#b#p9000009##k은 항해에서 주워 온 #b#t4031286##k를 #b#m102000000##k에 있는 #b#p1022007##k에게도 하나 나눠 주고 싶다고 한다. #p1022007#이 무서워 하는 #r#o4230400# 100마리#k를 물리치고, #m102000000#에 살고 있는 #b#p1022007##k을 찾아가 보자.\\n\\n#t4031286#  #b#c4031286##k / 1\\n#o4230400#  #r#a93821##k",
+      "completed": "#p1022007#이 무서워하는 #o4230400#를 물리치고 #t4031286#도 무사히 전해 주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000009,
+      "minLevel": 50,
+      "maxLevel": 59,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2006032300",
+      "endDate": "2006040400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9385,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        111,
+        112,
+        120,
+        121,
+        122,
+        130,
+        131,
+        132,
+        200,
+        210,
+        211,
+        212,
+        220,
+        221,
+        222,
+        230,
+        231,
+        232,
+        300,
+        310,
+        311,
+        312,
+        320,
+        321,
+        322,
+        400,
+        410,
+        411,
+        412,
+        420,
+        421,
+        422
+      ]
+    },
+    "complete": {
+      "npc": 1022007,
+      "items": [
+        {
+          "itemId": 4031286
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 4230400,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031286
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4031286,
+          "count": -1
+        },
+        {
+          "itemId": 1312019,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1322037,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1332035,
+          "jobRestriction": 16
+        },
+        {
+          "itemId": 1302040,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1402021,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1412014,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1422016,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1432021,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1442032,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1382022,
+          "jobRestriction": 4
+        },
+        {
+          "itemId": 1372020,
+          "jobRestriction": 4
+        },
+        {
+          "itemId": 1462025,
+          "jobRestriction": 8
+        },
+        {
+          "itemId": 1472036,
+          "jobRestriction": 16
+        },
+        {
+          "itemId": 1452029,
+          "jobRestriction": 8
+        }
+      ]
+    }
+  }
+}

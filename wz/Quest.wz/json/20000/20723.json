@@ -1,0 +1,72 @@
+{
+  "questId": 20723,
+  "info": {
+    "name": "Stone Mask",
+    "descriptions": {
+      "notStarted": "Agent #b#p1103004##k of #m102000000# has a new assignment for me...",
+      "inProgress": "#p1103004# told me this time, the detector reacted in the direction of #b#m101030103##k and assigned me to eliminate #r200 #o2230111#s#k there, while bringing back #b#t4032147##k. \\n\\n#o2230111##r #a207231##k \\n#i4032147# #t4032147# #b#c4032147# / 1#k",
+      "completed": "I was able to eliminate all the #o2230111#s. #p1103004# then proceeded to look at the detector again..."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103004,
+      "minLevel": 26,
+      "prerequisiteQuests": [
+        {
+          "questId": 20722,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1103004,
+      "items": [
+        {
+          "itemId": 4032147
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 2230111,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6500,
+      "items": [
+        {
+          "itemId": 4032147,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

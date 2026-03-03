@@ -1,0 +1,173 @@
+{
+  "questId": 6018,
+  "info": {
+    "name": "Keol\u0027s Order #4",
+    "descriptions": {
+      "notStarted": "Keol, the pompous working partner of Meren who is as irritable as they come in all of Maple, is giving me a new work request. Better go see what it is.",
+      "inProgress": "A request was made from Maple Admin to make a White Crewneck Shirt for him. Actually, a 100 of them!!! Oh wow... how am I going to make them all?\\n\\n#i4001177# #t4001177# #b#c4001177# / 100",
+      "completed": "Meren\u0027s coworker Keol received a request from Maple Admin to produce White Crewneck Shirts for beginners, and asked me to do it for him. It was quite daunting to even think about making a 100 of them, but how can I say no to the Maple Admin?? I worked hard and gave Keol all 100 of them, but he still gave me a hard time about the shirts."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2110002,
+      "minLevel": 60,
+      "prerequisiteQuests": [
+        {
+          "questId": 6017,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112,
+        2200,
+        2210,
+        2211,
+        2212,
+        2213,
+        2214,
+        2215,
+        2216,
+        2217,
+        2218
+      ]
+    },
+    "complete": {
+      "npc": 2110002,
+      "items": [
+        {
+          "itemId": 4001177,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031969
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 57400,
+      "items": [
+        {
+          "itemId": 4001177,
+          "count": -100
+        },
+        {
+          "itemId": 4250000,
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "itemId": 4250100,
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "itemId": 4250200,
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "itemId": 4250300,
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "itemId": 4250400,
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "itemId": 4250500,
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "itemId": 4250600,
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "itemId": 4250700,
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "itemId": 4251300,
+          "count": 2,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

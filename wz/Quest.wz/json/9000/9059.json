@@ -1,0 +1,61 @@
+{
+  "questId": 9059,
+  "info": {
+    "name": "Beat the Heat \u003cHard\u003e - 3rd Stage",
+    "parent": "Beat the Heat \u003cHard\u003e",
+    "descriptions": {
+      "notStarted": "I should go visit Maple Administrator for Beat the Heat, 3rd Stage.",
+      "inProgress": "For the 3rd Stage task, the Maple Administrator wanted me to defeat #b25 #o5120002#s#k and #b25 #o5120000#s#k, and bring #b30 #t4000072#s#k by defeating #b#o5120003##k.\\n\\n#o5120002# #r#a90592##k\\n#o5120000# #r#a90591##k\\n#t4000072# #b#c4000072##k/30",
+      "completed": "I passed the \u0027Beat the Heat\u0027 Challenge that MapleStory prepared for us. Just like he/she said, I better stop spending so much time in front of air-conditioners and fans, and go out instead and lead an active life."
+    },
+    "area": 50,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "startDate": "2005082900",
+      "endDate": "2005090300",
+      "prerequisiteQuests": [
+        {
+          "questId": 9058,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 4000072,
+          "count": 30
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 5120000,
+          "count": 25
+        },
+        {
+          "monsterId": 5120002,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 2001000,
+          "count": 50
+        },
+        {
+          "itemId": 4000072,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

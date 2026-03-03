@@ -1,0 +1,49 @@
+{
+  "questId": 21610,
+  "info": {
+    "name": "Scadur\u0027s Advice",
+    "descriptions": {
+      "notStarted": "Since adolescent #t1902015# is going through puberty, you should visit #b#p2020007##k of #b#m211000000##k and ask for some good advice.",
+      "inProgress": "#p2020007# says that Wolf Pups need to freely run around fields every once in a while and introduces you to a great spot. Head to #m921110000#, located past the #bWolf-Shaped Rock#k in #b#m211050000##k, and let your pup get some exercise running around the field.",
+      "completed": "You and your wolf ran across the Field of Wolves and got some good exercise. #t1902015# seemed to have really enjoyed the experience."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020007,
+      "minLevel": 100,
+      "prerequisiteQuests": [
+        {
+          "questId": 21607,
+          "state": "STARTED"
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2020007,
+      "items": [
+        {
+          "itemId": 4001193
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4001193,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

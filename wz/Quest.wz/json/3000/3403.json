@@ -1,0 +1,63 @@
+{
+  "questId": 3403,
+  "info": {
+    "name": "Dr. Kim\u0027s Comments : A Meeting with Hoony",
+    "parent": "Dr. Kim\u0027s Comments",
+    "descriptions": {
+      "inProgress": "I met Hoony at a Field around Omega Sector, and showed him the #bBlueprint Machine#k, as well as provide him with #b20 Space Foods#k. Hoony said that he fixed #bGunny\u0027s Laser Gun#k that he was asked to fix and requested me if I could give him his #bLaser Gun#k as well as show him the Blueprint Machine. He should be somewhere around the Field. Where could he be...",
+      "completed": "Hoony wanted to show the Blueprint to Gunny. He was already on his way to give Gunny a new weapon, so he asked me if I could give him the new gun, as well as show him the Blueprint. After much searching around, I was able to finally find him and gave him the gun."
+    },
+    "area": 37,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050006,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3402,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050007,
+      "items": [
+        {
+          "itemId": 4031101
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031100
+        },
+        {
+          "itemId": 4031101
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 3000,
+      "nextQuest": 3404,
+      "items": [
+        {
+          "itemId": 4031101,
+          "count": -1
+        },
+        {
+          "itemId": 2030011,
+          "count": 7
+        },
+        {
+          "itemId": 4031100,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

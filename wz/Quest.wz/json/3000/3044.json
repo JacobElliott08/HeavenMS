@@ -1,0 +1,29 @@
+{
+  "questId": 3044,
+  "info": {
+    "name": "The Nependeath Juice",
+    "parent": "The Chaos behind Alfonse Green and the Nependeath Juice",
+    "descriptions": {
+      "notStarted": "I should go see Alfonse Green, who should be somewhere near Orbis.",
+      "inProgress": "I met up with Alfonse Green, and needless to say, he is a big fan of the Nependeath Juice. He asked me if I could make one for him. To make one, I\u0027ll need to acquire the Sap of Nependeath, and I\u0027ll need Ericsson for that.",
+      "completed": "I met up with Ericsson."
+    },
+    "area": 33,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012020,
+      "minLevel": 40
+    },
+    "complete": {
+      "npc": 2012018
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "nextQuest": 3045
+    }
+  }
+}

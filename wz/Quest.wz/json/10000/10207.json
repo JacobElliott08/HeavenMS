@@ -1,0 +1,33 @@
+{
+  "questId": 10207,
+  "info": {
+    "name": "Remnants of Black Mage",
+    "descriptions": {
+      "notStarted": "Maple Admin is calling your name.",
+      "inProgress": "In the midst of the black aura of the Black Mage, let\u0027s try to find signs of contamination. \\n\\n#i4001240# #t4001240# #b#c4001240# / 20#k"
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 31,
+      "endDate": "2009082523",
+      "repeatIntervalMinutes": 0,
+      "normalAutoStart": true,
+      "maxLevel": 60,
+      "startScript": "q10207s"
+    },
+    "complete": {
+      "npc": 9010000,
+      "endScript": "q10207e",
+      "items": [
+        {
+          "itemId": 4001238,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

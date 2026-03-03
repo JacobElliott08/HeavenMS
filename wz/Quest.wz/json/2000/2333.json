@@ -1,0 +1,35 @@
+{
+  "questId": 2333,
+  "info": {
+    "name": "The Story of Betrayal",
+    "descriptions": {
+      "notStarted": "So who\u0027s behind the force that brought down the Mushking Empire?",
+      "inProgress": "Eliminate the #bPrime Minister#k, otherwise known as the ultimate traitor.",
+      "completed": "You eliminated the #bPrime Minister#k, otherwise known as the ultimate traitor."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300002,
+      "startScript": "q2333s",
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2332,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300002,
+      "endScript": "q2333e",
+      "monsters": [
+        {
+          "monsterId": 3300008
+        }
+      ]
+    }
+  }
+}

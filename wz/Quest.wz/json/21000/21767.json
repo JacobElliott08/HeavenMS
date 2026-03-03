@@ -1,0 +1,62 @@
+{
+  "questId": 21767,
+  "info": {
+    "name": "Secrets of the Wooden Box",
+    "descriptions": {
+      "notStarted": "#p1002001# asked you to investigate the wooden box that #p20000# always carries around.",
+      "inProgress": "You find unidentified medication inside the box.",
+      "completed": "It turned out that #p20000# had been taking his own special arthritis medicine behind #p1002001#\u0027s back. You made a deal with him, promising not to tell anyone about the contents of his wooden box in exchange for a small reward. You shouldn\u0027t tell #p1002001# about the wooden box. Just make something up."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1204033,
+      "minLevel": 13,
+      "startScript": "q21767s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21766,
+          "state": "STARTED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 20000,
+      "items": [
+        {
+          "itemId": 4032423
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 250,
+      "items": [
+        {
+          "itemId": 4000000,
+          "count": 10
+        },
+        {
+          "itemId": 4000016,
+          "count": 10
+        },
+        {
+          "itemId": 4000019,
+          "count": 10
+        },
+        {
+          "itemId": 4032423,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

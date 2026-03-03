@@ -1,0 +1,45 @@
+{
+  "questId": 2191,
+  "info": {
+    "name": "How to become a Brawler",
+    "descriptions": {
+      "notStarted": "In order to become a Brawler, I must go see Kyrin.",
+      "inProgress": "Kyrin says that she wants to test how far I have gotten on my training before she will help me job advance into a Brawler. I must first hunt down the #rOctopirates#k  on the testing grounds and collect #b15 Potent Power Crystals#k . I must remember to use the #rFlash Fist#k skill in order to defeat the Octopirates.                                 \\n\\n#i4031856##t4031856#  #b#c4031856#/15#k",
+      "completed": "I\u0027ve passed Kyrin\u0027s test! I\u0027m ready now to become a Brawler!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 2192
+        }
+      ],
+      "jobs": [
+        500
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "items": [
+        {
+          "itemId": 4031856,
+          "count": 15
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031856,
+          "count": -15
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "questId": 3112,
+  "info": {
+    "name": "Eliza\u0027s Garden",
+    "parent": "Goddess\u0027s Pet",
+    "descriptions": {
+      "inProgress": "Spiruna says that Eliza has calmed down enough, so #btalk with Eliza#k. Eliza can be found in #bEliza\u0027s Garden#k behind a fallen pillar at the Stairway to the Sky II.",
+      "completed": "Met #bEliza#k sitting gracefully inside Eliza\u0027s Garden. #bEliza#k showed no traces of anger, instead looking calm."
+    },
+    "area": 33,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2032001,
+      "minLevel": 83,
+      "prerequisiteQuests": [
+        {
+          "questId": 3111,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012026
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800
+    }
+  }
+}

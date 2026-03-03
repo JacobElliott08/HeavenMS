@@ -1,0 +1,64 @@
+{
+  "questId": 8834,
+  "info": {
+    "name": "New Year\u0027s Wishes 2",
+    "parent": "New Year : New Year\u0027s Wishes",
+    "descriptions": {
+      "notStarted": "It\u0027s New Year\u0027s! I should visit the Maple Administrator to get my present opened!",
+      "inProgress": "It\u0027s New Year\u0027s! I should visit the Maple Administrator to get my present opened!",
+      "completed": "The Maple Administrator opened my present for me! Sweet! "
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "startDate": "2006123110",
+      "endDate": "2007010102",
+      "prerequisiteQuests": [
+        {
+          "questId": 8833,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031520
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2040801,
+          "probability": 34
+        },
+        {
+          "itemId": 2040001,
+          "probability": 33
+        },
+        {
+          "itemId": 2040901,
+          "probability": 33
+        },
+        {
+          "itemId": 2000005,
+          "count": 10,
+          "probability": 3400
+        },
+        {
+          "itemId": 2000006,
+          "count": 10,
+          "probability": 6500
+        },
+        {
+          "itemId": 4031520,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

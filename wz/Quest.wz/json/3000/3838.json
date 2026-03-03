@@ -1,0 +1,38 @@
+{
+  "questId": 3838,
+  "info": {
+    "name": "Defeat Tae Roon",
+    "parent": "The Forgotten Master",
+    "descriptions": {
+      "inProgress": "Since Do Gong\u0027s spell was unfortunately interfered by Master Goblin, No Gong, with sadness in his eyes, told me the following... for the sake of Tae Roon, if he ever loses it again, he told me to take him down.\\n\\n#o7220000# #r#a38381##k",
+      "completed": "I went to go see No Gong again after defeating Tae Roon. No Gong believed that this would actually lighten the pressure Tae Roon might have felt with the spell controlling his every move. He said this with equal parts sadness and relief. \\n\\nNow that I have learned the truth about Tae Roon, I better go see #bTae Soo#k once more."
+    },
+    "area": 44,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091000,
+      "minLevel": 71,
+      "prerequisiteQuests": [
+        {
+          "questId": 3837,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091000,
+      "monsters": [
+        {
+          "monsterId": 7220000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 215400
+    }
+  }
+}

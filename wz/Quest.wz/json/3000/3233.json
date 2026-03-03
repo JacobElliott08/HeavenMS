@@ -1,0 +1,99 @@
+{
+  "questId": 3233,
+  "info": {
+    "name": "Delivering the #t4031094#",
+    "parent": "A Delivery to a Lost Time",
+    "descriptions": {
+      "inProgress": "At the Lost Time in the Ludibrium Clocktower, I gave #p2040029# the #b#t4031098##k from Tick-Tock\u0027s. I\u0027m glad I got to give this to him before too late. Now I should wait to hear a word from #bOlson#k.",
+      "completed": "At the Lost Time in the Ludibrium Clocktower, I gave #p2040029# the #b#t4031094##k, an essential part of the clocktower. Now all I have to do is wait for the #p2040029# to fix the clocktower. Will this work?"
+    },
+    "area": 37,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040029,
+      "minLevel": 33,
+      "prerequisiteQuests": [
+        {
+          "questId": 3232,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4500,
+      "items": [
+        {
+          "itemId": 2043001,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2043101,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2043201,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2044001,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2044101,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2044201,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2044301,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2044401,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2043701,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 2043801,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 2044501,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 2043301,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 2044701,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 2044601,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 2044801,
+          "jobRestriction": 32800
+        },
+        {
+          "itemId": 2044901,
+          "jobRestriction": 32800
+        }
+      ]
+    }
+  }
+}

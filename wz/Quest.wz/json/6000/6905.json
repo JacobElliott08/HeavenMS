@@ -1,0 +1,62 @@
+{
+  "questId": 6905,
+  "info": {
+    "name": "Tatamo\u0027s Suggestion",
+    "descriptions": {
+      "notStarted": " #b#p2081100##k told me to see #b#p2081200##k in Leafre if I want to get #b#t4031343##k and  #b#t4031344##k.",
+      "inProgress": "#b#p2081000##k told me to bring #b#t4031348##k to get #b#t4031343##k and  #b#t4031344##k.  He says the merchants in another town have the secret magic book. \\r\\n#i4031348##t4031348##k #b#c4031348#/1",
+      "completed": " I gave #b#t4031348##k and received  #b#t4031343##k and  #b#t4031344##k."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081000,
+      "minLevel": 120,
+      "repeatIntervalMinutes": 0,
+      "jobs": [
+        111,
+        121,
+        131
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6904,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031343
+        },
+        {
+          "itemId": 4031344
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081000,
+      "items": [
+        {
+          "itemId": 4031348
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031344
+        },
+        {
+          "itemId": 4031343
+        },
+        {
+          "itemId": 4031348,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

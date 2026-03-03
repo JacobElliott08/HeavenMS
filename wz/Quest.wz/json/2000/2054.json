@@ -1,0 +1,47 @@
+{
+  "questId": 2054,
+  "info": {
+    "name": "John\u0027s Last Present",
+    "descriptions": {
+      "notStarted": "I heard John has one final thing to ask me...",
+      "inProgress": "I ran into John the fisherman again at Lith Harbor. This time, he told me his mother passed away recently, and he wanted to get her some White Violas for her. He asked me to get #b30 White Violas#k for him. The scent of White Violas last over 1000 years...and according to John, they can be found through the mysterious statue again, where the flower may be found. Man ... do I HAVE to go in there again??",
+      "completed": "I got John all #b30 White Violas#k. It has a nice scent to it, but 30 of them? Makes my head spin...As a sign of appreciation, John gave me a set of his mother\u0027s earrings. These earrings look like they are made of some common flowers, but it seems there\u0027s something to it..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 20000,
+      "minLevel": 60,
+      "prerequisiteQuests": [
+        {
+          "questId": 2053,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 20000,
+      "items": [
+        {
+          "itemId": 4031028,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 25000,
+      "items": [
+        {
+          "itemId": 4031028,
+          "count": -30
+        },
+        {
+          "itemId": 1032014
+        }
+      ]
+    }
+  }
+}

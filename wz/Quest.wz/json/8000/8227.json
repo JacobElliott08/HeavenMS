@@ -1,0 +1,34 @@
+{
+  "questId": 8227,
+  "info": {
+    "name": "Lost in Translation 1",
+    "descriptions": {
+      "notStarted": "I should see if Jack Barricade needs my help with anything...",
+      "inProgress": "Jack needs John\u0027s help, and needs me to be the go-between.  He wants me to deliver a letter to his brother in NLC; the #bCoded Communique#k contains a transcription of some strange symbol code that he saw while being held in Crimsonwood Keep.  Hopefully, with his expertise in ancient languages, John should be able to decipher it.  I should hop to it!  I have a feeling some serious events are unfolding...",
+      "completed": "Looks like Jack was right about the symbols he saw in the Grandmaster Council Hall; the Versalian code seems to indicate that the new Masters are planning to attack NLC with the soldiers they\u0027re training!  It\u0027s going to be up to us to stop them!"
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201096,
+      "minLevel": 70,
+      "startScript": "q8227s",
+      "prerequisiteQuests": [
+        {
+          "questId": 8219,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201051,
+      "endScript": "q8227e",
+      "items": [
+        {
+          "itemId": 4032032
+        }
+      ]
+    }
+  }
+}

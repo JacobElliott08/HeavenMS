@@ -1,0 +1,28 @@
+{
+  "questId": 2014,
+  "info": {
+    "name": "Alex\u0027s Request",
+    "parent": "Alex the Runaway Kid",
+    "descriptions": {
+      "notStarted": "I heard there is a runaway kid called Alex in Kerning City...",
+      "inProgress": "At the top of the building in Kerning City, I met this kid named Alex, who looked like a runaway kid. He left home a few days ago aftter a spat with his father. He\u0027d been wandering around Kerning City ever since, but now, with no money and a severe case of boredom hitting him, he just wanted to go back home ... with the problem being that he was certain that a whole round of spanking would await him if he did, indeed, return home. So he asked me if I could convince his father Stan, who happened to be the chief of Henesys, to let him return home without any incident. Not only that, he asked me to get his late mother\u0027s article, her #bold gold watch#k, from him as a proof. If he had known this would happen, would he have done it nonetheless?",
+      "completed": "As Alex has requested, I looked for his father in Henesys to get Alex\u0027s mother\u0027s #bold gold watch#k."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052000,
+      "minLevel": 20
+    },
+    "complete": {
+      "npc": 1012003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 2015
+    }
+  }
+}

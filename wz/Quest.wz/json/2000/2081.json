@@ -1,0 +1,29 @@
+{
+  "questId": 2081,
+  "info": {
+    "name": "A Lesson on Job Advancement",
+    "descriptions": {
+      "notStarted": "What do I have to do to choose a job of my liking? I\u0027ll have to see Olaf of Lith Harbor.",
+      "inProgress": "I\u0027ll have to listen to #p1002101# carely as he describes the in\u0027s and out\u0027s of each and every job, because he\u0027ll quiz me on it afterwards.",
+      "completed": "I answered all the questions #p1002101# asked. I\u0027ll have to be at least on #blevel 10#k in order to become a #ba Warrior, a Thief, a Bowman, or a Pirate#k, and #blevel 8#k to become a #bMagician#k. Warrior-hopefuls will need to head over to Perion for job-advancement, Kerning City for thief-hopefuls, Ellinia for magician-hopefuls, and Henesys for Bowman-hopefuls."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002101,
+      "minLevel": 8,
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 1002101
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 65
+    }
+  }
+}

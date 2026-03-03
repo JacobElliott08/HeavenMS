@@ -1,0 +1,40 @@
+{
+  "questId": 3636,
+  "info": {
+    "name": "The Story of Axes",
+    "descriptions": {
+      "notStarted": "Deep in the #m222010002# of the Black Mountain, I heard #p2071010# is concerned about something. I better go check it out myself.",
+      "inProgress": "I met #b#p2071010##k, who was heavily sighing at #m222010002# with a big lump on his head. Apparently, he got hurt from a random axe that was thrown on his way. After throwing the axe out of the pond in disgust, the owner of the axe, #b#p2071011##k, came and asked for the axe. He requested that anyone that finds the #b#t4031315##k return it to #p2071011#.\\nThe Mountain God believes that the steel axe for the tree cutter might be taken by a monster, and that he has offered to look into the axe and see if it\u0027s legit. The axes will be available through #rDark Axe Stumps#k, and he\u0027ll look into it and see if it\u0027s really #b#t4031315##k.",
+      "completed": "Through the request from #p2071010#, who I met at #m222010002# of the Black Mountain, I returned #t4031315# to its rightful owner, and received the storybook on \u0027The Story of the Axes\u0027."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071010,
+      "minLevel": 45
+    },
+    "complete": {
+      "npc": 2071011,
+      "items": [
+        {
+          "itemId": 4031315
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 14000,
+      "items": [
+        {
+          "itemId": 4031315,
+          "count": -1
+        },
+        {
+          "itemId": 4031298
+        }
+      ]
+    }
+  }
+}

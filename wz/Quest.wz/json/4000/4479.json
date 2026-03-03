@@ -1,0 +1,38 @@
+{
+  "questId": 4479,
+  "info": {
+    "name": "Santa Grandmother Finding",
+    "descriptions": {
+      "notStarted": "You\u0027ve found Santa Encyclopedia No.2, regarding Santa\u0027s Family History.  Santa Encyclopedia No.2 has stories about the lovely wife of Santa Claus, Mrs. Claus. You should visit her by tracing the information written in Santa Encyclopedia No.2.",
+      "inProgress": "Mrs. Claus was precisely at the location mentioned in the book. You asked Mrs. Claus about Santa Claus.",
+      "completed": "You asked Mrs. Claus about Santa Claus, but she pretended as if she didn\u0027t know who he was. How will you get her to warm up to you?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250051,
+      "minLevel": 25,
+      "endDate": "2010010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 4477,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4161038
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9250051
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000
+    }
+  }
+}

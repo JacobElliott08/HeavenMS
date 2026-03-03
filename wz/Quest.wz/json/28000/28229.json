@@ -1,0 +1,68 @@
+{
+  "questId": 28229,
+  "info": {
+    "name": "The Fairies Like...",
+    "parent": "The Legend of Ancient Bow",
+    "descriptions": {
+      "notStarted": "#b#@1012003:##k in #bHenesys#k says he\u0027ll tell you what the fairies like. Let\u0027s talk to him.",
+      "inProgress": "The fairies are very fond of the sound of Ocarina.\\n\\n\\n\\n#b#@1012003:##k says he will make you an Ocarina if you bring back the following items.\\n\\n#rTree Branch#k(a drop item from #rStumps#k that can be easily found in #b#m100050000##k.)\\n#rEllinia Tree Barrel#k(a drop item from #rDark Stumps#k that can be easily found in #b#m100040000##k.)\\n\\nReport back to #b#@1012003:##k in #bHenesys#k when you finish collecting all the items.",
+      "completed": "#b#@1032101:##k in #bEllinia#k will welcome you if you give her the Ocarina. Let\u0027s go see her."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012003,
+      "prerequisiteQuests": [
+        {
+          "questId": 28228,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1012003,
+      "items": [
+        {
+          "itemId": 4001347
+        },
+        {
+          "itemId": 4000003,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200,
+      "items": [
+        {
+          "itemId": 4000003,
+          "count": -10
+        },
+        {
+          "itemId": 4001347,
+          "count": -1
+        },
+        {
+          "itemId": 4032481
+        }
+      ]
+    }
+  }
+}

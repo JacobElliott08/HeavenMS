@@ -1,0 +1,46 @@
+{
+  "questId": 2079,
+  "info": {
+    "name": "The Path of a Thief",
+    "descriptions": {
+      "notStarted": "What do I have to do to make the job advancement as a thief, just like #p1052001# of Kerning City? I\u0027ll have to go see #p1002101# of Lith Harbor and find out myself.",
+      "inProgress": "#p1002101# of Lith Harbor tells me I can choose to become a #bThief#k if I\u0027m at least on #blevel 10#k. He tells me I\u0027ll need to see #r#p1052001##k of #rKerning City#k ... but how do I get there? I\u0027ll have to check on the world map. (#rW#k)",
+      "completed": "I have learned what it takes to become a true Thief through #p1052001# of Henesys."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002101,
+      "prerequisiteQuests": [
+        {
+          "questId": 2080
+        },
+        {
+          "questId": 2081,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2212
+        },
+        {
+          "questId": 2077
+        },
+        {
+          "questId": 2078
+        }
+      ],
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 1052001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

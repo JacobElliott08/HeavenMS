@@ -1,0 +1,68 @@
+{
+  "questId": 3071,
+  "info": {
+    "name": "The Secrets Behind the Contract of Darkness",
+    "parent": "Preparing For the Revival",
+    "descriptions": {
+      "notStarted": "I met up with Manji, who knows something about the #b#t4031218##k.",
+      "inProgress": "Manji told me some things about the #b#t4031218##k. I couldn\u0027t believe what I was hearing. #b#t4031218##k can bring the dead\u0027s back to life, and the source of its energy is apparently #b#t4031218##k. That\u0027s why the zombies have been wandering around as if they are alive. The unfathomable force of #b#t4031218##k ... I need to find it and take them to Shammos. \\n\\n#t4031218# #b#c4031218##k/1",
+      "completed": "I gathered up the #b#t4031218##k and gave them back to Shammos."
+    },
+    "area": 33,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022002,
+      "prerequisiteQuests": [
+        {
+          "questId": 3070,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2022003,
+      "items": [
+        {
+          "itemId": 4031218
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "fame": -2,
+      "items": [
+        {
+          "itemId": 4031218,
+          "count": -1
+        },
+        {
+          "itemId": 2040701,
+          "probability": 1
+        },
+        {
+          "itemId": 2040702,
+          "probability": 1
+        },
+        {
+          "itemId": 2040704,
+          "probability": 1
+        },
+        {
+          "itemId": 2040705,
+          "probability": 1
+        },
+        {
+          "itemId": 2040707,
+          "probability": 1
+        },
+        {
+          "itemId": 2040708,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

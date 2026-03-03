@@ -1,0 +1,55 @@
+{
+  "questId": 21755,
+  "info": {
+    "name": "Decoding the Letter",
+    "descriptions": {
+      "notStarted": "You can\u0027t read the letter given by #p2131000#. What is this, anyway? You\u0027d better head over to #b#m104000000##k and ask #b#p1002104##k what to do with it.",
+      "inProgress": "According to #p1002104#, the letter is written in a secret code. Thankfully, you have a master decoder in #b#p1201000##k, so take the letter and head over to #b#m140000000##k.",
+      "completed": "#p1201000# said that decoding the letter may take some time and told you she\u0027ll let #p1002104# know once it\u0027s complete."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 63,
+      "prerequisiteQuests": [
+        {
+          "questId": 21754,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1201000,
+      "items": [
+        {
+          "itemId": 4032329
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032329
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4032329,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

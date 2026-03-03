@@ -1,0 +1,62 @@
+{
+  "questId": 9988,
+  "info": {
+    "name": "Francois\u0027 Latest Work",
+    "parent": "Snow Silk and the Mysterious Fabric ",
+    "descriptions": {
+      "notStarted": "Mysterious Fabric that I got from Arwen... What should I make with this?  Should I go see Francois like Arwen mentioned?  But she seems a little strange though...",
+      "inProgress": "As Arwen suggested, I went to go see Francois with the Mysterious Fabric.  Francois said she will make me her latest creation and asked me to bring her one more ingredient; an item that is common but not ordinary, small but possessing great power... She wants me to bring her #b50 Maple Leaves#k...\\n\\n#i4001126# #t4001126# #b#c4001126# / 50",
+      "completed": "After contemplating what to do make with the Mysterious Fabric I received from Arwen, I decided to go see Francois as Arwen suggested.  Francois told me she would make me an item she just recently created and asked me to bring her 50 more Maple Leaves.  She then made me a #bMaple Cape#k.  Wow~ this is great!  "
+    },
+    "area": 50,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032002,
+      "minLevel": 10,
+      "endDate": "2009061623",
+      "prerequisiteQuests": [
+        {
+          "questId": 9987,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031945
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032002,
+      "items": [
+        {
+          "itemId": 4001126,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031945,
+          "count": -1
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4001126,
+          "count": -50
+        },
+        {
+          "itemId": 1102166
+        }
+      ]
+    }
+  }
+}

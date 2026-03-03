@@ -1,0 +1,40 @@
+{
+  "questId": 3802,
+  "info": {
+    "name": "No Gong\u0027s Teaching3",
+    "parent": "No Gong\u0027s Teaching",
+    "descriptions": {
+      "notStarted": "Despite defeating 20 #o5120503# like #b#p2091000##k asked, #p2091000# still seemed uninterested in making me the Master. Seriously, is he really an instructor? This is really getting on me, and I got to see him now, just to see what he\u0027ll ask me to do.",
+      "inProgress": "I asked him about being the Master, but #p2091000# gave me this uninterested look and told me to defeat #r40 #o5120503#s#k. First, 10... then 20... now 40? What am I, a training dog? Despite my anger ready to spill over, I realized I couldn\u0027t stop now. Fine, I\u0027ll do what #p2091000# says.\\n\\n#o5120503#  #r#a38021##k",
+      "completed": "Despite defeating 40 #o5120503#s, #p2091000# still gave me that uninterested look and just nodded nonchalantly. I mean, he should be giving me some kind of a compliment for doing all that, but instead, #p2091000# iterated that I am still nowhere close to being a Master. Is he really gonna make me the Master?"
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091000,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 3801,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091000,
+      "monsters": [
+        {
+          "monsterId": 5120503,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 16500
+    }
+  }
+}

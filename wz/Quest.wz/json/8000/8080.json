@@ -1,0 +1,34 @@
+{
+  "questId": 8080,
+  "info": {
+    "name": "Lazy Alien Grey",
+    "parent": "Umi\u0027s Ambition",
+    "descriptions": {
+      "notStarted": "Apparently, #r#p9120005##k paid for the machine to #p2050002##k, only to keep waiting for the machine to come. #nIn any case, I better talk to #r#p9120005##k.",
+      "inProgress": "#r#p9120005##k asked me to convince #r#p2050002##k to send the machine to her. \\nIn any case, I should meet up with  #r#p2050002##k.",
+      "completed": "I was able to meet #r#p2050002##k. This is it!"
+    },
+    "area": 48,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120005,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 8079,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8081
+    }
+  }
+}

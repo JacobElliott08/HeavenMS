@@ -1,0 +1,28 @@
+{
+  "questId": 8230,
+  "info": {
+    "name": "Stemming the Tide",
+    "descriptions": {
+      "notStarted": "The Versalian code that Jack uncovered and that Elpam translated points to some sort of imminent attack on New Leaf City by the Twisted Masters\u0027 army.  It\u0027s up to us to stop them!  I should talk to John...",
+      "inProgress": "Someone who has firsthand knowledge of the Keep.  I think I have an idea who might be able to help.",
+      "completed": "I brought Lukan\u0027s #bCrimsonwood Keystone#k to Jack.  I explained what Lukan told me: that this would unlock the gate mechanically, but the red energy field was a new development. Jack thinks he can figure out a solution for the magical barrier, but he\u0027ll need some time.  I should check in with him later and see if he\u0027s made any progress."
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201096,
+      "minLevel": 70,
+      "startScript": "q8230s"
+    },
+    "complete": {
+      "npc": 9201096,
+      "endScript": "q8230e",
+      "items": [
+        {
+          "itemId": 3992041
+        }
+      ]
+    }
+  }
+}

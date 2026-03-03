@@ -1,0 +1,67 @@
+{
+  "questId": 9996,
+  "info": {
+    "name": "Alcaster\u0027s Advice",
+    "descriptions": {
+      "notStarted": "I get the feeling that my Maple Cape\u0027s vibrant color has faded a bit.  It seems less shiny... I should go see Lisa who repaired the cape before. ",
+      "inProgress": "I decided to go see Alcaster on Lisa\u0027s referral...  Lisa did mention that I\u0027ll probably need #b10 Snow Silks and 10 Maple Leaves#k, so I should gather all the materials before I go see Alcaster.\\n\\n#i4001166# #t4001166# #b#c4001166# / 10#k\\n#i4001126# #t4001126# #b#c4001126# / 10#k\\n#i1102167# #t1102167# #b#c1102167# / 1",
+      "completed": "With Alcaster\u0027s help, I was able to recharge the power into the Maple Cape.  It even seems to fit me better than before.  Alcaster told me that the cape is excellent item which is rare to find these days.  I will take good care of it and use it for a long time."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012012,
+      "minLevel": 65,
+      "endDate": "2009061623",
+      "prerequisiteQuests": [
+        {
+          "questId": 9994,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1102167
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "items": [
+        {
+          "itemId": 4001166,
+          "count": 10
+        },
+        {
+          "itemId": 4001126,
+          "count": 10
+        },
+        {
+          "itemId": 1102167
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4001166,
+          "count": -10
+        },
+        {
+          "itemId": 4001126,
+          "count": -10
+        },
+        {
+          "itemId": 1102167,
+          "count": -1
+        },
+        {
+          "itemId": 1102168
+        }
+      ]
+    }
+  }
+}

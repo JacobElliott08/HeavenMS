@@ -1,0 +1,50 @@
+{
+  "questId": 2088,
+  "info": {
+    "name": "The Reason Behind the Mushroom Studies",
+    "descriptions": {
+      "notStarted": "I should go see Bruce in Henesys...",
+      "inProgress": "I got to meet Bruce, who has been studying the monsters and animals in general in Henesys. His bright smile and the easy-going demeanor belies the painful fact that his daughter has been missing for some time, and that he\u0027s been studying the mushroom monsters for the sake of finding a clue on his daughter\u0027s whereabouts. He asks me if I can help him out, and I just can\u0027t say no to a worthy cause like this...\\n\\n#t4000011# #b#c4000011##k/10 \\n#t4000001# #b#c4000001##k/40 ",
+      "completed": "I helped Bruce gather up the materials necessary for his studies. Will these help him find his daughter?"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012111,
+      "minLevel": 10
+    },
+    "complete": {
+      "npc": 1012111,
+      "items": [
+        {
+          "itemId": 4000001,
+          "count": 40
+        },
+        {
+          "itemId": 4000011,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 4000001,
+          "count": -40
+        },
+        {
+          "itemId": 4000011,
+          "count": -10
+        },
+        {
+          "itemId": 2000000,
+          "count": 25
+        }
+      ]
+    }
+  }
+}

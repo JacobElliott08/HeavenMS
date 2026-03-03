@@ -1,0 +1,43 @@
+{
+  "questId": 4962,
+  "info": {
+    "name": "Smores No More",
+    "descriptions": {
+      "notStarted": "MBI (Maple Bureau of Investigation) Agent Falcon has been standing in front of the Prendergast Mansion for quite some time.  Maybe I should go see why he\u0027s still loitering around.",
+      "inProgress": "Looks like the bumbling MBI Agent Falcon just can\u0027t get a break.  Just when he was ready to pack up and leave to report the findings for his Halloween mission, a mysterious little boy appeared and stole all the Smores Falcon had cooked up for his colleagues!  Falcon has agreed to pay you 100,000 mesos (from his Agency discretionary account) if you recover #b25#k of his #bSmores#k for him.  Easy money - or is it?  The Smores look pretty tasty... I guess I\u0027ll have to try not to eat them myself as I collect them!",
+      "completed": "I collected Agent Falcon\u0027s #bSmores#k for him... they were a bit dirty but still good, so his colleagues back at the MBI Agency should be happy!  In return, Falcon paid me the 100,000 mesos he promised.  He also gave me some old medicine bottles that he\u0027d found lying outside the house.  They look pretty potent..."
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201075,
+      "minLevel": 25,
+      "endDate": "2009100100"
+    },
+    "complete": {
+      "npc": 9201075,
+      "items": [
+        {
+          "itemId": 2022244,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": 100000,
+      "items": [
+        {
+          "itemId": 2022242,
+          "count": 3
+        },
+        {
+          "itemId": 2022244,
+          "count": -25
+        }
+      ]
+    }
+  }
+}

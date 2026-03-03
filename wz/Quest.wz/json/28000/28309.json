@@ -1,0 +1,34 @@
+{
+  "questId": 28309,
+  "info": {
+    "name": "Olivia: \"Help Me\"",
+    "descriptions": {
+      "notStarted": "The poor girl standing outside the mansion looks so frightened and alone. Let\u0027s see what she needs help with.",
+      "inProgress": "Olivia will not return inside to the Mansion until the #b100 Dead Scarecrows#k are defeated.  ",
+      "completed": "The #b100 Dead Scarecrows#k have been defeated. Olivia is now able to enter her home, but this might just be the beginning."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201136,
+      "minLevel": 41,
+      "maxLevel": 60,
+      "endDate": "2009112500"
+    },
+    "complete": {
+      "npc": 9201136,
+      "monsters": [
+        {
+          "monsterId": 9400639,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000
+    }
+  }
+}

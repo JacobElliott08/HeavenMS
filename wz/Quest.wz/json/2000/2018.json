@@ -1,0 +1,152 @@
+{
+  "questId": 2018,
+  "info": {
+    "name": "Luke the Security Guy",
+    "descriptions": {
+      "notStarted": "Let\u0027s meet Luke the Security Guy at the entrance of the Henesys Dungeon.",
+      "inProgress": "At the entrance of the dungeon, I met Luke the security guy. He wanted to make a healthy dish for his mom, and asked me if I could get him #b100 pieces of Jr. Necki\u0027s skin, 10 wings of Stirge, and a bowl of salad#k. He claimed that he\u0027s too busy with all the security matters and stuff, but ... he looks like he\u0027s just falling asleep at work ...",
+      "completed": "I got Luke, who is protecting the entrance of the Dungeon, the stuff he asked for. Since he\u0027s making the \"Snake Drink\" and all ... I want a taste of that myself! In return, Luke got me a nicely refined jewel he found from around the area. It\u0027s not like a refined jewel drops from the sky ... did someone lose it while traveling? Anyway I should drop by later when the \"Snake Drink\" gets done ..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1040000,
+      "minLevel": 15,
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1040000,
+      "items": [
+        {
+          "itemId": 2020000
+        },
+        {
+          "itemId": 4000034,
+          "count": 100
+        },
+        {
+          "itemId": 4000042,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1500,
+      "items": [
+        {
+          "itemId": 4000034,
+          "count": -100
+        },
+        {
+          "itemId": 4000042,
+          "count": -10
+        },
+        {
+          "itemId": 2020000,
+          "count": -1
+        },
+        {
+          "itemId": 4021000,
+          "probability": 1
+        },
+        {
+          "itemId": 4021001,
+          "probability": 1
+        },
+        {
+          "itemId": 4021002,
+          "probability": 1
+        },
+        {
+          "itemId": 4021003,
+          "probability": 1
+        },
+        {
+          "itemId": 4021004,
+          "probability": 1
+        },
+        {
+          "itemId": 4021005,
+          "probability": 1
+        },
+        {
+          "itemId": 4021006,
+          "probability": 1
+        },
+        {
+          "itemId": 4021007,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

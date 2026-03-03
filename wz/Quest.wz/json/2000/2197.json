@@ -1,0 +1,26 @@
+{
+  "questId": 2197,
+  "info": {
+    "name": "Tienk, the Monster Book Salesman",
+    "descriptions": {
+      "notStarted": "As soon as you arrive in  #m104000000#, find #b#p0002006##k the motor-mouth salesman.",
+      "inProgress": "As soon as you arrive in  #m104000000#, find #b#p0002006##k the motor-mouth salesman.",
+      "completed": "You have talked to #b#p0002006##k the salesman about the #bMonster Book#k."
+    },
+    "area": 30,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2006,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 2006,
+      "endScript": "q2197e"
+    }
+  }
+}

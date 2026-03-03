@@ -1,0 +1,37 @@
+{
+  "questId": 6163,
+  "info": {
+    "name": "Shammos!",
+    "parent": "Shammos\u0027s past",
+    "descriptions": {
+      "inProgress": "When I asked #p2022003# about #p1032001#, I could tell he was very resentful towards #p1032001# and #p2020009#. Let\u0027s go back to #b#p1032001##k and tell him about #p2022003#.",
+      "completed": " #p1032001# looked disappointed as he said how #p2022003# used to be a great Magician..."
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2022003,
+      "jobs": [
+        212,
+        222,
+        232
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6162,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200000
+    }
+  }
+}

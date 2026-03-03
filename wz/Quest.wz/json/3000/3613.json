@@ -1,0 +1,49 @@
+{
+  "questId": 3613,
+  "info": {
+    "name": "Chil Nam\u0027s Buckwheat Paste",
+    "descriptions": {
+      "notStarted": "Apparently, the place that makes the best buckwheat paste in Korean Folk Town is Chil Nam\u0027s...",
+      "inProgress": "I went to Chil Nam\u0027s place because he was apparently the best at making buckwheat paste in Folk Town. He asked for 4 Tiger Stamps and 1,000 mesos in return for some buckwheat paste.\\n\\n#t4000170# #b#c4000170##k/4",
+      "completed": "I gave Chil Nam 4 #t4000170#s and 1,000 mesos for 2 buckwheat pastes."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071003,
+      "minLevel": 37,
+      "repeatIntervalMinutes": 360,
+      "prerequisiteQuests": [
+        {
+          "questId": 3605,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071003,
+      "items": [
+        {
+          "itemId": 4000170,
+          "count": 4
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -1000,
+      "items": [
+        {
+          "itemId": 4000170,
+          "count": -4
+        },
+        {
+          "itemId": 2022051,
+          "count": 2
+        }
+      ]
+    }
+  }
+}

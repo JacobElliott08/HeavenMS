@@ -1,0 +1,34 @@
+{
+  "questId": 2315,
+  "info": {
+    "name": "Exploring Mushroom Forest (2)",
+    "descriptions": {
+      "notStarted": "You must find a way to break through the powerful barrier in Mushroom Forest.",
+      "inProgress": "The #bSecretary of Magic#k of Mushking Empire might have an idea about what to do.",
+      "completed": "You reported the condition of the barrier in Mushroom Forest to the #bSecretary of Magic#k of Mushking Empire."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300003,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2314,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300004
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4000,
+      "nextQuest": 2316
+    }
+  }
+}

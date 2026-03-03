@@ -1,0 +1,31 @@
+{
+  "questId": 8882,
+  "info": {
+    "name": "About the Amorian Challenge!",
+    "descriptions": {
+      "notStarted": "mes the Wise has good news for me. It looks like his brother, Amos the Strong, has finished his hunting ground for married couples. I should stop by and get some more info!",
+      "inProgress": "I visited Ames the Wise, and he explained the Amoria Party Quest in detail\\n\\nI must visit Amos the Strong at the end of Purplewood Forest, and if I\u0027m #bmarried,#k I can enter. I can either bring my #bspouse or go at it solo#k. I must team up with #b5 other married people#k, and from there, the adventure begins!",
+      "completed": "That wasn\u0027t so bad! Amos the Strong seems much different from his brother Ames--he had muscles coming out of his muscles! To enter his hunting ground, I must be married, and can either bring my spouse or go at it with 5 other married people. I should visit Amoria more often...I wonder what else is in this land..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201004,
+      "minLevel": 40
+    },
+    "complete": {
+      "npc": 9201043
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "items": [
+        {
+          "itemId": 2022180
+        }
+      ]
+    }
+  }
+}

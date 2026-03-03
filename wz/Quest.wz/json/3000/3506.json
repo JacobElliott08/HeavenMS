@@ -1,0 +1,29 @@
+{
+  "questId": 3506,
+  "info": {
+    "name": "Lost Memory",
+    "parent": "Memory Lane",
+    "descriptions": {
+      "notStarted": "I defeated #o8220004# as #p2140000# told me to, but strangely, I can\u0027t go past #m270010500#.  Something doesn\u0027t seem right... I should go ask #b#p2140000##k.",
+      "inProgress": "Whale of Time, #o8220004#, eats memory as its staple food.  #p2140000# said that my memory was eaten by #o822004# while I was fighting it and therefore I couldn\u0027t pass through Memory Lane.  He said I might be able to retrieve my lost memory if I go see #b#p2140001##k, the Memory Keeper.",
+      "completed": "I met #p2140001#, the Memory Keeper."
+    },
+    "area": 46,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140000,
+      "minLevel": 103,
+      "prerequisiteQuests": [
+        {
+          "questId": 3505,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2140001
+    }
+  }
+}

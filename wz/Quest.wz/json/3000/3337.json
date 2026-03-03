@@ -1,0 +1,44 @@
+{
+  "questId": 3337,
+  "info": {
+    "name": "The Importance of Life Alchemy",
+    "descriptions": {
+      "notStarted": "#b#m261000000##k\u0027s alchemist #b#p2111009##k seems to be very proud of his work as an Alcadno combining the machinery and alchemy into one great body of work.",
+      "inProgress": "#p2111009# warned me of the dangerous nature of #r#o2110301##k, and wanted me to slay #r80#k of them while acquiring #b#t4000351##k necessary to make a medicine.\\n\\n#i4000351##t4000351# #b#c4000351##k/40 \\n#o2110301# #r#a33371##k",
+      "completed": "#p2111009# told me he lost his right eye in the past because of an attack from #o2110301#, but thanks to the Life Alchemy practiced by the Alcadnos, he was able to live a new life with a new right eye. He also contends that poison, if used right, can be a great source of medicine, and that just because it\u0027s dangerous, doesn\u0027t mean people should stay away from the merging of machinery and alchemy."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111009,
+      "minLevel": 29
+    },
+    "complete": {
+      "npc": 2111009,
+      "items": [
+        {
+          "itemId": 4000351,
+          "count": 40
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 2110301,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8050,
+      "items": [
+        {
+          "itemId": 4000351,
+          "count": -40
+        }
+      ]
+    }
+  }
+}

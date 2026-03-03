@@ -1,0 +1,65 @@
+{
+  "questId": 2011,
+  "info": {
+    "name": "Jane\u0027s First Challenge",
+    "parent": "Jane the Alchemist",
+    "descriptions": {
+      "notStarted": "I heard Jane has another goal...",
+      "inProgress": "I ran into Jane again at Lith Harbor, the same Jane that I helped get wild boar\u0027s canine teeth for her to travel. She said she got busted for lying that it was her that collected those items...anyway, she gave up on her dream to travel, and now is trying to become an alchemist. She needed some materials to experiment with...and...I\u0027m pretty sure I\u0027m getting those for her. Anyway, she said she needed #b1 pure water, 30 medicines with weird vibe, and 20 malady\u0027s experimental frogs#k to try to make an Elixir. Oh, what the heck, I\u0027ll get them for her and see if it really works...",
+      "completed": "I got all the materials needed for Jane to make the elixir. If she does it well, then maybe I can get myself a nice elixir, but what if she fails...is the whole place going to blow up??"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002100,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 2010,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1002100,
+      "items": [
+        {
+          "itemId": 2022000
+        },
+        {
+          "itemId": 4000041,
+          "count": 20
+        },
+        {
+          "itemId": 4000036,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6500,
+      "items": [
+        {
+          "itemId": 2022000,
+          "count": -1
+        },
+        {
+          "itemId": 4000036,
+          "count": -30
+        },
+        {
+          "itemId": 4000041,
+          "count": -20
+        },
+        {
+          "itemId": 2000004,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

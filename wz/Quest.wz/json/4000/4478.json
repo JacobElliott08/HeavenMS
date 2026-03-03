@@ -1,0 +1,82 @@
+{
+  "questId": 4478,
+  "info": {
+    "name": "Disappeared Santa Encyclopedia  ",
+    "descriptions": {
+      "notStarted": "You should ask Rooney about the article on Santa Claus.",
+      "inProgress": "Rooney felt bad that most Maplers don\u0027t believe in Santa Claus anymore. She also mentioned that this is caused by the loss of #bSanta Encyclopedias#k in the town library. She asked that you gather all 6 Santa Encyclopedias that the monsters have stolen. Remember, not only is it meaningful to gather all 6 Santa Encyclopedias, but also something good will happen while searching for those books.\\n\\n#t4161043# #b#c4161043##k/1 \\n#t4161038# #b#c4161038##k/1 \\n#t4161039# #b#c4161039##k/1 \\n#t4161040# #b#c4161040##k/1 \\n#t4161041# #b#c4161041##k/1 \\n#t4161042# #b#c4161042##k/1",
+      "completed": "Just like Rooney had mentioned, a lot of good things happened to you while searching for the 6 Santa Encyclopedias. Since you did all those good deeds, Santa is certainly coming to town. More importantly, Maplers will now believe in Santa Claus!"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022101,
+      "minLevel": 25,
+      "repeatIntervalMinutes": 180,
+      "endDate": "2010010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 4477,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022101,
+      "items": [
+        {
+          "itemId": 4161043
+        },
+        {
+          "itemId": 4161038
+        },
+        {
+          "itemId": 4161039
+        },
+        {
+          "itemId": 4161040
+        },
+        {
+          "itemId": 4161041
+        },
+        {
+          "itemId": 4161042
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000,
+      "meso": 10000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4161043,
+          "count": -1
+        },
+        {
+          "itemId": 4161038,
+          "count": -1
+        },
+        {
+          "itemId": 4161039,
+          "count": -1
+        },
+        {
+          "itemId": 4161040,
+          "count": -1
+        },
+        {
+          "itemId": 4161041,
+          "count": -1
+        },
+        {
+          "itemId": 4161042,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

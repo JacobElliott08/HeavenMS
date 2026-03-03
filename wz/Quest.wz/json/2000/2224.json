@@ -1,0 +1,27 @@
+{
+  "questId": 2224,
+  "info": {
+    "name": "Rage, Resentment, and Revenge",
+    "parent": "The Forest of Evil",
+    "descriptions": {
+      "inProgress": "#p1040002# has told you that the entrance to #m910100000# is in #m100040105#. If you want to meet the ghost Fanzy was talking about, head over to #r#m910100000##k. But it seems like the ghost only appears during certain hours... Let\u0027s keep track of time since the ghost is said to appear #rfrom 5 p.m. to 7 a.m. of the following day#k.",
+      "completed": "The ghost of the cursed forest, #t1032107#. He seems to be cursing someone ceaselessly..."
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1040002,
+      "prerequisiteQuests": [
+        {
+          "questId": 2223,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032107
+    }
+  }
+}

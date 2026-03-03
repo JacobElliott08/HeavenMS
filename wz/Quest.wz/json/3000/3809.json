@@ -1,0 +1,46 @@
+{
+  "questId": 3809,
+  "info": {
+    "name": "The Legendary Being\u0027s Scroll 1",
+    "parent": "The Legendary Being\u0027s Scroll",
+    "descriptions": {
+      "notStarted": "#b#p2071010##k of #b#m222000000##k seems to be looking for me for a favor.",
+      "inProgress": "#p2071010# wanted me to return the #b#t4031430:##k that he had borrowed to the meditation instructor of #b#m250000000##k, #b#p2091001:##k, and borrow #b#t4031431##k from him instead. What? So #p2071010# was only a Master in the beginning level?",
+      "completed": "As requested by #p2071010#, I returned #t4031430# to #p2091001#."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071010,
+      "minLevel": 55
+    },
+    "complete": {
+      "npc": 2091001,
+      "items": [
+        {
+          "itemId": 4031430
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031430
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4031430,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

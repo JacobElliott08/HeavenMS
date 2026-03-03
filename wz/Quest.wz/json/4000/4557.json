@@ -1,0 +1,76 @@
+{
+  "questId": 4557,
+  "info": {
+    "name": "Lam wants to see the world",
+    "parent": "Away from Kampung",
+    "descriptions": {
+      "notStarted": "#b#p9270062##k loves his life in Kampung village, but it seems like he wants to see other parts of the world that he has never seen before.",
+      "inProgress": "#b#p9270062##k is super excited to travel outside of Kampung village, but first he needs plenty of #b#t4000475#s#k to go around the city. \\n\\n#t4000475# #r#c4000475#/100#k",
+      "completed": "Finally, all tickets have been collected for #b#p9270062##k. But someone must remind him there is much more to prepare before going on a long trip."
+    },
+    "area": 49,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270062,
+      "minLevel": 85
+    },
+    "complete": {
+      "npc": 9270062,
+      "items": [
+        {
+          "itemId": 4000475,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 2041037,
+          "probability": 1
+        },
+        {
+          "itemId": 2041039,
+          "probability": 1
+        },
+        {
+          "itemId": 2044505,
+          "probability": 1
+        },
+        {
+          "itemId": 2044605,
+          "probability": 1
+        },
+        {
+          "itemId": 2044705,
+          "probability": 1
+        },
+        {
+          "itemId": 2040922,
+          "probability": 1
+        },
+        {
+          "itemId": 2040917,
+          "probability": 1
+        },
+        {
+          "itemId": 2040815,
+          "probability": 1
+        },
+        {
+          "itemId": 2040519,
+          "probability": 1
+        },
+        {
+          "itemId": 4000475,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

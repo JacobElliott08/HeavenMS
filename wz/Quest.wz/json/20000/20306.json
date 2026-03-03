@@ -1,0 +1,53 @@
+{
+  "questId": 20306,
+  "info": {
+    "name": "Ereve Investigation Permit",
+    "descriptions": {
+      "notStarted": "So it seems that if I want to conduct a thorough search on Ereve in search of the Master of Disguise, I\u0027ll have to first receive a Investigation Permit. I better talk to #p1101002#.",
+      "inProgress": "He claims that due to handing out too many Investigation Permits in times like this, the Investigation Permits have actually run out. He then asked me if I could get him some #t4005004#s so he can issue new Investigation Permits...",
+      "completed": "I wound up giving #p1101002# some #t4005004#s, and received a Investigation Permit in return. It\u0027s now time for me to conduct a thorough search of Ereve."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 20301,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032179
+        }
+      ],
+      "jobs": [
+        1110
+      ]
+    },
+    "complete": {
+      "npc": 1101002,
+      "items": [
+        {
+          "itemId": 4005004
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4005004,
+          "count": -1
+        },
+        {
+          "itemId": 4032179
+        }
+      ]
+    }
+  }
+}

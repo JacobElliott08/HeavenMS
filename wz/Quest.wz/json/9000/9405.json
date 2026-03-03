@@ -1,0 +1,90 @@
+{
+  "questId": 9405,
+  "info": {
+    "name": "하인즈의 다섯번째 선물",
+    "descriptions": {
+      "notStarted": "엘리니아의 대마법사 #b#p1032001##k님께서 #b#p9010000##k에게 기쁜 소식을 전하셨다고 한다. #b#p9010000##k를 찾아가서 이야기를 들어보자.",
+      "inProgress": "#b#p9010000##k는 #b#t04161006##k를 주면서 엘리니아의 마법사 #b#p1032001##k님께 보여드리면 아주 좋아하실 거라고 했다.",
+      "completed": "#b#p1032001##k님께 #b#t04161006##k을 보여드렸더니 메이플스토리 탄생기념 케이크를 주셨다. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "startDate": "2006050300",
+      "endDate": "2006050400"
+    },
+    "complete": {
+      "npc": 1032001,
+      "items": [
+        {
+          "itemId": 4161006
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4161006
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4161006,
+          "count": -1
+        },
+        {
+          "itemId": 2041013,
+          "probability": 1
+        },
+        {
+          "itemId": 2070003,
+          "probability": 4
+        },
+        {
+          "itemId": 2041016,
+          "probability": 1
+        },
+        {
+          "itemId": 2041019,
+          "probability": 1
+        },
+        {
+          "itemId": 2041022,
+          "probability": 1
+        },
+        {
+          "itemId": 2020016,
+          "count": 10,
+          "probability": 300
+        },
+        {
+          "itemId": 2020017,
+          "count": 10,
+          "probability": 300
+        },
+        {
+          "itemId": 2020018,
+          "count": 10,
+          "probability": 300
+        },
+        {
+          "itemId": 2020019,
+          "count": 10,
+          "probability": 300
+        },
+        {
+          "itemId": 2020020,
+          "count": 10,
+          "probability": 300
+        }
+      ]
+    }
+  }
+}

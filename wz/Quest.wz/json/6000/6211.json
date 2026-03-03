@@ -1,0 +1,61 @@
+{
+  "questId": 6211,
+  "info": {
+    "name": " Building a Ventilation Fan",
+    "descriptions": {
+      "notStarted": " If I need #b#t4031462##k, I should go see #b#p2051001##k in #m221000000#.",
+      "inProgress": " Among the ingredients for #b#t2280001##k that #p2012017# gave me, I came here because I was told to ask b#p2051001##k for #b#t4031462##k....but  Kay says he\u0027s also busy and wants me to get ingredients: He needs #b100 #t4000103# and 1 #t4011001##k. Sure is a lot of stuff...\\n\\n#i4000103##t4000103# #b#c4000103# / 100#k\\n#i4011001##t4011001# #b#c4011001# / 1",
+      "completed": " I gave #t4000103# and #t4011001# and got #t4031462#. One step closer to the end..."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2051001,
+      "repeatIntervalMinutes": 0,
+      "jobs": [
+        422
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6210,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031462
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2051001,
+      "items": [
+        {
+          "itemId": 4000103,
+          "count": 100
+        },
+        {
+          "itemId": 4011001
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000103,
+          "count": -100
+        },
+        {
+          "itemId": 4031462
+        },
+        {
+          "itemId": 4011001,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

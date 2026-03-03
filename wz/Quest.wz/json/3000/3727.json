@@ -1,0 +1,44 @@
+{
+  "questId": 3727,
+  "info": {
+    "name": "The Shelter Key",
+    "parent": "Year 2099- The Harbor",
+    "descriptions": {
+      "inProgress": "The Policeman you met at Midnight Harbor in the year 2099 wants you to find the Shelter Key and deliver it to Captain Edmond, who is somewhere at the harbor.",
+      "completed": "The Policeman you met at Midnight Harbor in the year 2099 asked you to find the Shelter Key and deliver it to Captain Edmond. You retrieved the key from the monsters and gave it to Captain Edmond at the quayside."
+    },
+    "area": 41,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082007,
+      "minLevel": 74,
+      "prerequisiteQuests": [
+        {
+          "questId": 3726,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082008,
+      "items": [
+        {
+          "itemId": 4032514
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 60000,
+      "items": [
+        {
+          "itemId": 4032514,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "questId": 4106,
+  "info": {
+    "name": "잃어버린 사진기용 삼각대",
+    "descriptions": {
+      "notStarted": "사진기용 삼각대를 잃어버렸다면 #b#p9310010##k를 찾아가 보자.",
+      "inProgress": "#b#p9310010##k의 일손을 돕자.\\n\\n#i4000192##t4000192# #b#c4000192#/50#k",
+      "completed": "#b#p9310010##k의 일손을 돕고 #b#p9310012##k가 잃어버린 물건을 받았다."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9310010,
+      "minLevel": 30,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4104,
+          "state": "STARTED"
+        },
+        {
+          "questId": 4105,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031290
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9310010,
+      "items": [
+        {
+          "itemId": 4000192,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031290
+        },
+        {
+          "itemId": 4000192,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

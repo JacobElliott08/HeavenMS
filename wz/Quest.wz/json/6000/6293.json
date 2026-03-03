@@ -1,0 +1,53 @@
+{
+  "questId": 6293,
+  "info": {
+    "name": "Black Spirit\u0027s Healing Power2",
+    "parent": "Spirit Healing",
+    "descriptions": {
+      "inProgress": " #b#p2041021##k told me to bring #b500 #t4000148##k if I want to fully increase #q1321007#\u0027s power and be able to control it.\\n\\n#i4000148##t4000148# #b#c4000148# / 500#k",
+      "completed": " We fully increased #q1321007#\u0027s healing power and control him."
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041021,
+      "jobs": [
+        132
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6292,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041021,
+      "items": [
+        {
+          "itemId": 4000148,
+          "count": 500
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 150000,
+      "items": [
+        {
+          "itemId": 4000148,
+          "count": -500
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 1320008,
+          "masterLevel": 25
+        }
+      ]
+    }
+  }
+}

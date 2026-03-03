@@ -1,0 +1,120 @@
+{
+  "questId": 2094,
+  "info": {
+    "name": "Taking Out the Alligators 1",
+    "parent": "The Alligators at the Swamp",
+    "descriptions": {
+      "notStarted": "I heard something happened to the tribesmen of Perion. I should go talk to Ayan about this.",
+      "inProgress": "I met up with Ayan in Perion. She told me that a few days ago, a group of tribesmen went hunting in the swamps and wound up being ambushed by a group of alligators. She was worried about the sudden surge of alligators taking over the swamps and asked me to take them out before they spawn out of control. I\u0027ll have to kill #b250 #o3110100#s#k and #b40 #o2130103#s#k while taking #b20 #t4000034##k along the way.\\n\\n#o3110100# #r#a20942##k\\n#o2130103# #r#a20941##k\\n#t4000034# #b#c4000034##k/20",
+      "completed": "The tribesmen of Perion got ambushed by the alligator herd at the swamps, so Iyan asked if I could help take care of the alligators. I responded by taking out #b250 #o3110100#s#k and #b40 #o2130103#s#k. Hopefully this will put some peace back into the swamp."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022007,
+      "minLevel": 52,
+      "prerequisiteQuests": [
+        {
+          "questId": 2093,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022007,
+      "items": [
+        {
+          "itemId": 4000034,
+          "count": 20
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 2130103,
+          "count": 40
+        },
+        {
+          "monsterId": 3110100,
+          "count": 250
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000,
+      "items": [
+        {
+          "itemId": 4000034,
+          "count": -20
+        },
+        {
+          "itemId": 2043302,
+          "jobRestriction": 1197073
+        },
+        {
+          "itemId": 2044702,
+          "jobRestriction": 1197073
+        },
+        {
+          "itemId": 2043002,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2044002,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2043102,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2044102,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2043202,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2044202,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2044302,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2044402,
+          "jobRestriction": 3279875
+        },
+        {
+          "itemId": 2043702,
+          "jobRestriction": 5379077
+        },
+        {
+          "itemId": 2043802,
+          "jobRestriction": 5379077
+        },
+        {
+          "itemId": 2044502,
+          "jobRestriction": 1188873
+        },
+        {
+          "itemId": 2044602,
+          "jobRestriction": 1188873
+        },
+        {
+          "itemId": 2044902,
+          "jobRestriction": 1213473
+        },
+        {
+          "itemId": 2044802,
+          "jobRestriction": 1213473
+        }
+      ]
+    }
+  }
+}

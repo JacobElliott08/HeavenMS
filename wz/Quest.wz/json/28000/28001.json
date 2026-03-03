@@ -1,0 +1,41 @@
+{
+  "questId": 28001,
+  "info": {
+    "name": "In Preparation for the Party",
+    "descriptions": {
+      "notStarted": "I better go see Cliff so I can attend the party that takes place in Happyville.",
+      "inProgress": "I have to gather up 50 Rascal\u0027s Snowflakes in order to receive the special potion required to transform.",
+      "completed": "Now that I am ready to dress-up and transform, it\u0027s time to party!"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2001000,
+      "endDate": "2010010100"
+    },
+    "complete": {
+      "npc": 2001000,
+      "items": [
+        {
+          "itemId": 4032176,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032176,
+          "count": -50
+        },
+        {
+          "itemId": 2211000,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

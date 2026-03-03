@@ -1,0 +1,53 @@
+{
+  "questId": 2073,
+  "info": {
+    "name": "Camila\u0027s Gem",
+    "descriptions": {
+      "notStarted": "I heard that #p1012108# in Henesys is worrying about something...",
+      "inProgress": "I met #p1012108# in Henesys. #p1012108# asked me to deliver #b#t4031156##k to #b#p1012107##k for her, because she is afraid. I heard I could get to #m900000000# through #m100030000#...",
+      "completed": "I delivered #p1012108# to #p1012107#. I\u0027m sure they are really close freind, since they give what\u0027s most precious to them. I wish I could meet a friend like that during my journey..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012108,
+      "minLevel": 23
+    },
+    "complete": {
+      "npc": 1012107,
+      "items": [
+        {
+          "itemId": 4031156
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031156
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 5500,
+      "items": [
+        {
+          "itemId": 4031156,
+          "count": -1
+        },
+        {
+          "itemId": 2020002,
+          "count": 30,
+          "probability": 7
+        },
+        {
+          "itemId": 1322031,
+          "probability": 3
+        }
+      ]
+    }
+  }
+}

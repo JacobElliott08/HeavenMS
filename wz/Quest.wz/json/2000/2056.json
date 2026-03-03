@@ -1,0 +1,49 @@
+{
+  "questId": 2056,
+  "info": {
+    "name": "Shumi\u0027s Lost Bundle of Money",
+    "parent": "",
+    "descriptions": {
+      "notStarted": "Let\u0027s go look for Shumi in Kerning City.",
+      "inProgress": "I ran into Shumi again at Kerning City. She seemed really worried about how she lost her rent money because a Stirge flew over and snatched a bundle of money away from her. Man ... do I have to walk back in there again ... can I just pay the rent for her? Anyway like last time, I need to go back in there, this time to #bconstruction site B2#k and find the bundle of money she lost. Aye, better go in there now... ",
+      "completed": "I got Shumi from Kerning City the lost bundle of money. I guess she can pay her rent now...and as a reward, she got me #b100 Mana Elixir\u0027s#k...she also said I may find other items at the #bconstruction site B2#k...I should go check it out sometime..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052102,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 2055,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052102,
+      "items": [
+        {
+          "itemId": 4031040
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8500,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4031040,
+          "count": -1
+        },
+        {
+          "itemId": 2000006,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "questId": 9305,
+  "info": {
+    "name": "대나무 복조리와 복주머니",
+    "parent": "새해 문안 인사",
+    "descriptions": {
+      "inProgress": "#p9010000#에게 #p1090000#이 준 #t3993003#을 가져다 주자, #b#t3993000# 5개#k를 가져다 주면 선물을 주겠다고 했다. 어떤 선물을 주려는 걸까?\\n\\n#t3993000# #b#c3993000##k/5",
+      "completed": "#p9010000#로부터 빅토리아 아일랜드의 각 마을에 있는 #b4명의 현자#k에게 새해 문안인사를 드리고 오라는 부탁을 받고 문안인사를 드리러 다녔다. 문안인사를 드리고 받은 #t3993003#과 몬스터에게서 얻은 #t3993000#를 #p9010000#에게 가져다 주었더니 #t2022006# 100개를 주었다."
+    },
+    "area": 50,
+    "order": 7
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "repeatIntervalMinutes": 129600,
+      "endDate": "2008021400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9304,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 3993000,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2700,
+      "items": [
+        {
+          "itemId": 2022006,
+          "count": 100
+        },
+        {
+          "itemId": 3993000,
+          "count": -1
+        },
+        {
+          "itemId": 3993000,
+          "count": -1
+        },
+        {
+          "itemId": 3993000,
+          "count": -1
+        },
+        {
+          "itemId": 3993000,
+          "count": -1
+        },
+        {
+          "itemId": 3993000,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

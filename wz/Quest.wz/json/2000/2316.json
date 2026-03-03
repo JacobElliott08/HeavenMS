@@ -1,0 +1,34 @@
+{
+  "questId": 2316,
+  "info": {
+    "name": "Exploring Mushroom Forest (3)",
+    "descriptions": {
+      "notStarted": "You\u0027re looking for a clue about how to break the barrier from the #bSecretary of Magic#k.",
+      "inProgress": "You should visit #bScarrs#k, the mushroom scholar.",
+      "completed": "You told #bScarrs#k about the strange yet powerful barrier in the Mushroom Forest."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300004,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2315,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300007
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4200,
+      "nextQuest": 2317
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "questId": 20523,
+  "info": {
+    "name": "Riding Mimiana",
+    "descriptions": {
+      "notStarted": "How does a fully-grown #t1902005# act? I better talk to #b#p1102002# the Mount Trainer#k for the answer.",
+      "inProgress": "#p1102002# told me that #t1902005# may have grown quite a bit, but it\u0027s not ready to be mounted, and told me I\u0027ll need to make it stronger by feeding #t1902005# with some of #b#p2060005#\u0027s Supplements#k. He then instructed me to go purchase #p2060005#\u0027s Supplements. Aren\u0027t they quite expensive?",
+      "completed": "#p1102002# handed me a mountable #t1902005# and #t1912005#, and taught me the Monster Mount skill."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102002,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 20522,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1102002,
+      "items": [
+        {
+          "itemId": 4032117
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032117,
+          "count": -1
+        },
+        {
+          "itemId": 1912005
+        },
+        {
+          "itemId": 1902005
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 10001004,
+          "skillLevel": 1,
+          "masterLevel": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "questId": 1025,
+  "info": {
+    "name": "Maria\u0027s Nutritious Juice",
+    "parent": "Maria and Shanks",
+    "descriptions": {
+      "notStarted": "#b#p2103##k said he wants to say something to me...",
+      "inProgress": "#p2103# wants to make a #bnutritious juice#k that is necessary for good health and asked me to get ingredients: #b#t4000004##k and #b#t4000011##k... I wonder what kind of juice it be.\\n\\n#i4000004##t4000004# #b#c4000004##k/1 \\n#i4000011##t4000011# #b#c4000011##k/5",
+      "completed": "I have all ingredients to #p2103#.  #p2103# seems to ask for some more."
+    },
+    "area": 20,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2103,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2103,
+      "items": [
+        {
+          "itemId": 4000011,
+          "count": 5
+        },
+        {
+          "itemId": 4000004
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50,
+      "items": [
+        {
+          "itemId": 4000004,
+          "count": -1
+        },
+        {
+          "itemId": 4000011,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

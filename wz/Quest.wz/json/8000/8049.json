@@ -1,0 +1,41 @@
+{
+  "questId": 8049,
+  "info": {
+    "name": "Sakura and the Seal",
+    "descriptions": {
+      "notStarted": "Sakura of Showa Town has lost something. I should go talk to her and help find it!",
+      "inProgress": "I think she lost the #b#t04000154##k that she received from Dr. Hikekuro. She dropped it at the riverbank, and it\u0027s probably floated its way to the sea by now. \\r\\nCome to think of it, recently a monster by the name of #b#o3230405##k have been collecting dolls. I should go check it out...\\n\\n#t04000154#  #b#c04000154##k/100",
+      "completed": " Phew, I gathered up as much as I could. Fortunately Sakura found the one that Dr. Hikekuro gave her. Thank goodness!"
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120011,
+      "minLevel": 35
+    },
+    "complete": {
+      "npc": 9120011,
+      "items": [
+        {
+          "itemId": 4000154,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 4000154,
+          "count": -100
+        },
+        {
+          "itemId": 2040805
+        }
+      ]
+    }
+  }
+}

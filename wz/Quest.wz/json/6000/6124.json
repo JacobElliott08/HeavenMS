@@ -1,0 +1,54 @@
+{
+  "questId": 6124,
+  "info": {
+    "name": "Bahamut\u0027s Completion",
+    "parent": "Dragon Heart",
+    "descriptions": {
+      "notStarted": "I once again seek to enhance the power of the dragon. After speaking with #b#p2081007##k, he says the dragon still hasn\u0027t reached its full power.  I must see this through to the end. The full power of the dragon must be a sight to behold. I must ask Raul for assistance once more to unleash the power of the dragon. ",
+      "inProgress": "The final step to unlock the dragon\u0027s power is at hand! Raul says if I get #b40#t4031485##k he will awaken #q2321003#\u0027s power.  He says this will complete the dragon\u0027s power. My heart trembles with anticipation... \\n\\n#i4031485##t4031485# #b#c4031485#/40#k",
+      "completed": "At last, the dragon\u0027s power is complete. And it shall truly be a sight to behold! I will use this power wisely..."
+    },
+    "area": 10,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081007,
+      "jobs": [
+        232
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6123,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081007,
+      "items": [
+        {
+          "itemId": 4031485,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 250000,
+      "items": [
+        {
+          "itemId": 4031485,
+          "count": -40
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 2321003,
+          "masterLevel": 30
+        }
+      ]
+    }
+  }
+}

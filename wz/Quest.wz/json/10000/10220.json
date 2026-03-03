@@ -1,0 +1,21 @@
+{
+  "questId": 10220,
+  "info": {
+    "name": "스피드 퀴즈",
+    "descriptions": {
+      "notStarted": "겨울방학을 맞이하여 카산드라가 스피드 퀴즈를 준비했다고 하는데.",
+      "inProgress": ".",
+      "completed": "조금 있다 다시 도전해 보자!"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 13,
+      "repeatIntervalMinutes": 60,
+      "endDate": "2009022000",
+      "startScript": "q10220s"
+    }
+  }
+}

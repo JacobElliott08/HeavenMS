@@ -1,0 +1,39 @@
+{
+  "questId": 2175,
+  "info": {
+    "name": "Disciples of the Black Magician",
+    "parent": "A Mysterious Presence On-board The Nautilus",
+    "descriptions": {
+      "inProgress": "Muirhat thinks that Disciples of the Black Magician are most likely still lingering by Henesys and The Nautilus. He says that they are probably hiding in deserted house in the forest, disguised. I should get rid of them myself and preserve the peace on The Nautilus. \\n\\n#o9300156# #r#a21751##k",
+      "completed": "I\u0027ve gotten rid of all the Disciples of the Black Magician. Have we finally restored the peace on The Nautilus?"
+    },
+    "area": 30,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092007,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 2174,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092007,
+      "monsters": [
+        {
+          "monsterId": 9300156
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "fame": 1
+    }
+  }
+}

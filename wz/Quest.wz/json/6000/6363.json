@@ -1,0 +1,43 @@
+{
+  "questId": 6363,
+  "info": {
+    "name": "A New Revelation",
+    "parent": "The Secret Behind Space Time Transformations",
+    "descriptions": {
+      "notStarted": "When I told Papulatus that I had come from the future, he seemed very interested in learning more about me. I guess he got even more excited when I told him that he, in the future, was doing some pretty major things... Little does he know that he\u0027s doing some pretty radical, negative things... Anyway, how am I supposed to get back to the future now?",
+      "inProgress": "Papulatus asks me to be his guinea-pig for the research he\u0027s been working on, which is almost complete. He says he\u0027ll send me back into the future where I came from... I don\u0027t like the idea that I\u0027m a guinea-pig for his research, but I can\u0027t stay in the past like this forever. I guess I should trust Papulatus for now and get back to the future to tell Rolonay about what had happened.",
+      "completed": "I don\u0027t know if it\u0027s a remnant of the power I felt during my transition between dimensions but I\u0027ve somehow acquired the power to control space and time. I\u0027ll call this skill \u0027Time Lift\u0027. "
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2043000,
+      "minLevel": 120,
+      "jobs": [
+        512
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6362,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092012
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000000,
+      "skills": [
+        {
+          "skillId": 5121010,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

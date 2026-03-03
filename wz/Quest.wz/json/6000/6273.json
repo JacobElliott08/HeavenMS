@@ -1,0 +1,74 @@
+{
+  "questId": 6273,
+  "info": {
+    "name": "The Lava Mug",
+    "parent": "Clean water from the Lava",
+    "descriptions": {
+      "notStarted": " The guard of the Abandoned Mine, #b#p2030008##k told me to go see #b#p2020000##k if I want a container that can hold lava.",
+      "inProgress": " #b#p2020000##k isn\u0027t sure if he can make a container that will hold lava but he says he\u0027ll try. He\u0027ll need #b#t4000081#, #t4021007#, and #t4021009##k.\\r\\n#i4000081##t4000081# #b#c4000081#/30#k\\n#i4021007##t4021007# #b#c4021007#/2#k\\n#i4021009##t4021009# #b#c4021009#/1",
+      "completed": "With help from #b#p2020000##k, I was able to make a container that\u0027ll hold lava. Let\u0027s go back to the Abandoned Mine."
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020000,
+      "repeatIntervalMinutes": 0,
+      "jobs": [
+        212
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6272,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4001109
+        },
+        {
+          "itemId": 2280000
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020000,
+      "items": [
+        {
+          "itemId": 4021007,
+          "count": 2
+        },
+        {
+          "itemId": 4000081,
+          "count": 30
+        },
+        {
+          "itemId": 4021009
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000081,
+          "count": -30
+        },
+        {
+          "itemId": 4021007,
+          "count": -2
+        },
+        {
+          "itemId": 4021009,
+          "count": -1
+        },
+        {
+          "itemId": 4001109
+        }
+      ]
+    }
+  }
+}

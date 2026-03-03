@@ -1,0 +1,75 @@
+{
+  "questId": 3037,
+  "info": {
+    "name": "Nick\u0027s Ring",
+    "parent": "Nick, the Son of Scadur the Hunter",
+    "descriptions": {
+      "inProgress": "At the bottom of a chipped part of the statue was what appeared to be Nick\u0027s #bring#k. A name is engraved on it, and I suppose Scadur can read out the name for me.\\n\\n#t4000079# #b#c4000079##k/80\\n#t4031060# #b#c4031060##k/1  ",
+      "completed": "I found Nick\u0027s ring at the lava cave, and I also collected a number of Cerebes\u0027s teeth, getting them all to Scadur. Hopefully Nick will be satisfied with this. I got a cape from Scadur that\u0027s been passed down from generation to generation ... this ain\u0027t bad at all!"
+    },
+    "area": 33,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030007,
+      "minLevel": 65,
+      "prerequisiteQuests": [
+        {
+          "questId": 3036,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020007,
+      "items": [
+        {
+          "itemId": 4031060
+        },
+        {
+          "itemId": 4000079,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031060
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 21415,
+      "items": [
+        {
+          "itemId": 4031060,
+          "count": -1
+        },
+        {
+          "itemId": 1102021,
+          "probability": 1
+        },
+        {
+          "itemId": 1102022,
+          "probability": 1
+        },
+        {
+          "itemId": 1102023,
+          "probability": 1
+        },
+        {
+          "itemId": 1102024,
+          "probability": 1
+        },
+        {
+          "itemId": 4000079,
+          "count": -80
+        }
+      ]
+    }
+  }
+}

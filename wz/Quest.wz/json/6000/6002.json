@@ -1,0 +1,82 @@
+{
+  "questId": 6002,
+  "info": {
+    "name": "Monster Riding",
+    "descriptions": {
+      "notStarted": "The keeper of the #bAquarium#k, #b#p2060005##k, is researching a way to tame and possibly ride monsters. I should take a trip to Aqua Road and see if there\u0027s anything I can do to help!",
+      "inProgress": "#p2060005# found out that someone is trying to steal his research.  #p2060005# asked me to #b watch the wild boar#k and bring back #b#t4031508##k to him.  On top of that, he asked me to get the wild boar\u0027s #b#t4031507##k as well...I\u0027d better stay alert for this one--I don\u0027t want someone to steal his research before I learn how to tame and ride monsters! \\n\\n#i4031508##t4031508# #b#c4031508#/5#k\\n#i4031507##t4031507# #b#c4031507#/5#k.",
+      "completed": "I obtained the items and returned to the Aquarium. For helping him with his research, #p2060005# gave me the #bmonster riding skill#k and one #b#t1912000##k for the monster. It\u0027s time to travel in style! I must look in the Tiger Ridge map, there should be some rubble lying about--a hidden portal. Traveling through it will transport me to a new area with the pigs. I can use the perfume when I\u0027m close to one to capture it. After that, I can equip the Mount and the saddle, and use my new Monster Riding skill to call the mount! I can feed my pet by visiting the Leafre Pet Food Seller, and make it stronger. Hmm...I wonder if there\u0027s a way to get a stronger mount? I\u0027d have to be ready for the 4th Job advancement, I\u0027ll bet.."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "minLevel": 70,
+      "jobs": [
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        311,
+        321,
+        312,
+        322,
+        411,
+        421,
+        412,
+        422,
+        511,
+        512,
+        521,
+        522
+      ]
+    },
+    "complete": {
+      "npc": 2060005,
+      "items": [
+        {
+          "itemId": 4031507,
+          "count": 5
+        },
+        {
+          "itemId": 4031508,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 32000,
+      "items": [
+        {
+          "itemId": 4031508,
+          "count": -5
+        },
+        {
+          "itemId": 4031507,
+          "count": -5
+        },
+        {
+          "itemId": 1912000
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 1004,
+          "skillLevel": 1,
+          "masterLevel": 1
+        }
+      ]
+    }
+  }
+}

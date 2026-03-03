@@ -1,0 +1,24 @@
+{
+  "questId": 10224,
+  "info": {
+    "name": "Starlight Festival",
+    "descriptions": {
+      "notStarted": "Exciting Maple star festival that resembles the twinkling stars in the sky! If you\u0027d like to participate in the Starlight Festival, go see #bCassandra#k from #bFebruary 5th to February 20th#k!",
+      "inProgress": "Exciting Maple star festival that resembles the twinkling stars in the sky! You will receive a star every hour you keep the Giant Star safe.",
+      "completed": "Exciting Maple star festival that resembles the twinkling stars in the sky! You will receive a star every hour you keep the Giant Star safe."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "startScript": "q10224s",
+      "startDate": "2009020500",
+      "endDate": "2009022100",
+      "repeatIntervalMinutes": 60,
+      "normalAutoStart": true,
+      "minLevel": 15
+    }
+  }
+}

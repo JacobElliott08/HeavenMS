@@ -1,0 +1,71 @@
+{
+  "questId": 6100,
+  "info": {
+    "name": "The Book of Invisible Ink",
+    "parent": "Extreme Temptation",
+    "descriptions": {
+      "notStarted": "I found a mysterious book deep in the #m230000000# sea while exploring.  It is Bowman-related and mentions mastery of a skill known as Eye of the Heart. There\u0027s also a fading inscription about obtaining something from the book itself. Could this be a skillbook? I must find out!  #p2040052# knows a lot about books.  I should ask if he can decipher anything useful from this book...",
+      "inProgress": " #b#p2040052##k read the book and speculated that the book must\u0027ve been written with invisible ink to conceal valuable information. Clever...but not impossible to break. He says I have to get a special type of ink in order to read it. He can use the ink to restore the inscriptions so it is once again readable. The ingredients are #b#t04000183#, #t02022000#, and #t04006000##k...I hope this isn\u0027t all for naught...\\n\\n#i4000183##t4000183#  #b#c4000183# / 50#k\\n#i2022000##t2022000#  #b#c2022000# / 10#k\\n#i4006000##t4006000#  #b#c4006000# / 30#k\\n#i4161018##t4161018#  #b#c4161018# / 1#k. ",
+      "completed": "I found the ingridients and returned them to #p2040052#. He said making the ink takes a bit of time, so I\u0027ll have to wait until it\u0027s ready. "
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040052,
+      "jobs": [
+        312,
+        322
+      ],
+      "items": [
+        {
+          "itemId": 4161018
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040052,
+      "items": [
+        {
+          "itemId": 2022000,
+          "count": 10
+        },
+        {
+          "itemId": 4006000,
+          "count": 30
+        },
+        {
+          "itemId": 4000183,
+          "count": 50
+        },
+        {
+          "itemId": 4161018
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 700000,
+      "items": [
+        {
+          "itemId": 4000183,
+          "count": -50
+        },
+        {
+          "itemId": 2022000,
+          "count": -10
+        },
+        {
+          "itemId": 4006000,
+          "count": -30
+        },
+        {
+          "itemId": 4161018,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

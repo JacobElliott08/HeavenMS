@@ -1,0 +1,32 @@
+{
+  "questId": 1032,
+  "info": {
+    "name": "Nina\u0027s Brother Sen",
+    "parent": "Nina\u0027s Request",
+    "descriptions": {
+      "notStarted": "Apparently, #bNina#k, a proud resident of the Mushroom Town, has a little brother...",
+      "inProgress": "Nina asked me to ask her brother #bSen#k what he wants for dinner. Since Sen\u0027s at the #bresidential area of Mushroom Town#k, I better go inside the house where he stays.",
+      "completed": "Sen told me he wants a tasty #bMushroom Candy#k."
+    },
+    "area": 20,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2102,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 2001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7,
+      "nextQuest": 1033
+    }
+  }
+}

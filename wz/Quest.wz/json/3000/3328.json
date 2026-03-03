@@ -1,0 +1,55 @@
+{
+  "questId": 3328,
+  "info": {
+    "name": "A Sip of the Sun",
+    "parent": "The Fairy in Despair 2",
+    "descriptions": {
+      "inProgress": "#p2012018# handed me #t4031699#, a more potent medicine for Fairies. Will this finally make Keeny healthy? #p2012018#\u0027s face still seems quite sad, though... anyway, I better give this to #b#p2111004##k.",
+      "completed": "#p2111004# seemed worried that this medicine might not work, either, and longed for her missing husband. She said as an alchemist from Alcadno, she believed he would have found the cure for his daughter..."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012018,
+      "minLevel": 52,
+      "prerequisiteQuests": [
+        {
+          "questId": 3327,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111004,
+      "items": [
+        {
+          "itemId": 4031699
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031699
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 40000,
+      "items": [
+        {
+          "itemId": 4031699,
+          "count": -1
+        },
+        {
+          "itemId": 2030016,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

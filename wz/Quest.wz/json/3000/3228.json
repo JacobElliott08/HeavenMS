@@ -1,0 +1,54 @@
+{
+  "questId": 3228,
+  "info": {
+    "name": "The Recovered Memory",
+    "parent": "Korin\u0027s Memory",
+    "descriptions": {
+      "inProgress": "After defeating a bunch of #bMateons#k at the Boswell Field, I went through their stuff and found 5 #bMemory Pieces#k that contained Korin\u0027s lost memories. I gave them to Agent Marco, and he proceeded to put the 5 together into one whole piece of #bKorin\u0027s Memory#k. Now all I have left to do is give this piece of memory back to Korin.",
+      "completed": "I gave Korin her lost memories through the man in Omega Sector wearing black suits, #bAgent Marco#k. She was initially disoriented after recovering her memories, but she promised to fully enjoy life the way she used to before the kidnapping. Hopefully that\u0027ll never happen again."
+    },
+    "area": 37,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050012,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 3227,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041015,
+      "items": [
+        {
+          "itemId": 4031091
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031091
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 2550,
+      "items": [
+        {
+          "itemId": 4031091,
+          "count": -1
+        },
+        {
+          "itemId": 2040001
+        }
+      ]
+    }
+  }
+}

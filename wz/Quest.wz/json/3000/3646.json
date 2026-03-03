@@ -1,0 +1,43 @@
+{
+  "questId": 3646,
+  "info": {
+    "name": "What the Green King Goblin Wants",
+    "descriptions": {
+      "notStarted": "The Guardian Spirit says the Goblins of Kamak Mountain are the only ones that know something about the Old Fox. Go see the #bGreen King Goblin#k at #bDokebi House#k near the Haunted House.",
+      "inProgress": "The Green King Goblin says he will tell everything about the Old Fox only if I get him #b1 plate#k of his favorite #bbuckwheat jelly#k. Let\u0027s go buy buckwheat jelly from the Folk Town.  \\n\\n#i2022051##t2022051#  #b#c2022051##k/1 ",
+      "completed": "The Green King Goblin revealed how to retrieve a soul from the Old Fox."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071015,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3643,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071015,
+      "items": [
+        {
+          "itemId": 2022051
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 2022051,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

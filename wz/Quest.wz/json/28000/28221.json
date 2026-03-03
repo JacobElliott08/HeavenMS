@@ -1,0 +1,50 @@
+{
+  "questId": 28221,
+  "info": {
+    "name": "Show Me What You\u0027re Made Of-1",
+    "descriptions": {
+      "notStarted": "#b#@9201118:##k in #bHenesys#k says she\u0027ll begin the first training. Let\u0027s go see her.",
+      "inProgress": "She has asked you to hunt 30 #rOrange Mushrooms#k.\\nThey can be easily found in #b#m104040001##k.\\n\\nReport back to #b#@9201118:##k in #bHenesys#k upon completion.",
+      "completed": "You\u0027ve completed #b#p9201118##k\u0027s first training."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201118,
+      "prerequisiteQuests": [
+        {
+          "questId": 28220,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 9201118,
+      "monsters": [
+        {
+          "monsterId": 1210102,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

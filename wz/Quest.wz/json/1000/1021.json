@@ -1,0 +1,30 @@
+{
+  "questId": 1021,
+  "info": {
+    "name": "Roger\u0027s Apple",
+    "descriptions": {
+      "notStarted": "Let\u0027s talk to #b#p2000##k.",
+      "inProgress": "By pressing the hotkey I, I can consume #b#t02010007##k in consumption window. Let\u0027s talk to #b#p2000##k..",
+      "completed": "I learned how to use items! This will make life much easier!"
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 2000,
+      "startScript": "q1021s",
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 2000,
+      "endScript": "q1021e",
+      "items": [
+        {
+          "itemId": 2010007
+        }
+      ]
+    }
+  }
+}

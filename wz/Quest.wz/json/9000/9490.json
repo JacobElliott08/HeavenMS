@@ -1,0 +1,28 @@
+{
+  "questId": 9490,
+  "info": {
+    "name": "신나는 세계여행",
+    "descriptions": {
+      "notStarted": "세계여행 맵 오픈 기념으로 이벤트가 열린다고 한다. #b#p9010000##k를 찾아가 보자.",
+      "inProgress": "세계여행가이드 #b#p9000020##k을 통해 #b일본의 버섯신사#k로 떠나 #b#p9110002##k를 만나보자.",
+      "completed": "일본(버섯신사)에 있는 #b#p9110002##k를 만났다. 그녀는 일본을 소개해 주겠다며 다시 말을 걸어 달라고 했다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 10,
+      "startDate": "2006101600",
+      "endDate": "2006110100"
+    },
+    "complete": {
+      "npc": 9110002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 250
+    }
+  }
+}

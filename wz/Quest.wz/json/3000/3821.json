@@ -1,0 +1,41 @@
+{
+  "questId": 3821,
+  "info": {
+    "name": "Tae Soo Protecting the Peach Tree",
+    "descriptions": {
+      "notStarted": "The proud protector of Peach Farm, #b#p2091003##k, has something he really wants...",
+      "inProgress": "#p2091003# wants to find a medicine that really speeds up the growth of Peach Tree. #p2091002# is a master at making these medicines, but he can\u0027t ask the owner of the Peach Farm to make the medicine for him, so he\u0027s asking me to get #b#t4031554##k from #b#p2090004##k...\\n\\n#i4031554##t4031554#  #b#c4031554##k/1",
+      "completed": "I was able to obtain the medicine from #p2090004# and gave it to #p2091003#. Phew~ making a medicine through #p2090004# must be much more difficult than protecting the great Peach Tree~"
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091003,
+      "minLevel": 55
+    },
+    "complete": {
+      "npc": 2091003,
+      "items": [
+        {
+          "itemId": 4031554
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 19800,
+      "items": [
+        {
+          "itemId": 4031554,
+          "count": -1
+        },
+        {
+          "itemId": 2022116,
+          "count": 15
+        }
+      ]
+    }
+  }
+}

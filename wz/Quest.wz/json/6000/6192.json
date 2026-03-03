@@ -1,0 +1,62 @@
+{
+  "questId": 6192,
+  "info": {
+    "name": "Protecting Tylus",
+    "parent": "Conspiracy of kidnapping Tylus",
+    "descriptions": {
+      "inProgress": " #p2020008# said he heard the news from #p2081100#, and accepted my protection. I have to protect#k #p2020008##k and receive #b#t4031495##k. Let\u0027s go see #b#p2020008##k again after successfully protecting Tylus. \\n\\n#i4031495##t4031495# #b#c4031495# / 1#k",
+      "completed": " I successfully protected Tylus from #o8150000# and #o8140000#. Tylus taught me the Power Stance skill."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020008,
+      "jobs": [
+        112,
+        122,
+        132
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6191,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020008,
+      "items": [
+        {
+          "itemId": 4031495
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1100000,
+      "items": [
+        {
+          "itemId": 4031495,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 1121002,
+          "masterLevel": 10
+        },
+        {
+          "skillId": 1221002,
+          "masterLevel": 10
+        },
+        {
+          "skillId": 1321002,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

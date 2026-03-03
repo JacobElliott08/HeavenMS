@@ -1,0 +1,59 @@
+{
+  "questId": 29509,
+  "info": {
+    "name": "Persevering Challenger",
+    "descriptions": {
+      "notStarted": "#b#eTitle Challenge - Persevering Challenger#n\\nComplete the #k#bDangerous Dungeon!#k quest. Dalair, on behalf of the God of Honor, is looking for explorers who never cease to face challenges. He says anyone who defeats a lot of monsters in the dungeons in Sleepywood will receive the #bPersevering Challenger#k#n title.",
+      "inProgress": "#b#eTitle Challenge - Persevering Challenger#n#k\\nComplete 3 types of #bDangerous Dungeon!#k quests in Sleepywood.",
+      "completed": "#b#eTitle Challenge - Persevering Challenger#n#k\\n\\nYou have acquired the #bPersevering Challenger#k title and the associated medal."
+    },
+    "area": 51,
+    "medalItemId": 1142084
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000040,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 2105,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2106,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2107,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000040,
+      "prerequisiteQuests": [
+        {
+          "questId": 2111,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2112,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2113,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142084
+        }
+      ]
+    }
+  }
+}

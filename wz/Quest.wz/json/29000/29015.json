@@ -1,0 +1,43 @@
+{
+  "questId": 29015,
+  "info": {
+    "name": "Victoria Explorer",
+    "descriptions": {
+      "notStarted": "Challenge yourself and explore Victoria Island!\\r\\nBeginner Explorer\\nSleepywood Explorer\\nYou must earn a total of two titles.",
+      "inProgress": "#b#eTitle - Victoria Explorer#n#k\\r\\n● Requirement(s)\\nCan acquire after earning the Beginner Explorer and Sleepywood Explorer titles.\\r\\n#b● Status\\n#y29005# : #u29005#\\n#y29014# : #u29014#\\r\\n#k",
+      "completed": "You have finally acquired the #b\u003cVictoria Explorer\u003e#k title for exploring various places on Victoria Island."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142112
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "normalAutoStart": true,
+      "minLevel": 40
+    },
+    "complete": {
+      "npc": 9000040,
+      "prerequisiteQuests": [
+        {
+          "questId": 29005,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 29014,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142112
+        }
+      ]
+    }
+  }
+}

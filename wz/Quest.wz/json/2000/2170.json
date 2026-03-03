@@ -1,0 +1,44 @@
+{
+  "questId": 2170,
+  "info": {
+    "name": "Information for Dr. Kim",
+    "descriptions": {
+      "notStarted": "Do you know Rolonay, the smartest genius alive in all of The Nautilus? He is possibly the smartest person in all of Maple World. But he\u0027s apparently stuck in a jam, because of all the requests he\u0027s been getting from people asking for more and more information. I\u0027d better give Rolonay a hand- But first, I should go see him in the central corridors of The Nautilus. ",
+      "inProgress": "Rolonay\u0027s been working hard to compile all the information #bDr. Kim#k had requested, but says he\u0027s too tied up with all the analysis he has to do, to bring the research documents all the way to the Omega Sector. I should help out Rolonay and bring all the research documents to the Omega Sector for him. ",
+      "completed": "I\u0027ve delivered all the research documents to Dr. Kim, on Rolonay\u0027s behalf. That Rolonay, despite his looks, is quite a brainiac!"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092012,
+      "minLevel": 30
+    },
+    "complete": {
+      "npc": 2050001,
+      "items": [
+        {
+          "itemId": 4031844
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031844
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4031844,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "questId": 3644,
+  "info": {
+    "name": "What the Blue King Goblin Wants",
+    "descriptions": {
+      "notStarted": "The Guardian Spirit says the Goblins of Kamak Mountain are the only ones that know something about the Old Fox. Go see the #bBlue King Goblin#k at #bDokebi House#k near the Haunted House.",
+      "inProgress": "The Blue King Goblin says he will tell everything about the Old Fox only if I get him #b1 bottle#k of his favorite #brice wine#k. Let\u0027s go buy rice wine from the Folk Town.  \\n\\n#i2022052##t2022052#  #b#c2022052##k/1 ",
+      "completed": "The Blue King Goblin revealed where the Old Fox appears."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071014,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3643,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071014,
+      "items": [
+        {
+          "itemId": 2022052
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 2022052,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

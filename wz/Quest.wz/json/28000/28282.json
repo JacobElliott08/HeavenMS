@@ -1,0 +1,130 @@
+{
+  "questId": 28282,
+  "info": {
+    "name": "How to Avoid the Stink",
+    "descriptions": {
+      "notStarted": "#b#@1061011:##k in #bSleepywood#k says he\u0027s found additional information on Astaroth.",
+      "inProgress": "He has discovered where #rAstaroth#k is, but says no one can reach that place due to the extremely foul odor. However, he has offered to make you a Gas Mask, if you bring him the necessary materials.\\n\\n30 pieces of #rWild Boar Leather#k, 30 #rEvil Eye\u0027s Eyeballs#k, and 30 #rCharm of the Undead#k\\n\\nLet\u0027s report back to #b#@1061011:##k in #bSleepywood#k upon completion.",
+      "completed": "The #rWild Eye\u0027s Gas Mask#k has been finished. Oh boy, the mask is stinky. This probably can\u0027t be worn unless the outside stink is exponentially worse and absolutely unbearable."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 28266,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "items": [
+        {
+          "itemId": 4001372,
+          "count": 30
+        },
+        {
+          "itemId": 4000008,
+          "count": 30
+        },
+        {
+          "itemId": 4001373,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "items": [
+        {
+          "itemId": 4001372,
+          "count": -30
+        },
+        {
+          "itemId": 4001373,
+          "count": -30
+        },
+        {
+          "itemId": 4000008,
+          "count": -30
+        },
+        {
+          "itemId": 1003036
+        }
+      ]
+    }
+  }
+}

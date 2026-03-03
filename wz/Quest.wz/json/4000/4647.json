@@ -1,0 +1,30 @@
+{
+  "questId": 4647,
+  "info": {
+    "name": "The Secret Method",
+    "parent": "Trainer\u0027s Command",
+    "descriptions": {
+      "notStarted": "I\u0027m nearly there, I should visit Bartos and see if I can finally learn Bartos\u0027s secret method of handling multiple pets at once.",
+      "inProgress": "In order to learn various commands, I\u0027ll have to give Bartos the Pet Snack. Hmm, he mentioned a bigger store...",
+      "completed": "I finally learned the secrets of commanding multiple pets through Bartos.  I shall display my talent to the world!"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012006,
+      "prerequisiteQuests": [
+        {
+          "questId": 4646,
+          "state": "COMPLETED"
+        }
+      ],
+      "petRequirement": {}
+    },
+    "complete": {
+      "npc": 1012006,
+      "endScript": "q4647e"
+    }
+  }
+}

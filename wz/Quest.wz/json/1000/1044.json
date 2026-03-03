@@ -1,0 +1,52 @@
+{
+  "questId": 1044,
+  "info": {
+    "name": "Mai\u0027s Last Training",
+    "parent": "Mai\u0027s Training!",
+    "descriptions": {
+      "inProgress": "I defeated the Slimes and brought back the Squishy Liquid to Mai. She seemed to be impressed, and instructed me this time to hunt a really powerful monster. She then told me to hunt #r2 Orange Mushrooms#k from inside the #bTraining Center#k.\\n\\nOrange Mushroom #r#a10441##k",
+      "completed": "I was able to defeat 2 Orange Mushrooms and reported the result to Mai."
+    },
+    "area": 20,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 12100,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1043,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 12100,
+      "monsters": [
+        {
+          "monsterId": 9500102,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 250,
+      "items": [
+        {
+          "itemId": 2010001,
+          "count": 15
+        },
+        {
+          "itemId": 2010004,
+          "count": 15
+        }
+      ]
+    }
+  }
+}

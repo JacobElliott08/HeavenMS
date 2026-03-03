@@ -1,0 +1,58 @@
+{
+  "questId": 28172,
+  "info": {
+    "name": "Searching for Clues",
+    "parent": "What\u0027s going on in Henesys?",
+    "descriptions": {
+      "notStarted": "#b#@1012003:##k in #b#m100000000##k needs help investigating the incident. Let\u0027s talk to him.",
+      "inProgress": "At the time of the attack, the suspect dropped something, though he couldn\u0027t remember what it was since he was knocked unconscious.\\n\\nHe suggests you go to #b#m104040002##k and investigate the area. He says the monsters nearby may have consumed it, so you might be able to find some sort of clue if you continue to hunt them.\\n\\nReport back to #b#@1012003:##k in #b#m100000000##k upon completion.",
+      "completed": "You heard why #b#p1012003##k in #b#m100000000##k was so angry, and you\u0027ve cleared the misunderstanding. In any case, the suspect still remains a mystery."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012003,
+      "prerequisiteQuests": [
+        {
+          "questId": 28171,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1012003,
+      "items": [
+        {
+          "itemId": 4001341
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

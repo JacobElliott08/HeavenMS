@@ -1,0 +1,42 @@
+{
+  "questId": 8032,
+  "info": {
+    "name": "War of Pang Pang",
+    "descriptions": {
+      "notStarted": "Poni Chai of Showa Town is apparently in trouble. Might as well go there while there\u0027s time.",
+      "inProgress": " I have no idea what the War of Pang Pang is all about, but I\u0027ll need to gather up #b30 #t04000110#s#k in order to sharpen a pencil. I better gather them up and give them to Poni Chai. \\n#t04000110#  #b#c04000110##k/30",
+      "completed": "By the way, does the plastic knife really work in sharpening a pencil? Oh well, Poni Chai claims he\u0027ll emerge victorious tomorrow at the War of Pang Pang, so..."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120017,
+      "minLevel": 35
+    },
+    "complete": {
+      "npc": 9120017,
+      "items": [
+        {
+          "itemId": 4000110,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2020008,
+          "count": 2
+        },
+        {
+          "itemId": 4000110,
+          "count": -30
+        }
+      ],
+      "experience": 18000
+    }
+  }
+}

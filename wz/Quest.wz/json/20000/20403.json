@@ -1,0 +1,49 @@
+{
+  "questId": 20403,
+  "info": {
+    "name": "Dragon Outcasts",
+    "descriptions": {
+      "notStarted": "According to #p2032001#, #p1103000# recently moved to #m240000000#. I better head down to #b#m240000000##k and ask #b#p2081000##k about #p1103000#.",
+      "inProgress": "According to #p2081000#, #p1103000# went to visit the #bDragon Outcast#k outside town. Apparently, the scale of the Dragon Outcast is similar to #t4001207#\u0027s... I better go visit Dragon Outcast. His house is #bconnected to #m240020401# or #m240020101##k.",
+      "completed": "When I asked #p2081012#, the Dragon Outcast, about #p1103000#, he seemed perturbed by my question and got mad at me for it. Apparently, #t4001207# is not his. He thought it might have to do instead with the stolen dragon egg incident at #m240000000#..."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081000,
+      "minLevel": 120,
+      "prerequisiteQuests": [
+        {
+          "questId": 20402,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 2081012
+    }
+  }
+}

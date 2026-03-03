@@ -1,0 +1,41 @@
+{
+  "questId": 7109,
+  "info": {
+    "name": "Papulatus\u0027s counterattack",
+    "descriptions": {
+      "notStarted": "I thought there would be no problem in the clock tower since I stopped the crack of dimension and got rid of #o8500002#, but I still have things to do. Let\u0027s go to #b#p2041021##k.",
+      "inProgress": "#p2041021# said that once the crack occurs on the wall of dimension, it becomes weak so that can easily have holes. He was worried that #o8500002# will attack again. #p2041021# asked me to check out on #b#p2041023##k monitoring around the operation room if  #o8500002# comes in.",
+      "completed": "#p2041023# said  #o8500002# invaded again showing me the evidence of a piece of dimension crack. He asked me to get rid of #o8500002# as I once killed #o8500002# that I can do it again...."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041021,
+      "repeatIntervalMinutes": 1440,
+      "prerequisiteQuests": [
+        {
+          "questId": 7103,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031179
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041023
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031179
+        }
+      ]
+    }
+  }
+}

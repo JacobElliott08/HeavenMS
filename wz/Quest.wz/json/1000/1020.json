@@ -1,0 +1,35 @@
+{
+  "questId": 1020,
+  "info": {
+    "name": "Pio and the Recycling",
+    "descriptions": {
+      "notStarted": "I gathered up the recycling materials that Pio asked for, and he said he\u0027ll make me something nice in return...",
+      "inProgress": "Pio promised to make me a nice relaxing chair with the recylicing materials I gathered up for him.",
+      "completed": "I helped Pio gather up the recycling materials, and he made a nice comfortable chair."
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 10000,
+      "prerequisiteQuests": [
+        {
+          "questId": 1008,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 10000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 3010000
+        }
+      ]
+    }
+  }
+}

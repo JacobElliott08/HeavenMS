@@ -1,0 +1,28 @@
+{
+  "questId": 3705,
+  "info": {
+    "name": "Hero\u0027s Mark",
+    "parent": "The Missing Hero",
+    "descriptions": {
+      "notStarted": " I hear #b#p2081001##k of Leafre is curious about someone\u0027s whereabouts",
+      "inProgress": "#b#p2081001##k in Leafre was wondering about the whereabouts of the heroic knight that rescued him a long time ago. His name is #b#p2081007##k...  So I promised #b#p2081001##k to find the knight that disappeared into the Dragon\u0027s Forest.",
+      "completed": " I was able to find #b#p2081007##k, the man responsible for saving Kumo from the monsters, at Wyvern Canyon."
+    },
+    "area": 41,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081001,
+      "minLevel": 80
+    },
+    "complete": {
+      "npc": 2081007
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000
+    }
+  }
+}

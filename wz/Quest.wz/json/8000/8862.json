@@ -1,0 +1,31 @@
+{
+  "questId": 8862,
+  "info": {
+    "name": "Amoria : Marriage",
+    "descriptions": {
+      "notStarted": "Congratulations! You\u0027re now married! Now go in peace and forever celebrate love!",
+      "inProgress": "Congratulations! You\u0027re now married! Now go in peace and forever celebrate love!",
+      "completed": "Congratulations! You\u0027re now married! Now go in peace and forever celebrate love!"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201004,
+      "minLevel": 10020
+    },
+    "complete": {
+      "npc": 9201004,
+      "items": [
+        {
+          "itemId": 1002140
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000
+    }
+  }
+}

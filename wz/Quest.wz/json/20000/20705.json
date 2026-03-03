@@ -1,0 +1,72 @@
+{
+  "questId": 20705,
+  "info": {
+    "name": "A Cynical Orange Mushroom",
+    "descriptions": {
+      "notStarted": "I\u0027ll need to talk to Agent #b#p1103001##k of #m100000000# in order to receive the next assignment.",
+      "inProgress": "According to #p1103001#, #o1210102# has been looking suspicious lately. Some of the #o1210102#s appear to offer a cold, cynical look, and #p1103001# believes they may be linked to the Black Mage. He then assigned me to hunt down #r#o9300274##k... \\n\\n#o9300274##r #a207051##k \\n#i4032190# #t4032190# #b#c4032190# / 1#k",
+      "completed": "I was able to hunt down all the #o9300274#s that were out there. #p1103001# then told me to come back later, as he decided to continue to investigate on other suspicious creatures in this area."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103001,
+      "minLevel": 13,
+      "prerequisiteQuests": [
+        {
+          "questId": 20704,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1103001,
+      "items": [
+        {
+          "itemId": 4032190
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9300274,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4032190,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

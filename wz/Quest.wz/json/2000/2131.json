@@ -1,0 +1,75 @@
+{
+  "questId": 2131,
+  "info": {
+    "name": "Beginner Warrior\u0027s Last Training Session",
+    "descriptions": {
+      "notStarted": "Now I look like a Warrior. #b#p1022000##k wanted to help me out with a final training session...",
+      "inProgress": "#p1022000# asked me to hunt #r15 #o1110101##k for a test. #o1110101# looks like #o0130100# but much stronger monster. He also tells me not to be too relaxed.\\n\\n#o1110101# #r#a21311##k",
+      "completed": "I\u0027ve wiped out 15 #o1110101#. Wasn\u0027t easy but I was successful anyway. Through the training, I feel I\u0027m a real Warrior in front of  #p1022000# ."
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 2130,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022000,
+      "monsters": [
+        {
+          "monsterId": 1110101,
+          "count": 15
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 840,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 50
+        },
+        {
+          "itemId": 2000003,
+          "count": 50
+        },
+        {
+          "itemId": 2030000,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "questId": 3935,
+  "info": {
+    "name": "Eleska\u0027s Test",
+    "parent": "Sand Bandits According to Eleska",
+    "descriptions": {
+      "inProgress": "I didn\u0027t tell her anything about the Sand Bandits, and for some reason, #p2101008# told me exactly where the treasure storage room is for the queen. A hidden path underneath an unlit lamp... now all I have to do is steal #b#t4031574##k, right?\\n\\n#i4031574# #t4031574# #b#c4031574#/1#k",
+      "completed": "I gave Eleska the Skyloam. Eleska seemed stunned... Maybe I\u0027ll be accepted even by her."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101008,
+      "minLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 3934,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101002,
+      "items": [
+        {
+          "itemId": 4031574
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3750,
+      "items": [
+        {
+          "itemId": 4031574,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

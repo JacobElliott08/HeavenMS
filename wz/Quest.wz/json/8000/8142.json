@@ -1,0 +1,59 @@
+{
+  "questId": 8142,
+  "info": {
+    "name": "Todd\u0027s How-to-Hunt",
+    "descriptions": {
+      "notStarted": "I hear #b#p9101002##k can teach us how to hunt.",
+      "inProgress": "#b#p9101002##k taught me to move towards upper right-hand side to attack by pressing #rCtrl#k and kill #b1 x #o9409000##k and #b1 x #o9409001##k,  then talk to #b#p9101001##k... \\n\\nTutorial Leatty #b#a81421##k\\nTutorial Drumming Rabbit #b#a81422##k\\n#t4000300# #b#c4000300#/1#k\\n#t4000301# #b#c4000301#/1#k",
+      "completed": "As #b#p9101002##k\u0027s taught me, I hunted down the monsters."
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 9101002,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9101003,
+      "items": [
+        {
+          "itemId": 4000300
+        },
+        {
+          "itemId": 4000301
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9409000
+        },
+        {
+          "monsterId": 9409001
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10,
+      "items": [
+        {
+          "itemId": 4000300,
+          "count": 0
+        },
+        {
+          "itemId": 4000301,
+          "count": 0
+        }
+      ]
+    }
+  }
+}

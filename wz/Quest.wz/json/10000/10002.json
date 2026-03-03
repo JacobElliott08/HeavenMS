@@ -1,0 +1,35 @@
+{
+  "questId": 10002,
+  "info": {
+    "name": "Number of Special Agent Badges ",
+    "descriptions": {
+      "inProgress": "Special Agent O told me to go to the mini dungeon and bring back #b#t4031988##k from the Agent Box which appears after 30 minutes\\r\\n#i4031988# #t4031988# #b#c4031988# / 1\\n\\n#k  Each time I collect 10 badges, I\u0027ll receive #bAgent O\u0027s Nylon Gloves#k and when I collect 100, I can get #bAgent O\u0027s Leather Gloves#k..  ",
+      "completed": "I received a mission from Special Agent O to disarm the Agent Box in the mini dungeon and retrieve a Special Agent Badge, and I successfully completed it."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000034,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2009060100",
+      "endDate": "2009082600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10001,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000034,
+      "endScript": "q10002e",
+      "items": [
+        {
+          "itemId": 4031988
+        }
+      ]
+    }
+  }
+}

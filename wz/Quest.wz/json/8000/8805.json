@@ -1,0 +1,42 @@
+{
+  "questId": 8805,
+  "info": {
+    "name": "Independence Day : Alien Invasion",
+    "descriptions": {
+      "notStarted": "#bAgent Marco#k of the Omega Sector is looking for heroes to protect our World. I need to get to him before all hope is lost.",
+      "inProgress": "#bAgent Marco#k needs help on exterminating the #rPlateons#k on Boswell Fields. I heard that a tremendous number of Plateons are taking over the Boswell Fields and coming toward the Omega Sector. I need to take out bunch of Plateons and bring #b100 Plateon Helmets#k to Agent Marco of the Omega Sector as a proof of my mission\u0027s success.\\n\\n#t4000121# #b#c4000121##k/100 ",
+      "completed": "After I gave Agent Marco all #b100 Plateon Helmets#k, I received the #bStars and Stripes#k. This flag represents my support for the independence of our World."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050012,
+      "repeatIntervalMinutes": 11520,
+      "endDate": "2006070600"
+    },
+    "complete": {
+      "npc": 2050012,
+      "items": [
+        {
+          "itemId": 4000121,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "items": [
+        {
+          "itemId": 1302057
+        },
+        {
+          "itemId": 4000121,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

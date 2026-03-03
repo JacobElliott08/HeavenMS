@@ -1,0 +1,54 @@
+{
+  "questId": 4550,
+  "info": {
+    "name": "I need Vitamin C",
+    "parent": "Nuri\u0027s Health and Beauty",
+    "descriptions": {
+      "notStarted": "After eating #b#t2022203##k, #b#p9270059##k had a terrible stomach ache. It seems like someone must help her immediately before she is carried off to the hospital.",
+      "inProgress": "Fresh fruit will put #b#p9270059##k\u0027s stomach at ease.\\n\\n#t2010000# #r#c2010000#/5#k \\n#t2010003# #r#c2010003#/5#k",
+      "completed": "Maybe #b#p9270059##k has learned her lession which is to eat proper amount at a time."
+    },
+    "area": 49,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270059,
+      "minLevel": 60,
+      "prerequisiteQuests": [
+        {
+          "questId": 4549,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270059,
+      "items": [
+        {
+          "itemId": 2010000,
+          "count": 5
+        },
+        {
+          "itemId": 2010003,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 2010000,
+          "count": -5
+        },
+        {
+          "itemId": 2010003,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

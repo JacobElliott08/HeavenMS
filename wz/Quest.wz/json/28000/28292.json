@@ -1,0 +1,27 @@
+{
+  "questId": 28292,
+  "info": {
+    "name": "Stinky Swamp Wrap",
+    "descriptions": {
+      "inProgress": "The basic ingredient for this dish is the #bSeasoned Cursed Frog Eggs and Mushrooms#k. It also needs #bLigator Skins or Tough Leathers#k. Be sure to look around carefully, as they say that the frogs and cats roam around town when they are hungry. Sure, you might feel a bit wary about eating something that the Witch prepared...but it\u0027s not like you\u0027ll die, right?",
+      "completed": "After reciting a strange chant, the Witch makes you a dish that doesn\u0027t look too appetizing."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201028,
+      "repeatIntervalMinutes": 0,
+      "infoNumber": 28301,
+      "endDate": "2009112500"
+    },
+    "complete": {
+      "npc": 9201028
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 9201142
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "questId": 9399,
+  "info": {
+    "name": "The Mysterious Monster Crystal Statue",
+    "descriptions": {
+      "notStarted": "Apparently, #b#p2040050##k discovered the hidden secrets behind the Mundane Monster Statues. I better go visit #b#p2040050##k.",
+      "inProgress": "I better find the gems #b#p2040050##k is looking for.\\n\\n#t04020000:# #b#c04020000#/3#k \\n#t04020001:# #b#c04020001#/3#k \\n#t04020005:# #b#c04020005#/3#k",
+      "completed": "After gathering up the gems, #b#p2040050##k gave me a new Monster Crystal Statue. I can turn into a monster for a short period of time with this!"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040050,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2008042900",
+      "endDate": "2008061700",
+      "prerequisiteQuests": [
+        {
+          "questId": 9398,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040050,
+      "items": [
+        {
+          "itemId": 4020005,
+          "count": 3
+        },
+        {
+          "itemId": 4020000,
+          "count": 3
+        },
+        {
+          "itemId": 4020001,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4020000,
+          "count": -3
+        },
+        {
+          "itemId": 4020001,
+          "count": -3
+        },
+        {
+          "itemId": 4020005,
+          "count": -3
+        },
+        {
+          "itemId": 2210000,
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "itemId": 2210001,
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "itemId": 2210002,
+          "count": 3,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

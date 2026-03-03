@@ -1,0 +1,43 @@
+{
+  "questId": 4949,
+  "info": {
+    "name": "The M-Files",
+    "descriptions": {
+      "notStarted": "I heard there\u0027s a MBI (Maple Bureau of Investigation) agent in the Phantom Forest! I should investigate what he\u0027s investigating!",
+      "inProgress": "I spoke with MBI Agent Falcon. He\u0027s on the trail of a dangerous specter, but it looks like that crafty ghost gave him the slip by scattering his #b#t4031764#s#k all over the place. I\u0027ve agreed to collect #b50#k of them so he can continue the hunt!",
+      "completed": "I tracked down all 50 of Agent #b#t4031764#s#k that he asked for!  In return, he\u0027s given me Smores! Mmm...if only he had a napkin..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201075,
+      "minLevel": 15,
+      "endDate": "2007103123"
+    },
+    "complete": {
+      "npc": 9201075,
+      "items": [
+        {
+          "itemId": 4031764,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6500,
+      "items": [
+        {
+          "itemId": 2022244,
+          "count": 10
+        },
+        {
+          "itemId": 4031764,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

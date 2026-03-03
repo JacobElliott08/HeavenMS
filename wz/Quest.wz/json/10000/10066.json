@@ -1,0 +1,46 @@
+{
+  "questId": 10066,
+  "info": {
+    "name": "과거의 기억",
+    "parent": "조이의 정체",
+    "descriptions": {
+      "inProgress": "비밀이야기를 #b할로윈 캔디 20개#k만 주면 알려주다니...역시 어린아이 구나.",
+      "completed": "페토는 피아니스트 였나? 왜 이 저택에 지금 없을까?"
+    },
+    "area": 50,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120005,
+      "startDate": "2008101600",
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10065,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120005,
+      "endScript": "q10066e",
+      "items": [
+        {
+          "itemId": 2022256,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2022256,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

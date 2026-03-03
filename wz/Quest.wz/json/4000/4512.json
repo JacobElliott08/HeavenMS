@@ -1,0 +1,54 @@
+{
+  "questId": 4512,
+  "info": {
+    "name": "The great secret reveals",
+    "parent": "The Secret of Ghostship",
+    "descriptions": {
+      "notStarted": "#b#p9270030##k is about to reveal more about his secrets! Let\u0027s go find him at Boat Quay.",
+      "inProgress": "The most strongest ghost, #b#o9420512##k is the one that #p9270030# was so afraid of... Well I am not afraid of anything!  He asked me to help him get back to the sea by eliminating #b300 #o9420512##k.  He told me to bring my friends with me since this ghost is the most powerful one in town.  Follow me my fellow Maplers!\\n\\n#o9420512#  #r#a45121##k",
+      "completed": "Eliminating #o9420512# was not a easy task for me but I did it! Now, I should go see #p9270030# and see if he has left to the sea.  Or.. does he have another serious secret, something Big?"
+    },
+    "area": 48,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270030,
+      "prerequisiteQuests": [
+        {
+          "questId": 4511,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270030,
+      "monsters": [
+        {
+          "monsterId": 9420512,
+          "count": 300
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000,
+      "items": [
+        {
+          "itemId": 2022215,
+          "count": 20,
+          "probability": 50
+        },
+        {
+          "itemId": 2022213,
+          "count": 20,
+          "probability": 50
+        },
+        {
+          "itemId": 4000381
+        }
+      ]
+    }
+  }
+}

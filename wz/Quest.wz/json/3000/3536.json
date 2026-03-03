@@ -1,0 +1,107 @@
+{
+  "questId": 3536,
+  "info": {
+    "name": "Force Field",
+    "parent": "Road to Oblivion ",
+    "descriptions": {
+      "inProgress": "When I told #p2140003# everything I heard from #p2140000#, he seemed to know right away.  He said the reason that the deep place of the temple is blocked is because of the #rintrusion of an outside force#k!  #p2140000# said it must be because of the #rforce field set by the intruders#k and that I need to break the force field and find out who the intruder is.  He says I need the power of the guardians of the past in order to break the force field... \\n\\n#i4000446##t4000446# #b#c4000446##k/10\\n#i4000451##t4000451# #b#c4000451##k/10\\n#i4000456##t4000456# #b#c4000456##k/10  \\n#i4000460##t4000460# #b#c4000460##k/1 \\n#i4000461##t4000461# #b#c4000461##k/1 \\n#i4000462##t4000462# #b#c4000462##k/1",
+      "completed": "I brought him all the items.  The Keeper of the Temple gave me a marble with special powers, and said that I should be able to break the force field with this..."
+    },
+    "area": 46,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140000,
+      "minLevel": 120,
+      "prerequisiteQuests": [
+        {
+          "questId": 3535,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 2140000,
+      "items": [
+        {
+          "itemId": 4000446,
+          "count": 10
+        },
+        {
+          "itemId": 4000451,
+          "count": 10
+        },
+        {
+          "itemId": 4000456,
+          "count": 10
+        },
+        {
+          "itemId": 4000460
+        },
+        {
+          "itemId": 4000461
+        },
+        {
+          "itemId": 4000462
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000460,
+          "count": -1
+        },
+        {
+          "itemId": 4000461,
+          "count": -1
+        },
+        {
+          "itemId": 4000462,
+          "count": -1
+        },
+        {
+          "itemId": 4000446,
+          "count": -10
+        },
+        {
+          "itemId": 4000451,
+          "count": -10
+        },
+        {
+          "itemId": 4000456,
+          "count": -10
+        },
+        {
+          "itemId": 4032002
+        }
+      ]
+    }
+  }
+}

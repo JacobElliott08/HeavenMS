@@ -1,0 +1,65 @@
+{
+  "questId": 9839,
+  "info": {
+    "name": "카산드라의 열번째 퀴즈!",
+    "parent": "카산드라의 메이플 퀴즈",
+    "descriptions": {
+      "inProgress": "드디어 마지막 문제다. 문제를 풀면서 점점 난이도도 올라갔으니 열 번째 문제는 최고로 어렵겠지? 으으... 걱정인걸?",
+      "completed": "#p9010010#가 준비한 열 개의 퀴즈를 모두 풀었다!  추첨을 통해 상품도 준다고 했으니, 홈페이지에서 당첨자 발표를 확인하는것도 잊지 말아야 겠는걸?"
+    },
+    "area": 50,
+    "order": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "startDate": "2007042400",
+      "endDate": "2007052100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9838,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 550,
+      "items": [
+        {
+          "itemId": 4001126,
+          "count": 10
+        },
+        {
+          "itemId": 2020016,
+          "count": 4,
+          "probability": 1
+        },
+        {
+          "itemId": 2020017,
+          "count": 4,
+          "probability": 1
+        },
+        {
+          "itemId": 2020018,
+          "count": 4,
+          "probability": 1
+        },
+        {
+          "itemId": 2020019,
+          "count": 4,
+          "probability": 1
+        },
+        {
+          "itemId": 2020020,
+          "count": 4,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

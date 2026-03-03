@@ -1,0 +1,30 @@
+{
+  "questId": 9860,
+  "info": {
+    "name": "Cassandra\u0027s Magic",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k says she\u0027s working on mastering new magic.",
+      "inProgress": "#b#p9010010##k\u0027s magic can earn you bonus EXP when you hunt monsters. \\r\\n#r#M9860##b Additional EXP #r#x9860# #bacquired#k when hunting.",
+      "completed": "You earned bonus EXP by hunting monsters with #b#p9010010##k\u0027s magic."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2007060600",
+      "endDate": "2007061800",
+      "startScript": "selectedMob"
+    },
+    "complete": {
+      "npc": 9010010,
+      "prerequisiteQuests": [
+        {
+          "questId": 9625,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  }
+}

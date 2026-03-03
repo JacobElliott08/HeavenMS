@@ -1,0 +1,56 @@
+{
+  "questId": 3047,
+  "info": {
+    "name": "Ericsson\u0027s Reward",
+    "parent": "The Chaos behind Alfonse Green and the Nependeath Juice",
+    "descriptions": {
+      "notStarted": "I need to look for Ericsson.",
+      "inProgress": "I got Ericsson a present for his cat, and he was so ecstatic over it that he promised to make me a #bSap of Nependeath#k. \\n\\n #t4000058# #b#c4000058##k/150\\n #t4000062# #b#c4000062##k/80",
+      "completed": "I got the #bSap of Nependeath#k from Ericsson. I should take this to #bElma the Housekeeper#k immediately!"
+    },
+    "area": 33,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012018,
+      "prerequisiteQuests": [
+        {
+          "questId": 3045,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012018,
+      "items": [
+        {
+          "itemId": 4000062,
+          "count": 80
+        },
+        {
+          "itemId": 4000058,
+          "count": 150
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7000,
+      "items": [
+        {
+          "itemId": 4031200
+        },
+        {
+          "itemId": 4000058,
+          "count": -150
+        },
+        {
+          "itemId": 4000062,
+          "count": -80
+        }
+      ]
+    }
+  }
+}

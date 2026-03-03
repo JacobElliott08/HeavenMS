@@ -1,0 +1,31 @@
+{
+  "questId": 21600,
+  "info": {
+    "name": "Pucci\u0027s Request",
+    "descriptions": {
+      "notStarted": "#b#p1202007##k, a penguin from #b#m140000000##k, apparently has something to tell you. ",
+      "inProgress": "#p1202007# says that one of the \u0027huskies\u0027 he was tending was actually a wolf. He doesn\u0027t know exactly what happened, but he doesn\u0027t want to abandon the infant wolf pup. He wants you to ask around for some tips on how to raise a wolf. Somewhere around Aqua Road, you know that #b#p2060000##k knows a little something about raising wolves...",
+      "completed": "You were able to meet #p2060000# at #m230010201# of Aqua Road."
+    },
+    "area": 6,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1202007,
+      "minLevel": 50,
+      "normalAutoStart": true,
+      "startScript": "q21600s",
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2060000
+    }
+  }
+}

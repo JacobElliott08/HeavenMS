@@ -1,0 +1,71 @@
+{
+  "questId": 6222,
+  "info": {
+    "name": "Theory on Inverse Attributes of Summoned Beings (Familiars)",
+    "parent": " Inverse Attributes",
+    "descriptions": {
+      "notStarted": "#b#p2030012##k suggested that I go see  #b#p2012017##k,  the mad scientist in Orbis Tower.",
+      "inProgress": " I followed #b#p2030012##k\u0027s advice and went to see #b#p2012017##k. #b#p2012017##k said that it\u0027s an interesting theory and said that we should try it on a summoned-being--a familiar. He says to get him the ingredients.... I can find everything else, but I\u0027ll need to see #b#p2030012##k for #b#t4031468##k    \\r\\n#i4011005##t4011005# #b#c4011005#/10#k\\n#i4011003##t4011003# #b#c4011003#/5#k\\n#i4011002##t4011002# #b#c4011002#/5#k\\n#i4031468##t4031468# #b#c4031468#/1",
+      "completed": " #b#p2012017##k said it would take time to make #b#t4031451##k and told me to talk to him later. I will return in a little while to check on his progress"
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012017,
+      "jobs": [
+        212
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6221,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012017,
+      "items": [
+        {
+          "itemId": 4011005,
+          "count": 10
+        },
+        {
+          "itemId": 4031468
+        },
+        {
+          "itemId": 4011002,
+          "count": 5
+        },
+        {
+          "itemId": 4011003,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 700000,
+      "items": [
+        {
+          "itemId": 4011005,
+          "count": -10
+        },
+        {
+          "itemId": 4011003,
+          "count": -5
+        },
+        {
+          "itemId": 4011002,
+          "count": -5
+        },
+        {
+          "itemId": 4031468,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

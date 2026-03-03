@@ -1,0 +1,44 @@
+{
+  "questId": 3309,
+  "info": {
+    "name": "An Incident, and the Missing Alchemist",
+    "descriptions": {
+      "notStarted": "#b#p2111008##k, the alchemist from Zenumist, seems to be needing me for something else. What must it be this time? I better go see #p2111008#.",
+      "inProgress": "Bedin told me to enter the lab of Alcadno when no one is present, and steal the #b#t4031708##k for him. Apparently, it can be found on top of the table at #b#m261020700##k... but in order to get to #m261020700#, I\u0027ll have to use the portal from #m261020600#. Since all the lights are off at the lab, I\u0027ll have to really search for the document in the dark... \\n\\n#i4031708##t4031708# #b#c4031708##k/1",
+      "completed": "An incident from long ago. It all started with a flawed experiment from an alchemist. The failure brought a massive explosion, and the accompanying earthquake destroyed many parts of Magatia. The Magic Pentagram that was destroyed then has made Homun in rage ever since. To make matters worse, the alchemist responsible for this seems to have gone missing..."
+    },
+    "area": 44,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111008,
+      "minLevel": 52,
+      "prerequisiteQuests": [
+        {
+          "questId": 3308,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111008,
+      "items": [
+        {
+          "itemId": 4031708
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 25000,
+      "items": [
+        {
+          "itemId": 4031708,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

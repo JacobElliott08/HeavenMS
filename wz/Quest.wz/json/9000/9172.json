@@ -1,0 +1,42 @@
+{
+  "questId": 9172,
+  "info": {
+    "name": "넬라의 일 돕기",
+    "parent": "넬라의 추석",
+    "descriptions": {
+      "notStarted": "넬라는 추석 연휴를 한가롭게 보내기 위해서는 자신이 맡고 있는 일을 대신해 줄 사람이 필요하다고 했다. 내가 그 일을 도와줘볼까?",
+      "inProgress": "넬라의 주황버섯 퇴치를 돕기로 하였다. 자신이 거의 그 수를 채웠기 때문에 20 마리 정도만 잡아준다면 된다고 하는데...내가 잡을 수 있을까?\\n\\n#o1210102# #r#a91721##k",
+      "completed": "넬라의 추석을 위해 주황버섯을 20마리 퇴치하였다."
+    },
+    "area": 50,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052103,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2007092000",
+      "endDate": "2007100800",
+      "prerequisiteQuests": [
+        {
+          "questId": 9171,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052103,
+      "monsters": [
+        {
+          "monsterId": 1210102,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200
+    }
+  }
+}

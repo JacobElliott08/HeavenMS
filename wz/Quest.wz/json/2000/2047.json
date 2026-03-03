@@ -1,0 +1,132 @@
+{
+  "questId": 2047,
+  "info": {
+    "name": "Hero\u0027s Gladius",
+    "parent": "Manji\u0027s Old Gladius",
+    "descriptions": {
+      "notStarted": "Let\u0027s look for Manji in Perion",
+      "inProgress": "I ran into Manji from Perion again, the same Manji that I met while I was helping the little Maya get her medicine. He was shocked by my stronger appearance, and wanted to ask me for a favor. Long long ago, he was in danger of being attacked by Balrog, only to be saved by the legendary hero Tristan. He died in place of Manji, and for that, he\u0027s been keeping that sword to this day. Too bad the sword has been soaked in Balrog\u0027s evilness and is as ragged as possible. It\u0027s too embarrassing to even call it a sword now. Anyway, he gave me the #rOld Gladius#k and wanted me to reawaken it for him. If it indeed gets reawaken, it becomes the #bHero\u0027s Gladius#k ...I should go see Chrishrama of Sleepywood just the way Manji said it...",
+      "completed": "It seems that this Gladius which Manji told me is one fine sword. I had to make a hard decision choosing one bwtween the #bGladius#k and the #bSkull Earring#k which Manji offered me, but I will not regret."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022002,
+      "minLevel": 45,
+      "prerequisiteQuests": [
+        {
+          "questId": 2008,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1022002,
+      "prerequisiteQuests": [
+        {
+          "questId": 2048,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031144
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 1302014
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 7500,
+      "nextQuest": 2048,
+      "items": [
+        {
+          "itemId": 1302015
+        },
+        {
+          "itemId": 1032012
+        },
+        {
+          "itemId": 4031144,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

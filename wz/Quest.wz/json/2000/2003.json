@@ -1,0 +1,33 @@
+{
+  "questId": 2003,
+  "info": {
+    "name": "Finding Sophia",
+    "parent": "Maya and the Weird Medicine",
+    "descriptions": {
+      "inProgress": "Around \"The Victoria\" in Lith Harbor, I met this heavily-bearded crewmember called Teo. He said he has the #bWeird Medicine#k but he wasn\u0027t willing to give it up for free. Instead he said he\u0027ll trade with me for a #bsparkling rock#k. I mean, he does look like he knows Maya pretty well, but he still wants to make a deal with me, knowing how sick she is ...?? That\u0027s strange... anyway, to get that #bsparkling rock#k, I need to head over to Perion and talk to the #rSophia#k, the daughter of the owner of the department store there.",
+      "completed": "I finally met Sophia, who\u0027s working at the department store in Perion. To make the sparkling rock, she said she needs #bArcon\u0027s blood#k."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002001,
+      "minLevel": 15,
+      "prerequisiteQuests": [
+        {
+          "questId": 2002,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022100
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 2004
+    }
+  }
+}

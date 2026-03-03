@@ -1,0 +1,53 @@
+{
+  "questId": 3249,
+  "info": {
+    "name": "Operation Strategy 2 : Defeat the Monsters",
+    "parent": "The Clocktower Monster Wipe-Out Operation",
+    "descriptions": {
+      "inProgress": "Operation strategy 2 is much simpler than strategy 1. It was to defeat the monsters! You must defeat #r#o4230113##k, #r#o3230306##k, #r#o4230114##k, #r#o4230115##k, and even #r#o5220003##k, so it\u0027s not child\u0027s play... but let\u0027s defeat the monsters.\\n\\n#o4230113# #r#a32491##k \\n#o3230306# #r#a32492##k \\n#o4230114# #r#a32493##k \\n#o4230115# #r#a32494##k \\n#o5220003# #r#a32495##k ",
+      "completed": "You have reported to #p2041026# after defeating all the monsters. It\u0027s not as easy as it may seem since there are so many types of monsters to hunt!"
+    },
+    "area": 37,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041026,
+      "prerequisiteQuests": [
+        {
+          "questId": 3248,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041026,
+      "monsters": [
+        {
+          "monsterId": 4230113,
+          "count": 20
+        },
+        {
+          "monsterId": 3230306,
+          "count": 30
+        },
+        {
+          "monsterId": 4230114,
+          "count": 40
+        },
+        {
+          "monsterId": 4230115,
+          "count": 50
+        },
+        {
+          "monsterId": 5220003
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 151500
+    }
+  }
+}

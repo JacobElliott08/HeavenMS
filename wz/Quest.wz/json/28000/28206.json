@@ -1,0 +1,52 @@
+{
+  "questId": 28206,
+  "info": {
+    "name": "Returning the Book to Jay",
+    "parent": "Lost Book",
+    "descriptions": {
+      "notStarted": "#b#@9201118:##k in #bHenesys#k says to return the #rLost Book#k to #b#@1012109:##k in #bHenesys#k.Let\u0027s go see #b#@9201118:##k.",
+      "inProgress": "Let\u0027s take the #rLost Book#k over to #b#@1012109:##k in #bHenesys#k and return it to him.",
+      "completed": "#b#p1012109##k\u0027s #rLost Book#k disappeared because #b#p9201118##k borrowed it and lost it, but it was found in #b#m104040001##k.\\n\\nBut what in the world is the Statue of Leafre?"
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201118,
+      "prerequisiteQuests": [
+        {
+          "questId": 28205,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1012109
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 4001352,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

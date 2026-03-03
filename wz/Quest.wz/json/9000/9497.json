@@ -1,0 +1,44 @@
+{
+  "questId": 9497,
+  "info": {
+    "name": "양씨 아저씨의 일손 돕기",
+    "descriptions": {
+      "notStarted": "#b#p9310012##k에게 다시 말을 걸어보자.",
+      "inProgress": "시골정취를 느낄 수 있는 교외로 나가서 구경도 하고 밭 작물을 망가뜨리는 가축들을 퇴치하고 밭주인 #b#p9310010##k를 만나보자.\\n\\n#o9600002# #r#a94971##k \\n#o9600003# #r#a94972##k",
+      "completed": "#b#p9310010##k의 농사일을 도왔다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9310012,
+      "minLevel": 10,
+      "startDate": "2006101600",
+      "endDate": "2006110100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9496,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9310010,
+      "monsters": [
+        {
+          "monsterId": 9600002,
+          "count": 50
+        },
+        {
+          "monsterId": 9600003,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200
+    }
+  }
+}

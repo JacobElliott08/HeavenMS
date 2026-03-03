@@ -1,0 +1,32 @@
+{
+  "questId": 10356,
+  "info": {
+    "name": "Delivering Cassandra\u0027s Album",
+    "descriptions": {
+      "inProgress": "Of course, it\u0027s Cassandra\u0027s, so you should return it to her! You\u0027d better return the album to her immediately!",
+      "completed": "Cassandra breathed a sigh of relief, knowing she finally had her album back."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2009010100",
+      "items": [
+        {
+          "itemId": 4001316,
+          "count": 2
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10356e",
+      "items": [
+        {
+          "itemId": 4001316
+        }
+      ]
+    }
+  }
+}

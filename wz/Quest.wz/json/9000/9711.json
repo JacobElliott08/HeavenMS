@@ -1,0 +1,126 @@
+{
+  "questId": 9711,
+  "info": {
+    "name": "전사학교 입학통지서",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 사람들에게 급히 도움을 청하고 있다고 한다. 무슨 일일까?",
+      "inProgress": "새학기를 맞아 입학 대상자들에게 입학통지서를 보내기로 한 주먹펴고 일어서. 하지만 발송할 입학통지서만 준비해 놓고, 우표는 준비하지 않은 그는 당황하여 카산드라에게 도움을 청했다는데... 몬스터에게서 우표를 모아 #b#p1022000##k에게 가져다 주자.\\n\\n#i4031558##t4031558# #b#c4031558#/10#k",
+      "completed": "#b#p1022000##k에게 우표를 전달했다. 이제 더 많은 전사들이 메이플 월드에 생기겠지? 강함을 겨룰 수 있는 사람이 는다는 건 좋은 일이지. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2007022600",
+      "endDate": "2007031200",
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132
+      ]
+    },
+    "complete": {
+      "npc": 1022000,
+      "items": [
+        {
+          "itemId": 4031558,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 777,
+      "items": [
+        {
+          "itemId": 4031558,
+          "count": -10
+        },
+        {
+          "itemId": 2043000,
+          "probability": 3
+        },
+        {
+          "itemId": 2043100,
+          "probability": 3
+        },
+        {
+          "itemId": 2043200,
+          "probability": 3
+        },
+        {
+          "itemId": 2044000,
+          "probability": 3
+        },
+        {
+          "itemId": 2044100,
+          "probability": 3
+        },
+        {
+          "itemId": 2044200,
+          "probability": 3
+        },
+        {
+          "itemId": 2044300,
+          "probability": 3
+        },
+        {
+          "itemId": 2044400,
+          "probability": 3
+        },
+        {
+          "itemId": 2043002,
+          "probability": 1
+        },
+        {
+          "itemId": 2043102,
+          "probability": 1
+        },
+        {
+          "itemId": 2043202,
+          "probability": 1
+        },
+        {
+          "itemId": 2044002,
+          "probability": 1
+        },
+        {
+          "itemId": 2044102,
+          "probability": 1
+        },
+        {
+          "itemId": 2044202,
+          "probability": 1
+        },
+        {
+          "itemId": 2044302,
+          "probability": 1
+        },
+        {
+          "itemId": 2044402,
+          "probability": 1
+        },
+        {
+          "itemId": 2002004,
+          "count": 10,
+          "probability": 300000
+        },
+        {
+          "itemId": 2002006,
+          "count": 10,
+          "probability": 200000
+        }
+      ]
+    }
+  }
+}

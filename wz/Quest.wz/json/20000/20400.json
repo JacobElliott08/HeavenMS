@@ -1,0 +1,31 @@
+{
+  "questId": 20400,
+  "info": {
+    "name": "Chasing the Knight\u0027s Target",
+    "descriptions": {
+      "notStarted": "#p1101002# seems to have a new assignment for me.",
+      "inProgress": "I have received a new assignment. The assignment deals with supporting Advanced Knight #p1103000# that is chasing the Black Wings that are targeting the Empress. The last trace of #p1103000# was found in #b#m211000000##k, and he has instructed me to go to #m211000000# to find #p1103000#.",
+      "completed": "I have received a new assignment. The assignment deals with supporting Advanced Knight #p1103000# that is chasing the Black Wings that are targeting the Empress. The last trace of #p1103000# was found in #m211000000#, and he has instructed me to go to #m211000000# to find #p1103000#."
+    },
+    "area": 15,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "minLevel": 120,
+      "normalAutoStart": true,
+      "startScript": "q20400s",
+      "jobs": [
+        1111,
+        1211,
+        1311,
+        1411,
+        1511
+      ]
+    },
+    "complete": {
+      "npc": 1101002
+    }
+  }
+}

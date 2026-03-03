@@ -1,0 +1,50 @@
+{
+  "questId": 9151,
+  "info": {
+    "name": "추석 한과세트 만들기",
+    "descriptions": {
+      "notStarted": "유과 20개를 모아 한과세트로 만들어보는 건 어떨까? 선물하기에는 안성맞춤이겠는 걸?",
+      "inProgress": "유과 20개를 모아가니 정성이 가득 담긴 한과세트로 만들어준다는데.. \\n\\n#k#t2022038:# #b#c2022038#/20#k",
+      "completed": "유과 20개를 모아 정성이 가득 담긴 한과세트로 만들었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 26,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2008090500",
+      "endDate": "2008092600",
+      "items": [
+        {
+          "itemId": 2022038,
+          "count": 20
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 2022038,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 4031188
+        },
+        {
+          "itemId": 2022038,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

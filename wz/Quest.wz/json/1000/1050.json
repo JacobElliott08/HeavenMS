@@ -1,0 +1,36 @@
+{
+  "questId": 1050,
+  "info": {
+    "name": "Becoming a Magician",
+    "descriptions": {
+      "notStarted": "The Maple Administrator told me that I may be best suited to be a Magician.",
+      "inProgress": "The Maple Administrator told me she\u0027ll take me to Ellinia now to help me make the job advancement as a Magician.",
+      "completed": "Should I go ahead and make the job advancement as a Magician?"
+    },
+    "area": 20,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "maxLevel": 20,
+      "endDate": "2009010100",
+      "startScript": "q1050s",
+      "normalAutoStart": true,
+      "infoNumber": 7631,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1048,
+          "state": "COMPLETED"
+        }
+      ],
+      "infoEx": [
+        null
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "questId": 1004,
+  "info": {
+    "name": "Returning to Nina",
+    "parent": "Nina and Sen\u0027s Dinner Menu",
+    "descriptions": {
+      "inProgress": "Sen wants to have Mushroom Soup for Dinner. Let\u0027s get back to Nina now.",
+      "completed": "I told Nina what Sen wants for dinner."
+    },
+    "area": 20,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2001,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1003,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2102
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3
+    }
+  }
+}

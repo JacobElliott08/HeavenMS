@@ -1,0 +1,31 @@
+{
+  "questId": 10316,
+  "info": {
+    "name": "Quest Completion Book",
+    "descriptions": {
+      "notStarted": "You have found an interesting artifact.",
+      "inProgress": "You have found a Quest Completion Book. Just as you are about to  report it to a Maple Admin, you wonder what it was used for.",
+      "completed": "Upon returning it to the Maple Admin, he thanked you and said more and more Maplers participate in quests nowadays."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9040000,
+      "minLevel": 13,
+      "startDate": "2010022200",
+      "endDate": "2010030800",
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 4001308
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "endScript": "q10316e"
+    }
+  }
+}

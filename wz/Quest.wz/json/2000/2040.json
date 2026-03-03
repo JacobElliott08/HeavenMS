@@ -1,0 +1,83 @@
+{
+  "questId": 2040,
+  "info": {
+    "name": "Maya\u0027s First Collection",
+    "parent": "Collecting For Maya",
+    "descriptions": {
+      "notStarted": "Let\u0027s go to Maya in Henesys",
+      "inProgress": "I got a favor request from Maya of Henesys, who has been collecting various items. She wanted #b50 each of snail shells, blue snail shells, mushroom spores, and tree branches#k. Maybe..well it looks like I can get these from the monsters around the prarie...",
+      "completed": "I got all the items Maya requested, but when do I get rewarded for this? What? How many more times do I have to do this??"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012101,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2008,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1012101,
+      "items": [
+        {
+          "itemId": 4000000,
+          "count": 50
+        },
+        {
+          "itemId": 4000003,
+          "count": 50
+        },
+        {
+          "itemId": 4000011,
+          "count": 50
+        },
+        {
+          "itemId": 4000019,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "items": [
+        {
+          "itemId": 4000019,
+          "count": -50
+        },
+        {
+          "itemId": 4000000,
+          "count": -50
+        },
+        {
+          "itemId": 4000011,
+          "count": -50
+        },
+        {
+          "itemId": 4000003,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

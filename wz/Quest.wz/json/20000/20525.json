@@ -1,0 +1,92 @@
+{
+  "questId": 20525,
+  "info": {
+    "name": "Making a Saddle",
+    "descriptions": {
+      "notStarted": "I lost the #t1912005# for Mounts. What should I do...? I better talk to #b#p1102002# the Mount Trainerk# for help.",
+      "inProgress": "#p1102002# told me because of budget issues, he couldn\u0027t give me a spare #t1912005#, and told me I must come up with a new #t1912005# on my own... It is rumored that #p2060005# of #m230000000# is a great maker of #t1912005#s... but I have a feeling it\u0027s going to be very expensive. I\u0027ll have to bring the materials and the service charge for the #t1912005# to #p2060005#.",
+      "completed": "I handed #p2060005# the materials for #t1912005#, along with the service charge, and received #t1912005# in return. I better make sure not to lose #t1912005# ever again."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102002,
+      "minLevel": 50,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 20523,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1912005
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 2060005,
+      "items": [
+        {
+          "itemId": 4000030,
+          "count": 200
+        },
+        {
+          "itemId": 4000055,
+          "count": 200
+        },
+        {
+          "itemId": 4000171,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -5000000,
+      "items": [
+        {
+          "itemId": 4000171,
+          "count": -200
+        },
+        {
+          "itemId": 4000055,
+          "count": -200
+        },
+        {
+          "itemId": 4000030,
+          "count": -200
+        },
+        {
+          "itemId": 1912005
+        }
+      ]
+    }
+  }
+}

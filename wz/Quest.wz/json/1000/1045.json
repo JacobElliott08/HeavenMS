@@ -1,0 +1,51 @@
+{
+  "questId": 1045,
+  "info": {
+    "name": "Bari\u0027s Test",
+    "descriptions": {
+      "notStarted": "At the #bWest Field of Southperry#k, #bBari#k seems to be looking for me...",
+      "inProgress": "Bari told me he had been requested by Mai to test my skills, and instructed me to defeat the most powerful monster in Maple Island, #rOrange Mushroom#k, and bring back #b1 Orange Mushroom Cap#k. \\n\\nOrange Mushroom #r#a10451##k n#i4000001# #t4000001# #b#c4000001# #k/1",
+      "completed": "I was able to defeat Orange Mushroom and bring back an Orange Mushroom Cap to Bari. This completed all of Mai\u0027s trainings. I think I\u0027m now ready to take on the Victoria Island."
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 20001,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1044,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 20001,
+      "items": [
+        {
+          "itemId": 4000001
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 1210102
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 700,
+      "items": [
+        {
+          "itemId": 4000001,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

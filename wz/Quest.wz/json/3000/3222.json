@@ -1,0 +1,68 @@
+{
+  "questId": 3222,
+  "info": {
+    "name": "Eliminating the Drumming Bunny",
+    "descriptions": {
+      "notStarted": "I should go see Roly-Poly Worker 5 at Eos Tower",
+      "inProgress": "I met up with Roly-Poly Worker 5 again at Eos Tower. He thanked me for helping him out last time, and mentioned that I should have heard it from General Maester, but we\u0027ll have to take away the force of darkness and put it back to the way it used to be. He requested that I eliminate the Drumming Bunnies at the 60th floor of Eos Tower and collect #b1000 Toy Drums#k for him. \\n\\n#t4000127# #b#c4000127##k/1000",
+      "completed": "Just the way the Roly-Poly Worker 5 asked, I took out the drumming bunnies and collected the toy drums. I think this really took out the wild bunnies as well as taking away the force of darkness. Here\u0027s hoping that those bunnies turn back to the old, adorable bunnies they used to be."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040008,
+      "minLevel": 31,
+      "prerequisiteQuests": [
+        {
+          "questId": 3221,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040008,
+      "items": [
+        {
+          "itemId": 4000127,
+          "count": 1000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9000,
+      "items": [
+        {
+          "itemId": 4000127,
+          "count": -1000
+        },
+        {
+          "itemId": 1002096,
+          "jobRestriction": 1180673
+        },
+        {
+          "itemId": 1002137,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 1002144,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 1002048,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 1002178,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 1002625,
+          "jobRestriction": 32800
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "questId": 28169,
+  "info": {
+    "name": "Visiting Henesys",
+    "descriptions": {
+      "notStarted": "#b#@9201120:##k in Kerning City says something is going on in #b#m100000000##k...",
+      "inProgress": "Apparently, #b#@1012003:##k in #b#m100000000##k is angry with anyone and anything that has to do with Perion. Let\u0027s talk to him and find out what that\u0027s all about.",
+      "completed": "#bChief Stan#k hates #bPerion.#k"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201120,
+      "prerequisiteQuests": [
+        {
+          "questId": 28168,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1012003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

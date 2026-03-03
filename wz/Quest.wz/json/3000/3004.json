@@ -1,0 +1,27 @@
+{
+  "questId": 3004,
+  "info": {
+    "name": "The Descendent of the Author of the Book of Ancient",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "notStarted": "I should go see Alcaster of El Nath right now...",
+      "inProgress": "I met #bAlcaster#k, the archaeologist, at El Nath. He said he had heard about the #bBook of Ancient#k, which tells about the Great World War, happened hundreds years ago. Interesting... The only living descendant of the author of the \"Book of Ancient\"  #bHella#k who lives in Orbis. I better go to find her right now~"
+    },
+    "area": 33,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "minLevel": 55
+    },
+    "complete": {
+      "npc": 2012010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 3005
+    }
+  }
+}

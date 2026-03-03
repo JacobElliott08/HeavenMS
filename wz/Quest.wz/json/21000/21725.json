@@ -1,0 +1,60 @@
+{
+  "questId": 21725,
+  "info": {
+    "name": "10 Boogies\u0027s Request",
+    "descriptions": {
+      "notStarted": "After the #o1140130# case closed, #p1103004# still seems to need you for something. You wonder what. Better go talk to #b#p1103004##k and find out.",
+      "inProgress": "#p1103004# thanks you for helping her solve the mystery, but tells you she has a little predicament: She can\u0027t leave her post to submit her report! She wonders if you could deliver the report to her boss for her. So your task is to deliver the #t4032320# to #b#p1101002##k in #b#m130000000##k.",
+      "completed": "You delivered the report to #p1101002# and received a reward. You noticed that he had a very peculiar way of speaking which, to you, seemed totally inappropriate yet absolutely proper in tone. It reminded you of someone…"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103004,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 21724,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1101002,
+      "items": [
+        {
+          "itemId": 4032320
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032320
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 900,
+      "items": [
+        {
+          "itemId": 4032320,
+          "count": -1
+        },
+        {
+          "itemId": 2030000,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "questId": 10065,
+  "info": {
+    "name": "사진첩이 필요해",
+    "parent": "조이의 정체",
+    "descriptions": {
+      "notStarted": "천조각 20개를 모아 루드밀아에게 줬다. 사진첩을 받아야 한다.",
+      "inProgress": "사진첩을 소필리아에게 가져가야지! 이제 조이의 정체를 알 수 있으려나?",
+      "completed": "조이? 피노? 페토? 누구지? 갑자기 더 복잡해졌는데? 소필리아에게 조금 더 물어봐야겠다."
+    },
+    "area": 50,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120006,
+      "startDate": "2008101600",
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10064,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120005,
+      "items": [
+        {
+          "itemId": 4032083
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032083
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 50,
+      "items": [
+        {
+          "itemId": 4032083,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "questId": 3628,
+  "info": {
+    "name": "The Storybook on the Goblin Story",
+    "descriptions": {
+      "notStarted": "I\u0027m sure I received the storybook from Chumji after defeating 3 King Goblins. Where did it go? Should I go see Chumji again?",
+      "inProgress": "#b#p2040052# from Helios Tower Library has requested me to get #b#t4031238##k for him. Hmmm ... I\u0027m pretty sure I received it after I defeated the King Goblins, but I can\u0027t seem to find it. After discussing the matters with Chumji, he promised to give me the storybook if I gather up #b10 #t4000173#s#k for him.\\n\\n#t4000173# #b#c4000173##k/10",
+      "completed": "I gave Chumji 10 #t4000173#s just as he requested to reacquire #t4031238#."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071000,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3611,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3618,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031238
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071000,
+      "items": [
+        {
+          "itemId": 4000173,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000173,
+          "count": -10
+        },
+        {
+          "itemId": 4031238
+        }
+      ]
+    }
+  }
+}

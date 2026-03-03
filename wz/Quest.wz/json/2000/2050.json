@@ -1,0 +1,46 @@
+{
+  "questId": 2050,
+  "info": {
+    "name": "Sabitrama and the Diet Medicine",
+    "descriptions": {
+      "notStarted": "Let\u0027s go look for Sabitrama in Sleepywood.",
+      "inProgress": "In front of Sleepywood Hotel, I met #bSabitrama#k, a medicinal herb trader who seems to be the younger brother of Chrishrama. He said he found a place where he can finally find the herb that he needed for this medicine he\u0027s working on...and that he asked if I could go in that forest and grab an herb called #bPink Anthurium#k. It consists of green grass and a small pink flower ... I better remember this well and get him the exact same one. I heard the place is near Ellinia ... I should go there and talk to this guy #bShane#k ...",
+      "completed": "Thankfully I got the flower that Sabitrama wanted from the Forest of Patience, and as a sign of appreciation, he gave me a #bscroll for the overall armor#k. Oh, and he also said that from here on out, I can enter the Forest of Patience without having to pay Shane of Ellinia. Based on what I\u0027ve heard, the diet medicine Sabitrama\u0027s working on is for Shane\u0027s fiance ... I better get back in the Forest of Patience when I have some time ..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061005,
+      "minLevel": 25
+    },
+    "complete": {
+      "npc": 1061005,
+      "items": [
+        {
+          "itemId": 4031020
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3500,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 2040504,
+          "probability": 1
+        },
+        {
+          "itemId": 2040505,
+          "probability": 1
+        },
+        {
+          "itemId": 4031020,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "questId": 3354,
+  "info": {
+    "name": "De Lang\u0027s Potion",
+    "parent": "Who is De Lang?",
+    "descriptions": {
+      "inProgress": "#p2111002# confessed his research hasn\u0027t taken steps forward these days, but then he lightened up and told me he found a cure for #p2111005#... What? #bA medicine for #p2111005##k? But everything in #p2111002#\u0027s house seemed to have been cleaned out. \\n\\nIf he didn\u0027t try so darndest to hide this, then someone from Alcadno that might have gotten through #p2111002#\u0027s Lab Report. I better go see  #b#p2111001##k of Alcadno, since he searched #p2111002#\u0027s whole house.",
+      "completed": "When I told #p2111001# of #p2111002#, he seemed genuinely shocked."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111002,
+      "minLevel": 75,
+      "startScript": "q3354s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3353,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100
+    }
+  }
+}

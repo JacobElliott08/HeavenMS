@@ -1,0 +1,50 @@
+{
+  "questId": 20019,
+  "info": {
+    "name": "The Last Knight Training",
+    "descriptions": {
+      "notStarted": "Let\u0027s begin your last knight training before you become a Cygnus Knight.",
+      "inProgress": "This time, #p1102000# has asked you to hunt the strongest of the Mimis in Ereve, the #r#o100124##ks.",
+      "completed": "You have come back after hunting the #o100124#s. #p1102000# suggested you report to #p1101002#, as you\u0027ve completed your training."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102000,
+      "prerequisiteQuests": [
+        {
+          "questId": 20018,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    },
+    "complete": {
+      "npc": 1102000,
+      "monsters": [
+        {
+          "monsterId": 100124,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200,
+      "items": [
+        {
+          "itemId": 2000020,
+          "count": 20
+        },
+        {
+          "itemId": 2000021,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

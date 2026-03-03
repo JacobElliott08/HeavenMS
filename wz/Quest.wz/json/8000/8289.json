@@ -1,0 +1,42 @@
+{
+  "questId": 8289,
+  "info": {
+    "name": "Little Suzy\u0027s X-Mas Dilemma",
+    "descriptions": {
+      "notStarted": "There\u0027s a little girl with a puzzled look on her face in New Leaf City.  With X-mas time just around the corner, she should be happy... I wonder why she looks so puzzled and confused instead?  Looks like she may need some help with her Maplemas spirit!",
+      "inProgress": "Little Suzy was all excited for Maplemas this year... until she learned all about a similar holiday called \"Versalmas\" from a strange green mouse named O-Pongo.  Now she doesn\u0027t know what sounds more exciting - Maplemas... or Versalmas?  Suzy needs my help to help her decide which version of X-mas she should celebrate this year.  In order to do that, I\u0027ll have to speak to both Maple Claws and this O-Pongo character, and then come back and talk to her.  Maplemas holiday from an alternate dimension, huh?  Very curious...",
+      "completed": "I spoke to both Maple Claws and O-Pongo.  It seems that both Maplemas and Versalmas have their merits.  In the end, Suzy\u0027s put the decision on me: she\u0027s asked me to deliver her X-mas Wishlist to one of the two \"Santas,\" which will determine which holiday she\u0027s celebrating this year.  I have a feeling that this decision is important, that I\u0027m not just making a choice for her... but also one for myself.  Which holiday do I believe in?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201093,
+      "minLevel": 10,
+      "endDate": "2009012100"
+    },
+    "complete": {
+      "npc": 9201093,
+      "prerequisiteQuests": [
+        {
+          "questId": 8290,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8291,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4031877
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "questId": 6292,
+  "info": {
+    "name": "Black Spirit\u0027s Healing Power1",
+    "parent": "Spirit Healing",
+    "descriptions": {
+      "inProgress": "#b#p2041021##k told me to bring #b200 #t4000148##k if I want increase #q1321007#\u0027s power..\\n\\n#i4000148##t4000148# #b#c4000148# / 200#k",
+      "completed": "We woke up the black spirit\u0027s power with #t4000148# "
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041021,
+      "jobs": [
+        132
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6291,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041021,
+      "items": [
+        {
+          "itemId": 4000148,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 4000148,
+          "count": -200
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 1320008,
+          "masterLevel": 15
+        }
+      ]
+    }
+  }
+}

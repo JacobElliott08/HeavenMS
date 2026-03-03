@@ -1,0 +1,58 @@
+{
+  "questId": 1040,
+  "info": {
+    "name": "Chief\u0027s Introduction",
+    "descriptions": {
+      "notStarted": "For taking care of the snails for the safety of Maria, #bLucas#k offered to introduce me to a person that\u0027ll train me. Who would that be? I better go see him.",
+      "inProgress": "Lucas told me to head to #bthe East Field of Amherst#k and find #bMai#k, who trains by herself there. He wanted me to to receive Mai\u0027s trainings. He said the training will definitely come in handy, since she used to apply her trades at Victoria Island...  #k\\n\\n#y1041# #b (#u1041#)#k\\n#y1042#  #b(#u1042#)#k\\n#y1043#  #b(#u1043#)#k\\n#y1044# #b(#u1044#)#k\\n",
+      "completed": "I completed all of Mai\u0027s Trainings and returned to Lucas."
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 12000,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1038,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 12000,
+      "prerequisiteQuests": [
+        {
+          "questId": 1041,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 1042,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 1043,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 1044,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4031801
+        }
+      ]
+    }
+  }
+}

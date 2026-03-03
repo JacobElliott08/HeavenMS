@@ -1,0 +1,59 @@
+{
+  "questId": 21605,
+  "info": {
+    "name": "The Missing Wolf",
+    "descriptions": {
+      "notStarted": "#t1902015# is missing! What should you do? You\u0027d better go to #b#m140000000##k and ask #b#p1202007##k what to do.",
+      "inProgress": "#p1202007# says that #t1902015# returned to him in tears and chastised you for not taking better care of it. He then tells you that you need to buy some medication in order to restore poor, weakened #t1902015#\u0027s health.\\r\\n\\r\\n#b20,000,000 mesos#k",
+      "completed": "You were able to get #t1902015# back. You promise to never, ever lose it again."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1202007,
+      "minLevel": 50,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 21603,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1902015
+        },
+        {
+          "itemId": 1902016
+        },
+        {
+          "itemId": 1902017
+        },
+        {
+          "itemId": 1902018
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1202007
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -20000000,
+      "items": [
+        {
+          "itemId": 1902015
+        }
+      ]
+    }
+  }
+}

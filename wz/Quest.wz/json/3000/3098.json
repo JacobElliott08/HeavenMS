@@ -1,0 +1,120 @@
+{
+  "questId": 3098,
+  "info": {
+    "name": "The legend of Papa Pixie",
+    "descriptions": {
+      "notStarted": "#p2032001# examined the Pixie\u0027s sculptures and asked us to look for him again.",
+      "inProgress": "#p2032001# said that the reason why Pixies have become ferocious is that the Pixie king, #rPapa Pixie#k, has emerged again. It seems that the Goddess who suddenly appeared is related to the tower. Because the future of Orbis is endangered, let\u0027s look for Papa Pixie#k at the tower of #rGoddess and drive him away. \\n\\n#o9300039# #r#a30981##k",
+      "completed": "At the tower of the Goddess, Pa pa Pixie was successfully driven away. #p2032001# thanked us for saving Orbis\u0027 future as the Pixies became gentle again. However, as everyone was elated and preparing to go out, it seems like the real reason to be happy is something else."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2032001,
+      "minLevel": 51,
+      "maxLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3097,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2032001,
+      "monsters": [
+        {
+          "monsterId": 9300039
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000,
+      "items": [
+        {
+          "itemId": 2043102,
+          "jobRestriction": 2099202,
+          "probability": 1
+        },
+        {
+          "itemId": 2043202,
+          "jobRestriction": 2099202,
+          "probability": 1
+        },
+        {
+          "itemId": 2043302,
+          "jobRestriction": 16400,
+          "probability": 1
+        },
+        {
+          "itemId": 2043702,
+          "jobRestriction": 4198404,
+          "probability": 1
+        },
+        {
+          "itemId": 2043802,
+          "jobRestriction": 4198404,
+          "probability": 1
+        },
+        {
+          "itemId": 2044002,
+          "jobRestriction": 2099202,
+          "probability": 1
+        },
+        {
+          "itemId": 2044102,
+          "jobRestriction": 2099202,
+          "probability": 1
+        },
+        {
+          "itemId": 2044202,
+          "jobRestriction": 2099202,
+          "probability": 1
+        },
+        {
+          "itemId": 2044302,
+          "jobRestriction": 2099202,
+          "probability": 1
+        },
+        {
+          "itemId": 2044402,
+          "jobRestriction": 2099202,
+          "probability": 1
+        },
+        {
+          "itemId": 2044502,
+          "jobRestriction": 8200,
+          "probability": 1
+        },
+        {
+          "itemId": 2044602,
+          "jobRestriction": 8200,
+          "probability": 1
+        },
+        {
+          "itemId": 2044702,
+          "jobRestriction": 16400,
+          "probability": 1
+        },
+        {
+          "itemId": 2043002,
+          "jobRestriction": 2099202,
+          "probability": 1
+        },
+        {
+          "itemId": 2044802,
+          "jobRestriction": 32800,
+          "probability": 1
+        },
+        {
+          "itemId": 2044902,
+          "jobRestriction": 32800,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

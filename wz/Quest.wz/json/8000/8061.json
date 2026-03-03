@@ -1,0 +1,38 @@
+{
+  "questId": 8061,
+  "info": {
+    "name": "Doll in the Dark 1",
+    "parent": "Doll in the Dark",
+    "descriptions": {
+      "notStarted": "#b#p1012109##k of #b#m100000000##k in Victoria Island has apparently started writing a book.",
+      "inProgress": "#p1012109# of #m100000000# has requested my help in writing his book. For more information, he recommended me to talk to #b#p2041022##k in #b#m220000400##k of Ludibrium. Should I go there...?",
+      "completed": "#b#p2041022##k asked me to look for some subjects worthy of writing a book on. I should talk to him when the research is over."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012109,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2074,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8060,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041022
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8062
+    }
+  }
+}

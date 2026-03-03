@@ -1,0 +1,37 @@
+{
+  "questId": 20203,
+  "info": {
+    "name": "Knighthood Exam: Wind Archer",
+    "descriptions": {
+      "notStarted": "According to #p1101002#, I can take my Knighthood Exam if I see #b#p1101005##k, the Chief Knight of the Wind. I better head over to Ereve and meet #p1101005#.",
+      "inProgress": "The Knighthood Exam has started. The test itself is actually quite simple. I just need to reach the end of the Training Forest, enter #bthe 2nd Drill Hall#k, and defeat the Mimis inside while bringing back #t4032098#. I better find #b30 #t4032098#s#k and bring them back to #p1101005# \\n\\n#i4032098# #t4032098# #b#c4032098# / 30#k",
+      "completed": "I have successfully completed the Knighthood Exam and officially dropped the \"in-Training\" from my title. As a bonafide Cygnus Knight, I shall do my best to remain level-headed."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101005,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 20200,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1300
+      ]
+    },
+    "complete": {
+      "npc": 1101005,
+      "endScript": "q20203e",
+      "items": [
+        {
+          "itemId": 4032098,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

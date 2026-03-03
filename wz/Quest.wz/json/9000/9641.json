@@ -1,0 +1,180 @@
+{
+  "questId": 9641,
+  "info": {
+    "name": "착한 고양이에게 선물을",
+    "descriptions": {
+      "notStarted": "크리스마스 선물을 준비중인 #b#p9201030##k가 도움이 필요한 일이 있다고 한다. 행복한 마을에 살고 있는 #p9201030#를 찾아가 보자. 행복한 마을에 가려면 먼저 #b#p1022101##k의 도움을 받아야 하지?",
+      "inProgress": "네로가 부탁한 크리스마스 선물을 몬스터들로 부터 구해서 행복한 마을에 살고 있는 #b#p9201030##k에게 가져다 주자.\\n\\n#t04031505# #b#c04031505#/25#k",
+      "completed": "네로가 부탁한 에릭손씨께 드릴 선물을 구해서 #p9201030#에게 가져다 주었지만 아직 부족한 듯 하다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201030,
+      "minLevel": 30,
+      "maxLevel": 49,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2008122600"
+    },
+    "complete": {
+      "npc": 9201030,
+      "items": [
+        {
+          "itemId": 4031505,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 22100,
+      "meso": 1000,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 35,
+          "probability": 100
+        },
+        {
+          "itemId": 2000003,
+          "count": 50,
+          "probability": 100
+        },
+        {
+          "itemId": 2000009,
+          "count": 35,
+          "probability": 100
+        },
+        {
+          "itemId": 2000010,
+          "count": 50,
+          "probability": 100
+        },
+        {
+          "itemId": 2002006,
+          "count": 10,
+          "probability": 55
+        },
+        {
+          "itemId": 2002007,
+          "count": 10,
+          "probability": 55
+        },
+        {
+          "itemId": 2002008,
+          "count": 10,
+          "probability": 55
+        },
+        {
+          "itemId": 2002009,
+          "count": 10,
+          "probability": 55
+        },
+        {
+          "itemId": 2002010,
+          "count": 10,
+          "probability": 55
+        },
+        {
+          "itemId": 2020014,
+          "count": 5,
+          "probability": 50
+        },
+        {
+          "itemId": 2020015,
+          "count": 4,
+          "probability": 50
+        },
+        {
+          "itemId": 2020012,
+          "count": 10,
+          "probability": 50
+        },
+        {
+          "itemId": 2020013,
+          "count": 7,
+          "probability": 50
+        },
+        {
+          "itemId": 2050004,
+          "count": 20,
+          "probability": 50
+        },
+        {
+          "itemId": 2048001,
+          "probability": 3
+        },
+        {
+          "itemId": 2040001,
+          "probability": 3
+        },
+        {
+          "itemId": 2040504,
+          "probability": 3
+        },
+        {
+          "itemId": 2041004,
+          "probability": 3
+        },
+        {
+          "itemId": 2040000,
+          "probability": 1
+        },
+        {
+          "itemId": 2040505,
+          "probability": 1
+        },
+        {
+          "itemId": 2041002,
+          "probability": 1
+        },
+        {
+          "itemId": 2070003,
+          "probability": 1
+        },
+        {
+          "itemId": 2040901,
+          "probability": 1
+        },
+        {
+          "itemId": 2040707,
+          "probability": 1
+        },
+        {
+          "itemId": 2044501,
+          "probability": 1
+        },
+        {
+          "itemId": 2044001,
+          "probability": 1
+        },
+        {
+          "itemId": 2041013,
+          "probability": 1
+        },
+        {
+          "itemId": 2041010,
+          "probability": 1
+        },
+        {
+          "itemId": 2040516,
+          "probability": 1
+        },
+        {
+          "itemId": 2040514,
+          "probability": 1
+        },
+        {
+          "itemId": 2070004,
+          "probability": 1
+        },
+        {
+          "itemId": 4031505,
+          "count": -25
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "questId": 2327,
+  "info": {
+    "name": "James\u0027s Whereabouts (3)",
+    "descriptions": {
+      "notStarted": "You\u0027re trying to help #b#p1300008##k escape the castle.",
+      "inProgress": "You need to help #b#p1300008#\u0027s#k escape. After, you should go visit #b#p1300005##k!",
+      "completed": "You successfully helped #b#p1300008#\u0027s#k escape."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300008,
+      "startScript": "q2327s",
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2326,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300008
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000
+    }
+  }
+}

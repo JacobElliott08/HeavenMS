@@ -1,0 +1,45 @@
+{
+  "questId": 2117,
+  "info": {
+    "name": "Shawn the Excavator\u0027s Request",
+    "descriptions": {
+      "notStarted": "#p1022006#, who resides at the East Rocky Mountain, said Shawn the excavator asked him for a favor...",
+      "inProgress": "Lately, the excavation site has been hit with an unknown monster. As a result, #p1022006# requested that I study the reason behind the monster\u0027s creation. To conduct the research, I\u0027ll have to collect #b5 each of #t4000196# and #t4000197##k that #b#o2230110##k and #b#o2230111##k use. \\n\\n#t4000196# #b#c4000196##k/5 \\n#t4000197# #b#c4000197##k/5",
+      "completed": "He said studying #t4000196# and #t4000197# will take some time. I better wait til it gets done with."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022006,
+      "minLevel": 25
+    },
+    "complete": {
+      "items": [
+        {
+          "itemId": 4000197,
+          "count": 5
+        },
+        {
+          "itemId": 4000196,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 4000196,
+          "count": -5
+        },
+        {
+          "itemId": 4000197,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

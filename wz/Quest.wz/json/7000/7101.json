@@ -1,0 +1,54 @@
+{
+  "questId": 7101,
+  "info": {
+    "name": "The Replacement Time Energy",
+    "parent": "Protect Ludibrium",
+    "descriptions": {
+      "notStarted": "The source of energy has been swallowed a whole by #o8500001# with the disappearance of the time sphere. I need #p2041021# to find a way for an alternative.",
+      "inProgress": "Thanks to Papulatus Clock with Time Sphere, the monsters below Path of Time have grown much stronger. There is, however, a way to recover the energy from those monsters; defeat them and they\u0027ll cough up the item that stores the energy. I\u0027ll need to gather up 300 Tachions and 100 Mysteriour Powers. \\n\\n#t4031175:# #r#c4031175#/300#k\\n#t4031171:# #r#c4031171#/100#k",
+      "completed": "I gathered up #t4031175#s and #t4031171#s as the replacement energy to create the new Time Sphere."
+    },
+    "area": 37,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041021,
+      "prerequisiteQuests": [
+        {
+          "questId": 7100,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041021,
+      "items": [
+        {
+          "itemId": 4031171,
+          "count": 100
+        },
+        {
+          "itemId": 4031175,
+          "count": 300
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 27600,
+      "meso": 76600,
+      "items": [
+        {
+          "itemId": 4031171,
+          "count": -100
+        },
+        {
+          "itemId": 4031175,
+          "count": -300
+        }
+      ]
+    }
+  }
+}

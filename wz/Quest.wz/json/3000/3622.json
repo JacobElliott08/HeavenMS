@@ -1,0 +1,50 @@
+{
+  "questId": 3622,
+  "info": {
+    "name": "Tiger-Hunting",
+    "descriptions": {
+      "notStarted": "Chumji from Korean Folk Town is looking to gather up some people to fight against tigers. Should I join?",
+      "inProgress": "Chumji of Korean Folk Town is concerned about the fact that lately, the Hoguls have been surprising numerous people with their appearance at the Black Mountain. He asked if I could go up to the mountain, defeat 8 Hoguls, and bring back 8 Tiger Skins as proof.\\n\\n#t4000171# #b#c4000171##k/8\\n#o5100005# #r#a36221#",
+      "completed": "Through Chumji\u0027s request, I went up to the Black Mountain and defeated 10 Hoguls, the same Hoguls that have put many residents of the Folk Town in fear. Also, as evidence, I collected 10 Tiger Skins, and gave them to Chumji. He commended my courage and for the job well done."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071000,
+      "minLevel": 55,
+      "startDate": "2005122400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9291
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071000,
+      "items": [
+        {
+          "itemId": 4000171,
+          "count": 8
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 5100005,
+          "count": 8
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000,
+      "items": [
+        {
+          "itemId": 4000171,
+          "count": -8
+        }
+      ]
+    }
+  }
+}

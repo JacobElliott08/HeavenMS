@@ -1,0 +1,57 @@
+{
+  "questId": 28163,
+  "info": {
+    "name": "Advanced Training-1",
+    "descriptions": {
+      "notStarted": "#b#@9201119:#k in #b#m102000000##k says he\u0027ll begin the first training.",
+      "inProgress": "#b#@9201119:##k\u0027s first training requires you to hunt #r#o1110101#s#k.\\n\\n They can be easily found in #b#m101040000##k and #b#m102010000##k. Let\u0027s report to #b#@9201119:##k in #b#m102000000##k upon completion.",
+      "completed": "You have completed #b#p9201119##k\u0027s first training!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201119,
+      "prerequisiteQuests": [
+        {
+          "questId": 28162,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 9201119,
+      "monsters": [
+        {
+          "monsterId": 1110101,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200
+    }
+  }
+}

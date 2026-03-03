@@ -1,0 +1,40 @@
+{
+  "questId": 3816,
+  "info": {
+    "name": "Making the Body \u0026 Physics Medicine 1",
+    "parent": "Making Body \u0026 Physics Medicine",
+    "descriptions": {
+      "notStarted": "The physical trainer of #b#m250000000##k, #b#p2091000##k, seems to be in need of something...",
+      "inProgress": "#p2091000# seemed concerned about his students getting injured while training, and requested to the resident pharmacist #b#p2091002##k to make some medicine using a particular set of ingredients. Apparently, it requires #b10 #t4000281#s#k to make it, so I better start gathering up those items. \\n\\n#i4000281##t4000281#  #b#c4000281##k/10",
+      "completed": "#p2091002# told me he\u0027ll make #t2022144# for the trainees engaging in physical training."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091000,
+      "minLevel": 45
+    },
+    "complete": {
+      "npc": 2091002,
+      "items": [
+        {
+          "itemId": 4000281,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4000281,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

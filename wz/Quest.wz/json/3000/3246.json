@@ -1,0 +1,41 @@
+{
+  "questId": 3246,
+  "info": {
+    "name": "A Mysterious Letter",
+    "descriptions": {
+      "notStarted": "#b#p2041004##k of #b#m220000000##k is concerned about a mysterious letter... what could it be?",
+      "inProgress": "#p2041004# said he\u0027s been concerned about a mysterious, anonymous letter sent to the king of #m220000000#, and believes something huge is developing. He then asked me to head over to #b#m100030000##k and find out who wrote the letter...",
+      "completed": "There\u0027s a huge wooden entryway leading into #m100030000# which I\u0027d never seen before. It almost looks like an entryway to a fortress... I should try talking to #p1094000#, who was standing in front of me. I remember him telling me that a #bpirate #p1072008##k fort is being built here.  I wonder who the captain is..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041004,
+      "minLevel": 10,
+      "endDate": "2008111100",
+      "prerequisiteQuests": [
+        {
+          "questId": 2190
+        },
+        {
+          "questId": 3381
+        },
+        {
+          "questId": 3115
+        },
+        {
+          "questId": 3713
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1094000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5500
+    }
+  }
+}

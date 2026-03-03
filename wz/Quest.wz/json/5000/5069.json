@@ -1,0 +1,50 @@
+{
+  "questId": 5069,
+  "info": {
+    "name": "Easter : Mad Bunny\u0027s Easter(Red)",
+    "descriptions": {
+      "notStarted": "I heard Mad Bunny isn\u0027t too happy with Easter. I should go talk to him and see what\u0027s up..",
+      "inProgress": "Mad Bunny needs #b10 Red Easter Eggs#k and an #bEaster Basket#k from me. He may be one angry bunny, but he did promise to pay me well for my service. \\n\\n#t2022538# #b#c2022538#/10#k\\n#t4031283# #b#c4031283#/1#k",
+      "completed": "I gave him #b10 Red Easter Eggs#k with the #rEaster Basket#k and he gave me an #bEaster Charm#k with some EXP. Not bad."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9200001,
+      "minLevel": 70,
+      "repeatIntervalMinutes": 1440,
+      "endDate": "2009040700"
+    },
+    "complete": {
+      "npc": 9200001,
+      "items": [
+        {
+          "itemId": 4031283
+        },
+        {
+          "itemId": 2022538,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6700,
+      "items": [
+        {
+          "itemId": 4140903
+        },
+        {
+          "itemId": 2022538,
+          "count": -10
+        },
+        {
+          "itemId": 4031283,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

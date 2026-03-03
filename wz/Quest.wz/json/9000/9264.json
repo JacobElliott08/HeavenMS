@@ -1,0 +1,55 @@
+{
+  "questId": 9264,
+  "info": {
+    "name": "클리프가 준 빙수 재료",
+    "parent": "행복한 마을의 맛있는 눈뭉치",
+    "descriptions": {
+      "notStarted": "#p2050011#의 부탁을 전달하자 #p2001000#는 #t04031428#를 구해주겠다고 말했는데...",
+      "inProgress": "다행히도 마음씨 좋은 #p2001000#가 #t04031428#를 공짜로 주었다. 이제 이걸 #b#p2050011##k에게 다시 가져다주면 되겠군… 평범한 눈하고 크게 다르지 않아 보이는데, 이게 정말 맛있을까?",
+      "completed": "#p2050011#에게 #t04031428#를 가져다주었다. 이미 과일에 시럽까지 준비해놓고 기다린 #p2050011#… 도대체 임무는 언제 하는 걸까?"
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2001000,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 259200,
+      "startDate": "2006112300",
+      "endDate": "2007030100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9263,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050011,
+      "items": [
+        {
+          "itemId": 4031428
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031428
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 820,
+      "items": [
+        {
+          "itemId": 4031428,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "questId": 3539,
+  "info": {
+    "name": "Searching for Lost Memories",
+    "descriptions": {
+      "notStarted": "If one is to look for a lost memory, then one must return to the place it all started. The place it all started… It all started when you first left Rien and stepped foot on Victoria Island. You\u0027d better go talk to #b#p1201000##k.",
+      "inProgress": "You met with #p1201000# for the first time in a while. Lilin seemed genuinely happy to see you work hard to regain your previous form, both physically and mentally. You were glad as she reminisced about the first time you met.",
+      "completed": "You met with #p1201000# for the first time in a while. Lilin seemed genuinely happy to see you work hard to regain your previous form, both physically and mentally. You were glad as she reminisced about the first time you met."
+    },
+    "area": 46
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201000,
+      "startScript": "q3539s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3507,
+          "state": "STARTED"
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1201000
+    }
+  }
+}

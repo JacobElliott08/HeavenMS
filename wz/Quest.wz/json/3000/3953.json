@@ -1,0 +1,33 @@
+{
+  "questId": 3953,
+  "info": {
+    "name": "Convince Muhamad",
+    "parent": "The Desert Bounty",
+    "descriptions": {
+      "inProgress": "Let\u0027s go talk to #p2100001#. He says to stop with the nonsense about #o3220001# being a monster. He seems offended. It would take a little more than words to convince him. Perhaps #b1 bottle of #t4011008##k that #p2100001# likes might help the conversation. \\n\\n#i4011008##t4011008# #b#c4011008#/1",
+      "completed": "You have successfully convinced #p2100001#! He is infamous for being stubborn... Sweet! Let\u0027s report to #p2101010#."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2100001,
+      "prerequisiteQuests": [
+        {
+          "questId": 3952,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2100001,
+      "endScript": "q3953e",
+      "items": [
+        {
+          "itemId": 4011008
+        }
+      ]
+    }
+  }
+}

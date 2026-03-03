@@ -1,0 +1,39 @@
+{
+  "questId": 9513,
+  "info": {
+    "name": "요리사 아종의 부탁",
+    "descriptions": {
+      "notStarted": "#b#p9330016##k 아저씨께 다시 말을 걸어보자.",
+      "inProgress": "#b#p9330016##k 아저씨의 부탁대로  #b#p9010000##k에게 안부를 전하자.",
+      "completed": "세계여행을 무사히 마쳤다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9330016,
+      "minLevel": 10,
+      "startDate": "2006101600",
+      "endDate": "2006110100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9512,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 1302058
+        }
+      ]
+    }
+  }
+}

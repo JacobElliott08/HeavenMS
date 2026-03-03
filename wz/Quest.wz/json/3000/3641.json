@@ -1,0 +1,28 @@
+{
+  "questId": 3641,
+  "info": {
+    "name": "Young Man Possessed by a Fox",
+    "parent": "Legends of Hometown",
+    "descriptions": {
+      "notStarted": "Chil Nam from the #bFolk Town#k has become strange lately, and #bChil Sung#k is worried sick. What could be the problem? Let\u0027s go see Chil Sung.",
+      "inProgress": "Chil Sung says Chil Nam doesn\u0027t eat nor sleep, and just sits and sighs all day. What could be wrong with him? Let\u0027s see how #bChil Nam#k is.",
+      "completed": "A preoccupied Chil Nam sits with his mouth open and says something about a fox. This may be a clue. Let\u0027s go back to Chil Sung."
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071005,
+      "minLevel": 70
+    },
+    "complete": {
+      "npc": 2071003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 700
+    }
+  }
+}

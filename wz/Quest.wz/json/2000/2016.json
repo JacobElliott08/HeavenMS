@@ -1,0 +1,67 @@
+{
+  "questId": 2016,
+  "info": {
+    "name": "Mother\u0027s Gold Watch",
+    "parent": "Alex the Runaway Kid",
+    "descriptions": {
+      "inProgress": "At the entrance of Henesys Park, I met Alex\u0027s father Stan, the chief of Henesys. I couldn\u0027t even start up a conversation with him at first, but once I got him #b50 Evil Eye\u0027s tails and 100 pig ribbons#k he requested to fix this town, that was when he decided to listen. He was even more straight-forward and difficult to talk to than I first thought, but I finally convinced him to accept Alex back with open arms. I also got Alex\u0027s late mother\u0027s #bgold watch#k as the proof. Now, all I need to do is get this watch to Alex in Kerning City, right?",
+      "completed": "I gave Alex his late mother\u0027s #bgold watch#k. Hopefully this will get him home ... as a sign of appreciation, he got me an earing he received from friends he met while traveling here and there. Well, Alex is now forgiven by Stan, but based on the look of his face, I don\u0027t know if he really is going to head home right now ... I should check it out the next time I head over to Henesys ..."
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012003,
+      "minLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 2015,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052000,
+      "items": [
+        {
+          "itemId": 4031007
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031007
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 4031007,
+          "count": -1
+        },
+        {
+          "itemId": 1032004,
+          "probability": 1
+        },
+        {
+          "itemId": 1032005,
+          "probability": 1
+        },
+        {
+          "itemId": 1032006,
+          "probability": 1
+        },
+        {
+          "itemId": 1032007,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "questId": 2007,
+  "info": {
+    "name": "Making Sparkling Rock",
+    "parent": "Maya and the Weird Medicine",
+    "descriptions": {
+      "inProgress": "Sophia looks genuinely surprised that I gathered up every single material needed for that #bsparkling rock#k. Well, it wasn\u0027t easy at all ... anyway, she handed me the piece of #bsparkling rock#k made out of all the materials I got for her. Hmmm ... this #bsparkling rock#k ... it gives off a strange light, and then ... it starts glittering, and ... now I can understand why people want this ...!! Well, now that I have it, all I got left is trading it with Teo in Lith Harbor.",
+      "completed": "Sophia looks genuinely surprised that I gathered up every single material needed for that #bsparkling rock#k. Well, it wasn\u0027t easy at all ... anyway, she handed me the piece of #bsparkling rock#k made out of all the materials I got for her. Hmmm ... this #bsparkling rock#k ... it gives off a strange light, and then ... it starts glittering, and ... now I can understand why people want this ...!! Well, now that I have it, all I got left is trading it with Teo in Lith Harbor."
+    },
+    "area": 30,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022100,
+      "minLevel": 15,
+      "prerequisiteQuests": [
+        {
+          "questId": 2006,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1002001,
+      "items": [
+        {
+          "itemId": 4031004
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031004
+        }
+      ]
+    },
+    "onComplete": {
+      "nextQuest": 2008,
+      "items": [
+        {
+          "itemId": 4031004,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

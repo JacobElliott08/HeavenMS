@@ -1,0 +1,57 @@
+{
+  "questId": 28225,
+  "info": {
+    "name": "Antique Search",
+    "parent": "Antique Search",
+    "descriptions": {
+      "notStarted": "#b#@1072008:##k in #bNautilus#k has asked that you bring the #rAntique#k for her. Let\u0027s talk to her.",
+      "inProgress": "Let\u0027s find the #rAntique#k by searching the boxes #b#m120000300##k, located in the Basement of Nautilus.\\n\\nReport back to #b#@1072008:##k in #bNautilus#k upon completion.",
+      "completed": "#b#@1072008:##k in #bNautilus#k says she\u0027s being pestered by #rRibbon Pigs#k. Let\u0027s talk to her."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28224,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "items": [
+        {
+          "itemId": 4001346
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 700,
+      "items": [
+        {
+          "itemId": 4001346,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "questId": 29020,
+  "info": {
+    "name": "Title - Dynamic Hair",
+    "descriptions": {
+      "notStarted": "If you change your hairstyle more than 50 times, the Maple Hair Association will offer you the title of #b\u003cDynamic Hair\u003e#k...",
+      "inProgress": "#b#eTitle - Dynamic Hair#k#n\\r\\nUse Hair Salon\\n(Change hairstyles, whether it be regular, special, or random. Hair color not included.)\\r\\n#b- Current Progress\\nHair Changes #R29020# / 50 completed.",
+      "completed": "You changed your hairstyle 50 times and received the title #b\u003cDynamic Hair\u003e#k."
+    },
+    "area": 51,
+    "autoComplete": true,
+    "medalItemId": 1142122
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "minLevel": 13,
+      "items": [
+        {
+          "itemId": 1142122
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000066,
+      "infoNumber": 29020,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "info": "0"
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142122
+        }
+      ]
+    }
+  }
+}

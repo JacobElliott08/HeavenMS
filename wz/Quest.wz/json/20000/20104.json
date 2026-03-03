@@ -1,0 +1,43 @@
+{
+  "questId": 20104,
+  "info": {
+    "name": "Path of a Night Walker",
+    "descriptions": {
+      "notStarted": "The time has come. If I want to find out more about Night Walkers, the Thieves of Darkness, I should talk to #b#p1101006#, the Chief Knight of Darkness#k.",
+      "inProgress": "If I want to become a Cygnus Knight as a Night Walker that embraces the darkness for the sake of light, I should select #p1101006#.",
+      "completed": "I am now a Night Walker!"
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101006,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 20102
+        },
+        {
+          "questId": 20103
+        },
+        {
+          "questId": 20105
+        },
+        {
+          "questId": 20100,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 20101
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    },
+    "complete": {
+      "npc": 1101006,
+      "endScript": "q20104e"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "questId": 9160,
+  "info": {
+    "name": "추석 상식 1. 한국의 명절 추석",
+    "parent": "한국의 명절 추석",
+    "descriptions": {
+      "notStarted": "메이플스토리에서 추석을 맞이하여 추석에 관련된 상식 문제를 준비했다는데? 각 마을의 메이플 운영자 NPC를 만나자.",
+      "inProgress": "추석의 대표 음식에 관한 문제입니다.",
+      "completed": "송편, 토란탕, 화양적은 추석의 대표 음식이라고 할 수 있다."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2006092600",
+      "endDate": "2006101600"
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "nextQuest": 9161
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "questId": 8860,
+  "info": {
+    "name": "Amoria : Beauty or Beast!",
+    "descriptions": {
+      "notStarted": "I heard there\u0027s a new girl at the Amoria Hair Salon that needs material for her new hair gel. I wonder what she\u0027d offer in return?",
+      "inProgress": "I talked to Claudia, she needs #b25 Squishy Liquids#k for her new hair gel. She\u0027s offered to give me a free EXP Hair Salon coupon in return. She seems like a nice enough gal...",
+      "completed": "I got the Squishy Liquids for Claudia and she gave me an EXP Hair Salon coupon for her shop. I can use it once to get my hair done for free!"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201039,
+      "minLevel": 13
+    },
+    "complete": {
+      "npc": 9201039,
+      "items": [
+        {
+          "itemId": 4000004,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4000004,
+          "count": -25
+        },
+        {
+          "itemId": 4031528
+        }
+      ]
+    }
+  }
+}

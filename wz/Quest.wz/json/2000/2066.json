@@ -1,0 +1,67 @@
+{
+  "questId": 2066,
+  "info": {
+    "name": "Delivering a Box of Fossil",
+    "parent": "Winston\u0027s Fossil Dig-up",
+    "descriptions": {
+      "inProgress": "#b#p1022006# the Archaeologist#k said that it is not safe to put the valuable fossils in the tent. He asked me to take the fossil and deliver it to #bDr. #p1032104##k in Ellinia. He also wrote a letter of introduction for me to show him. ",
+      "completed": "#b#p1022006# the Archaeologist#k in Perion said that it is not safe to put the valuable fossils in his tent. He asked me to deliver it to #bDr. #p1032104##k in Ellinia. Dr. Betty said it is going to be really busy from now. He asked me to stop by again and give him a hand afterwards. Fossils huh...? Should I give it a try?"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022006,
+      "minLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 2065,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032104,
+      "items": [
+        {
+          "itemId": 4031148
+        },
+        {
+          "itemId": 4031149
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031148
+        },
+        {
+          "itemId": 4031149
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1000,
+      "meso": 30000,
+      "nextQuest": 2066,
+      "items": [
+        {
+          "itemId": 2010002,
+          "count": 50
+        },
+        {
+          "itemId": 4031148,
+          "count": -1
+        },
+        {
+          "itemId": 4031149,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "questId": 8009,
+  "info": {
+    "name": "Learning to Speak the Kitty Language",
+    "parent": "Sakura, the Kitty, and the Orange Marble",
+    "descriptions": {
+      "notStarted": "Where\u0027s the #bBoss Kitty#k that stole Orange Marble?",
+      "inProgress": "I went up to the #bBoss Kitty#k and asked something, only to hear some language I\u0027ve never even heard of in my life. I better ask #bScarred Kitty#k for some kitty language, then I may be able to pick up on it.",
+      "completed": " I learned the kitty language through #bThe Scarred Kitty#k! Now I can probably communicate with #bBoss Kitty#k."
+    },
+    "area": 30,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120013,
+      "prerequisiteQuests": [
+        {
+          "questId": 8008,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120012
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8019
+    }
+  }
+}

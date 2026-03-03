@@ -1,0 +1,41 @@
+{
+  "questId": 8055,
+  "info": {
+    "name": "Traveling Around Maple 3",
+    "parent": "Traveling Around Maple",
+    "descriptions": {
+      "notStarted": " After taking a stroll around Showa Town, I should start up a conversation with Skye.",
+      "inProgress": "Skye offered to take me to Orbis. Once I get there, she advised me to look for Elma...",
+      "completed": "I was able to meet up with Elma. Where will I go next?"
+    },
+    "area": 40,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120006,
+      "startDate": "2005010100",
+      "endDate": "2005010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 8054,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8056,
+      "items": [
+        {
+          "itemId": 2020009,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

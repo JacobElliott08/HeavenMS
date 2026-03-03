@@ -1,0 +1,53 @@
+{
+  "questId": 9350,
+  "info": {
+    "name": "새마음 새출발",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 졸업, 입학을 축하한다는 말을 하고 싶다는데...",
+      "inProgress": "졸업과 입학을 축하한다는 카산드라. 그녀의 말에 따르면 #b#p1032106##k도 새 학기를 맞이해서 사람들에게 향수를 나눠주고 있다고 한다. 약간의 재료만 가지고 가면 #b#p1032106##k이 향수를 준다는데...  \\n\\n#t4031257# #b#c4031257#/5#k \\n#t04000004# #b#c04000004#/10#k",
+      "completed": "멋진 향수를 주다니, #b#p1032106##k도 제법 좋은 녀석인걸?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 8,
+      "maxLevel": 29,
+      "repeatIntervalMinutes": 360,
+      "startDate": "2007022600",
+      "endDate": "2007031200"
+    },
+    "complete": {
+      "npc": 1032106,
+      "items": [
+        {
+          "itemId": 4000004,
+          "count": 10
+        },
+        {
+          "itemId": 4031257,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200,
+      "items": [
+        {
+          "itemId": 2022060
+        },
+        {
+          "itemId": 4000004,
+          "count": -10
+        },
+        {
+          "itemId": 4031257,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

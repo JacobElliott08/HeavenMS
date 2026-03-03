@@ -1,0 +1,75 @@
+{
+  "questId": 3406,
+  "info": {
+    "name": "Delivering the Robotic Parts",
+    "parent": "Supplying the Robotic Parts",
+    "descriptions": {
+      "inProgress": "I met with Cheng the Assistant at the Toy Factory in Ludibrium, and he handed me 3 boxes full of robotic parts, which will be used to make the robot. Now I should just hand them over to Dr. Kim at the Command Center in the Omega Sector.",
+      "completed": "At the Toy Factory in Ludibrium, Cheng the Assistant gave me 3 boxes of robotic parts so I could deliver them to Dr. Kim of the Command Center in the Omega Sector. After delivering the goods to Dr. Kim, he gave me a Warp Capsule, which will enable me to transport to Ludibrium in an instant. Hmmm... this looks like something I can use!"
+    },
+    "area": 37,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040003,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3405,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050001,
+      "items": [
+        {
+          "itemId": 4031095
+        },
+        {
+          "itemId": 4031096
+        },
+        {
+          "itemId": 4031097
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031095
+        },
+        {
+          "itemId": 4031096
+        },
+        {
+          "itemId": 4031097
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 3200,
+      "items": [
+        {
+          "itemId": 4031095,
+          "count": -1
+        },
+        {
+          "itemId": 4031096,
+          "count": -1
+        },
+        {
+          "itemId": 4031097,
+          "count": -1
+        },
+        {
+          "itemId": 2030012,
+          "count": 7
+        }
+      ]
+    }
+  }
+}

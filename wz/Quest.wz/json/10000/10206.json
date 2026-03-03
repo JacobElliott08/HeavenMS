@@ -1,0 +1,33 @@
+{
+  "questId": 10206,
+  "info": {
+    "name": "Remnants of Black Mage",
+    "descriptions": {
+      "notStarted": "Maple Admin is calling your name.",
+      "inProgress": "Within the black aura of the Black Mage, let\u0027s try to find #t4001237#. \\n\\n#i4001237# #t4001237# #b#c4001237# / 20#k"
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 13,
+      "endDate": "2009082523",
+      "repeatIntervalMinutes": 0,
+      "normalAutoStart": true,
+      "maxLevel": 30,
+      "startScript": "q10206s"
+    },
+    "complete": {
+      "npc": 9010000,
+      "endScript": "q10206e",
+      "items": [
+        {
+          "itemId": 4001237,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

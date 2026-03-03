@@ -1,0 +1,36 @@
+{
+  "questId": 3353,
+  "info": {
+    "name": "What De Lang Wants",
+    "parent": "Who is De Lang?",
+    "descriptions": {
+      "notStarted": "I entered #m261020401# without really thinking too much about it... As usual, #b#p2111006##k the talkative ghost starts up a conversation. I don\u0027t really want to listen to him go on and on about his life. What should I do?",
+      "inProgress": "When I asked about #p2111002#\u0027s past that I saw through him in the past, Parwen\u0027s face lit up and showed me #p2111002# again. Hmmm... he looks like a bit of time has passed since I last saw him...",
+      "completed": "I tried to start up a conversation with an obviously tired #p2111002#. His face may have the look of exhaustion, but he managed to smile just a bit. He may have failed the experiment, but he said he has succeeded in creating a new medicine for #p2111005#..."
+    },
+    "area": 44,
+    "order": 1,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111006,
+      "minLevel": 75,
+      "startScript": "q3353s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3346,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000
+    }
+  }
+}

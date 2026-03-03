@@ -1,0 +1,40 @@
+{
+  "questId": 9832,
+  "info": {
+    "name": "카산드라의 세번째 퀴즈!",
+    "parent": "카산드라의 메이플 퀴즈",
+    "descriptions": {
+      "inProgress": "#p9010010#의 두번째 퀴즈도 풀었다. 이거 너무 쉬워서 김이 빠지는걸...? 세번째 퀴즈는 어떨까? #p9010010#를 찾아가 보자. ",
+      "completed": "세번째 퀴즈도 문제없이 풀었다! 좋았어! "
+    },
+    "area": 50,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "startDate": "2007042400",
+      "endDate": "2007052100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9831,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200,
+      "items": [
+        {
+          "itemId": 4001126,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

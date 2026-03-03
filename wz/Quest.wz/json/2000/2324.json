@@ -1,0 +1,44 @@
+{
+  "questId": 2324,
+  "info": {
+    "name": "Over the Castle Walls (4)",
+    "descriptions": {
+      "notStarted": "You should get the #b#t2430015##k from the #b#p1300004##k and climb over the castle walls.",
+      "inProgress": "You should use the #b#t2430015##k on the castle walls.",
+      "completed": "You used #b#t2430015##k to eliminate the thorns from the vines that cover the castle walls."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300004,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2323,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300004,
+      "infoNumber": 2324,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 2430015
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 3300
+    }
+  }
+}

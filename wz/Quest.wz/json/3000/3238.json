@@ -1,0 +1,41 @@
+{
+  "questId": 3238,
+  "info": {
+    "name": "Mac the Mechanic\u0027s Maintenance Manual",
+    "descriptions": {
+      "notStarted": "I\u0027ll need to have a word with Mac the Mechanic.",
+      "inProgress": "I met up with Mac the Mechanic at the Toy Factory in Ludibrium. Mac was panicking because of the fact that all the blueprints and #bMaintenance Manual#k of the factory were stolen by Toy Trojan. If I destroy the boxes around the Toy Factory, I may find a hidden path that\u0027ll lead me to a clue.",
+      "completed": "I found the documents Mac the Mechanic lost, and he seemed very much relieved by it. Something\u0027s strange, though. Why would the toy soldiers feel the need to steal this in the first place...?"
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041020,
+      "minLevel": 40
+    },
+    "complete": {
+      "npc": 2041020,
+      "items": [
+        {
+          "itemId": 4031130
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9500,
+      "items": [
+        {
+          "itemId": 4031130,
+          "count": -1
+        },
+        {
+          "itemId": 2100019,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

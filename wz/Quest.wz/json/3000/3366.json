@@ -1,0 +1,44 @@
+{
+  "questId": 3366,
+  "info": {
+    "name": "Making the Reagent",
+    "descriptions": {
+      "notStarted": "To help Yulete out, I volunteered to assist him on his research. What can I do for him? I better go see #bYulete#k.",
+      "inProgress": "Yulete asked me to help him #bmake the Reagent#k. I\u0027ll need to pour the prepared liquid in the beaker and make the reagent, but I heard that the liquids have to be poured in sequencce. .. and the sequence is #bred, green, yellow, blue, and purple#k! Let\u0027s make this. \\n\\n#i4031798##t4031798# #b#c4031798##k/1",
+      "completed": "After successfully making the reagent, I reported the results to Yulete. He thanked me for helping him with something that he considered was a difficult task."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2112014,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3365,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2112014,
+      "items": [
+        {
+          "itemId": 4031798
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4031798,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "questId": 3372,
+  "info": {
+    "name": "Sirin\u0027s Tailoring Methods",
+    "parent": "Juliet\u0027s Response",
+    "descriptions": {
+      "inProgress": "Sirin was more than happy to accommodate, by giving me the pattern to the nicest clothes she has in store. So all I need to do is give this to Juliet?...hmmm... something tells me this might not end up the way I had in plan. Anyway, I better give #bJuliet#k the patterns first.",
+      "completed": "After giving Juliet the pattern, she jumped for joy. That\u0027s the good part. Can she really make the clothes based on the pattern, though?"
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101000,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3371,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2112003,
+      "items": [
+        {
+          "itemId": 4031776
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031776
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4031776,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "questId": 20402,
+  "info": {
+    "name": "Black Scale",
+    "descriptions": {
+      "notStarted": "While slaying the zombies, I was able to obtain an item called #t4001207#. Once I did that, #p2032001# approached me.",
+      "inProgress": "#b#p2032001##k warned me that #b#t4001207##k contained a curse-like power that spread all over this world, and that since it\u0027s a dangerous item, he wanted me to hand it in to him so he could break the curse. While listening to #p2032001# talk, however, I noticed #p1103000#\u0027s name being mentioned... \\n\\n#i4001207# #t4001207# #b#c4001207# / 1#k",
+      "completed": "I gave #p2032001# the #t4001207#. #p2032001# told me that #p1103000# gave him #t4001207# too the other day, and that he recently moved to #m240000000# to find out more about #t4001207#."
+    },
+    "area": 15,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2032001,
+      "minLevel": 120,
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 20401,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4001207
+        }
+      ],
+      "jobs": [
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 2032001,
+      "items": [
+        {
+          "itemId": 4001207
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4001207,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

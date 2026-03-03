@@ -1,0 +1,57 @@
+{
+  "questId": 9390,
+  "info": {
+    "name": "The Lost Maple Hat",
+    "descriptions": {
+      "notStarted": "If I ever lost #b#t01002508##k before the training, I\u0027ll need to meet up with Maple Administrator at a nearest town.",
+      "inProgress": "Hopefully she has spare #b#t01002508##k for me...",
+      "completed": " Fortunately, I was able to receive #b#t01002508##k again."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "startDate": "2008050100",
+      "endDate": "2008051400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9388
+        },
+        {
+          "questId": 9389
+        },
+        {
+          "questId": 9386,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9387
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1002508
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 1002508
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1002508
+        }
+      ]
+    }
+  }
+}

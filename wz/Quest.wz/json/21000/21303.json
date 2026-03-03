@@ -1,0 +1,55 @@
+{
+  "questId": 21303,
+  "info": {
+    "name": "Friendship with Yeti",
+    "descriptions": {
+      "notStarted": "So, you follow #p1201000#\u0027s instructions and look in the Mirror of Desire once more. Your vision gets dark for a second, but then you find yourself in #m211000000#, once again returning to the past. Standing before you is a Yeti in tears. What\u0027s going on? You\u0027d better talk to #b#p1203001##k.",
+      "inProgress": "Sniffling heavily, #p1203001# says a thief stole his gem. He is distraught that his red gem is gone, after he had so painstakingly created it. A red gem? It must have something to do with the #t4032312#! You should find the thief on behalf of #p1203001#.\\r\\n\\r\\n#o9001013##r #a213031##k\\r\\n#i4032339# #t4032339# #b#c4032339# / 1#k",
+      "completed": "#p1203001# thanked you for retrieving his gem and taught you how to make a #t4032312# as a token of his appreciation. #t4032312# can be made using #b1 Dark Crystal, 3 Diamond Ores, and 3 Garnett Ores#k and combining them with the #bMaker Skill#k. Don\u0027t forget it when making the #t4032312# for #p1201002#."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1203001,
+      "minLevel": 70,
+      "startScript": "q21303s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21302,
+          "state": "STARTED"
+        }
+      ],
+      "jobs": [
+        2110
+      ],
+      "infoNumber": 21203,
+      "infoEx": [
+        null
+      ]
+    },
+    "complete": {
+      "npc": 1203001,
+      "items": [
+        {
+          "itemId": 4032339
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9001013
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032339,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

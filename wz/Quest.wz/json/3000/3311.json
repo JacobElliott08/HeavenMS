@@ -1,0 +1,39 @@
+{
+  "questId": 3311,
+  "info": {
+    "name": "Clue",
+    "parent": "Zenumist and the Missing Alchemist",
+    "descriptions": {
+      "inProgress": "#p2111000# asked me to search Dr. De Lang\u0027s house, and if I find any information inside, I have to report it to him. I better head off to the missing alchemist\u0027s house.",
+      "completed": "There were some writings found at the missing alchemist\u0027s house, but nothing seems significant. It did mention a pendant multiple times, though... a pendant? What does that have to do with his studies?"
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111000,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3310,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111000,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "info": "4"
+    },
+    "onComplete": {
+      "experience": 60000
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "questId": 10345,
+  "info": {
+    "name": "Signs of the Revival",
+    "descriptions": {
+      "notStarted": "Signs of Aran\u0027s revival are slowly surfacing. For details, you should talk to Cassandra.",
+      "inProgress": "Apparently, the blocks of ice that sealed Aran have been cracking near town. Where exactly?",
+      "completed": "Aran Memory Fragments... When will you be able to gather all 12 of them?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2009010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 10344,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000068,
+      "endScript": "q10345e"
+    }
+  }
+}

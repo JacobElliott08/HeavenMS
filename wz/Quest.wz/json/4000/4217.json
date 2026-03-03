@@ -1,0 +1,47 @@
+{
+  "questId": 4217,
+  "info": {
+    "name": "수호대의 첫 번째 임무",
+    "parent": "플로팅마켓 수호대 임무",
+    "descriptions": {
+      "notStarted": "드디어 수호대에 새로운 임무가 접수 되었다고 한다. 어서 빨리 태국 플로팅마켓 수호대의 대장인 #b#p9250012##k를 찾아가 봐야겠다.",
+      "inProgress": "플로팅마켓 수호대원이 된 나에게 주어진 첫 번째 임무는 플로팅마켓을 혼란스럽게 하는 몬스터들을 처리 하는 것이다. \\n\\n#o2130103# #r#a42171##k \\n#o9420000# #r#a42172##k",
+      "completed": "하하하! 수상시장 수호대로서의 첫 번째 임무를 성공적으로 해냈다.  이번 일로 내가 얼마나 용감한 요원인지를 보여 준거다."
+    },
+    "area": 48,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250012,
+      "minLevel": 20,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4216,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9250012,
+      "monsters": [
+        {
+          "monsterId": 2130103,
+          "count": 40
+        },
+        {
+          "monsterId": 9420000,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1650,
+      "meso": 2000
+    }
+  }
+}

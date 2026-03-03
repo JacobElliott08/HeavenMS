@@ -1,0 +1,35 @@
+{
+  "questId": 10071,
+  "info": {
+    "name": "페토의 후회",
+    "parent": "페토의 용서",
+    "descriptions": {
+      "notStarted": "페토는 쫓겨났었다. 불쌍한 페토",
+      "inProgress": "집사가 페토에게 용서를 빌고 있다. 일단은 유령T에게 말을 전해주자.",
+      "completed": "유령T는 다행히도 용서하며 자신도 후회하고 있다."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120002,
+      "startDate": "2008101600",
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10070,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120008
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "questId": 2143,
+  "info": {
+    "name": "Beginner Thief\u0027s Last Training Session",
+    "descriptions": {
+      "notStarted": "I look like a Thief. For me, #b#p1052001##k wants to help me out with a final training session...",
+      "inProgress": "#p1052001# wants to test me and asked to hunt #r10 #o1120100##k. He told me #o1120100# is the strongest monster in #m103000000#  and to be alert. \\n\\n#o1120100# #r#a21431##k",
+      "completed": "I hunted down 10 #o1120100#. It was not easy but I was successful. Now finally, #p1052001# won\u0027t call me a novice!"
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 2142,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052001,
+      "monsters": [
+        {
+          "monsterId": 1120100,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 840,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 50
+        },
+        {
+          "itemId": 2000003,
+          "count": 50
+        },
+        {
+          "itemId": 2030000,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

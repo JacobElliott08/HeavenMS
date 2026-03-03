@@ -1,0 +1,33 @@
+{
+  "questId": 8018,
+  "info": {
+    "name": "Sakura\u0027s Crying",
+    "parent": "Sakura, the Kitty, and the Orange Marble",
+    "descriptions": {
+      "notStarted": "I should go see Sakura, who\u0027s crying. I wonder if I can help...",
+      "inProgress": "I better talk to Sakura, who still weeps in sorrow. There must be something that I can do, but what?",
+      "completed": "Sakura murmured something while crying. Perhaps this is the reason behind the flowing tears..."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120012,
+      "prerequisiteQuests": [
+        {
+          "questId": 8007,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120011
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8008
+    }
+  }
+}

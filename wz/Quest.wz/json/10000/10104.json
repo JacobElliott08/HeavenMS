@@ -1,0 +1,78 @@
+{
+  "questId": 10104,
+  "info": {
+    "name": "Book of Cygnus Vol. 1",
+    "parent": "Book of Cygnus",
+    "descriptions": {
+      "notStarted": "I wonder who the Black Mage is... and who\u0027s Cygnus?",
+      "inProgress": "I better find the book that contains Cygnus\u0027 beliefs and values, and read what\u0027s written on it.",
+      "completed": "I managed to read Vol.1, which was torn."
+    },
+    "area": 50,
+    "order": 1,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "startDate": "2009071500",
+      "endDate": "2009072900",
+      "normalAutoStart": true,
+      "minLevel": 13,
+      "jobs": [
+        0,
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10104e",
+      "items": [
+        {
+          "itemId": 2430000,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "questId": 2101,
+  "info": {
+    "name": "Korean Folk Town : Through the Sky",
+    "descriptions": {
+      "notStarted": "How about going to the Korean Folk Town through the sky?",
+      "inProgress": "Through Camila\u0027s request, I have decided to travel to Korean Folk Town through the skypath and meet her pen pal, Kong Ji. Camila said she\u0027ll give me a few essential items for the trip. What must those be?",
+      "completed": "Through Camila\u0027s request, I have decided to travel to Korean Folk Town through the skypath and meet her pen pal, Kong Ji. Okay, so I first go from #bEllinia#k to #bOrbis#k, then to #bLudibrium#k? And once I get there, I\u0027m supposed to walk my way down there through #bHelios Tower#k. That\u0027s pretty far..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012108,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 2100,
+          "state": "STARTED"
+        },
+        {
+          "questId": 2102
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012108
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 1012108,
+      "minLevel": 35
+    },
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

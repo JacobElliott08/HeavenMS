@@ -1,0 +1,29 @@
+{
+  "questId": 3000,
+  "info": {
+    "name": "Missing Staff Sergeant Charlie",
+    "parent": "Alpha Platoon\u0027s Network of Communication",
+    "descriptions": {
+      "notStarted": "Let\u0027s go meet Master Sergeant Fox.",
+      "inProgress": "Inside El Nath, I found #bMaster Sergeant Fox#k, who seemed to have crashlanded here. He asked if I can find 3 of his men and if they are doing their job whereever they are. The ones I need to meet up are #bStaff Sergeant Charlie, Corporal Easy, and Sergeant Bravo#k, and they should be around Ossyria. He\u0027d prefer that I meet them in the order of their ranks... that sounds pretty difficult to me ...",
+      "completed": "I found #p2010000# in #m200000000#!"
+    },
+    "area": 33,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020003,
+      "minLevel": 40
+    },
+    "complete": {
+      "npc": 2010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200,
+      "nextQuest": 3039
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "questId": 9683,
+  "info": {
+    "name": "매일매일 이벤트 3월 12일",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k에게 가면 좋은일이 생길 것만 같은데…",
+      "inProgress": "#b#p9010010##k는 주문서를 주면 주문서에 마법을 걸어 성공확률을 5% 높여 주겠다고 했다. 오늘 중으로 5번만 가능하다니, 신중하게 선택해서 교환해야겠다.",
+      "completed": "더 좋은 성공확률이 더 높은 주문서로 바꿔준 #b#p9010010##k. 마음씨도 좋기도 하지."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "startDate": "2007031200",
+      "endDate": "2007031300"
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "scrollchange2"
+    }
+  }
+}

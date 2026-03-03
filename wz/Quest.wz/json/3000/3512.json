@@ -1,0 +1,32 @@
+{
+  "questId": 3512,
+  "info": {
+    "name": "The One Who Walks Down the Road of Regrets5",
+    "descriptions": {
+      "notStarted": "I received permission to go all the way to #m270020500#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test.",
+      "inProgress": "#p2140000# said if I want to go in further, go to #b#m270020500##k and defeat the Ice Knight, #r#o8220005##k. \\n\\n#o8220005# #r#a35121##k",
+      "completed": "I defeated #o8220005#.  #p2140000# granted me permission.  I should be able to go past the Road of Regrets now. "
+    },
+    "area": 46
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140000,
+      "minLevel": 120,
+      "prerequisiteQuests": [
+        {
+          "questId": 3511,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2140000,
+      "monsters": [
+        {
+          "monsterId": 8220005
+        }
+      ]
+    }
+  }
+}

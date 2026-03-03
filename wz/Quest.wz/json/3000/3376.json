@@ -1,0 +1,45 @@
+{
+  "questId": 3376,
+  "info": {
+    "name": "Juliet is Impressed",
+    "parent": "Juliet\u0027s Lunchbox",
+    "descriptions": {
+      "notStarted": "Juliet seemed very much in love with Romeo after receiving the letter, which meant one thing. Juliet wants to repay the love with a present of her own. I better go see #bJuliet#k.",
+      "inProgress": "Juliet decided the best way to respond to the letter was to cook for him by making a lunchbox. ...A lunchbox by an alchemist from Alcadno... I better help her make one before Juliet poisons Romeo to death with her toxic cooking skills. I better buy the #blunchbox recipe#k from #bHan the Broker#k. \\n\\n#i4031785##t4031785# #b#c4031785##k/1 ",
+      "completed": "I handed Juliet Han the Broker\u0027s recipe for lunchbox."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2112003,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3375,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2112003,
+      "items": [
+        {
+          "itemId": 4031785
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4031785,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

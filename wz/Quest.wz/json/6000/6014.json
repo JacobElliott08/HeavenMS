@@ -1,0 +1,124 @@
+{
+  "questId": 6014,
+  "info": {
+    "name": "Ramain\u0027s Amazing Skills",
+    "descriptions": {
+      "notStarted": "I was finally able to learn the \"Maker\" skill through Meren. Awesome!! Does this mean I can make something right now from scratch? But... where should I start? While I was standing there not knowing what to do, that was when a man came up to me to tell me something. That man happened to be Meren\u0027s friend and a legend in the field of making Monster Crystal, Ramain.",
+      "inProgress": "Ramain works with Meren and happens to be known as the master of producing Monster Crystals. He\u0027s a nice fellow, but his stuttering makes him really hard to understand. Anyway, after watching me being unsure of myself what to do with the skill, he offered to teach me how to produce a Monster Crystal. He then asked me to make one right there on the spot...\\n\\n#i4260000# #t4260000# #b#c4260000# / 1#k",
+      "completed": "Ramain, the master of producing Monster Crystals who is Meren\u0027s coworker, taught me how to produce a Monster Crystal. It was a bit difficult to understand him due to his constant stuttering, but it was very helpful. Then, he asked me to make one right there on the spot, challenging me to make 1 #t4260000#, the easiest Monstery Crystal to make. After making one, Ramain took a look at it, and commended me for my effort. Hah! Does this mean I can be considered an Item Producer now?"
+    },
+    "area": 10,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2110003,
+      "minLevel": 45,
+      "prerequisiteQuests": [
+        {
+          "questId": 6029,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112,
+        2200,
+        2210,
+        2211,
+        2212,
+        2213,
+        2214,
+        2215,
+        2216,
+        2217,
+        2218
+      ]
+    },
+    "complete": {
+      "npc": 2110003,
+      "items": [
+        {
+          "itemId": 4260000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000,
+      "items": [
+        {
+          "itemId": 4260000,
+          "count": -1
+        },
+        {
+          "itemId": 4250000
+        }
+      ]
+    }
+  }
+}

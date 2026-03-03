@@ -1,0 +1,46 @@
+{
+  "questId": 4935,
+  "info": {
+    "name": "Blackbull\u0027s Mistake",
+    "descriptions": {
+      "notStarted": "a",
+      "inProgress": "b",
+      "completed": "c"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1020000,
+      "minLevel": 35,
+      "endDate": "2005050505",
+      "prerequisiteQuests": [
+        {
+          "questId": 2000,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2001,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4928,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1020000,
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    }
+  }
+}

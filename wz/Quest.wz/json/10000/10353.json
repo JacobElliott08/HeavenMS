@@ -1,0 +1,60 @@
+{
+  "questId": 10353,
+  "info": {
+    "name": "The Truth About Memory Fragments",
+    "descriptions": {
+      "notStarted": "You gathered the 12 Aran Memory Fragments. They seem like meaningless little things. What are they for anyway? You\u0027re sure Cassadra knows something about this.",
+      "inProgress": "What? These fragments are each supposed to have their own place? You\u0027ll have to reorder the fragments.",
+      "completed": "December 10th, 2009… Will Aran really be revived?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2009010100",
+      "items": [
+        {
+          "itemId": 3994133
+        },
+        {
+          "itemId": 3994126
+        },
+        {
+          "itemId": 3994134
+        },
+        {
+          "itemId": 3994127
+        },
+        {
+          "itemId": 3994135
+        },
+        {
+          "itemId": 3994128
+        },
+        {
+          "itemId": 3994136
+        },
+        {
+          "itemId": 3994129
+        },
+        {
+          "itemId": 3994137
+        },
+        {
+          "itemId": 3994130
+        },
+        {
+          "itemId": 3994131
+        },
+        {
+          "itemId": 3994132
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10353e"
+    }
+  }
+}

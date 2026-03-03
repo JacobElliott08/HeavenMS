@@ -1,0 +1,34 @@
+{
+  "questId": 3800,
+  "info": {
+    "name": "No Gong\u0027s Teaching 1",
+    "parent": "No Gong\u0027s Teaching",
+    "descriptions": {
+      "notStarted": "At #b#m250000000##k, there is an instrcutor that trains the Masters, an instructor by the name of #b#p2091000##k. Maybe I can become a Master myself if I train with him.",
+      "inProgress": "Without any explanation, #p2091000# ordered to me to take on #r10 #o5120503#s#k.   \\n\\n#o5120503# #r#a38001##k",
+      "completed": "Even though I was successful in taking on all the #o5120503#s, #p2091000# didn\u0027t compliment my work one bit. What is he? Is he really going to help me become the Master?"
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091000,
+      "minLevel": 50
+    },
+    "complete": {
+      "npc": 2091000,
+      "monsters": [
+        {
+          "monsterId": 5120503,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15500
+    }
+  }
+}

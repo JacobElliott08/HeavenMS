@@ -1,0 +1,42 @@
+{
+  "questId": 8033,
+  "info": {
+    "name": "Youthful Mariwaka",
+    "descriptions": {
+      "notStarted": "Mariwaka of Showa Town apparently has great concern. I should at least listen to her and see what the fuss is about.",
+      "inProgress": " Mariwaka desired to keep her beauty eternal, and she found out about a potion that\u0027ll help her do so. Sounds very fishy, but since she really believes in it, I should get her #b50 #t04000149#s#k for her eternal beauty.\\n#t04000149# #b#c04000149##k/50",
+      "completed": "I really doubt that those potions enable eternal youth. Oh well, she likes it anyways, and that\u0027s the bottom line. I\u0027ll just leave her be."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120016,
+      "minLevel": 85
+    },
+    "complete": {
+      "npc": 9120016,
+      "items": [
+        {
+          "itemId": 4000149,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2022004,
+          "count": 50
+        },
+        {
+          "itemId": 4000149,
+          "count": -50
+        }
+      ],
+      "experience": 22000
+    }
+  }
+}

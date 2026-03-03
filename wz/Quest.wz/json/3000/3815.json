@@ -1,0 +1,50 @@
+{
+  "questId": 3815,
+  "info": {
+    "name": "Finding the Ingredients for Tae Sang",
+    "descriptions": {
+      "notStarted": "#b#p2091002##k of #b#m250000000##k was apprently searching for a better ingredient for medicines.",
+      "inProgress": "#p2091002# told me that he heard rumors that at the lair of the pirates at #m251000000#, there are some herb concentrates available that cannot be obtained in ground. He asked me if I could get #b50 #t2022132#s#k and #b100 #t2022131#s#k for him.\\n\\n#t2022132#  #b#c2022132##k/50\\n#t2022131#  #b#c2022131##k/100",
+      "completed": "I found 50 #t2022132#s and 50 #t2022131#s, and gave them to #p2091002#."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091002,
+      "minLevel": 55
+    },
+    "complete": {
+      "npc": 2091002,
+      "items": [
+        {
+          "itemId": 2022132,
+          "count": 50
+        },
+        {
+          "itemId": 2022131,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000,
+      "items": [
+        {
+          "itemId": 2022132,
+          "count": -50
+        },
+        {
+          "itemId": 2022131,
+          "count": -100
+        },
+        {
+          "itemId": 2000004,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

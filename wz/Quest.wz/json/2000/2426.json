@@ -1,0 +1,47 @@
+{
+  "questId": 2426,
+  "info": {
+    "name": "Pig\u0027s Weakness",
+    "descriptions": {
+      "notStarted": "Power B. Fore, the instructor at the training center, claims to know the weakness of Pigs. You\u0027d better go hear what he\u0027s got to say.",
+      "inProgress": "You acquired the Pig\u0027s Weakness skill. You should take advantage of the skill when hunting Pigs.\\r\\n\\r\\n#o1210100# #a24261#",
+      "completed": "You used Pig\u0027s Weakness to effectively hunt Pigs."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1095001,
+      "maxLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 2414,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522
+      ]
+    },
+    "complete": {
+      "npc": 1095001,
+      "monsters": [
+        {
+          "monsterId": 1210100,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

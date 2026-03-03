@@ -1,0 +1,51 @@
+{
+  "questId": 2161,
+  "info": {
+    "name": "A brave Warrior to defeat King Clang appears!",
+    "parent": "Defeat King Clang!",
+    "descriptions": {
+      "inProgress": "Complaining Riel soon lightens up and says that a brave warrior must appear to rescue the beautiful girl in distress. Therefore, she asks me to take the role of the warrior and defeat King Clang. What have I done to get myself into these situations!? I\u0027m not the warrior type, but the least I can do is help defeat #rKing Clang#k. \\n\\n#o5220000# #r#a21611##k",
+      "completed": "Defeated King Clang and came back to Riel. Riel joyfully says that a brave warrior saved her. It really wasn\u0027t for her sake, but Florina Beach is finally back to its peaceful state."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1081100,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2159,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2160,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2157,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2158,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1081100,
+      "monsters": [
+        {
+          "monsterId": 5220000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 133500,
+      "fame": 10
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "questId": 3921,
+  "info": {
+    "name": "A Request from a Member of the Sand Bandits?! 1",
+    "parent": "A Request from a Member of the Sand Bandits?!",
+    "descriptions": {
+      "notStarted": "#b#p2101012##k lives outside #b#m260000000##k... maybe he\u0027s a secret member of the secret organization in #m260000000# called the Sand Bandits. I better go talk to him.",
+      "inProgress": "#p2101012# called himself a member of the Sand Bandits and asked me to get some tools needed to steal the queen\u0027s treasure. How did he think of creating a rope out of #b#t4000329##k? I better get some #r#o2100102##k. \\n\\n#i4000329# #t4000329#  #b#c4000329##k/30",
+      "completed": "I gave #p2101012# 30 #t4000329#s. I know this isn\u0027t much, but maybe this helped the Sand Bandits."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101012,
+      "minLevel": 27,
+      "prerequisiteQuests": [
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101012,
+      "items": [
+        {
+          "itemId": 4000329,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3750,
+      "items": [
+        {
+          "itemId": 4000329,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

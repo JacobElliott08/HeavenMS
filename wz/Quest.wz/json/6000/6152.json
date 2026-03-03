@@ -1,0 +1,55 @@
+{
+  "questId": 6152,
+  "info": {
+    "name": "Singing Shield",
+    "parent": "Song of forgotten warrior",
+    "descriptions": {
+      "inProgress": " I brought the necklace back to Tatamo, the chief of Leafre. He looked at the picture inscribed on the #o8180001#\u0027s necklace, and said that since #b#p1061012##k knows about Sayram, I should go show him the necklace. Off I go! \\n\\n#i4031467##t4031467# #b#c4031467#/1",
+      "completed": "On Chief Tatamo\u0027s recommendation, I spoke with #p1061012#, who knew about the necklace and the Singing Shield. I must ask him for more information about the shield! "
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081000,
+      "jobs": [
+        112,
+        122,
+        132
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6151,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061012,
+      "items": [
+        {
+          "itemId": 4031467
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031467
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 4031467,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

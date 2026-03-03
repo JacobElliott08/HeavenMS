@@ -1,0 +1,49 @@
+{
+  "questId": 21754,
+  "info": {
+    "name": "Info on Another Seal Stone",
+    "descriptions": {
+      "notStarted": "You met #p1204031# in the #b#m100000201# of #m100000000##k. Thankfully, the letter hadn\u0027t gotten lost, but you think #p2131000# must have been shocked to see you. You\u0027d better to talk to #b#p2131000##k.",
+      "inProgress": "#p1012100# flashed a big smile, saying that she knew she\u0027d someday meet you again. She then handed you the letter. It\u0027s a great feeling, knowing that you have a friend that remembers you hundreds of years later. You\u0027d better show the letter to #b#p1002104##k.",
+      "completed": "#p1002104# tells you that the letter is unreadable and that it actually might be cursed. He recommends that you show #p1201000# the letter. Since she seems to be good with spells, she might be able to break the curse."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012100,
+      "minLevel": 63,
+      "startScript": "q21754s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21753,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1002104,
+      "items": [
+        {
+          "itemId": 4032328
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 56800,
+      "items": [
+        {
+          "itemId": 4032328,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

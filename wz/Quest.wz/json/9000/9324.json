@@ -1,0 +1,41 @@
+{
+  "questId": 9324,
+  "info": {
+    "name": "존의 영웅 그윈",
+    "parent": "메이플스토리 1000일 기념 이벤트",
+    "descriptions": {
+      "notStarted": "존이 말하던 영웅의 이름은...",
+      "inProgress": "존이 말하던 영웅의 이름을 알려주자.",
+      "completed": "메이플스토리의 세계에 혼란이 찾아오고 그 세계를 구하기 위해 이 곳으로 첫 발을 내디딘 그의 이름은 그윈이었다. 2006년 1월 22일로 1000일이 되는 경사스러운 날이었던 것이다."
+    },
+    "area": 50,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 20000,
+      "endDate": "2006020100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9323,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 20000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "meso": 1000,
+      "items": [
+        {
+          "itemId": 2000006,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "questId": 3818,
+  "info": {
+    "name": "Making Mind \u0026 Heart Medicine1",
+    "parent": "Making Mind \u0026 Heart Medicine",
+    "descriptions": {
+      "notStarted": "The mental trainer of #b#m250000000##k, #b#p2091001##k, seems to be in need of something.",
+      "inProgress": "#p2091001# seemed to be looking for a medicine that\u0027ll clear his head, and requested to the resident pharmacist #p2091002# for some #b#t2022142##k. Apparently, making #t2022142# requires #b8 #t4000283#s#k, so I better start gathering up the ingredients and give them to #b#p2091002##k. \\n\\n#i4000283##t4000283#  #b#c4000283##k/8",
+      "completed": "#p2091002# told me to wait as he makes the #t2022142#."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091001,
+      "minLevel": 55
+    },
+    "complete": {
+      "npc": 2091002,
+      "items": [
+        {
+          "itemId": 4000283,
+          "count": 8
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "items": [
+        {
+          "itemId": 4000283,
+          "count": -8
+        }
+      ]
+    }
+  }
+}

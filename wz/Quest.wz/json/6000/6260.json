@@ -1,0 +1,47 @@
+{
+  "questId": 6260,
+  "info": {
+    "name": "The Book of Ice",
+    "parent": "Ancient Ice Stone",
+    "descriptions": {
+      "notStarted": "I got a strange book that is frozen. It seems very unusual. Let\u0027s go ask #b#p2081200##k.",
+      "inProgress": "When I asked #b#p2081200##k about the book, she told me to go see #b#p1032001##k in Ellinia to find out more about it. #b#p1032001##k should know about this book since he/she knows a lot about magic. \\n\\n#t4161016# #b#c4161016# / 1#k",
+      "completed": "#b#p1032001##k was astonished by the legend and decided to break the spell that was cast on the book."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081200,
+      "minLevel": 120,
+      "jobs": [
+        222
+      ],
+      "items": [
+        {
+          "itemId": 4161016
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "items": [
+        {
+          "itemId": 4161016
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500000,
+      "items": [
+        {
+          "itemId": 4161016,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

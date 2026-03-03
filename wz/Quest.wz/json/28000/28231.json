@@ -1,0 +1,61 @@
+{
+  "questId": 28231,
+  "info": {
+    "name": "Restoring the Memory of the Ancient Bow",
+    "parent": "The Legend of Ancient Bow",
+    "descriptions": {
+      "notStarted": "#b#@9201122:##k in #b#m101010102##k says he\u0027d like to restore his lost memory.",
+      "inProgress": "He said his memory has been sealed, and has asked you to hunt the #rGreen Mushrooms#k nearby and bring back 20 #rMemory Fragments#k.\\n\\nReport back to #b#@9201122:##k in #b#m101010102##k upon completion.",
+      "completed": "The legend of the bow was about #rSolomon\u0027s Bow#k. But something seems incomplete."
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201122,
+      "prerequisiteQuests": [
+        {
+          "questId": 28230,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 9201122,
+      "items": [
+        {
+          "itemId": 4001348,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1700,
+      "items": [
+        {
+          "itemId": 4001348,
+          "count": -20
+        },
+        {
+          "itemId": 4032483
+        }
+      ]
+    }
+  }
+}

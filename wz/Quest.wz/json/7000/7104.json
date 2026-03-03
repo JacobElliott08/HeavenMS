@@ -1,0 +1,60 @@
+{
+  "questId": 7104,
+  "info": {
+    "name": "A Piece of Crack",
+    "descriptions": {
+      "notStarted": "To block the cracked dimension that occurred at a vault, something is needed to block it. I should ask #p2041023# at the tunnel of time for help. ",
+      "inProgress": "I met up with Flo who told me about Papulatus. He\u0027s a monster that came through a crack in dimension to this world. I will need to get #i4031179# to seal up the cracked dimension. I\u0027ll need to eliminate #o8141100# and #o8143000# who might have entered this world with #b#o8500001##k and collect the pieces of cracked dimension.\\n\\n#t4031176#: #r#c4031176#/1#k\\n#t4031177#: #r#c4031177#/1#k\\n#t4031178#: #r#c4031178#/1#k\\n",
+      "completed": "I gathered up 3 types of pieces of cracked dimension and gave it to #p2041023#. I also gave Flo #t4031179#, which has something to do with #o8500002#."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041023,
+      "prerequisiteQuests": [
+        {
+          "questId": 7102,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041023,
+      "items": [
+        {
+          "itemId": 4031176
+        },
+        {
+          "itemId": 4031177
+        },
+        {
+          "itemId": 4031178
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 13400,
+      "meso": 41000,
+      "items": [
+        {
+          "itemId": 4031176,
+          "count": -1
+        },
+        {
+          "itemId": 4031177,
+          "count": -1
+        },
+        {
+          "itemId": 4031178,
+          "count": -1
+        },
+        {
+          "itemId": 4031179
+        }
+      ]
+    }
+  }
+}

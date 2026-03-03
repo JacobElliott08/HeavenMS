@@ -1,0 +1,37 @@
+{
+  "questId": 6165,
+  "info": {
+    "name": "Robeira\u0027s Intentions",
+    "parent": "Shammos\u0027s past",
+    "descriptions": {
+      "inProgress": "#p2022003# seemed exhausted and mumbled #p2020009# to forgive him. Let\u0027s go to see #b#p2020009##k.",
+      "completed": "#p2020009# said there\u0027s no way he can let #p2022003# go..."
+    },
+    "area": 10,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2022003,
+      "jobs": [
+        212,
+        222,
+        232
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6164,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020009
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100000
+    }
+  }
+}

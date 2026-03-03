@@ -1,0 +1,41 @@
+{
+  "questId": 3381,
+  "info": {
+    "name": "The Unidentified Group",
+    "descriptions": {
+      "notStarted": "#b#m261000000##k\u0027s #b#p2111007##k seems to be concerned about something. What must that be? I better go ses #p2111007#.",
+      "inProgress": "#p2111007# said recently, someone purchased an inordinate amount of jewels and machinery, so much so that he wanted to make sure who that person might be that made the massive order. These items seemed to have been shipped to #b#m100030000##k...",
+      "completed": "At #m100030000#, I saw a tree entrance that had not been seen before. It looked like an entrance to a fort... So when I tried to speak to #p1094000#, who was standing in front of the entrance, he said a new fort for #bPirate #p1072008##k is currently being built."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111007,
+      "minLevel": 10,
+      "endDate": "2007121800",
+      "prerequisiteQuests": [
+        {
+          "questId": 2190
+        },
+        {
+          "questId": 3246
+        },
+        {
+          "questId": 3115
+        },
+        {
+          "questId": 3713
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1094000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000
+    }
+  }
+}

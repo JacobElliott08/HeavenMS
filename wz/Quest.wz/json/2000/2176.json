@@ -1,0 +1,38 @@
+{
+  "questId": 2176,
+  "info": {
+    "name": "Cleaning The Nautilus 1",
+    "descriptions": {
+      "notStarted": "Mrs. Reade, who is in charge of keeping The Nautilus clean, says she is in need of help. Apparently the wash cloths that she uses for cleaning the ship have become tattered from incessant cleaning and she\u0027s in need of some new wash cloths... I should go talk to Mrs. Reade myself in the upper deck corridors where she\u0027s cleaning.",
+      "inProgress": "I\u0027ll go find a #bpig\u0027s ribbon#k which Mrs. Reade can use as a wash cloth.",
+      "completed": "Looks like Mrs. Reade\u0027s making good use of the pig\u0027s ribbon I brought her, but poor Mrs. Reade, she\u0027s cleaning all day long...as usual."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092009,
+      "minLevel": 15
+    },
+    "complete": {
+      "npc": 1092009,
+      "items": [
+        {
+          "itemId": 4000002,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1300,
+      "items": [
+        {
+          "itemId": 4000002,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

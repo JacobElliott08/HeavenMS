@@ -1,0 +1,94 @@
+{
+  "questId": 3099,
+  "info": {
+    "name": "The record of Goddess Minerva",
+    "descriptions": {
+      "notStarted": "#p2040052# heard the news that the tower of the Goddess was discovered while he was looking for the person who will listen to his requests...",
+      "inProgress": "#p2040052# said that he researched about Goddess Minerva when he was young and was crazy over her but nobody believed him at all and have been asked to look for data about the Goddess Minerva at the tower of the Goddess, shall I help?\\n\\n#t4161014# #b#c4161014##k/1",
+      "completed": "#p2040052# was very happy that the diary of the Goddess was donated to the library. We researched about Ossyria\u0027s past and said, wouldn\u0027t be of great help? While the book is at the library,book also must be happy that it will be read by many people."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040052,
+      "minLevel": 51,
+      "maxLevel": 70
+    },
+    "complete": {
+      "npc": 2040052,
+      "items": [
+        {
+          "itemId": 4161014
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 13000,
+      "items": [
+        {
+          "itemId": 4161014,
+          "count": -1
+        },
+        {
+          "itemId": 2041013,
+          "probability": 1
+        },
+        {
+          "itemId": 2041014,
+          "probability": 1
+        },
+        {
+          "itemId": 2041016,
+          "probability": 1
+        },
+        {
+          "itemId": 2041017,
+          "probability": 1
+        },
+        {
+          "itemId": 2041019,
+          "probability": 1
+        },
+        {
+          "itemId": 2041020,
+          "probability": 1
+        },
+        {
+          "itemId": 2041022,
+          "probability": 1
+        },
+        {
+          "itemId": 2041023,
+          "probability": 1
+        },
+        {
+          "itemId": 2040513,
+          "probability": 1
+        },
+        {
+          "itemId": 2040514,
+          "probability": 1
+        },
+        {
+          "itemId": 2040516,
+          "probability": 1
+        },
+        {
+          "itemId": 2040517,
+          "probability": 1
+        },
+        {
+          "itemId": 2040500,
+          "probability": 1
+        },
+        {
+          "itemId": 2040501,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

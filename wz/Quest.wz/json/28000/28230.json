@@ -1,0 +1,51 @@
+{
+  "questId": 28230,
+  "info": {
+    "name": "Solomon\u0027s Bow",
+    "parent": "The Legend of Ancient Bow",
+    "descriptions": {
+      "notStarted": "#b#@1032101:##k in #bEllinia#k will welcome you if you give her the Ocarina. Let\u0027s go see her.",
+      "inProgress": "The #rAncient Bow#k is Solomon\u0027s Bow that was used to eliminate the demon. It is said to have been sealed in #b#m101010102##k, so let\u0027s head over there.",
+      "completed": "#b#@9201122:##k in #b#m101010102##k says he\u0027d like to restore his lost memory."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032101,
+      "prerequisiteQuests": [
+        {
+          "questId": 28229,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032481
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 9201122
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

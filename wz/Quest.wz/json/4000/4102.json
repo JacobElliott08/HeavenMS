@@ -1,0 +1,54 @@
+{
+  "questId": 4102,
+  "info": {
+    "name": "자격의 증명",
+    "descriptions": {
+      "notStarted": "#b#p9310008##k에게 다시 말을 걸어보자.",
+      "inProgress": "#r#o9600005##k와 #r#o9600006##k를 퇴치하여 #b#p9310008##k에게 나의 능력을 보여주자.\\n\\n#i4000191##t4000191# #b#c4000191#/100#k\\n#i4000192##t4000192# #b#c4000192#/100#k",
+      "completed": "#b#p9310008##k에게 나의 능력을 증명하였다."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9310008,
+      "minLevel": 45,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4101,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9310008,
+      "items": [
+        {
+          "itemId": 4000191,
+          "count": 100
+        },
+        {
+          "itemId": 4000192,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7000,
+      "items": [
+        {
+          "itemId": 4000191,
+          "count": -100
+        },
+        {
+          "itemId": 4000192,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

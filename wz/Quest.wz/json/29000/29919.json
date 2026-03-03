@@ -1,0 +1,27 @@
+{
+  "questId": 29919,
+  "info": {
+    "name": "Kerning City Donor Medal",
+    "descriptions": {
+      "completed": "Donations are a quick way to give back to the community. You have earned the #b\u003cKerning City Donor\u003e#k title."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142017
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "normalAutoStart": true,
+      "startScript": "q29919s",
+      "items": [
+        {
+          "itemId": 1142017
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000066
+    }
+  }
+}

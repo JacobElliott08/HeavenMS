@@ -1,0 +1,64 @@
+{
+  "questId": 2336,
+  "info": {
+    "name": "Truth Revealed",
+    "descriptions": {
+      "notStarted": "Now that everything has been revealed, you get the unenviable task of explaining it all to his highness, the Mushking.",
+      "inProgress": "You have to bring the #b#t4032387##k given to you by #bPrincess #p1300002##k to #b#p1300000##k and explain what really happened.",
+      "completed": "You explained to #b#p1300000##k everything that happened."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300002,
+      "minLevel": 30,
+      "maxLevel": 39,
+      "prerequisiteQuests": [
+        {
+          "questId": 2334,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300000,
+      "items": [
+        {
+          "itemId": 4032387
+        },
+        {
+          "itemId": 4032386
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032387
+        },
+        {
+          "itemId": 4032386
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 6600,
+      "items": [
+        {
+          "itemId": 4032387,
+          "count": -1
+        },
+        {
+          "itemId": 4032386,
+          "count": -1
+        },
+        {
+          "itemId": 1082254
+        }
+      ]
+    }
+  }
+}

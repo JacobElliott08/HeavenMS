@@ -1,0 +1,40 @@
+{
+  "questId": 3931,
+  "info": {
+    "name": "The Man with the Iron Hammer",
+    "parent": "Sand Bandits According to Ardin",
+    "descriptions": {
+      "notStarted": "The word iron hammer written on the wall at #p2103001#... I think it\u0027s pointing at someone. I think there\u0027s only one person in #m260000000# carrying an iron hammer... Was his name #p2101003#?",
+      "inProgress": "#p2101003# is also the member of the Sand Bandits. #p2101003# told me only the strongest deserve to be a member, and that I had to prove him my worth. I was told to eliminate the ferocious #r#o2100105##k... #o2100105#? I\u0027ll finish it right off the spot!\\n\\n#o2100105# #r#a39311##k",
+      "completed": "I eliminated #o2100105#, but #p2101003# said that I am still short of becoming the member of the Sand Bandits, and that I still won\u0027t be accepted as one."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101003,
+      "minLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 3927,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101003,
+      "monsters": [
+        {
+          "monsterId": 2100105,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000
+    }
+  }
+}

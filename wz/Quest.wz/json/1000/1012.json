@@ -1,0 +1,37 @@
+{
+  "questId": 1012,
+  "info": {
+    "name": "Rain\u0027s Maple Quiz 4",
+    "parent": "Rain\u0027s Maple Quiz",
+    "descriptions": {
+      "notStarted": "Let\u0027s solve #b#p12101##k\u0027s fourth Quiz.",
+      "inProgress": "You can solve Rain\u0027s Quizzes if you carefully think about it.",
+      "completed": "Rain\u0027s 4th Quiz was finding the hot-key for picking up the items on the ground. That\u0027s easy~ it\u0027s \" Z\" of course~ But I found out I can also pick up items with the number key \"0\"..."
+    },
+    "area": 20,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 12101,
+      "prerequisiteQuests": [
+        {
+          "questId": 1011,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 12101
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10,
+      "nextQuest": 1013
+    }
+  }
+}

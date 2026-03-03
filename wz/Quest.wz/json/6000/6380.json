@@ -1,0 +1,58 @@
+{
+  "questId": 6380,
+  "info": {
+    "name": "Observe the Spirit Vikings",
+    "descriptions": {
+      "notStarted": "I\u0027ve learned the Battleship Skill but I don\u0027t really know how to use it freely as of yet. I can\u0027t figure out what the problem is! I\u0027d better ask Kyrin.",
+      "inProgress": "So I guess I still need to learn some more skills before I can use the Battleship Skill, plus I need to learn how to properly control the battleship before I can learn how to use the skill itself... Let me go watch the Vikings in Ludibrium, and to prove that I\u0027ve completed my training, I must defeat #r150 Spirit Vikings#k and bring back #b50 Spirit Viking Flags#k for Kyrin.",
+      "completed": "I took the proof of my training to Kyrin and she taught me the Battleship Cannon Skill in return. "
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "minLevel": 120,
+      "jobs": [
+        522
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6370,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "items": [
+        {
+          "itemId": 4031873,
+          "count": 50
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 8141000,
+          "count": 150
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000000,
+      "items": [
+        {
+          "itemId": 4031873,
+          "count": -50
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 5221007,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

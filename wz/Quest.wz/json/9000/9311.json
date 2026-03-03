@@ -1,0 +1,81 @@
+{
+  "questId": 9311,
+  "info": {
+    "name": "Valentine\u0027s Day : Chocolate Basket",
+    "descriptions": {
+      "notStarted": "Apparently, Ace of Hearts can make a chocolate basket that extends the power of love using a number of #t4140100#s.",
+      "inProgress": "[#p2041017#] said with #t4140100# and additional materials, he can make a #b#t4140200##k that expires at a later date. Apparently, it\u0027s good for #r5 days#k, longer than that of #t4140100#.\\n\\n#t4140100# #c4140100# / #r1#k\\n#t4031110# #c4031110# / #r1#k\\n#t4031109# #c4031109# / #r1#k\\n#t4031113# #c4031113# / #r1#k\\n#t4031114# #c4031114# / #r1#k",
+      "completed": "I was able to make a chocolate basket for the person I dearly love for the Valentine\u0027s Day through [#p2041017#]."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041017,
+      "minLevel": 8,
+      "startDate": "2007020500",
+      "endDate": "2007021600",
+      "items": [
+        {
+          "itemId": 4140100
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041017,
+      "items": [
+        {
+          "itemId": 4140100
+        },
+        {
+          "itemId": 4031109
+        },
+        {
+          "itemId": 4031110
+        },
+        {
+          "itemId": 4031113
+        },
+        {
+          "itemId": 4031114
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3600,
+      "meso": -2500,
+      "fame": 3,
+      "items": [
+        {
+          "itemId": 4140100,
+          "count": -1
+        },
+        {
+          "itemId": 4031110,
+          "count": -1
+        },
+        {
+          "itemId": 4031109,
+          "count": -1
+        },
+        {
+          "itemId": 4031113,
+          "count": -1
+        },
+        {
+          "itemId": 4031114,
+          "count": -1
+        },
+        {
+          "itemId": 4140200
+        },
+        {
+          "itemId": 2020028,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

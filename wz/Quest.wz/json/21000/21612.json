@@ -1,0 +1,39 @@
+{
+  "questId": 21612,
+  "info": {
+    "name": "A Visit from the Wolf Herd",
+    "descriptions": {
+      "notStarted": " #b#p1202007##k, the penguin from #b#m140000000##k, wants to have a word with you.",
+      "inProgress": "A pack of wolves apparently paid a visit to #m140000000# in search of #t1902016#. It must be the family that #t1902016# lost as a pup. You should meet #b#p1202008##k and ask why they\u0027re here all of a sudden. #p1202008# is waiting at #m914030000##k, which can be accessed through #b#m140010100#.",
+      "completed": "You met with #p1202008#."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1202007,
+      "minLevel": 150,
+      "prerequisiteQuests": [
+        {
+          "questId": 21607,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1902016
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1202008
+    }
+  }
+}

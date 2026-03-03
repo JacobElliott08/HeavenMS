@@ -1,0 +1,47 @@
+{
+  "questId": 3384,
+  "info": {
+    "name": "Gordon\u0027s Magic Iron",
+    "parent": "Gordon Passes His Magic",
+    "descriptions": {
+      "inProgress": "Just as Gordon says, being a great craftsman requires patience and stamina. Gordon then gave me a test where he assigned me to gather up some Jr. Yeti Skin, which are also used as primary materials for shoemaking. I wonder what that secret technique is... I better come back ASAP.\\n\\n#i04000048# #t04000048# #b#c04000048##k / 50",
+      "completed": "I finally found the secrets to Gordon\u0027s technique! Well, the important aspects here are the two types of Magic Pentagrams that\u0027s used to create a new scroll, and the Magic Magic Iron that helped press them. The Magic Magic Iron that Gordon gave me... it seemed like it had some sort of a story behind it, but I was not able to listen to it in detail. I should ask him about that the next time I see him.\\nAccording to Gordon, when summoning the Maker skill, when I have the Magic Magic Iron equipped in my hand, then I\u0027ll be able to create new scrolls."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020002,
+      "prerequisiteQuests": [
+        {
+          "questId": 3383,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020002,
+      "items": [
+        {
+          "itemId": 4000048,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000,
+      "items": [
+        {
+          "itemId": 1122013
+        },
+        {
+          "itemId": 4000048,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

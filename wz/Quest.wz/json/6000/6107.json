@@ -1,0 +1,48 @@
+{
+  "questId": 6107,
+  "info": {
+    "name": "Spiritual Stone of Darkness",
+    "parent": "Extreme Temptation",
+    "descriptions": {
+      "inProgress": "#b#p1061012##k says he can send me to the Bowman\u0027s training place if I bring him #b#t4031466##k which is carried by #m910500000#. \\n\\n#i4031466##t4031466# #b#c4031466# / 50#k",
+      "completed": "I gave 50 #t4031466#, which is needed to enter #m910500000#, to #p1061012#. I am one step closer to obtaining this ultimate skill. The anticipation is growing within me..."
+    },
+    "area": 10,
+    "order": 8
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061012,
+      "jobs": [
+        312,
+        322
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6106,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061012,
+      "items": [
+        {
+          "itemId": 4031466,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 700000,
+      "items": [
+        {
+          "itemId": 4031466,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

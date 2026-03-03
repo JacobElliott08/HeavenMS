@@ -1,0 +1,65 @@
+{
+  "questId": 3325,
+  "info": {
+    "name": "A Sip of the Moon",
+    "parent": "The Fairy in Despair 1",
+    "descriptions": {
+      "inProgress": "With a clouded look on his face, #p2012018# gave me a medicine called #t4031700# and a letter, asking me to deliver them to #b#p2111004##k. He seemed concerned that the medicine might not be enough to cure #p2111005#...",
+      "completed": "Despite receiving the medicine, #p2111004# still seemed very much concerned. #p2111005#\u0027s illness might be a lot worse than I thought..."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012018,
+      "minLevel": 45,
+      "prerequisiteQuests": [
+        {
+          "questId": 3324,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111004,
+      "items": [
+        {
+          "itemId": 4031707
+        },
+        {
+          "itemId": 4031700
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031700
+        },
+        {
+          "itemId": 4031707
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 33000,
+      "items": [
+        {
+          "itemId": 4031700,
+          "count": -1
+        },
+        {
+          "itemId": 4031707,
+          "count": -1
+        },
+        {
+          "itemId": 2030016,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

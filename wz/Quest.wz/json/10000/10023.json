@@ -1,0 +1,42 @@
+{
+  "questId": 10023,
+  "info": {
+    "name": "Long and Dangerous Road of an Agent",
+    "descriptions": {
+      "notStarted": "I lost the Parachute Agent Shoes that Gaga gave to me recently during his suspicious offer.  I feel bad asking for another pair now, but should I still ask #bGaga#k? ",
+      "inProgress": "Gaga seemed overly touched by the encouragement I gave in passing.  I think he is going to give me the Parachute Agent Shoes again.  I should talk to #bGaga#k again. ",
+      "completed": "Gaga gave me the Parachute Agent Shoes again without any conditions.  I feel bad for doubting him all this time..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "endDate": "2009082600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10000,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1072366
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000021
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1072366,
+          "expirationDate": "2009090923"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "questId": 3711,
+  "info": {
+    "name": "Wyvern\u0027s Sudden Attack",
+    "descriptions": {
+      "notStarted": "Let\u0027s go see #p2081007#, who\u0027s lying wounded somewhere in #m240040400#.",
+      "inProgress": " #p2081007#, who I met at #m240040400#, asked me to help decrease the number of Wyverns, who have taken over Dragon\u0027s Canyon.  Let\u0027s decrease the number of Wyverns and get back to #b#p2081007##k.\\n\\n#o8150300#  #r#a37111##k\\n#o8150301#  #r#a37112##k\\n#o8150302#  #r#a37113##k",
+      "completed": "I have cut down the number of Wyverns as #p2081007# from #m240040400# requested, but I felt uneasy because the Wyverns kept multipying and multiplying."
+    },
+    "area": 41
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081007,
+      "minLevel": 100
+    },
+    "complete": {
+      "npc": 2081007,
+      "monsters": [
+        {
+          "monsterId": 8150300,
+          "count": 18
+        },
+        {
+          "monsterId": 8150301,
+          "count": 18
+        },
+        {
+          "monsterId": 8150302,
+          "count": 18
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2081007,
+      "minLevel": 100
+    },
+    "onComplete": {
+      "experience": 90000
+    }
+  }
+}

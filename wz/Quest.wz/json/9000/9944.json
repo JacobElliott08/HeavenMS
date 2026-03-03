@@ -1,0 +1,36 @@
+{
+  "questId": 9944,
+  "info": {
+    "name": "버려진 인형",
+    "parent": "소필리아의 버려진 인형",
+    "descriptions": {
+      "notStarted": "저택 #b어딘가#k에 #p2120005#의 #t4031837#이 있을 것이다. 어서 인형을 찾아보자.",
+      "inProgress": "#m229000300# 안으로 들어가자 어디선가 이상한 목소리가 들린다. 동굴안에서 들리는 것처럼 기괴한 울림이 담긴, 하지만 맑은 목소리. 놀랍게도 말을 걸어온 것은 형체조차 분명치 않은 #r유령#k이다!",
+      "completed": "#p2120008#는 해맑은 얼굴로 인사해왔다."
+    },
+    "area": 50,
+    "order": 1,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120008,
+      "minLevel": 10,
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 9942,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120008
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100
+    }
+  }
+}

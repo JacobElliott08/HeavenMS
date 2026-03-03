@@ -1,0 +1,30 @@
+{
+  "questId": 20300,
+  "info": {
+    "name": "The Lost Treasure",
+    "descriptions": {
+      "notStarted": "#p1101002# is contacting me in an emergency manner. I wonder what happened.",
+      "inProgress": "Something terrible must have happened at #bEreve#k. I better go find out.",
+      "completed": "According to #p1101002#, an important item from Ereve has been stolen by one of the minions who serves the Black Mage. What must that be? I better head over to Ereve."
+    },
+    "area": 15,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "minLevel": 70,
+      "normalAutoStart": true,
+      "jobs": [
+        1110,
+        1210,
+        1310,
+        1410,
+        1510
+      ]
+    },
+    "complete": {
+      "npc": 1101002
+    }
+  }
+}

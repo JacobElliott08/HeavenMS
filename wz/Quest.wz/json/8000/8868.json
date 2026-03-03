@@ -1,0 +1,59 @@
+{
+  "questId": 8868,
+  "info": {
+    "name": "Amoria : Circle of Trust 2 (A Bond is Forged)",
+    "parent": "Circle of Trust",
+    "descriptions": {
+      "notStarted": "An unhappy couple in Amoria? I should go find out what\u0027s wrong...",
+      "inProgress": "I spoke with Gary and Shatima, and it looks like their rings were broken and taken in to #b20 Ring Fragments#k by some Tweeters. When I have them all, I am going to head over to Moony.",
+      "completed": "I returned to the Ring fragments to Moony, and now Gary and Shatima can get married! Phew, a lot of work, but well worth it!"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201000,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 8867,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031525,
+          "count": 20
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201000,
+      "items": [
+        {
+          "itemId": 4031525,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "items": [
+        {
+          "itemId": 4031525,
+          "count": -20
+        },
+        {
+          "itemId": 4031526
+        },
+        {
+          "itemId": 2000004,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

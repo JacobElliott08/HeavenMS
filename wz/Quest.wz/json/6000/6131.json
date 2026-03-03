@@ -1,0 +1,63 @@
+{
+  "questId": 6131,
+  "info": {
+    "name": "Method of Contradiction",
+    "parent": "Caron\u0027s Notebook",
+    "descriptions": {
+      "inProgress": " I went to see #p2060100# with #t4001107#. #p2060100# says I have to burn the book with cold flames in order to read it. A strange, but effective way of hiding the infromation contained within. The information has to be important if someone went through all this trouble. She\u0027s agreed to help me. I must gather  #b5 #t4000008#, 50#t4000081#, and 100#t4000150##k to make #t4001108#  which is needed to burn cold flames. Can I trust this witch? I hope she does not lead me down the wrong path...\\n\\n#i4000008##t4000008# #b#c4000008#/5#k \\n#i4000081##t4000081# #b#c4000081#/50#k \\n#i4000150##t4000150# #b#c4000150#/100#k",
+      "completed": "Success! I gave all the ingredients to #p2060100# to make #b#t4001108##k. Now, I must find a place to properly burn the book...perhaps the sea?"
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060100,
+      "jobs": [
+        232
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6130,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060100,
+      "items": [
+        {
+          "itemId": 4000150,
+          "count": 100
+        },
+        {
+          "itemId": 4000008,
+          "count": 5
+        },
+        {
+          "itemId": 4000081,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800000,
+      "items": [
+        {
+          "itemId": 4000008,
+          "count": -5
+        },
+        {
+          "itemId": 4000081,
+          "count": -50
+        },
+        {
+          "itemId": 4000150,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

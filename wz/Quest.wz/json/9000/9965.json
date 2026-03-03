@@ -1,0 +1,23 @@
+{
+  "questId": 9965,
+  "info": {
+    "name": "별도장 받기",
+    "descriptions": {
+      "notStarted": "메이플운영자가 2월13일부터 2월29일까지 특별한 이벤트를 준비했다고 하는데...",
+      "inProgress": "별별Festival이 진행중입니다.",
+      "completed": "메이플운영자가 준비한 이벤트에 참가하고 별도장을 받았다! 획득한 별도장은 메이플운영자를 찾아가거나 메이플스토리 홈페이지#b(http://maplestory.nexon.com)#k에서 확인할 수 있다."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "repeatIntervalMinutes": 60,
+      "startDate": "2008021600",
+      "endDate": "2008030300",
+      "startScript": "q9965s",
+      "normalAutoStart": true
+    }
+  }
+}

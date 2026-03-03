@@ -1,0 +1,35 @@
+{
+  "questId": 9830,
+  "info": {
+    "name": "카산드라의 첫번째 퀴즈!",
+    "parent": "카산드라의 메이플 퀴즈",
+    "descriptions": {
+      "notStarted": "#p9010010#가 메이플스토리 4주년을 맞아 메이플 월드의 모든 모험가들을 상대로 퀴즈를 낸다고 한다. 관심 있으면 당장 #p9010010#를 찾아가 보자. ",
+      "inProgress": "#p9010010#의 첫번째 퀴즈! 어떤 문제가 나올까? 어서 문제를 풀어보자.",
+      "completed": "첫번째 문제는 그리 어렵지 않았다. 자, 그럼 두 번째 문제는 어떨까? "
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "startDate": "2007042400",
+      "endDate": "2007052100"
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4001126
+        }
+      ]
+    }
+  }
+}

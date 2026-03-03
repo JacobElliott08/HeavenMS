@@ -1,0 +1,38 @@
+{
+  "questId": 2105,
+  "info": {
+    "name": "DANGER! \u003c1-G. Mushroom\u003e",
+    "descriptions": {
+      "notStarted": "I heard there\u0027s a warning sign on monsters somewhere Deep in the Forest...",
+      "inProgress": "Eliminate #b99#k Green Mushrooms, then find \"The Rememberer.\" \\n\\n#o1110100# #r#a21051##k",
+      "completed": "I tried eliminating the Green Mushrooms all-together, but the number didn\u0027t seem to decrease at all."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1063003,
+      "minLevel": 15
+    },
+    "complete": {
+      "npc": 1061011,
+      "monsters": [
+        {
+          "monsterId": 9101000,
+          "count": 99
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

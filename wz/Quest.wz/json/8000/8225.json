@@ -1,0 +1,38 @@
+{
+  "questId": 8225,
+  "info": {
+    "name": "The Right Path",
+    "descriptions": {
+      "notStarted": "Jack Barricade has given me the #bMap of Phantom Forest#k that he took from Taggrin.  He explained that he was forced to steal it from Taggrin, who had refused to give it to him even after he\u0027d won it in a bet fair and square.  Now that Jack\u0027s made it up to the Crimsonwood Mountain, he\u0027s given the map to me for my own use.  Perhaps I should return it to Taggrin?  If I keep it, the map will come in handy while navigating the tricky Phantom Forest, #ballowing me to use the marked shortcuts#k and save time traveling.  But at the same time, there\u0027s a part of me that feels that this map still rightfully belongs to Taggrin.  What should I do?  It\u0027s a dilemma...",
+      "inProgress": "I told Taggrin that I\u0027d found Jack up the Crimsonwood Mountain, and explained Jack\u0027s purpose.  Taggrin was surprised when I offered to return his Map of Phantom Forest to him... and was moved by my gesture. He seems to have warmed up to me, and ask that I return and speak to him. What could he want?",
+      "completed": "In return for making the honorable gesture of returning his map, Taggrin let me in on a secret of his own: he and his band are not bandits at all, but are actually #bRaven Ninjas#k, descendants of the ancient #bShadowknights#k!  They\u0027re here to discover what happened to their ancestral Keep and the reason behind the disappearance of Masteria.  As such, Taggrin is offering a bounty on the Keep\u0027s unrightful occupiers.  I can now speak to Joko to redeem any #rBadges#k I find off these corrupted warriors (the #rWindraiders#k, the #rStormbreakers#k, the #rFirebrands#k, and the #rNightshadowsRk) for #bmeso bounties#k, and possibly even #bRaven Ninja gear#k!  I can make #bone Badge Bounty Redemption per day#k"
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201100,
+      "minLevel": 70,
+      "startScript": "q8225s",
+      "prerequisiteQuests": [
+        {
+          "questId": 8224,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201100,
+      "items": [
+        {
+          "itemId": 3992040
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000
+    }
+  }
+}

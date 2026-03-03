@@ -1,0 +1,38 @@
+{
+  "questId": 21726,
+  "info": {
+    "name": "Your Fourth Informant Assignment",
+    "descriptions": {
+      "notStarted": "You have now reached Level 28, which means #p1002104# will be giving you your fourth assignment as an informant today. Head to #b#m104000000##k and meet with #b#p1002104##k.",
+      "inProgress": "Many reports have been filed concerning a bunch of depressed #o2230101#s in #m105040300#. This has to be the work of the puppeteer. Head over to #b#m105040300##k and talk to the person who first discovered this. They say it\u0027s a boy named #b#p1061019##k.",
+      "completed": "You met with #p1061019# in #m105040300#."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 28,
+      "prerequisiteQuests": [
+        {
+          "questId": 21724,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1061019
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500
+    }
+  }
+}

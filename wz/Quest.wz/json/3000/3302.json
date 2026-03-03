@@ -1,0 +1,54 @@
+{
+  "questId": 3302,
+  "info": {
+    "name": "Zenumist Cape",
+    "parent": "Joining Zenumist",
+    "descriptions": {
+      "inProgress": "After visiting the Broker once more, he gave me a bottle that contained some strange-looking water. He then told me to take it to #bZenumist Society#k, and place it next to the blue alchemy pillar, which will automatically create the item for me. He then told me to give it to #b#p2111000##k... is the broker really telling the truth?  Seems impossible...",
+      "completed": "When I left #t4031705# next to the alchemy pillar, I heard a deafening explosion, followed by the creation of a useless tree branch. I had no idea what that was, but I gave it to #p2111000#. He seemed VERY satisfied with the result, and gave me #b#t1102135##k in return.  Why would he want a tree branch?"
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111007,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3301,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111000,
+      "items": [
+        {
+          "itemId": 4031703
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031705
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 4031703,
+          "count": -1
+        },
+        {
+          "itemId": 1102135
+        }
+      ]
+    }
+  }
+}

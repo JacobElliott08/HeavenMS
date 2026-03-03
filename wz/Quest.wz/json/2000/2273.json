@@ -1,0 +1,44 @@
+{
+  "questId": 2273,
+  "info": {
+    "name": "The Secret Recipe",
+    "descriptions": {
+      "notStarted": "You perform a favor for #Robby Fray#k so he would agree to cater the party, but when you go to turn it in, he screams in dismay. It seems like you\u0027ll have to do him another favor...",
+      "inProgress": "Uh oh. Without his Secret Recipe, Robby Fray can\u0027t bear to keep living, let alone cater a party. Hopefully you can find his Secret Recipe before somebody else nabs it.\\r\\nIt should be with the Doll Claw Games on the 3rd-4th floor of the Shopping Center, right?\\r\\n",
+      "completed": "Whew! Finally, you convinced Robby Fray, the seven star chef, to cater the party. Report the good news to #bLana#k."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052123,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2272,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052123,
+      "items": [
+        {
+          "itemId": 4032508
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 13200,
+      "items": [
+        {
+          "itemId": 4032508,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

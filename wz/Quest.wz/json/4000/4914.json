@@ -1,0 +1,51 @@
+{
+  "questId": 4914,
+  "info": {
+    "name": "Subani\u0027s Legacy - Transgression",
+    "parent": "Subani\u0027s Legacy",
+    "descriptions": {
+      "notStarted": "John Barricade is awaiting me at the Temple Hive! He\u0027s found something!",
+      "inProgress": "I spoke with John, and he\u0027s found a set of weird markings in the MesoGears that he can\u0027t decipher. He\u0027s mentioned that he\u0027ll need special crystals known as #bHyper Glyphs#k. I\u0027ve agreed to snag #b50#k of them so he can decipher the markings. Electrophants...John thinks that the mechanism on their heads may have those Hyper Glyphs inside. I\u0027d better be careful-I don\u0027t want to get shocked!",
+      "completed": "I got the #b50 Hyper Glyphs#k that John needed, and he\u0027s hard at work deciphering the markings. I should come back soon to see if he\u0027s finished!"
+    },
+    "area": 45,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201051,
+      "minLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 4913,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201051,
+      "items": [
+        {
+          "itemId": 4031680,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9000,
+      "fame": 3,
+      "items": [
+        {
+          "itemId": 4031680,
+          "count": -50
+        },
+        {
+          "itemId": 2022195,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

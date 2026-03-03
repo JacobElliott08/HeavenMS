@@ -1,0 +1,55 @@
+{
+  "questId": 3634,
+  "info": {
+    "name": "The Storybook on Shim Chung",
+    "descriptions": {
+      "notStarted": "I was sure I received the storybook after helping #p2071009# out, but where is it? Did I just lose it? I better go see #p2071009# again",
+      "inProgress": "#b#p2040052# from Helios Tower Library has requested me to get #b#t4031280#k. Hmmm ... I\u0027m pretty sure I received it after I lent #p2071009# 300 #t4031279#s, but I can\u0027t seem to find it. After discussing the matters with #p2071009#, he promised to give me the storybook if I gather up #b10 #t4000165#s#k for Shim Chung, who\u0027s quite a florist, to make her favorite flower.\\n\\n#t4000165#  #b#c4000165##k / 10",
+      "completed": "I gathered up 10 #t4000165#s, which are Shim Chung\u0027s favorite, at the request of #p2071009# in order to reacquire #t4031280#."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071009,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3632,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3633,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031280
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071009,
+      "items": [
+        {
+          "itemId": 4000165,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031280
+        },
+        {
+          "itemId": 4000165,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

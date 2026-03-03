@@ -1,0 +1,54 @@
+{
+  "questId": 4009,
+  "info": {
+    "name": "영웅의 북",
+    "descriptions": {
+      "notStarted": "#b#p9330003##k의 부탁대로 #b#p9330006##k을 찾아가 보자.",
+      "inProgress": "#b#p9330006##k이 부업을 할 수 있도록 필요한 물건을 구해다 주자 \\n\\n#i4000202##t4000202#  #b#c4000202#/100#k",
+      "completed": "황력홍에게 받은 #b#t4031292##k을 #b#p9330003##k에게 가져다 주자."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9330006,
+      "minLevel": 42,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4006,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031292
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9330006,
+      "items": [
+        {
+          "itemId": 4000202,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000202,
+          "count": -100
+        },
+        {
+          "itemId": 4031292
+        }
+      ]
+    }
+  }
+}

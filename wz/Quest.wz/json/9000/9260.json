@@ -1,0 +1,98 @@
+{
+  "questId": 9260,
+  "info": {
+    "name": "Torr\u0027s Horn",
+    "descriptions": {
+      "notStarted": "I heard #p2002002# of Happyville has lost something very important...",
+      "inProgress": "I heard #p2002002# of Happyville lost something very important, so I went to see her. I found her crying, and it turns out that... she lost her horn?!? How can you lose a horn?? She asked me to find her horn but... where can it be?\\n\\n#t4031063# #b#c4031063##k/1",
+      "completed": "I found Torr\u0027s horn at the Cash Shop, and gave it back to her. She was ecstatic, to say the least. I hope she doesn\u0027t lose it anymore..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2002002,
+      "minLevel": 13,
+      "repeatIntervalMinutes": 1440,
+      "endDate": "2010010100"
+    },
+    "complete": {
+      "npc": 2002002,
+      "items": [
+        {
+          "itemId": 4031063
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031063,
+          "count": -1
+        },
+        {
+          "itemId": 1012011,
+          "probability": 1
+        },
+        {
+          "itemId": 1012012,
+          "probability": 1
+        },
+        {
+          "itemId": 1012013,
+          "probability": 1
+        },
+        {
+          "itemId": 1012014,
+          "probability": 1
+        },
+        {
+          "itemId": 1012015,
+          "probability": 1
+        },
+        {
+          "itemId": 1012016,
+          "probability": 1
+        },
+        {
+          "itemId": 1012017,
+          "probability": 1
+        },
+        {
+          "itemId": 1012019,
+          "probability": 1
+        },
+        {
+          "itemId": 1012018,
+          "probability": 1
+        },
+        {
+          "itemId": 1012020,
+          "probability": 1
+        },
+        {
+          "itemId": 3992024,
+          "probability": 1
+        },
+        {
+          "itemId": 3992025,
+          "probability": 1
+        },
+        {
+          "itemId": 3992026,
+          "probability": 1
+        },
+        {
+          "itemId": 2020012,
+          "probability": 1
+        },
+        {
+          "itemId": 2020013,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

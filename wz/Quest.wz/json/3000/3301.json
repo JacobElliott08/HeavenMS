@@ -1,0 +1,30 @@
+{
+  "questId": 3301,
+  "info": {
+    "name": "Test from the Head of Zenumist Society",
+    "parent": "Joining Zenumist",
+    "descriptions": {
+      "notStarted": "Bourne of a true union of science and magic... #bZenumist, is a society of pure alchemy#k. With the conflict raging in #m261000000#, however, Zenumist doesn\u0027t seem to accept outsiders. I really want to join them, though... I better go see #b#p2111007##k.",
+      "inProgress": "#p2111007# told me in order to join Zenumist, I\u0027ll have to run the rigorous test of showing my lab results to the president of the Zenumist Society. But he also said if I can get him #b2 ores of jewels, regardless of type#k, then he\u0027d take care of the rest...",
+      "completed": "After giving #p2111007# 2 ores, he told me to wait.  I hope I get in!"
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111007,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3300,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111007,
+      "endScript": "q3301e"
+    }
+  }
+}

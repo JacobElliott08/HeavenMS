@@ -1,0 +1,48 @@
+{
+  "questId": 6012,
+  "info": {
+    "name": "Kyrin\u0027s Teaching",
+    "descriptions": {
+      "notStarted": "Since I still have yet to master Monster Mount and Spirit of the Craftsman, #bKyrin#k volunteered to teach me these skills...",
+      "inProgress": "I\u0027ll have to go talk to #bKyrin#k about these skills...right?",
+      "completed": "I was able to learn #rMonster Mount#k and #rSpirit of the Craftsman#k through Kyrin. Time to use them!"
+    },
+    "area": 30,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "minLevel": 120,
+      "maxLevel": 200,
+      "startDate": "2007102200",
+      "endDate": "2007110500",
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 6000
+        },
+        {
+          "questId": 6002
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "skills": [
+        {
+          "skillId": 1003,
+          "skillLevel": 1,
+          "masterLevel": 1
+        },
+        {
+          "skillId": 1004,
+          "skillLevel": 1,
+          "masterLevel": 1
+        }
+      ]
+    }
+  }
+}

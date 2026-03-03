@@ -1,0 +1,50 @@
+{
+  "questId": 10392,
+  "info": {
+    "name": "Teo\u0027s Nostalgic Reminscing I",
+    "descriptions": {
+      "notStarted": "You can apparently get some help from #b#p1002001##k at Lith Harbor...",
+      "inProgress": "You ran into #b#p1002001##k at Lith Harbor. #b#p1002001##k took one look at you, then told you how you remind him of himself in his younger, traveling days, so he feels the need to help you. He says if you can gather #b100 #t4000016#s#k and #b50 #t4000004#s#k, he\u0027ll acknowledge that you are worthy and give you his support. Ha, this should be quite a breeze for a great adventurer like you.\\n\\n#t4000016# #b#c4000016#/100#k\\n#t4000004# #b#c4000004#/50#k",
+      "completed": "You showed #b#p1002001##k at Lith Harbor what you were made of as an adventurer. #b#p1002001##k recognized the potential in you and gave you some money to use on your journeys. You\u0027re going to put this to good use and become an excellent adventurer."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002001,
+      "endDate": "2009101000",
+      "minLevel": 10
+    },
+    "complete": {
+      "npc": 1002001,
+      "items": [
+        {
+          "itemId": 4000016,
+          "count": 100
+        },
+        {
+          "itemId": 4000004,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 1002001
+    },
+    "onComplete": {
+      "meso": 100000,
+      "items": [
+        {
+          "itemId": 4000016,
+          "count": -100
+        },
+        {
+          "itemId": 4000004,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

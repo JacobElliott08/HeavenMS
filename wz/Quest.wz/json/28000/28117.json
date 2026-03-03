@@ -1,0 +1,23 @@
+{
+  "questId": 28117,
+  "info": {
+    "name": "4 Candles",
+    "descriptions": {
+      "notStarted": "If I go see #b#p9000021##k, I can receive a candle?  A special MapleStory\u0027s 4 Year Anniversary event...? Sounds interesting~",
+      "inProgress": "#b#p9000021##k told me if I safely guard the candles for 30 minutes, I will receive a #b#t04001167##k.  Since I have to maintain connection in order to protect the candles, might as well have fun and play all day today.",
+      "completed": "I received a #b#t04001167##k!\\nAfter safely keeping the candles, I received a #t04001167#. I should store away the #b#t04220045##k that I received from #p9000021#.\\n#p9000021# said if I collect 5 cake pieces and complete the birthday cake, I will get a large gift."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 40,
+      "endDate": "2009061623",
+      "normalAutoStart": true,
+      "startScript": "q28117s"
+    }
+  }
+}

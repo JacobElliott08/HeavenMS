@@ -1,0 +1,67 @@
+{
+  "questId": 20717,
+  "info": {
+    "name": "The Plants are Suspicious!",
+    "descriptions": {
+      "notStarted": "I better talk to Agent #b#p1103003##k of #m101000000# about a new assignment.",
+      "inProgress": "#p1103003# told me she\u0027s starting to worry about the #bplants that are growing in #m101010000##k. It looks like she plucked out a fruit from one of those plants and got violently sick. She suspects that one of the Black Mage\u0027s men injected some poison in the plants. I better pluck out a fruit to see if it\u0027s true. \\n\\n#i4032143# #t4032143# #b#c4032143# / 10#k",
+      "completed": "I gave #t4032143# to #p1103003#. After looking through the charts, #p1103003# found out that the fruits that are being produced at this time of the year can cause food poisoning..."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103003,
+      "minLevel": 18,
+      "prerequisiteQuests": [
+        {
+          "questId": 20716,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1103003,
+      "items": [
+        {
+          "itemId": 4032143,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 4032143,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

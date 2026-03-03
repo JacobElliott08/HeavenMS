@@ -1,0 +1,69 @@
+{
+  "questId": 8870,
+  "info": {
+    "name": "Spot On : Go See Mr. Spot",
+    "parent": "Spot On",
+    "descriptions": {
+      "notStarted": "Mr. Spot is in Kerning City, and he has something that could help Mom and Dad. I\u0027d better go see my parents first before I visit him.",
+      "inProgress": "I visited Mr. Spot and got the Mouse for Mom and Dad. I can get a #bNexon Prepaid#k from Mr. Spot if I ask them for #bAllowance#k. I\u0027ll cross my fingers...",
+      "completed": "I got my #bNexon Prepaid#k! I should keep it, because it will turn into Maple Points soon! SWEET!"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201040,
+      "minLevel": 1,
+      "repeatIntervalMinutes": 1440,
+      "endDate": "2007012423",
+      "prerequisiteQuests": [
+        {
+          "questId": 8869,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201040,
+      "prerequisiteQuests": [
+        {
+          "questId": 8869,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031529
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031542
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031529,
+          "count": -1
+        },
+        {
+          "itemId": 4031530,
+          "probability": 95,
+          "expirationDate": "2007020123"
+        },
+        {
+          "itemId": 4031531,
+          "probability": 5,
+          "expirationDate": "2007020111"
+        }
+      ]
+    }
+  }
+}

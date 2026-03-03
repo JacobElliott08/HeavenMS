@@ -1,0 +1,39 @@
+{
+  "questId": 2302,
+  "info": {
+    "name": "Endangered Mushking Empire",
+    "descriptions": {
+      "notStarted": "The Mushking Empire is in dire straits and in desperate need of help!\\r\\n",
+      "inProgress": "You should take the #bletter of recommendation#k from the job instructor and visit #b#p1300005##k in the Mushking Empire.",
+      "completed": "You took the letter of recommendation from the job instructor and met with the Head Security Officer of Mushking Empire."
+    },
+    "area": 30,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "normalAutoStart": true,
+      "minLevel": 30,
+      "startScript": "q2302s",
+      "maxLevel": 38,
+      "jobs": [
+        410,
+        420,
+        411,
+        421,
+        412,
+        422
+      ]
+    },
+    "complete": {
+      "npc": 1300005,
+      "endScript": "q2302e",
+      "items": [
+        {
+          "itemId": 4032375
+        }
+      ]
+    }
+  }
+}

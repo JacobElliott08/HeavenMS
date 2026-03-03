@@ -1,0 +1,53 @@
+{
+  "questId": 3441,
+  "info": {
+    "name": "Help Kevin the Soldier\u0027s Vacation Plans",
+    "parent": "VIP Ticket to Florina Beach",
+    "descriptions": {
+      "notStarted": "I heard Kevin the Soldier has something related with VIP ticket to Florina Beach at Omega Sector.",
+      "inProgress": "Kevin the Soldier was drafted into the army, but was never thrown in combat, and instead, is relegated to security duties at the Omega Sector. Feeling bored from all the security work, Kevin decided to earn some brownie-points for vacation by hunting down Mateons, and enlisted for my help. \\n\\n #t04000120# #b#c04000120##k/25 \\n #t04031206# #b#c04031206##k/1",
+      "completed": "What can I do with a Ripped Travel Ticket? I better check on Nara the Tour Guide first, just the way the ticket said."
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050011,
+      "minLevel": 30
+    },
+    "complete": {
+      "npc": 2050011,
+      "items": [
+        {
+          "itemId": 4000120,
+          "count": 25
+        },
+        {
+          "itemId": 4031206
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4000,
+      "items": [
+        {
+          "itemId": 4031207
+        },
+        {
+          "itemId": 4031206,
+          "count": -1
+        },
+        {
+          "itemId": 4031243
+        },
+        {
+          "itemId": 4000120,
+          "count": -25
+        }
+      ]
+    }
+  }
+}

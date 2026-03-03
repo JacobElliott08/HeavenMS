@@ -1,0 +1,56 @@
+{
+  "questId": 3426,
+  "info": {
+    "name": "The Brilliant Assistant",
+    "parent": "The Control Program for Rombot",
+    "descriptions": {
+      "inProgress": "Once again, I gave #bPorter#k Rombot\u0027s Memory Cards. Fortunately, the deciphering worked this time around, and I was able to get a hold of #b3 Deciphered Memory Cards#k for Kay. Now all I have to do is give them to her.",
+      "completed": "I gave Kay, who\u0027s at the Silo of Omega Sector, the #bDeciphered Memory Cards#k that she requested. I\u0027m anxious to see what she makes out of them."
+    },
+    "area": 37,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050013,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 3425,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2051001,
+      "items": [
+        {
+          "itemId": 4031118,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031118
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 16300,
+      "items": [
+        {
+          "itemId": 4031118,
+          "count": -3
+        },
+        {
+          "itemId": 2030011,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

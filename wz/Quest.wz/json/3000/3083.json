@@ -1,0 +1,69 @@
+{
+  "questId": 3083,
+  "info": {
+    "name": "Kenta\u0027s Advice",
+    "descriptions": {
+      "notStarted": "I should go see #p2060005#, the animal instructor at Aquarium Zoo, with my pet.",
+      "inProgress": "#p2060005#, the animal instructor at Aquarium Zoo, mentioned that if the pet\u0027s loyalty increases, then the pet will start walking in the same pace as its master, and offered a chance to increase the loyalty level of my pet. He gave me a task of finding #b5 pieces of paper#k hidden away somewhere in Aqua Road with my pet, and increase the closeness of my pet by #bat least 15#k. He even gave me a clue in that I should look into a #bbox#k at the bottom of the ocean... okay, now off to find the papers! \\n\\n#t4031274#  #b#c4031274##k / 1\\n#t4031275#  #b#c4031275##k / 1\\n#t4031276#  #b#c4031276##k / 1\\n#t4031277#  #b#c4031277##k / 1\\n#t4031278#  #b#c4031278##k / 1",
+      "completed": "I looked through the box at the very bottom of Aqua Road and wound up finding the 5 pieces of paper, with my pet accompanying my every move. Then I went back to Aquarium Zoo to see Kenta, and while going through the mission, the loyalty level had already been increased. My pet is now walking in the same pace as I am... wow..."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "minLevel": 30,
+      "petRequirement": {}
+    },
+    "complete": {
+      "npc": 2060005,
+      "items": [
+        {
+          "itemId": 4031274
+        },
+        {
+          "itemId": 4031275
+        },
+        {
+          "itemId": 4031276
+        },
+        {
+          "itemId": 4031277
+        },
+        {
+          "itemId": 4031278
+        }
+      ],
+      "petRequirement": {}
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "petSpeed": 1,
+      "experience": 3000,
+      "petTameness": 10,
+      "items": [
+        {
+          "itemId": 4031274,
+          "count": -1
+        },
+        {
+          "itemId": 4031275,
+          "count": -1
+        },
+        {
+          "itemId": 4031276,
+          "count": -1
+        },
+        {
+          "itemId": 4031277,
+          "count": -1
+        },
+        {
+          "itemId": 4031278,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "questId": 21017,
+  "info": {
+    "name": "Basic Fitness Training 3",
+    "descriptions": {
+      "notStarted": "Basic Training continues. If you want to start the third stage of Basic Training, you should talk to #b#p1201000##k.",
+      "inProgress": "#p1201000# wants to step up the intensity of the training and asks you to defeat #b#o0100133#s#k. This is getting more intense, but when you mentioned that to #p1201000#, your protests were ignored. Shoot, you\u0027d better just head over to #b#m140020200##k.",
+      "completed": "You defeated the #o0100133#s."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201000,
+      "startScript": "q21017s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21016,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2000
+      ]
+    },
+    "complete": {
+      "npc": 1201000,
+      "monsters": [
+        {
+          "monsterId": 100133,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 550,
+      "items": [
+        {
+          "itemId": 2000022,
+          "count": 25
+        },
+        {
+          "itemId": 2000023,
+          "count": 25
+        }
+      ]
+    }
+  }
+}

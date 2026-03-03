@@ -1,0 +1,45 @@
+{
+  "questId": 9504,
+  "info": {
+    "name": "깨끗한 바다 만들기!!",
+    "descriptions": {
+      "notStarted": "빅토리아 아일랜드와 오시리아 대륙 등에서 흘러 들어가는 쓰레기로 인해서 아쿠아로드가 오염되고 있다고 한다. #b#p9010000##k를 찾아가 도울 일이 없는지 알아보자.",
+      "inProgress": "플로리나 비치 곳곳에 있는 나무 상자에 방치 되어있는 #b#t04031321##k를 모아가자. \\n\\n#t04031321:# #b#c4031321#/20#k",
+      "completed": "바닷가에 버려진 #b#t04031321##k를 수집해서 깨끗이 처리하는 것을 도왔다. 앞으로도 깨끗한 메이플 월드를 만드는 일에 앞장서야겠다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 41,
+      "repeatIntervalMinutes": 120,
+      "startDate": "2006053000",
+      "endDate": "2006060700"
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 4031321,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 11000,
+      "items": [
+        {
+          "itemId": 4031321,
+          "count": -20
+        },
+        {
+          "itemId": 2022074,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

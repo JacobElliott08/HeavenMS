@@ -1,0 +1,31 @@
+{
+  "questId": 9970,
+  "info": {
+    "name": "페티트의 수리부품",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 중요한 부탁이 있다고 한다. 그녀에게 찾아가 보자.",
+      "inProgress": "#p9010008#의 #b#t04031923##k을 구해오자. 부품은 #r반짝이는 몬스터#k에게서 구할 수 있다. \\n\\n#i04031923# #t04031923# #b#c04031923#/30",
+      "completed": "구해온 부품을 #b#p9010010##k에게 가지고 갔다. 라디오가 제대로 작동하자 페티트가 매우 기뻐했다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 30,
+      "startDate": "2008030100",
+      "endDate": "2008040100"
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q9970e",
+      "items": [
+        {
+          "itemId": 4031923,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

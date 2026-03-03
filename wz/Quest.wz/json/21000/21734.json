@@ -1,0 +1,41 @@
+{
+  "questId": 21734,
+  "info": {
+    "name": "Traces of the Puppeteer",
+    "descriptions": {
+      "notStarted": "As soon as you reach Level 37, #b#p1002104##k sends you a message. Is there a new lead?",
+      "inProgress": "#p1002104# says that he\u0027s found hidden traces of the #o9300346# and that the puppeteer is hidden in a #bsmall cabin#k somewhere in #b#m105040200##k. He says you have the greenlight to finish off the #o9300346# if you run into him again.\\r\\n\\r\\n\\r\\n#o9300346##r #a217341##k",
+      "completed": "You defeated the #o9300346# without a definite clue to lead you to the #t4032323#. But then, #p1002104# flashed a comforting smile as if to tell you not to worry about a thing…"
+    },
+    "area": 6,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 37,
+      "normalAutoStart": true,
+      "startScript": "q21734s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21733,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1002104,
+      "endScript": "q21734e",
+      "monsters": [
+        {
+          "monsterId": 9300346
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "questId": 29925,
+  "info": {
+    "name": "Aran and Memory",
+    "descriptions": {
+      "notStarted": "Maha…was your weapon…? You\u0027re beginning to remember...little by little…",
+      "inProgress": "Maha…was your weapon…? You\u0027re beginning to remember...little by little…",
+      "completed": "Maha…was your weapon…? You\u0027re beginning to remember...little by little…"
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142130
+  },
+  "requirements": {
+    "start": {
+      "startScript": "q29925s",
+      "npc": 9000066,
+      "normalAutoStart": true,
+      "minLevel": 30,
+      "items": [
+        {
+          "itemId": 1142130
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    }
+  }
+}

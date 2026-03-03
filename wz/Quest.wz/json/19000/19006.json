@@ -1,0 +1,27 @@
+{
+  "questId": 19006,
+  "info": {
+    "name": "Mystical Artifact Discoverer",
+    "descriptions": {
+      "notStarted": "You can earn a title when you discover 8 Mystical Artifacts.",
+      "inProgress": "You can earn a title when you discover 8 Mystical Artifacts.",
+      "completed": "You have earned a title for discovering 8 Mystical Artifacts."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142125
+  },
+  "requirements": {
+    "start": {
+      "normalAutoStart": true,
+      "npc": 9000066,
+      "startScript": "q19006s",
+      "endDate": "2010030300",
+      "items": [
+        {
+          "itemId": 1142125
+        }
+      ]
+    }
+  }
+}

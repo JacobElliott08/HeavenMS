@@ -1,0 +1,48 @@
+{
+  "questId": 3065,
+  "info": {
+    "name": "Hughes\u0027s Hobby",
+    "descriptions": {
+      "notStarted": "I should go visit #p2012017#, the weird scientist living at the basement of Orbis Tower.",
+      "inProgress": "At a small dinky room in the basement of the Orbis Tower, which also happened to have flooded, I met up with #p2012017#. I accidentally broke #p2012017#\u0027s favorite toy baby seal. He proceeded to really get angry and demanded that I take out #b50 Scuba Pepe\u0027s#k and #b10 #t4000154#s#k.\\n\\n#t4000154# #b#c4000154##k/10\\nScuba Pepe #r#a30651#",
+      "completed": "I accidentally broke Hughes\u0027s Toy Baby Seal, so I got him some #t4000154# as well as kill off some Scuba Pepe\u0027s. Fortunatelly, Hughes seems to be okay by now."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012017,
+      "minLevel": 35
+    },
+    "complete": {
+      "npc": 2012017,
+      "items": [
+        {
+          "itemId": 4000154,
+          "count": 10
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 3210450,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9000,
+      "items": [
+        {
+          "itemId": 4000154,
+          "count": -10
+        },
+        {
+          "itemId": 2022040,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

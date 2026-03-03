@@ -1,0 +1,30 @@
+{
+  "questId": 3382,
+  "info": {
+    "name": "Yulete\u0027s Reward",
+    "descriptions": {
+      "notStarted": "#b#p2112014##k, a genius alchemist who isn\u0027t universally accepted but deserved to be, may know what #t4001159# and #t4001160# are for. I better go talk to #p2112014#.",
+      "inProgress": "After carefully examining #t4001159# and #t4001160#, #p2112014# stated that #bby combining the marbles that contain the essence of the two studies, he can actually form a whole new power that encompasses them all#k. I have a feeling that the materials required for this might be extensive... I better get #t4001159# and #t4001160# first.",
+      "completed": "Only #p2112014# might be capable of combining the two distinctive styles of work like Zenumist and Alcadno and make something out of it."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2112014,
+      "minLevel": 70,
+      "maxLevel": 85,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3365,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2112014,
+      "endScript": "q3382e"
+    }
+  }
+}

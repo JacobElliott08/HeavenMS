@@ -1,0 +1,41 @@
+{
+  "questId": 8220,
+  "info": {
+    "name": "Translated Communique",
+    "descriptions": {
+      "notStarted": "I lost the translated communique, then Let\u0027s go to Elpam Gorlab!",
+      "inProgress": "I told Elpam Gorlab what I want.",
+      "completed": "I got the translated communique from Elpam Gorlab again. Thank You!"
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201055,
+      "prerequisiteQuests": [
+        {
+          "questId": 8228,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201055,
+      "items": [
+        {
+          "itemId": 4032018,
+          "count": 0
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032018
+        }
+      ]
+    }
+  }
+}

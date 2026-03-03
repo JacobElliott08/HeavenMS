@@ -1,0 +1,102 @@
+{
+  "questId": 28280,
+  "info": {
+    "name": "[Hunt] Sweep the Snails!",
+    "descriptions": {
+      "notStarted": "#b#@1022007:##k in #b#m102000000##k has a favor to ask of you.",
+      "inProgress": "She says there are way too many Snails and would like you to eliminate 10 #rRed Snails#k and 10 #rBlue Snails#k.\\n\\nLet\u0027s report back to #bAyan#k in #b#m102000000##k upon completion.",
+      "completed": "You have swept out the Snails near #b#m102000000##k!"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022007,
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1022007,
+      "monsters": [
+        {
+          "monsterId": 100101,
+          "count": 10
+        },
+        {
+          "monsterId": 130101,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800
+    }
+  }
+}

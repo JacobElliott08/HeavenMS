@@ -1,0 +1,44 @@
+{
+  "questId": 3114,
+  "info": {
+    "name": "Eliza\u0027s Eternal Sleep",
+    "parent": "Goddess\u0027s Pet",
+    "descriptions": {
+      "inProgress": "#bEliza#k plans to sleep again until her goddess is released from Papa Pixie. She asks me to play an #binstrument#k to help her go to sleep. To play a goddess\u0027 harp... this won\u0027t be easy.",
+      "completed": "Glanced over at #bEliza#k as I finished playing the instrument, and noticed that she is already asleep. Sweet dreams."
+    },
+    "area": 33,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012026,
+      "minLevel": 83,
+      "prerequisiteQuests": [
+        {
+          "questId": 3113,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012026,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "info": "0",
+      "items": [
+        {
+          "itemId": 4161036
+        }
+      ]
+    },
+    "onComplete": {
+      "fame": 20
+    }
+  }
+}

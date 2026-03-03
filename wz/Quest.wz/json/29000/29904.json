@@ -1,0 +1,56 @@
+{
+  "questId": 29904,
+  "info": {
+    "name": "Noblesse",
+    "descriptions": {
+      "notStarted": "Prove that you\u0027re one of the Cygnus Knights and receive the #b\u003cNoblesse\u003e#k title.",
+      "inProgress": "Prove that you\u0027re one of the Cygnus Knights and receive the #b\u003cNoblesse\u003e#k title.",
+      "completed": "As a member of the honorable knighthood, you have received your first title, the #b\u003cNoblesse\u003e#k, upon pledging your loyalty to the Empress."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142065
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101000,
+      "normalAutoStart": true,
+      "startScript": "q29904s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20000,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 20015
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1101000
+    }
+  }
+}

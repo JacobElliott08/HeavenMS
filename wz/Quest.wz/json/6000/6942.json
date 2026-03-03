@@ -1,0 +1,32 @@
+{
+  "questId": 6942,
+  "info": {
+    "name": "Samuel\u0027s Revelation of the Second Truth",
+    "parent": "The Ultimate Stage of the Pirate",
+    "descriptions": {
+      "inProgress": "#b#p2081500##k says that he will tell me the Second Truth and wants me to come back and talk to him when I\u0027m ready.",
+      "completed": "#b#p2081500##k has told me the story of the Holy Corals, the Second Truth. He said there is one more story to be told. "
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081500,
+      "minLevel": 120,
+      "jobs": [
+        511,
+        521
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6941,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081500
+    }
+  }
+}

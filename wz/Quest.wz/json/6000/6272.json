@@ -1,0 +1,37 @@
+{
+  "questId": 6272,
+  "info": {
+    "name": " Lava of the Abandoned Mine",
+    "parent": "Clean water from the Lava",
+    "descriptions": {
+      "notStarted": "#b#p2020009##k recognized the book right away.",
+      "inProgress": " #b#p2020009##k told me to go see  #b#p2030008##k, the guardian of the Abandoned Mine in El Nath, if I want to get #q2121003#. He drinks lava?? I know he\u0027s the guardian of the Abandoned Mine, but would he really know such a thing?",
+      "completed": "The guardian of Abandoned Mine, #b#p2030008##k said it\u0027s impossible to drink lava. However, #q2121003##k is too appealing for me to give up now. He says that the blacksmith, #b#p2020000##k, could make a container that can hold the lava..."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020009,
+      "minLevel": 120,
+      "jobs": [
+        212
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6271,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030008
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500000
+    }
+  }
+}

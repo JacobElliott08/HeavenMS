@@ -1,0 +1,42 @@
+{
+  "questId": 2052,
+  "info": {
+    "name": "John\u0027s Pink Flower Basket",
+    "descriptions": {
+      "notStarted": "Let\u0027s go meet John at Lith Harbor.",
+      "inProgress": "At Lith Harbor, I met a fisherman named John. He wanted to get his wife a nice flower basket for their upcoming anniversary. He asked me if I could get him #b10 Pink Violas#k for her. According to him, a mysterious statue can lead me to where the flower is. Sleepywood ... SLEEPYWOOD ??? That\u0027s FAR !!!",
+      "completed": "I got John all #b10 Pink Violas#k. With these, he can make a beautiful flower basket for his wife on their anniversary. As a sign of appreciation, John got me a whole bunch of screws left over from ships here and there. By the way, if there are this many screws that have fallen out of ships, then how in the world are they even working ...? Are they carrying passengers on it ???"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 20000,
+      "minLevel": 15
+    },
+    "complete": {
+      "npc": 20000,
+      "items": [
+        {
+          "itemId": 4031025,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "items": [
+        {
+          "itemId": 4031025,
+          "count": -10
+        },
+        {
+          "itemId": 4003000,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

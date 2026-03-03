@@ -1,0 +1,30 @@
+{
+  "questId": 2260,
+  "info": {
+    "name": "To the Mushroom Castle!",
+    "parent": "About the Mushroom Castle...",
+    "descriptions": {
+      "notStarted": "You can finally find out what the Mushroom Castle is all about.",
+      "inProgress": "The Camel Cab tells you that you need to be over Level 30 for him to give information about the Mushroom Castle.",
+      "completed": "Camel Cab can finally share information about the Mushroom Castle now that you\u0027ve reached Level 30! You\u0027d better undergo job advancement and listen to the Camel Cab talk about the Mushroom Castle."
+    },
+    "area": 44,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2110005,
+      "startScript": "q2260s",
+      "prerequisiteQuests": [
+        {
+          "questId": 2259,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2110005,
+      "endScript": "q2260e"
+    }
+  }
+}

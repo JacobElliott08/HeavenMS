@@ -1,0 +1,54 @@
+{
+  "questId": 2000,
+  "info": {
+    "name": "Fixing Blackbull\u0027s House",
+    "descriptions": {
+      "notStarted": "I heard that Blackbull is fixing his house...",
+      "inProgress": "Right here, in this dusty town of Perion, I ran into an oddly-dressed man named Blackbull. He told me he needs to fix is house and wondered if I could help him out by getting him #b30 tree branches and 50 firewoods#k. If I do him a favor, I get myself a nice shield that he has, but what if I say no? I wouldn\u0027t ... be ... EATEN BY HIM ... no?? I really hope not...",
+      "completed": "I got Blackbull of Perion #b30 tree branches and 50 firewoods#k. With these, he can finally fix his house. I got this shield as a reward ... and ... well, scratchmarks here and there, and it looks pretty old ... is this even usable?"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1020000,
+      "minLevel": 10
+    },
+    "complete": {
+      "npc": 1020000,
+      "items": [
+        {
+          "itemId": 4000018,
+          "count": 50
+        },
+        {
+          "itemId": 4000003,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 1092000,
+          "probability": 9
+        },
+        {
+          "itemId": 1092001,
+          "probability": 1
+        },
+        {
+          "itemId": 4000003,
+          "count": -30
+        },
+        {
+          "itemId": 4000018,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

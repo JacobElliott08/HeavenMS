@@ -1,0 +1,82 @@
+{
+  "questId": 2041,
+  "info": {
+    "name": "Maya\u0027s Second Collection",
+    "parent": "Collecting For Maya",
+    "descriptions": {
+      "inProgress": "This time Maya wanted #b50 each of fireboar teeth, Bubbling\u0027s huge bubbles, pig ribbons, and tablecloths#k. Apparently, I can get those by hunting down the monster around the plateau, subway station, and prairies ... well, that\u0027s easy!",
+      "completed": "I got them all for Maya. Please don\u0027t tell me she wanted all these for free..."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012101,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2040,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1012101,
+      "items": [
+        {
+          "itemId": 4000024,
+          "count": 50
+        },
+        {
+          "itemId": 4000002,
+          "count": 50
+        },
+        {
+          "itemId": 4000035,
+          "count": 50
+        },
+        {
+          "itemId": 4000037,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 4000024,
+          "count": -50
+        },
+        {
+          "itemId": 4000037,
+          "count": -50
+        },
+        {
+          "itemId": 4000002,
+          "count": -50
+        },
+        {
+          "itemId": 4000035,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

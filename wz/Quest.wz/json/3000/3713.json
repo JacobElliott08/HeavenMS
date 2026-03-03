@@ -1,0 +1,41 @@
+{
+  "questId": 3713,
+  "info": {
+    "name": "A New Force Emerging",
+    "descriptions": {
+      "notStarted": "#b#p2081000##k of #b#m240000000##k seemed to be very concerned about something. What must that be? I better go talk to Chief Tatamo.",
+      "inProgress": "#p2081000# said there\u0027s a new force that will affect all of Maple World, and seemed unsure whether to welcome them or watch out for them. I\u0027ll have to go #b#m100030000##k to find out exactly who they are...",
+      "completed": "There\u0027s a huge wooden entryway leading into #m100030000# which I\u0027d never seen before. It almost looks like an entryway to a fortress... I should try talking to #p1094000#, who was standing in front of me. I remember him telling me that a #bpirate #p1072008##k fort is being built here.  It looks nearly complete..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081000,
+      "minLevel": 10,
+      "endDate": "2008111100",
+      "prerequisiteQuests": [
+        {
+          "questId": 2190
+        },
+        {
+          "questId": 3246
+        },
+        {
+          "questId": 3381
+        },
+        {
+          "questId": 3115
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1094000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7000
+    }
+  }
+}

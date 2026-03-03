@@ -1,0 +1,45 @@
+{
+  "questId": 21708,
+  "info": {
+    "name": "Your First Informant Assignment",
+    "descriptions": {
+      "notStarted": "Now that you have an idea of what an informant does, it\u0027s time to get your hands dirty. #b#p1002104##k will tell you what to do.",
+      "inProgress": "Your first information gathering assignment is to find out why the #o1210102#s near #m100000000# have started acting so wildly. They\u0027re usually so tame! #p1002104# tells you to ask the mushroom monster scholar about the occurrence and see if he can shed some light on what\u0027s been going on. #b#p1012111##k can be found in #b#m100000000##k.",
+      "completed": "You met with #p1012111#."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 13,
+      "prerequisiteQuests": [
+        {
+          "questId": 21706,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1012111
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032313
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

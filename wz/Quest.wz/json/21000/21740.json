@@ -1,0 +1,34 @@
+{
+  "questId": 21740,
+  "info": {
+    "name": "The Stolen Seal Stone of Orbis",
+    "descriptions": {
+      "notStarted": "You lost the Seal Stone of Orbis. What does this mean? Head to #b#m104000000##k and talk to #b#p1002104##k to get some advice.",
+      "inProgress": "After explaining to #p1002104# everything that took place in #m200000000#, #p1002104# felt that this information should be relayed to #b#p1201000##k as well.",
+      "completed": "#p1201000# seemed glad to have discovered that the Black Wings are after the Seal Stone and that there\u0027s more than one Seal Stone out there. She encouraged you with motivating words, then taught you a new skill that she had just decoded, known as the #bCombo Smash#k."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 45,
+      "startScript": "q21740s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21739,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1201000,
+      "endScript": "q21740e"
+    }
+  }
+}

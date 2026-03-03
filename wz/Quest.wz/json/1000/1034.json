@@ -1,0 +1,61 @@
+{
+  "questId": 1034,
+  "info": {
+    "name": "Tasty Mushroom Candy",
+    "parent": "Nina\u0027s Request",
+    "descriptions": {
+      "inProgress": "I told Nina Sen wanted a Mushroom Candy. She then took out ten of those from her pocket, and asked me if I could give those to him. I better go see #bSen#k right now.",
+      "completed": "When Sen received the Mushroom Candy, he seemed very grateful and even gave me 2 of those."
+    },
+    "area": 20,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2102,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1033,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2001,
+      "items": [
+        {
+          "itemId": 4031792,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031792,
+          "count": 10
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 20,
+      "items": [
+        {
+          "itemId": 4031792,
+          "count": -10
+        },
+        {
+          "itemId": 2022253,
+          "count": 2,
+          "jobRestriction": 1
+        }
+      ]
+    }
+  }
+}

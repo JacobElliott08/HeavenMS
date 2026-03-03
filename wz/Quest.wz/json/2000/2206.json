@@ -1,0 +1,52 @@
+{
+  "questId": 2206,
+  "info": {
+    "name": "Strange Dish 3",
+    "descriptions": {
+      "notStarted": "Tangyoon says he\u0027s found a new ingredient to work with. I wonder what Tangyoon has in mind now?",
+      "inProgress": "Tangyoon has been experimenting with a new dish as of late, using an ingredient that no one has ever used before. This time, he says he\u0027s been working with Cold Eye Tails! He says that he could make something new and fresh  if only I would bring him #b50 Cold Eye Tails#k... Hope it comes out tasty! \\n\\n#i 4000023##t 4000023#  #b#c 4000023#/50#k ",
+      "completed": "Just as I\u0027d thought... Cold Eye Tails aren\u0027t meant to be eaten."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092000,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 2205,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092000,
+      "items": [
+        {
+          "itemId": 4000023,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 1092000,
+      "minLevel": 40
+    },
+    "onComplete": {
+      "experience": 36000,
+      "items": [
+        {
+          "itemId": 2001001,
+          "count": 50
+        },
+        {
+          "itemId": 4000023,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

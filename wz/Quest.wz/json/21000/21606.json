@@ -1,0 +1,60 @@
+{
+  "questId": 21606,
+  "info": {
+    "name": "The Missing Saddle",
+    "descriptions": {
+      "notStarted": "You\u0027ve lost your #t1912011#! What should you do?",
+      "inProgress": "#p2020007# tells you to gather materials to make another #t1912011# and to also pay a service fee of #b10 million mesos#k for the replacement. What?!\\r\\n\\r\\n#b10,000,000 mesos#k\\r\\n#i4000048# #t4000048# #b#c4000048# / 50#k",
+      "completed": "After paying the huge service fee and gathering all the materials, you received another #t1912011# from #p2020007#. Better not lose it again!"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020007,
+      "minLevel": 50,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 21604,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1912011
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2020007,
+      "items": [
+        {
+          "itemId": 4000048,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -10000000,
+      "items": [
+        {
+          "itemId": 4000048,
+          "count": -50
+        },
+        {
+          "itemId": 1912011
+        }
+      ]
+    }
+  }
+}

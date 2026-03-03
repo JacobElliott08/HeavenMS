@@ -1,0 +1,49 @@
+{
+  "questId": 8070,
+  "info": {
+    "name": "Tsuri\u0027s Special Seafood 2",
+    "parent": "Tsuri\u0027s Special Seafood",
+    "descriptions": {
+      "notStarted": "Now that Tsuri has #b#t04000153##k with him, will he be good at catching those fishes? I better go check him out...",
+      "inProgress": "Hah, I wound up having to catch for him. I\u0027ll need to get #b100 #t04000158#s#k from #b#o4230200##k.\\n\\n#t04000158#  #b#c04000158##k/100",
+      "completed": " That bowl of rice covered in Poopa\u0027s eggs does not look enticing at all. Does it taste alright? I think I\u0027ll let others find out..."
+    },
+    "area": 48,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120008,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 8069,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120008,
+      "items": [
+        {
+          "itemId": 4000158,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 4000158,
+          "count": -100
+        },
+        {
+          "itemId": 2040707
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "questId": 2234,
+  "info": {
+    "name": "Enjoy the Entitlement!",
+    "parent": "Captain Al\u0027s Passing of Knowledge",
+    "descriptions": {
+      "notStarted": " ",
+      "inProgress": "This task is to enjoy your hard-earned #rEntitlements#k! #bCaptain Al#k\u0027s mission is for me to use the Entitlement to spend the #rcurrent Rep down to 500#k. He also wanted to make sure I stacked up enough Reps by saving all the way up to 2,000. Better return to Captain Al once I complete the mission.\\n\\n#rTotal of at least 2,000 Rep\\nCurrent Rep under 500#k\\n(Open the Family window to see both the current Rep and the total Rep)",
+      "completed": "Captain Al commended my efforts for successfully accomplishing all the missions, and told me I have the looks to become a great Senior. He also reiterated the fact that it\u0027s very important to provide a full support to my Juniors and everyone in the Family. I better ask Al if I have any questions about the Family. Time for me to start a big Family of my own!"
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002103,
+      "prerequisiteQuests": [
+        {
+          "questId": 2233,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "endScript": "q2234e"
+    }
+  }
+}

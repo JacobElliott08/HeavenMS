@@ -1,0 +1,58 @@
+{
+  "questId": 3020,
+  "info": {
+    "name": "Collecting Wolf Skin",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "#bScadur#k mentioned that the price of wolf skin has gone up the roof these days, and wanted to make a deal with me. 80 Hector Tails and 80 White Fang Tails will be enough for him to return the ring to me, along with telling me everything he knows regarding the situation. .\\n\\n#t4000051# #b#c4000051##k/80\\n#t4000052# #b#c4000052##k/80",
+      "completed": "Being satisfied with Hector Tails and White Fang Tails, Scadur said he would give the ring back."
+    },
+    "area": 33,
+    "order": 17
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020007,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3019,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020007,
+      "items": [
+        {
+          "itemId": 4000051,
+          "count": 80
+        },
+        {
+          "itemId": 4000052,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9450,
+      "nextQuest": 3021,
+      "items": [
+        {
+          "itemId": 2000004,
+          "count": 30
+        },
+        {
+          "itemId": 4000051,
+          "count": -80
+        },
+        {
+          "itemId": 4000052,
+          "count": -80
+        }
+      ]
+    }
+  }
+}

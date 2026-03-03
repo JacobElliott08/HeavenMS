@@ -1,0 +1,35 @@
+{
+  "questId": 2325,
+  "info": {
+    "name": "James\u0027s Whereabouts (1)",
+    "descriptions": {
+      "notStarted": "The #bHead Security Officer#k says that he has something to tell you.",
+      "inProgress": "You should find #bJames#k, who\u0027s somewhere hiding inside the castle.",
+      "completed": "You found #bJames#k, who was hiding inside the castle."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300005,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2323,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300008,
+      "endScript": "q2325e"
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "nextQuest": 2326
+    }
+  }
+}

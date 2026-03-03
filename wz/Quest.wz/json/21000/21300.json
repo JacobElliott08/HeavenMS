@@ -1,0 +1,27 @@
+{
+  "questId": 21300,
+  "info": {
+    "name": "A Weapon Never Leaves Its Owner",
+    "descriptions": {
+      "notStarted": "As soon as you reach Level 70, #b#p1201000##k strikes up a conversation with you…",
+      "inProgress": "#p1201000# tells you that the polearm is acting strange once again and that it might be trying to tell you something. What\u0027s the problem this time? You\u0027d better head over to #b#m140000000##k.",
+      "completed": "#p1201002# told you that a thief came to the island late one night and removed a Red Jade from his body! He asked you to catch the thief and told you that the thief headed toward #m140020300#..."
+    },
+    "area": 6,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201000,
+      "minLevel": 70,
+      "normalAutoStart": true,
+      "startScript": "q21300s",
+      "jobs": [
+        2110
+      ]
+    },
+    "complete": {
+      "npc": 1201002
+    }
+  }
+}

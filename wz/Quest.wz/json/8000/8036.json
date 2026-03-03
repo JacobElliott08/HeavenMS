@@ -1,0 +1,47 @@
+{
+  "questId": 8036,
+  "info": {
+    "name": "Maya\u0027s Concerns 3",
+    "parent": "Maya\u0027s Concerns",
+    "descriptions": {
+      "notStarted": "I think we\u0027ve turned the corner now. Will this be it? I need to ask Maya.",
+      "inProgress": "To speed up the baby Lioner\u0027s recovery, Maya asked me if I could gather some fish for it, FRESH fish at that. Since #b#o5400000##k eats fresh fish, I better gather up #b100 #t4000088#s#k. \\n#t4000088#  #b#c4000088##k/100",
+      "completed": "I\u0027ve done all I could here. Maya can take care of the rest. I hope the Lioner gets better!"
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012101,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 8035,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012101,
+      "items": [
+        {
+          "itemId": 4000088,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000,
+      "meso": 10000,
+      "items": [
+        {
+          "itemId": 4000088,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

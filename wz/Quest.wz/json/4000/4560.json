@@ -1,0 +1,52 @@
+{
+  "questId": 4560,
+  "info": {
+    "name": "Merry-go-round in Kampung",
+    "parent": "Away from Kampung",
+    "descriptions": {
+      "notStarted": "#b#p9270062##k was so impressed with one of the merry-go-round he saw during his recent trip, that he decided to build on in Kampung village for little kids.",
+      "inProgress": "In order to build a nice sturdy merry-go-round, #b#p9270062##k needs plenty of #b#t4000478##k. Will Kampung village have its very own merry-go-round? \\n\\n#o9420540# #r#a45601##k \\n#t4000478# #r#c4000478#/200#k ",
+      "completed": "Kampung\u0027s very own merry-go-round is finally completed and look at all those joy in little kids\u0027 faces!"
+    },
+    "area": 49,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270062,
+      "minLevel": 85,
+      "prerequisiteQuests": [
+        {
+          "questId": 4559,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270062,
+      "items": [
+        {
+          "itemId": 4000478,
+          "count": 200
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9420540,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 78500,
+      "items": [
+        {
+          "itemId": 4000478,
+          "count": -200
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "questId": 9901,
+  "info": {
+    "name": "추석맞이 초성퀴즈",
+    "descriptions": {
+      "notStarted": "#b카산드라#k가 추석을 맞아 퀴즈를 준비했다고 하는데...",
+      "inProgress": "초성퀴즈는 단어의 초성만으로 된 문제를 보고 답을 맞히는 것이라 했다. 문제가 어렵지 않아야 할텐데...",
+      "completed": "10월 3일까지 매일 풀수록 좋은 선물을 받을 확률이 높다고 한다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "startDate": "2007092000",
+      "endDate": "2007100400"
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "quiz2_start"
+    }
+  }
+}

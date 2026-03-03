@@ -1,0 +1,82 @@
+{
+  "questId": 2042,
+  "info": {
+    "name": "Maya\u0027s Third Collection",
+    "parent": "Collecting For Maya",
+    "descriptions": {
+      "inProgress": "This time, Maya requested #b10 Lupin Dolls and 50 each of Cold Eye\u0027s tail, Tortie\u0027s shell, and Iron Hog\u0027s Steel Hoof#k. Apparently I can get those through monsters at the highland, beach, and prarie. This is getting harder now...",
+      "completed": "I got them all for Maya. I\u0027m still not getting anything?? How many more times do I have to do this??"
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012101,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2041,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1012101,
+      "items": [
+        {
+          "itemId": 4000039,
+          "count": 50
+        },
+        {
+          "itemId": 4000023,
+          "count": 50
+        },
+        {
+          "itemId": 4000026,
+          "count": 10
+        },
+        {
+          "itemId": 4000045,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4000026,
+          "count": -10
+        },
+        {
+          "itemId": 4000023,
+          "count": -50
+        },
+        {
+          "itemId": 4000045,
+          "count": -50
+        },
+        {
+          "itemId": 4000039,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

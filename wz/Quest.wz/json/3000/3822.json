@@ -1,0 +1,28 @@
+{
+  "questId": 3822,
+  "info": {
+    "name": "Do Gong\u0027s Swallow",
+    "parent": "Do Gong Seeking Swallow",
+    "descriptions": {
+      "notStarted": "#b#p2091001##k of #b#m250000000##k seems to be concerned about something...",
+      "inProgress": "#p2091001# seemed worried that the #b#p2071006##k he had raised hasn\u0027t been seen around #m250000000# lately, and he seemed genuinely concerned, for #p2071006# always made time to say hello even when it was busy. #p2071006#?? I think I know who that may be... I better go see #p2071006# and let it know of #p2091001#\u0027s words.",
+      "completed": "#b#p2071006##k seem to remember things about #p2091001#, but doesn\u0027t seem 100% sure about it..."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091001,
+      "minLevel": 50
+    },
+    "complete": {
+      "npc": 2071006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000
+    }
+  }
+}

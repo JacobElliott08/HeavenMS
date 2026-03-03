@@ -1,0 +1,86 @@
+{
+  "questId": 3052,
+  "info": {
+    "name": "Acquiring Materials for the Fur Coat",
+    "parent": "Scadur\u0027s New Fur Coat",
+    "descriptions": {
+      "notStarted": "I better go introduce myself to Scadur of El Nath with this letter of recommendation from Lisa.",
+      "inProgress": "Apparently Scadur had been waiting to change his fur coat for quite some time, for his is worn out. He asked me if I could gather up the finest set of materials for his new fur coat.\\n\\n #t4000051# #b#c4000051##k/250 \\n #t4000052# #b#c4000052##k/250 \\n #t4000049# #b#c4000049##k/80 \\n #t4020005# #b#c4020005##k/50",
+      "completed": "I helped Scadur make the finest fur coat available in Ossyria."
+    },
+    "area": 33,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020007,
+      "prerequisiteQuests": [
+        {
+          "questId": 3051,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020007,
+      "items": [
+        {
+          "itemId": 4020005,
+          "count": 50
+        },
+        {
+          "itemId": 4000049,
+          "count": 80
+        },
+        {
+          "itemId": 4000051,
+          "count": 250
+        },
+        {
+          "itemId": 4000052,
+          "count": 250
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 27000,
+      "fame": 2,
+      "items": [
+        {
+          "itemId": 2040504,
+          "probability": 1
+        },
+        {
+          "itemId": 2040501,
+          "probability": 1
+        },
+        {
+          "itemId": 2040516,
+          "probability": 1
+        },
+        {
+          "itemId": 2040513,
+          "probability": 1
+        },
+        {
+          "itemId": 4000051,
+          "count": -250
+        },
+        {
+          "itemId": 4000052,
+          "count": -250
+        },
+        {
+          "itemId": 4000049,
+          "count": -80
+        },
+        {
+          "itemId": 4020005,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

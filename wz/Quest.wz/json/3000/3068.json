@@ -1,0 +1,62 @@
+{
+  "questId": 3068,
+  "info": {
+    "name": "Hughes\u0027s Research Material",
+    "descriptions": {
+      "notStarted": "I heard Hughes ran out of materials to conduct research ... I should go check him out.",
+      "inProgress": "The mad scientist living at the basement of Orbis, Hughes, wanted me to gather up some materials for his new research. \\n\\n#t4000155# #b#c4000155# / 20#k \\n#t4000156# #b#c4000156# / 20",
+      "completed": "I got him #t4000155# and #t4000156# for his research."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012017,
+      "minLevel": 35,
+      "repeatIntervalMinutes": 1440,
+      "prerequisiteQuests": [
+        {
+          "questId": 3066,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1102061
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012017,
+      "items": [
+        {
+          "itemId": 4000156,
+          "count": 20
+        },
+        {
+          "itemId": 4000155,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 2000006,
+          "count": 10
+        },
+        {
+          "itemId": 4000155,
+          "count": -20
+        },
+        {
+          "itemId": 4000156,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

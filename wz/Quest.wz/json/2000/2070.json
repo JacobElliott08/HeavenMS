@@ -1,0 +1,85 @@
+{
+  "questId": 2070,
+  "info": {
+    "name": "Progress on Fossil Research",
+    "parent": "Dr. Betty\u0027s Research on Plants",
+    "descriptions": {
+      "notStarted": "I heard Dr. Betty has finished the research on plants. Maybe I should go and see how it is.",
+      "inProgress": "I met Dr. Betty again. Doctor told me the research was finished, and explained it to me. Then Doctor told me to take the Research Report and deliver it to Dr. Winston in Perion. Dr. Betty also informed me that if I take #b100 #t4000005#s, 50 #t4000018#s, 1 #t4031153#, and 1 pair of #t1032000##k, Dr. Winston would be really happy. \\n\\n#t4000005# #c4000005#/100\\n#t4000018# #c4000018#/50\\n#t4031153# #c4031153#/1\\n#t1032000# #c1032000#/1",
+      "completed": "I delivered Dr. Betty\u0027s Fossil Research Report to Dr. Winston in  Perion. Along with the report, I also gave him the leaves, firewoods, Stump\u0027s tear, and earrings. In return, Dr. Winston gave me the Leaf Earrings."
+    },
+    "area": 30,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032104,
+      "minLevel": 23,
+      "prerequisiteQuests": [
+        {
+          "questId": 2069,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022006,
+      "items": [
+        {
+          "itemId": 1032000
+        },
+        {
+          "itemId": 4000018,
+          "count": 50
+        },
+        {
+          "itemId": 4031152
+        },
+        {
+          "itemId": 4031153
+        },
+        {
+          "itemId": 4000005,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031152
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 3800,
+      "items": [
+        {
+          "itemId": 4000005,
+          "count": -100
+        },
+        {
+          "itemId": 4000018,
+          "count": -50
+        },
+        {
+          "itemId": 4031153,
+          "count": -1
+        },
+        {
+          "itemId": 1032000,
+          "count": -1
+        },
+        {
+          "itemId": 1032025
+        },
+        {
+          "itemId": 4031152,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

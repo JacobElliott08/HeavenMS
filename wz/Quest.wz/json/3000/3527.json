@@ -1,0 +1,33 @@
+{
+  "questId": 3527,
+  "info": {
+    "name": "In Search for the Lost Memory",
+    "descriptions": {
+      "notStarted": "According to the Memory Keeper, in order to find my lost memory, I need to go back to the starting point of my adventure.  Starting point of my adventure? Let\u0027s see... Wouldn\u0027t that be when I left Maple Island to Victoria Island for the first time and got my job?  I should go see #b#p1090000##k. ",
+      "inProgress": "It had been a long time since I last met with #p1090000#.  He said he remembered back when I was just a beginner and I knew nothing. He was happy to see how I\u0027ve grown into a great pirate.  I was touched that he still remembered our first meeting from such a long time ago. ",
+      "completed": "It had been a long time since I last met with #p1090000#.  He said he remembered back when I was just a beginner and I knew nothing. He was happy to see how I\u0027ve grown into a great pirate.  I was touched that he still remembered our first meeting from such a long time ago. "
+    },
+    "area": 46
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "startScript": "q3527s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3507,
+          "state": "STARTED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522
+      ]
+    }
+  }
+}

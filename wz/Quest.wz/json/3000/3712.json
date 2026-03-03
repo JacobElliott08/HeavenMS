@@ -1,0 +1,62 @@
+{
+  "questId": 3712,
+  "info": {
+    "name": "Recovering the Black Spirit",
+    "descriptions": {
+      "notStarted": "Let\u0027s go see #p2081007#, who\u0027s lying wounded somewhere in #m240040400#.",
+      "inProgress": " #p2081007# asked me to defeat the monsters that possess \"black spirit\" which have been tainted by Horntail\u0027s evil powers.  He wanted me to take those spirits to #b#p2081006##k in prison so that he/she can analyze it. Let\u0027s gather the #bblack-stained spirits of the monsters#k and take them to #p2081006#, who\u0027s at the entrance of the Cave of Life.\\n\\n#i4031412##t4031412#  #b#c4031412##k / 1\\n#i4031413##t4031413#  #b#c4031413##k / 1\\m#i4031414##t4031414#  #b#c4031414##k / 1\\n#i4031415##t4031415#  #b#c4031415##k / 1",
+      "completed": " I gathered all the black spirits tainted by Horntail and took them to #p2081006# as #p2081007# requested."
+    },
+    "area": 41
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081007,
+      "minLevel": 100
+    },
+    "complete": {
+      "npc": 2081006,
+      "items": [
+        {
+          "itemId": 4031412
+        },
+        {
+          "itemId": 4031413
+        },
+        {
+          "itemId": 4031414
+        },
+        {
+          "itemId": 4031415
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2081007,
+      "minLevel": 100
+    },
+    "onComplete": {
+      "experience": 72000,
+      "items": [
+        {
+          "itemId": 4031412,
+          "count": -1
+        },
+        {
+          "itemId": 4031413,
+          "count": -1
+        },
+        {
+          "itemId": 4031414,
+          "count": -1
+        },
+        {
+          "itemId": 4031415,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

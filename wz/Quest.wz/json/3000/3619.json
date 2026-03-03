@@ -1,0 +1,39 @@
+{
+  "questId": 3619,
+  "info": {
+    "name": "Pot with a Hole",
+    "parent": "Kong Ji\u0027s Request",
+    "descriptions": {
+      "notStarted": "I heard that Kong Ji is in need of help. I should go check it out...",
+      "inProgress": "Kong Ji, who lives at a tavern in Folk Town with her stepmom, is a nice girl who does everything her stepmom asks her to do, however ludicrous the task may be. This time, the stepmom ordered her to fill up a pot with water, but the pot had a hole at the bottom, which made it impossible to fill up the pot. She asked me if I could get her a new #t4031230#. I heard that Grandma Yeon, who lives at the place where the water mill is, sells pots, and if I keep her up to date on his husband\u0027s whereabouts, then she may give me the pot. \\n\\n#t4031230# #b#c4031230##k/1",
+      "completed": "I gave Kong Ji, who was panicking because her pot had a hole at the bottom, the #t4031230# that Grandma Yeon made at the water mill. Apparently, Grandma Yeon only sells these pots to the closest few. I should go check on Kong Ji again down the road."
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071004,
+      "minLevel": 37
+    },
+    "complete": {
+      "npc": 2071004,
+      "items": [
+        {
+          "itemId": 4031230
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 4031230,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

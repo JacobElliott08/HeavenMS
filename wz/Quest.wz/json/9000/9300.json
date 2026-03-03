@@ -1,0 +1,31 @@
+{
+  "questId": 9300,
+  "info": {
+    "name": "\u0027주먹펴고 일어서\u0027님께 인사드리기",
+    "parent": "새해 문안 인사",
+    "descriptions": {
+      "notStarted": "새해를 맞이하여 #p9010000#가 이벤트를 준비했다는데 어딘가에 있는#p9010000#를 찾아가보자.",
+      "inProgress": "#p9010000#로부터 빅토리아 아일랜드의 각 마을에 있는 #b5명의 현자#k에게 새해 문안인사를 드리고 마지막에 주시는 #b어떤 물건#k을 받아와 달라는 부탁을 받았다. #p9010000#는 맨 먼저 #b페리온#k에 계시는 #b#p1022000##k님을 찾아가서 문안인사를 하라고 했다.",
+      "completed": "#p9010000#의 부탁으로 페리온에 계시는 #p1022000#님께 문안인사를  드렸다. "
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 129600,
+      "endDate": "2008021400"
+    },
+    "complete": {
+      "npc": 1022000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 450,
+      "nextQuest": 9301
+    }
+  }
+}

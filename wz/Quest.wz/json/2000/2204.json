@@ -1,0 +1,42 @@
+{
+  "questId": 2204,
+  "info": {
+    "name": "Strange Dish 1",
+    "descriptions": {
+      "notStarted": "I\u0027ve lost my appetite as of late... I wonder if Tangyoon could help me find a newfound appreciation for food by cooking me something new? I\u0027m definitely ready for the challenge now so I should go talk to Tangyoon in The Nautilus\u0027 cafeteria. Oh yea, the cafeteria\u0027s on the upper deck.",
+      "inProgress": "Tangyoon has been experimenting with a new dish as of late, using an ingredient that no one has ever used before. He\u0027s apparently been working with Evil Eye Tails! He says that he could make something new and fresh if only I would bring him #b40 Evil Eye Tails#k... But come on, Evil Eyes? Does he even know if those things are edible? \\n\\n#i 4000007##t 4000007#  #b#c 4000007#/40#k",
+      "completed": "Man, just as I\u0027d suspected, Evil Eyes definitely aren\u0027t as tasty as I had hoped. But in a burger, well, it\u0027s not all that bad after all."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092000,
+      "minLevel": 25
+    },
+    "complete": {
+      "npc": 1092000,
+      "items": [
+        {
+          "itemId": 4000007,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 4000007,
+          "count": -40
+        },
+        {
+          "itemId": 2020004,
+          "count": 40
+        }
+      ]
+    }
+  }
+}

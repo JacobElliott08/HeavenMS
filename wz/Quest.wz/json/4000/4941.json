@@ -1,0 +1,35 @@
+{
+  "questId": 4941,
+  "info": {
+    "name": "A Word to the Wise",
+    "parent": "Old Man Tom\u0027s Word",
+    "descriptions": {
+      "notStarted": "I hear that Old Man Tom has been hearing noises from the old Prendergast Mansion on the outskirts of New Leaf City.  A haunted house?  Sounds like the perfect Halloween adventure!",
+      "inProgress": "Old Man Tom told me about the haunted Prendergast Mansion.  Apparently, the doors won\u0027t open for just anyone... I\u0027ve got to figure out how to get in.  Tom mentioned that the toymaker Prendergast used to hold parties for kids for holidays, including Halloween costume parties around this time of year.  Maybe if I wear a costume I can get in!  Hmmm... Now where can I buy one?",
+      "completed": "I made it into the old Prendergast Mansion, against the advice of Old Man Tom.  I wonder why he\u0027s so dead set on keeping people out of the house?  Maybe if I explore the house, I can find out more about what happened here..."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201079,
+      "minLevel": 15,
+      "endDate": "2007103123"
+    },
+    "complete": {
+      "npc": 9201079,
+      "prerequisiteQuests": [
+        {
+          "questId": 4958,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

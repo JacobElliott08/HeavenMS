@@ -1,0 +1,31 @@
+{
+  "questId": 29926,
+  "info": {
+    "name": "Aran in Agony",
+    "descriptions": {
+      "notStarted": "You made a Red Jade for Maha. This should help him relax for a bit, right?",
+      "inProgress": "You made a Red Jade for Maha. This should help him relax for a bit, right?",
+      "completed": "You made a Red Jade for Maha. This should help him relax for a bit, right?"
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142131
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "normalAutoStart": true,
+      "startScript": "q29926s",
+      "minLevel": 70,
+      "items": [
+        {
+          "itemId": 1142131
+        }
+      ],
+      "jobs": [
+        2111,
+        2112
+      ]
+    }
+  }
+}

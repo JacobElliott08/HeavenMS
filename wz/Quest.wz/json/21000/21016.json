@@ -1,0 +1,51 @@
+{
+  "questId": 21016,
+  "info": {
+    "name": "Basic Fitness Training 2",
+    "descriptions": {
+      "notStarted": "Basic Training continues. If you want to start the second stage of Basic Training, you should talk to #b#p1201000##k.",
+      "inProgress": "#p1201000# says that this time you have to go to #b#m140020100##k and defeat some #r#o0100132#s#k. Come to think of it, #p1201000# seems different from the time you first saw her, back when she had that mystical aura about her...",
+      "completed": "You defeated the #o0100132#s."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201000,
+      "startScript": "q21016s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21015,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2000
+      ]
+    },
+    "complete": {
+      "npc": 1201000,
+      "monsters": [
+        {
+          "monsterId": 100132,
+          "count": 15
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 450,
+      "items": [
+        {
+          "itemId": 2000022,
+          "count": 20
+        },
+        {
+          "itemId": 2000023,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

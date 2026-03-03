@@ -1,0 +1,46 @@
+{
+  "questId": 28249,
+  "info": {
+    "name": "To Kerning City",
+    "parent": "Unveiling the Map",
+    "descriptions": {
+      "notStarted": "#b#@1022007:##k in #bPerion#k says #b#@1052001:##k in #bKerning City#k will be able to solve the last mystery. But first, let\u0027s talk to #b#@1022007:##k.",
+      "inProgress": "Let\u0027s ask #b#@1052001:##k in #bKerning City#k for help in order to solve the mystery of the white portion on the #rDirty Treasure Map#k, since he\u0027s known to be an extremely reliable source.",
+      "completed": "#b#@1052001:##k in #bKerning City#k says he may be able to reveal the white portion of the #rDirty Treasure Map#k. Let\u0027s talk to him."
+    },
+    "area": 10,
+    "order": 7
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022007,
+      "prerequisiteQuests": [
+        {
+          "questId": 28248,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1052001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

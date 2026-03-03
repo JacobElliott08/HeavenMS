@@ -1,0 +1,39 @@
+{
+  "questId": 6400,
+  "info": {
+    "name": "Jonathan\u0027s Court",
+    "descriptions": {
+      "notStarted": "I should go and meet with Kidd. His royal highness is asking for me so... ",
+      "inProgress": "You\u0027re telling me he\u0027s the Ruling King of the Seagulls? Why would the King of the Seagulls be looking for me? Well, let me go see him and find out.  ",
+      "completed": "Jonathan... The King of the Seagulls. Well he certainly has a presence about him. "
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1094000,
+      "minLevel": 120,
+      "jobs": [
+        522
+      ]
+    },
+    "complete": {
+      "npc": 1092019,
+      "infoNumber": 6401,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000000,
+      "skills": [
+        {
+          "skillId": 5221003,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

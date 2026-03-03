@@ -1,0 +1,44 @@
+{
+  "questId": 3343,
+  "info": {
+    "name": "The Hidden Words",
+    "parent": "Dr. De Lang\u0027s Notes",
+    "descriptions": {
+      "inProgress": "When I showed #p2020005# #t4161031#, he took a good look at it, and told me if I wanted to unveil the hidden message, I\u0027ll have to bring #b#t4031737##k. \\n\\n#i4031737##t4031737# #b#c4031737##k/1",
+      "completed": "I brought #t4031737# as ordered by #p2020005#. Without any hesitation, #p2020005# poured the blood all over #t4161031#..."
+    },
+    "area": 44,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "minLevel": 75,
+      "prerequisiteQuests": [
+        {
+          "questId": 3342,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "items": [
+        {
+          "itemId": 4031737
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4031737,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

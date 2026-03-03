@@ -1,0 +1,45 @@
+{
+  "questId": 3069,
+  "info": {
+    "name": "The Lost Sap of Nependeath",
+    "descriptions": {
+      "notStarted": "I lost the sap of Nependeath. I better go talk to Ericsson about it.",
+      "inProgress": "Fortunately Ericsson had some left over from the last time he made them. He wasn\u0027t very pleased with the fact that I lost it, but...I think he\u0027ll make me another batch.",
+      "completed": "I got a new batch of sap of Nependeath from Ericsson."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012018,
+      "prerequisiteQuests": [
+        {
+          "questId": 3048
+        },
+        {
+          "questId": 3047,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031200
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012018
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -10000,
+      "fame": -2,
+      "items": [
+        {
+          "itemId": 4031200
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "questId": 3359,
+  "info": {
+    "name": "Searching for the Master Key",
+    "parent": "The Secret, Quiet Passage",
+    "descriptions": {
+      "inProgress": "I told #p2111006# that his pass was useless, and he told me that since it\u0027s such an old pass, that its verification code might have expired. Why did I put so much hope into this? But, says #p2111006#, he will do everything in his power to give me an entry to the Secret Passage, and asked me to find #b100 #t4000363#s#k from #r#o6110301##k.\\n\\n#i4000363##t4000363# #b#c4000363##k/100",
+      "completed": "I fell for #p2111006#\u0027s promise, and got 100 #t4000363#s from #o6110301#. That\u0027s when #p2111006# started making new combination of verification codes out of the #t4000363#s."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111006,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3358,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111006,
+      "items": [
+        {
+          "itemId": 4000363,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 60000,
+      "items": [
+        {
+          "itemId": 4000363,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

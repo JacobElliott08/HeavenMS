@@ -1,0 +1,92 @@
+{
+  "questId": 3611,
+  "info": {
+    "name": "Eliminate Goblins",
+    "parent": "Goblin at Black Mountain",
+    "descriptions": {
+      "inProgress": "Armed with 3 types of food that Goblins cannot resist, the quest to defeat the Goblins has now officially begun. Chumji advised that I drop the baits at various spots near the abandoned house in the Black Mountain to draw the Goblins out, and proceeded to give me the details on exactly where to drop them: roasted pork in front of a stack of rocks; buckwheat paste inside a tree hole; rice wine in a stone lantern?\\n\\n#o7130400# #r#a36113##k\\n#o7130401# #r#a36111##k\\n#o7130402# #r#a36112##k\\n#t4031232# #b#c4031232##k/1\\n#t4031233# #b#c4031233##k/1\\n#t4031234# #b#c4031234##k/1",
+      "completed": "I brought roasted pork, buckwheat paste, and rice wine and made my way up to the very top of the Black Mountain, where the abandoned house is located. I was able to successfully draw the 3 King Goblins out from the house and defeated all of them. When the Goblins were defeated, they dropped a bunch of jewelry, and after bringing them all to Chumji, he decided to give me one as a gift."
+    },
+    "area": 37,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071000,
+      "minLevel": 60,
+      "prerequisiteQuests": [
+        {
+          "questId": 3610,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 2022050
+        },
+        {
+          "itemId": 2022051
+        },
+        {
+          "itemId": 2022052
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071000,
+      "items": [
+        {
+          "itemId": 4031234
+        },
+        {
+          "itemId": 4031232
+        },
+        {
+          "itemId": 4031233
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 7130401
+        },
+        {
+          "monsterId": 7130402
+        },
+        {
+          "monsterId": 7130400
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000,
+      "items": [
+        {
+          "itemId": 4031232,
+          "count": -1
+        },
+        {
+          "itemId": 4031233,
+          "count": -1
+        },
+        {
+          "itemId": 4031234,
+          "count": -1
+        },
+        {
+          "itemId": 1002483
+        },
+        {
+          "itemId": 1322033
+        },
+        {
+          "itemId": 1102064
+        },
+        {
+          "itemId": 4031238
+        }
+      ]
+    }
+  }
+}

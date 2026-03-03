@@ -1,0 +1,47 @@
+{
+  "questId": 1017,
+  "info": {
+    "name": "Mai\u0027s Final Training",
+    "parent": "Mai\u0027s Training",
+    "descriptions": {
+      "notStarted": "Mai\u0027s training is a simple monster-hunt. But it is very useful in getting used to hunting. Let\u0027s get Mai\u0027s training, which might be the last training in Maple Island.",
+      "inProgress": "Mai told me to hunt stronger monsters. Of course it is important to know your own strength, but to develop your strength, you need to try to hunt stronger monsters.\\n\\n#o1210102# #r#a10171# #k",
+      "completed": "After getting Mai\u0027s traning, I became much stronger. I think I am going to leave Maple Island to get a job I like. Let\u0027s go to South Ferry and head to Victoria Island."
+    },
+    "area": 20,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 12100,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1016,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 12100,
+      "monsters": [
+        {
+          "monsterId": 1210102
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50,
+      "meso": 300
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "questId": 20600,
+  "info": {
+    "name": "Training Never Ends ",
+    "descriptions": {
+      "notStarted": "#p1101002# seems eager to talk to me about something...",
+      "inProgress": "#p1101002# told me that being at Level 100 still means I have some training to do. He suggested I learn from the Chief Knights who never stop training. He even told me I may one day be able to acquire a new skill...",
+      "completed": "#p1101002# told me that being at Level 100 still means I have some training to do. He suggested I learn from the Chief Knights who never stop training. He even told me I may one day be able to acquire a new skill..."
+    },
+    "area": 15,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 100,
+      "npc": 1101002,
+      "normalAutoStart": true,
+      "startScript": "q20600s",
+      "jobs": [
+        1111,
+        1112,
+        1211,
+        1212,
+        1311,
+        1312,
+        1411,
+        1412,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1101002
+    }
+  }
+}

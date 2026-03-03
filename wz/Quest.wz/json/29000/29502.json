@@ -1,0 +1,30 @@
+{
+  "questId": 29502,
+  "info": {
+    "name": "Title Challenge - Pink Bean Slayer",
+    "descriptions": {
+      "notStarted": "#b#eTitle Challenge - Pink Bean Slayer#n(Special Title)\\n#k#e#bPink Bean Slayer#k#n, the title given to the person who slays the most Pink Beans!  Dalair said that if I hunt a Pink Bean but don\u0027t report it to him, it won\u0027t count.",
+      "inProgress": "#b#eTitle Challenge - Pink Bean Slayer#n(Special Title)\\n#k\\n - Pink Bean Hunting Record that Dalair knows about : #r#jmon##k \\n\\nThe person who reports the most Pink Beans hunted to Dalair will receive this title.  But, if I give up, I\u0027ll have to start all over from zero next time!",
+      "completed": "#b#eTitle Challenge - Pink Bean Slayer#n(Special Title)\\n#k\\n - Pink Bean Hunting Record that Dalair knows about : #r#jmon##k \\n\\nThe honorable \u0027#bPink Bean Slayer#k\u0027 title is given to the one person who slays the most Pink Beans."
+    },
+    "area": 51,
+    "medalItemId": 1142008
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000040,
+      "repeatIntervalMinutes": 0,
+      "startScript": "q29502s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3521,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000040,
+      "endScript": "q29502e"
+    }
+  }
+}

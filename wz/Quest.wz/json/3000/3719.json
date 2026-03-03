@@ -1,0 +1,40 @@
+{
+  "questId": 3719,
+  "info": {
+    "name": "Nex the Time Guard",
+    "parent": "Year 2021- Just Another Day",
+    "descriptions": {
+      "notStarted": "Andy the Time Traveler says he has something to tell you before your first time travel.",
+      "inProgress": "Andy the Time Traveler informs you that you must pass the test Nex the Gatekeeper of Time, who lives in the Old Tree of Tera, gives you before you can travel through time. Enter the Old Tree of Tera and pass Nex\u0027s test.",
+      "completed": "You have passed the first test given by Nex the Gatekeeper of Time and have earned the right to travel to another time. You can now teleport to Average Town in the year 2021. Go to the Time Gate with the Time Traveler\u0027s Pocket Watch."
+    },
+    "area": 41,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082004,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3718,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082004,
+      "monsters": [
+        {
+          "monsterId": 7120100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 80000,
+      "nextQuest": 3720
+    }
+  }
+}

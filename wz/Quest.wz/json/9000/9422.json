@@ -1,0 +1,61 @@
+{
+  "questId": 9422,
+  "info": {
+    "name": "맛있는 코카-콜라",
+    "descriptions": {
+      "notStarted": "#b#t04031325##k을 #b#p9001002##k에게 가져다 주자.",
+      "inProgress": "#b#p9001002##k가 코카-콜라를 만들 수 있도록 재료를 구해다 주자.\\n\\n#t02022000:# #b#c02022000#/1#k \\n#t4031325# #b#c4031325#/1#k",
+      "completed": "#b#p9001002##k가 코카-콜라를 만드는 것을 도와주고 #t01092035#를 얻었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9001002,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2006070300",
+      "endDate": "2007030100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9421,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031325
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9001002,
+      "items": [
+        {
+          "itemId": 2022000
+        },
+        {
+          "itemId": 4031325
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 2022000,
+          "count": -1
+        },
+        {
+          "itemId": 1092035
+        },
+        {
+          "itemId": 4031325,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

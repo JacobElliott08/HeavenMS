@@ -1,0 +1,55 @@
+{
+  "questId": 21711,
+  "info": {
+    "name": "Enter the Cynical Orange Mushrooms!",
+    "descriptions": {
+      "notStarted": "This is your first assignment as an informant. You\u0027re hopeful that this time #p1012111# of #b#m100000000##k has found the cause of the #o1210102#s\u0027 strange change in behavior. You\u0027d better go talk to #b#p1012111##k. ",
+      "inProgress": "#p1012111# says that #ra cynical group of #o1210102##ks was seen hanging around #m100000000#. He thinks they may have influenced the regular #o1210102#s as well. He then instructs you to eliminate #r50 #o9300274#s#k and give him #banything you find that might be considered odd#k...\\r\\n\\r\\n#o9300274##r #a217111##k\\r\\n#i4032315# #t4032315# #b#c4032315# / 1#k",
+      "completed": "You eliminated the #o9300274# and brought back the #t4032315# for #p1012111#. He found it unusual and asked you to wait while he gives it a detailed analysis."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012111,
+      "minLevel": 15,
+      "prerequisiteQuests": [
+        {
+          "questId": 21710,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1012111,
+      "items": [
+        {
+          "itemId": 4032315
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9300274,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 970,
+      "items": [
+        {
+          "itemId": 4032315,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

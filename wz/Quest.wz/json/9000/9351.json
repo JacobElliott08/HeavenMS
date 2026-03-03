@@ -1,0 +1,54 @@
+{
+  "questId": 9351,
+  "info": {
+    "name": "새마음 새출발!",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 졸업, 입학을 축하한다는 말을 하고 싶다는데...",
+      "inProgress": "졸업과 입학을 모두 다 함께 축하하자며 카산드라는 아랫마을의 #b#p2071007##k를 찾아가 보라고 말했다. 약간의 재료만 가지고 가면 그녀에게 향수를 받을 수 있을 거라는데...\\n\\n#t4031257# #b#c4031271#/7#k \\n#t4031258# #b#c4031258#/5#k",
+      "completed": "향수와 함께 하는 졸업과 입학이라니, 어쩐지 멋진걸?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 30,
+      "maxLevel": 69,
+      "repeatIntervalMinutes": 360,
+      "startDate": "2007022600",
+      "endDate": "2007031200"
+    },
+    "complete": {
+      "npc": 2071007,
+      "items": [
+        {
+          "itemId": 4031258,
+          "count": 5
+        },
+        {
+          "itemId": 4031271,
+          "count": 7
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 16300,
+      "items": [
+        {
+          "itemId": 4031271,
+          "count": -7
+        },
+        {
+          "itemId": 4031258,
+          "count": -5
+        },
+        {
+          "itemId": 2022061,
+          "count": 2
+        }
+      ]
+    }
+  }
+}

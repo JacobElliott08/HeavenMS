@@ -1,0 +1,95 @@
+{
+  "questId": 9825,
+  "info": {
+    "name": "햇님이에게 선물을",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 도움이 더 필요하다고 하는데...",
+      "inProgress": "아랫마을에 사는 #b#p2071008##k는 친구가 없어 외롭다고 했다. 루디브리엄에서 인형을 구해서 #b#p2071008##k에게 선물하자. \\n\\n#b#t04000108# #k#c004000108#/50#k \\n#b#t04000109# #k#c04000109#/50#k \\n#b#t04000143# #k#c04000143#/50#k \\n#b#t04000147# #k#c04000147#/10#k",
+      "completed": "어린이날 선물로 #b#p2071008##k에게 인형들을 선물했다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 71,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2007050400",
+      "endDate": "2007051400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9820,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071008,
+      "items": [
+        {
+          "itemId": 4000109,
+          "count": 50
+        },
+        {
+          "itemId": 4000143,
+          "count": 50
+        },
+        {
+          "itemId": 4000147,
+          "count": 10
+        },
+        {
+          "itemId": 4000108,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 65000,
+      "items": [
+        {
+          "itemId": 4000108,
+          "count": -50
+        },
+        {
+          "itemId": 4000109,
+          "count": -50
+        },
+        {
+          "itemId": 4000143,
+          "count": -50
+        },
+        {
+          "itemId": 4000147,
+          "count": -10
+        },
+        {
+          "itemId": 4004002,
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "itemId": 4140103,
+          "probability": 1
+        },
+        {
+          "itemId": 4004000,
+          "count": 3,
+          "probability": 2
+        },
+        {
+          "itemId": 4004001,
+          "count": 3,
+          "probability": 2
+        },
+        {
+          "itemId": 4004003,
+          "count": 3,
+          "probability": 2
+        }
+      ]
+    }
+  }
+}

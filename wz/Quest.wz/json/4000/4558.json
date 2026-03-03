@@ -1,0 +1,52 @@
+{
+  "questId": 4558,
+  "info": {
+    "name": "Off to the City",
+    "parent": "Away from Kampung",
+    "descriptions": {
+      "notStarted": "#b#p9270062##k just realized he needs something he can use as travel expenses while going around the city. Maybe #b#t4000477##k could come useful because they\u0027re such a rare item in the city.",
+      "inProgress": "#b#t4000477#s#k can be sold at a high price in the city market place. #b#p9270062##k must have plenty of them before the trip, otherwise he would come short of travel expenses in the middle of the trip. \\n\\n#o9420539# #r#a45581##k \\n#t4000477# #r#c4000477#/200#k",
+      "completed": "Now #b#p9270062##k is fully ready for the trip, and it\u0027s time to enjoy. Yeah!"
+    },
+    "area": 49,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270062,
+      "minLevel": 85,
+      "prerequisiteQuests": [
+        {
+          "questId": 4557,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270062,
+      "items": [
+        {
+          "itemId": 4000477,
+          "count": 200
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9420539,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 54500,
+      "items": [
+        {
+          "itemId": 4000477,
+          "count": -200
+        }
+      ]
+    }
+  }
+}

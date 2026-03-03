@@ -1,0 +1,53 @@
+{
+  "questId": 4556,
+  "info": {
+    "name": "Grand Finale",
+    "parent": "Surprise Birthday Party",
+    "descriptions": {
+      "notStarted": "There\u0027s nothing betther than great bonfire as a finale of the party. But somehow, there are not enough wooden barrels to creat grand bonfire. #b#p9270058##k must work something out quickily.",
+      "inProgress": "#b#t4000473##k would be perfect to create a hugh flame of the bonfire. #b#p9270058##k need at least 100 of them in order make the grand finale of the party. \\n\\n#o9420535# #r#a45561##k \\n#t4000473# #r#c4000473#/200#k",
+      "completed": "What a grand finale! It was the best birthday party EVER!"
+    },
+    "area": 49,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270058,
+      "minLevel": 85,
+      "prerequisiteQuests": [
+        {
+          "questId": 4555,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270058,
+      "items": [
+        {
+          "itemId": 4000473,
+          "count": 200
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9420535,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 89000,
+      "meso": 10000,
+      "items": [
+        {
+          "itemId": 4000473,
+          "count": -200
+        }
+      ]
+    }
+  }
+}

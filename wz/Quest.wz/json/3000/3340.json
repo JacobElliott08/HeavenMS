@@ -1,0 +1,51 @@
+{
+  "questId": 3340,
+  "info": {
+    "name": "The Key to the Secret Book",
+    "parent": "Dr. De Lang\u0027s Notes",
+    "descriptions": {
+      "inProgress": "I mentioned the book I found at the underground study to #p2111004#. I told her that the book may hold the clue to #p2111002#\u0027s disappearance... then I asked Phyllia for #t4031744#. She seemed hesitant, but she gave me the item in the end. Time to go back to the #bunderground study#k.",
+      "completed": "Looking at the hidden hole, I matched #t4031744# into it, and... the rose engraving on #t04031744# matched the shape of the hole. That\u0027s when a light flashed out of the hole. Okay, time to look more into it."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111004,
+      "minLevel": 75,
+      "prerequisiteQuests": [
+        {
+          "questId": 3339,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111016,
+      "items": [
+        {
+          "itemId": 4031744
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031744
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4031744,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

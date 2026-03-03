@@ -1,0 +1,52 @@
+{
+  "questId": 2289,
+  "info": {
+    "name": "The New Song",
+    "descriptions": {
+      "notStarted": "He must have found his Composition Notes by now. Go and get the Composition Notes from #bMaestro Rho#k.",
+      "inProgress": "Deliver the #bComposition Notes#k to #bLana#k, the CEO of Big Hit Records.",
+      "completed": "All preparations for Blake\u0027s debut performance are now complete. Go over to #bBlake#k and give him the good news."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052120,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2288,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052121,
+      "items": [
+        {
+          "itemId": 4032507
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032507
+        }
+      ]
+    },
+    "onComplete": {
+      "nextQuest": 2290,
+      "experience": 1320,
+      "items": [
+        {
+          "itemId": 4032507,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

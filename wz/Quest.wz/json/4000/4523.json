@@ -1,0 +1,68 @@
+{
+  "questId": 4523,
+  "info": {
+    "name": "Return of Capt. Latanica",
+    "descriptions": {
+      "notStarted": "#bRalph the wanderer#k is sensing dark force around the Ghostship Area... I have to check him out once again.",
+      "inProgress": "#bRalph the wanderer#k believes that #rCapt. Latanica#k is back!!! He wanted me to enter the engine room once again, but he needs to find out that I am still in shape. I will have to prove to him that I have been training myself and am prepared.\\n\\n",
+      "completed": "I was finally able to prove to him that I am still prepared to enter the engine room. Now, Capt. Latanica is all mine!"
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270030,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 4510,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4511,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4512,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4513,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4000381,
+          "count": -1
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270030,
+      "monsters": [
+        {
+          "monsterId": 9420512,
+          "count": 100
+        },
+        {
+          "monsterId": 9420511,
+          "count": 100
+        },
+        {
+          "monsterId": 9420510,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000381
+        }
+      ]
+    }
+  }
+}

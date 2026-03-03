@@ -1,0 +1,45 @@
+{
+  "questId": 29903,
+  "info": {
+    "name": "Master Adventurer",
+    "descriptions": {
+      "notStarted": "You can earn the #b\u003cMaster Adventurer\u003e#k title by completing your 4th Job Advancement as an Adventurer.",
+      "inProgress": "Adventurers who complete the 4th Job Advancement will receive the #b\u003cMaster Adventurer\u003e#k title. Go find NPC #p9000040#, who can be found in every town.",
+      "completed": "You have earned the #b\u003cMaster Adventurer\u003e#k title by completing your 4th Job Advancement as an Adventurer."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142110
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 120,
+      "normalAutoStart": true,
+      "npc": 9000040,
+      "startScript": "q29903s",
+      "items": [
+        {
+          "itemId": 1142110
+        }
+      ],
+      "jobs": [
+        112,
+        122,
+        132,
+        212,
+        222,
+        232,
+        312,
+        322,
+        412,
+        422,
+        512,
+        522
+      ]
+    },
+    "complete": {
+      "npc": 9000040,
+      "endScript": "q29903e"
+    }
+  }
+}

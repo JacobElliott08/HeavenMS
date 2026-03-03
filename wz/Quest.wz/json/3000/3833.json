@@ -1,0 +1,27 @@
+{
+  "questId": 3833,
+  "info": {
+    "name": "Gathering Up the Lacking Ingredients",
+    "descriptions": {
+      "notStarted": "#b#p2092000##k of #b#m251000000##k told me he needed to tell me something.",
+      "inProgress": "#p2092000# has been short on herbs that should be sent to #p2091002# due to the dastardly ways of Lord Pirate. #p2092000# told me other herbs will be needed to replace the original herb, and asked me to gather up as much #b#t04000294##k as possible...\\n\\n#i4000294# #t4000294# #b#c4000294##k",
+      "completed": "I wound up giving #p2092000# #t04000294#."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2092000,
+      "minLevel": 56
+    },
+    "complete": {
+      "npc": 2092000,
+      "endScript": "q3833e",
+      "items": [
+        {
+          "itemId": 4000294
+        }
+      ]
+    }
+  }
+}

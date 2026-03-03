@@ -1,0 +1,67 @@
+{
+  "questId": 3016,
+  "info": {
+    "name": "Hella is Found!",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "Hella requested that I get this #bpendant#k to Jade. She also mentioned something about an old diary that she found at home years ago, and it mentioned the existence of the Book of Ancient, and that the owner lost it somewhere deep in the valley of the snowfield. Jade should fill up the rest for me. I got to go see him right now and inform him of her whereabouts."
+    },
+    "area": 33,
+    "order": 13
+  },
+  "requirements": {
+    "start": {
+      "npc": 2032000,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3015,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020006,
+      "items": [
+        {
+          "itemId": 4031052
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031052
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 12320,
+      "nextQuest": 3017,
+      "items": [
+        {
+          "itemId": 4031052,
+          "count": -1
+        },
+        {
+          "itemId": 2040701,
+          "probability": 1
+        },
+        {
+          "itemId": 2040702,
+          "probability": 1
+        },
+        {
+          "itemId": 2040707,
+          "probability": 1
+        },
+        {
+          "itemId": 2040708,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "questId": 3106,
+  "info": {
+    "name": "Snowman Legend",
+    "parent": "Snowfield Giant",
+    "descriptions": {
+      "inProgress": "#p2020007# tells me the story of the Snowman. According to #p2020007#\u0027s story, the creature is quite gentle. What could have made it attack #p2020006#? Let\u0027s go back to #b#p2020006##k.",
+      "completed": "Told #p2020006# about #p2020007#\u0027s story of the #o8220001#. #p2020006# says it can\u0027t be true, because #o8220001# attacked him first and got mad over the entire thing. Strange that his story is different from what I heard from #p2020007#. Who speaks the truth? Or perhaps there\u0027s another story behind this? Let\u0027s get back to #p2020007#."
+    },
+    "area": 33,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020007,
+      "prerequisiteQuests": [
+        {
+          "questId": 3105,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

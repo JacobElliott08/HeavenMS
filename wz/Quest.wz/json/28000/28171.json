@@ -1,0 +1,64 @@
+{
+  "questId": 28171,
+  "info": {
+    "name": "The Reason Why Chief Stan is Livid",
+    "parent": "What\u0027s going on in Henesys?",
+    "descriptions": {
+      "notStarted": "It\u0027s been said that #b#@1012003:##k in #b#m100000000##k greatly enjoys playing the guitar.",
+      "inProgress": "Talk to #b#@1012003:##k in #b#m100000000##k.",
+      "completed": "#b#@1012003:##k in #b#m100000000##k needs help investigating the incident. Let\u0027s talk to him."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012003,
+      "prerequisiteQuests": [
+        {
+          "questId": 28170,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032480
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1012003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 4032480,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

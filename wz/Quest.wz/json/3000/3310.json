@@ -1,0 +1,46 @@
+{
+  "questId": 3310,
+  "info": {
+    "name": "Carson\u0027s Experiment",
+    "parent": "Zenumist and the Missing Alchemist",
+    "descriptions": {
+      "notStarted": "I found out through Bedin about the incident that happened a long time ago, and there are two ple that hold the final clues.  One is the missing alchemist himself, the other is the president of the society!   Seems like he knows something about the missing alchemist...",
+      "inProgress": "Carson told me if I wanted to know more about the incident, then I\u0027ll have to prove him my worth, by entering the #bclosed-off lab#k where #rHomun#k is, and acquire the Magic Control Device and control the monsters through that.  Once I throw the device into the Pentagram of Alchemy in the lab, the monsters can be controlled in an instant, and then I\u0027ll need to bring back #b#t4031709##k as evidence...  \\n\\n#i4031709##t4031709# #b#c4031709##k/1",
+      "completed": "After I told him I successfully controlled Homunclu, that\u0027s when the president started discussing serious matters with me."
+    },
+    "area": 44,
+    "order": 1,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111000,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3309,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111000,
+      "items": [
+        {
+          "itemId": 4031709
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 4031709,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

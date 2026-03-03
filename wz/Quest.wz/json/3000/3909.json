@@ -1,0 +1,45 @@
+{
+  "questId": 3909,
+  "info": {
+    "name": "Dancer\u0027s Ringing",
+    "descriptions": {
+      "notStarted": "#b#p2101000##k, the dancer of #b#m260000000##k, seems to be looking for something to improve her set of moves...",
+      "inProgress": "#p2101000# is an ambitious dancer who desires to be the best. She came up with an idea of putting on a bell on her dress, so whenever she dances, the bell would jingle, adding on to the whole experience. She felt that this will take her to stardom, and asked me to get some #b#t4000328#s#k from #r#o2100105##k. Hmmm, I knew she liked to dance, but #t4000328#? Oh well, I\u0027ll have to help her get it.\\n\\n#i4000328# #t4000328#  #b#c4000328##k/20",
+      "completed": "I got #p2101000# some #t4000328#. There\u0027s a rumor that if #t4000328# rings, #o2100105# will appear. Will this be okay with me...? The thing is, #p2101000# didn\u0027t seem afraid one bit."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101000,
+      "minLevel": 24,
+      "prerequisiteQuests": [
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101000,
+      "items": [
+        {
+          "itemId": 4000328,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4000328,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

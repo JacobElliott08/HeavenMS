@@ -1,0 +1,29 @@
+{
+  "questId": 10108,
+  "info": {
+    "name": "그린 캠페인 훈장 바꾸기",
+    "descriptions": {
+      "notStarted": "다시 운영자를 찾아가면 그린 캠페인 훈장을 바꿀 수 있다.",
+      "inProgress": "다시 운영자를 찾아가면 그린 캠페인 훈장을 바꿀 수 있다.",
+      "completed": "다시 운영자를 찾아가면 그린 캠페인 훈장을 바꿀 수 있다."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "startScript": "q10108s",
+      "repeatIntervalMinutes": 0,
+      "startDate": "2008111300",
+      "endDate": "2008121900",
+      "minLevel": 13,
+      "prerequisiteQuests": [
+        {
+          "questId": 10082,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  }
+}

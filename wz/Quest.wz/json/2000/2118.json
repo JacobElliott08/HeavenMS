@@ -1,0 +1,71 @@
+{
+  "questId": 2118,
+  "info": {
+    "name": "Eliminate Monsters from the Site",
+    "descriptions": {
+      "notStarted": "#p1022006# asked me to wait while he\u0027s analyzing #t4000196# and #t4000197#.",
+      "inProgress": "#p1022006# seemed shocked to find out what he had found out through studying #t4000196# and #t4000197#, but he didn\u0027t want to divulge the information on me. He wanted me to first eliminate the monsters, so I\u0027ll do that. \\n\\n#o2230110# #r#a21182##k\\n#o2230111# #r#a21181#",
+      "completed": "Winston claimed the monsters have decreased dramatically, but I disagree. Not only that, but I felt a strange vibe around the excavation site. What would that be..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022006,
+      "prerequisiteQuests": [
+        {
+          "questId": 2117,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022006,
+      "monsters": [
+        {
+          "monsterId": 2230111,
+          "count": 300
+        },
+        {
+          "monsterId": 2230110,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 2000001,
+          "count": 40,
+          "probability": 11
+        },
+        {
+          "itemId": 2000002,
+          "count": 20,
+          "probability": 11
+        },
+        {
+          "itemId": 2000003,
+          "count": 30,
+          "probability": 11
+        },
+        {
+          "itemId": 2000006,
+          "count": 10,
+          "probability": 11
+        },
+        {
+          "itemId": 2040707,
+          "probability": 3
+        },
+        {
+          "itemId": 2040704,
+          "probability": 3
+        }
+      ]
+    }
+  }
+}

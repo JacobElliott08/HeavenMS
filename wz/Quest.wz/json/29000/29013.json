@@ -1,0 +1,47 @@
+{
+  "questId": 29013,
+  "info": {
+    "name": "Maple Explorer",
+    "descriptions": {
+      "notStarted": "To be acknowledged as the ultimate explorer in Maple World, let\u0027s earn the #b\u003cMaple Explorer\u003e#k title.r\\nVictoria Explorer\\nOssyria Explorer\\r\\nYou must earn a total of 2 titles.",
+      "inProgress": "#b#eTitle - Maple Explorer#n#k\\r\\n● Requirement(s)\\nCan acquire after earning the Victoria Explorer and Ossyria Explorer titles.#b\\r\\n● Status\\n#y29015# : #u29015#\\n#y29012# : #u29012#",
+      "completed": "You have finally acquired the #b\u003cMaple Explorer\u003e#k title upon earning both the Victoria and Ossyria Explorer titles."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142120
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "normalAutoStart": true,
+      "minLevel": 60,
+      "infoNumber": 27020,
+      "infoEx": [
+        null
+      ]
+    },
+    "complete": {
+      "npc": 9000040,
+      "prerequisiteQuests": [
+        {
+          "questId": 29015,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 29012,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142120
+        }
+      ]
+    }
+  }
+}

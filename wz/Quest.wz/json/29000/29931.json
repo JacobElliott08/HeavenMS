@@ -1,0 +1,26 @@
+{
+  "questId": 29931,
+  "info": {
+    "name": "Honorary Subway Worker",
+    "descriptions": {
+      "notStarted": "The subway lines in the northern part of Kerning City is about to shut down construction because of monsters. Rescue #e#bMr. Lim#k#n from the abandoned subway station and acquire the title #b\u003cHonorary Subway Worker\u003e#k.",
+      "inProgress": "#e#bHonorary Subway Worker title#k#n\\r\\n* Requirements: Eliminate at least #b10,000 monsters#k on the Abandoned Subway Platform\\r\\n* Current count: #b#R7762##k\\r\\nAfter completing the requirements, see #bMr. Lim#k to receive your medal.\\r\\n",
+      "completed": "Acquired the title #bHonorary Subway Worker#k."
+    },
+    "area": 51,
+    "medalItemId": 1142141
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "minLevel": 25
+    },
+    "complete": {
+      "npc": 9000066,
+      "infoNumber": 7662,
+      "infoEx": [
+        null
+      ]
+    }
+  }
+}

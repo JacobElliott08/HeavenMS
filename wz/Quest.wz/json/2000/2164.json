@@ -1,0 +1,55 @@
+{
+  "questId": 2164,
+  "info": {
+    "name": "Athena Pierce\u0027s Gift",
+    "parent": "The Lost Letter",
+    "descriptions": {
+      "inProgress": "I\u0027d better hurry and bring this orgel to Kyrin who is onboard on The Nautilus waiting for me, especially for Athena Pierce\u0027s sake who is dying to see Kyrin. Anyhow, it\u0027s amazing how deeply their fates are intertwined...",
+      "completed": "I\u0027ve delivered the orgel to Kyrin per Athena Pierce\u0027s request. Kyrin seemed so happy- I guess it was a good thing that I picked up the letter from the trash after all?"
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012100,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 2163,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "items": [
+        {
+          "itemId": 4031840
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031840
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 4031840,
+          "count": -1
+        },
+        {
+          "itemId": 2030019,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

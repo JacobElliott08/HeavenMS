@@ -1,0 +1,51 @@
+{
+  "questId": 28307,
+  "info": {
+    "name": "Steward: \"I\u0027m a Butler, Not a Maid!\"",
+    "descriptions": {
+      "notStarted": "You have arrived before Steward. It\u0027s uncertain how happy he\u0027ll be to see you though, especially when he hears what kind of job he\u0027ll have to do cleaning up this mess.",
+      "inProgress": "The butler advised that you to collect #b10 Tombstones#k to prove to Jonas that you are serious about the mission. ",
+      "completed": "Yes! You were able to collect the #b10 Tombstones#k and show Jonas that you want this whole thing to end. But it\u0027s questionable whether he got it completely..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201143,
+      "prerequisiteQuests": [
+        {
+          "questId": 28306,
+          "state": "COMPLETED"
+        }
+      ],
+      "endDate": "2009112500"
+    },
+    "complete": {
+      "npc": 9201138,
+      "items": [
+        {
+          "itemId": 4032435,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032435,
+          "count": -10
+        },
+        {
+          "itemId": 2022244,
+          "count": 5
+        },
+        {
+          "itemId": 2022246,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

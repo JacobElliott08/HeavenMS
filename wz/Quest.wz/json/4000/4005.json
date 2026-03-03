@@ -1,0 +1,49 @@
+{
+  "questId": 4005,
+  "info": {
+    "name": "껌팔이 소녀의 핑크예티",
+    "descriptions": {
+      "notStarted": "#b#p9330017##k를 찾아가 보자.",
+      "inProgress": "#b#p9330017##k가 잃어버린 인형을 찾아주자.\\n\\n#i4031352##t4031352#  #b#c4031352#/1#k",
+      "completed": "#b#p9330017##k가 잃어버린 소중한 인형을 찾아주었다."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9330017,
+      "minLevel": 45,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4004,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9330017,
+      "items": [
+        {
+          "itemId": 4031352
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4031352,
+          "count": -1
+        },
+        {
+          "itemId": 2022098,
+          "count": 25
+        }
+      ]
+    }
+  }
+}

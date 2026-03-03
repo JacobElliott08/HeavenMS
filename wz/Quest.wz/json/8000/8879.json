@@ -1,0 +1,58 @@
+{
+  "questId": 8879,
+  "info": {
+    "name": "2nd Anniversary : Birthday Present (Red)",
+    "descriptions": {
+      "notStarted": "I should go visit the MapleStory Administrator. I heard MapleStory is celebrating its 2nd birthday, and she may have something in store for me...",
+      "inProgress": "The MapleStory Administrator said we\u0027ll be celebrating the anniversary in style and that there is a #bRED birthday present#k for me to look for. Now, where must that be...\\n\\n#t4031306# #b#c4031306#/1#k",
+      "completed": "I found the #bRED birthday present#k and gave it to the Maple Administrator. She opened the present for me, and gave me what was inside. That was pretty sweet!"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "maxLevel": 30,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2007053123"
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 4031306
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031306,
+          "count": -1
+        },
+        {
+          "itemId": 2020032,
+          "probability": 8399
+        },
+        {
+          "itemId": 1002603,
+          "probability": 1000
+        },
+        {
+          "itemId": 1002601,
+          "probability": 500
+        },
+        {
+          "itemId": 1002600,
+          "probability": 100
+        },
+        {
+          "itemId": 1002602,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

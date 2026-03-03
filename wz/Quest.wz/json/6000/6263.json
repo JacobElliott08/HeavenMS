@@ -1,0 +1,75 @@
+{
+  "questId": 6263,
+  "info": {
+    "name": " The Ultimate Icepick",
+    "parent": "Ancient Ice Stone",
+    "descriptions": {
+      "notStarted": " The guardian of Snow Mountain, #b#p2030000##k told me that if I want to break the ancient ice stone, I would have to go see #b#p2020000##k to make a hammer strong enough.",
+      "inProgress": " Bogen said that although he\u0027s not sure if it will break the ancient magic, it\u0027s worth a try and asked me to get him the ingredients to make the hammer. #b#p2020000##k. The Ingredients are  #b#t04000150#, #t4011005# and #t4011007##k.\\r\\n#i4000150##t4000150# #b#c4000150#/30#k\\n#i4011005##t4011005# #b#c4011005#/2#k\\n#i4011007##t4011007# #b#c4011007#/1",
+      "completed": "With #b#p2020000##k\u0027s I got the hammer that will break the ice stone.  Alright, let\u0027s go to see Jeff.  I\u0027m excited!"
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020000,
+      "minLevel": 120,
+      "repeatIntervalMinutes": 0,
+      "jobs": [
+        222
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6262,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031450
+        },
+        {
+          "itemId": 2280011
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020000,
+      "items": [
+        {
+          "itemId": 4011005,
+          "count": 2
+        },
+        {
+          "itemId": 4000150,
+          "count": 30
+        },
+        {
+          "itemId": 4011007
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000150,
+          "count": -30
+        },
+        {
+          "itemId": 4011005,
+          "count": -2
+        },
+        {
+          "itemId": 4011007,
+          "count": -1
+        },
+        {
+          "itemId": 4031450
+        }
+      ]
+    }
+  }
+}

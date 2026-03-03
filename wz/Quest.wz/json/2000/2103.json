@@ -1,0 +1,30 @@
+{
+  "questId": 2103,
+  "info": {
+    "name": "Nella\u0027s Dream",
+    "parent": "Fanzy the Mysterious Cat",
+    "descriptions": {
+      "notStarted": "Apparently, #p1052103# of Kerning City had a weird dream ...",
+      "inProgress": "I heard a really weird dream story from #b#p1052103##k, who lived in Kerning City. She ran into a cat in the middle of a green forest full of trees... and she can\u0027t tell if it\u0027s a dream or for real.",
+      "completed": "In the middle of the forest in #m101000000#, I found the mysterious cat that #p1052103# had seen in her dream."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052103,
+      "minLevel": 10,
+      "petRequirement": {}
+    },
+    "complete": {
+      "npc": 1040002,
+      "petRequirement": {}
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 2104
+    }
+  }
+}

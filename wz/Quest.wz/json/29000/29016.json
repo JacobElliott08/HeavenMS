@@ -1,0 +1,54 @@
+{
+  "questId": 29016,
+  "info": {
+    "name": "Title - Spirit Diviner",
+    "descriptions": {
+      "notStarted": "You can apparently acquire the title of #b\u003cSpirit Diviner\u003e#k by eliminating undead monsters and sending them back to nirvana…",
+      "inProgress": "#b#eTitle - Spirit Diviner#k#n\\r\\nEliminate undead monsters and send them back to where they came from.\\r\\n\u003cCollect at least 1 Monster Card\u003e\\n#b#t2382040#\\n#t2382049#\\n#t2383002#\\n#t2383005#\\n#t2383008##k\\n\\n\u003cEliminate Monster\u003e\\n#o4230101# #r#a290161##k\\n#o4230114##r#a290162##k\\n#o4230115# #r#a290163##k\\n#o4230126# #r#a290164##k\\n#o4230102# #r#a290165#\\r\\n",
+      "completed": "You were able to eliminate the undead monsters and acquired the title of #b\u003cSpirit Diviner\u003e#k."
+    },
+    "area": 51,
+    "autoComplete": true,
+    "medalItemId": 1142137
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "minLevel": 40
+    },
+    "complete": {
+      "npc": 1061011,
+      "monsters": [
+        {
+          "monsterId": 4230101,
+          "count": 444
+        },
+        {
+          "monsterId": 4230114,
+          "count": 444
+        },
+        {
+          "monsterId": 4230115,
+          "count": 444
+        },
+        {
+          "monsterId": 4230126,
+          "count": 444
+        },
+        {
+          "monsterId": 4230102,
+          "count": 444
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142137
+        }
+      ]
+    }
+  }
+}

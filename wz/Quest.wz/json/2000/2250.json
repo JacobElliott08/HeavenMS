@@ -1,0 +1,45 @@
+{
+  "questId": 2250,
+  "info": {
+    "name": "Zombie Mushroom Signal 2",
+    "parent": "Strange Mushrooms",
+    "descriptions": {
+      "notStarted": "The Rememberer needs help figuring out what drove the mushrooms into a rage. You should go help.",
+      "inProgress": "Once again, the Rememberer suggests that someone should study Zombie Mushrooms.\\r\\n\\r\\n#i4000008:# #t4000008:# #c4000008# / 100",
+      "completed": "You\u0027ve helped further the study of Zombie Mushrooms."
+    },
+    "area": 30,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "prerequisiteQuests": [
+        {
+          "questId": 2249,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "items": [
+        {
+          "itemId": 4000008,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 4000008,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

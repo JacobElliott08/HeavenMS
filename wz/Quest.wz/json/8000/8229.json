@@ -1,0 +1,33 @@
+{
+  "questId": 8229,
+  "info": {
+    "name": "Lost in Translation 3",
+    "descriptions": {
+      "notStarted": "I showed the #bCoded Communique#k to Elpam Gorlab, and he recognized the symbols as being #bVersalian#k!  Elpam translated what he could and gave me a #bTranslated Communique#k.  I should show this to John immediately!",
+      "inProgress": "I must traverse Crimsonwood Mountain and get this new information Jack and see what else he knows...!",
+      "completed": "I reached Jack and gave him the info-he\u0027s going through it all now..."
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201051,
+      "startScript": "q8229s",
+      "prerequisiteQuests": [
+        {
+          "questId": 8220,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201096,
+      "endScript": "q8229e",
+      "items": [
+        {
+          "itemId": 4032018
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "questId": 8239,
+  "info": {
+    "name": "Bounty Master",
+    "parent": "Bounty Hunter....",
+    "descriptions": {
+      "notStarted": "I\u0027ve completed all Bounty Hunter bounties for Lita Lawless! I think its about time I\u0027m deputized!  I should head to New Leaf City and find out more!",
+      "inProgress": "I spoke with Lita, and she\u0027s all set to deputize me whenever I\u0027m ready!  Completing all those quests was hard, but well worth the effort!",
+      "completed": "I\u0027ve been deputized by Lita Lawless as an official protector of New Leaf City!  I\u0027ve sworn to defend the area, and Masteria in general from all future threats...and from what it looks like, there\u0027s going to be a lot of them!"
+    },
+    "area": 45,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201054,
+      "minLevel": 80,
+      "prerequisiteQuests": [
+        {
+          "questId": 8231,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8233,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8235,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8237,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201054
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500000,
+      "items": [
+        {
+          "itemId": 1122014
+        }
+      ]
+    }
+  }
+}

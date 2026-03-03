@@ -1,0 +1,49 @@
+{
+  "questId": 2226,
+  "info": {
+    "name": "Arwen\u0027s Apology",
+    "parent": "The Forest of Evil",
+    "descriptions": {
+      "inProgress": "Arwen, after much contemplation, says she can\u0027t understand Reef\u0027s actions but takes some responsibility for them. She, then, asks you for a favor... to deliver Fairy Hair to #bReef#k. She seems sincere, so perhaps you should help her out. Don\u0027t forget that Reef is a ghost who only appears #bfrom 5 p.m. to 7 a.m. of the following day#k.",
+      "completed": "You have delivered the Fairy Hair to Reef. Reef, surprised at the unexpected gift, asks you to give his apologies to #bGrendel the Really Old#k for having harmed others."
+    },
+    "area": 30,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032100,
+      "prerequisiteQuests": [
+        {
+          "questId": 2225,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032107,
+      "items": [
+        {
+          "itemId": 4031924
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031924
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031924,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "questId": 2045,
+  "info": {
+    "name": "What Pia has Borrowed",
+    "parent": "Pia\u0027s Present For a Friend",
+    "descriptions": {
+      "inProgress": "I went to see Rina at Henesys, and instead, she tells me she took that red cape because Pia didn\u0027t return the items she borrowed from her. She said, if she gets her items back, then the cape is hers again...the borrowed stuff are #b1 black crystal, 1 ancient scroll, and 30 horns of Tauromacis.",
+      "completed": "I went to Rina to get Pia\u0027s cape, but Rina told me that she is keeping the cape until Rina brings back what she borrowed from Rina. She said she will return the cape if she gets back what Pia has borrowed from her."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1010100,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2044,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1010100,
+      "items": [
+        {
+          "itemId": 4021008
+        },
+        {
+          "itemId": 4000028,
+          "count": 30
+        },
+        {
+          "itemId": 4001005
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "nextQuest": 2046,
+      "items": [
+        {
+          "itemId": 4021008,
+          "count": -1
+        },
+        {
+          "itemId": 4001005,
+          "count": -1
+        },
+        {
+          "itemId": 4000028,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

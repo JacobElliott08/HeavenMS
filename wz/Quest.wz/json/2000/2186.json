@@ -1,0 +1,27 @@
+{
+  "questId": 2186,
+  "info": {
+    "name": "Help Me Find My Glasses",
+    "descriptions": {
+      "notStarted": "Apparently there\u0027s someone on the harbor, in trouble. He says he\u0027s lost something that\u0027s practically like a body part of his...",
+      "inProgress": "Having lost his glasses, Abel is unable to see anything. I can\u0027t believe the pelicans all went home while he was asleep... Let me help Abel find his glasses in the bushes nearby the #bwatchtower#k, located on the east end of The Nautilus harbor where the seagulls have gathered. And remember, #bAbel\u0027s glasses#k have horn-rimmed frames!                                          \\n\\n#i4031853##t4031853# #b#c4031853##k / 1",
+      "completed": "Oh~ Abel seems so happy to have his glasses back. But now that he\u0027s got his glasses back, he seems like such a different person. Do those glasses have some kind of power? "
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1094001,
+      "minLevel": 15
+    },
+    "complete": {
+      "npc": 1094001,
+      "endScript": "q2186e",
+      "items": [
+        {
+          "itemId": 4031853
+        }
+      ]
+    }
+  }
+}

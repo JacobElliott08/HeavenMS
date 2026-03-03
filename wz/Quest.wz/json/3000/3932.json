@@ -1,0 +1,63 @@
+{
+  "questId": 3932,
+  "info": {
+    "name": "Ardin\u0027s Test",
+    "parent": "Sand Bandits According to Ardin",
+    "descriptions": {
+      "inProgress": "When I revisited #p2101003#, he told me I should defeat #r30 #o2100106#s#k and #r30 #o2100107#s#k and bring back #b20 #t4000326#s#k and #b20 #t4000327#s#k as proof. Then, I\u0027ll be accepted as a member of the Sand Bandits.\\n\\n#o2100106# #r#a39321##k\\n#o2100107# #r#a39322##k\\n\\n#i4000326# #t4000326# #b#c4000326# / 20#k\\n#i4000327# #t4000327# #b#c4000327# / 20#k",
+      "completed": "After eliminating both #o2100106# and #o2100107#, #p2101003# seemed shocked, as if he wasn\u0027t sure if I was capable of doing that. Hopefully this\u0027ll let him let me be a member of the Sand Bandits."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101003,
+      "minLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 3931,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101003,
+      "items": [
+        {
+          "itemId": 4000326,
+          "count": 20
+        },
+        {
+          "itemId": 4000327,
+          "count": 20
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 2100106,
+          "count": 30
+        },
+        {
+          "monsterId": 2100107,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4000,
+      "items": [
+        {
+          "itemId": 4000326,
+          "count": -20
+        },
+        {
+          "itemId": 4000327,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

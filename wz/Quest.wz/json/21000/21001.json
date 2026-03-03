@@ -1,0 +1,45 @@
+{
+  "questId": 21001,
+  "info": {
+    "name": "Find the Missing Kid 2",
+    "descriptions": {
+      "notStarted": "You barely managed to find the kid deep in the forest. You should take him back to the ark.",
+      "inProgress": "You barely managed to find the kid deep in the forest. You should take him back to the ark.",
+      "completed": "You barely managed to rescue the kid. There\u0027s not much time left! The ark must leave before the Black Mage attacks!"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1209006,
+      "startScript": "q21001s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21000,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2000
+      ]
+    },
+    "complete": {
+      "npc": 1209007,
+      "endScript": "q21001e",
+      "items": [
+        {
+          "itemId": 4001271
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4001271
+        }
+      ]
+    }
+  }
+}

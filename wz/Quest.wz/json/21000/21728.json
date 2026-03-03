@@ -1,0 +1,42 @@
+{
+  "questId": 21728,
+  "info": {
+    "name": "The Puppeteer\u0027s Cave",
+    "descriptions": {
+      "notStarted": "This is your fourth assignment as an informant and it involves #p1061019#, who apparently remembered something when he looked at the #t4032321# retrieved from #o2230101#. Go talk to him at #b#m105040300##k.",
+      "inProgress": "#p1061019# says that he saw a kid carrying around a #t4032321# some time ago. That must have been the Puppeteer! According to #p1061019#, the puppeteer may be hiding near the Evil Eye Cave… You should #bgo up to the Evil Eye Cave and look for the Puppeteer\u0027s Headquarters#k.",
+      "completed": "You spotted the Puppeteer\u0027s Headquarters, but you need a password to enter."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061019,
+      "minLevel": 28,
+      "prerequisiteQuests": [
+        {
+          "questId": 21727,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1061019,
+      "infoNumber": 21761,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "questId": 4014,
+  "info": {
+    "name": "자격의 시험",
+    "descriptions": {
+      "notStarted": "#b#t4031356##k을 #b#p9330028##k에게 가져다 주자.",
+      "inProgress": "포장마차를 쓰러뜨릴 수 있는 자격이 있음을 증명하자.\\n\\n#i04000259##t04000259#  #b#c04000259#/50#k",
+      "completed": "#b#p9330028##k에게 자격을 인정 받았다."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9330028,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4013,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031356
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9330028,
+      "items": [
+        {
+          "itemId": 4000259,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031356,
+          "count": -1
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 23800,
+      "items": [
+        {
+          "itemId": 4000259,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "questId": 8569,
+  "info": {
+    "name": "Find the Ghost-scaring Chinese Firecrackers",
+    "descriptions": {
+      "notStarted": "The Lunar New Year is dawning upon us, and unfortunately, the town has been invaded by ghosts. In Asian mythology, the firecrackers are set off on New Year\u0027s to scare away ghosts. Apparently, the firecrackers made with the mysterious Asian powers have the power to produce explosions loud enough to totally eliminate these ghosts, and bring peace to the start of the new year. Better find Mr. Moneybags in Henesys for more information.",
+      "inProgress": "The God of Goods uses his special powers to create special firecrackers for these occasions. These firecrackers have the special power of scaring away ghosts with their ear-ringing explosions. \\r\\n#t4001128# #b#c4001128##k/30",
+      "completed": "I got a firecracker. Now I can able to repel ghost. "
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9300010,
+      "repeatIntervalMinutes": 120,
+      "startDate": "2009012100",
+      "endDate": "2009021123",
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 9300010,
+      "items": [
+        {
+          "itemId": 4001128,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50,
+      "meso": 888,
+      "items": [
+        {
+          "itemId": 2022281
+        },
+        {
+          "itemId": 4001128,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

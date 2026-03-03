@@ -1,0 +1,80 @@
+{
+  "questId": 9807,
+  "info": {
+    "name": "새로운 역사의 주인공 ",
+    "parent": "단풍잎의 새로운 주인!",
+    "descriptions": {
+      "inProgress": "#t4031608#를 사용하자, #p2012023#은 단풍잎을 흡수해 버렸다. 놀라 #p2012023#에 다가가자, 신기하게도 #p2012023#은 단풍잎 모양을 한 귀고리를 주었다. 도대체 이건 무슨 현상일까? #p1002101#의 영웅이 준 소중한 물건인데 사라져 버리다니... 어떻게 하지? #p1002101#에게 가보자.",
+      "completed": "#t4031610#를 본 #p1002101#은, 오래 전 그의 영웅이 가지고 있던 물건인데 이제는 당신이 가지고 있어야 할 것 같다며 #t1032040#을 주었다. "
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012023,
+      "startDate": "2007042300",
+      "endDate": "2007052100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9804,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1002101,
+      "items": [
+        {
+          "itemId": 4031616
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031616
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 20000,
+      "items": [
+        {
+          "itemId": 4031616,
+          "count": -1
+        },
+        {
+          "itemId": 1032040
+        },
+        {
+          "itemId": 2020016,
+          "count": 10,
+          "probability": 1
+        },
+        {
+          "itemId": 2020017,
+          "count": 10,
+          "probability": 1
+        },
+        {
+          "itemId": 2020018,
+          "count": 10,
+          "probability": 1
+        },
+        {
+          "itemId": 2020019,
+          "count": 10,
+          "probability": 1
+        },
+        {
+          "itemId": 2020020,
+          "count": 10,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

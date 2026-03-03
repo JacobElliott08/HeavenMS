@@ -1,0 +1,73 @@
+{
+  "questId": 20005,
+  "info": {
+    "name": "Kiku\u0027s Third Training Session",
+    "descriptions": {
+      "notStarted": "Let\u0027s go visit #b#p1102000# the Training Instructor#k and receive some training.",
+      "inProgress": "The third session involved facing off against the third weakest monster of Ereve, #r#o0100122##k, and defeating #r15#k of them in the process. I better hunt down those #o0100122#s in #b#m130010100##k. \\n\\n#o0100122##r #a200051##k",
+      "completed": "I managed to defeat all 15 #o0100122#s and return. Off to the next session."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102000,
+      "prerequisiteQuests": [
+        {
+          "questId": 20004,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 20010
+        },
+        {
+          "questId": 20011
+        },
+        {
+          "questId": 20012
+        },
+        {
+          "questId": 20013
+        },
+        {
+          "questId": 20014
+        },
+        {
+          "questId": 20015
+        },
+        {
+          "questId": 20016
+        },
+        {
+          "questId": 20017
+        },
+        {
+          "questId": 20018
+        },
+        {
+          "questId": 20019
+        },
+        {
+          "questId": 20020
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    },
+    "complete": {
+      "npc": 1102000,
+      "monsters": [
+        {
+          "monsterId": 100122,
+          "count": 15
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 250
+    }
+  }
+}

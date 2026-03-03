@@ -1,0 +1,34 @@
+{
+  "questId": 9937,
+  "info": {
+    "name": "다른 쪽으로 가고 싶어졌어",
+    "descriptions": {
+      "notStarted": "#b소필리아#k에게 잘못 대답한 것 같다고 생각한다면 다시 그녀를 찾아가 결정을 #b번복#k하고 싶다고 말하자.",
+      "inProgress": "소필리아는 투덜거리며 하고 싶은대로 하라고 말했다. 그럼 다시 소필리아에게 말을 걸어 어느 쪽으로 가고 싶은지 말하자.",
+      "completed": "자, 이제 결정한 쪽으로 움직여 볼까?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120005,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2008110600",
+      "startScript": "q9937s",
+      "infoNumber": 7643,
+      "infoEx": [
+        null,
+        null
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 9928,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120005
+    }
+  }
+}

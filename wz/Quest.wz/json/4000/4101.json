@@ -1,0 +1,52 @@
+{
+  "questId": 4101,
+  "info": {
+    "name": "양씨 아저씨의 소개",
+    "descriptions": {
+      "notStarted": "도움이 필요한 #b#p9310010##k를 다시 찾아가 보자.",
+      "inProgress": "#b#p9310010##k가 준 소개서를 #b#p9310008##k에게 가져가자. \\n\\n#t4031288 # #b#c4031288 #/1#k ",
+      "completed": "#b#p9310008##k를 만났다."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9310010,
+      "minLevel": 45,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4100,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9310008,
+      "items": [
+        {
+          "itemId": 4031288
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031288
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4031288,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

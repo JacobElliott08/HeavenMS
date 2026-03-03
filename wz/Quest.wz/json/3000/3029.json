@@ -1,0 +1,55 @@
+{
+  "questId": 3029,
+  "info": {
+    "name": "All the Map Pieces in One Place",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "notStarted": "",
+      "inProgress": "I have obtained all #b4 map pieces#k from the four wisemen in Victoria Island, and this map supposedly locates where the Book of Ancient is currently hidden. I should get back to Alcaster now. ",
+      "completed": ""
+    },
+    "area": 33,
+    "order": 26
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3028,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "items": [
+        {
+          "itemId": 4031054,
+          "count": 4
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031054,
+          "count": 4
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 5430,
+      "nextQuest": 3030,
+      "items": [
+        {
+          "itemId": 4031054,
+          "count": -4
+        }
+      ]
+    }
+  }
+}

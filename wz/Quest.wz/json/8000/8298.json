@@ -1,0 +1,52 @@
+{
+  "questId": 8298,
+  "info": {
+    "name": "In search of the Mind of Maple",
+    "descriptions": {
+      "notStarted": "There\u0027s a legendary necklace called the #rMind of Maple#k that everyone would like to have their hands on....... Once the Gate of Time opens, #bMr. Moneybags#k will bring the blessing to everyone. Do you have the #rMind of Maple#k? Only #bMr. Moneybags#k knows the secret behind the necklace. Go visit #bMr. Moneybags immediately.",
+      "inProgress": "Gather up the items Mr. Moneybags asked you to get through #bChief Stan#k in order to restore the #rMind of Maple#k to its original state.\\n\\n#t4032239:##r #c4032239#/1#k\\n#t4032233:##r #c4032233#/1#k",
+      "completed": "The #rMind of Maple#k has been restored to its original state. If you want one yourself, #bMr. Moneybags#k has mentioned that only the power of the guardian spirit may awaken the necklace."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9300010,
+      "minLevel": 10,
+      "endDate": "2009022423"
+    },
+    "complete": {
+      "npc": 9300010,
+      "items": [
+        {
+          "itemId": 4032233
+        },
+        {
+          "itemId": 4032239
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "items": [
+        {
+          "itemId": 4032233,
+          "count": -1
+        },
+        {
+          "itemId": 4032239,
+          "count": -1
+        },
+        {
+          "itemId": 4001250,
+          "expirationDate": "2009022500"
+        },
+        {
+          "itemId": 1122039
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "questId": 10230,
+  "info": {
+    "name": "Gold Richie\u0027s Compass",
+    "descriptions": {
+      "notStarted": "Cassandra says something went wrong on Gold Richie\u0027s Treasure Island. Let\u0027s rush over to #bCassandra# and talk to her.",
+      "inProgress": "If you need a compass to give you directions to Treasure Island, talk to Cassandra.",
+      "completed": "If you\u0027ve collected #bN,E,W,S for the Compass#k from the monsters, double-click the #b#t2430007##k to make a #t2430008# which will take you to Gold Richie\u0027s Treasure Island."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 13,
+      "repeatIntervalMinutes": 30,
+      "endDate": "2009010100",
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 2430007,
+          "count": 0
+        },
+        {
+          "itemId": 2430008,
+          "count": 0
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 2430007
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "questId": 1006,
+  "info": {
+    "name": "Lucas\u0027 Reply",
+    "parent": "Please bring this letter to Lucas",
+    "descriptions": {
+      "inProgress": "I delivered Maria\u0027s letter to Lucas who was in Amherst. He wrote a reply, which I think I should bring back to Maria.",
+      "completed": "Maria looked relieved after reading the reply from Lucas. I wanted to read it too, but I think I did what I was supposed to do."
+    },
+    "area": 20,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 12000,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1005,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2103,
+      "items": [
+        {
+          "itemId": 4031001
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031001
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 10,
+      "items": [
+        {
+          "itemId": 4031001,
+          "count": -1
+        },
+        {
+          "itemId": 1002008,
+          "probability": 1
+        },
+        {
+          "itemId": 1002053,
+          "probability": 1
+        },
+        {
+          "itemId": 1002014,
+          "probability": 1
+        },
+        {
+          "itemId": 1002066,
+          "probability": 1
+        },
+        {
+          "itemId": 1002067,
+          "probability": 1
+        },
+        {
+          "itemId": 1002068,
+          "probability": 1
+        },
+        {
+          "itemId": 1002069,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

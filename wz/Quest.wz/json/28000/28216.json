@@ -1,0 +1,44 @@
+{
+  "questId": 28216,
+  "info": {
+    "name": "Returning to Kerning City",
+    "descriptions": {
+      "notStarted": "#b#@1032001:##k in #bEllinia#k says #b#@1052001:##k in #bKerning City#k must be notified of this creature at once. Let\u0027s talk to #b#@1032001:##k.",
+      "inProgress": "#rValefor#k, who was sealed in #bKerning City#k, is a demon infamous for stealing from people.\\n\\nLet\u0027s inform #b#@1052001:##k in #bKerning City#k.",
+      "completed": "You have told #b#p1052001##k in #bKerning City#k about the demon."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "prerequisiteQuests": [
+        {
+          "questId": 28215,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1052001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

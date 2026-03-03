@@ -1,0 +1,30 @@
+{
+  "questId": 6290,
+  "info": {
+    "name": "The Forgotten Healing Power",
+    "parent": "Spirit Healing",
+    "descriptions": {
+      "notStarted": " Since my last job, I got a strange spirit named #r#q1321007##k.  For a spirit, it doesn\u0027t have any special powers but I just kept him with me.  But supposedly #b#p2081100##k knows about a special healing power that this spirit has...",
+      "inProgress": " #p2081100# said #q1321007# has much power in it but it\u0027s asleep now. He told me to see #b#p2041021##k to wake up his power.",
+      "completed": "#p2041021# seems to know how to wake up  #q1321007#\u0027s power."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081100,
+      "jobs": [
+        132
+      ]
+    },
+    "complete": {
+      "npc": 2041021
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000
+    }
+  }
+}

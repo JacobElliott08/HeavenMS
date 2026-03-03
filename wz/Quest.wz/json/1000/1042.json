@@ -1,0 +1,53 @@
+{
+  "questId": 1042,
+  "info": {
+    "name": "Mai\u0027s Second Training",
+    "parent": "Mai\u0027s Training!",
+    "descriptions": {
+      "inProgress": "After coming back from hunting Stumps, Mai thought I had some talent, and proceeded to turn up the training by a notch. This time, I\u0027ll have to hunt #r5 Red Snails#k. Apparently they are faster than Stumps, so I better watch out. \\n\\nRed Snail #r#a10421##k",
+      "completed": "Red Snails have much higher endurance than Snails and Blue Snails. They also move faster than Stumps. I better not underestimate those sneaky creatures."
+    },
+    "area": 20,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 12100,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1041,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 12100,
+      "monsters": [
+        {
+          "monsterId": 130101,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 175,
+      "nextQuest": 1043,
+      "items": [
+        {
+          "itemId": 2010002,
+          "count": 10
+        },
+        {
+          "itemId": 2010003,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "questId": 28267,
+  "info": {
+    "name": "[Collect] I Need an Umbrella!",
+    "descriptions": {
+      "notStarted": "#b#@1010100:##k in #b#m100000000##k says she hates getting wet in the rain.",
+      "inProgress": "Although usually sunny, #b#m100000000##k has rainy days from time to time. Because #b#@1010100:##k hates getting wet in the rain, she has asked you to bring her some materials with which she can make an umbrella.\\n\\nBring 20 #rGreen Mushroom Caps#k after hunting #rGreen Mushrooms#k.\\n(You can easily find them in the #b#m105050400##k.)\\n\\nReport back to #b#@1010100:##k in #b#m100000000##k upon completion.",
+      "completed": "You have collected 20 #rGreen Mushroom Caps#k for #b#p1010100##k since she said she wanted to make an umbrella."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1010100,
+      "minLevel": 14,
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1010100,
+      "items": [
+        {
+          "itemId": 4000012,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1600,
+      "items": [
+        {
+          "itemId": 4000012,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

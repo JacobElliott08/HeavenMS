@@ -1,0 +1,27 @@
+{
+  "questId": 29917,
+  "info": {
+    "name": "Ellinia Donor Medal",
+    "descriptions": {
+      "completed": "Donations are a quick way to give back to the community. You have earned the #b\u003cEllinia Donor\u003e#k title."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142015
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "normalAutoStart": true,
+      "startScript": "q29917s",
+      "items": [
+        {
+          "itemId": 1142015
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000066
+    }
+  }
+}

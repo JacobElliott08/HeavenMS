@@ -1,0 +1,52 @@
+{
+  "questId": 2172,
+  "info": {
+    "name": "What is it that Bart saw?",
+    "parent": "A Mysterious Presence On-board The Nautilus",
+    "descriptions": {
+      "inProgress": "Let me take Bart\u0027s status report to #bBaine#k.",
+      "completed": "I\u0027ve delivered Bart\u0027s report to Baine. By the look on Baine\u0027s face, it seems that there\u0027s something fishy going on."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1094000,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 2171,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092002,
+      "items": [
+        {
+          "itemId": 4031845
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031845
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100,
+      "nextQuest": 2173,
+      "items": [
+        {
+          "itemId": 4031845,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

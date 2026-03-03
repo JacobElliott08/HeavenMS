@@ -1,0 +1,40 @@
+{
+  "questId": 3730,
+  "info": {
+    "name": "Nex the Time Guard",
+    "parent": "Year 2215- The Bombing",
+    "descriptions": {
+      "notStarted": "Andy the Time Traveler says he has something to tell you before your third time travel.",
+      "inProgress": "Andy the Time Traveler has informed you that you must pass the test Nex the Gatekeeper of Time, who lives in the Old Tree of Tera, gives you before embarking on your third time travel. Enter the Old Tree of Tera and pass Nex\u0027s test.",
+      "completed": "You have passed the third test given by Nex the Gatekeeper of Time and earned the right to travel to another time. You can now teleport to the Bombed City Center in the year 2099. Go to the Time Gate with the Time Traveler\u0027s Pocket Watch."
+    },
+    "area": 41,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 77,
+      "npc": 2082004,
+      "prerequisiteQuests": [
+        {
+          "questId": 3725,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082004,
+      "monsters": [
+        {
+          "monsterId": 7120102
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 110000,
+      "nextQuest": 3731
+    }
+  }
+}

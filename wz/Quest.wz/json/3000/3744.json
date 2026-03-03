@@ -1,0 +1,41 @@
+{
+  "questId": 3744,
+  "info": {
+    "name": "Defeat the Mavericks",
+    "parent": "Year 2230- Imminent Collapse!",
+    "descriptions": {
+      "inProgress": "Hoya, the boy you met at the lobby of the dangerous tower in the year 2230, has asked you to eliminate the pesky Mavericks and report it to Nalo.",
+      "completed": "Hoya, the boy you met at the lobby of the dangerous tower in the year 2230, asked you to eliminate some pesky Mavericks. You did so and reported it to Nalo at the top of the tower. Nalo seemed concerned about Hoya\u0027s immature and irresponsible actions."
+    },
+    "area": 41,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082011,
+      "minLevel": 85
+    },
+    "complete": {
+      "npc": 2082012,
+      "monsters": [
+        {
+          "monsterId": 8120104,
+          "count": 30
+        },
+        {
+          "monsterId": 8120105,
+          "count": 30
+        },
+        {
+          "monsterId": 8120106,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 90000
+    }
+  }
+}

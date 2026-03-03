@@ -1,0 +1,45 @@
+{
+  "questId": 28204,
+  "info": {
+    "name": "Find the Lost Book",
+    "parent": "The Lost Book",
+    "descriptions": {
+      "notStarted": "#b#@1012109:##k in #bHenesys#k has asked you for help in finding his Lost Book.",
+      "inProgress": "#b#@1012109:##k says he had loaned his book to #b#pHill_ID##k in #bHenesys#k but never got it back. Let\u0027s discover what happened to the book."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012109,
+      "prerequisiteQuests": [
+        {
+          "questId": 28203,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 9201118
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

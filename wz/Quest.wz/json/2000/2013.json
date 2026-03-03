@@ -1,0 +1,68 @@
+{
+  "questId": 2013,
+  "info": {
+    "name": "Jane\u0027s Final Challenge",
+    "parent": "Jane the Alchemist",
+    "descriptions": {
+      "inProgress": "This time, the last time, she promised to make me a mysterious scroll, and that she wanted me to get #ba moon rock, 20 dragon skins, and 10 saps of ancient tree#k for her. I guess I should ask the fairies at Ellinia for the moon rock, right?",
+      "completed": "I got all the materials needed for Jane to make the scroll. Thankfully, the scroll for glove for ATT was made without a hitch, and she readily gave it to me. If the scroll really works, then I may have myself a dandy of a glove! Anyway, Jane expressed a strong desire to keep experimenting and become a good alchemist someday. Maybe next time I come back here, I may be able to buy an item from her that\u0027s not sold in store...nice..."
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002100,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 2012,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1002100,
+      "items": [
+        {
+          "itemId": 4000030,
+          "count": 20
+        },
+        {
+          "itemId": 4011007
+        },
+        {
+          "itemId": 2012002,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7100,
+      "items": [
+        {
+          "itemId": 4011007,
+          "count": -1
+        },
+        {
+          "itemId": 4000030,
+          "count": -20
+        },
+        {
+          "itemId": 2012002,
+          "count": -10
+        },
+        {
+          "itemId": 2040804,
+          "probability": 1
+        },
+        {
+          "itemId": 2040805,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

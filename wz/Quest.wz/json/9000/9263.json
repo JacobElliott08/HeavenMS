@@ -1,0 +1,86 @@
+{
+  "questId": 9263,
+  "info": {
+    "name": "케빈의 빙수 재료",
+    "parent": "행복한 마을의 맛있는 눈뭉치",
+    "descriptions": {
+      "notStarted": "#b#m221000000##k를 지키고 있는 #b#p2050011##k이 요새 먹고 싶은 게 있다는데…",
+      "inProgress": "언제나 딱딱한 분위기의 #m221000000#… 출동을 하고 싶지만 안 시켜준다고 투덜거리는 #p2050011#을 만났다. 임무가 지겨워서인지 #p2050011#은 빙수가 먹고 싶다고 한다. #b#m209000000##k에 맛있는 빙수를 만들 수 있는 재료가 있다고 하는데… #m209000000#까지 가는 방법은 #b#p1022101##k가 알고 있다고 한다.",
+      "completed": "#p2001000#에게 #p2050011#의 사정을 이야기하자,  #p2001000#는 눈사람들에게서 눈뭉치를 구해다 주기로 했다. …눈사람들에게 그런 짓을 해도 되는 거야? 어쨌든 조금 있다가 가 보기로 하자. "
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050011,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 259200,
+      "startDate": "2006112300",
+      "endDate": "2007030100"
+    },
+    "complete": {
+      "npc": 2001000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 350,
+      "items": [
+        {
+          "itemId": 2000000,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 2000001,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 2000002,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 2000003,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 3992000,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 3992001,
+          "probability": 1
+        },
+        {
+          "itemId": 3992002,
+          "probability": 1
+        },
+        {
+          "itemId": 3992003,
+          "probability": 1
+        },
+        {
+          "itemId": 3992004,
+          "probability": 1
+        },
+        {
+          "itemId": 3992024,
+          "probability": 1
+        },
+        {
+          "itemId": 3992025,
+          "probability": 1
+        },
+        {
+          "itemId": 3992026,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

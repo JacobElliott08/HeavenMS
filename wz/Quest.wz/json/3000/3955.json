@@ -1,0 +1,30 @@
+{
+  "questId": 3955,
+  "info": {
+    "name": "In Search of the Long Lost Pyramid",
+    "descriptions": {
+      "notStarted": "#bByron#k, who studies the everyday life of the desert people of the #bAriant Back Street#k, says that he\u0027s found something strange in the desert. You should go visit Byron.\\r\\n#bTip - Take the ship from Orbis heading toward Ariant, the oasis of Nihal Desert.",
+      "inProgress": "Byron claims that a huge sandstorm recently covered the path between Ariant and Magatia and completely changed the landscape of the area, revealing a #e#bmysterious Pyramid#k#n. He\u0027s currently seeking explorers willing to help unlock the mysteries surrounding the Pyramid. First up, you\u0027d better head over to Sahel 3 and talk to #e#bDuarte#k#n, who stands near the Pyramid.",
+      "completed": "As Byron requested, you headed to Sahel Desert in search of the giant, mysterious Pyramid. At its entrance stood Duarte, who warned about the dangers of the Pyramid, but opened its doors to any who dare risk their lives to unlock its mystery."
+    },
+    "area": 44,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101005,
+      "minLevel": 40,
+      "maxLevel": 60,
+      "endDate": "2009010100",
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 2103013
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000
+    }
+  }
+}

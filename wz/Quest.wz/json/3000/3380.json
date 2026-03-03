@@ -1,0 +1,59 @@
+{
+  "questId": 3380,
+  "info": {
+    "name": "Allegro, the Master of the Rings",
+    "descriptions": {
+      "notStarted": "Romeo had decided to propose to Juliet. To help fascilitate that, I better get him a nice ring. The ring can be acquired through Allegro, the master of rings at Wedding Village.",
+      "inProgress": "Allegro said the perfect ring for Romeo and Juliet might be the Silver Wing Ring that represents purity, and asked me to gather up the materials for him. \\n\\n#i4021007##t4021007# #b#c4021007##k/2 \\n#i4011004##t4011004# #b#c4011004##k/2",
+      "completed": "I received the ring from Allegro. I better give this to #bRomeo#k now."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201000,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3379,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031806
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201000,
+      "items": [
+        {
+          "itemId": 4021007,
+          "count": 2
+        },
+        {
+          "itemId": 4011004,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4011004,
+          "count": -2
+        },
+        {
+          "itemId": 4021007,
+          "count": -2
+        },
+        {
+          "itemId": 4031806
+        }
+      ]
+    }
+  }
+}

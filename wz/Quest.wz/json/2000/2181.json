@@ -1,0 +1,47 @@
+{
+  "questId": 2181,
+  "info": {
+    "name": "Porchay\u0027s Letter",
+    "parent": "A Banquet for the Whalians",
+    "descriptions": {
+      "notStarted": "Porchay, who stays with the Whalians in the Generator Room, says that there is an emergency. I wonder what it is?",
+      "inProgress": "I can\u0027t believe that the Whalians have completely run out of food! According to Porchay, Kenta has plenty of food ingredients so I should go to #bKenta#k and talk to her. I should take Porchay\u0027s letter with me too, right?",
+      "completed": "I gave Porchay\u0027s letter to Kenta."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092013,
+      "minLevel": 20
+    },
+    "complete": {
+      "npc": 2060005,
+      "items": [
+        {
+          "itemId": 4031858
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031858
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1000,
+      "nextQuest": 2181,
+      "items": [
+        {
+          "itemId": 4031858,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

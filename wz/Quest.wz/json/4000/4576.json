@@ -1,0 +1,50 @@
+{
+  "questId": 4576,
+  "info": {
+    "name": "Off to the Fantasy Theme Park",
+    "descriptions": {
+      "notStarted": "Have you been to the Fantasy Theme Park lately? Well, it seems like it\u0027s not such a fun place like it used to be. #bLam#k said something scary is going on in there. Wanna know? Go see #bLam#k right now!",
+      "inProgress": "#bLam#k said there are 2 fierce monsters appearing in Fantasy Theme Park, threatening all visitors. If nobody stops them, Fantasy Theme Park will soon become their playground. #bLam#k said he knows how to invoke those monsters. You must bring him 10 Rodeo\u0027s Scarfs and complete Away from Kampung quest. Then he shall tell you how to defeat those creatures! \\n\\n#t4000471# #r#c4000471#/10#k\\n\\n#y4557#: #r#u4557##k\\n\\n#y4558#: #r#u4558##k\\n\\n#y4559#: #r#u4559##k\\n\\n#y4560#: #r#u4560##k\\n",
+      "completed": "Let\u0027s talk to #bAldol#k. She is at the Entrance to the Spooky World. She will allow you to get into the Spooky World. Let\u0027s see what you and your friends can do for Fantasy Theme Park!"
+    },
+    "area": 49
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270062,
+      "minLevel": 90,
+      "repeatIntervalMinutes": 60
+    },
+    "complete": {
+      "npc": 9270062,
+      "prerequisiteQuests": [
+        {
+          "questId": 4560,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4000471,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032246
+        },
+        {
+          "itemId": 4000471,
+          "count": -10
+        },
+        {
+          "itemId": 4032246
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "questId": 3435,
+  "info": {
+    "name": "Eliminating Mateon",
+    "descriptions": {
+      "notStarted": "I better go see Green Mesoranger, who should be somewhere around Boswell Field.",
+      "inProgress": "I met Green Mesoranger at Boswell Field around Omega Sector. Green Mesoranger said he heard a lot about me through other Mesorangers, and asked if I wanted to tackle a Mesoranger mission. First I decided to help Green Mesoranger by helping his mission to #beliminate 100 Mateons#k.\\n\\n#o4230119# #r#a34351#",
+      "completed": "I took out 100 Mateons, just the way Green Mesoranger from Boswell Field asked. The duties of the Mesorangers don\u0027t seem to be over, though, so if I have some time to spare, then I maybe I should go check Green Mesoranger then."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040017,
+      "minLevel": 41
+    },
+    "complete": {
+      "npc": 2040017,
+      "monsters": [
+        {
+          "monsterId": 4230119,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5100,
+      "meso": 20000
+    }
+  }
+}

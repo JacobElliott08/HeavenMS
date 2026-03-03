@@ -1,0 +1,48 @@
+{
+  "questId": 4947,
+  "info": {
+    "name": "A Lost Girl",
+    "descriptions": {
+      "notStarted": "There\u0027s a girl wandering around the Prendergast Mansion.  I wonder what she\u0027s looking for? ",
+      "inProgress": "Sophilia is looking for her favorite toy - the very first doll her father made for her when she was a child.  She seems to have been looking for it for quite awhile.  She mentioned something about Ludmilla having a history of hiding her toys.  If I can find Sophilia\u0027s doll for her, maybe I can put her spirit at ease.",
+      "completed": "I gave Sophilia back her favorite doll.  She was so happy to get it back that she gave me some of her favorite candy."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201078,
+      "minLevel": 15,
+      "endDate": "2007103123",
+      "prerequisiteQuests": [
+        {
+          "questId": 4941,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201078,
+      "items": [
+        {
+          "itemId": 4031767
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "items": [
+        {
+          "itemId": 4031767,
+          "count": -1
+        },
+        {
+          "itemId": 2022245,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

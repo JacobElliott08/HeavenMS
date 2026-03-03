@@ -1,0 +1,55 @@
+{
+  "questId": 3243,
+  "info": {
+    "name": "The Messenger of the Toy Palace  2",
+    "parent": "The Messenger of the Toy Palace",
+    "descriptions": {
+      "notStarted": "At the suggestion from #p2041004#, the security guard of #m220000000#, I headed to #m240000000# as the messenger of #m220000000#. #p2041004# graciously provided me with #tLeafre Guidebook# as well as a flight ticket provided by #m220000000#. What\u0027s the item I\u0027m supposed to give him, though?",
+      "inProgress": "I received a request from #p2041004#, the security guard of #m220000000#, to head to a place called #m240000000# as the messenger of #m220000000#. #m240000000# is a town entrenched in Minar Forest somewhere in Ossyria, and I was told to deliver an item from #m2200000000# to the chief of the town, Tatamo. I better give that item from #p2041004# to #p2081000# of #m240000000#.\\n\\n#t4031347#  #b#c4031347##k / 1",
+      "completed": "I managed to deliver a present from #m220000000# to the chief of Leafre, Tatamo, as their messenger. As a sign of gratitude, Tatamo gave me a magic seed that allows me to transport between Ellinia and Leafre."
+    },
+    "area": 37,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041004,
+      "prerequisiteQuests": [
+        {
+          "questId": 3242,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081000,
+      "items": [
+        {
+          "itemId": 4031347
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031347
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4031347,
+          "count": -1
+        },
+        {
+          "itemId": 4031346,
+          "count": 2
+        }
+      ]
+    }
+  }
+}

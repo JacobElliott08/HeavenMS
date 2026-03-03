@@ -1,0 +1,33 @@
+{
+  "questId": 8219,
+  "info": {
+    "name": "Finding Jack",
+    "descriptions": {
+      "notStarted": "I heard that John Barricade has received news from his brother Jack!  I should go find John in Bigger Ben and see what he\u0027s learned.",
+      "inProgress": "Apparently, Jack Barricade is in Masteria and has discovered Crimsonwood Keep deep in the Phantom Forest.  However, the last letter John received from his brother was dated over a month ago.  John wants me to head to Crimsonwood after him and see why Jack\u0027s communiques have stopped.  Looks like I need to make my way through the Phantom Forest... I\u0027d better stock up on potions!",
+      "completed": "I found Jack Barricade resting in a cave on Crimsonwood Mountain.  It turns out that after exploring the Masterian wilderness for weeks, Jack finally came across the ancient stronghold - only it wasn\u0027t deserted.  Jack was captured and imprisoned in the Keep by the evil soldiers I\u0027ve been seeing around, but luckily managed to escape.  John will be relieved that Jack is okay."
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201051,
+      "minLevel": 50,
+      "startScript": "q8219s",
+      "prerequisiteQuests": [
+        {
+          "questId": 4915,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4917,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201096,
+      "endScript": "q8219e"
+    }
+  }
+}

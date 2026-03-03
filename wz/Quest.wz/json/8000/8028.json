@@ -1,0 +1,42 @@
+{
+  "questId": 8028,
+  "info": {
+    "name": "Veggies are Awesome",
+    "descriptions": {
+      "notStarted": "Recently, the price of veggies have skyrocketed. What happened? Last thing I need is an extra expense--mesos are tight these days!",
+      "inProgress": "According to Umi, #b#o8140500##k went crazy at the farm, ruining the harvest in the process. I wonder what\u0027s going on here? It seems very strange, as if evil spirits have overcome the town. I can\u0027t let that happen! \\n#t4000080#  #b#c4000080##k/200",
+      "completed": "By eliminating #b#o8140500##k, I feel like I did my part in protecting the food table of each and everyone in Showa Town. I better start eating my veggies..."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120005,
+      "minLevel": 85
+    },
+    "complete": {
+      "npc": 9120005,
+      "items": [
+        {
+          "itemId": 4000080,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000080,
+          "count": -200
+        },
+        {
+          "itemId": 2001000,
+          "count": 50
+        }
+      ],
+      "experience": 28000
+    }
+  }
+}

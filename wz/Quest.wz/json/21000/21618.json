@@ -1,0 +1,48 @@
+{
+  "questId": 21618,
+  "info": {
+    "name": "The Wolf\u0027s Evolution",
+    "descriptions": {
+      "notStarted": "#b#p1201002##k wants to talk to you about something...",
+      "inProgress": "#p1201002# says that he\u0027s noticed a formidable force surrounding you and tells you to come see him because he wants to find out what it is. You\u0027d better head over to #b#m140000000##k right now.",
+      "completed": "#t1902017#, the Silver Wolf, apparently grows with its master. The wolf is able to go through an awakening to get a whole new look once it gains enough strength from its master. This seems to explain your #p1201002#\u0027s transformation into a #t1902018#."
+    },
+    "area": 6,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201002,
+      "minLevel": 200,
+      "normalAutoStart": true,
+      "startScript": "q21618s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21614,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 21500,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1902017
+        }
+      ],
+      "jobs": [
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1201002,
+      "endScript": "q21618e",
+      "items": [
+        {
+          "itemId": 1902017
+        }
+      ]
+    }
+  }
+}

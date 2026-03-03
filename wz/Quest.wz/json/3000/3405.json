@@ -1,0 +1,35 @@
+{
+  "questId": 3405,
+  "info": {
+    "name": "An Important Robotic Part",
+    "parent": "Supplying the Robotic Parts",
+    "descriptions": {
+      "notStarted": "I should go see Dr. Kim at the Command Center in the Omega Sector.",
+      "inProgress": "From the Command Center in the Omega Sector, Dr. Kim requested that I receive 3 important mechanical parts from Cheng the Assistant at the Toy Factory of Ludibrium. Man ... when am I going to find time to go all the way up to Ludibrium?",
+      "completed": "Dr. Kim of the Command Center in the Omega Sector gave me a mission to receive some stuff from Cheng the Assistant of the Toy Factory. The parts I received seem to be very important for something."
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050001,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3404,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1600,
+      "nextQuest": 3406
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "questId": 2104,
+  "info": {
+    "name": "Fanzy\u0027s Red Furball",
+    "parent": "Fanzy the Amusing Cat",
+    "descriptions": {
+      "inProgress": "The mysterious cat that I ran into in the middle of Ellinia forest introduced itself as Fanzy, and it\u0027s a cat that is raised by a fairy living in Ellinia Forest. A few days ago, while hanging out in the forest, it lost the #b#t4031273##k that\u0027s been given by its master. Fanzy really wanted me to find it for it, so in the middle of the forest, I better find #r#o0210100##k, fight to get #b#t4031273##k back, then bring them back to Fanzy with my pet by my side for a handsome reward... \\n\\n#t4031273# #b#c4031273##k / 1",
+      "completed": "I brought the #t4031273# back from #o0210100# to #p1040002#, and to my delight, #p1040002# increased the closeness level between my pet and me."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1040002,
+      "prerequisiteQuests": [
+        {
+          "questId": 2103,
+          "state": "COMPLETED"
+        }
+      ],
+      "petRequirement": {}
+    },
+    "complete": {
+      "npc": 1040002,
+      "items": [
+        {
+          "itemId": 4031273
+        }
+      ],
+      "petRequirement": {}
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "petTameness": 15,
+      "items": [
+        {
+          "itemId": 4031273,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "questId": 4676,
+  "info": {
+    "name": "Naomi\u0027s Invitation 2",
+    "descriptions": {
+      "notStarted": "I better talk to #p9105002# again and hear more about the event.",
+      "inProgress": "#p9105002# explained to me in greater detail about the event that\u0027s taking place. It looks like I\u0027ll need to gather some #t4032056#s, bring them all to #p9105002#, and receive a special prize in return.",
+      "completed": "I gave #p9105002# some #t4032056#, and she gave me a present in return. I guess I can only enter this event once a day. Seriously, is there no way I can enter again today? Perhaps I could find a ticket elsewhere..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9105002,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2008121600",
+      "prerequisiteQuests": [
+        {
+          "questId": 4675,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9105002,
+      "endScript": "4676e",
+      "items": [
+        {
+          "itemId": 4032056,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

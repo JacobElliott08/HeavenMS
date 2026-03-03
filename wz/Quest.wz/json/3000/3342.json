@@ -1,0 +1,51 @@
+{
+  "questId": 3342,
+  "info": {
+    "name": "The Truth About Dr. De Lang",
+    "parent": "Dr. De Lang\u0027s Notes",
+    "descriptions": {
+      "inProgress": "After reading #t4161031#, #p2040050# realized what #p2111002# wanted was...really nothing significant. He felt sad about the whole situation, and as he observed the note, something caught #p2040050#\u0027s eyes as he realized there was a hidden message on the back of the note. He then mentioned that #b#p2020005##k might be the person to talk to to reveal the hidden message.",
+      "completed": "A great alchemist who served as the 3rd president of the Alchemist Union in #m261000000#... That\u0027s #p2020005#."
+    },
+    "area": 44,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040050,
+      "minLevel": 75,
+      "prerequisiteQuests": [
+        {
+          "questId": 3341,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "items": [
+        {
+          "itemId": 4161032
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4161032
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4161032,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

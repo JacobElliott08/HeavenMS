@@ -1,0 +1,53 @@
+{
+  "questId": 28108,
+  "info": {
+    "name": "Demise of a Madman",
+    "parent": "The Terror of MV!",
+    "descriptions": {
+      "notStarted": "Charles has prepared a second task for us. Let\u0027s go find him! (You have to form a party for this task)",
+      "inProgress": "Charles has asked us to eliminate the madman known as \"MV\".  \\n\\n#o9400705# #r#a50661##k",
+      "completed": "You\u0027ve accomplished your task and gained EXP, 2500 mesos and a special gift!"
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9220018,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 60,
+      "endDate": "2007112700",
+      "prerequisiteQuests": [
+        {
+          "questId": 28107,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032248
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9220018,
+      "monsters": [
+        {
+          "monsterId": 9400589
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": 2500,
+      "experience": 2500,
+      "items": [
+        {
+          "itemId": 4032248,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

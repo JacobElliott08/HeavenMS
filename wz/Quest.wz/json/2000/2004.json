@@ -1,0 +1,33 @@
+{
+  "questId": 2004,
+  "info": {
+    "name": "Making a Sparkling Rock",
+    "parent": "Maya and the Weird Medicine",
+    "descriptions": {
+      "inProgress": "I finally met Sophia, who\u0027s working on her dream as an alchemist inside the department store in Perion. To make the sparkling rock, she said she needs #b50 squishy liquid\u0027s, 50 leaves, 20 octopus legs#k and #b1 Arcon\u0027s blood#k. Everything else looks reasonable enough except ... Arcon\u0027s blood ...??? Fortunately, Sophia knew where to get it. She told me to look for this man named Manji somewhere around Perion. Manji, huh ... where must he be ... ??",
+      "completed": "Sophia told me that Manji has the Arcon\u0027s Blood, which is what the sparkling rock is made of."
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022100,
+      "minLevel": 15,
+      "prerequisiteQuests": [
+        {
+          "questId": 2003,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 2005
+    }
+  }
+}

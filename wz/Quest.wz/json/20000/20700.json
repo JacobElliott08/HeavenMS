@@ -1,0 +1,42 @@
+{
+  "questId": 20700,
+  "info": {
+    "name": "Are You Sure You Can Leave?",
+    "descriptions": {
+      "notStarted": "Apparently, #p1101002# wants to tell me something...",
+      "inProgress": "#p1101002# told me I may be a knight, but I still have a long way to go before he can send me out on assignments, and asked me to train more.",
+      "completed": "#p1101002# told me I may be a knight, but I still have a long way to go before he can send me out on assignments, and he asked me to train more with the help from #p1102000# the Training Instructor..."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "startScript": "q20700s",
+      "minLevel": 10,
+      "maxLevel": 15,
+      "jobs": [
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    }
+  }
+}

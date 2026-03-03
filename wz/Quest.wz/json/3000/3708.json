@@ -1,0 +1,28 @@
+{
+  "questId": 3708,
+  "info": {
+    "name": "Red Tree",
+    "parent": "The Sacred Barrier of the Forest",
+    "descriptions": {
+      "notStarted": " #p2081003#, who lives in #m240000000#, says he/she saw a strange tree in the forest...",
+      "inProgress": "#p2081003# said that while roaming around Minar Forest, he saw that the trees that lead to Dragon\u0027s Forest have turned #bred#k. He doesn\u0027t think the other Hafrings know about this and asked me to go tell the Chief.",
+      "completed": " As #p2081003#\u0027s requested, I went to see #p2081000# and told him that the trees at the entrance of Dragon\u0027s Forest had turned red."
+    },
+    "area": 41,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081003,
+      "minLevel": 85
+    },
+    "complete": {
+      "npc": 2081000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500
+    }
+  }
+}

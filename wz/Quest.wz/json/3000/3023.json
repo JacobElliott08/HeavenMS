@@ -1,0 +1,53 @@
+{
+  "questId": 3023,
+  "info": {
+    "name": "Looking for the Wiseman in Ellinia",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "notStarted": "",
+      "inProgress": "I handed Dances with Balrog 2 Power Crystals and received the 1st #bold piece of map#k. The map is cut in four pieces, each piece held by a wiseman. He wanted me to gather up all four pieces of the map, find the Book of Ancient through it, and seal it up for good. Next up: The wiseman in #bEllinia#k. ",
+      "completed": ""
+    },
+    "area": 33,
+    "order": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3022,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "items": [
+        {
+          "itemId": 4031054
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031054
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 4000,
+      "nextQuest": 3024,
+      "items": [
+        {
+          "itemId": 4031054,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

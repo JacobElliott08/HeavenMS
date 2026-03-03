@@ -3,9 +3,9 @@
   "info": {
     "name": "Co-op with Special Agent O",
     "descriptions": {
-      "notStarted": "Gaga, who' now a secret agent, says he has someone he wants to introduce me to. I wonder who it is?",
-      "inProgress": "Gaga, who suddenly became a secret agent of an unknown organization, has deputized me and now I am an agent as well. Gaga suggested I do a co-op with special agent O.",
-      "completed": "Through Gaga's introduction, I met Special Agent O. He seemed like quite a character--full of personality and life."
+      "notStarted": "Gaga, who\u0027 now a secret agent, says he has someone he wants to introduce me to.  I wonder who it is?",
+      "inProgress": "Gaga, who suddenly became a secret agent of an unknown organization, has deputized me and now I am an agent as well.  Gaga suggested I do a co-op with special agent O.  However, he didn\u0027t tell me the details of the mission and simply told me to meet special agent O myself.  He said I could find the special agent O at the mini dungeon entrance...n\\n#b\u003cMini Dungeon Area where agent O is\u003e\\n- Victoria Island : #m100020000#\\n- Victoria Island : #m105040304#\\n- Victoria Island : #m105050100#\\n- Ludus Lake : #m221023400#\\n- Nihal Desert : #m260020300#\\n- Nihal Desert : #m261020300#\\n- Minar Forest : #m240020500#\\n- Minar Forest : #m240040511#\\n- Minar Forest : #m240040520#",
+      "completed": "Through Gaga\u0027s introduction, I met Special Agent O.  He seemed like quite a charadcter--full of personality and life."
     },
     "area": 50
   },
@@ -27,17 +27,8 @@
     }
   },
   "actions": {
-    "onStart": {},
     "onComplete": {
-      "items": [
-        {
-          "itemId": 1072366,
-          "count": 1,
-          "jobRestriction": 63,
-          "expirationDate": "2009090923"
-        }
-      ],
-      "experience": 500
+      "nextQuest": 10002
     }
   }
 }

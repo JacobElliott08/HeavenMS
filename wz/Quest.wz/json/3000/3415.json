@@ -1,0 +1,42 @@
+{
+  "questId": 3415,
+  "info": {
+    "name": "The Alarm Clock",
+    "descriptions": {
+      "notStarted": "I should go see Pink Mesoranger, who\u0027s somewhere around the Boswell Field...",
+      "inProgress": "I met up with #bPink Mesoranger#k at the Boswell Field near Omega Sector, and she looked very concerned over her never-ending habit of oversleeping. She asked if I could get her 20 #bTable Clocks#k that are dropped from monster #bTick-Tock#k. I better start heading down to the bottom of the Ludibrium Clocktower. \\n\\n#t4000114# #b#c4000114##k/20",
+      "completed": "I gathered up #bTable Clocks#k for Pink Mesoranger, who was stationed somewhere around Omega Sector, so she can overcome her chronic oversleeping. But then again, she always had trouble waking up, so I may have to find something more powerful for her..."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041012,
+      "minLevel": 38
+    },
+    "complete": {
+      "npc": 2041012,
+      "items": [
+        {
+          "itemId": 4000114,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9900,
+      "items": [
+        {
+          "itemId": 4000114,
+          "count": -20
+        },
+        {
+          "itemId": 2020007,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "questId": 3021,
+  "info": {
+    "name": "Looking for the Wiseman in Perion",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "I handed Scadur the wolf skins he asked for, and he gave me back the #bold ring#k. He reminisced the old days where heard about the ring through the four wisemen he had met as a young man. He recommended me to go visit Victoria Island and meet up with all four of the wisemen, starting with the one in #bPerion#k."
+    },
+    "area": 33,
+    "order": 18
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020007,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3020,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022000,
+      "items": [
+        {
+          "itemId": 4031053
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031053
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 4000,
+      "nextQuest": 3022,
+      "items": [
+        {
+          "itemId": 4031053,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

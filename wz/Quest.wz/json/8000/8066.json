@@ -1,0 +1,41 @@
+{
+  "questId": 8066,
+  "info": {
+    "name": "A Puppet",
+    "parent": "Freed From Darkness",
+    "descriptions": {
+      "notStarted": "Apparently #p9120011#\u0027s doll just walked out and disappeared. I better check out this story.",
+      "inProgress": "#p9120011#\u0027s doll apparently just walked out on her and disappeared. Maybe this has something to do with the #b#t4000144##k that #p1012109# is looking for. I should go to #b#p1012109##k\u0027s place and talk to him.",
+      "completed": "#b#p1012109##k seems to catch on to something here."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120011,
+      "minLevel": 90,
+      "prerequisiteQuests": [
+        {
+          "questId": 8065,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012109
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "fame": 5,
+      "nextQuest": 8067,
+      "items": [
+        {
+          "itemId": 2000004
+        }
+      ]
+    }
+  }
+}

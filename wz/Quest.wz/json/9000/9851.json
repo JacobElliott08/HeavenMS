@@ -1,0 +1,35 @@
+{
+  "questId": 9851,
+  "info": {
+    "name": "Snake Pit in the Swamp",
+    "descriptions": {
+      "notStarted": "#b#p1052000##k in Kerning City is being called Alex the coward. Why is he being teased for being a coward? Talk to Alex.",
+      "inProgress": "#b#p1052000##k saw a snake pit and told his friends, but no one believed him and accused him of being a coward. Well, it is a bit hard to believe... A snake pit? Really? When Alex sensed your skepticism, he instantly teleported you to the snake pit in the swamp, saying you should see it for yourself and hunt 50 Jr. Neckis!\\n\\n#o2130103# #r#a98511##k ",
+      "completed": "#b#p1052000##k was telling the truth. In the swamp, there was a snake pit filled with slithering Jr. Neckis. Eeeeeek! No wonder Alex was so frightened."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052000,
+      "minLevel": 25,
+      "startDate": "2007052200",
+      "endDate": "2007061800",
+      "startScript": "q9851s"
+    },
+    "complete": {
+      "npc": 1052000,
+      "monsters": [
+        {
+          "monsterId": 2130103,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5100
+    }
+  }
+}

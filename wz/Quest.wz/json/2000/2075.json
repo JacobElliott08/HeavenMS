@@ -1,0 +1,52 @@
+{
+  "questId": 2075,
+  "info": {
+    "name": "Find the Maple History Book 2",
+    "descriptions": {
+      "inProgress": "I found all 3 Maple History Books, and gave them all to #p2041022#. He gave me #t4031160# and told me to go see #b#p1012109##k.",
+      "completed": "I showed #p1012109# the #t4031160# that Tigun gave me, and in return, he gave me #t1012109:#. As a sign of thanks for finding the history book, #p1012109# gave me #t1012109:#. "
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041022,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 2074,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012109,
+      "items": [
+        {
+          "itemId": 4031160
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031160
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 560,
+      "items": [
+        {
+          "itemId": 4031160,
+          "count": -1
+        },
+        {
+          "itemId": 1002436
+        }
+      ]
+    }
+  }
+}

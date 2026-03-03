@@ -1,0 +1,42 @@
+{
+  "questId": 3111,
+  "info": {
+    "name": "Eliza\u0027s Rage",
+    "parent": "Goddess\u0027s Pet",
+    "descriptions": {
+      "notStarted": "#bSpiruna#k, an old woman living somewhere in #bOrbis#k, looks into the crystal ball and sees a dreadful truth. Let\u0027s go to #bSpiruna#k.",
+      "inProgress": "She says that the #bAncient Creature#k has awakened from its eternal sleep. This creature was the pet of the goddess, and its name is #bEliza#k. #bEliza#k was once known as a very gentle creature, but for some reason it has become ferocious. #bSpiruna#k says that #bEliza#k started to rampage about when the goddess was kidnapped by Pixies, and asks to defeat the Pixies roaming Cloud Park in order to calm #bEliza#k\u0027s rage.\\n\\n#o3230200# #r#a31111##k\\n#o4230106# #r#a31112##k\\n#o5120000# #r#a31113##k",
+      "completed": "Came back after defeating all the Pixies. Has Eliza\u0027s rage softened somewhat?"
+    },
+    "area": 33,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2032001,
+      "minLevel": 83
+    },
+    "complete": {
+      "npc": 2032001,
+      "monsters": [
+        {
+          "monsterId": 3230200,
+          "count": 50
+        },
+        {
+          "monsterId": 4230106,
+          "count": 100
+        },
+        {
+          "monsterId": 5120000,
+          "count": 150
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800
+    }
+  }
+}

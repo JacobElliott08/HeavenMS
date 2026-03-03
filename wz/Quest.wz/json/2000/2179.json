@@ -1,0 +1,38 @@
+{
+  "questId": 2179,
+  "info": {
+    "name": "Protect The Nautilus\u0027 Emergency Food Supply",
+    "parent": "Special Recipe for The Nautilus",
+    "descriptions": {
+      "notStarted": "Apparently, pigs and ribbon pigs have been coming onto The Nautilus every night to eat up the ship\u0027s emergency food supply. At this rate, the people on The Nautilus may end up starving! I should go see Tangyoon, the ship\u0027s Head Chef and talk to him about this.",
+      "inProgress": "Tangyoon says pigs and ribbon pigs keep coming onto The Nautilus\u0027 emergency food supply and eating up all the food, and there\u0027s only a little bit left in storage! I\u0027m gonna have to teach these #rpigs#k and #rribbon pigs#k a lesson they\u0027ll remember. \\n\\n#o1210100# #r#a21791##k \\n#o1210101# #r#a21792##k",
+      "completed": "I think they must\u0027ve learned their lesson by now. They\u0027d better stay away from The Nautilus\u0027 food supply!"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092000,
+      "minLevel": 15
+    },
+    "complete": {
+      "npc": 1092000,
+      "monsters": [
+        {
+          "monsterId": 1210100,
+          "count": 30
+        },
+        {
+          "monsterId": 1210101,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1300
+    }
+  }
+}

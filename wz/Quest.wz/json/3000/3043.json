@@ -1,0 +1,117 @@
+{
+  "questId": 3043,
+  "info": {
+    "name": "Helping Kriel Out",
+    "parent": "To the New World",
+    "descriptions": {
+      "notStarted": "I need to go see Kriel the Fairy at Orbis.",
+      "inProgress": "Kriel the Fairy seemed to be swamped with work, and asked me if I could help her out. She wanted me to walk around town, collect empty bottles, and collect materials needed to make weapons for magicians. \\n\\n #t4031198# #b#c4031198##k/20 \\n #t4000073# #b#c4000073##k/200 \\n #t4000058# #b#c4000058##k/50",
+      "completed": "I\u0027m glad I got to help Kriel the Fairy out."
+    },
+    "area": 33,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012011,
+      "prerequisiteQuests": [
+        {
+          "questId": 3042,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012011,
+      "items": [
+        {
+          "itemId": 4000073,
+          "count": 200
+        },
+        {
+          "itemId": 4031198,
+          "count": 20
+        },
+        {
+          "itemId": 4000058,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 25000,
+      "items": [
+        {
+          "itemId": 4000073,
+          "count": -200
+        },
+        {
+          "itemId": 4031198,
+          "count": -20
+        },
+        {
+          "itemId": 4000058,
+          "count": -50
+        },
+        {
+          "itemId": 2040804,
+          "probability": 1
+        },
+        {
+          "itemId": 2043301,
+          "probability": 1
+        },
+        {
+          "itemId": 2043701,
+          "probability": 1
+        },
+        {
+          "itemId": 2043801,
+          "probability": 1
+        },
+        {
+          "itemId": 2044001,
+          "probability": 1
+        },
+        {
+          "itemId": 2044101,
+          "probability": 1
+        },
+        {
+          "itemId": 2044201,
+          "probability": 1
+        },
+        {
+          "itemId": 2044301,
+          "probability": 1
+        },
+        {
+          "itemId": 2044401,
+          "probability": 1
+        },
+        {
+          "itemId": 2044501,
+          "probability": 1
+        },
+        {
+          "itemId": 2044601,
+          "probability": 1
+        },
+        {
+          "itemId": 2044701,
+          "probability": 1
+        },
+        {
+          "itemId": 2044801,
+          "probability": 1
+        },
+        {
+          "itemId": 2044901,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

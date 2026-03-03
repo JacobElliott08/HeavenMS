@@ -1,0 +1,32 @@
+{
+  "questId": 3338,
+  "info": {
+    "name": "The Problems with Life Alchemy",
+    "descriptions": {
+      "notStarted": "#p2111008# is an alchemist from #b#m261000000##k. He\u0027s a Zenumist, and contends that Alcadno\u0027s works are flawed. I better go talk to #b#p2111008##k.",
+      "inProgress": "#p2111008# had been mad at the fact that lately, there have been an increase of #o2110300#s outside #m261000000#, and asked me to defeat #r150#k of them.\\n\\n#o2110300# #r#a33381#",
+      "completed": "#p2111008# proceeded to point out every flaw stemming from Alcadno, and wanted to put a stop to their research."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111008,
+      "minLevel": 24
+    },
+    "complete": {
+      "npc": 2111008,
+      "monsters": [
+        {
+          "monsterId": 2110300,
+          "count": 150
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "questId": 29922,
+  "info": {
+    "name": "Veteran Hunter",
+    "descriptions": {
+      "completed": "You have earned the #b\u003cVeteran Hunter\u003e#k title by hunting 100,000 monsters that are above you in level within 30 days."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142004
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "startScript": "q29922s",
+      "minLevel": 10,
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 1142004
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "questId": 3509,
+  "info": {
+    "name": "The One Who Walks Down the Road of Regrets2",
+    "descriptions": {
+      "notStarted": "I received permission to go all the way to #m270020200#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test.",
+      "inProgress": "#p2140000# said if I want to go in further, go to #b#m270020200##k and defeat #r999 #o8200006##k.\\n\\n#o8200006# #r#a35091##k",
+      "completed": "I defeated 999 #o8200006# 999.  #p2140000# granted me permission.  Of course, this permission only allows to me to go up to #m270020300#."
+    },
+    "area": 46
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140000,
+      "minLevel": 109,
+      "prerequisiteQuests": [
+        {
+          "questId": 3508,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2140000,
+      "monsters": [
+        {
+          "monsterId": 8200006,
+          "count": 999
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 495700,
+      "items": [
+        {
+          "itemId": 4021006
+        }
+      ]
+    }
+  }
+}

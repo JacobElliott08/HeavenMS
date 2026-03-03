@@ -1,0 +1,28 @@
+{
+  "questId": 28131,
+  "info": {
+    "name": "Soft and Cozy Chief\u0027s Chair",
+    "descriptions": {
+      "notStarted": "Kopee says she\u0027ll make a nice chair for the person who has released the seal of the #bMiwok Artifact#k. Let\u0027s go talk to her. ",
+      "inProgress": "Kopee says that she\u0027ll make you a #bMiwok Chief\u0027s Chair#k as a token of her appreciation for your help. She says if I go and talk to Toh Relicseeker and release the seal of the #bMiwok Artifact#k 20 times using the #bEnchanted Scroll#k, she\u0027ll make me the chair. It\u0027s a great opportunity for me to receive a reward and the Chief\u0027s Chair from the Miwok Artifact.",
+      "completed": "Kopee gave me a Miwok Chief\u0027s Chair as a gift, thanking me for finding the Miwok Artifact. It\u0027s an impressive chair that is both soft and cozy."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201116,
+      "endDate": "2009082521",
+      "prerequisiteQuests": [
+        {
+          "questId": 28128,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201116,
+      "endScript": "q28131e"
+    }
+  }
+}

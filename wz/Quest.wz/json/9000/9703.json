@@ -1,0 +1,24 @@
+{
+  "questId": 9703,
+  "info": {
+    "name": "초성퀴즈 2월 26일",
+    "descriptions": {
+      "notStarted": "새해가 밝았다. 설날을 기념해 #b#p9010010##k가 새로운 이벤트를 준비한 것 같은데...",
+      "inProgress": "#b#p9010010##k는 초성퀴즈 이벤트를 준비했다고 한다. 쉬운 문제가 나와야 하는데...",
+      "completed": "초성 퀴즈 이벤트에 참여했다. 벌써부터 다음 이벤트가 기대 되는 걸?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "startDate": "2007022600",
+      "endDate": "2007022700"
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "quiz1_14"
+    }
+  }
+}

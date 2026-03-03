@@ -1,0 +1,37 @@
+{
+  "questId": 9506,
+  "info": {
+    "name": "바다의 날 퀴즈 2",
+    "parent": "바다의 날 퀴즈",
+    "descriptions": {
+      "notStarted": "바다의 날을 맞이하여 바다에 대해 자세히 알아보고 싶다면 #b#p9010000##k를 찾아가자.",
+      "inProgress": "바다의 높이에 관한 문제이다.",
+      "completed": "바다의 깊이는 에베레스트 보다 깊다."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "startDate": "2006053000",
+      "endDate": "2006060700",
+      "prerequisiteQuests": [
+        {
+          "questId": 9505,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "nextQuest": 9507
+    }
+  }
+}

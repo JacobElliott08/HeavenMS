@@ -1,0 +1,37 @@
+{
+  "questId": 4927,
+  "info": {
+    "name": "Ancient Artifacts",
+    "descriptions": {
+      "notStarted": "John Barricade has told me about the Ancient Artifacts I\u0027ve found in my offline travels (playing the MapleStory Trading Card Game).  He thinks that these can be used to construct powerful weapons and items.  If I bring him a valid set of those I find, he\u0027ll be able to tell me what I can make and how to make them.",
+      "inProgress": "John Barricade has told me about the Ancient Artifacts I\u0027ve found in my offline travels (playing the MapleStory Trading Card Game).  He thinks that these can be used to construct powerful weapons and items.  If I bring him a valid set of those I find, he\u0027ll be able to tell me what I can make and how to make them.",
+      "completed": "John Barricade has told me about the Ancient Artifacts I\u0027ve found in my offline travels (playing the MapleStory Trading Card Game).  He thinks that these can be used to construct powerful weapons and items.  If I bring him a valid set of those I find, he\u0027ll be able to tell me what I can make and how to make them."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201051,
+      "items": [
+        {
+          "itemId": 1002140,
+          "count": 1000
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201051,
+      "items": [
+        {
+          "itemId": 1002140,
+          "count": 1000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1
+    }
+  }
+}

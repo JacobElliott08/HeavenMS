@@ -1,0 +1,70 @@
+{
+  "questId": 8849,
+  "info": {
+    "name": "Amoria : The Sakura Garden 2 - Finishing Touches",
+    "parent": "Amoria : The Sakura Garden",
+    "descriptions": {
+      "notStarted": "Jacob mentioned he\u0027d need more help. Perhaps I should pay him a visit?",
+      "inProgress": "I went to see Jacob again, and his Sakura Garden is just about done. He wants to do something special for the first guests, so I\u0027ve agreed to provide #b20 White/Purple Gift Boxes#k, #b10 Lupin Dolls#k and #b10 Toy Baby Seals#k. Shouldn\u0027t be too tough, and he\u0027s mentioned something special if I finish...",
+      "completed": "I finished getting everything for Jacob and returned to him for my reward-#bBlossom Juice#k! It tastes great!"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201035,
+      "minLevel": 37,
+      "prerequisiteQuests": [
+        {
+          "questId": 8848,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201035,
+      "items": [
+        {
+          "itemId": 4000026,
+          "count": 10
+        },
+        {
+          "itemId": 4000154,
+          "count": 10
+        },
+        {
+          "itemId": 4031527,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5870,
+      "items": [
+        {
+          "itemId": 4000154,
+          "count": -10
+        },
+        {
+          "itemId": 4000026,
+          "count": -10
+        },
+        {
+          "itemId": 4031527,
+          "count": -20
+        },
+        {
+          "itemId": 2000009,
+          "count": 2
+        },
+        {
+          "itemId": 2022130,
+          "count": 2
+        }
+      ]
+    }
+  }
+}

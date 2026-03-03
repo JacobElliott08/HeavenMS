@@ -1,0 +1,120 @@
+{
+  "questId": 9380,
+  "info": {
+    "name": "바이킨의 보물상자",
+    "descriptions": {
+      "notStarted": "\u0027#p9000009#\u0027이 항해를 마치고 돌아왔다고 하는데..",
+      "inProgress": "#b#p9000009##k은 어렸을 적 떠난 여행에서 자신을 괴롭혔던 #r#o2230101##과 #r#o2110200##k들을 #r100마리씩#k 퇴치해 주면 이번 여행에서 줏어 온 보물상자를 구경시켜 준다고 했다.\\n\\n#o2110200#  #r#a93801##k\\n#o9101001#  #r#a93802##k",
+      "completed": "어릴 적 \u0027#p9000009#\u0027을 괴롭혔던 몬스터 들을 물리치고 보물상자를 구경했다. 그는 몬스터를 퇴치해줘서 고맙다면서 보물상자에 있던 보물 중에 한 가지를 내게 주었다. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000009,
+      "minLevel": 20,
+      "maxLevel": 34,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2006032300",
+      "endDate": "2006040400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9385,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422
+      ]
+    },
+    "complete": {
+      "npc": 9000009,
+      "monsters": [
+        {
+          "monsterId": 2110200,
+          "count": 100
+        },
+        {
+          "monsterId": 9101001,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200,
+      "items": [
+        {
+          "itemId": 1472034,
+          "jobRestriction": 16
+        },
+        {
+          "itemId": 1402019,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1332033,
+          "jobRestriction": 16
+        },
+        {
+          "itemId": 1302038,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1322035,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1372018,
+          "jobRestriction": 4
+        },
+        {
+          "itemId": 1432019,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1452027,
+          "jobRestriction": 8
+        },
+        {
+          "itemId": 1462023,
+          "jobRestriction": 8
+        }
+      ]
+    }
+  }
+}

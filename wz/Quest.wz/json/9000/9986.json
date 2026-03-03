@@ -1,0 +1,29 @@
+{
+  "questId": 9986,
+  "info": {
+    "name": "Cassandra\u0027s Latest Information",
+    "parent": "Snow Silk and the Mysterious Fabric ",
+    "descriptions": {
+      "notStarted": "Cassandra, maple world\u0027s informant, is said to have obtained some new information hot off the press.  I\u0027m curious what it is. ",
+      "inProgress": "Cassandra told me about the Snow Silk.  But for some reason she wouldn\u0027t explain in detail and kept telling me to just go see the archaeologist, #bWinston#k...",
+      "completed": "Maple world\u0027s informant, Cassandra, notified me of her latest information, the Snow Silk.  I went to go see Winston, the archaeologist who is looking for this Snow Silk."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "endDate": "2009061623"
+    },
+    "complete": {
+      "npc": 1022006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 9987
+    }
+  }
+}

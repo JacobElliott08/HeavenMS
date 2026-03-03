@@ -1,0 +1,47 @@
+{
+  "questId": 2067,
+  "info": {
+    "name": "Research on Plant Fossils",
+    "parent": "Dr. Betty\u0027s Research on Plants",
+    "descriptions": {
+      "notStarted": "Dr. Betty, a biologist near Ellinia is looking for an assistant.",
+      "inProgress": "#bDr. Betty#k asked me to work as an assistant for a while. My first task from her is to collect #b20 #t4031150#s#k. I can see various plants covering the woods in Ellinia.\\n\\n#t4031150# #c4031150#/20",
+      "completed": "My first job as Dr. Betty\u0027s assistant was to collect some plants in the woods in Ellinia and sample them. It wasn\u0027t that hard I guess."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032104,
+      "minLevel": 22,
+      "prerequisiteQuests": [
+        {
+          "questId": 2066,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032104,
+      "items": [
+        {
+          "itemId": 4031150,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3500,
+      "nextQuest": 2068,
+      "items": [
+        {
+          "itemId": 4031150,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

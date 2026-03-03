@@ -1,0 +1,30 @@
+{
+  "questId": 3303,
+  "info": {
+    "name": "Test from the Head of Alcadno Society",
+    "parent": "Joining Alcadno",
+    "descriptions": {
+      "notStarted": "A true union of alchemy and mechanical engineering, #bAlcadno, is a society that celebrates new alchemy#k. With the conflict raging in #m261000000#, however, Alcadno doesn\u0027t seem to accept others. I really want to join Alcadno, though... I better go talk to #b#p2111007##k.",
+      "inProgress": "#p2111007# told me in order to join the Alcadno Society, I\u0027ll have to compile a series of lab reports and present it.  He said he could obtain a legitimate report if I pay him #b2 ores, regardless of type#k. He\u0027d then take care of the rest...",
+      "completed": "After giving #p2111007# 2 ores of jewels, he told me to wait."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111007,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3300,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111007,
+      "endScript": "q3303e"
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "questId": 9381,
+  "info": {
+    "name": "에릭손에게 보내는 선물",
+    "descriptions": {
+      "notStarted": "\u0027#p9000009#\u0027이 항해를 마치고 돌아왔다고 하는데..",
+      "inProgress": "#b#p9000009##k은 항해 도중 오시리아 대륙에서 만난 #b#p2012018##k에게 큰 신세를 진 일이 있어서 보답을 하고 싶다고 한다. #b#p2012018##k에게 #b#t4031285##k와 #b#t4000021# 50개#k를 가져다 주자.\\n\\n#t4031285#  #b#c4031285##k / 1\\n#t4000021# #b#c4000021##k / 50",
+      "completed": "#p9000009#이 준 #t4031285#와 #t4000021# 50개를 구해서 #p2012018#에게 무사히 가져다 주었다. #p2012018#은 #t4031285# 안에 있던 보물 중 하나를 나에게 주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000009,
+      "minLevel": 35,
+      "maxLevel": 49,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2006032300",
+      "endDate": "2006040400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9385,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        111,
+        112,
+        120,
+        121,
+        122,
+        130,
+        131,
+        132,
+        200,
+        210,
+        211,
+        212,
+        220,
+        221,
+        222,
+        230,
+        231,
+        232,
+        300,
+        310,
+        311,
+        312,
+        320,
+        321,
+        322,
+        400,
+        410,
+        411,
+        412,
+        420,
+        421,
+        422
+      ]
+    },
+    "complete": {
+      "npc": 2012018,
+      "items": [
+        {
+          "itemId": 4031285
+        },
+        {
+          "itemId": 4000021,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031285
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 4031285,
+          "count": -1
+        },
+        {
+          "itemId": 4000021,
+          "count": -50
+        },
+        {
+          "itemId": 1472035,
+          "jobRestriction": 16
+        },
+        {
+          "itemId": 1382020,
+          "jobRestriction": 4
+        },
+        {
+          "itemId": 1332034,
+          "jobRestriction": 16
+        },
+        {
+          "itemId": 1322036,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1312018,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1302039,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1462024,
+          "jobRestriction": 8
+        },
+        {
+          "itemId": 1452028,
+          "jobRestriction": 8
+        },
+        {
+          "itemId": 1432020,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1442031,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1422015,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1412013,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1382021,
+          "jobRestriction": 4
+        },
+        {
+          "itemId": 1402020,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1372019,
+          "jobRestriction": 4
+        }
+      ]
+    }
+  }
+}

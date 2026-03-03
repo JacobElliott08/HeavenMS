@@ -1,0 +1,73 @@
+{
+  "questId": 28238,
+  "info": {
+    "name": "The Final Battle with Amdusias",
+    "descriptions": {
+      "notStarted": "#b#@1012100:##k in #bHenesys#k says it is now time to defeat #rAmdusias#k the demon. Let\u0027s talk to her.",
+      "inProgress": "She says you can find the Dark Portal where #rAmdusias#k is hiding if you go to #b#m104040002##k. You can enter using #rDarkween\u0027s Monster Drum#k.\\n\\nDefeat #rAmdusias#k!\\n\\nReport back to #b#@1012100:##k in #bHenesys#k upon completion.",
+      "completed": "You have defeated #rAmdusias#k whose seal has been broken. Who or what is responsible for breaking the seal, however, still remains a mystery."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012100,
+      "prerequisiteQuests": [
+        {
+          "questId": 28237,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1012100,
+      "monsters": [
+        {
+          "monsterId": 9400610
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032492
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032492
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 1003034
+        },
+        {
+          "itemId": 4032496
+        },
+        {
+          "itemId": 4032492,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

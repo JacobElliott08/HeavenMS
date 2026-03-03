@@ -1,0 +1,175 @@
+{
+  "questId": 10005,
+  "info": {
+    "name": "Agent W\u0027s Watermelon Investigation",
+    "descriptions": {
+      "notStarted": "The Maple Admin says he has something to talk to me about.  I should go see the #rMaple Admin#k. ",
+      "inProgress": "The Maple Admin said that #e#rMaster M#k#n had planted a bomb in Chumji\u0027s watermelons and asked me to retrieve the watermelons.  After I get access to Chumji\u0027s watermelon field from the Maple Admin, I should get #b5 #t4031701##k and take it to #rAgent W#k at agent headquarters.\\r\\n#i4031701# #t4031701# #b#c4031701# / 5#k",
+      "completed": "There has been intelligence that a bomb from #rMaster M#k had been planted in Chumji\u0027s watermelons in his field.  I carefully picked 5 watermelons from Chumji\u0027s watermelon field and delivered it to Agent W.  Agent W is a self proclaimed demolitions expert!  I don\u0027t feel all that safe around him..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 120,
+      "startDate": "2009060100",
+      "endDate": "2009082600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10000,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 9000032,
+      "items": [
+        {
+          "itemId": 4031701,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 9000032,
+      "minLevel": 10,
+      "intervalMinutes": 120
+    },
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4031701,
+          "count": -5
+        },
+        {
+          "itemId": 1302071,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1312034,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1322056,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1332059,
+          "jobRestriction": 16
+        },
+        {
+          "itemId": 1382042,
+          "jobRestriction": 4
+        },
+        {
+          "itemId": 1402041,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1412029,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1422033,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1432042,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1442053,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1452048,
+          "jobRestriction": 8
+        },
+        {
+          "itemId": 1462043,
+          "jobRestriction": 8
+        },
+        {
+          "itemId": 1472058,
+          "jobRestriction": 16
+        },
+        {
+          "itemId": 1482025,
+          "jobRestriction": 32
+        },
+        {
+          "itemId": 1492026,
+          "jobRestriction": 32
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "questId": 3749,
+  "info": {
+    "name": "Nibelung\u0027s Song",
+    "parent": "Year 2503- From the Sky",
+    "descriptions": {
+      "inProgress": "In the end, Andy says the answer is in the year 2503, where he\u0027s from. He wants you to travel to the year 2503 to destroy Nibelung and report it to Ashura. Will this solve the problem?",
+      "completed": "You destroyed Nibelung and reported that to Ashura. She showed her gratitude and wished for peaceful days in the future."
+    },
+    "area": 41,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082004,
+      "minLevel": 90,
+      "prerequisiteQuests": [
+        {
+          "questId": 3748,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082013,
+      "monsters": [
+        {
+          "monsterId": 8220015
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 220000,
+      "items": [
+        {
+          "itemId": 1003039
+        }
+      ]
+    }
+  }
+}

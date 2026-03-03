@@ -1,0 +1,47 @@
+{
+  "questId": 20401,
+  "info": {
+    "name": "Hunting the Zombies",
+    "descriptions": {
+      "notStarted": "#b#p2020006##k of #b#m211000000##k apparently knows something about #p1103000#...",
+      "inProgress": "#p2020006# told me she\u0027s not sure where #p1103000# is now, but she was able to confirm that he did stay at #m211000000# for a lengthy period of time, and he was busy #rhunting the zombies#k. Not just a regular hunting, but with a purpose: to find a clue that may lead to something.",
+      "completed": "According to #p2020006#, #p1103000# was actively hunting the zombies. Not just a regular hunting, but hunting with a purpose: to find a clue that may lead to something."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020006,
+      "minLevel": 120,
+      "startScript": "q20401s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20400,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    }
+  }
+}

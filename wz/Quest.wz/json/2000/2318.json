@@ -1,0 +1,49 @@
+{
+  "questId": 2318,
+  "info": {
+    "name": "Killer Mushroom Spores (2)",
+    "descriptions": {
+      "notStarted": "It looks like you need more ingredients to produce a #bKiller Mushroom Spore Potion#k.",
+      "inProgress": "You have to gather 50 Mutated Spores, which are found on Renegade Spores.",
+      "completed": "You gave all the ingredients required for producing the #bKiller Mushroom Spore Potion#k to Scarrs."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300007,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2317,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300007,
+      "items": [
+        {
+          "itemId": 4000499,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 11500,
+      "nextQuest": 2319,
+      "items": [
+        {
+          "itemId": 4000499,
+          "count": -50
+        },
+        {
+          "itemId": 2430014
+        }
+      ]
+    }
+  }
+}

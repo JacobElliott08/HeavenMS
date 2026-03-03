@@ -1,0 +1,35 @@
+{
+  "questId": 9281,
+  "info": {
+    "name": "메이플 상식 : 공식 홈페이지",
+    "descriptions": {
+      "notStarted": "즐거운 새해 아침이 밝았다. 메이플 운영자를 찾아가보자.",
+      "inProgress": "메이플 공식홈페이지에서 볼 수 있는 메뉴에 관한 문제입니다.",
+      "completed": "메이플 공식홈페이지에서 초보자가이드와 각종 지식을 열람할 수 있는 메뉴는 메이플도서관입니다. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2006123100",
+      "endDate": "2007010100"
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 2022006,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

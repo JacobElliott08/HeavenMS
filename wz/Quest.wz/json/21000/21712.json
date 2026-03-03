@@ -1,0 +1,39 @@
+{
+  "questId": 21712,
+  "info": {
+    "name": "First Assignment, Completed!",
+    "descriptions": {
+      "notStarted": "Since this is your first assignment as an informant, you are eager to find out whether #p1012111# of #b#m100000000##k has solved the mystery behind the #t4032315#. Go visit #b#p1012111##k and find out.",
+      "inProgress": "#p1012111# says he discovered a faint noise coming out of the #t4032315#, which only #o1210102#s can hear, and that\u0027s what\u0027s been causing their aggressive behavior. In other words, #bthe #r#o1210102#s\u0027 behavior is all because of a puppet#k! Now that you have this case pretty much wrapped up, your should report the info to #b#p1002104##k.",
+      "completed": "You notified #p1002104# about the cause of the strange behavior among the #o1210102#s, which officially concluded your first ever assignment as an informant. You should probably spend some time leveling up and training yourself now."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012111,
+      "minLevel": 15,
+      "startScript": "q21712s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21711,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1002104
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

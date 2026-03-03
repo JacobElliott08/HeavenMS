@@ -1,0 +1,67 @@
+{
+  "questId": 3209,
+  "info": {
+    "name": "Nemi\u0027s Dilemma",
+    "descriptions": {
+      "notStarted": "I should go see Nemi, who\u0027s in Ludibrium...",
+      "inProgress": "I met up with Nemi again at a small house in Ludibrium. Lately she had been experiencing some weird things where the food had been disappearing right after being made, and was suspecting that the rats might have done it. That\u0027s why there\u0027s a toy mouse called Ratz, which is a toy mouse with rat traps, but instead of catching rats, they became alive as monsters. At Nemi\u0027s request, I\u0027ll have to take out Ratz and collect #b45 Rat traps#k, and give them back to her.\\n\\n#t4000095# #b#c4000095##k/45",
+      "completed": "I collected all the rat traps that Nemi needed in Ludibrium. I can\u0027t believe the amount of rat traps she made, judging from the fact that every single Ratz in Eos Tower is her creation."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041005,
+      "prerequisiteQuests": [
+        {
+          "questId": 3208,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041005,
+      "items": [
+        {
+          "itemId": 4000095,
+          "count": 45
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "items": [
+        {
+          "itemId": 4000095,
+          "count": -45
+        },
+        {
+          "itemId": 1002097,
+          "jobRestriction": 1180673
+        },
+        {
+          "itemId": 1002023,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 1002036,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 1002163,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 1002174,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 1002622,
+          "jobRestriction": 32800
+        }
+      ]
+    }
+  }
+}

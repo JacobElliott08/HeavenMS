@@ -1,0 +1,64 @@
+{
+  "questId": 2095,
+  "info": {
+    "name": "Taking Out the Alligators 2",
+    "parent": "The Alligators at the Swamp",
+    "descriptions": {
+      "notStarted": "Ayan of Perion is desperately looking for me. Is something wrong??",
+      "inProgress": "I found Ayan, and she seemed to be in a state of panic. She was walking around the swamp when she ran into a bigger, stronger, and more dangerous group of alligators than the previous ones. She ran back to Perion and had been looking for me ever since, so I could help her out once more. This time, I\u0027ll need to kill #b120 #o5130103#s#k and take #b50 #t4000033#s#k along the way. \\n\\n#o5130103# #r#a20951##k\\n#t4000033# #b#c4000033##k/ 50",
+      "completed": "I took out 120 #o5130103#s from the swamps, just like the way Ayan asked me to. I\u0027ll have to revisit that spot from time to time and take out the alligators before they spawn out of control."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022007,
+      "minLevel": 52,
+      "prerequisiteQuests": [
+        {
+          "questId": 2094,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022007,
+      "items": [
+        {
+          "itemId": 4000033,
+          "count": 50
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 5130103,
+          "count": 120
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 25000,
+      "items": [
+        {
+          "itemId": 4000033,
+          "count": -50
+        },
+        {
+          "itemId": 2041013
+        },
+        {
+          "itemId": 2041016
+        },
+        {
+          "itemId": 2041019
+        },
+        {
+          "itemId": 2041022
+        }
+      ]
+    }
+  }
+}

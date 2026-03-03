@@ -1,0 +1,39 @@
+{
+  "questId": 3910,
+  "info": {
+    "name": "Sword Dance",
+    "parent": "Dancer Sword",
+    "descriptions": {
+      "notStarted": "#p2101000# is a dancer from #b#m260000000##k who is currently practicing her moves without the bells on. She said she now may need something else... better go see #b#p2101000##k.",
+      "inProgress": "#p2101000# came up with a fantastic costume with the bell ringing, but she seemed to consider that her sword is too bland, and that she needed a new, fancier knife to really pull off her best move, the sword dance. She said the only person that is talented enough to make that kind of a sword in #m260000000# is #b#p2100001##k.",
+      "completed": "#p2101000# is a dancer who needs a new sword. I better go see #p2100001# right now..."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101000,
+      "minLevel": 32,
+      "prerequisiteQuests": [
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3909,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2100001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "nextQuest": 3911
+    }
+  }
+}

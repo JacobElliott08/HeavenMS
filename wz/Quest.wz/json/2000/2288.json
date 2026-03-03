@@ -1,0 +1,50 @@
+{
+  "questId": 2288,
+  "info": {
+    "name": "Say \"NO\" to Plagiarism",
+    "descriptions": {
+      "notStarted": "Master Rho doesn\u0027t seem like he\u0027s ready to hand over the new song even though you\u0027ve already paid the fee. Why is he so hesitant? Ask #bMaestro Rho#k if everything is okay.",
+      "inProgress": "Spirit of Rock is playing Maestro Rho\u0027s music without proper approval. Defeat Spirit of Rock and listen to the last song he plays.\\r\\n\\r\\nIt is highly recommended that you turn up the volume a bit in the system options so you don\u0027t miss any important parts of the song while you\u0027re listening.",
+      "completed": "You have destroyed Spirit of Rock as Maestro Rho requested. But he\u0027s still reluctant to let go of his Composition Notes. You don\u0027t have much time left. Ask #bMaestro Rho#k for the new song."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052120,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2287,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052120,
+      "items": [
+        {
+          "itemId": 4000538
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 4300013
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 48500,
+      "nextQuest": 2293,
+      "items": [
+        {
+          "itemId": 4000538,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

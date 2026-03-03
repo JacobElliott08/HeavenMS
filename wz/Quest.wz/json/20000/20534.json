@@ -1,0 +1,57 @@
+{
+  "questId": 20534,
+  "info": {
+    "name": "The Rebirth of Shinjo",
+    "descriptions": {
+      "notStarted": "If you wish to turn your #t1902006# into a #t1902007# again, you must go see #b#p1102002#, the Mount Instructor#k.",
+      "inProgress": "#p1102002# said he\u0027s learned to summon #t1902007# from #p1101001#, but that he couldn\u0027t do such a favor for someone who\u0027s careless enough to lose his #t1902007#. He then proposed that you pay him #b100,000,000 Mesos#k as a testament of your devout determination to never lose your Mount again.",
+      "completed": "You paid 100,000,000 Mesos to #p1102002# and received a #t1902007#."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102002,
+      "minLevel": 120,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 20533,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1902007
+        },
+        {
+          "itemId": 1902006
+        }
+      ],
+      "jobs": [
+        1112,
+        1212,
+        1312,
+        1412,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1102002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -100000000,
+      "items": [
+        {
+          "itemId": 1902006,
+          "count": -1
+        },
+        {
+          "itemId": 1902007
+        }
+      ]
+    }
+  }
+}

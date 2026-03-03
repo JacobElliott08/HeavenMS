@@ -1,0 +1,61 @@
+{
+  "questId": 21604,
+  "info": {
+    "name": "Wolf Mount",
+    "descriptions": {
+      "notStarted": "It looks like there are a couple of people who know how to handle Wolf Pups. You should head over to #b#m211000000##k and talk to #b#p2020007##k.",
+      "inProgress": "#p2020007# has taught you the basics of mounting a wolf! With this, you\u0027ll be able to move around faster since you can ride on the wolf\u0027s back. Plus you gain valuable bonding time with your wolf. You\u0027ll have to gather materials for a saddle, since you won\u0027t be able to ride your wolf without one.\\r\\n\\r\\n#i4000048# #t4000048# #b#c4000048# / 50#k",
+      "completed": "You received the #t1912011# and Mount Skill from #p2020007#. You\u0027ll be able to roam through the entire world with this."
+    },
+    "area": 6,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020007,
+      "normalAutoStart": true,
+      "startScript": "q21604s",
+      "items": [
+        {
+          "itemId": 1902015
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2020007,
+      "items": [
+        {
+          "itemId": 4000048,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000048,
+          "count": -50
+        },
+        {
+          "itemId": 1912011
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 20001004,
+          "skillLevel": 1,
+          "masterLevel": 1
+        }
+      ]
+    }
+  }
+}

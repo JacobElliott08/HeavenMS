@@ -1,0 +1,34 @@
+{
+  "questId": 9903,
+  "info": {
+    "name": "스텀피 퇴치하기",
+    "descriptions": {
+      "notStarted": "#b카산드라#k에게 걱정거리가 있다고 하는데...",
+      "inProgress": "#r스텀피#k를 퇴치하고 #b카산드라#k에게 돌아가자. \\n\\n#o3220000# #r#a99031##k",
+      "completed": "#b카산드라#k는 도저히 분이 풀리지 않는다며, 10월 21일까지는 매일 #r스텀피#k를 없애달라고 했다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "startDate": "2007092000",
+      "endDate": "2007102200",
+      "prerequisiteQuests": [
+        {
+          "questId": 2146,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q9903e",
+      "monsters": [
+        {
+          "monsterId": 3220000
+        }
+      ]
+    }
+  }
+}

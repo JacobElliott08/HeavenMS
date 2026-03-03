@@ -1,0 +1,40 @@
+{
+  "questId": 9841,
+  "info": {
+    "name": "Violent Monkeys",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k seems to have something urgent to tell you.",
+      "inProgress": "Teach those violent monkeys and Malady a lesson and report back to Estelle.\\n\\n#o3210800# #r#a98411##k \\n#o4230101# #r#a98412##k\\n#o5300100# #r#a98413##k",
+      "completed": "You eliminated the monkeys that were pestering Estelle."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 30,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2007052900",
+      "endDate": "2007061800"
+    },
+    "complete": {
+      "npc": 1032105,
+      "endScript": "huntUP2",
+      "monsters": [
+        {
+          "monsterId": 3210800,
+          "count": 50
+        },
+        {
+          "monsterId": 4230101,
+          "count": 40
+        },
+        {
+          "monsterId": 5300100,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

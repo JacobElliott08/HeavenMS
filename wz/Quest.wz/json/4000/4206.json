@@ -1,0 +1,42 @@
+{
+  "questId": 4206,
+  "info": {
+    "name": "장로의 조건",
+    "parent": "파티에 가고 싶은 폰라",
+    "descriptions": {
+      "notStarted": "#b#p9250014##k의 아내가 도통 옷을 만들 생각을 하지 않는 다며 아내를 설득해 보겠다고 했다. 어떻게 되었는지 #b#p9250014##k님께 말을 걸어봐야겠다.",
+      "inProgress": "마을의 장로는 아내를 놀라게 한 두꺼비들을 처치 하면 아내에게 부탁해 예쁜 파티복을 만들어 주겠다고 했다. \\n\\n#o9420000# #r#a42061##k",
+      "completed": "아직 #b#p9250000##k에게 줄 파티복이 덜 완성 되었다고 한다…"
+    },
+    "area": 48,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250014,
+      "minLevel": 25,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4205,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9250014,
+      "monsters": [
+        {
+          "monsterId": 9420000,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000
+    }
+  }
+}

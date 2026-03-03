@@ -1,0 +1,47 @@
+{
+  "questId": 6270,
+  "info": {
+    "name": "A Book of Fire",
+    "parent": "Clean water from the Lava",
+    "descriptions": {
+      "notStarted": "I obtained a book inscribed with fire.  It seems unusual... Let\u0027s go ask #b#p2081200##k.",
+      "inProgress": "When I asked #b#p2081200##k, she told me to go see #b#p1032001##k in Ellinia to find out more about it. #b#p1032001##k should know about the book since he/she know a lot about magic.\\n\\n#t4161016# #b#c4161016# / 1#k",
+      "completed": " #b#p1032001##k was astonished by the legend and decided to break the spell that was cast on the book."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081200,
+      "minLevel": 120,
+      "jobs": [
+        212
+      ],
+      "items": [
+        {
+          "itemId": 4161015
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "items": [
+        {
+          "itemId": 4161015
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500000,
+      "items": [
+        {
+          "itemId": 4161015,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

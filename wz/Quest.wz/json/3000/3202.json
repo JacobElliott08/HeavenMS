@@ -1,0 +1,48 @@
+{
+  "questId": 3202,
+  "info": {
+    "name": "Cleaning Up the Outer Parts of Eos Tower",
+    "descriptions": {
+      "notStarted": "I should go see Marcel now...",
+      "inProgress": "Marcel asked me to take care of  #b25 #o3230303#s#k and #b25 #o3230308#s#k living on the outer parts of Eos Tower. \\n\\n#o3230303# #r#a32021##k\\n#o3230308# #r#a32022#",
+      "completed": "I took care of the #b25 #o3230303#s#k and #b25 #o3230308#s#k like Marcel asked, but I have a gut feeling that another set of powerful force is lurking around this tower."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041004,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3201,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041004,
+      "monsters": [
+        {
+          "monsterId": 3230303,
+          "count": 25
+        },
+        {
+          "monsterId": 3230308,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4000,
+      "items": [
+        {
+          "itemId": 2000004,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

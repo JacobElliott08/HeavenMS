@@ -1,0 +1,48 @@
+{
+  "questId": 3436,
+  "info": {
+    "name": "Eliminating Plateon",
+    "descriptions": {
+      "notStarted": "I better go see Green Mesoranger, who should be somewhere around Boswell Field.",
+      "inProgress": "I met up with Green Meoranger again at the Boswell Field of Omega Sector. This time, Green Mesoranger said that the #bPlateons#k, which are far more dangerous than the Mateons, are threatening the Omega Sector and that I\u0027ll have to take care of them, while bringing #b80 Plateon\u0027s Helmets#k as evidence.\\n\\n#t4000121# #b#c4000121##k/80",
+      "completed": "I took out the Plateons and collected 80 Plateon Helmets, just the way Green Mesoranger from Boswell Field asked. The duties of the Mesorangers don\u0027t seem to be over, though, so if I have some time to spare, then I maybe I should go check Green Mesoranger then."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040017,
+      "minLevel": 41,
+      "prerequisiteQuests": [
+        {
+          "questId": 3435,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040017,
+      "items": [
+        {
+          "itemId": 4000121,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5600,
+      "items": [
+        {
+          "itemId": 2020009,
+          "count": 50
+        },
+        {
+          "itemId": 4000121,
+          "count": -80
+        }
+      ]
+    }
+  }
+}

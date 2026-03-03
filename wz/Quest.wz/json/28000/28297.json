@@ -1,0 +1,50 @@
+{
+  "questId": 28297,
+  "info": {
+    "name": "Butler: \"The Trap\"",
+    "descriptions": {
+      "notStarted": "Things might seem rather ominous, but you must finish what you’ve started. Let’s see what the butler, who is in the Foyer, has in mind. ",
+      "inProgress": "It looks like you’re fighting a girl ghost. And you also need to collect #r20 Cursed Dolls#k. You could very well be dreaming…",
+      "completed": "Yes, you did it! The ghost has been vanquished and you collected #r20 Cursed Dolls#k! Perhaps you’ve finally arrived at the end of this saga."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201143,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 28315,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 28298
+        }
+      ],
+      "endDate": "2009112500"
+    },
+    "complete": {
+      "npc": 9201143,
+      "items": [
+        {
+          "itemId": 4000521,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000521,
+          "count": -20
+        },
+        {
+          "itemId": 3010085
+        }
+      ]
+    }
+  }
+}

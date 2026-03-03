@@ -1,0 +1,128 @@
+{
+  "questId": 6028,
+  "info": {
+    "name": "Abdullah VIII\u0027s Statement",
+    "parent": "Keol\u0027s Order #13",
+    "descriptions": {
+      "inProgress": "Abdullah VIII seemed very pleased with the turban and told me to send Meren a royal compliment on his behalf. He also said he already gave Meren the reward. That was quick!",
+      "completed": "I gave Meren the royal compliment that Abdullah VIII made for him. Meren in turn told me how proud he was of the progress I made as an item-producer. As gratifying as it was to receive compliments from someone like Meren, it also put a lot of pressure on me."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101009,
+      "minLevel": 105,
+      "prerequisiteQuests": [
+        {
+          "questId": 6027,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112,
+        2200,
+        2210,
+        2211,
+        2212,
+        2213,
+        2214,
+        2215,
+        2216,
+        2217,
+        2218
+      ]
+    },
+    "complete": {
+      "npc": 2110004
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000,
+      "items": [
+        {
+          "itemId": 4250801,
+          "probability": 1
+        },
+        {
+          "itemId": 4250901,
+          "probability": 1
+        },
+        {
+          "itemId": 4251001,
+          "probability": 1
+        },
+        {
+          "itemId": 4251101,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

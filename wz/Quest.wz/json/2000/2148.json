@@ -1,0 +1,32 @@
+{
+  "questId": 2148,
+  "info": {
+    "name": "Truth of the Rumor-Blackbull",
+    "descriptions": {
+      "notStarted": "#b#p1020000##k lived in #m102000000# for a long time. Let\u0027s go ask about the rumor.",
+      "inProgress": "#b#p1020000##k lived in #m102000000# for a long time. Let\u0027s go ask about the rumor.",
+      "completed": "Asked #p1020000# about the rumor."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1020000,
+      "startScript": "q2148s",
+      "prerequisiteQuests": [
+        {
+          "questId": 2144,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1020000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10
+    }
+  }
+}

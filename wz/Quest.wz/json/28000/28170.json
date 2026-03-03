@@ -1,0 +1,84 @@
+{
+  "questId": 28170,
+  "info": {
+    "name": "What Does Chief Stan Like?",
+    "parent": "What\u0027s going on in Henesys?",
+    "descriptions": {
+      "notStarted": "#b#@1012106:##k in #b#m100000000##k says she knows what #b#@1012003:##k likes.",
+      "inProgress": "She says she\u0027ll make you something #b#@1012003:##k likes if you bring her the following materials.\\n\\n#r#t4001343:##k-15\\n(#r#o1210101##ks drop them, so you can easily find them in #b#m100020000##k.)\\n\\n#r#t4001344:##k-10\\n(#r#o1110101##ks drop them and they can be easily found in the #b#m100040000##k map.)\\n\\n#r#t4001345:##k-1\\n(#r#o1210102##ks drop them.)\\n\\nReport back to #b#@1012106:##k in #b#m100000000##k upon completion.",
+      "completed": "It\u0027s been said that #b#@1012003:##k in #b#m100000000##k greatly enjoys playing the guitar."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012106,
+      "prerequisiteQuests": [
+        {
+          "questId": 28169,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1012106,
+      "items": [
+        {
+          "itemId": 4001343,
+          "count": 15
+        },
+        {
+          "itemId": 4001344,
+          "count": 10
+        },
+        {
+          "itemId": 4001345
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200,
+      "nextQuest": 28170,
+      "items": [
+        {
+          "itemId": 4001343,
+          "count": -15
+        },
+        {
+          "itemId": 4001344,
+          "count": -10
+        },
+        {
+          "itemId": 4001345,
+          "count": -1
+        },
+        {
+          "itemId": 4032480
+        }
+      ]
+    }
+  }
+}

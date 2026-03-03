@@ -1,0 +1,55 @@
+{
+  "questId": 6161,
+  "info": {
+    "name": "A Magician\u0027s Story",
+    "parent": "Shammos\u0027s past",
+    "descriptions": {
+      "inProgress": "#p2040052# said the book #p2020009# left for me is quite strange, and relates to Magicians somehow. I\u0027m supposed to deliver it to #b#p1032001##k if I\u0027m finished with it. Magician\u0027s story? What could it be? Maybe I can ask #p1032001##k.\\n\\n#t4161020# #b#c4161020# / 1#k",
+      "completed": " Upon delivering the book to #p1032001#, I decided to ask about the book. My words met with a empty look and eerie silence. I may have just hit a nerve..."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040052,
+      "jobs": [
+        212,
+        222,
+        232
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6160,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "items": [
+        {
+          "itemId": 4161020
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4161020
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 200000,
+      "items": [
+        {
+          "itemId": 4161020,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "questId": 21709,
+  "info": {
+    "name": "Check Out the Orange Mushroom",
+    "descriptions": {
+      "notStarted": "This is your first assignment as an informant. You\u0027re here to ask #b#p1012111##k in #b#m100000000##k about possible causes of the #o1210102#\u0027s strange behavior.",
+      "inProgress": "#p1012111# says that you must observe how the #o1210102#s have changed, and see if they\u0027ve grown new sets of horns. You should eliminate the #r#o1210102#s#k and look for the #b#t4032314#s#k.\\r\\n\\r\\n#i4032314# #t4032314# #b#c4032314# / 30#k",
+      "completed": "You brought the #t4032314#s you found to #p1012111#. He says he\u0027s going to start studying the horns and asked you to come back later."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012111,
+      "minLevel": 13,
+      "prerequisiteQuests": [
+        {
+          "questId": 21708,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1012111,
+      "items": [
+        {
+          "itemId": 4032314,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 620,
+      "items": [
+        {
+          "itemId": 4032314,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

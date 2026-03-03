@@ -1,0 +1,74 @@
+{
+  "questId": 3607,
+  "info": {
+    "name": "Opening Nolbu\u0027s Gourd",
+    "descriptions": {
+      "notStarted": "I have this seed that Swallow gave me. Should I give this to Nolbu?",
+      "inProgress": "I took this seed that Swallow gave me and gave it to Nolbu. When notified that the seed was indeed from Swallow, Nolbu requested that I plant the seed on his rooftop, and when it grows into a gourd, open it and give him whatever that maybe inside.",
+      "completed": "I gave Nolbu the seed that Swallow gave me. Nolbu requested that I plant the seed on his rooftop, and when it grows into a gourd, open it and give him whatever that maybe inside. When the gourd grew and was big enough to open, it contained the warrant of attachment. Greedy Nolbu collapsed and started bawling over his misfortune."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071002,
+      "minLevel": 37,
+      "prerequisiteQuests": [
+        {
+          "questId": 3606,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3608
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031225
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071002,
+      "items": [
+        {
+          "itemId": 4031224
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031225,
+          "count": -1
+        },
+        {
+          "itemId": 4031245
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4031224,
+          "count": -1
+        },
+        {
+          "itemId": 1072141
+        },
+        {
+          "itemId": 1072122
+        },
+        {
+          "itemId": 1072303
+        },
+        {
+          "itemId": 4031235
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "questId": 2102,
+  "info": {
+    "name": "Korean Folk Town : Through the Ocean",
+    "descriptions": {
+      "notStarted": "How about going to the Korean Folk Town through the ocean?",
+      "inProgress": "Through Camila\u0027s request, I have decided to travel to Korean Folk Town through the ocean and meet her pen pal, Kong Ji. Camila said she\u0027ll give me a few essential items for the trip. What must those be?",
+      "completed": "Through Camila\u0027s request, I have decided to travel to Korean Folk Town through the ocean and meet her pen pal, Kong Ji. Okay, so I first go from #bEllinia#k to #bOrbis#k, then from #bOrbis Tower#k all the way down to #bAqua Road#k? I think she told me to take the #bDolphin Taxi#k at Aquarium..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012108,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 2100,
+          "state": "STARTED"
+        },
+        {
+          "questId": 2101
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012108
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200,
+      "items": [
+        {
+          "itemId": 4001019
+        },
+        {
+          "itemId": 4031242,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

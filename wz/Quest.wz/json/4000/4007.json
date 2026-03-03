@@ -1,0 +1,61 @@
+{
+  "questId": 4007,
+  "info": {
+    "name": "완벽한 상자",
+    "descriptions": {
+      "notStarted": "#b#p9330003##k의 부탁대로 #b#p9330005##k를 찾아가 보자.",
+      "inProgress": "헤네시스의 #b#p1012101##k에게 가서 #b#p9330005##k의 열쇠를 찾아다 주자.\\n\\n#i4031303##t4031303#  #b#c4031303#/1#k",
+      "completed": "#b#p9330005##k의 부탁을 들어주고 #b#p9330003##k에게 가져다 줄 #b#t4031291##k를 얻었다."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9330005,
+      "minLevel": 42,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4006,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031291
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9330005,
+      "items": [
+        {
+          "itemId": 4031303
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031295
+        }
+      ]
+    },
+    "onComplete": {
+      "meso": 5000,
+      "items": [
+        {
+          "itemId": 4031303,
+          "count": -1
+        },
+        {
+          "itemId": 4031291
+        }
+      ]
+    }
+  }
+}

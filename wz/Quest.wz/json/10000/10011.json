@@ -1,0 +1,37 @@
+{
+  "questId": 10011,
+  "info": {
+    "name": "Special Order: Find Master M\u0027s Orders!",
+    "descriptions": {
+      "notStarted": "There is a strange energy flowing through Maple World.  Who is this Master M that is making everyone act so strange?  If anyone, #b#p9000036##k should know.  I should go visit her. ",
+      "inProgress": "Agent E said that in order to protect Maple World, I must find #t4032000#. \\n\\n#i04032000# #t4032000# #b#c04032000# / 20#k",
+      "completed": "I found #t4032000# and delivered it.  I hope #b#p9000036##k does a good job analyzing it..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000036,
+      "minLevel": 31,
+      "maxLevel": 50,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2009082600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10000,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000036,
+      "endScript": "q10011e",
+      "items": [
+        {
+          "itemId": 4032000,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

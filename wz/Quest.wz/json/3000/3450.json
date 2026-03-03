@@ -1,0 +1,47 @@
+{
+  "questId": 3450,
+  "info": {
+    "name": "The Lost Piece of the VIP Ticket",
+    "descriptions": {
+      "notStarted": "Where did the ripped piece of the VIP ticket go? I better go see Kevin the Soldier.",
+      "inProgress": "The ripped piece of the VIP ticket is missing, so I went to Kevin the Soldier for its whereabouts. Kevin wound up picking up the ticket after I left.",
+      "completed": "I was looking for the ripped piece of the VIP ticket for a looong time, and I fund out that the ones I dropped, Kevin the Soldier managed to pick them up and save them. Phew~~~"
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050011,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3441,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3443
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031243
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050011
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031207
+        },
+        {
+          "itemId": 4031243
+        }
+      ]
+    }
+  }
+}

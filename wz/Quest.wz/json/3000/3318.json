@@ -1,0 +1,27 @@
+{
+  "questId": 3318,
+  "info": {
+    "name": "Parwen the Ghost",
+    "descriptions": {
+      "notStarted": "When I entered a lab full of #o6110301#, I heard a strange voice somewhere inside... this is not good.",
+      "inProgress": "Following along the deep, mature voice, I found myself having accrossed the #bstrange #o6110301##k.",
+      "completed": "A strange #o6110301#... Apparently it\u0027s the alchemist that worked here before, called #p2111006#. What? Does that mean he\u0027s... a ghost! For a ghost, he certainly does not seem intimidating..."
+    },
+    "area": 44,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111006,
+      "minLevel": 52
+    },
+    "complete": {
+      "npc": 2111006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7800
+    }
+  }
+}

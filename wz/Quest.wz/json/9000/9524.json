@@ -1,0 +1,44 @@
+{
+  "questId": 9524,
+  "info": {
+    "name": "미라 의상 만들기!",
+    "descriptions": {
+      "notStarted": "할로윈 데이를 맞아 파티가 열린다고 한다. #b#p9010000##k를 찾아가 보자.",
+      "inProgress": "#b#p1022006##k이 미라 의상을 만들 수 있도록 재료를 모아가자.\\n\\n#t4000205# #b#c4000205#/100#k",
+      "completed": "아이들에게 나누어줄 미라 의상의 재료를 모아갔다.하지만, 아직 많이 부족하다고 하니 시간이 날 때마다 도와주자."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 46,
+      "startDate": "2006102600",
+      "endDate": "2006110600"
+    },
+    "complete": {
+      "npc": 1022006,
+      "items": [
+        {
+          "itemId": 4000205,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 18900,
+      "items": [
+        {
+          "itemId": 4000205,
+          "count": -100
+        },
+        {
+          "itemId": 2022043,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

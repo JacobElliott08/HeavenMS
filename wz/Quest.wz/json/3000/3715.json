@@ -1,0 +1,32 @@
+{
+  "questId": 3715,
+  "info": {
+    "name": "The Suspicious Wanderer",
+    "parent": "The Truth Behind that Man",
+    "descriptions": {
+      "notStarted": "There is a rumor that Han the Broker of Magatia has acquired a new piece of information. Sounds exciting…",
+      "inProgress": "Han the Broker says a suspicious wanderer was staying in Magatia until just a few days ago, but then disappeared without a trace. Han the Broker thinks you might be able to find the wanderer if you follow the traces he left and suggests you first go to Ariant to find him.",
+      "completed": "You met Syras at Ariant Station to ask about the suspicious wanderer that Han the Broker has told you about. Syras at the ticket box desk said a strange man bought a ticket to Orbis."
+    },
+    "area": 41,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111007,
+      "minLevel": 70
+    },
+    "complete": {
+      "npc": 2102002
+    }
+  },
+  "actions": {
+    "onStart": {
+      "meso": -5000
+    },
+    "onComplete": {
+      "nextQuest": 3716,
+      "experience": 30000
+    }
+  }
+}

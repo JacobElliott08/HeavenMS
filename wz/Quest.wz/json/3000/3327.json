@@ -1,0 +1,53 @@
+{
+  "questId": 3327,
+  "info": {
+    "name": "Ericsson\u0027s Ingredients for Medicine 2",
+    "parent": "The Fairy in Despair 2",
+    "descriptions": {
+      "inProgress": "According to #p2012018#, #p2111005# isn\u0027t a 100% Fairy, but rather half human, half Fairy, which is the reason why the Fairy medicine doesn\u0027t really work for #p2111005#... #p2012018# decided to up the potency and asked me to get #b10 #t4000068#s#k and #b100 #t4000061#s#k.  \\n\\n#i4000068##t4000068# #b#c4000068##k/10   \\n#i4000061##t4000061# #b#c4000061##k/100",
+      "completed": "Once I got him all the ingredients, #p2012018# told me to wait as he made a new batch of medicine."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012018,
+      "minLevel": 52,
+      "prerequisiteQuests": [
+        {
+          "questId": 3326,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012018,
+      "items": [
+        {
+          "itemId": 4000061,
+          "count": 100
+        },
+        {
+          "itemId": 4000068,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 4000068,
+          "count": -10
+        },
+        {
+          "itemId": 4000061,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

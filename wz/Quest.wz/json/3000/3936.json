@@ -1,0 +1,54 @@
+{
+  "questId": 3936,
+  "info": {
+    "name": "Eleska\u0027s Sand Bandits",
+    "parent": "Sand Bandits According to Eleska",
+    "descriptions": {
+      "notStarted": "I have passed all the tests of #p2101002#. Maybe I\u0027ll be able to become a member of the Sand Bandits. I better talk to #p2101002#, the person I can trust the most on this.",
+      "inProgress": "#p2101002# told me the key to being a Sand Bandit is having a hatred toward the queen, but not letting it show, while biding time for the right moment to strike... and told me the most important aspect of being a Sand Bandit is patience. Patience... that\u0027s similar to refining ores. As Eleska told me, I better make #b2 #t4011008#s#k.   \\n\\n#i4011008# #t4011008#  #b#c4011008#/2",
+      "completed": "After receiving #t4011008#, #p2101002# told me with that level of patience, I deserve to be a member of the Sand Bandits, and she told me if I passed the test from other members, then I\u0027ll be able to join them. Other members? Come to think of it... the wall also stated bow and iron hammer."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101002,
+      "minLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 3935,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101002,
+      "items": [
+        {
+          "itemId": 4011008,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4200,
+      "items": [
+        {
+          "itemId": 4020007,
+          "count": 3
+        },
+        {
+          "itemId": 4011008,
+          "count": -2
+        },
+        {
+          "itemId": 4010003,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

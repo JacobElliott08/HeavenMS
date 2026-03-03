@@ -1,0 +1,54 @@
+{
+  "questId": 4212,
+  "info": {
+    "name": "플로팅마켓 수호대 가입하기2",
+    "parent": "플로팅마켓 수호대 가입하기",
+    "descriptions": {
+      "notStarted": "플로팅마켓 수호대에 가입하기 위해 요원의 도장을 하나 받았다. 도장을 찍어준 #b#p9250003##k는 앞으로 어떻게 해야 하는지 자세히 알려 주겠다고 하는데…",
+      "inProgress": "다음 찾아가야 할 수호대 요원은 음식점 주인인 #b#p9250005##k이라고 한다. 닭구이 냄새가 나는 곳을 따라 가면 만날 수 있을 것 같다.",
+      "completed": "두번째 요원인 #b#p9250005##k을 만났다."
+    },
+    "area": 48,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250003,
+      "minLevel": 10,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4211,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9250005,
+      "items": [
+        {
+          "itemId": 4031383
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031383
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4031383,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

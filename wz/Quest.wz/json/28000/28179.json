@@ -1,0 +1,80 @@
+{
+  "questId": 28179,
+  "info": {
+    "name": "Dances with Andras!",
+    "descriptions": {
+      "notStarted": "#b#@1022000:##k in #b#m102000000##k says he knows something about #rAndras#k. Let\u0027s talk to him.",
+      "inProgress": "Defeat #rAndras#k the demon!\\n\\nThere is a Dark Portal in #b#m102020300##k, and you can enter with Andras\u0027s emblem. Report back to #b#@1022000:##k in #bPerion#k after you defeat Andras.",
+      "completed": "You have defeated #rAndras#k whose seal has been released. But the mystery as to who released the seal still remains."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28178,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1022000,
+      "monsters": [
+        {
+          "monsterId": 9400609
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032491
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032491
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 1003031
+        },
+        {
+          "itemId": 4032496
+        },
+        {
+          "itemId": 4032491,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

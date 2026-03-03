@@ -1,0 +1,46 @@
+{
+  "questId": 2312,
+  "info": {
+    "name": "The Test",
+    "descriptions": {
+      "notStarted": "You should meet with #b#p1300005##k of the Mushking Empire.",
+      "inProgress": "In order to prove your worth as a candidate for saving Mushking Empire, you should gather #b50 #t4000499#s#k and hand them to #p1300005#.",
+      "completed": "You proved that you\u0027re worthy to save Mushking Empire."
+    },
+    "area": 30,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300005,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "normalAutoStart": true,
+      "infoNumber": 2311,
+      "infoEx": [
+        null
+      ]
+    },
+    "complete": {
+      "npc": 1300005,
+      "items": [
+        {
+          "itemId": 4000499,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 11500,
+      "nextQuest": 2313,
+      "items": [
+        {
+          "itemId": 4000499,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "questId": 3081,
+  "info": {
+    "name": "Kenta\u0027s Research 2",
+    "descriptions": {
+      "notStarted": "I wonder how #p2060005#, the animal instructor at Aquarium Zoo, is doing these days... I want to find out what he got out of his research. I better go see him.",
+      "inProgress": "I met up with #p2060005#, the animal instructor at Aquarium Zoo, again. He mentioned that he was on the verge of finding out what was wrong, but was missing something. He then asked me to gather up another set of DNA samples. \\n\\n#t4031262#  #b#c4031262##k / 1\\n#t4031263#  #b#c4031263##k / 1\\n#t4031264#  #b#c4031264##k / 1",
+      "completed": "I helped #p2060005#, the animal instructor at Aquarium Zoo, out again. This time, I gathered up the DNA samples of the fishes at Aqua Road. Maybe this will lead to clear-cut results."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "prerequisiteQuests": [
+        {
+          "questId": 3080,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060005,
+      "items": [
+        {
+          "itemId": 4031262
+        },
+        {
+          "itemId": 4031263
+        },
+        {
+          "itemId": 4031264
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2060005,
+      "minLevel": 27
+    },
+    "onComplete": {
+      "experience": 2500,
+      "items": [
+        {
+          "itemId": 4031262,
+          "count": -1
+        },
+        {
+          "itemId": 4031263,
+          "count": -1
+        },
+        {
+          "itemId": 4031264,
+          "count": -1
+        },
+        {
+          "itemId": 1432014
+        }
+      ]
+    }
+  }
+}

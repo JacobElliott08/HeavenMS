@@ -1,0 +1,40 @@
+{
+  "questId": 2099,
+  "info": {
+    "name": "Camila\u0027s Lost Letter",
+    "parent": "Looking for the Korean Folk Town...",
+    "descriptions": {
+      "notStarted": "Apparently, Camila of Henesys lost something...",
+      "inProgress": "She was devastated that her friend, who lives far from here, sent her a letter, only to be stolen by the notorious Curse Eye\u0027s. She was crying as she asked me for help. I may have to find the letter for the sake of Camila, but where is that girl?\\n\\n#t4031239# #b#c4031239##k/1",
+      "completed": "I recovered Camila\u0027s letter that had been stolen from the Curse Eye\u0027s. It should be fun writing letters to people far from me..."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012108,
+      "minLevel": 35
+    },
+    "complete": {
+      "npc": 1012108,
+      "items": [
+        {
+          "itemId": 4031239
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "nextQuest": 2100,
+      "items": [
+        {
+          "itemId": 4031239,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "questId": 4309,
+  "info": {
+    "name": "Eliminating Blue Mushmom",
+    "descriptions": {
+      "notStarted": "#b#m800000000##k is apparently in deep trouble. I better go see #b#p9120003##k.",
+      "inProgress": "Apparently, out of numerous mushrooms that reside in #m800000000#, a few of them turned into mutants, ultimately becoming #b#o9400205##k. #p9120003# was worried that the town was going through a lot of trouble because of them, and wanted me to eliminate #o9400205#s. #o9400205#s are located at #b#m800010100##k. \\n\\n#o9400205# #r#a43091##k",
+      "completed": "I eliminated #o9400205#s as ordered and reported them to #p9120003#. Those mushrooms were indeed very hard to handle."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120003,
+      "minLevel": 85,
+      "repeatIntervalMinutes": 1440,
+      "prerequisiteQuests": [
+        {
+          "questId": 4308,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120003,
+      "monsters": [
+        {
+          "monsterId": 9400205
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 19800,
+      "items": [
+        {
+          "itemId": 2043001,
+          "probability": 15
+        },
+        {
+          "itemId": 2043101,
+          "probability": 15
+        },
+        {
+          "itemId": 2043201,
+          "probability": 15
+        },
+        {
+          "itemId": 2043301,
+          "probability": 15
+        },
+        {
+          "itemId": 2043701,
+          "probability": 15
+        },
+        {
+          "itemId": 2043801,
+          "probability": 15
+        },
+        {
+          "itemId": 2044001,
+          "probability": 15
+        },
+        {
+          "itemId": 2044101,
+          "probability": 15
+        },
+        {
+          "itemId": 2044201,
+          "probability": 15
+        },
+        {
+          "itemId": 2044301,
+          "probability": 15
+        },
+        {
+          "itemId": 2044401,
+          "probability": 15
+        },
+        {
+          "itemId": 2044501,
+          "probability": 15
+        },
+        {
+          "itemId": 2044601,
+          "probability": 15
+        },
+        {
+          "itemId": 2044701,
+          "probability": 15
+        },
+        {
+          "itemId": 2040301,
+          "probability": 6
+        },
+        {
+          "itemId": 2041013,
+          "probability": 6
+        },
+        {
+          "itemId": 2041016,
+          "probability": 6
+        },
+        {
+          "itemId": 2041019,
+          "probability": 6
+        },
+        {
+          "itemId": 2041022,
+          "probability": 6
+        },
+        {
+          "itemId": 2040804,
+          "probability": 6
+        },
+        {
+          "itemId": 2000005,
+          "count": 20,
+          "probability": 60
+        },
+        {
+          "itemId": 2000004,
+          "count": 40,
+          "probability": 35
+        },
+        {
+          "itemId": 1032030,
+          "probability": 1
+        },
+        {
+          "itemId": 2044801,
+          "probability": 15
+        },
+        {
+          "itemId": 2044901,
+          "probability": 15
+        }
+      ]
+    }
+  }
+}

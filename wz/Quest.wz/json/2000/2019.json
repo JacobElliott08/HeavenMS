@@ -1,0 +1,95 @@
+{
+  "questId": 2019,
+  "info": {
+    "name": "A Clue to the Secret Book",
+    "parent": "Mr. Wetbottom\u0027s Secret Book",
+    "descriptions": {
+      "notStarted": "I heard Mr. Wetbottom in Sleepwood is going through hard times... I should go check him out.",
+      "inProgress": "At a VIP sauna in Sleepywood, I met this bald man called #bMr. Wetbottom#k. He has a son, and apparently he ran away from home one day with a book that he cares deeply for. He requested that I find his son and get the book back from him. For a reward, he\u0027s offering me a nice sauna robe. He also told me his son Ronnie hangs out at a tree tunnel around Ellinia, so maybe I can find him there. Anyway, is that book more important to him than his son?? What kind of a book is it anyway... ????",
+      "completed": "I found #bRonnie#k in the tree tunnel, which Mr. Wetbottom asked me to do."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061003,
+      "minLevel": 30,
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1061004
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 2020
+    }
+  }
+}

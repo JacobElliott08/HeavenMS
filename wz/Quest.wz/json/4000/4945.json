@@ -1,0 +1,49 @@
+{
+  "questId": 4945,
+  "info": {
+    "name": "Special Delivery",
+    "descriptions": {
+      "notStarted": "There\u0027s a beautiful woman in the Prendergast house that looks mildly annoyed... perhaps I should speak with her.",
+      "inProgress": "Man! I spoke-no, tried to speak with Ludmilla, and she wouldn\u0027t give me the time of day until I agreed to get her #b5 slices of #t2022190##k for Jonas from Olde Sapp Village. A bit strange that she referred to New Leaf City as that, but Miki should have them at the potion shop. What a cranky woman...",
+      "completed": "Well, I got Ludmilla her #b#t2022190##k, and learned a bit about Jonas and her love...for his money. No wonder Edmunds hates her. I should press that woman for more info about what\u0027s going on around here."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201076,
+      "minLevel": 15,
+      "endDate": "2007103123",
+      "prerequisiteQuests": [
+        {
+          "questId": 4943,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201076,
+      "items": [
+        {
+          "itemId": 2022190,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8500,
+      "items": [
+        {
+          "itemId": 2022190,
+          "count": -5
+        },
+        {
+          "itemId": 2022245,
+          "count": 4
+        }
+      ]
+    }
+  }
+}

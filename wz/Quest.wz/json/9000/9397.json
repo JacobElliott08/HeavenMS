@@ -1,0 +1,104 @@
+{
+  "questId": 9397,
+  "info": {
+    "name": "햇님이에게 선물을",
+    "descriptions": {
+      "notStarted": "얼마 전 #b#p1061004##k가 잃어버린 아쿠아리움 초대권을 찾아준 적이 있는데, #b#p1061004##k는 #b#p9010000##k님께 감사의 뜻을 전해 달라고 했다. 메이플 운영자를 찾아가 보자.",
+      "inProgress": "아랫마을의 #b#p2071008##k는 친구가 없어 외롭다고 했다. 루디브리엄에서 #b#p2071008##k가 가지고 놀 수 있는 인형을 선물하자. \\n\\n#b#t04000108:# #k#c004000108#/50#k \\n#b#t04000109:# #k#c04000109#/50#k \\n#b#t04000143:# #k#c04000143#/50#k \\n#b#t04000147:# #k#c04000147#/10#k",
+      "completed": "어린이날 선물로 #b#p2071008##k에게 인형들을 선물하고 보답으로 #b#t4140103##k를 받았다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 71,
+      "startDate": "2006050500",
+      "endDate": "2006050900",
+      "prerequisiteQuests": [
+        {
+          "questId": 9396
+        },
+        {
+          "questId": 9392,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9394
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071008,
+      "items": [
+        {
+          "itemId": 4000109,
+          "count": 50
+        },
+        {
+          "itemId": 4000143,
+          "count": 50
+        },
+        {
+          "itemId": 4000147,
+          "count": 10
+        },
+        {
+          "itemId": 4000108,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 65000,
+      "items": [
+        {
+          "itemId": 4000108,
+          "count": -50
+        },
+        {
+          "itemId": 4000109,
+          "count": -50
+        },
+        {
+          "itemId": 4000143,
+          "count": -50
+        },
+        {
+          "itemId": 4000147,
+          "count": -10
+        },
+        {
+          "itemId": 4140103
+        },
+        {
+          "itemId": 4004000,
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "itemId": 4004001,
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "itemId": 4004002,
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "itemId": 4004004,
+          "count": 3,
+          "probability": 1
+        },
+        {
+          "itemId": 4004003,
+          "count": 3,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

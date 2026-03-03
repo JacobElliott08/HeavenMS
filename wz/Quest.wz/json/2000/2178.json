@@ -1,0 +1,42 @@
+{
+  "questId": 2178,
+  "info": {
+    "name": "Cleaning The Nautilus 3",
+    "descriptions": {
+      "notStarted": "Mrs. Reade says her problems just never end...",
+      "inProgress": "So we took care of all the rats on The Nautilus but there\u0027s still one more problem. And that problem happens to be the main cause of all of Mrs. Reade\u0027s problems on The Nautilus- and he still needs to be cleaned! Mrs. Reade\u0027s biggest problem is Jack, the one who\u0027s to blame for every bit of the mess on The Nautilus! Let me go get some #bPure Water#k so #bJack#k can get a good wash down. \\n\\n#i2022000##t2022000# #b#c2022000##k / 1",
+      "completed": "Will Jack ever get clean? All this scrubbing doesn\u0027t seem to be making him any cleaner... and I\u0027m scrubbing and scrubbing..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092009,
+      "prerequisiteQuests": [
+        {
+          "questId": 2177,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092010,
+      "items": [
+        {
+          "itemId": 2022000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7000,
+      "items": [
+        {
+          "itemId": 2022000,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

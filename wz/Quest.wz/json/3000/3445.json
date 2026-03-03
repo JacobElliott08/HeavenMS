@@ -1,0 +1,38 @@
+{
+  "questId": 3445,
+  "info": {
+    "name": "Free Spirit",
+    "descriptions": {
+      "notStarted": "The number of ghosts have increased dramatically, that it got to the point of #p2041026# being sent to Ludibrium to do something about it. I should go see him.",
+      "inProgress": "I was able to meet #p2041026# past the Path of Time of Ludibrium. He wanted me to free #o6230500#s and collect their souls. \\n\\n#t4000144# #b#c4000144#/80#k",
+      "completed": "I helped Ghosthunter Bob find freedom for Master Soul Teddys."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041026,
+      "minLevel": 62
+    },
+    "complete": {
+      "npc": 2041026,
+      "items": [
+        {
+          "itemId": 4000144,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 35000,
+      "items": [
+        {
+          "itemId": 4000144,
+          "count": -80
+        }
+      ]
+    }
+  }
+}

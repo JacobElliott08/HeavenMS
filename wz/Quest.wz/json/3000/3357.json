@@ -1,0 +1,82 @@
+{
+  "questId": 3357,
+  "info": {
+    "name": "De Lang and Humanoid A",
+    "parent": "Who is De Lang?",
+    "descriptions": {
+      "inProgress": "#p2111001#\u0027s eyes normally scare me off, but his eyes seem sad today. According to him, #p2111003# was found at #p2111002#\u0027s lab when the lab exploded because of the failed experiment. No one knows when or how it was made... and Humanoid himself doesn\u0027t remember his origins. \\n\\nMaybe #p2111002#\u0027s experiment didn\u0027t fail as everyone believes... the one item that #p2111003# is holding on to, despite not remembering anything from the past, says it all. I better go to #b#p2111005##k and give her #p2111002#\u0027s piece of mind.",
+      "completed": "#p2111005# seemed stunned when receiving the medicine, but then turned into pure joy and happiness. #p2111005# seemed determined to get better with the medicine, so she can really improve her alchemy skills to one day turn #p2111003# into a human being. Hopefully her experiment will end up being successful."
+    },
+    "area": 44,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111001,
+      "minLevel": 75,
+      "prerequisiteQuests": [
+        {
+          "questId": 3356,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111005,
+      "items": [
+        {
+          "itemId": 4031738
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031738
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031738,
+          "count": -1
+        },
+        {
+          "itemId": 2041001,
+          "probability": 1
+        },
+        {
+          "itemId": 2041004,
+          "probability": 1
+        },
+        {
+          "itemId": 2041007,
+          "probability": 1
+        },
+        {
+          "itemId": 2041010,
+          "probability": 1
+        },
+        {
+          "itemId": 2041013,
+          "probability": 1
+        },
+        {
+          "itemId": 2041016,
+          "probability": 1
+        },
+        {
+          "itemId": 2041019,
+          "probability": 1
+        },
+        {
+          "itemId": 2041022,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

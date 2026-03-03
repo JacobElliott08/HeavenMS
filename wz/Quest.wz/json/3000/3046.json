@@ -1,0 +1,55 @@
+{
+  "questId": 3046,
+  "info": {
+    "name": "A Present for Nero",
+    "descriptions": {
+      "notStarted": "I need to see Elma the Housekeeper, who is in Orbis.",
+      "inProgress": "She said the only way to convince Ericsson is by making a present for his kitty. After a long though, I have decided to make a Lunar Wristband for Nero the Cat.\\n\\n #t4000059# #b#c4000059##k/100 \\n #t4000060# #b#c4000060##k/80",
+      "completed": "I got Nero\u0027s present through Elma. Now if only I can convince Ericsson..."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012010,
+      "prerequisiteQuests": [
+        {
+          "questId": 3045,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012010,
+      "items": [
+        {
+          "itemId": 4000059,
+          "count": 100
+        },
+        {
+          "itemId": 4000060,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7500,
+      "meso": -10000,
+      "items": [
+        {
+          "itemId": 4031199
+        },
+        {
+          "itemId": 4000059,
+          "count": -100
+        },
+        {
+          "itemId": 4000060,
+          "count": -80
+        }
+      ]
+    }
+  }
+}

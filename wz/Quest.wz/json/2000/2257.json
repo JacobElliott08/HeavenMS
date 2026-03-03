@@ -1,0 +1,29 @@
+{
+  "questId": 2257,
+  "info": {
+    "name": "Karcasa Relents",
+    "parent": "About the Mushroom Castle...",
+    "descriptions": {
+      "notStarted": "Something doesn\u0027t seem right. He keeps repeating what he\u0027s already said. Does he really know?",
+      "inProgress": "You knew it! Karcasa was just spitting out rumors he heard. Maybe the Camel Cab can help you out instead?",
+      "completed": "You visited the Camel Cab and asked for some information on the Mushroom Castle."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101013,
+      "prerequisiteQuests": [
+        {
+          "questId": 2256,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2110005,
+      "endScript": "q2257e"
+    }
+  }
+}

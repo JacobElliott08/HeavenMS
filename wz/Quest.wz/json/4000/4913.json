@@ -1,0 +1,48 @@
+{
+  "questId": 4913,
+  "info": {
+    "name": "Subani\u0027s Legacy - Discovery",
+    "parent": "Subani\u0027s Legacy",
+    "descriptions": {
+      "notStarted": "I heard there\u0027s an adventurer over at the MesoGears underneath Bigger Ben. What mysteries does it hold? I should find out!",
+      "inProgress": "I spoke with the famous John Barricades\u0027 one-half of the world famous Barricade Bros. Treasure Hunting Co. He spoke to me about Subani, the legendary mage responsible for the Dark Scrolls throughout the Maple World. He believes there is something within the MesoGears that may be a treasure of his. I\u0027ve agreed to help clear the way. I\u0027ll have to defeat #b50 Killa Bees, 30 Mighty Maple Eaters and 40 Fire Tusks#k so I can explore deeper into the MesoGears...",
+      "completed": "I cleared a path straight through the MesoGears, and now I can explore there in peace. When I\u0027m ready, I can see John Barricade to continue with the next part of this adventure!"
+    },
+    "area": 45,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201051,
+      "minLevel": 36
+    },
+    "complete": {
+      "npc": 9201051,
+      "monsters": [
+        {
+          "monsterId": 9400540,
+          "count": 50
+        },
+        {
+          "monsterId": 9400548,
+          "count": 30
+        },
+        {
+          "monsterId": 9400542,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8500,
+      "fame": 2,
+      "items": [
+        {
+          "itemId": 2040804
+        }
+      ]
+    }
+  }
+}

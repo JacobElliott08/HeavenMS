@@ -1,0 +1,46 @@
+{
+  "questId": 2317,
+  "info": {
+    "name": "Killer Mushroom Spores (1)",
+    "descriptions": {
+      "notStarted": "#b#p1300007##k the mushroom scholar told you that he knows how to create a #bKiller Mushroom Spore Potion#k… Now you should do something about it.",
+      "inProgress": "You need to gather the #b100 Poison Mushroom Caps#k required to make the #bKiller Mushroom Spore Potion#k and take them to #b#p1300007##k.",
+      "completed": "You gathered the #b100 Poison Mushroom Caps#k required to make the #bKiller Mushroom Spore Potion#k and gave them to #b#p1300007##k."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300007,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2316,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300007,
+      "items": [
+        {
+          "itemId": 4000500,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 13500,
+      "nextQuest": 2318,
+      "items": [
+        {
+          "itemId": 4000500,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

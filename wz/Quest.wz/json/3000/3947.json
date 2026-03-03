@@ -1,0 +1,47 @@
+{
+  "questId": 3947,
+  "info": {
+    "name": "Byron\u0027s Recommendation!",
+    "descriptions": {
+      "notStarted": "I\u0027ve been in this #m260000000# for quite a while, when #p2101005# contacted me, asking for a meeting. I wonder what this is about... ",
+      "inProgress": "#p2101005# said that it\u0027s time for me to advance to a new job; he\u0027s going to recommend me to #p1090000# in Victoria Island. I should bring Byron\u0027s Recommendation to #b#p1090000##k.",
+      "completed": "Upon seeing #p2101005#\u0027s recommendation, #p1090000# said he would trust anyone who comes recommended #p2101005#, and I should come to him to change my job whenever I want."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101005,
+      "minLevel": 30,
+      "jobs": [
+        500
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "items": [
+        {
+          "itemId": 4031893
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031893
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 4031893,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

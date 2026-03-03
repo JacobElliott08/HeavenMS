@@ -1,0 +1,50 @@
+{
+  "questId": 21710,
+  "info": {
+    "name": "A Monster War?",
+    "descriptions": {
+      "notStarted": "This is your first assignment as an informant. You wonder if #p1012111# of #m100000000# has been able to poinpoint the cause of the #o1210102#\u0027s recent changes yet. Maybe you should go ask #p1012111# right now.",
+      "inProgress": "#p1012111# says that the reason for the #o1210102#\u0027s strange behavior may be the ongoing conflict, and a potential war, between the #o1210102#s and the #o1210100#s. He asks you to look into the #o1210100#s as well and to gather #b50 #t4032340#s#k to aid his research...\\r\\n\\r\\n#i4032340# #t4032340# #b#c4032340# / 50#k",
+      "completed": "#p1012111#, who studied the #t4032340#s, came to the conclusion that the #o1210100#s are not properly prepared for combat, which of course threw out the whole theory of a possible monster war. He then asked you to stop by later since he\u0027d like some time to come up with another hypothetical theory to explain this mess."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012111,
+      "minLevel": 14,
+      "prerequisiteQuests": [
+        {
+          "questId": 21709,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1012111,
+      "items": [
+        {
+          "itemId": 4032340,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 780,
+      "items": [
+        {
+          "itemId": 4032340,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

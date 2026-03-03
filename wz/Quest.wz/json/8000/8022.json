@@ -1,0 +1,41 @@
+{
+  "questId": 8022,
+  "info": {
+    "name": "Yoona\u0027s Quiz on Shopping 2",
+    "parent": "Yoona\u0027s Quiz on Shopping",
+    "descriptions": {
+      "notStarted": "I better solve Yoona\u0027s 2nd question on shopping.",
+      "inProgress": "What\u0027s the 2nd question on Yoona\u0027s Quiz on Shopping? I have to remember if I want to get it right...",
+      "completed": "I learned something about avatar item equipment. I can obtain stylish decorations for my weapons, armor, face, hair at any time!"
+    },
+    "area": 20,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 20100,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 8021,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 20100
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8023
+    }
+  }
+}

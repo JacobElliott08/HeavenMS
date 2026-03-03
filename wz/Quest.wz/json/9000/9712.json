@@ -1,0 +1,78 @@
+{
+  "questId": 9712,
+  "info": {
+    "name": "마법사학교 입학통지서",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 사람들에게 급히 도움을 청하고 있다고 한다. 무슨 일일까?",
+      "inProgress": "새학기를 맞아 입학 대상자들에게 입학통지서를 보내기로 한 마법사 전직관 하인즈. 하지만 그는 발송할 입학통지서만 준비해 놓고, 우표는 준비하지 않는 실수를 저지르고 말았다. 당황한 #b#p1032001##k는 카산드라에게 도움을 청했다는데...몬스터에게서 우표를 모아 하인즈에게 가져다 주자. \\n\\n#i4031559##t4031559# #b#c4031559#/10#k",
+      "completed": "#b#p1032001##k에게 우표를 전달했다. 좋아. 이제 더 많은 마법사들이 메이플 월드에 생기겠지? 함께 연구를 하게 되면 좋겠군."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2007022600",
+      "endDate": "2007031200",
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "items": [
+        {
+          "itemId": 4031559,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 777,
+      "items": [
+        {
+          "itemId": 4031559,
+          "count": -10
+        },
+        {
+          "itemId": 2002002,
+          "count": 10,
+          "probability": 50000
+        },
+        {
+          "itemId": 2002007,
+          "count": 10,
+          "probability": 40000
+        },
+        {
+          "itemId": 2043700,
+          "probability": 3
+        },
+        {
+          "itemId": 2043800,
+          "probability": 3
+        },
+        {
+          "itemId": 2043701,
+          "probability": 1
+        },
+        {
+          "itemId": 2043801,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

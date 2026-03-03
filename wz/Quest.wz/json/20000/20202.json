@@ -1,0 +1,37 @@
+{
+  "questId": 20202,
+  "info": {
+    "name": "Knighthood Exam: Blaze Wizard",
+    "descriptions": {
+      "notStarted": "According to #p1101002#, I can take my Knighthood Exam if I see #b#p1101004##k, the Chief Knight of Fire. I better head over to Ereve and meet #p1101004#.",
+      "inProgress": "The Knighthood Exam has started. The test itself is actually quite simple. I just need to reach the end of the Training Forest, enter #bthe 2nd Drill Hall#k, and defeat the Mimis inside while bringing back #t4032097#. I better find #b30 #t4032097#s#k and bring them back to #p1101004#\\n\\n#i4032097# #t4032097# #b#c4032097# / 30#k",
+      "completed": "I have successfully completed the Knighthood Exam and officially dropped the \"in-Training\" from my title. As a bonafide Cygnus Knight, I shall do my best to keep the fire in me as I perform my duties."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101004,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 20200,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1200
+      ]
+    },
+    "complete": {
+      "npc": 1101004,
+      "endScript": "q20202e",
+      "items": [
+        {
+          "itemId": 4032097,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

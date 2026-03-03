@@ -1,0 +1,50 @@
+{
+  "questId": 9430,
+  "info": {
+    "name": "심심한 북극곰 포치",
+    "descriptions": {
+      "notStarted": "코-크타운에 있는 #b#p9001002##k를 찾아가 보자.",
+      "inProgress": "#b#p9001002##k가 형과 함께 가지고 놀 카드를 모아다 주자. \\n\\n#t04000213:# #b#c04000213#/100#k",
+      "completed": "#b#p9001002##k가 심심하지 않도록 카드를 모아다 주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9001002,
+      "minLevel": 60,
+      "startDate": "2006070300",
+      "endDate": "2007112300",
+      "prerequisiteQuests": [
+        {
+          "questId": 9427,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9001002,
+      "items": [
+        {
+          "itemId": 4000213,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 28500,
+      "items": [
+        {
+          "itemId": 2022075,
+          "count": 25
+        },
+        {
+          "itemId": 4000213,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

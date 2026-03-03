@@ -1,0 +1,40 @@
+{
+  "questId": 6130,
+  "info": {
+    "name": "Black Book",
+    "parent": "Caron\u0027s Notebook",
+    "descriptions": {
+      "notStarted": "I obtained a peculiar looking book. The entire book, cover to cover, is black so I can\u0027t read it.... I\u0027m getting a strange vibe from the book. Perhaps #b#p2081200##k will know something about this book.",
+      "inProgress": " #p2081200# said to go see #b#p2060100##k, the witch from the deep sea, to get information about this book. #p2060100#...? Why won\u0027t  #p2081200# just tell me about the book himself? Would #p2060100# really know anything? I\u0027m skeptical, but I have no choice...I must know more! \\n\\n#i4001107##t4001107# #b#c4001107# / 1#k",
+      "completed": "#p2060100#  didn\u0027t know much about the book itself. However, she seemed to know #bhow to read the book#k. She understood the language, and agreed to tell me what it means upon my return."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081200,
+      "jobs": [
+        232
+      ],
+      "items": [
+        {
+          "itemId": 4001107
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060100,
+      "items": [
+        {
+          "itemId": 4001107
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100000
+    }
+  }
+}

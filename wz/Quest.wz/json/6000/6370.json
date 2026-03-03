@@ -1,0 +1,39 @@
+{
+  "questId": 6370,
+  "info": {
+    "name": "How to Improve Your Strength",
+    "descriptions": {
+      "notStarted": "I hear that Kyrin is looking for me, now that I\u0027ve become a Captain. She apparently wants to teach me some new skills...",
+      "inProgress": "I must show Kyrin my skills to prove what I\u0027m capable of. I\u0027d better make sure I\u0027m ready to show her everything I\u0027ve got and stand up to her for at least 2 minutes.",
+      "completed": "I\u0027ve finally gained Kyrin\u0027s confidence. Kyrin taught me the Battleship Skill in return."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "minLevel": 120,
+      "jobs": [
+        522
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "infoNumber": 6371,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200000,
+      "skills": [
+        {
+          "skillId": 5221006,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

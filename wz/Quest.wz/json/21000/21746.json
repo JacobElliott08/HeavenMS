@@ -1,0 +1,43 @@
+{
+  "questId": 21746,
+  "info": {
+    "name": "Mu Gong\u0027s Test",
+    "descriptions": {
+      "notStarted": "You wonder what #p2091007# is going to say about #o9300351#\u0027s letter. You should meet with #b#p2091007##k on the #btop floor of #m925020000##k and find out. You can get there via the shortcut in the back alley that #p2091005# told you about.",
+      "inProgress": "When you ask #p2091007# about the Seal Stone of Mu Lung, he says that #o9300351# is a dangerous fellow, but tells you that he also has his guard up around you. He also says that he\u0027s wants to test you to see if you\u0027re trustworthy. All you have to do is beat #o9300350# in battle.\\r\\n\\r\\n#o9300350##r #a217461##k",
+      "completed": "You emerged victorious over #o9300350#. #p2091007# seemed absolutely shocked to see someone using skills from hundreds of years ago…"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091007,
+      "startScript": "q21746s",
+      "minLevel": 54,
+      "prerequisiteQuests": [
+        {
+          "questId": 21744,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2091007,
+      "monsters": [
+        {
+          "monsterId": 9300350
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000
+    }
+  }
+}

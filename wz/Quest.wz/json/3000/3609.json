@@ -1,0 +1,44 @@
+{
+  "questId": 3609,
+  "info": {
+    "name": "The Seed That Swallow Lost",
+    "descriptions": {
+      "notStarted": "I lost the seed that Swallow gave. I better go visit again.",
+      "inProgress": "I lost the seed that Swallow gave, so I had to explain the circumstances to it. After some deliberation, it decided to look for another seed, and asked me to wait for a bit, then talk to it again.",
+      "completed": "I went to see Swallow because I have lost the seed myself, and it gave me a new one. Now, who should I give this to?"
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071006,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3606,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3607
+        },
+        {
+          "questId": 3608
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031225
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031225
+        }
+      ]
+    }
+  }
+}

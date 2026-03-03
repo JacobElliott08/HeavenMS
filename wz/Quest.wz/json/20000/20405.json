@@ -1,0 +1,47 @@
+{
+  "questId": 20405,
+  "info": {
+    "name": "The Cave of the Black Witch",
+    "descriptions": {
+      "notStarted": "I better go visit the #bCave of the #o9001010##k as instructed by #p2081012#.",
+      "inProgress": "There was a note posted on the wall of the cave. After reading the note, I noticed that it may have been written by #p1103000#. The subject of the curse was not found, but the device was found, recovered, and sent back to Ereve. I may have been one step too late. #p1103000# must have completed his assignment already. I better return to #bEreve#k.",
+      "completed": "There was a note posted on the wall of the cave. After reading the note, I noticed that it may have been written by #p1103000#. The subject of the curse was not found, but the device was found, recovered, and sent back to Ereve. I may have been one step too late. #p1103000# must have completed his assignment already. I better return to Ereve."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081013,
+      "minLevel": 120,
+      "startScript": "q20405s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20404,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    }
+  }
+}

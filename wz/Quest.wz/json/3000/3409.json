@@ -1,0 +1,47 @@
+{
+  "questId": 3409,
+  "info": {
+    "name": "Where is Dogon\u0027s HQ?",
+    "descriptions": {
+      "notStarted": "I should go see Chury of Omega Sector.",
+      "inProgress": "I met with Chury at the Silo of the Omega Sector again, and he requested that I find a secret base of an apparent alien-worshipper. I\u0027ll need to find Dogon\u0027s HQ, which is hidden somewhere around the Fields nearby Omega Sector, find #bDogon\u0027s Report#k from the box at the Dogon\u0027s HQ, and give them to Chury.",
+      "completed": "I gave Chury, who was waiting for me at the Silo of the Omega Sector, the #bDogon\u0027s Report#k that I found from Dogon\u0027s secret base. I can\u0027t believe someone is actually helping aliens... now THAT\u0027s quite shocking."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050005,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 3404,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050005,
+      "items": [
+        {
+          "itemId": 4031107
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9000,
+      "meso": 15000,
+      "items": [
+        {
+          "itemId": 4031107,
+          "count": -1
+        },
+        {
+          "itemId": 1032008
+        }
+      ]
+    }
+  }
+}

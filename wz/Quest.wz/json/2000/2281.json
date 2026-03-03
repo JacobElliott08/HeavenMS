@@ -1,0 +1,61 @@
+{
+  "questId": 2281,
+  "info": {
+    "name": "Costume Preparation, Done!",
+    "descriptions": {
+      "notStarted": "You\u0027ve completed the costume preparation, but she says something is still missing. What could possibly be missing? Ask #bLala#k what else she needs.",
+      "inProgress": "#bLala#k says she needs more than just costumes and wants you to bring perfume that would complete each costume.",
+      "completed": "#bLala#k wasn\u0027t sure which scent would go best with which costume, so she gave you some time to think about it. \\r\\nHm, you don\u0027t seem too sure either. Why don\u0027t you leave it up to #bLala#k?\\r\\n"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052119,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2280,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052119,
+      "items": [
+        {
+          "itemId": 4000534,
+          "count": 30
+        },
+        {
+          "itemId": 4000532,
+          "count": 30
+        },
+        {
+          "itemId": 4000530,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 13900,
+      "items": [
+        {
+          "itemId": 4000534,
+          "count": -30
+        },
+        {
+          "itemId": 4000532,
+          "count": -30
+        },
+        {
+          "itemId": 4000530,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "questId": 28237,
+  "info": {
+    "name": "The Legendary Revival",
+    "parent": "Solomon\u0027s Bow",
+    "descriptions": {
+      "notStarted": "#b#@1012100:##k in #bHenesys#k says she knows how to restore the power of Solomon\u0027s Bow. Let\u0027s talk to her.",
+      "inProgress": "She says you need a #rDemon Hunting Scroll#k in order to restore the power of #rSolomon\u0027s Bow#k.\\n\\nReport back to #b#@1012100:##k in #bHenesys#k upon completion.",
+      "completed": "You have restored the power of the legendary, demon-hunting #rSolomon\u0027s Bow#k and identified the location of #rAmdusias#k!"
+    },
+    "area": 10,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012100,
+      "prerequisiteQuests": [
+        {
+          "questId": 28236,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1012100,
+      "items": [
+        {
+          "itemId": 4001351
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1800,
+      "items": [
+        {
+          "itemId": 4001351,
+          "count": -1
+        },
+        {
+          "itemId": 1452084
+        }
+      ]
+    }
+  }
+}

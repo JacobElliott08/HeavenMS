@@ -1,0 +1,30 @@
+{
+  "questId": 9662,
+  "info": {
+    "name": "수정구의 균열:차원의 균열",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k의 수정구에 문제가 생겼다는데…",
+      "inProgress": "#b#p9010010##k의 수정구는 메이플 월드의 전체를 볼 수 있는 것이라고 한다. 수정구에 금이 갔다는 것은 바로 차원에 균열이 생겼다는 것이라는데… #b#p9010010##k는 루디브리엄에 가서 차원의 균열을 막아 달라고 한다.",
+      "completed": "차원의 균열을 막았더니 #b#p9010010##k의 수정구도 멀쩡해졌다. #b#p9010010##k는 정말 신기한 물건을 가지고 있는 걸?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "startDate": "2007011600",
+      "endDate": "2007020500"
+    },
+    "complete": {
+      "npc": 9010010,
+      "prerequisiteQuests": [
+        {
+          "questId": 9625,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  }
+}

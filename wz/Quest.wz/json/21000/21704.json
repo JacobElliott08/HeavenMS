@@ -1,0 +1,34 @@
+{
+  "questId": 21704,
+  "info": {
+    "name": "Baby Steps",
+    "descriptions": {
+      "notStarted": "After receiving some lessons from #p1202006#, you remembered the Combo Ability skill! You\u0027d better relay this to #b#p1201000##k.",
+      "inProgress": "#p1201000# says you were probably able to regain your memories of the skill because you swung your polearm around just like how you did in the past. Muscle memory, or something. She seems confident that the more you train, the stronger you will become and the more skills you will remember.",
+      "completed": "The small step of remembering the Combo Ability skill has opened a world of possibilities for you. You now have the confidence to continue training in the hope of one day returning to your old, heroic self."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201000,
+      "minLevel": 10,
+      "startScript": "q21704s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21703,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1201000
+    }
+  }
+}

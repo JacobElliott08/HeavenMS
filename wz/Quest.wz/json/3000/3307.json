@@ -1,0 +1,53 @@
+{
+  "questId": 3307,
+  "info": {
+    "name": "Helping Out Bedin",
+    "descriptions": {
+      "notStarted": "#b#p2111008##k, an alchemist from Zenumist, seems to be looking for help with his experiment...",
+      "inProgress": "#p2111008# told me he was short on some items for his experiment and asked me to get #b5 refined #t4010004#s#k and #b50 #t4000352#s#k for him.\\n\\n#i4010004##t4010004# #b#c4010004##k/5 \\n#i4000352##t4000352# #b#c4000352##k/50",
+      "completed": "I gave #p2111008# #t4011004# and #t4000352#. This #t4011004# seems to have a peculiar power of registering spells into it. I learned something new today."
+    },
+    "area": 44,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111008,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 3302,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111008,
+      "items": [
+        {
+          "itemId": 4000352,
+          "count": 50
+        },
+        {
+          "itemId": 4010004,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10900,
+      "items": [
+        {
+          "itemId": 4000352,
+          "count": -50
+        },
+        {
+          "itemId": 4010004,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

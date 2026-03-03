@@ -1,0 +1,76 @@
+{
+  "questId": 9706,
+  "info": {
+    "name": "카산드라의 황금돼지",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 도움이 필요하다고 하는데…",
+      "inProgress": "몬스터 카드만 있다면 #b#p9010010##k가 황금 돼지를 만들 수 있다고 했다. 몬스터 카드를 카산드라에게 가져다 주자.\\n\\n#i4030012##t4030012# #b#c4030012#/200#k",
+      "completed": "#b#p9010010##k가 마법으로 황금 돼지를 만드는 것을 도왔다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2007021300",
+      "endDate": "2007022700"
+    },
+    "complete": {
+      "npc": 9010010,
+      "items": [
+        {
+          "itemId": 4030012,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4030012,
+          "count": -200
+        },
+        {
+          "itemId": 2000002,
+          "count": 60
+        },
+        {
+          "itemId": 2000003,
+          "count": 100
+        },
+        {
+          "itemId": 2000006,
+          "count": 30
+        },
+        {
+          "itemId": 2001000,
+          "count": 8
+        },
+        {
+          "itemId": 2001001,
+          "count": 10
+        },
+        {
+          "itemId": 2001002,
+          "count": 5
+        },
+        {
+          "itemId": 2020013,
+          "count": 4
+        },
+        {
+          "itemId": 2020014,
+          "count": 3
+        },
+        {
+          "itemId": 2020015,
+          "count": 2
+        }
+      ]
+    }
+  }
+}

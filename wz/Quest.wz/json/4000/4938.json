@@ -1,0 +1,50 @@
+{
+  "questId": 4938,
+  "info": {
+    "name": "Dances with Balrog\u0027s Barbarism Part 2",
+    "parent": "Dances with Balrog\u0027s Barbarism",
+    "descriptions": {
+      "notStarted": "a",
+      "inProgress": "b",
+      "completed": "c"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 4937,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4928,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ],
+      "endDate": "2007072721"
+    },
+    "complete": {
+      "npc": 1022000,
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "meso": 1
+    }
+  }
+}

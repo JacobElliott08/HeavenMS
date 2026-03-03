@@ -1,0 +1,50 @@
+{
+  "questId": 6930,
+  "info": {
+    "name": "Arec\u0027s Letter of Introduction",
+    "parent": "The Thief\u0027s Extreme Path",
+    "descriptions": {
+      "notStarted": " I\u0027ve reached a limit to my training as a thief.  Is there a level beyond this? I should ask  #b#p2020011##k who helped me with the third job advancement.",
+      "inProgress": " #b#p2020011##k told me to see the bishop  #b#p2081400##k in Minar Forest if I want to find the path of becoming a more secretive thief",
+      "completed": " #b#p2081400##k said he will guide me to the path that will lead me to the thief\u0027s extreme power."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020011,
+      "minLevel": 120,
+      "jobs": [
+        411,
+        421
+      ]
+    },
+    "complete": {
+      "npc": 2081400,
+      "items": [
+        {
+          "itemId": 4031516
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031516
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 20000,
+      "items": [
+        {
+          "itemId": 4031516,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

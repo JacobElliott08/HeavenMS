@@ -1,0 +1,63 @@
+{
+  "questId": 8822,
+  "info": {
+    "name": "Thanksgiving : Turkey Green Egg hunt",
+    "descriptions": {
+      "notStarted": "It looks like Cody of Henesys needs help finding Turkey eggs...",
+      "inProgress": "I\u0027m on a mission to find as many #b Green Turkey eggs#k as I can for Cody, who has a strange liking for Turkey Egg omelets. I\u0027m going to find as many as I can and bring them back to him for prizes! I\u0027ve heard wild turkeys can be found around Ossyria and Sleepywood.\\n\\n#k\\n#t4031417# #c4031417# / #r1#k",
+      "completed": "The event is over, and I was able to help Cody find some eggs. He looked pretty happy, but I think he got so many eggs he\u0027ll start to chirp...ha!"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9200000,
+      "minLevel": 30,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2006120700"
+    },
+    "complete": {
+      "npc": 9200000,
+      "items": [
+        {
+          "itemId": 4031417
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031417,
+          "count": -1
+        },
+        {
+          "itemId": 4031425,
+          "probability": 1,
+          "expirationDate": "2006121400"
+        },
+        {
+          "itemId": 2000004,
+          "probability": 25
+        },
+        {
+          "itemId": 2020029,
+          "probability": 150
+        },
+        {
+          "itemId": 2000002,
+          "probability": 50
+        },
+        {
+          "itemId": 2000001,
+          "probability": 50
+        },
+        {
+          "itemId": 2020030,
+          "probability": 224
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "questId": 21743,
+  "info": {
+    "name": "The Special Ink",
+    "descriptions": {
+      "notStarted": "You want to restore the #t4220151# that the Black Wings gave to #p2090004#. The one person in #b#m250000000##k who is capable of doing the restoration is #b#p2091008# the painter#k.",
+      "inProgress": "#p2091008# states that to restore the #t4220151#, one must make a #b#t4032342##k and pour it all over the scroll. He then asks you to bring the materials necessary to make the ink, so he can make some for you. \\r\\n\\r\\n#i4000286# #t4000286# #b#c4000286# / 50#k\\r\\n#i4000287# #t4000287# #b#c4000287# / 50#k\\r\\n#i4000291# #t4000291# #b#c4000291# / 100#k",
+      "completed": "You handed #p2091008# the materials and received #t4032342# in return. You should now open the #t4220151# and pour the #t4032342# over it."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091008,
+      "minLevel": 54,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 21742,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032342
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2091008,
+      "items": [
+        {
+          "itemId": 4000286,
+          "count": 50
+        },
+        {
+          "itemId": 4000287,
+          "count": 50
+        },
+        {
+          "itemId": 4000291,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -500000,
+      "items": [
+        {
+          "itemId": 4000286,
+          "count": -50
+        },
+        {
+          "itemId": 4000287,
+          "count": -50
+        },
+        {
+          "itemId": 4000291,
+          "count": -100
+        },
+        {
+          "itemId": 4032342,
+          "count": 8
+        }
+      ]
+    }
+  }
+}

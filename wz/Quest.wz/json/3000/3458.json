@@ -1,0 +1,39 @@
+{
+  "questId": 3458,
+  "info": {
+    "name": "Revolutionary Defensive Wall Construction Plan",
+    "descriptions": {
+      "notStarted": "#b#p2050009##k in #b#m221000000##k wants to share his new plans with someone.  ",
+      "inProgress": "#b#p2050009##k suggested that we help #b#p2050008##k.  He says we can prevent aliens from attacking by using solid #b#t04000101##k to build a defensive wall around #b#m221000000##k.  In order to find out if this plan is possible, we need to get #b#t04000101##k and get it tested by #b#p2050001##k.\\n\\n#i04000101##t04000101# #b#c04000101#/20\\n\\n#r30 minute time limit",
+      "completed": "It\u0027s sad that #b#p2050009##k really thinks his idea is brilliant but #b#p2050001##k is right.  This plan clearly makes no sense and doesn\u0027t even need scientific testing in order to prove that...  Ugh, next time I should think things through before I offer to help.  I hope I grew at least a little bit."
+    },
+    "area": 37,
+    "timeLimit": 1800
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050009,
+      "minLevel": 40
+    },
+    "complete": {
+      "npc": 2050001,
+      "items": [
+        {
+          "itemId": 4000101,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 25000,
+      "items": [
+        {
+          "itemId": 4000101,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

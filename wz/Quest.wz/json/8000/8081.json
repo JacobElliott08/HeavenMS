@@ -1,0 +1,49 @@
+{
+  "questId": 8081,
+  "info": {
+    "name": "The Arrogant Alien Gray",
+    "parent": "Umi\u0027s Ambition",
+    "descriptions": {
+      "notStarted": "I better negotiate with #r#p2050002##k so the machine can be sent to Showa Town ASAP.",
+      "inProgress": "After eating lunch, #r#p2050002##k claims that he\u0027ll send the machine to Showa Town, no problem. \\nThis really irritated me, but I\u0027ll have to gather up #b400#k #b#t4000117#s#k in order for that to happen.\\r\\n#t4000117# #b#c4000117##k/400",
+      "completed": "Just as #r#p2050002##k demanded, I got him #b400 #t4000117#s#k."
+    },
+    "area": 48,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050002,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 8080,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050002,
+      "items": [
+        {
+          "itemId": 4000117,
+          "count": 400
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000117,
+          "count": -400
+        },
+        {
+          "itemId": 2030010
+        }
+      ],
+      "experience": 55000
+    }
+  }
+}

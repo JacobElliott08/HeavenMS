@@ -1,0 +1,76 @@
+{
+  "questId": 3440,
+  "info": {
+    "name": "Terminating the Dark Force.",
+    "descriptions": {
+      "notStarted": "I should go visit General Maestro at the Omega Sector..",
+      "inProgress": "I met General Maestro, who\u0027s in command of a humongous army at the Omega Sector, again. The general said although a perfect solution hasn\u0027t been presented yet, there\u0027s something for me to do. He wanted me to bring back #b30 Dull Crystals#k and #b10 Dark Crystal Ores#k from the Drum Bunnies at the Eos Tower.\\n\\n#t4031140# #b#c4031140##k/30\\n#t4004004# #b#c4004004##k/10",
+      "completed": "Just like the way General Mastro instructed, I gathered up the #bDull Crystals#k and #bDark Crystal Ores#k from the Drum Bunnies. Hopefully this\u0027ll stop the bunnies for a while, but this ain\u0027t over. I wonder when peace will actually settle on the Eos Tower."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050008,
+      "minLevel": 31,
+      "prerequisiteQuests": [
+        {
+          "questId": 3439,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050008,
+      "items": [
+        {
+          "itemId": 4031140,
+          "count": 30
+        },
+        {
+          "itemId": 4004004,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5800,
+      "items": [
+        {
+          "itemId": 4004004,
+          "count": -10
+        },
+        {
+          "itemId": 2040501,
+          "probability": 1
+        },
+        {
+          "itemId": 2040502,
+          "probability": 1
+        },
+        {
+          "itemId": 2040513,
+          "probability": 1
+        },
+        {
+          "itemId": 2040514,
+          "probability": 1
+        },
+        {
+          "itemId": 2040516,
+          "probability": 1
+        },
+        {
+          "itemId": 2040517,
+          "probability": 1
+        },
+        {
+          "itemId": 4031140,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

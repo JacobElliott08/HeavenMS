@@ -1,0 +1,27 @@
+{
+  "questId": 3300,
+  "info": {
+    "name": "A Deal with the Broker",
+    "descriptions": {
+      "notStarted": "There\u0027s a new, unknown and mysterious town called #m261000000#. It\u0027s an alchemist town, which explains the mysterious aura around it... I better go see #b#p2111007##k to gain some information on #m261000000#.",
+      "inProgress": "When I asked #p2111007# about #m261000000#, he requested #b10,000 mesos#k for information, as if it\u0027s an accepted practice. Is he really a broker...? Come to think of it, #p2111007#\u0027s reputation isn\u0027t that great either...what do I have to lose?",
+      "completed": "After giving #p2111007# 10,000 mesos, I was able to obtain some information on #m261000000#. A long time ago, after the death of the Black Magician, the alchemists came together and set up a town called #m261000000#. Nowadays, the town is split into #b2 societies, Zenumist and Alcadno. They seem to be in constant conflict with one another.#k"
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111007,
+      "minLevel": 30
+    },
+    "complete": {
+      "npc": 2111007
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "meso": -10000
+    }
+  }
+}

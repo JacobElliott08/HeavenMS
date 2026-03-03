@@ -1,0 +1,43 @@
+{
+  "questId": 4929,
+  "info": {
+    "name": "Gwin\u0027s Thanks",
+    "descriptions": {
+      "notStarted": "When I passed by, #b#p1061013##k, someone I really never got to spoke with, looked like he had something to talk to me. Let\u0027s go and find out what he has to say to me.",
+      "inProgress": "#p1061013# was looking at #t4031447# very closely to see if I did anything to hurt him. I don\u0027t know what the deal is but he was scaring me.  It makes me wonder why he is obsessed with this particular snail. I should find out by talking to #b#p1061013##k again.",
+      "completed": "#p1061013# told me what happened between him and Bob. It\u0027s amazing that a simple snail actually tried to save human being... Those little monsters we hunt aren\u0027t really little at all..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061013,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 4928,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061013,
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800,
+      "fame": 1
+    }
+  }
+}

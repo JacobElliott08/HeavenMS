@@ -1,0 +1,45 @@
+{
+  "questId": 4950,
+  "info": {
+    "name": "File Under Incomplete",
+    "descriptions": {
+      "notStarted": "MBI Agent Falcon is still snooping around the old Haunted House, even after I helped him find some of the Paranormal Activity Report Pages!  I wonder why... maybe he still needs help.",
+      "inProgress": "Looks like MBI Agent Falcon spoke too soon... 50 pages led him to the wrong, uh, dead guy... but he thinks that if I collect #b100#k more of them, he\u0027ll be able to catch Mr. Bones for sure!  Whew... 100 pages.  I wonder how many pages in total were in his original report?",
+      "completed": "I tracked down all of the 100 more #t4031764#s#k Agent Falcon requested!  Now he can finally go track Mr. Bones... I hope."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201075,
+      "minLevel": 15,
+      "endDate": "2007103123",
+      "prerequisiteQuests": [
+        {
+          "questId": 4949,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201075,
+      "items": [
+        {
+          "itemId": 4031812,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4031812,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "questId": 9838,
+  "info": {
+    "name": "카산드라의 아홉번째 퀴즈!",
+    "parent": "카산드라의 메이플 퀴즈",
+    "descriptions": {
+      "inProgress": "벌써 아홉번째 문제... 휴우. 정말 많이 풀었구나. #p9010010#도 힘들겠는걸? 어서 #p9010010#에게 가보자! ",
+      "completed": "#p9010010#의 아홉번째 퀴즈도 풀어버렸다. 후아아... 이제 거의 다 풀었다. 바로 다음 문제 시작하자! "
+    },
+    "area": 50,
+    "order": 9
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "startDate": "2007042400",
+      "endDate": "2007052100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9837,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4001126,
+          "count": 9
+        }
+      ]
+    }
+  }
+}

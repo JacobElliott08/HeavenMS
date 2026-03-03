@@ -1,0 +1,52 @@
+{
+  "questId": 20709,
+  "info": {
+    "name": "Mission in Kerning City",
+    "descriptions": {
+      "notStarted": "#p1101002# is trying to give me a new assignment. I wonder what it is...",
+      "inProgress": "I received a new assignment from #p1101002#, which is to travel to #b#m103000000##k of Victoria Island and provide support for #bAgent #p1103002##k.",
+      "completed": "I met with #p1103002# at #m103000000#."
+    },
+    "area": 15,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "minLevel": 16,
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 20708,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1103002
+    }
+  }
+}

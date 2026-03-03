@@ -1,0 +1,105 @@
+{
+  "questId": 8083,
+  "info": {
+    "name": "Porter\u0027s Challenge",
+    "descriptions": {
+      "notStarted": "#r#p2050013##k feels so energized that he feels that he can do anything. Now, this is not an everyday occurance, so this I gotta check out.",
+      "inProgress": "I don\u0027t know what it\u0027s for, but he wanted me to gather up #b200#k each of #b#t4000102##k and #b#t4000078##k. He even promised to give me a rock that\u0027ll help me tremedously down the road.\\r\\n#t4000102# #b#c4000102##k/200\\n#t4000078# #b#c4000078##k/200",
+      "completed": "A shield which has such powerful protetcion it exceeds that of a Pan Lid...is #r#p2050013##k serious or is he pulling my leg?"
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050013,
+      "minLevel": 50
+    },
+    "complete": {
+      "npc": 2050013,
+      "items": [
+        {
+          "itemId": 4000102,
+          "count": 200
+        },
+        {
+          "itemId": 4000078,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000102,
+          "count": -200
+        },
+        {
+          "itemId": 4000078,
+          "count": -200
+        },
+        {
+          "itemId": 4010002,
+          "count": 18,
+          "probability": 20
+        },
+        {
+          "itemId": 4010003,
+          "count": 10,
+          "probability": 20
+        },
+        {
+          "itemId": 4010004,
+          "count": 15,
+          "probability": 10
+        },
+        {
+          "itemId": 4010005,
+          "count": 20,
+          "probability": 40
+        },
+        {
+          "itemId": 4010000,
+          "count": 10,
+          "probability": 15
+        },
+        {
+          "itemId": 4010001,
+          "count": 10,
+          "probability": 15
+        },
+        {
+          "itemId": 4010006,
+          "count": 10,
+          "probability": 15
+        },
+        {
+          "itemId": 4004000,
+          "count": 5,
+          "probability": 11
+        },
+        {
+          "itemId": 4004001,
+          "count": 5,
+          "probability": 11
+        },
+        {
+          "itemId": 4004002,
+          "count": 5,
+          "probability": 11
+        },
+        {
+          "itemId": 4004003,
+          "count": 5,
+          "probability": 11
+        },
+        {
+          "itemId": 4004004,
+          "count": 5,
+          "probability": 11
+        }
+      ]
+    }
+  }
+}

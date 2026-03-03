@@ -1,0 +1,33 @@
+{
+  "questId": 3011,
+  "info": {
+    "name": "To Restore the Crystal",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "Just as I expected...Spiruna went livid over the cracked Black Crystal, and blames it all on me!!! Maybe I should seek some help from that lady standing next to her."
+    },
+    "area": 33,
+    "order": 8
+  },
+  "requirements": {
+    "start": {
+      "npc": 2032001,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3010,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2032000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "nextQuest": 3012
+    }
+  }
+}

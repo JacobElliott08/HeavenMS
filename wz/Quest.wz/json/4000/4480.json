@@ -1,0 +1,39 @@
+{
+  "questId": 4480,
+  "info": {
+    "name": "Common Sense Of Santa ",
+    "descriptions": {
+      "notStarted": "You made a visit to Mrs. Claus wondering about Santa Claus\u0027s condition, but she wouldn\u0027t tell you anything. Maybe you should go find #bSanta Encyclopedia No.1#k, the one that contains the history of Santa Claus, and read up a bit first.  Then you should go visit her again.",
+      "inProgress": "Thanks to #bSanta Encyclopedia No.1#k, she finally opened up and started talking to you.",
+      "completed": "Truth always prospers! You were able to discover the real reason why Santa Claus disappeared."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250051,
+      "minLevel": 25,
+      "endDate": "2010010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 4479,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4161043
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9250051
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "nextQuest": 4481
+    }
+  }
+}

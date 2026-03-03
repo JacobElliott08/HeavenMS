@@ -1,0 +1,60 @@
+{
+  "questId": 2057,
+  "info": {
+    "name": "Shumi\u0027s Lost Sack of Money",
+    "descriptions": {
+      "notStarted": "Let\u0027s go look for Shumi in Kerning City.",
+      "inProgress": "I ran into Shumi again at Kerning City. A while ago, she got a favor from JM From the Streetz to get an elixir for him, only to have the sack of money fall down and lose it all in the process. I guess I can find it at the deep part of the subway station, the #bconstruction site B3#k, again.",
+      "completed": "I got Shumi of Kerning City the lost sack of money. With that, she can finally get the stuff JM requested. As a sign of thanks, she gave me #bscroll for shoes for speed#k. Since there are other items that can be found at #bconstruction site B3#k , maybe I should head back in there sometime..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052102,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 2056,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052102,
+      "items": [
+        {
+          "itemId": 4031041
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 11000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4031041,
+          "count": -1
+        },
+        {
+          "itemId": 2000004,
+          "count": 30
+        },
+        {
+          "itemId": 2040706,
+          "probability": 1
+        },
+        {
+          "itemId": 2040707,
+          "probability": 1
+        },
+        {
+          "itemId": 2040708,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

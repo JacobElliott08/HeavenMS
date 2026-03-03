@@ -1,0 +1,50 @@
+{
+  "questId": 1023,
+  "info": {
+    "name": "Here little Piggy...",
+    "descriptions": {
+      "notStarted": "#b#p20002##k in #b#m60000##k looks upset. What\u0027s going on?",
+      "inProgress": "#p20002# heard that somebody told him he looks like #o1210100#. That\u0027s why he\u0027s so mad. To be honest, they look alike.....anyway, for #p20002#, let\u0027s get #r2#o1210100##k. \\n #k \\n#o1210100# #r#a10231# #k",
+      "completed": "I defeated #o1210100#! #p20002# seems satisfied."
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 20002,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 20002,
+      "monsters": [
+        {
+          "monsterId": 1210100,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 2000000,
+          "count": 5
+        },
+        {
+          "itemId": 2000003,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

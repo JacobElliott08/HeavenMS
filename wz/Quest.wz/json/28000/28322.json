@@ -1,0 +1,46 @@
+{
+  "questId": 28322,
+  "info": {
+    "name": "Jonas: \"Jonas\u0027 Presence\" 3",
+    "descriptions": {
+      "notStarted": "What in the world is Jonas doing, still hanging around? Whatever the reason, this haunting stuff needs to stop. You\u0027re about to have the chance to tell him face-to-face.",
+      "inProgress": "It appears Jonas would like you to retrieve #rSophilia’s Favorite Doll#k. He mentioned that Sophilia kept her favorite doll inside a crate in one of her rooms. Bring it back to him. Where in this big ol\u0027 house could it be?",
+      "completed": "So, you finally got your hands on #rSophilia’s Favorite Doll#k. Will this do the trick?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201138,
+      "endDate": "2009112500",
+      "prerequisiteQuests": [
+        {
+          "questId": 28321,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201138,
+      "items": [
+        {
+          "itemId": 4000517
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000517,
+          "count": -1
+        },
+        {
+          "itemId": 2022245,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

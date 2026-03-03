@@ -1,0 +1,47 @@
+{
+  "questId": 9011,
+  "info": {
+    "name": "Teo\u0027s reminiscence",
+    "descriptions": {
+      "notStarted": "I think I can get some help from Teo in Lith Harbor...",
+      "inProgress": "I met #bTeo#k at Lith Harbor. Teo told me I remind him of his youth when he went for many journeys. Reminiscing his past, Teo told me he wanted to help me. He said if I bring #b50 #t4000016##k and #b30 #t4000004##k, he will recognize my potentials and support me...ha! This is a Piece of cake!",
+      "completed": "I proved how good I am to Teo at Lith Harbor. Teo has acknowleged my abilities and financially supported me. With this support, I\u0027ll be a great adventurer."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002001,
+      "minLevel": 10,
+      "endDate": "2002122100"
+    },
+    "complete": {
+      "npc": 1002001,
+      "items": [
+        {
+          "itemId": 4000016,
+          "count": 50
+        },
+        {
+          "itemId": 4000004,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": 30000,
+      "items": [
+        {
+          "itemId": 4000016,
+          "count": -50
+        },
+        {
+          "itemId": 4000004,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

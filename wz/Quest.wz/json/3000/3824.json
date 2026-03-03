@@ -1,0 +1,33 @@
+{
+  "questId": 3824,
+  "info": {
+    "name": "Tell Do Gong I Said Hi",
+    "parent": "Do Gong Seeking Swallow",
+    "descriptions": {
+      "notStarted": "Will #b#p2071006##k of #b#m222000000##k regain its lost memory?",
+      "inProgress": "#p2071006# told me it now remembers everything that has to do with #b#m250000000##k and #b#p2091001##k, and felt saddened that it hadn\u0027t been able to repay #p2091001# for all the good things he did for it due to the injury, and wanted me to say HI to him for it.",
+      "completed": "I managed to relay #p2071006#\u0027s greetings to #p2091001#. #p2091001# seemed shocked by #p2071006#\u0027s injuries, and wished it a speedy recovery by asking me to deliver #b#p2091002##k to it. Okay, I better go back to #b#p2091002##k, now."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071006,
+      "prerequisiteQuests": [
+        {
+          "questId": 3823,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "questId": 9951,
+  "info": {
+    "name": "...Pirates!?",
+    "descriptions": {
+      "notStarted": " Lately I see a strange group of people wandering all over the Maple World. They display confident looks with weapons I have never seen anywhere else...and a scent of the ocean to boot. Who are they really? I better ask #b#p9010010##k for more information on these strangers.",
+      "inProgress": "#p9010010# was making quite a scene about \u0027\u0027them\u0027\u0027 having finally arrived. The \"they\" she referred to was the #bPirates#k! Cassandra proposed that if I was interested in the Pirates, then she\u0027ll allow me to experience a small dose of that. I\u0027ll just have to prove it to her that I am indeed interested in the Pirates... I better answer the #bquestions#k Cassandra asks and earn #b#t2210010##k!",
+      "completed": " I received #b#t2210010##k from #p9010010#. With this, I may be able to experience the mysterious skills of the Pirates!  I should also stop by the Nautilus, near Hensys and see them for myself!"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 1440,
+      "endDate": "2008111800",
+      "items": [
+        {
+          "itemId": 2210010,
+          "count": 0
+        },
+        {
+          "itemId": 2210011,
+          "count": 0
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q9951e"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "questId": 6944,
+  "info": {
+    "name": "Attributes of a Hero",
+    "parent": "The Ultimate Stage of the Pirate",
+    "descriptions": {
+      "inProgress": "#b#p2081500##k tells me that I need to prove my attributes as a hero in order to make the 4th level job advancement. To prove my eligibility, I must bring #b#t4031518##k and #b#t4031517##k. \\r\\n#i4031860##t4031860# #b#c4031860#/1#k\\r#i4031861##t4031861# #b#c4031861#/1  ",
+      "completed": "I took the #b#t4031518##k and #b#t4031517##k and proved my readiness. He told me that I am finally ready to be a hero and to come and talk to him when I\u0027m ready to make the 4th level job advancement. "
+    },
+    "area": 10,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081500,
+      "minLevel": 120,
+      "jobs": [
+        511,
+        521
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6943,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081500,
+      "items": [
+        {
+          "itemId": 4031860
+        },
+        {
+          "itemId": 4031861
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000,
+      "items": [
+        {
+          "itemId": 4031860,
+          "count": -1
+        },
+        {
+          "itemId": 4031861,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

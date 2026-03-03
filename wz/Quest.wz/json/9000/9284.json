@@ -1,0 +1,35 @@
+{
+  "questId": 9284,
+  "info": {
+    "name": "메이플 상식 : 4차 전직",
+    "descriptions": {
+      "notStarted": "즐거운 새해 아침이 밝았다. 메이플 운영자를 찾아가보자.",
+      "inProgress": "4차 전직에 관련된 문제입니다.",
+      "completed": "3차 전직한 레벨 120이상의 캐릭터는 사제의 숲에서 4차 전직을 할 수 있습니다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2007010300",
+      "endDate": "2007010400"
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 2022006,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

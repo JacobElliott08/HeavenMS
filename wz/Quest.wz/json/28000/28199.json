@@ -1,0 +1,44 @@
+{
+  "questId": 28199,
+  "info": {
+    "name": "First Encounter with Ervine",
+    "descriptions": {
+      "notStarted": "#b#@1052001:##k in #bKerning City#k says he will help you train further. Let\u0027s talk to him.",
+      "inProgress": "Let\u0027s go find #b#@9201120:##k in #bKerning City#k for additional training.",
+      "completed": "The Path of a Thief.."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "prerequisiteQuests": [
+        {
+          "questId": 2143,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 9201120
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

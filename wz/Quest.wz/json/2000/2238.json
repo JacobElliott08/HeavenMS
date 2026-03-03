@@ -1,0 +1,34 @@
+{
+  "questId": 2238,
+  "info": {
+    "name": "Who is the Owner of the Mysterious Note?",
+    "parent": "The Mysterious Note",
+    "descriptions": {
+      "inProgress": "While talking to Mu Young, you were suddenly transported to a foreign place and a Jr. Balrog appeared right in front of your eyes. Let\u0027s defeat the Jr. Balrog. ",
+      "completed": "While talking to Mu Young, you were suddenly transported to a foreign place and a Jr. Balrog appeared right in front of your eyes. As soon as you defeated the Jr. Balrog, Tristan\u0027s Spirit appeared. You were able to hear the story of his past life."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061014,
+      "startScript": "q2238s",
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2237,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061015
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000
+    }
+  }
+}

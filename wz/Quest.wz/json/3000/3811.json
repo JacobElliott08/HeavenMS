@@ -1,0 +1,52 @@
+{
+  "questId": 3811,
+  "info": {
+    "name": "The Legendary Being\u0027s Scroll 3",
+    "parent": "The Legendary Being\u0027s Scroll",
+    "descriptions": {
+      "notStarted": "I gave #t4031432# to #b#p2091001##k of #b#m250000000##k. Hopefully now he\u0027ll lend me #t4031431#. I better go see #p2091001# right now.",
+      "inProgress": "#p2091001# met his end of the bargain and lent me #b#t4031431:##k. Now it\u0027s time for me to deliver it to #b#p2071010##k.",
+      "completed": "I gave #p2071010# the #t4031431#. Hopefully this will help #p2071010# become the Master at the intermediate level. Does that mean the intermediate-leveled Master can make not just the Gold Axe, but a Diamond-studded Axe?"
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091001,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3810,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071010,
+      "items": [
+        {
+          "itemId": 4031431
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031431
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 4031431,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

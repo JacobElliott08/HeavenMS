@@ -1,0 +1,53 @@
+{
+  "questId": 2240,
+  "info": {
+    "name": "A Letter to the Master",
+    "parent": "Manji and Balrog",
+    "descriptions": {
+      "notStarted": "Mu Young seems to have another favor to ask of you. Let\u0027s see what he needs.",
+      "inProgress": "Mu Young says he has to further investigate the place, so he\u0027d like me to deliver the letters he wrote to Manji during the past few days.",
+      "completed": "Mu Young says he has to further investigate the place, so he\u0027d like me to deliver the letters he wrote to Manji during the past few days.\\r\\nLet\u0027s deliver Mu Young\u0027s message to Manji in Perion. He thanked you for all your help as you set out to deliver his letters."
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061014,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2239,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022002,
+      "items": [
+        {
+          "itemId": 4032262
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032262
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 50000,
+      "nextQuest": 2241,
+      "items": [
+        {
+          "itemId": 4032262,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

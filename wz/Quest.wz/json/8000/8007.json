@@ -1,0 +1,40 @@
+{
+  "questId": 8007,
+  "info": {
+    "name": "The Scarred Kitty",
+    "parent": "Sakura, the Kitty, and the Orange Marble",
+    "descriptions": {
+      "notStarted": "I should go talk to #bThe Scarred Kitty#k.",
+      "inProgress": "I should feed this poor-looking #bScarred Kitty#k.",
+      "completed": " I fed #bThe Scarred Kitty#k at Showa Town, and... WHAT? This kitty\u0027s talks! Apparently this kitty was teased, abused, and labeled as a monster cat because it spoke and understood the  human language. After thanking me for food, it promised to help me if I ever run into a tight situation. "
+    },
+    "area": 48,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120012,
+      "minLevel": 40
+    },
+    "complete": {
+      "npc": 9120012,
+      "items": [
+        {
+          "itemId": 2120000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8018,
+      "items": [
+        {
+          "itemId": 2120000,
+          "count": -1
+        }
+      ],
+      "experience": 12000
+    }
+  }
+}

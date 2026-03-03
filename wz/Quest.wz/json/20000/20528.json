@@ -1,0 +1,104 @@
+{
+  "questId": 20528,
+  "info": {
+    "name": "Raising Mimio",
+    "descriptions": {
+      "notStarted": "I better ask #b#p1102002# the Mount Trainer#k about an enhanced Mount.",
+      "inProgress": "Since #t1902005# acquired a wealth of experience, it is now eligible to acquire more power. The problem is, I\u0027ll have to feed it with only the top-notch kind of food. To have it resemble the greatness of a dragon, I\u0027m going to feed it with the Special Formula for the dragons in #m240000000#. Pam is the one that sells the Formula.",
+      "completed": "I was able to purchase all the Formulas and feed them to #t1902005#. Once that took place, #t1902005# went through shedding and became #t1902006#."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102002,
+      "minLevel": 100,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 20527,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1902006
+        },
+        {
+          "itemId": 1902005
+        },
+        {
+          "itemId": 1902007
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1102002,
+      "items": [
+        {
+          "itemId": 4032196,
+          "count": 3
+        },
+        {
+          "itemId": 4032197,
+          "count": 3
+        },
+        {
+          "itemId": 4032198,
+          "count": 3
+        },
+        {
+          "itemId": 1902005
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032196,
+          "count": -3
+        },
+        {
+          "itemId": 4032197,
+          "count": -3
+        },
+        {
+          "itemId": 4032198,
+          "count": -3
+        },
+        {
+          "itemId": 1902006
+        },
+        {
+          "itemId": 1902005,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

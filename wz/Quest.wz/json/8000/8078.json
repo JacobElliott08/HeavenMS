@@ -1,0 +1,80 @@
+{
+  "questId": 8078,
+  "info": {
+    "name": "Open Sesami",
+    "descriptions": {
+      "notStarted": "The device known as \"Open Sesame\" should arrive at Sabitrama house any minute. I better go see him right now.",
+      "inProgress": "I\u0027ll need 1,000,000 mesos to open up \"Open Sesami\". I have a feeling that, even after making the investment, we may not get to touch the herb. Even with great hesitation, I must decide right now.",
+      "completed": " I think, as soon as the seal was disabled with the 3rd Herb, it perished the moment it touched the open air. Sabitrama seemed content with it, but ... I must admit, he\u0027s one heck of an enthusiast in terms of herbs. 1,000,000 mesos was a stiff price to pay, but I got the Magic Collection, so I\u0027m good with that!"
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061005,
+      "minLevel": 85,
+      "prerequisiteQuests": [
+        {
+          "questId": 8076,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 8077,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -1000000,
+      "items": [
+        {
+          "itemId": 1462007,
+          "probability": 1
+        },
+        {
+          "itemId": 4010005,
+          "count": 20,
+          "probability": 299
+        },
+        {
+          "itemId": 2040407,
+          "probability": 200
+        },
+        {
+          "itemId": 2040607,
+          "probability": 200
+        },
+        {
+          "itemId": 2040519,
+          "probability": 100
+        },
+        {
+          "itemId": 2040521,
+          "probability": 100
+        },
+        {
+          "itemId": 2040509,
+          "probability": 100
+        },
+        {
+          "itemId": 2040511,
+          "probability": 100
+        },
+        {
+          "itemId": 2000004,
+          "count": 10,
+          "probability": 400
+        },
+        {
+          "itemId": 2020008,
+          "probability": 500
+        }
+      ]
+    }
+  }
+}

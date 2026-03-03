@@ -1,0 +1,105 @@
+{
+  "questId": 6210,
+  "info": {
+    "name": "Black Clouds...",
+    "descriptions": {
+      "notStarted": " I got a book called \"How to make black clouds\" in Orbis. Isn\u0027t this Hugh\u0027s book? I should return it.",
+      "inProgress": "Hugh said it\u0027s not his book. However, he told me that it has information on how to make something amazing.  Hugh said he\u0027ll make it and asked me to bring him the ingredients....I have to see Kay and Porter to get some of the ingredients.  This is going to take some time. \\n\\n#i4031462# #t4031462#  #b#c4031462# / 1#k\\n#i4000133##t4000133#  #b#c4000133# / 10#k\\n#i4003000##t4003000#  #b#c4003000# / 50#k\\n#i4000183##t4000183#  #b#c4000183# / 100#k\\n#i4011001##t4011001#  #b#c4011001# / 20#k\\n#i4000115##t4000115#  #b#c4000115# / 50#k\\n#i4031478##t4031478#  #b#c4031478# / 1#k\\n",
+      "completed": " Hugh completed the black cloud maker!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012017,
+      "repeatIntervalMinutes": 0,
+      "jobs": [
+        422
+      ],
+      "items": [
+        {
+          "itemId": 4161021
+        },
+        {
+          "itemId": 2280001
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012017,
+      "items": [
+        {
+          "itemId": 4000133,
+          "count": 10
+        },
+        {
+          "itemId": 4003000,
+          "count": 50
+        },
+        {
+          "itemId": 4000183,
+          "count": 100
+        },
+        {
+          "itemId": 4011001,
+          "count": 20
+        },
+        {
+          "itemId": 4031462
+        },
+        {
+          "itemId": 4000115,
+          "count": 50
+        },
+        {
+          "itemId": 4031478
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4161021,
+          "count": -1
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031462,
+          "count": -1
+        },
+        {
+          "itemId": 4000183,
+          "count": -100
+        },
+        {
+          "itemId": 4003000,
+          "count": -50
+        },
+        {
+          "itemId": 4031478,
+          "count": -1
+        },
+        {
+          "itemId": 4000115,
+          "count": -50
+        },
+        {
+          "itemId": 4000133,
+          "count": -10
+        },
+        {
+          "itemId": 4011001,
+          "count": -20
+        },
+        {
+          "itemId": 2280001
+        }
+      ]
+    }
+  }
+}

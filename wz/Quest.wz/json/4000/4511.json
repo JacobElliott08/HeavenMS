@@ -1,0 +1,54 @@
+{
+  "questId": 4511,
+  "info": {
+    "name": "Making the path to the sea",
+    "parent": "The Secret of Ghostship",
+    "descriptions": {
+      "notStarted": "#b#p9270030##k has more secrets to reveal!  Let\u0027s go see him again!",
+      "inProgress": "#b#p9270030##k has told me that he wishes to sail again with his crew. However, he isn\u0027t sure if he can go out to the sea like the old days because of the Ghosts along the coast line.  I really want to help him get his dream back by eliminating #b#o9420510# and #o9420511##k.\\n\\n#o9420510#  #r#a45111##k\\n#o9420511#  #r#a45112##k",
+      "completed": "Yes indeed!  I did help #p9270030# to get back to the sea again. But I wonder, he has something more worried about.  I think I should go see him again."
+    },
+    "area": 48,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270030,
+      "minLevel": 63,
+      "prerequisiteQuests": [
+        {
+          "questId": 4510,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270030,
+      "monsters": [
+        {
+          "monsterId": 9420510,
+          "count": 120
+        },
+        {
+          "monsterId": 9420511,
+          "count": 120
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 2022213,
+          "count": 10
+        },
+        {
+          "itemId": 2022215,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

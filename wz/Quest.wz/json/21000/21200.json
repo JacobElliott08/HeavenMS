@@ -1,0 +1,28 @@
+{
+  "questId": 21200,
+  "info": {
+    "name": "In Search of Its Rightful Owner",
+    "descriptions": {
+      "notStarted": "As soon as you reach Level 30, #b#p1201000##k strikes up a conversation with you…",
+      "inProgress": "#p1201000# tells you that the polearm is acting strange and that it might be trying to send you a message. You\u0027d better head to #b#m140000000##k and check on the state of the #bpolearm#k.",
+      "completed": "Standing in front of the polearm is a strange-looking boy who you\u0027ve never met before. Who is that? That kid does look a bit familiar. What? That boy is #p1201001#? No way…!"
+    },
+    "area": 6,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201000,
+      "minLevel": 30,
+      "normalAutoStart": true,
+      "startScript": "q21200s",
+      "jobs": [
+        2100
+      ]
+    },
+    "complete": {
+      "npc": 1201002,
+      "endScript": "q21200e"
+    }
+  }
+}

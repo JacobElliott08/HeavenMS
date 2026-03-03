@@ -1,0 +1,127 @@
+{
+  "questId": 2020,
+  "info": {
+    "name": "Hungry Ronnie",
+    "parent": "Mr. Wetbottom\u0027s Secret Book",
+    "descriptions": {
+      "inProgress": "Inside a tree tunnel around Ellinia I found #bRonnie#k, the son of Mr. Wetbottom. He said the red book is off limits, but he seems to be starving. In the end, we made a deal that I get him #b50 Lupin bananas, Rina\u0027s Unagi Special, and a fresh milk#k, and he gives me the book. According to Ronnie, I can find Rina at Henesys, and as for the fresh milk, I can get it from Rowen the fairy from Ellinia. I have a lot of traveling to do, but oh well...",
+      "completed": "I got Ronnie all the food he needed, and got the #bSecret Book#k that Mr. Wetbottom had been desperately looking for. It\u0027s a weird-looking book with a red cover... I have a feeling that I should not open this book... Anyway I should hurry up and get this to Mr. Wetbottom at the VIP sauna in Sleepywood before it\u0027s too late."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061004,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 2019,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1061004,
+      "items": [
+        {
+          "itemId": 4000029,
+          "count": 50
+        },
+        {
+          "itemId": 4031014
+        },
+        {
+          "itemId": 4031015
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8800,
+      "nextQuest": 2023,
+      "items": [
+        {
+          "itemId": 4031014,
+          "count": -1
+        },
+        {
+          "itemId": 4031015,
+          "count": -1
+        },
+        {
+          "itemId": 4000029,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

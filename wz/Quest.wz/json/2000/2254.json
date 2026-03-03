@@ -1,0 +1,30 @@
+{
+  "questId": 2254,
+  "info": {
+    "name": "Karcasa of the Desert",
+    "descriptions": {
+      "notStarted": "Through research, you discovered that a place known as the Mushroom Castle is in trouble, but even #bThe Rememberer#k doesn\u0027t know anything about the place. You should see what he thinks you should do next.",
+      "inProgress": "Through research, you discovered that a place known as the Mushroom Castle is in trouble, but even #bThe Rememberer#k had no clue where that is. He recommends you ask #bKarcasa#k in the desert for some information…",
+      "completed": "You met #bKarcasa#k and asked about the Mushroom Castle, to no avail."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 2251,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2255
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101013
+    }
+  }
+}

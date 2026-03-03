@@ -1,0 +1,39 @@
+{
+  "questId": 3368,
+  "info": {
+    "name": "Eliminating Obstacles",
+    "descriptions": {
+      "notStarted": "To help Yulete out, I volunteered to assist him on his research. What can I do for him? I better go see #bYulete#k.",
+      "inProgress": "Yulete asked me to eliminate the monsters that stand in his way of conducting experiments. It seems like the monsters he created from the past have come back to haunt him. \\n\\n#o9300153# #r#a33681##k ",
+      "completed": "I was able to eliminate all the monsters that were of hindrance to Yulete in the lab. Yulete breathed a sigh of relief that he can now use that lab."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2112014,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3365,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2112014,
+      "monsters": [
+        {
+          "monsterId": 9300153,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "fame": 1
+    }
+  }
+}

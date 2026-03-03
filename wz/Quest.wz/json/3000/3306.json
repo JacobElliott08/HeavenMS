@@ -1,0 +1,74 @@
+{
+  "questId": 3306,
+  "info": {
+    "name": "Re-acquiring Alcadno Cape",
+    "descriptions": {
+      "notStarted": "Oh no...! I lost #t1102136#, the one item that proves that I\u0027m a member of Alcadno. What should I do? I better go talk to the president of the Alcadno Society, #p2111001#.",
+      "inProgress": "#p2111001# told me he could give me another cape, but this time, I\u0027ll have to come up with all the items required to make the cape. As long as I can get another one, gathering the items is not a problem! Those items are #b#t4000021##k and #b#t4021006##k, with #b10,000 mesos#k.\\n\\n#i4000021##t4000021# #b#c4000021##k/10 \\n#i4021006##t4021006# #b#c4021006##k/5",
+      "completed": "I got Alcadno Cape again. Without it, I can\u0027t be accepted as an Alcadno. I better not lose it again."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111001,
+      "minLevel": 30,
+      "repeatIntervalMinutes": 4320,
+      "startScript": "q3306s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3349
+        },
+        {
+          "questId": 3304,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3347
+        },
+        {
+          "questId": 3348
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1102136
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111001,
+      "items": [
+        {
+          "itemId": 4021006,
+          "count": 5
+        },
+        {
+          "itemId": 4000021,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2111001
+    },
+    "onComplete": {
+      "meso": -10000,
+      "items": [
+        {
+          "itemId": 1102136
+        },
+        {
+          "itemId": 4000021,
+          "count": -10
+        },
+        {
+          "itemId": 4021006,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

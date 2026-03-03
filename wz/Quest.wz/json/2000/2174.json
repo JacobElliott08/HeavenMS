@@ -1,0 +1,62 @@
+{
+  "questId": 2174,
+  "info": {
+    "name": "Report to Muirhat",
+    "parent": "A Mysterious Presence On-board The Nautilus",
+    "descriptions": {
+      "notStarted": "Baine discovers that the Black Magician\u0027s Disciples have been secretly observing The Nautilus. And with that discovery, Baine\u0027s report is now ready to be delivered to Muirhat. Baine wants me to bring the report to Muirhat myself, since I gave him so much help with writing the report... ",
+      "inProgress": "This report contains the Black Magician\u0027s Token which I found, plus a description of the strange sound waves that Baine had heard. It also includes information about the suspicious movements that Bart saw. I should take this to #bMuirhat#k.",
+      "completed": "When Muirhat receives the report, he is surprised and shocked to find that the Black Magician\u0027s influence has spread as far as here."
+    },
+    "area": 30,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092002,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 2173,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092007,
+      "items": [
+        {
+          "itemId": 4031862
+        },
+        {
+          "itemId": 4031863
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031862
+        },
+        {
+          "itemId": 4031863
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4031862,
+          "count": -1
+        },
+        {
+          "itemId": 4031863,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

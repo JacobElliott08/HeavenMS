@@ -1,0 +1,54 @@
+{
+  "questId": 9474,
+  "info": {
+    "name": "커닝시티의 유령 소동",
+    "descriptions": {
+      "notStarted": "메이플 월드를 떠도는 이상한 소문이 궁금하다면 #b#p2040050##k를 찾아가 보자.",
+      "inProgress": "커닝시티 지하철에 나타나는 유령을 물리치자.\\n\\n#o4230102# #r#a94741##k \\n#o3230101# #r#a94742##k \\n#t04000035# #b#c04000035#/20#k",
+      "completed": "커닝시티에 나타나는 유령에 대한 소문의 진상을 알아봤다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040050,
+      "minLevel": 30,
+      "maxLevel": 69,
+      "startDate": "2006072000",
+      "endDate": "2006090100"
+    },
+    "complete": {
+      "npc": 2040050,
+      "items": [
+        {
+          "itemId": 4000035,
+          "count": 20
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 4230102,
+          "count": 100
+        },
+        {
+          "monsterId": 3230101,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 12000,
+      "items": [
+        {
+          "itemId": 4000035,
+          "count": -20
+        },
+        {
+          "itemId": 2100029
+        }
+      ]
+    }
+  }
+}

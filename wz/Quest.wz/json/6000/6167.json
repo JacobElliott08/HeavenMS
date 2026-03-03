@@ -1,0 +1,51 @@
+{
+  "questId": 6167,
+  "info": {
+    "name": "Meteo Shower",
+    "descriptions": {
+      "notStarted": " #p2022003# might be feeling a little better...I should pay him a visit...",
+      "inProgress": " As I approached #p2022003# to check if he\u0027s okay, he seemed to be more alert, as if part of his memory returned. He told me to bring him #b#t4001017##k... Let\u0027s go see the guard of the Abandoned Mine, #b#p2030008##k, \\n\\n#i4001017##t4001017# #b#c4001017# / 1#k",
+      "completed": "I learned a new magic spell! This is the magic that #p2022003# studied...it\u0027s powerful magic that I will use to emerge victorious in battle!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2022003,
+      "jobs": [
+        212
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6166,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2022003,
+      "items": [
+        {
+          "itemId": 4001017
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1300000,
+      "items": [
+        {
+          "itemId": 4001017,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 2121007,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

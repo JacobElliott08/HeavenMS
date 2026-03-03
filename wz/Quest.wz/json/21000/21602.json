@@ -1,0 +1,50 @@
+{
+  "questId": 21602,
+  "info": {
+    "name": "Kenta\u0027s Wolf Pup Formula",
+    "descriptions": {
+      "notStarted": "You should head to the t#b#m230000003# of #m230000000##k and purchase some #t4032331# from #b#p2060005##k.",
+      "inProgress": "#t4032331# costs 10 million mesos. It\u0027s a lot to pay, but you gladly pay it, knowing it\u0027s what\u0027s best for the wolf pup.\\r\\n\\r\\n#b10 million mesos#k",
+      "completed": "You purchased the #t4032331#. "
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "minLevel": 50,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 21601,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032331
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2060005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -10000000,
+      "items": [
+        {
+          "itemId": 4032331
+        }
+      ]
+    }
+  }
+}

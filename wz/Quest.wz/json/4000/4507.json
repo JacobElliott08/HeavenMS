@@ -1,0 +1,52 @@
+{
+  "questId": 4507,
+  "info": {
+    "name": "Angie\u0027s Beloved Costume 1",
+    "parent": "Angie\u0027s Beloved Costume",
+    "descriptions": {
+      "notStarted": "I think I just saw a Fashionable lady, #p9270032#, in CBD waving her hands at me! Am I that attractive?",
+      "inProgress": "#p9270032# has asked me to gather #b#t4000035##k and #b#t4000021##k in order to make a fashionable brand new Indian Costume.\\n\\n#t4000035#  #r#c4000035#/20#k\\n#t4000021#  #r#c4000021#/20#k",
+      "completed": "Now that I have brought all the required items to #p9270032#, I never have seen someboy so obsessed with her fashion that much. Talking about the fashion, there is no one who dresses better than me in MapleS.E.A."
+    },
+    "area": 48,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270032,
+      "minLevel": 25
+    },
+    "complete": {
+      "npc": 9270032,
+      "items": [
+        {
+          "itemId": 4000035,
+          "count": 20
+        },
+        {
+          "itemId": 4000021,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 4000021,
+          "count": -20
+        },
+        {
+          "itemId": 4000035,
+          "count": -20
+        },
+        {
+          "itemId": 2022203,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

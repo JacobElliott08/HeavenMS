@@ -1,0 +1,32 @@
+{
+  "questId": 6921,
+  "info": {
+    "name": "Legor\u0027s First Story",
+    "parent": "The Bowman\u0027s Extreme Path",
+    "descriptions": {
+      "inProgress": "#b#p2081300##k said she\u0027ll tell me the first truth and told me to come talk to her again when I\u0027m ready.",
+      "completed": " #b#p2081300##k told me about Zakum, which is the first truth.  She said she still has two more stories to tell me."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081300,
+      "minLevel": 120,
+      "jobs": [
+        311,
+        321
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6920,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081300
+    }
+  }
+}

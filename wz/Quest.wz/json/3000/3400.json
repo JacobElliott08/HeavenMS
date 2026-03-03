@@ -1,0 +1,44 @@
+{
+  "questId": 3400,
+  "info": {
+    "name": "Chief Stan\u0027s Letter",
+    "descriptions": {
+      "notStarted": "Chief Stan wants to ask me for something... I wonder what it is...",
+      "inProgress": "I met with #bChief Stan#k, who was at Henesys in Victoria Island. He handed me what appeared to be an old, sealed letter, and wanted me to deliver it to Dr. Kim of Omega Sector. He said to get to Omega Sector, I\u0027ll need to first get on board on a ship ride from Ellinia to Orbis, followed by the ride to Ludibrium from there.",
+      "completed": "I met Dr. Kim at Omega Sector, and handed him the #bsealed letter#k that Chief Stan gave me. This place seems to be full of facilities designed in anticipation of the alien invasion... I should talk to Dr. Kim whenever I have a chance..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012003,
+      "minLevel": 30
+    },
+    "complete": {
+      "npc": 2050001,
+      "items": [
+        {
+          "itemId": 4031099
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031099
+        }
+      ]
+    },
+    "onComplete": {
+      "meso": 7500,
+      "items": [
+        {
+          "itemId": 4031099,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "questId": 3108,
+  "info": {
+    "name": "Snowman\u0027s Rage-Found a clue",
+    "descriptions": {
+      "notStarted": "What kind of clue is Scadur looking for? Let\u0027s investigate around the #bValley of Snowmen#k.",
+      "inProgress": "Found a strange statue made of ice. It\u0027s hard to tell what it looks like, because half of it has been broken into pieces. It might be the Spirit of the Snow Sculpture. ",
+      "completed": "Found the Spirit of Snow Sculpture deep in the snowfield. Maybe this is the clue Scadur is looking for? This statue might have something to do with the Snowman. Let\u0027s go back to Scadur."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020012,
+      "startScript": "q3108s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3107,
+          "state": "STARTED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

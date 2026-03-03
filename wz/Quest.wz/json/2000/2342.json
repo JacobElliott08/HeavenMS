@@ -1,0 +1,30 @@
+{
+  "questId": 2342,
+  "info": {
+    "name": "The Recovered Royal Seal",
+    "descriptions": {
+      "notStarted": "#bPrincess Violetta#k says she has something for you.",
+      "completed": "You recovered the lost #t4001318#."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300002,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "startScript": "q2342s",
+      "prerequisiteQuests": [
+        {
+          "questId": 2333,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4001318
+        }
+      ]
+    }
+  }
+}

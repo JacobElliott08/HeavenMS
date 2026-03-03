@@ -1,0 +1,47 @@
+{
+  "questId": 29906,
+  "info": {
+    "name": "Knight-in-Training",
+    "descriptions": {
+      "notStarted": "You can acquire the #b\u003cKnight-in-Training\u003e#k title by completing the 1st Job Advancement as a Knight.",
+      "inProgress": "You can earn the #b\u003cKnight-in-Training\u003e#k title by completing the 1st Job Advancement as a Knight.",
+      "completed": "You have earned the #b\u003cKnight-in-Training\u003e#k title, which is given to those who are determined to follow the honorable path of the Knight."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142066
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 10,
+      "normalAutoStart": true,
+      "npc": 1101000,
+      "startScript": "q29906s",
+      "jobs": [
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1101000
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "questId": 3315,
+  "info": {
+    "name": "Maed\u0027s Experiment",
+    "parent": "Alcadno and the Missing Alchemist",
+    "descriptions": {
+      "notStarted": "The missing alchemist from Alcadno who caused that terrible explosion... He must have done some significant research and experiments. The only person that is still aware of his work seems to be the president of Alcadno, #bMaed#k...",
+      "inProgress": "#p2111001#, the head of Alcadno Society, told me if I wanted to know more about the missing alchemist, then I\u0027ll have to prove him my worth by destroying #r#o7110301##k.\\n\\n#o7110301# #r#a33151##k ",
+      "completed": "As ordered by #p2111001#, I was able to destroy all the #o7110301#s. Now, maybe he\u0027ll share a secret or two about the missing alchemist..."
+    },
+    "area": 44,
+    "order": 1,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111001,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3314,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111001,
+      "monsters": [
+        {
+          "monsterId": 7110301,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7000
+    }
+  }
+}

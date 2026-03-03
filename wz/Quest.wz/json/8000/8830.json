@@ -1,0 +1,49 @@
+{
+  "questId": 8830,
+  "info": {
+    "name": "Festival of Lights - Blessing the Festival ",
+    "parent": "Festival of Lights",
+    "descriptions": {
+      "notStarted": "I promised Hannah I\u0027d return to her once I was rested up. I should head back soon.",
+      "inProgress": "Upon my return, Hannah was joyous, having finished the Altar. She now needs candles to signal the start of the ceremony. I\u0027ll have to get 9 candles (she mentioned Horned Mushrooms) and bring them back so the Festival of Lights can begin. ",
+      "completed": "I acquired the nine candles and gave them to Hannah. The Festival of Lights has begun!"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201031,
+      "repeatIntervalMinutes": 1440,
+      "endDate": "2010010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 28331,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201031,
+      "items": [
+        {
+          "itemId": 4031444,
+          "count": 9
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031444,
+          "count": -9
+        },
+        {
+          "itemId": 4031521
+        }
+      ]
+    }
+  }
+}

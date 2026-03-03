@@ -1,0 +1,61 @@
+{
+  "questId": 2275,
+  "info": {
+    "name": "Tina\u0027s Proposition",
+    "descriptions": {
+      "notStarted": "Help #bTina#k with her request, then ask her to help with Blake\u0027s debut.",
+      "inProgress": "Tina needs key chains to give out to her clients. Collect the key chains and dolls from the Doll Claw Games.",
+      "completed": "You were able to get a makeup artist for the job. Deliver the good news to #bLana#k."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052122,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2274,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052122,
+      "items": [
+        {
+          "itemId": 4000542,
+          "count": 50
+        },
+        {
+          "itemId": 4000543,
+          "count": 50
+        },
+        {
+          "itemId": 4000544,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15300,
+      "items": [
+        {
+          "itemId": 4000542,
+          "count": -50
+        },
+        {
+          "itemId": 4000543,
+          "count": -50
+        },
+        {
+          "itemId": 4000544,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

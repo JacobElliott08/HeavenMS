@@ -1,0 +1,61 @@
+{
+  "questId": 4951,
+  "info": {
+    "name": "The File Thickens Part 1",
+    "parent": "The File Thickens",
+    "descriptions": {
+      "notStarted": "Agent Falcon is still hanging out in front of the Haunted House?!  Doesn\u0027t he have other ghosts to catch, myths to debunk?  Maybe I should go see if something\u0027s wrong...",
+      "inProgress": "I\u0027m starting to think that Agent Falcon spends too much time writing reports, and not enough time doing actual investigative work!  The elusive Mr. Bones turns out to be Prendergast, the former owner of this house!  Falcon wants me to find Jonas in the Haunted House, give him this Paranormal Subject Questionnaire to fill out, and return the completed form to him. ",
+      "completed": "I got my questionnarie from Jonas. Now is time for me to hand over this document to Falcon. Maybe he can go back to MBI if I hand him this?"
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201075,
+      "minLevel": 15,
+      "endDate": "2007103123",
+      "prerequisiteQuests": [
+        {
+          "questId": 4952,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4950,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201077,
+      "items": [
+        {
+          "itemId": 4031765
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031765
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100,
+      "nextQuest": 4959,
+      "items": [
+        {
+          "itemId": 4031765,
+          "count": -1
+        },
+        {
+          "itemId": 4031766
+        }
+      ]
+    }
+  }
+}

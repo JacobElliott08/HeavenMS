@@ -1,0 +1,40 @@
+{
+  "questId": 10007,
+  "info": {
+    "name": "Agent C\u0027s Intelligence Activity",
+    "descriptions": {
+      "notStarted": "I received a message from Gaga, the secret agent, regarding an order for me.  I wonder what kind of mission it is?  I feeling a bit anxious.",
+      "inProgress": "Secret Agent Gaga said once I get 5 Intelligence documents from party quests, go meet Agent C. \\n\\n#b\u003cParty Quest where Agent C is\u003e\\n- Moon Bunny\u0027s Rice Cake : Level 10 or higher\\n- First Accompaniment : Level 21 ~ Level 30\\n- Crack of Dimension : Level 35 ~ Level 50\\n- Tower of the Goddess : Level 51 ~ Level 70\\n- Lord Pirate : Level 55 ~ Level 100\\n- Romeo and Juliet : Level 71 ~ Level 85\\n- Poisonous Fog Forest : Level 45 ~ Level 55\\n\\n #kEach time I retrieve 5 Intelligence documents I will receive #bAgent C\u0027s old Receiver#k, and when I retrieve 100 Intelligence documents, I will receive #bAgent C\u0027s Titanium Titanium Receiver#k.",
+      "completed": "Secret Agent Gaga suggested that I go see Agent C at the reward map once I get 5 Intelligence documents from the party quest. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "minLevel": 10,
+      "startDate": "2009060100",
+      "endDate": "2009082600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10000,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000033,
+      "items": [
+        {
+          "itemId": 4001192,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "questId": 2256,
+  "info": {
+    "name": "Karcasa\u0027s Memory 2",
+    "parent": "About the Mushroom Castle...",
+    "descriptions": {
+      "notStarted": "You gave in to Karcasa\u0027s demands in order to find out more about the Mushroom Castle. Now, he seems like he\u0027s going to ask you for another favor! Does he even know anything about the castle?",
+      "inProgress": "How could an oasis be created with water bought from a store? Anyway, you need to give in to his demands in order to find out more about the castle, but he seems awfully suspicious.\\r\\n\\r\\n#i2022000:# #t2022000:# #c2022000# / 1\\r\\n",
+      "completed": "Is he trying to make a fool out of you?"
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101013,
+      "prerequisiteQuests": [
+        {
+          "questId": 2255,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101013,
+      "items": [
+        {
+          "itemId": 2022000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "items": [
+        {
+          "itemId": 2022000,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

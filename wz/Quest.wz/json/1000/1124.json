@@ -1,0 +1,49 @@
+{
+  "questId": 1124,
+  "info": {
+    "name": "지유르의 사랑의 증표",
+    "descriptions": {
+      "notStarted": "#t4031692#를 받으려면 지유르를 찾아가보자.",
+      "inProgress": "지유르는 나의 사랑을 증명하라면서 #b#t4000324# 40#k개를 가져오라고 했다.\\n\\n#i4000324##t4000324# #b#c4000324# / 40#k",
+      "completed": "지유르에게 사랑의 증표를 얻었다."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101001,
+      "repeatIntervalMinutes": 0,
+      "infoNumber": 1100,
+      "infoEx": [
+        null
+      ],
+      "items": [
+        {
+          "itemId": 4031692
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101001,
+      "items": [
+        {
+          "itemId": 4000324,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000324,
+          "count": -40
+        },
+        {
+          "itemId": 4031692
+        }
+      ]
+    }
+  }
+}

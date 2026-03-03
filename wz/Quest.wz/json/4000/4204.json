@@ -1,0 +1,54 @@
+{
+  "questId": 4204,
+  "info": {
+    "name": "폰라를 위한 마법의 화장품",
+    "parent": "예뻐지고 싶은 폰라",
+    "descriptions": {
+      "notStarted": "약속대로 #p9250000#에게 줄 화장품을 받으러 #b#p2012012##k에게 다시 말을 걸어봐야겠다. 지금쯤이면 비법서를 모두 썼겠지?",
+      "inProgress": "드디어 화장품을 손에 넣었다. 어서 #b#p9250000##k에게 가져다 주어야지. \\n\\n#i04031392##t04031392# #b#c04031392#/1#k",
+      "completed": "#p9250000#에게 화장품을 가져다 주었다. 하지만 화장을 한다고 그녀의 얼굴이 예뻐질까…"
+    },
+    "area": 48,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012012,
+      "minLevel": 25,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4203,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9250000,
+      "items": [
+        {
+          "itemId": 4031392
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031392
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 2150,
+      "items": [
+        {
+          "itemId": 4031392,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

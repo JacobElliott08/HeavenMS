@@ -1,0 +1,61 @@
+{
+  "questId": 3076,
+  "info": {
+    "name": "Carta\u0027s Demand",
+    "parent": "Carta the Sea Witch",
+    "descriptions": {
+      "notStarted": "At the request of #p2060006#, I went underwater to meet up with the Sea Witch, #p2060100#. Unfortunately, when I got there, she said she can\u0027t foresee the future.",
+      "inProgress": "#b#p2060100##k flat-out claimed she couldn\u0027t predict the future, but she said she can at least see what the person in question is doing right now. She also said that since the spell is really difficult to pull off, so I\u0027ll need to gather up the items if I want to find out what\u0027s in store for Gail. She requested that I get #b3 #t4031256#s#k and #b10 #t4031251#s#k from #r#o8140600##k, and #b1 #t4031253##k that can be obtained through #r#o8510000##k while it\u0027s dying. \\n\\n#t4031256# #b#c4031256##k/3\\n#t4031251# #b#c4031251##k/10\\n#t4031253# #b#c4031253##k/1",
+      "completed": "I gathered up all the items #p2060100# asked me to get."
+    },
+    "area": 33,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060100,
+      "prerequisiteQuests": [
+        {
+          "questId": 3075,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060100,
+      "items": [
+        {
+          "itemId": 4031251,
+          "count": 10
+        },
+        {
+          "itemId": 4031253
+        },
+        {
+          "itemId": 4031256,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 90000,
+      "nextQuest": 3077,
+      "items": [
+        {
+          "itemId": 4031251,
+          "count": -10
+        },
+        {
+          "itemId": 4031253,
+          "count": -1
+        },
+        {
+          "itemId": 4031256,
+          "count": -3
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "questId": 3232,
+  "info": {
+    "name": "Grandpa Clock\u0027s Crisis",
+    "parent": "A Delivery to a Lost Time",
+    "descriptions": {
+      "inProgress": "After obtaining the #b#t4031094##k by destroying the dollhouse the monster disguised as, I went down to the Lost Time to find #p2040029#. But it seemed like instead of him helping me fix the clocktower, he was about to die first, so he wanted me to take down some monsters called #bTick-Tock#k and pick up the #b#t4031098##k that they possess. I better get them before #p2040029# dies.",
+      "completed": "I got the #t4031098# from Tick Tock. I need to get this to the #p2040029# before it\u0027s too late."
+    },
+    "area": 37,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040029,
+      "minLevel": 33,
+      "prerequisiteQuests": [
+        {
+          "questId": 3231,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040029,
+      "items": [
+        {
+          "itemId": 4031098
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4000,
+      "nextQuest": 3233,
+      "items": [
+        {
+          "itemId": 4031098,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

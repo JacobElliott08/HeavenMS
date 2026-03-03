@@ -1,0 +1,58 @@
+{
+  "questId": 9140,
+  "info": {
+    "name": "추석 송편 만들기",
+    "descriptions": {
+      "notStarted": "쌀가루와 꿀, 솔잎을 메이플 운영자에게 모아가면 추석 음식인 송편을 만들어 준다고 한다.",
+      "inProgress": "송편의 재료인 쌀가루, 꿀, 솔잎을 모아가자.\\n\\n#t4031181:# #b#c4031181#/1#k\\n#t4031182:# #b#c4031182#/1#k\\n#t4031183:# #b#c4031183#/1#k",
+      "completed": "송편의 재료인 쌀가루와 꿀, 솔잎을 모아 분홍 송편을 만들었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 13,
+      "maxLevel": 25,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2008090500",
+      "endDate": "2008092600"
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 4031181
+        },
+        {
+          "itemId": 4031182
+        },
+        {
+          "itemId": 4031183
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4031181,
+          "count": -1
+        },
+        {
+          "itemId": 4031182,
+          "count": -1
+        },
+        {
+          "itemId": 4031183,
+          "count": -1
+        },
+        {
+          "itemId": 2022037
+        }
+      ]
+    }
+  }
+}

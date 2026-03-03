@@ -1,0 +1,47 @@
+{
+  "questId": 3621,
+  "info": {
+    "name": "The Wooden Hoe That Snapped",
+    "parent": "Kong Ji\u0027s Request",
+    "descriptions": {
+      "notStarted": "I heard that Kong Ji is in need of help. I should go check it out...",
+      "inProgress": "I went to visit Kong Ji again. She was sitting down, looking dejected. Her stepmom ordered her to plow the field by lunch, but her wooden hoe, which had been used for years and years, finally coudln\u0027t handle the pressure and snapped. Kong Ji felt that only a durable steel hoe can help her plow the field, so I have decided to get #t4031222# for her. I heard that I can obtain the #t4031222# by eliminating the Blins, who reside at the Black Mountain... \\n\\n#t4031222# #b#c4031222##k/1",
+      "completed": "I found a way to acquire #t4031222# through Blins at the Black Mountain, and gave them to Kong Ji, who still seemed devastated by the \u0027snapping\u0027 of the wooden hoe. Needless to say, she was ecstatic when given the steel hoe. She was thankful for my work, and went out to start weeding the garden.. Kong Ji\u0027s been through a lot; hopefully something good happens to her down the road."
+    },
+    "area": 37,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071004,
+      "prerequisiteQuests": [
+        {
+          "questId": 3620,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071004,
+      "items": [
+        {
+          "itemId": 4031222
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 17000,
+      "items": [
+        {
+          "itemId": 4031236
+        },
+        {
+          "itemId": 4031222,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

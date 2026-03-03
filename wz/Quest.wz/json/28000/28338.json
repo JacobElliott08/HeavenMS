@@ -1,0 +1,57 @@
+{
+  "questId": 28338,
+  "info": {
+    "name": "Mardi Gras Throws",
+    "descriptions": {
+      "notStarted": "Would you like to participate in #rthe Mardi Gras Festival?#k If so, please see #bGaga.#k",
+      "inProgress": "Monsters attacked the storage room and looted the Beads we were saving up for the festival, stealing everything! If you eliminate the monsters and bring me #b10 Bead Necklaces#k, I\u0027ll make you #ra Mardi Gras Feather: Green, Purple, Red#k--whichever one you want! ",
+      "completed": "You have returned with 10 Bead Necklaces that will be used in #bthe Mardi Gras Festival.#kYou can participate in this event until #rFebruary 21th, 2010.#k "
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 60,
+      "startDate": "2010021000",
+      "endDate": "2010022200"
+    },
+    "complete": {
+      "npc": 9000021,
+      "items": [
+        {
+          "itemId": 4001429,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800,
+      "items": [
+        {
+          "itemId": 4001429,
+          "count": -10
+        },
+        {
+          "itemId": 4032576,
+          "probability": 6,
+          "gender": 2
+        },
+        {
+          "itemId": 4032578,
+          "probability": 1,
+          "gender": 2
+        },
+        {
+          "itemId": 4032577,
+          "probability": 3,
+          "gender": 2
+        }
+      ]
+    }
+  }
+}

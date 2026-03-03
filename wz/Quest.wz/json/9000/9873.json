@@ -1,0 +1,41 @@
+{
+  "questId": 9873,
+  "info": {
+    "name": "수박이 먹고 싶은 밍밍부인",
+    "descriptions": {
+      "notStarted": "#b카산드라#k에게 도움이 필요하다고 하는데...",
+      "inProgress": "원두막에서 수박을 구한다면 밍밍부인에게 가져가 보자. \\n\\n#t04031701# #b#c04031701#/5#k",
+      "completed": "밍밍부인은 수박을 가져다 주었다. 너무 좋아하는 밍밍부인... 시원한 수박이 그녀에게 무척 필요했던 모양이다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 120,
+      "startDate": "2007071600",
+      "endDate": "2007082000"
+    },
+    "complete": {
+      "npc": 1012106,
+      "items": [
+        {
+          "itemId": 4031701,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4031701,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

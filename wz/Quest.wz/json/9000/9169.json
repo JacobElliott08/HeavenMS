@@ -1,0 +1,45 @@
+{
+  "questId": 9169,
+  "info": {
+    "name": "추석 상식 10. 차례상",
+    "parent": "한국의 명절 추석",
+    "descriptions": {
+      "inProgress": "차례를 지낸 제사 음식을 먹는 것을 무엇이라고 할까요?",
+      "completed": "추석에 관련된 상식 문제를 모두 풀었다. 추석에 관련된 많은 상식을 알게 되었다."
+    },
+    "area": 50,
+    "order": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2006092600",
+      "endDate": "2006101600",
+      "prerequisiteQuests": [
+        {
+          "questId": 9168,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3640,
+      "items": [
+        {
+          "itemId": 2022004,
+          "count": 10
+        },
+        {
+          "itemId": 2022005,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "questId": 3402,
+  "info": {
+    "name": "Dr. Kim\u0027s Comments : A Meeting with Chury",
+    "parent": "Dr. Kim\u0027s Comments",
+    "descriptions": {
+      "inProgress": "I met Chury at the Silo of the Omega Sector and showed him the #bBlueprint Machine#k, which contains the blueprint of the new robot, that I got from Dr. Kim. Chury wanted to show this to Hoony, so he asked me if I could show the Blueprint Machine to Hoony, as well as provide him with #b20 Space Foods#k, for he had been away at the Field for a while. Space Food, huh... I think I can find them through Barnard Gray the alien. I\u0027ll run into on the way to the Field. \\n\\n#t4000117# #b#c4000117##k/20",
+      "completed": "I met up with Chury somewhere around the Omega Sector Silo. Chury wanted me to show the Blueprint Machine to Hoony, as well as give him some food. In turn, I gave Hoony some Space Food to last him a while, and showed him the Blueprint Machine."
+    },
+    "area": 37,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050005,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3401,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050006,
+      "items": [
+        {
+          "itemId": 4000117,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031100
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 2700,
+      "nextQuest": 3403,
+      "items": [
+        {
+          "itemId": 4000117,
+          "count": -20
+        },
+        {
+          "itemId": 4031100,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "questId": 6153,
+  "info": {
+    "name": "Sayram\u0027s Skill",
+    "parent": "Song of forgotten warrior",
+    "descriptions": {
+      "inProgress": " #b#p1061012##k said the picture on the necklace points to #m910500200#, the deepest part in the entrance of the Shrine. He said that I would find the Singing Shield there.  However, he said #m910500200# would be locked so I would have to eliminate #o9500139# to get the key....Will I really get Sayram\u0027s shield there? The Insignificant Being tells me to try taking the key I already used for another world to #b#p2040052##k as well...This is getting interesting, I\u0027d better keep my weapon close! \\n\\n#i4031471##t4031471# #b#c4031471#/1#k\\n#i4031475##t4031475# #b#c4031475#/1#k",
+      "completed": " I went to  #b#p2040052##k of #b#m222020000##k to find the singing shield. While talking to the Wiz, Wiz found the skill book from the singing shield.  This WAS the great warrior Sayram\u0027s skill! I have learned a new technique! Quite unexpected but excellent nonetheless. I shall use this in battle to defeat my enemies!"
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061012,
+      "jobs": [
+        112,
+        122,
+        132
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6152,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040052,
+      "items": [
+        {
+          "itemId": 4031475
+        },
+        {
+          "itemId": 4031471
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800000,
+      "items": [
+        {
+          "itemId": 4031471,
+          "count": -1
+        },
+        {
+          "itemId": 4031475,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 1121010,
+          "masterLevel": 10
+        },
+        {
+          "skillId": 1320006,
+          "masterLevel": 10
+        },
+        {
+          "skillId": 1221011,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

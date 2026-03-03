@@ -1,0 +1,54 @@
+{
+  "questId": 6007,
+  "info": {
+    "name": "Dragon\u0027s Perfume Bottle",
+    "descriptions": {
+      "notStarted": " It\u0027s time to take my mount to another level! Let\u0027s go see #p2081000# in Leafre and see if he has any methods to improve my mount!",
+      "inProgress": " After reaching Leafre, I spoke with #p2081000#. He confirmed that he does have a way to improve my mount--by turning it into a powerful dragon! However, like most good things in life, this is not free. He\u0027s agreed to sell me the dragon\u0027s perfume for the low, discounted price of #r20 million mesos#k because it is rare. Really rare. So rare, in fact, that he still has his original stockpile. At 20 Million mesos per, I\u0027m not surprised...",
+      "completed": "After thinking it over, I gave #p2081000# 20 million mesos and got the dragon\u0027s perfume. I took a whiff, it smells like candy, chocolate, and roses...I\u0027m tempted to drink it! However, I want an awesome dragon mount, so I\u0027ll have to pass. I can\u0027t wait to ride it!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081000,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 6002,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 2270000
+        },
+        {
+          "itemId": 1902000
+        },
+        {
+          "itemId": 1902001
+        },
+        {
+          "itemId": 1902002
+        },
+        {
+          "itemId": 4031509
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -20000000,
+      "items": [
+        {
+          "itemId": 4031509
+        }
+      ]
+    }
+  }
+}

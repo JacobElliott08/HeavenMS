@@ -1,0 +1,41 @@
+{
+  "questId": 3442,
+  "info": {
+    "name": "A Chat with Nara the Tour Guide",
+    "parent": "VIP Ticket to Florina Beach",
+    "descriptions": {
+      "inProgress": "Nara said a Ripped VIP pass will not work, nor can it be re-published, but the way to leave may be easier by paying a visit to Shuri, the tour guide at Orbis.",
+      "completed": "Hmmm ... so something as simple as making a new ticket cannot be done, huh. Alright, since I\u0027m here and all, why don\u0027t I just take a crack at it til the very end?"
+    },
+    "area": 37,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040048,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3441,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031243
+        },
+        {
+          "itemId": 4031207
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2010005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500
+    }
+  }
+}

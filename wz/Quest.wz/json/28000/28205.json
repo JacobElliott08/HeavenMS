@@ -1,0 +1,51 @@
+{
+  "questId": 28205,
+  "info": {
+    "name": "Searching for the Lost Book",
+    "parent": "Lost Book",
+    "descriptions": {
+      "notStarted": "#b#@9201118:##k in #bHenesys#k wants your help in finding his #rLost Book#k. Let\u0027s go find him.",
+      "inProgress": "He says he lost the book in #b#m104040001##k and #b#m104040002##k on his way back from #bNautilus#k.\\n\\nHe says you may be able to find the #rLost Book#k if you keep hunting the monsters in the area.",
+      "completed": "#b#@9201118:##k in #bHenesys#k says to return the #rLost Book#k to #b#@1012109:##k in #bHenesys#k.Let\u0027s go see #b#@9201118:##k."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201118,
+      "prerequisiteQuests": [
+        {
+          "questId": 28204,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 9201118,
+      "items": [
+        {
+          "itemId": 4001352
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200
+    }
+  }
+}

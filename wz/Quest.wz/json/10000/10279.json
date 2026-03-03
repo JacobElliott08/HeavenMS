@@ -1,0 +1,39 @@
+{
+  "questId": 10279,
+  "info": {
+    "name": "메이플 6주년 축하해!",
+    "descriptions": {
+      "notStarted": "메이플스토리의 6번째 생일을 맞아 #b#p9010010##k를 통해 축하의 메시지를 전해 보자.",
+      "inProgress": "진심으로 메이플스토리의 6번째 생일을 진심으로 축하해 줄 마음이 생겼다면 #b#p9010010##k를 찾아가 축하 메시지를 전하도록 하자.",
+      "completed": "메이플스토리 6주년을 진심으로 축하했다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2009052800",
+      "minLevel": 26,
+      "maxLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 10275,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 10278
+        },
+        {
+          "questId": 10280
+        },
+        {
+          "questId": 10281
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10279e"
+    }
+  }
+}

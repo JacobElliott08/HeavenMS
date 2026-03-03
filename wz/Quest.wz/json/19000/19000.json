@@ -1,0 +1,27 @@
+{
+  "questId": 19000,
+  "info": {
+    "name": "Honorable Mesoranger",
+    "descriptions": {
+      "completed": "Due to your impressive performance and results in the event, you have received the #b\u003cHonorable Mesoranger\u003e#k title from the Maple Admin."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142076
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "startScript": "q19000s",
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 1142076
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "questId": 29003,
+  "info": {
+    "name": "Title Challenge - Diligent Explorer",
+    "descriptions": {
+      "notStarted": "#b#eTitle Challenge - Diligent Explorer#n\\n#kIf I log on for 3 or more consecutive hours for 27 days within the 30 day time limit, I can earn the #e#bDiligent Explorer#k#n title.  I should go see the Monk of Honor, Dalair.",
+      "inProgress": "#b#eTitle Challenge - Diligent Explorer#n\\n#k - Time Left : #Qdaylimit#Days #Qhourlimit#Hours #Qminlimit#Minutes #Qseclimit#Seconds\\n - Today\u0027s Play Count : #Dhour#Hours #Dmin#Minutes #Dsec#Seconds / #Dminhour#Hours \\n - Completed Days / Goal :  #Dcount#Days / #Ddaylimit#Days\\n                             #jgaugeDays#  #jperDays#%",
+      "completed": "#b#eTitle Challenge - Diligent Explorer#n\\n#k - Time Left : #Qdaylimit#Days #Qhourlimit#Hours #Qminlimit#Minutes #Qseclimit#Seconds\\n - Today\u0027s Play Count : #Dhour#Hours #Dmin#Minutes #Dsec#Seconds / #Dminhour#Hours \\n - Completed Days / Goal :  #Dcount#Days / #Ddaylimit#Days\\n                             #jgaugeDays#  #jperDays#%\\n\\nThe Monk of Honor, Dalair, said diligence is the first criteria of being an explorer and applauded me.  Then he gave me the \u0027#bDiligent Explorer#k\u0027 title for successfully completing the challenge."
+    },
+    "area": 51,
+    "timeLimit2": 2592000,
+    "medalItemId": 1142000
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000040,
+      "minLevel": 20,
+      "repeatIntervalMinutes": 0,
+      "items": [
+        {
+          "itemId": 1142000
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000040
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142000
+        }
+      ]
+    }
+  }
+}

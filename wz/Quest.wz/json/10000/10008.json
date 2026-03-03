@@ -1,0 +1,34 @@
+{
+  "questId": 10008,
+  "info": {
+    "name": "Information on Master M",
+    "descriptions": {
+      "notStarted": "I collected 5 Intelligence documents.  Where am I supposed to find Agent C?",
+      "inProgress": "I delivered the 5 Intelligence documents I gathered from the party quests to Agent C.  For my good work, Agent C gave me a receiver.  ",
+      "completed": "I delivered the 5 Intelligence documents I gathered from the party quests to Agent C.  For my good work, Agent C gave me a receiver.  "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000033,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2009060100",
+      "endDate": "2009082600",
+      "startScript": "q10008s",
+      "prerequisiteQuests": [
+        {
+          "questId": 10007,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4001192,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

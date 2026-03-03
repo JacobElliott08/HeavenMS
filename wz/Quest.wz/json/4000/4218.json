@@ -1,0 +1,51 @@
+{
+  "questId": 4218,
+  "info": {
+    "name": "수호대의 두 번째 임무",
+    "parent": "플로팅마켓 수호대 임무",
+    "descriptions": {
+      "notStarted": "내가 처리해야 할 수호대의 또 다른 임무가 있다고 한다. 나 없이는 제대로 되는 게 없다니까. 하하. 어쨌든 수상대장 #b#p9250012##k를 다시 찾아가봐야겠다.",
+      "inProgress": "나의 두 번째 임무는 수호대장 #b#p9250012##k에게 #r#o9420004##k이 삼킨 열쇠를 찾아다 주는 것이다. \\n\\n#i4031388##t4031388# #b#c4031388#/1#k",
+      "completed": "두 번째 임무 역시 쉽게 처리 했다. 나는 정말 멋진 수호대원이다. 하하! "
+    },
+    "area": 48,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250012,
+      "minLevel": 20,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4217,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9250012,
+      "items": [
+        {
+          "itemId": 4031388
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1820,
+      "items": [
+        {
+          "itemId": 4031388,
+          "count": -1
+        },
+        {
+          "itemId": 2022103,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

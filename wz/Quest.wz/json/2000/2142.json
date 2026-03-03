@@ -1,0 +1,64 @@
+{
+  "questId": 2142,
+  "info": {
+    "name": "Beginner Thief\u0027s Third Training Session",
+    "descriptions": {
+      "notStarted": " I\u0027m getting used to being a Thief but still need to be trained. #b#p1052001##k wants to help me...",
+      "inProgress": "#p1052001# said a Thief needs concentration and calmness. For further training, he asked me to get  #r80 #o130100#s#k. 80 #o130100#s...that\u0027s pretty many. \\n\\n#o130100# #r#a21421##k",
+      "completed": "80 #o130100#s were eliminated. It was tough. I need to be trained more...perhaps I should find a training partner."
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 2141,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052001,
+      "monsters": [
+        {
+          "monsterId": 130100,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 645,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 30
+        },
+        {
+          "itemId": 2000003,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

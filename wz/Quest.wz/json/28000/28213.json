@@ -1,0 +1,46 @@
+{
+  "questId": 28213,
+  "info": {
+    "name": "This Feather, For Some Reason, Seems To Be Related to Perion...",
+    "parent": "A Strange Burglary Case",
+    "descriptions": {
+      "notStarted": "#b#@1032104:##k in #bEllinia#k says she\u0027s not sure what the #rGolden Feather#k is.",
+      "inProgress": "Let\u0027s take the #rGolden Feather#k over to #b#@9201119:##k in #bPerion#k.",
+      "completed": "#b#@9201119:##k in #bPerion#k says there is something you need in order to identify the #rGolden Feather#k."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032104,
+      "prerequisiteQuests": [
+        {
+          "questId": 28212,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 9201119
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "questId": 2242,
+  "info": {
+    "name": "Stay Away From Strangers",
+    "descriptions": {
+      "notStarted": "Mu Young says he\u0027s met a strange man. Could it be someone who is related to the impending revival of Balrog? Let\u0027s go find Mu Young.",
+      "inProgress": "Mu Young claims that he spotted a strange man at the entrance of the Underground Temple. He has asked you to look into this and see if you can gather some information about the man. Let\u0027s investigate the strange man.",
+      "completed": "Mu Young claims that he spotted a strange man at the entrance of the Underground Temple. At the request of Mu Young, who has asked you to look into this strange man to see if you can gather some information, you began your investigation."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061014,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2235,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061016
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000
+    }
+  }
+}

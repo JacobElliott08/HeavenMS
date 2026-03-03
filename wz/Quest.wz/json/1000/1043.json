@@ -1,0 +1,54 @@
+{
+  "questId": 1043,
+  "info": {
+    "name": "Mai\u0027s Third Training",
+    "parent": "Mai\u0027s Training!",
+    "descriptions": {
+      "inProgress": "After coming back from hunting 5 Red Snails, Mai told me it\u0027s time for me to hunt even more powerful monsters. She then instructed me to hunt #r3 Slimes#k and bring back #b1 Squishy Liquid#k. \\n\\nSlime #r#a10431##k #i4000004# #t4000004# #b#c4000004# #k/1",
+      "completed": "After succesfully hunting Slimes, I obtained the Squishy Liquid and reported it to Mai."
+    },
+    "area": 20,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 12100,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1042,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 12100,
+      "items": [
+        {
+          "itemId": 4000004
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 210100,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200,
+      "nextQuest": 1044,
+      "items": [
+        {
+          "itemId": 4000004,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

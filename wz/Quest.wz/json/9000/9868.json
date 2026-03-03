@@ -1,0 +1,70 @@
+{
+  "questId": 9868,
+  "info": {
+    "name": "밍밍부인의 치료약",
+    "parent": "다정한 모험가를 찾아",
+    "descriptions": {
+      "inProgress": "#p1022007#의 부탁대로 치료약을 받으러 #p1012106#에게 왔다. 하지만 #p1012106#은 약의 재료가 모자라다며 남은 재료를 구해 달라는데... \\n\\n#t4000001#  #b#c4000001##k/15 \\n#t4000012#  #b#c4000012##k/15 \\n#t4000015#  #b#c4000015##k/15 \\n#t4000021#  #b#c4000021##k/5",
+      "completed": "#p1012106# 재료를 모두 건네주었다. 자아, 이제 약을 받으면 되겠지?"
+    },
+    "area": 50,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012106,
+      "startDate": "2007060600",
+      "endDate": "2007061800",
+      "prerequisiteQuests": [
+        {
+          "questId": 9867,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012106,
+      "items": [
+        {
+          "itemId": 4000015,
+          "count": 15
+        },
+        {
+          "itemId": 4000001,
+          "count": 15
+        },
+        {
+          "itemId": 4000012,
+          "count": 15
+        },
+        {
+          "itemId": 4000021,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 450,
+      "items": [
+        {
+          "itemId": 4000001,
+          "count": -15
+        },
+        {
+          "itemId": 4000012,
+          "count": -15
+        },
+        {
+          "itemId": 4000015,
+          "count": -15
+        },
+        {
+          "itemId": 4000021,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

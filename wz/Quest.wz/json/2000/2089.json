@@ -1,0 +1,58 @@
+{
+  "questId": 2089,
+  "info": {
+    "name": "I Need Help on My Homework!",
+    "descriptions": {
+      "notStarted": "Whenever I walk past Wing the Fairy of Ellinia, he seems to be asking for help. I wonder what it is...",
+      "inProgress": "Wing the Fairy of Ellinia seems to have a general disdain for humans. Definitely not the kind of attitude I expect from someone in need of help. He asked me if I can get him 30 tree branches, 30 squishy liquids, and 10 slime bubbles. He needs them so he can make a potion for his homework. \\n\\n#t4000003# #b#c4000003##k/30 \\n#t4000004# #b#c4000004##k/30 \\n#t4000010# #b#c4000010##k/10",
+      "completed": "I helped Wing the Fairy of Ellinia with his homework. I have no idea how that potion works, though."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032106,
+      "minLevel": 10
+    },
+    "complete": {
+      "npc": 1032106,
+      "items": [
+        {
+          "itemId": 4000010,
+          "count": 10
+        },
+        {
+          "itemId": 4000003,
+          "count": 30
+        },
+        {
+          "itemId": 4000004,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 250,
+      "items": [
+        {
+          "itemId": 4000003,
+          "count": -30
+        },
+        {
+          "itemId": 4000004,
+          "count": -30
+        },
+        {
+          "itemId": 4000010,
+          "count": -10
+        },
+        {
+          "itemId": 2000003,
+          "count": 25
+        }
+      ]
+    }
+  }
+}

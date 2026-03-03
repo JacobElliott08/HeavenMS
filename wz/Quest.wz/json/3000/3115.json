@@ -1,0 +1,41 @@
+{
+  "questId": 3115,
+  "info": {
+    "name": "A Strange Development",
+    "descriptions": {
+      "notStarted": "#b#p2012012##k of #b#m200000000##k told me she saw something strange.  What could it be? I better go see #p2012012# right now.",
+      "inProgress": "#p2012012# told me she saw a fish that resembled a huge chunk of metal crossing the water, and wanted me to find out exactly what that creature is. It was heading towards #b#m100030000##k, so I better go there right now.",
+      "completed": "There\u0027s a huge wooden entryway leading into #m100030000# which I\u0027d never seen before. It almost looks like an entryway to a fortress... I should try talking to #p1094000#, who was standing in front of me. I remember him telling me that a #bpirate #p1072008##k fort is being built here.  But for what purpose?"
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012012,
+      "minLevel": 10,
+      "endDate": "2008111100",
+      "prerequisiteQuests": [
+        {
+          "questId": 2190
+        },
+        {
+          "questId": 3246
+        },
+        {
+          "questId": 3381
+        },
+        {
+          "questId": 3713
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1094000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3500
+    }
+  }
+}

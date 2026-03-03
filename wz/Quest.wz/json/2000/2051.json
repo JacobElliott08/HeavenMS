@@ -1,0 +1,47 @@
+{
+  "questId": 2051,
+  "info": {
+    "name": "Sabitrama\u0027s Anti-Aging Medicine",
+    "descriptions": {
+      "notStarted": "I heard that Sabitrama in Sleepywood is making a new medicine...",
+      "inProgress": "I ran into #bSabitrama#k again in front of the Sleepywood hotel, the same one I helped get herbs before. This time, he said he found a place where I can get the important herb that he needed for his new medicine. He asked me if I could go into that forest and grab #bDouble-rooted Red Ginseng#k for him. The root is in two, and red ... I should remember it well and find the same one once I get to the top. The place where this may be at is #bShane#k of Ellinia ...",
+      "completed": "Thankfully I got the one that Sabitrama asked me to get, and for that, I got rewarded with a mysterious rock. And from here on out, I don\u0027t have to pay Shane everytime I go in the Forest of Patience. From what I hear, that anti-aging medicine Sabitrama is working on may be what Shane needed ... if I have time, I should go back in there ..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061005,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2050,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061005,
+      "items": [
+        {
+          "itemId": 4031032
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 25000,
+      "fame": 2,
+      "items": [
+        {
+          "itemId": 4021009
+        },
+        {
+          "itemId": 4031032,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

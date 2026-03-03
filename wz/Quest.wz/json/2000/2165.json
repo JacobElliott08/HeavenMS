@@ -1,0 +1,40 @@
+{
+  "questId": 2165,
+  "info": {
+    "name": "The Prince\u0027s Request",
+    "parent": "Whalians and The Nautilus",
+    "descriptions": {
+      "notStarted": "There\u0027s apparently a mysterious dolphin in the corridors of the  Nautilus\u0027 lower deck. Seems very strange... What would a dolphin be doing out of the water and onboard a ship?",
+      "inProgress": "The mysterious dolphin is claiming that he is actually a Whalian prince and  that he can\u0027t transform back to being a Prince because he is low on mana. Perhaps I should go find a bottle of #bmana elixir#k for the Whalian Prince?",
+      "completed": "Finally, the Whalian Prince has been replenished with mana. I thought he was just an ordinary dolphin... I mean, who would have known that he could turn out to be such a handsome prince? "
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092003,
+      "minLevel": 10
+    },
+    "complete": {
+      "npc": 1092003,
+      "items": [
+        {
+          "itemId": 2000006
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 400,
+      "nextQuest": 2166,
+      "items": [
+        {
+          "itemId": 2000006,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

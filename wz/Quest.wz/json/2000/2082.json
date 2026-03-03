@@ -1,0 +1,32 @@
+{
+  "questId": 2082,
+  "info": {
+    "name": "The Stump Horror Story",
+    "descriptions": {
+      "notStarted": "Ayan of Perion says she can\u0027t take one step out of town. I wonder why...",
+      "inProgress": "I met Ayan of Perion. Apparently, she cannot remember anything about her childhood, and she lives everyday in fear of Stumps. So scared, in fact, that she can\u0027t even dare to look at it. Accompanied by this paralyzing fear of Stumps, she cannot take one step out of Perion, and asks me to take them out for her sake. Are they really THAT scary? \\n\\n#o0130100# #r#a20821##k",
+      "completed": "I took out Stumps for the sake of Ayan in Perion. She can finally venture outside without having to worry about them!"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022007,
+      "minLevel": 10
+    },
+    "complete": {
+      "npc": 1022007,
+      "monsters": [
+        {
+          "monsterId": 130100,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

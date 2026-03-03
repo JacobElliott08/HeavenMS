@@ -1,0 +1,45 @@
+{
+  "questId": 9942,
+  "info": {
+    "name": "인형놀이",
+    "parent": "고립된 방, 고립된 소년",
+    "descriptions": {
+      "inProgress": "#p2120000#는 저택 어딘가에 있는 #p2120005#의 #b#t4031837##k을 찾아 오면 소필리아로 변신할 수 있도록 해주겠다고 말했다. 버려진 인형이 어디에 있을까...? 저택을 돌아다녀 보자.",
+      "completed": "#p2120008#에게서 #t4031837#을 구해 왔다. "
+    },
+    "area": 50,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120000,
+      "minLevel": 10,
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 9941,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120000,
+      "items": [
+        {
+          "itemId": 4031837
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4031837,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

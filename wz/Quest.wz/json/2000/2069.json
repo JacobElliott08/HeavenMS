@@ -1,0 +1,51 @@
+{
+  "questId": 2069,
+  "info": {
+    "name": "Transporting Drake\u0027s Skull",
+    "parent": "Dr. Betty\u0027s Research on Fossils",
+    "descriptions": {
+      "inProgress": "I received the #t4031151# from Anne, Dr. Betty\u0027s daughter. Now I have to deliver this carefully to Dr. Betty...",
+      "completed": "I collected some plant samples and Drake\u0027s Skull to help Dr. Betty\u0027s research on fossils. I can\u0027t wait to see the results...I\u0027ll go and see Dr. Betty, because he said he would tell me when I go back."
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012110,
+      "minLevel": 22,
+      "prerequisiteQuests": [
+        {
+          "questId": 2068,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032104,
+      "items": [
+        {
+          "itemId": 4031151
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031151
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1500,
+      "items": [
+        {
+          "itemId": 4031151,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

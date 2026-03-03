@@ -1,0 +1,52 @@
+{
+  "questId": 2084,
+  "info": {
+    "name": "Icarus and the Balloon",
+    "descriptions": {
+      "notStarted": "I wonder how Icarus\u0027s doing with the glider...maybe I should go check up on him at Kerning City.",
+      "inProgress": "Icarus had failed to create a working Hang Glider, and is now attempting to create a flying balloon on his never-ending quest for flight. This looks just as preposterous as his last attempt, but I don\u0027t think I can stop him. To make the flying balloon, he needs #b100 #t4000035#s#k and #b10 #t4031164#s#k. Hope this works...\\n\\n#t4000035# #b#c4000035##k/100\\n#t4031164# #b#c4031164##k/10",
+      "completed": "I got the materials needed for #p1052106# to make the flying balloon and realize his dream of flying. I don\u0027t know if his \"flying balloon\" will indeed fly, but there\u0027s a chance that it may indeed work. I\u0027ll check up on him around the time when the flying balloon should be ready to take flight and see if he\u0027s for real this time."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052106,
+      "minLevel": 37,
+      "prerequisiteQuests": [
+        {
+          "questId": 2083,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052106,
+      "items": [
+        {
+          "itemId": 4031164,
+          "count": 10
+        },
+        {
+          "itemId": 4000035,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 11000,
+      "items": [
+        {
+          "itemId": 4000035,
+          "count": -100
+        },
+        {
+          "itemId": 4031164,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

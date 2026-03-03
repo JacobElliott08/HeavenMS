@@ -1,0 +1,29 @@
+{
+  "questId": 10329,
+  "info": {
+    "name": "Start the Artifact Hunt",
+    "descriptions": {
+      "notStarted": "Gaga informed you that Artifact Hunt has started.",
+      "inProgress": "Gaga informed you that Artifact Hunt has started.",
+      "completed": "Gaga informed you that Artifact Hunt has started. He says a high score can earn you an awesome reward, so do your best!"
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "minLevel": 13,
+      "startDate": "2010022200",
+      "endDate": "2010030800",
+      "startScript": "q10329s",
+      "normalAutoStart": true,
+      "repeatIntervalMinutes": 43200,
+      "infoNumber": 10310,
+      "infoEx": [
+        null
+      ]
+    }
+  }
+}

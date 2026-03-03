@@ -1,0 +1,29 @@
+{
+  "questId": 3845,
+  "info": {
+    "name": "The Rumor in the Sea of Fog",
+    "descriptions": {
+      "notStarted": "Captain Hwang from Herb Town wants to tell you a creepy rumor about the Sea of Fog, located east of Herb Town. His story could be interesting. How about it, huh?",
+      "inProgress": "Captain Hwang from Herb Town tells you about the eastern route that connects Herb Town and Aqua Road. As the longest waterway in Maple World, this route passes through what is known as the #b\"Sea of Fog\"#k, located east of Mu Lung Garden. He says there is a rumor that a ghost ship sails around this Sea of Fog.\\r\\nCaptain Hwang then suggests that you look for the ghost ship. He hints that you might be able to get some information from the Dolphin Taxi.",
+      "completed": "Captain Hwang from Herb Town told you about the eastern route that connects Herb Town and Aqua Road. As the longest waterway in Maple World, this route passes through what is known as the #b\"Sea of Fog\"#k, located east of Mu Lung Garden. He says there is a rumor that a ghost ship sails around this Sea of Fog. You were instantly drawn to Captain Hwang\u0027s story and arrived in an unknown island in the Sea of Fog. You discovered the ghost ship with the help of the Dolphin Taxi, which brought you to that mysterious place."
+    },
+    "area": 44,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2092001,
+      "minLevel": 60,
+      "normalAutoStart": true,
+      "maxLevel": 80
+    },
+    "complete": {
+      "npc": 2060103
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000
+    }
+  }
+}

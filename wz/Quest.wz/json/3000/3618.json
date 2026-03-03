@@ -1,0 +1,41 @@
+{
+  "questId": 3618,
+  "info": {
+    "name": "Retrieving the Storybook : The Goblin Tale",
+    "descriptions": {
+      "notStarted": "I heard the Helios Tower Library has been ruined. I need to go check it out...",
+      "inProgress": "Wiz the Librarian seemed very concerned about the mix-up of the storybook on The Goblin Story, and he wished to get the story straight and find the storybook that actually does present the story in the right order.",
+      "completed": "Through the request from Wiz the Librarian, I have managed to straighten out the Goblin Tale and acquired the fixed storybook, afterwhich I headed back to Wiz and gave him the book."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040052,
+      "minLevel": 60
+    },
+    "complete": {
+      "npc": 2040052,
+      "items": [
+        {
+          "itemId": 4031238
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 2020012,
+          "count": 30
+        },
+        {
+          "itemId": 4031238,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

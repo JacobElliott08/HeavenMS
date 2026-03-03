@@ -1,0 +1,38 @@
+{
+  "questId": 3731,
+  "info": {
+    "name": "Identity of the Missile",
+    "parent": "Year 2215- The Bombing",
+    "descriptions": {
+      "inProgress": "Andy the Time Traveler has asked you to travel to the year 2215 to investigate the Bombed City Center and destroy the A.I. missile known as Dunas.",
+      "completed": "Andy the Time Traveler asked you to travel to the year 2215 to investigate the Bombed City Center and destroy the A.I. missile known as Dunas. To your surprised, you discovered that Dunas was an android missile that closely resembled a human. You may have succeeded in destroying Dunas, but the Bombed City Center doesn\u0027t appear to be restorable."
+    },
+    "area": 41,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082004,
+      "minLevel": 77,
+      "prerequisiteQuests": [
+        {
+          "questId": 3730,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082004,
+      "monsters": [
+        {
+          "monsterId": 8220010
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 140000
+    }
+  }
+}

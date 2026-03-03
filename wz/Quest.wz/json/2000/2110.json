@@ -1,0 +1,70 @@
+{
+  "questId": 2110,
+  "info": {
+    "name": "POLLUTED! \u003c3-Jr. Boogie\u003e",
+    "descriptions": {
+      "notStarted": "I heard there\u0027s a warning sign on monsters somewhere around The Cave of Evil Eye...",
+      "inProgress": "Eliminate the Jr. Boogie\u0027s you\u0027ll find at The Cave of Evil Eye and bring back #b10#k horns of Jr. Boogie to \"The Rememberer\" as proof... \\n\\n#t4000067# #b#c4000067##k/10",
+      "completed": "The dungeon now features strange monsters such as Jr. Boogie. Wonder if there\u0027s more coming..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1063009,
+      "minLevel": 33
+    },
+    "complete": {
+      "npc": 1061011,
+      "items": [
+        {
+          "itemId": 4000067,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "items": [
+        {
+          "itemId": 4000067,
+          "count": -10
+        },
+        {
+          "itemId": 4021000,
+          "probability": 1
+        },
+        {
+          "itemId": 4021002,
+          "probability": 1
+        },
+        {
+          "itemId": 4021003,
+          "probability": 1
+        },
+        {
+          "itemId": 4021001,
+          "probability": 1
+        },
+        {
+          "itemId": 4021004,
+          "probability": 1
+        },
+        {
+          "itemId": 4021005,
+          "probability": 1
+        },
+        {
+          "itemId": 4021006,
+          "probability": 1
+        },
+        {
+          "itemId": 4021007,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "questId": 9744,
+  "info": {
+    "name": "에스텔의 선물",
+    "descriptions": {
+      "notStarted": "화이트데이에 사탕을 받은 보답으로 #b#p1032105##k이 뭔가 선물을 하고 싶다고 한다. 선물이라면 사양할 필요 없겠지?",
+      "inProgress": "#p1032105#은 사탕에 대한 보답으로 자장면을 만들어 주겠다며 잠시만 기다려 달라고 했다. ",
+      "completed": "#p1032105#이 직접 만든 자장면을 받았다. 맛있어 보이기는 하는데... 이름이 굉장히 독특한 자장면인걸?"
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032105,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2009041000",
+      "endDate": "2009042000",
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 9671,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032105
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 2022156
+        }
+      ]
+    }
+  }
+}

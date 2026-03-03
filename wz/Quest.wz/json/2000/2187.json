@@ -1,0 +1,38 @@
+{
+  "questId": 2187,
+  "info": {
+    "name": "A Hole in The Nautilus",
+    "descriptions": {
+      "notStarted": "Code red~! There\u0027s a hole in the ship and The Nautilus is in danger!  The Nautilus\u0027 crew, Bonnie, is trying everything to stop the hole all by herself... We can\u0027t let The Nautilus sink like this! I must go and help!",
+      "inProgress": "The hole on the ship must be stopped with a solid horn. I should go and find #b50 solid horns#k before Bonnie loses all her strength.  \\n\\n#i4000073##t4000073#  #b#c4000073#/50#k",
+      "completed": "Whew, I can\u0027t believe we saved The Nautilus from sinking into the ocean. Bonnie and I saved The Nautilus!"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092001,
+      "minLevel": 30
+    },
+    "complete": {
+      "npc": 1092001,
+      "items": [
+        {
+          "itemId": 4000073,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 14000,
+      "items": [
+        {
+          "itemId": 4000073,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

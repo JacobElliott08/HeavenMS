@@ -1,0 +1,47 @@
+{
+  "questId": 28180,
+  "info": {
+    "name": "The First Encounter with Lucci",
+    "descriptions": {
+      "notStarted": "#b#@1032001:##k in #bEllinia#k says he\u0027ll help you train further. Let\u0027s talk to him.",
+      "inProgress": "He says he has additional training courses for Magicians.\\nLet\u0027s talk to #b#@9201121:##k in #bEllinia#k.",
+      "completed": "The Path of a Magician.."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "prerequisiteQuests": [
+        {
+          "questId": 2135,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 9201121
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

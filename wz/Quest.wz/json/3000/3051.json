@@ -1,0 +1,47 @@
+{
+  "questId": 3051,
+  "info": {
+    "name": "Lisa\u0027s Letter of Recommendation",
+    "parent": "Scadur\u0027s New Fur Coat",
+    "descriptions": {
+      "notStarted": "I should go see Lisa of Orbis.",
+      "inProgress": "I\u0027ve decided to go see Scadur of El Nath with the help of Lisa.",
+      "completed": "He said he needed my help in order to make a new fur coat."
+    },
+    "area": 33,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012012,
+      "minLevel": 60
+    },
+    "complete": {
+      "npc": 2020007,
+      "items": [
+        {
+          "itemId": 4031204
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031204
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1000,
+      "nextQuest": 3052,
+      "items": [
+        {
+          "itemId": 4031204,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

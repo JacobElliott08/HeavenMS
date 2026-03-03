@@ -1,0 +1,38 @@
+{
+  "questId": 4933,
+  "info": {
+    "name": "Cody\u0027s Confession",
+    "descriptions": {
+      "notStarted": "a",
+      "inProgress": "b",
+      "completed": "c"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9200000,
+      "minLevel": 35,
+      "endDate": "2005050505",
+      "prerequisiteQuests": [
+        {
+          "questId": 4928,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9200000,
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    }
+  }
+}

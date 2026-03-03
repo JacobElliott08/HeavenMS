@@ -1,0 +1,34 @@
+{
+  "questId": 10346,
+  "info": {
+    "name": "Faint Aran Memories",
+    "descriptions": {
+      "notStarted": "Memories about Aran are slowly fading from people\u0027s consciousness…but you don’t want to give up, and that\u0027s why you should go see #bCassandra#k.",
+      "inProgress": "Cassandra instructs you to collect Faint Aran Memories.",
+      "completed": "You think you\u0027re about halfway there…"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2009010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 10345,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10346e",
+      "items": [
+        {
+          "itemId": 4032368,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

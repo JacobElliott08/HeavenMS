@@ -1,0 +1,65 @@
+{
+  "questId": 2128,
+  "info": {
+    "name": "Beginner Warrior\u0027s First Training Session",
+    "descriptions": {
+      "notStarted": "I became a Warrior! Have no idea at all what to do. Let\u0027s get help from former Warrior trainer #b#p1022000##k.",
+      "inProgress": "#p1022000# suggests to hunt monster as a basic training. He told me to beat #r#o0130100# 20#k. #o0130100# lives in #m102000000# town so he said it\u0027s easy to find them.\\n\\n#o0130100# #r#a21281##k",
+      "completed": "I beat off 20 #o0130100# and reported to #p1022000#..simple eh?"
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1022000,
+      "monsters": [
+        {
+          "monsterId": 130100,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 590,
+      "items": [
+        {
+          "itemId": 2000000,
+          "count": 30
+        },
+        {
+          "itemId": 2000003,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

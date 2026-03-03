@@ -1,0 +1,44 @@
+{
+  "questId": 4305,
+  "info": {
+    "name": "Eliminating Dark Cloud Fox",
+    "descriptions": {
+      "notStarted": "The \u0027best-dressed\u0027 lady of #b#m800000000##k, #b#p9120001##k, seems to be perturbed at something...",
+      "inProgress": "I found #p9120001# enraged - it appears her newly-purchased fabric was destroyed by a pack of #o9400004#es. For someone as vain as she is, this is devastating. As a result, I promised her to eliminate #b80 #o9400004#es#k for her.The things I do for friends... \\n\\n#o9400004# #r#a43051##k ",
+      "completed": "#p9120001# seemed thankful for me eliminating 100 #o9400004#s. She must have bought some new fabric already."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120001,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 4304,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120001,
+      "monsters": [
+        {
+          "monsterId": 9400004,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10500,
+      "items": [
+        {
+          "itemId": 2022024,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

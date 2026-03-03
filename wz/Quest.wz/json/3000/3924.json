@@ -1,0 +1,34 @@
+{
+  "questId": 3924,
+  "info": {
+    "name": "Sirin Speaks",
+    "parent": "Sand Bandits and Red Scorpions",
+    "descriptions": {
+      "notStarted": "Apparently #p2101012# of #b#m260010400##k is in a very angry mood. Why would he be, when I just got him the ring? What\u0027s going on?",
+      "inProgress": "#p2101012# said that he hid the treasure behind a rock, and someone apparently took it from him. According to him, the person responsible for this is #p2101000# the dancer. I better go talk to him.",
+      "completed": "It does seem like #p2101000# took it, but... something doesn\u0027t sound right. Ehhh?"
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101012,
+      "minLevel": 27,
+      "prerequisiteQuests": [
+        {
+          "questId": 3923,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200
+    }
+  }
+}

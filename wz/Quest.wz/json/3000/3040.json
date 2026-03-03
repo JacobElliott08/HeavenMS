@@ -1,0 +1,46 @@
+{
+  "questId": 3040,
+  "info": {
+    "name": "A Request from Sergeant Bravo",
+    "parent": "Alpha Platoon\u0027s Network of Communication",
+    "descriptions": {
+      "inProgress": "I found Sergeant Bravo at the snowfield, and he asked me to get him #b2 refined #t4011003#s#k while giving me an item which is to be given to Master Sergeant Fox.",
+      "completed": "I brought two Adamantium to Sergeant Bravo. He seems to give something to Master Sergeant Fox...."
+    },
+    "area": 33,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030001,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 3001,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030001,
+      "items": [
+        {
+          "itemId": 4011003,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "nextQuest": 3002,
+      "items": [
+        {
+          "itemId": 4011003,
+          "count": -2
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "questId": 3218,
+  "info": {
+    "name": "Roly-Poly 8",
+    "parent": "Just Another Day at Work",
+    "descriptions": {
+      "inProgress": "I found Roly-Poly 8 working hard, so I took a picture of him with the camera that #p2040015# gave me.",
+      "completed": "I found Roly-Poly 9 at the 7th floor of Eos Tower working hard, so I took a picture of him with the camera that #p2040015# gave me."
+    },
+    "area": 37,
+    "order": 9
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040011,
+      "prerequisiteQuests": [
+        {
+          "questId": 3217,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040012,
+      "items": [
+        {
+          "itemId": 4031086
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031086
+        },
+        {
+          "itemId": 4031078
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 750,
+      "nextQuest": 3219,
+      "items": [
+        {
+          "itemId": 4031086,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

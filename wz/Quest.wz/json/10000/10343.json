@@ -1,0 +1,27 @@
+{
+  "questId": 10343,
+  "info": {
+    "name": "Cassandra\u0027s Album",
+    "descriptions": {
+      "notStarted": "Cassandra seems to be greatly distressed. You wonder what\u0027s going on…",
+      "inProgress": "Cassandra is panicking because her album is missing, and it may have to do with Gaga. You…need to find all 12 Aran Memory Fragments, but…you should help Cassandra out first, right? If you keep hunting monsters for dropped items, you should find the album sooner or later.",
+      "completed": "For bringing back Cassandra\u0027s album, you received another Aran Memory Fragment."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2009010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 10342,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000066
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "questId": 29009,
+  "info": {
+    "name": "Mu Lung Explorer",
+    "descriptions": {
+      "notStarted": "You can earn the #b\u003cMu Lung Explorer\u003e#k title by exploring the Mu Lung Garden.",
+      "inProgress": "#b#eTitle -Mu Lung Explorer#k#n\\r\\nExplore the 10 main regions of Mu Lung Garden.\\r\\n#b● Status : #R27014# / 10 Completed.",
+      "completed": "You have earned the #b\u003cMu Lung Explorer\u003e#k title for exploring various places in Mu Lung Garden."
+    },
+    "area": 51,
+    "medalItemId": 1142116
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 30,
+      "npc": 9000066
+    },
+    "complete": {
+      "npc": 9000040,
+      "infoNumber": 27014,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142116
+        }
+      ]
+    }
+  }
+}

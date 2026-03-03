@@ -1,0 +1,41 @@
+{
+  "questId": 10354,
+  "info": {
+    "name": "To Whom Should Cassandra\u0027s Album Go?",
+    "descriptions": {
+      "notStarted": "You\u0027ve been busy digging up artifacts.",
+      "inProgress": "That\u0027s when you found Cassandra\u0027s album. Hmm, should you give this to Cassandra or to Gaga?",
+      "completed": "You returned the album to Cassandra, and she gave you an Aran Memory Fragment."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9040000,
+      "endDate": "2009010100",
+      "startScript": "q10354s",
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 10356
+        },
+        {
+          "questId": 10355
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4001316
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000066,
+      "infoNumber": 10354,
+      "infoEx": [
+        null
+      ]
+    }
+  }
+}

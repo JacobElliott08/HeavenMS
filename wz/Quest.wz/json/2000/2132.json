@@ -1,0 +1,61 @@
+{
+  "questId": 2132,
+  "info": {
+    "name": "Beginner Magician\u0027s First Training Session",
+    "descriptions": {
+      "notStarted": "I became a Magician! Have no idea at all what to do. Let\u0027s get help from my former Magician trainer #b#p1032001##k.",
+      "inProgress": "#p1032001# suggests to hunt monster as basic training. He told me to beat #r8 #o0210100##k. He told me that #o0210100# can be easily found in town #m101000000# .. \\n\\n#o0210100# #r#a21321##k",
+      "completed": "I beat off 8 #o0210100# and reported to #p1032001#. Simple, eh?"
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "monsters": [
+        {
+          "monsterId": 210100,
+          "count": 8
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 290,
+      "items": [
+        {
+          "itemId": 2000000,
+          "count": 30
+        },
+        {
+          "itemId": 2000003,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

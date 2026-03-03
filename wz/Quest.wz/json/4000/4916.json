@@ -1,0 +1,43 @@
+{
+  "questId": 4916,
+  "info": {
+    "name": "Lost!",
+    "descriptions": {
+      "notStarted": "There\u0027s a mysterious traveler in New Leaf City-he doesn\u0027t look like he\u0027s from anywhere around here. I should ask him what\u0027s going on. It could be interesting...",
+      "inProgress": "I spoke with Elpam Gorlab, and he\u0027s a traveler from Versal, the mirror-world of MapleStory. He traveled here to observe us and our celebration, but due to the appearance of Amoria, he was thrown off-course and landed in New Leaf City. I\u0027ve agreed to help get him home by collecting #b30 Elpam Magnets#k. He\u0027s mentioned that the only creatures that have them here are the Barnard Grays. I\u0027ll have to head to Omega Sector and track them down. I didn\u0027t know that there was a mirror-world...I wonder if I have a double there...",
+      "completed": "I got the #b30 Elpam Magnets#k and returned them to Elpam. In return, he gave me an Elpam Elixir, something that\u0027s sure to help me. It looks like he needs more help though..."
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201055,
+      "minLevel": 40
+    },
+    "complete": {
+      "npc": 9201055,
+      "items": [
+        {
+          "itemId": 4031674,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8500,
+      "fame": 2,
+      "items": [
+        {
+          "itemId": 2002015,
+          "count": 7
+        },
+        {
+          "itemId": 4031674,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

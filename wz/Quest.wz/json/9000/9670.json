@@ -1,0 +1,57 @@
+{
+  "questId": 9670,
+  "info": {
+    "name": "Cody\u0027s Valentine",
+    "descriptions": {
+      "notStarted": "I heard Cody was acting like he\u0027s madly in love. I better go see for it myself.",
+      "inProgress": "#p9200000# seemed to have a big-time crush on Maya, and wanted to surprise her with a Valentine\u0027s day gift. Since he couldn\u0027t go anywhere, he asked me if I could deliver chocolate for him, so I obliged. No one\u0027s better at making chocolate Cookers.\\n\\n#t04140100# #b#c04140100#/1#k",
+      "completed": "On behalf of Cody, I gave Maya the #b#t04140100##k. She seemed very much ecstatic. Hopefully this is the start of something good..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9200000,
+      "minLevel": 8,
+      "startDate": "2009012100",
+      "endDate": "2009022423"
+    },
+    "complete": {
+      "npc": 1012101,
+      "items": [
+        {
+          "itemId": 4140100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1500,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4140100,
+          "count": -1
+        },
+        {
+          "itemId": 2020028,
+          "count": 5,
+          "probability": 1
+        },
+        {
+          "itemId": 2020022,
+          "probability": 1
+        },
+        {
+          "itemId": 2020023,
+          "probability": 1
+        },
+        {
+          "itemId": 4140200,
+          "probability": 1000
+        }
+      ]
+    }
+  }
+}

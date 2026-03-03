@@ -1,0 +1,98 @@
+{
+  "questId": 3235,
+  "info": {
+    "name": "The Clock Workers\u0027 Batteries",
+    "descriptions": {
+      "notStarted": "I should check on #p2040029#, who is working hard at the Lost Time.",
+      "inProgress": "I met up with #p2040029# deep inside the abandoned time of Ludibrium. #p2040029# admitted since he\u0027s an old fella, the spring was needed to rewind himself back to life, but the younger clock workers these days are all battery-operated, only to have some of them not have adequate batteries and thus not working the way it should be. I should collect #b200 cheap batteries#k for the sake of those clocks in need of them. \\n\\n#t4000111# #b#c4000111##k/200",
+      "completed": "I got the cheap batteries needed for the new battery-operated worker clocks. #p2040029# seemed ecstatic over the prospect of those workers finally showing life and lessening his work burden in the process. Anyway, what exactly are they doing in there...?"
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040029,
+      "minLevel": 39,
+      "prerequisiteQuests": [
+        {
+          "questId": 3234,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040029,
+      "items": [
+        {
+          "itemId": 4000111,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4000111,
+          "count": -200
+        },
+        {
+          "itemId": 1040014,
+          "jobRestriction": 1180673,
+          "gender": 0
+        },
+        {
+          "itemId": 1041004,
+          "jobRestriction": 1180673,
+          "gender": 1
+        },
+        {
+          "itemId": 1040085,
+          "jobRestriction": 2099202,
+          "gender": 0
+        },
+        {
+          "itemId": 1041085,
+          "jobRestriction": 2099202,
+          "gender": 1
+        },
+        {
+          "itemId": 1050036,
+          "jobRestriction": 4198404,
+          "gender": 0
+        },
+        {
+          "itemId": 1051024,
+          "jobRestriction": 4198404,
+          "gender": 1
+        },
+        {
+          "itemId": 1040079,
+          "jobRestriction": 8200,
+          "gender": 0
+        },
+        {
+          "itemId": 1041081,
+          "jobRestriction": 8200,
+          "gender": 1
+        },
+        {
+          "itemId": 1040083,
+          "jobRestriction": 16400,
+          "gender": 0
+        },
+        {
+          "itemId": 1041074,
+          "jobRestriction": 16400,
+          "gender": 1
+        },
+        {
+          "itemId": 1052113,
+          "jobRestriction": 32800
+        }
+      ]
+    }
+  }
+}

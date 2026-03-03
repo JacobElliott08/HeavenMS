@@ -1,0 +1,37 @@
+{
+  "questId": 21201,
+  "info": {
+    "name": "The Mirror of Desire",
+    "descriptions": {
+      "notStarted": "The polearm introduces itself as Maha and demands that you remember him. What are you supposed to do? You\u0027d better consult #b#p1201000##k about this.",
+      "inProgress": "#p1201000# states that the voice is really #p1201001#\u0027s voice, and that you need to remember something about #p1201001# to appease him. If you head west of #b#m140000000# to #m140030000##k, you\u0027ll find the Mirror of Desire, which has the power to display whatever you desire. Maybe you should check it.",
+      "completed": "You were able to faintly encounter your past through the mirror. You saw the time you first got your polearm. When you mentioned the story, #p1201002# seemed relieved. Thanks to #p1201002#\u0027s help, you were able to recover some of your dormant abilities."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201000,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 21200,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100
+      ]
+    },
+    "complete": {
+      "npc": 1201002,
+      "endScript": "q21201e",
+      "prerequisiteQuests": [
+        {
+          "questId": 21202,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  }
+}

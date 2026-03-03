@@ -1,0 +1,35 @@
+{
+  "questId": 10063,
+  "info": {
+    "name": "사진첩이 필요해1",
+    "parent": "조이의 정체",
+    "descriptions": {
+      "notStarted": "조이란 이름으로는 알 수 없다고? 그럼 어떻게 해야하지?",
+      "inProgress": "조이라는 인형이 너무 많아서 이름 만으로는 찾을 수 없다고 한다. 루드밀라의 사진첩에 사진이 있으니 그것을 보면 알 수 있다고 한다. #b루드밀라#k에게 가보자",
+      "completed": "루드밀라는 내가 한가해 보인다고 한다."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120005,
+      "startDate": "2008101600",
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10062,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50
+    }
+  }
+}

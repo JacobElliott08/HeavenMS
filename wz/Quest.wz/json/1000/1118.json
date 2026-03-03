@@ -1,0 +1,49 @@
+{
+  "questId": 1118,
+  "info": {
+    "name": "넬라의 사랑의 증표",
+    "descriptions": {
+      "notStarted": "#t4031686#를 받으려면 넬라를 찾아가보자.",
+      "inProgress": "넬라는 나의 사랑을 증명하라면서 #b#t4000015# 40#k개를 가져오라고 했다.\\n\\n#i4000015##t4000015# #b#c4000015# / 40#k",
+      "completed": "넬라에게 사랑의 증표를 얻었다."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052103,
+      "repeatIntervalMinutes": 0,
+      "infoNumber": 1100,
+      "infoEx": [
+        null
+      ],
+      "items": [
+        {
+          "itemId": 4031686
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052103,
+      "items": [
+        {
+          "itemId": 4000015,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000015,
+          "count": -40
+        },
+        {
+          "itemId": 4031686
+        }
+      ]
+    }
+  }
+}

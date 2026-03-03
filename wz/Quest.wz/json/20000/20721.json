@@ -1,0 +1,73 @@
+{
+  "questId": 20721,
+  "info": {
+    "name": "Mission in Perion",
+    "descriptions": {
+      "notStarted": "#b#p1101002##k told me there\u0027s an item that I\u0027ll need to deliver that is crucial to this upcoming assignment.",
+      "inProgress": "#p1101002# wound up giving me #t4032145#. He told me I\u0027ll soon discover the reason for the item and asked me to deliver #t4032145# to #bAgent #p1103004##k of #b#m102000000##k.",
+      "completed": "I wound up giving #t4032145# to #p1103004#."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 20720,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1103004,
+      "items": [
+        {
+          "itemId": 4032145
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032145
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 600,
+      "items": [
+        {
+          "itemId": 4032145,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "questId": 3832,
+  "info": {
+    "name": "Do Gong\u0027s Test",
+    "descriptions": {
+      "notStarted": "The Head Mental Trainer of #b#m250000000##k, #b#p2091001##k, wants to test the students willing to become the Master...",
+      "inProgress": "To test out the skills the students have accumulated over time, #p2091001# told us to defeat both #r#o5120506##k and #r#o6130209##k. #o5120506# and #o6130209# have both mastered the art of casting spells, becoming close to Masters themselves. They may be hard to handle...\\n\\n#o5120506#  #r#a38321##k \\n#o6130209#  #r#a38322##k",
+      "completed": "After defeating 100 #o5120506#s and 100 #o6130209#s, #p2091001# told me I still have ways to go before becoming a true Master..."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091001,
+      "minLevel": 65,
+      "startDate": "2007061800",
+      "prerequisiteQuests": [
+        {
+          "questId": 3804,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091001,
+      "monsters": [
+        {
+          "monsterId": 5120506,
+          "count": 100
+        },
+        {
+          "monsterId": 6130209,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 64800,
+      "items": [
+        {
+          "itemId": 2020012,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "questId": 8073,
+  "info": {
+    "name": "2nd Code",
+    "parent": "A Puzzling Code",
+    "descriptions": {
+      "notStarted": "After solving the code, I found out there\u0027s a clue in Sleepywood! I better go there immediately.",
+      "inProgress": "Based on the bizarre-looking statue in Sleepywood, I was enable to find another code. What would this code imply?",
+      "completed": "After solving the code written on the bizarre-looking statue, I headed over to a small grave."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061006,
+      "minLevel": 69,
+      "prerequisiteQuests": [
+        {
+          "questId": 8072,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030004
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "nextQuest": 8074
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "questId": 10344,
+  "info": {
+    "name": "Dim Aran Memories",
+    "descriptions": {
+      "notStarted": "For questions about Aran, you\u0027d better go talk to #bCassandra#k.",
+      "inProgress": "She says if you want to know more, then you must collect Dim Aran Memories.",
+      "completed": "You got another Aran Memory Fragment. What will happen when you gather all 12 of them?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2009010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 10343,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10344e",
+      "items": [
+        {
+          "itemId": 4032367,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

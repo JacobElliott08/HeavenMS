@@ -1,0 +1,34 @@
+{
+  "questId": 9499,
+  "info": {
+    "name": "손연주의 대만소개",
+    "descriptions": {
+      "notStarted": "대만을 소개해주기로 한 #b#p9330005##k에게 다시 말을 걸어보자.",
+      "inProgress": "#b#p9330005##k의 친구 #b#p9330004##k을 만나보자.",
+      "completed": "#b#p9330004##k을 만났다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9330005,
+      "minLevel": 10,
+      "startDate": "2006101600",
+      "endDate": "2006110100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9498,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9330004
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100
+    }
+  }
+}

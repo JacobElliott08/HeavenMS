@@ -1,0 +1,40 @@
+{
+  "questId": 10330,
+  "info": {
+    "name": "Challenge! Honorable Mesoranger",
+    "descriptions": {
+      "notStarted": "Dr. Kim at the Omega Sector HQ is holding a Physical Fitness Event! Check the #bEvent Schedule on the website#k to see what time the event will occur on your world.",
+      "inProgress": "Transform into an Alien Gray and go to the top of the Henesys Pet-Walking Road after you answer the agents\u0027 questions. The Maple Admin will tell you which agents you need to meet.",
+      "completed": "You have completed Dr. Kim\u0027s Omega Physical Fitness Footrace."
+    },
+    "area": 50,
+    "timeLimit": 1800
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000061,
+      "repeatIntervalMinutes": 0,
+      "minLevel": 10,
+      "endDate": "2009071600",
+      "items": [
+        {
+          "itemId": 1142123
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000062,
+      "endScript": "q10330e",
+      "infoNumber": 10330,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "buffItemId": 2210034,
+      "info": "000"
+    }
+  }
+}

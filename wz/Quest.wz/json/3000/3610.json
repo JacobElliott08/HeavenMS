@@ -1,0 +1,44 @@
+{
+  "questId": 3610,
+  "info": {
+    "name": "Preparing to Eliminate Goblins",
+    "parent": "Goblin at Black Mountain",
+    "descriptions": {
+      "notStarted": "Apparently, Chumji, who is the landlord of the Korean Folk Town, have a request for me.",
+      "inProgress": "Chumji, who resides in Korean Folk Town, requested that I take out the Goblins who have been appearing at the mountain. The Goblins that have appeared at the Black Mountain are the goblins that have run away from the storybook on the Goblin Story, and they have been hiding out at an abandoned home. In order to draw them out of the seclusion, he told me I needed three different types of baits: #b#t2022050#, #t2022051#, #t2022052##k. I\u0027ll need to move around town and gather those items up. and then return to Chumji.\\n\\n#t2022050# #b#c2022050##k/1\\n#t2022051# #b#c2022051##k/1\\n#t2022052# #b#c2022052##k/1",
+      "completed": "Chumji, who requested that I eliminate the Goblins that have run away from the storybook on Goblin Story and are currently hiding at an abandoned house in a mountain, told me that in order to draw them out, I\u0027ll need to have three things that they love : buckwheat paste, roasted pork, and rice wine, and he wanted me to gather them up for him. In the end, I was able to do so with help from Kong Ji, Hongbu, and Chil Nam."
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071000,
+      "minLevel": 60
+    },
+    "complete": {
+      "npc": 2071000,
+      "items": [
+        {
+          "itemId": 2022050
+        },
+        {
+          "itemId": 2022051
+        },
+        {
+          "itemId": 2022052
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2071000,
+      "minLevel": 60
+    },
+    "onComplete": {
+      "experience": 30000,
+      "nextQuest": 3611
+    }
+  }
+}

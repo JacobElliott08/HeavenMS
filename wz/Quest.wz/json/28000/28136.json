@@ -1,0 +1,63 @@
+{
+  "questId": 28136,
+  "info": {
+    "name": "The Wandering Alchemist Eurek\u0027s New Skill",
+    "descriptions": {
+      "notStarted": "I hear that #b#p2040050##k over in Sleepywood is working on a way to scroll items without equipping them.  I should go see Eurek and see how far along his research is--maybe I can learn how to do it!",
+      "inProgress": " I spoke with Eurek and he\u0027s perfected his method for scrolling unequipped items. I\u0027ve agreed to gather some materials for him for a trip he\u0027s taking. I\u0027ll need to get #b#p2040050##k everything he needs: \\n\\n#t1302013#  #b#c1302013#/1#k\\n#t2043000#  #b#c2043000#/1#k\\n#t2040000#  #b#c2040000#/1#k\\n#t2040400#  #b#c2040400#/1#k\\n#t2040600#  #b#c2040600#/1#k\\n#b1,000,000 mesos. I can\u0027t wait for him to show me how to perform this new skill!",
+      "completed": "I returned with the materials that #b#p2040050##k asked for and learned how to use scrolls on unequipped items! Eurek also mentioned that in his travels, he\u0027d heard rumors of a powerful monster residing somewhere in Leafre--even stronger than Zakum."
+    },
+    "area": 30,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040050,
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 6000,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 2040050
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "skills": [
+        {
+          "skillId": 10001003,
+          "skillLevel": 1,
+          "masterLevel": 1
+        }
+      ]
+    }
+  }
+}

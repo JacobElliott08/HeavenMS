@@ -1,0 +1,74 @@
+{
+  "questId": 3224,
+  "info": {
+    "name": "Helping Fix Eos Tower",
+    "descriptions": {
+      "notStarted": "I should go check out Roly-Poly 8 at Eos Tower",
+      "inProgress": "I met up with Roly-Poly 8 again at Eos Tower. He seemed worried that there\u0027s a lot of places to fix at Eos Tower, only to have the monsters stop him from doing so. He asked if I could take out #b25 #o3230103#es#k and collect #b20 Plastic Crowns#k in the process. I can do this... \\n\\n#o3230103# #r#a32241##k\\n#t4000100# #b#c4000100##k/20",
+      "completed": "I took out a bunch of #o3230103#s and collected #c4000100#s just the way the Roly-Poly 8 of Eos Tower asked. How long is this maintenance job going to last anyway? This should get done soon so I don\u0027t have to do them any more favors."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040011,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 3220,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040011,
+      "items": [
+        {
+          "itemId": 4000100,
+          "count": 20
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 3230103,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8600,
+      "items": [
+        {
+          "itemId": 1082002,
+          "jobRestriction": 1180673
+        },
+        {
+          "itemId": 1082035,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 1082055,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 1082069,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 1082047,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 1082192,
+          "jobRestriction": 32800
+        },
+        {
+          "itemId": 4000100,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

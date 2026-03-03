@@ -1,0 +1,43 @@
+{
+  "questId": 2169,
+  "info": {
+    "name": "The Large Pearl",
+    "descriptions": {
+      "notStarted": "Apparently Sharyl, the Prince of Whales has yet another problem. Should I go find out what it is?",
+      "inProgress": "Sharyl, the Prince of Whales claims that he had left a #bMother of Pearl#k in The Nautilus\u0027 #bGenerator Room#k a long time ago. He thinks that there must be a #bLarge Pearl#k in there by now, and wants me to go get the pearl to take to Kyrin. I wonder why Sharyl, the Prince of Whales wants to give the pearl to Kyrin?  Anyway, I should remember to beware of #bMuirhat#k while I\u0027m on my way. The Prince warned me to watch out!  \\n\\n#i4031843##t4031843# #b#c4031843##k / 1",
+      "completed": "Just as I am about to enter the Captain\u0027s cabin, Muirhat appears and stands in front of the door, blocking my way. He says that Sharyl, the Prince of Whales must give up hope, and wants me to hand over the pearl! Then he tells me to comfort Sharyl, the Prince of Whales if I see him again... Stay strong, dear Sharyl, the Prince of Whales. "
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092003,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 2168,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092007,
+      "items": [
+        {
+          "itemId": 4031843
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7000,
+      "items": [
+        {
+          "itemId": 4031843,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

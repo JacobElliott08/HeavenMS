@@ -1,0 +1,40 @@
+{
+  "questId": 2071,
+  "info": {
+    "name": "Stranger\u0027s Request",
+    "parent": "Mystery of Naora Hospital",
+    "descriptions": {
+      "notStarted": "I heard there is someone in Naora Hospital in Kerning City...",
+      "inProgress": "I met #b#p1052105##k in Naora Hospital in Kerning City. #b#p1052105##k wanted to see how the surgery went, but there was no mirror. #b#p1052105##k asked me to hunt down a #bWild Boar#k and collect #b20#t4031155##k...\\n\\n#t4031155# #c4031155#/20",
+      "completed": "For the Stranger I met in Naora Hospital, I actually collected #t4031155# and brought back to her."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052105,
+      "minLevel": 25
+    },
+    "complete": {
+      "items": [
+        {
+          "itemId": 4031155,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2300,
+      "nextQuest": 2072,
+      "items": [
+        {
+          "itemId": 4031155,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

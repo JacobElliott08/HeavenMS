@@ -1,0 +1,58 @@
+{
+  "questId": 1001,
+  "info": {
+    "name": "Bringing a Mirror to Heena",
+    "parent": "Sera\u0027s Mirror",
+    "descriptions": {
+      "inProgress": "I borrowed a mirror from Sarah who was doing her laundry. I have to take this mirror to Heena.",
+      "completed": "I borrowed a mirror from Sarah, who was doing her laundry, and brought it back to Heena."
+    },
+    "area": 20,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2100,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1000,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101,
+      "items": [
+        {
+          "itemId": 4031003
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031003
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1,
+      "items": [
+        {
+          "itemId": 4031003,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

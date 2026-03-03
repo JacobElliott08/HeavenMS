@@ -1,0 +1,45 @@
+{
+  "questId": 8293,
+  "info": {
+    "name": "Happy Versalmas to You",
+    "descriptions": {
+      "notStarted": "Now that I have Little Suzy\u0027s Wishlist, I need to give it to either Maple Claws or O-Pongo.  I should go see O-Pongo in New Leaf City if I want to give it to him.  Decisions, decisions...",
+      "inProgress": "I\u0027m thinking it\u0027s Versalmas for me this year!  All I have to do now to cement my decision is to actually give Little Suzy\u0027s Wishlist to O-Pongo.  I can\u0027t wait!  It\u0027s time for a change of pace!",
+      "completed": "Looks like I\u0027m celebrating Versalmas this year!  I gave #bLittle Suzy\u0027s Wishlist#k to O-Pongo, and he gave me this awesome #bVersalmas Hat#k for me to wear proudly!  Every time I bring O-Pongo presents I\u0027ve collected from monsters, he\u0027ll reward me; I\u0027ll now be able to redeem presents to him in batches of #b10, 20, 30, 40, 60, 90, or 100#k.  I\u0027ll get different rewards at different tiers; the more presents I bring at one time, the better the rewards!  I\u0027ll need to bring him presents appropriate to my level though.\\r\\nBringing O-Pongo more presents will also help me earn #bVersalmas Cheer#k!  If the total amount of #bVersalmas Cheer#k accumulated on my world beats out the total amount of #bMaplemas Spirit#k, O-Pongo will have something really nice for me at the end of the event!"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201091,
+      "minLevel": 10,
+      "endDate": "2009012100",
+      "items": [
+        {
+          "itemId": 4031877
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201091,
+      "items": [
+        {
+          "itemId": 4031877
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031877,
+          "count": -1
+        },
+        {
+          "itemId": 1002880
+        }
+      ]
+    }
+  }
+}

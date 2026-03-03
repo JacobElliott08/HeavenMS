@@ -1,0 +1,30 @@
+{
+  "questId": 9661,
+  "info": {
+    "name": "협동하는 법:첫번째 동행",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 충고할 것이 있다는데…",
+      "inProgress": "#b#p9010010##k는 협동의 중요성에 대해 말하며, 커닝시티에 가면 그것에 대해 가르쳐 줄 사람이 있다고 말했다. 그녀는 다름 아닌 #b#p9020000##k. 그럼 커닝시티로 가볼까?",
+      "completed": "커닝시티에서 전투가 아닌 다른 방식의 싸움에 대해 배웠다. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 21,
+      "maxLevel": 30,
+      "startDate": "2007011600",
+      "endDate": "2007020500"
+    },
+    "complete": {
+      "npc": 9010010,
+      "prerequisiteQuests": [
+        {
+          "questId": 9625,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  }
+}

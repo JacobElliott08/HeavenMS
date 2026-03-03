@@ -1,0 +1,47 @@
+{
+  "questId": 3335,
+  "info": {
+    "name": "A Rose from the Snowfield",
+    "parent": "Humanoid Just Wants to be Human",
+    "descriptions": {
+      "inProgress": "#p2111003# said that the flowers on #t4031695# should be blooming, but it can\u0027t be removed unless with a warm hand of a human, and asked me if I could take one #t4031695# for him and give it to #b#p2111004##k as a gift. He said all this with a sad look on face... \\n\\nTo make #t4031695# bloom, I\u0027ll need #t4000361#, so I better get #b#t4000361##k first, then head to the place where #p2111003# planted #t4031695#. \\n\\n#i4031695##t4031695# #b#c4031695##k/1",
+      "completed": "I gave #p2111004# the #t4031695#. She seemed very surprised by the gesture, followed by a complex look on her face... Will #p2111003#\u0027s love finally bloom as well?"
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111003,
+      "minLevel": 65,
+      "prerequisiteQuests": [
+        {
+          "questId": 3334,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111004,
+      "items": [
+        {
+          "itemId": 4031695
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2111003
+    },
+    "onComplete": {
+      "experience": 67800,
+      "items": [
+        {
+          "itemId": 4031695,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "questId": 10222,
+  "info": {
+    "name": "두근두근 메이플!두근두근 나의 펫!",
+    "descriptions": {
+      "notStarted": "메이플 월드를 탐험하는 모험가들의 마음속엔 언제나 두근두근 호기심이 가득하다. 메이플 운영자가 이런 호기심에 관심이 많다고 하는데...",
+      "inProgress": "메이플 월드를 탐험하는 모험가들의 마음속엔 언제나 두근두근 호기심이 가득하다. 메이플 운영자가 이런 호기심에 관심이 많다고 하는데...",
+      "completed": "메이플 월드를 탐험하는 모험가들의 마음속엔 언제나 두근두근 호기심이 가득하다. 두근두근 넥슨! 두근두근 메이플! 그리고 두근두근한 나의 달팽이까지!"
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "startScript": "q10222s",
+      "startDate": "2009011500",
+      "endDate": "2009020500",
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 2230,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  }
+}

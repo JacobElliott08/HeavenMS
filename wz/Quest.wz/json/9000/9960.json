@@ -1,0 +1,76 @@
+{
+  "questId": 9960,
+  "info": {
+    "name": "카산드라의 새해선물",
+    "descriptions": {
+      "notStarted": "HAPPY NEW YEAR! 새해를 맞아 #b카산드라#k가 특별한 선물을 준비했다고 하는데...",
+      "inProgress": "#b카산드라#k가 준비한 선물은 뭘까~",
+      "completed": "새해를 맞아 #b카산드라#k가 1월 22일까지 접속만 해도 선물을 준다고 한다."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 13,
+      "endDate": "2009010100",
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2022006,
+          "count": 5,
+          "probability": 1
+        },
+        {
+          "itemId": 3994019,
+          "probability": 1,
+          "expirationDate": "2009012300"
+        },
+        {
+          "itemId": 3994017,
+          "probability": 1,
+          "expirationDate": "2009012300"
+        },
+        {
+          "itemId": 3994018,
+          "probability": 1,
+          "expirationDate": "2009012300"
+        },
+        {
+          "itemId": 3994020,
+          "probability": 1,
+          "expirationDate": "2009012300"
+        },
+        {
+          "itemId": 3994021,
+          "probability": 1,
+          "expirationDate": "2009012300"
+        },
+        {
+          "itemId": 3994022,
+          "probability": 1,
+          "expirationDate": "2009012300"
+        },
+        {
+          "itemId": 3994023,
+          "probability": 1,
+          "expirationDate": "2009012300"
+        },
+        {
+          "itemId": 3994024,
+          "probability": 1,
+          "expirationDate": "2009012300"
+        }
+      ]
+    }
+  }
+}

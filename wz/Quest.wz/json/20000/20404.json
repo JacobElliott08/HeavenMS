@@ -1,0 +1,57 @@
+{
+  "questId": 20404,
+  "info": {
+    "name": "The Stolen Egg",
+    "descriptions": {
+      "notStarted": "#o9001010#? Something about it seem suspicious... I better ask #b#p2081012##k, the Dragon Outcast.",
+      "inProgress": "#p2081012# told me if I wanted to find out more about #o9001010#, then I\u0027ll have to eliminate one #r#o8180000##k and one #r#o8180001##k. He wanted to leave the house, but not with those creatures out there... I better help #p2081012# out. \\n\\n#o8180000##r #a204041##k \\n#o8180001##r #a204042##k",
+      "completed": "The one responsible for stealing the dragon\u0027s egg in #m240000000# turned out to be #o9001010#. Even the name seemed quite suspicious. Maybe #p1103000# looked into #o9001010#. I better go visit #o9001010# right now. #b#o9001010#\u0027s cave is located near the dragon\u0027s nest#k."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081012,
+      "minLevel": 120,
+      "prerequisiteQuests": [
+        {
+          "questId": 20403,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 2081012,
+      "monsters": [
+        {
+          "monsterId": 8180000
+        },
+        {
+          "monsterId": 8180001
+        }
+      ]
+    }
+  }
+}

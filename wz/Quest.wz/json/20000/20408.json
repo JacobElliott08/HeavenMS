@@ -1,0 +1,47 @@
+{
+  "questId": 20408,
+  "info": {
+    "name": "Chief Knight of the Empress",
+    "descriptions": {
+      "notStarted": "I received a call from #p1101000#, the young Empress herself.",
+      "inProgress": "The young Empress thanked me for my efforts in saving Ereve and decided, through my accomplishments and past work, that I would be promoted to the position of Chief Knight. Chief Knight?",
+      "completed": "I wound up being anointed as the new Chief Knight for the Cygnus Knights. I made a promise to the Empress that the moment the Black Mage reawakens, I will be the first in line to defeat the Black Mage."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101000,
+      "minLevel": 120,
+      "startScript": "q20408s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20407,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    }
+  }
+}

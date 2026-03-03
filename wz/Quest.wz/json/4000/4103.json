@@ -1,0 +1,122 @@
+{
+  "questId": 4103,
+  "info": {
+    "name": "비밀임무",
+    "descriptions": {
+      "notStarted": "#b#p9310008##k에게 다시 말을 걸어보자.",
+      "inProgress": "#b#t4031289##k를 가지고 #b#p9310004##k을 찾아가 #r#o9600009##k를 물리치자.\\n그리고 #t4031227#을 얻었다면 #p9310008#에게 다시 돌아가보자.\\n\\n#i4031227##t4031227# #b#c4031227#/1#k",
+      "completed": "위험에 빠진 상해를 안전하게 지켜냈다."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9310008,
+      "minLevel": 45,
+      "prerequisiteQuests": [
+        {
+          "questId": 4102,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9310008,
+      "items": [
+        {
+          "itemId": 4031227
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031289
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 17500,
+      "items": [
+        {
+          "itemId": 4031227,
+          "count": -1
+        },
+        {
+          "itemId": 2040001,
+          "probability": 50
+        },
+        {
+          "itemId": 2040004,
+          "probability": 50
+        },
+        {
+          "itemId": 2040301,
+          "probability": 50
+        },
+        {
+          "itemId": 2040401,
+          "probability": 50
+        },
+        {
+          "itemId": 2040501,
+          "probability": 50
+        },
+        {
+          "itemId": 2040504,
+          "probability": 50
+        },
+        {
+          "itemId": 2040601,
+          "probability": 50
+        },
+        {
+          "itemId": 2040701,
+          "probability": 50
+        },
+        {
+          "itemId": 2040704,
+          "probability": 50
+        },
+        {
+          "itemId": 2040707,
+          "probability": 50
+        },
+        {
+          "itemId": 2040801,
+          "probability": 50
+        },
+        {
+          "itemId": 2041001,
+          "probability": 50
+        },
+        {
+          "itemId": 2041004,
+          "probability": 50
+        },
+        {
+          "itemId": 2040901,
+          "probability": 50
+        },
+        {
+          "itemId": 2040804,
+          "probability": 20
+        },
+        {
+          "itemId": 2070005,
+          "probability": 30
+        },
+        {
+          "itemId": 1032011,
+          "probability": 30
+        },
+        {
+          "itemId": 1102002,
+          "probability": 30
+        }
+      ]
+    }
+  }
+}

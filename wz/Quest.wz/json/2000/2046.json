@@ -1,0 +1,104 @@
+{
+  "questId": 2046,
+  "info": {
+    "name": "Pia\u0027s Present For a Friend",
+    "parent": "Pia\u0027s Present For a Friend",
+    "descriptions": {
+      "inProgress": "I got Rina #b1 black crystal, 1 ancient document, and 30 horns of Tauromacis#k, and in return, I got Pia\u0027s #bred cape#k back. With that and #b15 silver, 50 dragon skins, and 40 screws#k, I should go back to Pia...",
+      "completed": "I got Pia of Henesys Park all the materials she requested for her friend\u0027s claw, and in return, got myself a thief-only clothes...wow...since that was made just for me, I should take good care of these, right? Anyway, did that friend of Pia\u0027s leave by now? Who knows? I may see him sometime..."
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1010100,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2045,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1012102,
+      "items": [
+        {
+          "itemId": 4000030,
+          "count": 50
+        },
+        {
+          "itemId": 4003000,
+          "count": 40
+        },
+        {
+          "itemId": 4031043
+        },
+        {
+          "itemId": 4011004,
+          "count": 15
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031043
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 1041096,
+          "gender": 1
+        },
+        {
+          "itemId": 1061095,
+          "gender": 1
+        },
+        {
+          "itemId": 1040100,
+          "gender": 0
+        },
+        {
+          "itemId": 1060089,
+          "gender": 0
+        },
+        {
+          "itemId": 4000030,
+          "count": -50
+        },
+        {
+          "itemId": 4003000,
+          "count": -40
+        },
+        {
+          "itemId": 4031043,
+          "count": -1
+        },
+        {
+          "itemId": 4011004,
+          "count": -15
+        }
+      ]
+    }
+  }
+}

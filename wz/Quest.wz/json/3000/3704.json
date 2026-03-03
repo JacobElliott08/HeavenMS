@@ -1,0 +1,42 @@
+{
+  "questId": 3704,
+  "info": {
+    "name": "Recipe for the Medicine",
+    "descriptions": {
+      "notStarted": "I heard something happened in Leafre. I\u0027d better go talk to Pam.",
+      "inProgress": "Apparently something did happen at Leafre. I asked Pam what\u0027s up, and the concern was that the Hafrings living at the town ran into Kentauruses at the forest and were badly injured. To heal those Hafrings will require a medicine, and the #bChief Tatamo#k mentioned that #b80 #t4000241##k are required to make the medicine. I\u0027ll have to gather up #b80 #t4000241##k now for the wounded Hafrings.\\n\\n#i4000241##t4000241#  #b#c4000241##k / 80",
+      "completed": " After hearing from Pam that in order to cure the Hafrings that are wounded by Kentaurus, I\u0027ll need to gather up some grass chewed by Birks, I was able to do exactly that and gave them all to Pam."
+    },
+    "area": 41
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081004,
+      "minLevel": 85
+    },
+    "complete": {
+      "npc": 2081004,
+      "items": [
+        {
+          "itemId": 4000241,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 58000,
+      "items": [
+        {
+          "itemId": 4000241,
+          "count": -80
+        },
+        {
+          "itemId": 2050004,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

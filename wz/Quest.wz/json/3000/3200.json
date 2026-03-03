@@ -1,0 +1,42 @@
+{
+  "questId": 3200,
+  "info": {
+    "name": "Cleaning up Eos Tower",
+    "descriptions": {
+      "notStarted": "I should go see Marcel, who\u0027s in charge of the security for Eos Tower of Ludibrium.",
+      "inProgress": "Marcel of Ludibrium asked me if I could take care of huge, nasty #bratz#k, 50 of them to be exact.\\n\\n#o3110102# #r#a32001#",
+      "completed": "I took care of the #bRatz#k just like the way Marcel of Ludibrium asked me to do, but I\u0027m sure there are still quite a number of nasty monsters at Eos Tower."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041004,
+      "minLevel": 30
+    },
+    "complete": {
+      "npc": 2041004,
+      "monsters": [
+        {
+          "monsterId": 3110102,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1250,
+      "items": [
+        {
+          "itemId": 2000008,
+          "count": 50
+        },
+        {
+          "itemId": 2000010,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

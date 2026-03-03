@@ -1,0 +1,41 @@
+{
+  "questId": 8054,
+  "info": {
+    "name": "Traveling Around Maple 2",
+    "parent": "Traveling Around Maple",
+    "descriptions": {
+      "notStarted": "After soaking up the sun at Florina Beach, I should start up a conversation with Riel.",
+      "inProgress": "Riel offered to take me to Showa Town. Once I get there, she advised me to look for Skye...",
+      "completed": "I was able to meet up with Skye. Where will I go next?"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1081100,
+      "startDate": "2005010100",
+      "endDate": "2005010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 8053,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8055,
+      "items": [
+        {
+          "itemId": 2022014,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "questId": 9920,
+  "info": {
+    "name": "가면신사의 초대",
+    "descriptions": {
+      "notStarted": "메이플 월드의 많은 사람들을 알고 있는 #b#p9010010##k가 갑자기 말을 걸어 왔다. 무슨 일일까?",
+      "inProgress": "#p9010010#는 전해줄 물건이 있다며 잠시만 그녀에게 와달라고 말했다. 주변 마을로 가서 #b#p9010010##k를 만나자. ",
+      "completed": "#p9010010#에게서 #r#t2031000##k을 받았다. 할로윈 파티를 연다는 내용인 것 같다. 이름도 얼굴도 모르는 사람의 파티 초대라니. 이상한걸...?"
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "startDate": "2008101600",
+      "endDate": "2008110600",
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q9920e"
+    }
+  }
+}

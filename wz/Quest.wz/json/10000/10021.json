@@ -1,0 +1,31 @@
+{
+  "questId": 10021,
+  "info": {
+    "name": "You are a True Special Agent!",
+    "descriptions": {
+      "notStarted": "#b#p9000021##k is said to have prepared a special gift for me for saving Maple World in the summer of 2009...",
+      "inProgress": "#b#p9000021##k is said to have prepared a special gift for me for saving Maple World in the summer of 2009...",
+      "completed": "2009 summer,... I was reborn as a true agent. "
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "endDate": "2009082600"
+    },
+    "complete": {
+      "npc": 9000021
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1072368
+        }
+      ]
+    }
+  }
+}

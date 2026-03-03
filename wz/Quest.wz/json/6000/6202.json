@@ -1,0 +1,41 @@
+{
+  "questId": 6202,
+  "info": {
+    "name": "Arec and Shadower",
+    "parent": "Grief of darkness",
+    "descriptions": {
+      "inProgress": " #p9040002# said he is thankful to have me because this job is very dangerous and it hasn\u0027t gone through the appropriate approval process. A dangerous task that hasn\u0027t gone through the approval process...should he be asking me to do this? I wonder...let\u0027s go see #b#p2020011##k.",
+      "completed": " In return for the job...I received the Assassinate skill. This will definitely come in handy..."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9040002,
+      "jobs": [
+        422
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6201,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020011
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200000,
+      "skills": [
+        {
+          "skillId": 4221001,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "questId": 3229,
+  "info": {
+    "name": "Toy Soldier\u0027s Walnut",
+    "descriptions": {
+      "notStarted": "I should go see Delv the Toy Soldier, who\u0027s at Eos Tower.",
+      "inProgress": "Delv the Toy Soldier, firmly protecting the gates of the 100th floor on Eos Tower, asked me for a favor by getting him #b20 tasty walnuts#k as a way to fight the boredom of guarding the gate and doing little else. He said a black rat monster called #bDirty Ratz#k might offer up the walnuts...\\n\\n#t4031093# #b#c4031093##k/20",
+      "completed": "I got Delv the Toy Soldier, firmly protecting the gates of the 100th floor on Eos Tower, the #b20 tasty walnuts#k he requested as a way to fight the boredom of guarding the gate and doing little else. He was very thankful and asked if I could go talk to his buddy Olson next to him if I have some free time to burn."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040001,
+      "minLevel": 25
+    },
+    "complete": {
+      "npc": 2040001,
+      "items": [
+        {
+          "itemId": 4031093,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4000,
+      "items": [
+        {
+          "itemId": 4031093,
+          "count": -20
+        },
+        {
+          "itemId": 1072018,
+          "jobRestriction": 1180673
+        },
+        {
+          "itemId": 1072040,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 1072076,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 1072081,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 1072033,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 1072294,
+          "jobRestriction": 32800
+        }
+      ]
+    }
+  }
+}

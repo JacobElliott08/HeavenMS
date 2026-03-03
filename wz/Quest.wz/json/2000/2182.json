@@ -1,0 +1,45 @@
+{
+  "questId": 2182,
+  "info": {
+    "name": "Ingredients to Get for the Banquet",
+    "parent": "A Banquet for the Whalians",
+    "descriptions": {
+      "inProgress": "Of all the ingredients, I can\u0027t believe they ran out of sea horse tail... The Whalians are probably starving so I\u0027d better go get #b40 cans of sea horse tails#k from #bKenta#k and get them some food to eat. \\n\\n#i4000161##t4000161# #b#c4000161##k / 40",
+      "completed": "I\u0027ve collected 40 cans of sea horse tail. This should be enough to cook a dish, right?"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "minLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 2181,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060005,
+      "items": [
+        {
+          "itemId": 4000161,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "items": [
+        {
+          "itemId": 4000161,
+          "count": -40
+        }
+      ]
+    }
+  }
+}

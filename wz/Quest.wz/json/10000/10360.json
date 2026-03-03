@@ -1,0 +1,56 @@
+{
+  "questId": 10360,
+  "info": {
+    "name": "Aran Welcome Celebration",
+    "descriptions": {
+      "notStarted": "To commemorate the launch of Aran, Cassandra has prepared an event that has the odds of you winning at 100%!",
+      "inProgress": "In celebration of the legendary hero Aran\u0027s release, Cassandra has prepared a foolproof lottery event!",
+      "completed": "In celebration of the legendary hero Aran\u0027s release, Cassandra  prepared a huge event. #bFrom December 10th through January 19th#k, this daily event is a guaranteed win for everyone who participates!"
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 13,
+      "endDate": "2010012000",
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 3994138
+        },
+        {
+          "itemId": 3994139
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10360e",
+      "items": [
+        {
+          "itemId": 3994139
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 3994138
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 3994139,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

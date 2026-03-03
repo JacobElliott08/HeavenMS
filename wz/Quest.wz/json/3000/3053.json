@@ -1,0 +1,26 @@
+{
+  "questId": 3053,
+  "info": {
+    "name": "Moppie the Lone Dawg",
+    "descriptions": {
+      "notStarted": "I should go see Moppie, who seemed tired and weary of waiting for his master.",
+      "inProgress": "I saw Moppie in Orbis, and he seemed unresponsive to my commands. You could tell he\u0027s been waiting for his master for a long time judging from the wrinkly, dirty, unruly hair he features. I wanted to help him out, but I cannot understand whatever Moppie is uttering. I need someone as a translator so I can talk to him, but ... should I ask for a person, or a fairy?",
+      "completed": "I had no idea what Moppie was saying, so I got to ask Lisa for some help."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012019,
+      "minLevel": 30
+    },
+    "complete": {
+      "npc": 2012012
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

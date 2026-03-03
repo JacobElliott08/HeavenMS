@@ -1,0 +1,51 @@
+{
+  "questId": 3344,
+  "info": {
+    "name": "The Secrets of Magatia",
+    "parent": "Dr. De Lang\u0027s Notes",
+    "descriptions": {
+      "inProgress": "Thanks to #t4031737#, #t4161032# can now be read the way it was meant to be... The hidden message... pertains the #bhistory behind the creation of #m261000000##k. #p2020005# told me to visit him after finding out all the truth behind the note...",
+      "completed": "#m261000000#... With the secrets behind the town of alchemy about to be unveiled, I needed to see someone that is aware of its history... which means only one person. Alcaster."
+    },
+    "area": 44,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "minLevel": 75,
+      "prerequisiteQuests": [
+        {
+          "questId": 3343,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "items": [
+        {
+          "itemId": 4161033
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4161033
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 50000,
+      "items": [
+        {
+          "itemId": 4161033,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

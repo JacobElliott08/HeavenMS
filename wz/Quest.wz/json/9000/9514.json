@@ -1,0 +1,40 @@
+{
+  "questId": 9514,
+  "info": {
+    "name": "요리사 아종의 맛있는 춘권",
+    "descriptions": {
+      "notStarted": "#b#p9010000##k에게 말을 걸어보자.",
+      "inProgress": "나를 위해 맛있는 요리를 준비해 둔 대만 야시장의 #b#p9330016##k을 찾아가자.",
+      "completed": "#b#p9330016##k을 만나 맛있는 #b#t02022097##k을 받았다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 10,
+      "startDate": "2006101600",
+      "endDate": "2006110100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9513,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9330016
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 2022097,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

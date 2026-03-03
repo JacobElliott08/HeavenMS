@@ -1,0 +1,45 @@
+{
+  "questId": 3620,
+  "info": {
+    "name": "Extracting Artemesia",
+    "parent": "Kong Ji\u0027s Request",
+    "descriptions": {
+      "notStarted": "I heard that Kong Ji is in need of help. I should go check it out...",
+      "inProgress": "I went to see Kong Ji again. Kong Ji seemed swamped with work at home. Her stepmom wants some Artemesia Rice Cake, which means she had to extract #t4031231#, but she is stuck at home trying to finish the laundry before the day is over. Obviously, she has no time to extract Artemesia, and that is why she\u0027s asking for my help. I\u0027ve decided to extract some #t4031231# for poor Kong Ji. \\n\\n#t4031231# #b#c4031231##k/12",
+      "completed": "I went through the town and mountains and extracted some Artemesia for Kong Ji, who was stuck at home doing house chores. Kong Ji seemed to be stuck at home working way too hard. I better go see her again down the road."
+    },
+    "area": 37,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071004,
+      "prerequisiteQuests": [
+        {
+          "questId": 3619,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071004,
+      "items": [
+        {
+          "itemId": 4031231,
+          "count": 12
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 16000,
+      "items": [
+        {
+          "itemId": 4031231,
+          "count": -12
+        }
+      ]
+    }
+  }
+}

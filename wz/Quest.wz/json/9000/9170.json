@@ -1,0 +1,38 @@
+{
+  "questId": 9170,
+  "info": {
+    "name": "넬라의 추석",
+    "parent": "넬라의 추석",
+    "descriptions": {
+      "notStarted": "메이플 운영자가 커닝시티의 넬라에 대해 부탁할 것이 있는 것 같다.",
+      "inProgress": "메이플 운영자가 자신의 부탁을 들어줄 준비가 되면 다시 말을 걸어달라고 하였다."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "maxLevel": 25,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2007092000",
+      "endDate": "2007100800"
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 120,
+      "nextQuest": 9171,
+      "items": [
+        {
+          "itemId": 2030005,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

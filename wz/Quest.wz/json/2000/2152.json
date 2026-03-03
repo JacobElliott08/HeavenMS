@@ -1,0 +1,32 @@
+{
+  "questId": 2152,
+  "info": {
+    "name": "Truth of the Rumor-Betty",
+    "descriptions": {
+      "notStarted": "Let\u0027s ask botanist #b#p1032104##k in #m101000000# about the rumor.",
+      "inProgress": "Let\u0027s ask botanist #b#p1032104##k in #m101000000# about the rumor.",
+      "completed": "Asked Doctor #p1032104# about the rumor."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032104,
+      "startScript": "q2152s",
+      "prerequisiteQuests": [
+        {
+          "questId": 2144,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032104
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15
+    }
+  }
+}

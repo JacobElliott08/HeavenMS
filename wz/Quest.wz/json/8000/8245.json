@@ -1,0 +1,103 @@
+{
+  "questId": 8245,
+  "info": {
+    "name": "Attendance Check",
+    "descriptions": {
+      "notStarted": "So If I head over to #b#p9010000##k, then I\u0027ll be able to receive an attendance sheet? I see... so this is to check my ardent attendance to MapleStory. Sounds very intriguing...",
+      "inProgress": "#b#p9010000##k told me if I take this attendance sheet to #b#p9200000##k, then I\u0027ll be able to receive PB \u0026 J Sandwich, Chocolate Milk, Chips, Cookie, and Fruit Roll Up in return. If I continue to gather the items for 14 days, then on the 15th day, I can get a special prize!  Apparently I have to come back everyday to claim the prize!",
+      "completed": "As I was successful in checking my attendance, I received scrumptious lunch items in return. I better keep these items that I received from #p9200000# somewhere safe. \\n#p9200000# told me if I give him all the items on the 15th day, I\u0027ll get something nice as well!"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 10,
+      "startDate": "2008091100",
+      "endDate": "2008092500",
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522
+      ]
+    },
+    "complete": {
+      "npc": 9200000,
+      "items": [
+        {
+          "itemId": 4032057
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032057
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032057,
+          "count": -1
+        },
+        {
+          "itemId": 4032058
+        },
+        {
+          "itemId": 4032059
+        },
+        {
+          "itemId": 4032060
+        },
+        {
+          "itemId": 4032061
+        },
+        {
+          "itemId": 4032062
+        }
+      ]
+    }
+  }
+}

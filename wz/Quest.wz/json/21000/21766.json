@@ -1,0 +1,41 @@
+{
+  "questId": 21766,
+  "info": {
+    "name": "Suspicious John",
+    "descriptions": {
+      "notStarted": "#p1002001# has noticed that #p20000# has been acting weird lately. You\u0027d better head over to Lith Harbor and talk to #p1002001# to see what\u0027s up.",
+      "inProgress": "Apparently, #p20000# started displaying some strange behavior ever since he started carrying some wooden box with him. Your task now is to investigate the wooden box that\u0027s next to #p20000#.",
+      "completed": "As you promised to #p20000#, you did not reveal to #p1002001# that the wooden box contained medication for arthritis."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002001,
+      "startScript": "q21766s",
+      "minLevel": 13,
+      "prerequisiteQuests": [
+        {
+          "questId": 21706,
+          "state": "STARTED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1002001,
+      "endScript": "q21766e",
+      "prerequisiteQuests": [
+        {
+          "questId": 21767,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  }
+}

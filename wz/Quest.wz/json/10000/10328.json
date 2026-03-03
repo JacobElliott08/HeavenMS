@@ -1,0 +1,71 @@
+{
+  "questId": 10328,
+  "info": {
+    "name": "8 Mystical Treasures",
+    "descriptions": {
+      "notStarted": "Find the 8 Mystical Treasures. If you find 8 Mystical Treasures, you will receive a special reward.",
+      "inProgress": "If you find all 8 Mystical Treasures, Shuang will give you a special present.",
+      "completed": "You\u0027ve found all 8 Mystical Treasures and received a Mystical Artifact Discoverer Medal from Gaga."
+    },
+    "area": 50,
+    "autoStart": true,
+    "medalItemId": 1142125
+  },
+  "requirements": {
+    "start": {
+      "npc": 9040000,
+      "startDate": "2010022200",
+      "endDate": "2010030800",
+      "normalAutoStart": true,
+      "infoNumber": 10310,
+      "infoEx": [
+        null
+      ]
+    },
+    "complete": {
+      "prerequisiteQuests": [
+        {
+          "questId": 10311,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 10312,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 10313,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 10314,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 10315,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 10316,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 10317,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 10318,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142125
+        }
+      ]
+    }
+  }
+}

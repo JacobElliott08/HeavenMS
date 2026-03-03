@@ -1,0 +1,47 @@
+{
+  "questId": 28110,
+  "info": {
+    "name": "A Headache for Treasure Hunters",
+    "descriptions": {
+      "notStarted": "Lara has a new source of trouble recently. Let\u0027s visit her and find out what\u0027s troubling her.",
+      "inProgress": "Now I need to take some action. Let\u0027s show them who\u0027s boss!  For Lara! \\n\\n#o9400741# #r#a281101##k\\n#o9400742# #r#a281102# #k\\n#o9400743# #r#a281103##k",
+      "completed": "I\u0027ve done a perfect job with what Lara asked, she is now happy again! "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9220016,
+      "repeatIntervalMinutes": 60,
+      "endDate": "2007112700",
+      "items": [
+        {
+          "itemId": 5252001
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9220016,
+      "monsters": [
+        {
+          "monsterId": 9400741,
+          "count": 50
+        },
+        {
+          "monsterId": 9400742,
+          "count": 30
+        },
+        {
+          "monsterId": 9400743,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": 3000,
+      "experience": 2500
+    }
+  }
+}

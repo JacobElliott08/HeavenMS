@@ -1,0 +1,38 @@
+{
+  "questId": 21724,
+  "info": {
+    "name": "Third Assignment, Completed!",
+    "descriptions": {
+      "notStarted": "This is your third assignment as an informant and this one involves investigating the suddenly-erratic #o1140130#s in #b#m102000000##k. With the help of #p1103004#, you were able to locate the cause of the madness. The case seems to be nearing its end. You should talk to #b#p1103004##k.",
+      "inProgress": "#p1103004# says that the puppet doesn\u0027t necessarily have to be on a monster\u0027s body, it\u0027s enough just to be near a monster. She says that she will take measures to beef up security so the kid with the puppet can\u0027t get close to #m102000000# ever again. This concludes the case, and you are going to send the information to #b#p1002104##k.",
+      "completed": "You updated #p1002104# on what happened in #m102000000#, which concluded your third assignment as an informant. "
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103004,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 21723,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1002104
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 400
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "questId": 2220,
+  "info": {
+    "name": "Gathering Information Completed",
+    "descriptions": {
+      "notStarted": "You have gathered all the information from the informants. Let\u0027s give #bJM#k an update about the progress.",
+      "inProgress": "As soon as you tell JM the information you have gathered, JM turns pale. Is he surprised at the evil scheme...? JM, with an anxious look on his face, tells you to speak with #b#p9020000##k and ask about #o6220000#.",
+      "completed": "When asked about #o6220000#, #p9020000# is taken aback by the question and comes clean about the incident... about her accidentally dropping the Growth Powder in the sewer... "
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052002,
+      "prerequisiteQuests": [
+        {
+          "questId": 2216,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2217,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2218,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2219,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9020000
+    }
+  }
+}

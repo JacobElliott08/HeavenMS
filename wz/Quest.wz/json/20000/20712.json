@@ -1,0 +1,66 @@
+{
+  "questId": 20712,
+  "info": {
+    "name": "I Shall Pick \u0027Em All!",
+    "descriptions": {
+      "notStarted": "Agent #b#p1103002##k of #m103000000# had something to tell me.",
+      "inProgress": "#p1103002# said there were so many dolls with him that he couldn\u0027t tell which one was which and wound up asking #b#p9000008##k to sort out the dolls for him. My job is to go up to him and ask for the real doll from the pile.\\n\\n#i4032138# #t4032138# #b#c4032138# / 1#k",
+      "completed": "I was able to score the real #t4032138# from #p9000008# and handed it to #p1103002#."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103002,
+      "minLevel": 17,
+      "prerequisiteQuests": [
+        {
+          "questId": 20711,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1103002,
+      "items": [
+        {
+          "itemId": 4032138
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "items": [
+        {
+          "itemId": 4032138,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

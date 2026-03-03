@@ -1,0 +1,60 @@
+{
+  "questId": 6005,
+  "info": {
+    "name": "Lost Perfume",
+    "descriptions": {
+      "notStarted": "I lost #t2270000#.  I can\u0027t train the monster without it.  What should I do?  I should head back to Aqua Road and go see #b#p2060005##k. Maybe I can tell him that I met someone in Amoria and had to go on a date...",
+      "inProgress": " #p2060005# says he\u0027s heard of this phenomena of people using that perfume on dates. He doesn\u0027t understand why, it smells a lot like raw garlic and hot feet to him. Luckily, he has plenty of #t4031507# and he will make me another #t2270000# if I bring him #b#t4031509##k.\\n\\n#i4031509##t4031509# #b#c4031509#/1#k. I\u0027d better hurry back--I want my new mount!",
+      "completed": "I recieved  #t2270000# from #p2060005#. Phew...I should go train my monster now. On the way, I\u0027ll think of a better excuse if I lose the perfume again--this kinda does smell like hot feet..."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 6003,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 2270000
+        },
+        {
+          "itemId": 1902000
+        },
+        {
+          "itemId": 1902001
+        },
+        {
+          "itemId": 1902002
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060005,
+      "items": [
+        {
+          "itemId": 4031509
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4031509,
+          "count": -1
+        },
+        {
+          "itemId": 2270000
+        }
+      ]
+    }
+  }
+}

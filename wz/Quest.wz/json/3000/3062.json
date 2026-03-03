@@ -1,0 +1,60 @@
+{
+  "questId": 3062,
+  "info": {
+    "name": "Food-Hunting for Moppie III",
+    "descriptions": {
+      "notStarted": "Moppie\u0027s master, Huckle, wants to ask me for another favor...now what?",
+      "inProgress": "Huckle has little to no time outside his studies, and wanted me to get Moppie some fish again, and this time, he wants me to gather up 300 of them! \\n\\n#t4000088# #b#c4000088#/300#k",
+      "completed": "I gathered up 300 of Jr. Pepe\u0027s Fishes and got them to Moppie as a favor from Huckle, but..."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030012,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3061,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012019,
+      "items": [
+        {
+          "itemId": 4000088,
+          "count": 300
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4000088,
+          "count": -300
+        },
+        {
+          "itemId": 2040707
+        },
+        {
+          "itemId": 2120000,
+          "count": 30
+        },
+        {
+          "itemId": 4001019,
+          "count": 4
+        },
+        {
+          "itemId": 2000002,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

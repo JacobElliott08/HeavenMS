@@ -1,0 +1,43 @@
+{
+  "questId": 3645,
+  "info": {
+    "name": "What the Yellow King Goblin Wants",
+    "descriptions": {
+      "notStarted": "The Guardian Spirit says the Goblins of Kamak Mountain are the only ones that know something about the Old Fox. Go see the #bYellow King Goblin#k at #bDokebi House#k near the Haunted House.",
+      "inProgress": "The Yellow King Goblin says he will tell everything about the Old Fox only if I get him #b1 plate#k of his favorite #broasted pork#k. Let\u0027s go buy roasted pork from the Folk Town.  #k  \\n\\n#i2022050##t2022050#/1 ",
+      "completed": "The Yellow King Goblin revealed the spell the Old Fox uses."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071013,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3643,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071013,
+      "items": [
+        {
+          "itemId": 2022050
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 2022050,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

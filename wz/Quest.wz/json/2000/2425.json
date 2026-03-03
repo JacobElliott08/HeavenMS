@@ -1,0 +1,47 @@
+{
+  "questId": 2425,
+  "info": {
+    "name": "Stump\u0027s Weakness",
+    "descriptions": {
+      "notStarted": "Power B. Fore, the instructor at the training center, claims to know the weakness of Stumps. You\u0027d better go hear what he\u0027s got to say.",
+      "inProgress": "You acquired the Stump\u0027s Weakness skill. You should take advantage of the skill when hunting Stumps.\\r\\n\\r\\n#o130100# #a24251#\\r\\n",
+      "completed": "You used Stump\u0027s Weakness to effectively hunt Stumps."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052113,
+      "maxLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 2413,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422
+      ]
+    },
+    "complete": {
+      "npc": 1052113,
+      "monsters": [
+        {
+          "monsterId": 130100,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

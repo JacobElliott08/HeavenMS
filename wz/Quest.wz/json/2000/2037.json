@@ -1,0 +1,86 @@
+{
+  "questId": 2037,
+  "info": {
+    "name": "Second Material for Building a New House",
+    "parent": "Ronnie \u0026 the Fairies Building a New House.",
+    "descriptions": {
+      "notStarted": "",
+      "inProgress": "This time Ronnie wanted #b50 of octopus legs, Curse Eye tails, wild boar tooth, and the charm of the undead EACH#k. These are probably available by the monsters around the deep forest, highland, and ant tunnels. ",
+      "completed": "I got them all for Ronnie. Please don\u0027t tell me he wanted all these for free...!"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061004,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2036,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1061004,
+      "items": [
+        {
+          "itemId": 4000006,
+          "count": 50
+        },
+        {
+          "itemId": 4000008,
+          "count": 50
+        },
+        {
+          "itemId": 4000020,
+          "count": 50
+        },
+        {
+          "itemId": 4000013,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 4000006,
+          "count": -50
+        },
+        {
+          "itemId": 4000013,
+          "count": -50
+        },
+        {
+          "itemId": 4000020,
+          "count": -50
+        },
+        {
+          "itemId": 4000008,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

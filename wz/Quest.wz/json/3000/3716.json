@@ -1,0 +1,34 @@
+{
+  "questId": 3716,
+  "info": {
+    "name": "The Wanderer\u0027s Whereabouts 1",
+    "parent": "The Truth Behind that Man",
+    "descriptions": {
+      "inProgress": "#bSyras the ticket agent#k at Ariant Station claims the suspicious wanderer headed to Orbis and that you should talk to #bIsa#k at Orbis Station.",
+      "completed": "You meet Isa the station guide as Syras instructed. Isa says an absent-minded man asked her directions to Leafre. She added that he was rather strange."
+    },
+    "area": 41,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2102002,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3715,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 3717,
+      "experience": 30000
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "questId": 4210,
+  "info": {
+    "name": "뱀을 무서워하는 지트 아저씨",
+    "descriptions": {
+      "notStarted": "태국의 플로팅마켓에 있는 #b#p9250004##k 아저씨에게 걱정거리가 있다고 하는데…",
+      "inProgress": "#b#p9250004##k 아저씨 대신 제자를 해친 구렁이에게 복수 하자.\\n\\n#o9420002# #r#a42101##k \\n#i4000248##t4000248# #b#c4000248#/30#k",
+      "completed": "무예타이 사부인 #b#p9250004##k 아저씨의 복수를 대신 하고 제자에게 주려고 했던 선물을 받았다."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250004,
+      "minLevel": 55,
+      "startDate": "2000010100",
+      "endDate": "2000010200"
+    },
+    "complete": {
+      "npc": 9250004,
+      "items": [
+        {
+          "itemId": 4000248,
+          "count": 30
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9420002,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 16300,
+      "items": [
+        {
+          "itemId": 4000248,
+          "count": -30
+        },
+        {
+          "itemId": 1002554
+        },
+        {
+          "itemId": 2022102,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

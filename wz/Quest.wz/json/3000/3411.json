@@ -1,0 +1,48 @@
+{
+  "questId": 3411,
+  "info": {
+    "name": "Chief Gray\u0027s Sign",
+    "descriptions": {
+      "notStarted": "I should go see Gunny of Omega Sector.",
+      "inProgress": "I met up with Gunny again at a field around Omega Sector. Lately Gunny has been on a mission to trace Chief Gray\u0027s every move, but due to the fact that he gets lost easily, he had been having trouble locating it. I\u0027ll need to defeat Chief Gray\u0027s for  Gunny and collect 5 signs that they wear with them, so I can give them to Gunny.\\n\\n#t4000125# #b#c4000125##k/5",
+      "completed": "I collected Chief Gray\u0027s signs and gave them to Gunny, who\u0027s at a field around Omega Sector. With this sign, Gunny may be able to have an easier time tracing Chief Gray."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050007,
+      "minLevel": 47,
+      "prerequisiteQuests": [
+        {
+          "questId": 3404,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050007,
+      "items": [
+        {
+          "itemId": 4000125,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 23000,
+      "items": [
+        {
+          "itemId": 4000125,
+          "count": -5
+        },
+        {
+          "itemId": 2020008,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

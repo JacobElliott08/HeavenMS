@@ -1,0 +1,54 @@
+{
+  "questId": 2027,
+  "info": {
+    "name": "Collecting 600 Cursed Dolls",
+    "parent": "Rowen the Fairy and the Cursed Doll",
+    "descriptions": {
+      "inProgress": "Rowen asked me again, this time #b600 cursed dolls#k. 600?? THAT\u0027S A LOT....",
+      "completed": "I took down a bunch of Zombie Lupin\u0027s on a forest near Ellinia, and collected all #b600 cursed dolls#k for Rowen. In return, she gave me the scroll for gloves. Will the forest really return to normal with this?"
+    },
+    "area": 30,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032101,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 2026,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032101,
+      "items": [
+        {
+          "itemId": 4000031,
+          "count": 600
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000,
+      "fame": 2,
+      "items": [
+        {
+          "itemId": 4000031,
+          "count": -600
+        },
+        {
+          "itemId": 2040801,
+          "probability": 1
+        },
+        {
+          "itemId": 2040802,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

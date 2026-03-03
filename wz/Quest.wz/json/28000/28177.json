@@ -1,0 +1,58 @@
+{
+  "questId": 28177,
+  "info": {
+    "name": "Catching the Suspect",
+    "parent": "Revealing Secrets",
+    "descriptions": {
+      "notStarted": "#b#@1012003:##k in Henesys says we need to catch the suspect. Let\u0027s talk to him.",
+      "inProgress": "Let\u0027s go catch #b#@1040000:##k in #b#m106010100##k.",
+      "completed": "#b#@1012003:##k in #b#m100000000##k says to rush over to see the #b#@9201119:##k in #b#m102000000##k."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012003,
+      "prerequisiteQuests": [
+        {
+          "questId": 28176,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1012003,
+      "items": [
+        {
+          "itemId": 4032479
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000
+    }
+  }
+}

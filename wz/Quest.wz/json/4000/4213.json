@@ -1,0 +1,54 @@
+{
+  "questId": 4213,
+  "info": {
+    "name": "플로팅마켓 수호대 가입하기3",
+    "parent": "플로팅마켓 수호대 가입하기",
+    "descriptions": {
+      "notStarted": "#b#p9250005##k 요원은 도장을 찾을 시간을 달라고 했는데, 지금쯤이면 도장을 찾았겠지? 어서 #b#p9250005##k 요원의 도장을 받자.",
+      "inProgress": "#b#p9250005##k은 가입 허가서에 도장을 찍어준 뒤 다음 요원인 #b#p9250013##k이 나를 기다리고 있다고 했다. 헤헤. 이제 3명만 더 만나면 된다.",
+      "completed": "세번째 요원인 #b#p9250013##k을 찾았다."
+    },
+    "area": 48,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250005,
+      "minLevel": 10,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4212,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9250013,
+      "items": [
+        {
+          "itemId": 4031384
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031384
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 150,
+      "items": [
+        {
+          "itemId": 4031384,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

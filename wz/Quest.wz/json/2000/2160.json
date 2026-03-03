@@ -1,0 +1,38 @@
+{
+  "questId": 2160,
+  "info": {
+    "name": "Helping Rael",
+    "descriptions": {
+      "notStarted": "Riel, Rael and Roel starts betting on who will be offered to King Clang. The winner gets to be the sacrifice! How can I help these girls get to their senses? Let\u0027s meet with #bRael#k.",
+      "inProgress": "Shy Rael says her dare was to take out #r50 Torties#k. She doesn\u0027t look like a person who\u0027d participate in this kind of bet. Looks can be deceiving. Rael hesitates to ask me to help, but I\u0027d better get this over with and take out those Torties. Then I\u0027ll talk about how ridiculous this bet is.\\n\\n#o4130101# #r#a21601##k",
+      "completed": "Defeated all Torties for Rael."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1081102,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2157,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1081102,
+      "monsters": [
+        {
+          "monsterId": 4130101,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

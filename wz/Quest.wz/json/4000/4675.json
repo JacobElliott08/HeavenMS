@@ -1,0 +1,31 @@
+{
+  "questId": 4675,
+  "info": {
+    "name": "Naomi\u0027s Invitation 1",
+    "descriptions": {
+      "notStarted": "#p9105002# seems to be holding a very fascinating event. I better go check it out.",
+      "inProgress": "#p9105002# gave me all the information on the newest event that she planned. I should talk to her again in a bit.",
+      "completed": "#p9105002# gave me an entrance ticket to participate in the event."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9105002,
+      "repeatIntervalMinutes": 1440,
+      "endDate": "2008121600"
+    },
+    "complete": {
+      "npc": 9105002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032055
+        }
+      ]
+    }
+  }
+}

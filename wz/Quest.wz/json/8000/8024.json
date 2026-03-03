@@ -1,0 +1,41 @@
+{
+  "questId": 8024,
+  "info": {
+    "name": "Yoona\u0027s Quiz on Shopping 4",
+    "parent": "Yoona\u0027s Quiz on Shopping",
+    "descriptions": {
+      "notStarted": "I better solve Yoona\u0027s 4th question on shopping.",
+      "inProgress": " I can see the light at the end of the tunnel--I\u0027m nearly done! Time to solve question number 4!",
+      "completed": " I learned something about number of uses on an item. I can only use an item so such until it vanishes. At that point, I\u0027ll have to acquire another one if possible..."
+    },
+    "area": 20,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 20100,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 8023,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 20100
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8025
+    }
+  }
+}

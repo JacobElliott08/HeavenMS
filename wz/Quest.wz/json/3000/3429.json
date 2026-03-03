@@ -1,0 +1,54 @@
+{
+  "questId": 3429,
+  "info": {
+    "name": "The Pilot\u0027s Whereabouts...",
+    "parent": "The Missing Dropship",
+    "descriptions": {
+      "inProgress": "I found what appeared to be a broken Dropship around Boswell Field, but the pilot is nowhere to be found, and instead, I was able to find a letter inside. I better give that letter to Kay.",
+      "completed": "I found a letter inside the broken Dropship, and gave it to #bKay the Engineer#k at the Omega Sector Silo. With a sad look on her eyes, Kay said she was glad to find out the pilot was at least alive. Now, where would that pilot be...?"
+    },
+    "area": 37,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050020,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 3428,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2051001,
+      "items": [
+        {
+          "itemId": 4031127
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031127
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 18000,
+      "items": [
+        {
+          "itemId": 4031127,
+          "count": -1
+        },
+        {
+          "itemId": 1032013
+        }
+      ]
+    }
+  }
+}

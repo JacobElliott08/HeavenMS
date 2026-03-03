@@ -1,0 +1,32 @@
+{
+  "questId": 9847,
+  "info": {
+    "name": "Guard the Omega Sector",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k seems to have something urgent to tell you.",
+      "inProgress": "Eliminate the aliens that are threatening the safety of Omega Sector and then rush over to #b#p2050012##k to report your progress. \\n\\n#o4230118# #r#a98471##k",
+      "completed": "There are a lot of aliens remaining, so don\u0027t let your guard down yet."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 30,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2007052900",
+      "endDate": "2007061800"
+    },
+    "complete": {
+      "npc": 2050012,
+      "endScript": "huntUP7",
+      "monsters": [
+        {
+          "monsterId": 4230118,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

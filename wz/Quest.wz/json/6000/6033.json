@@ -1,0 +1,113 @@
+{
+  "questId": 6033,
+  "info": {
+    "name": "Meren\u0027s Second Round of Teaching",
+    "descriptions": {
+      "notStarted": "I think I have gotten quite familiar with producing items, and I am sure Meren would be shocked to see my prowess in it. Right at that time, Meren called me and told me if I ever had anything to do in Magatia, make sure to stop by and see him.",
+      "inProgress": "I wound up heading to Magatia after seeing Meren\u0027s message. As soon as I saw him, however, instead of a hearty hug, he gave me a huge scolding. Apparently, he saw one of the items I made at the Free Market, and he was so disgusted by my poor quality of work that he vowed to set me straight by giving me a test.\\nThe test is actually making an Intermediate Monster Crystal. Hmmm... this is quite intense.\\n\\n#i4260003# #t4260003# #b#c4260003# / 1",
+      "completed": "Meren gave me a lecture on how I had become complacent, and told me I had to start again from scratch. After passing his test by successfully creating the Intermediate Monster Crystal, he let me go, and I realized my item-producing skills have gotten that much better as a result of his words."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2110004,
+      "minLevel": 75,
+      "prerequisiteQuests": [
+        {
+          "questId": 6029,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112,
+        2200,
+        2210,
+        2211,
+        2212,
+        2213,
+        2214,
+        2215,
+        2216,
+        2217,
+        2218
+      ]
+    },
+    "complete": {
+      "npc": 2110004,
+      "endScript": "q6033e",
+      "items": [
+        {
+          "itemId": 4260003
+        }
+      ],
+      "infoEx": [
+        null
+      ]
+    }
+  }
+}

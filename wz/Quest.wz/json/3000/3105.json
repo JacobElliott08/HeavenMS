@@ -1,0 +1,29 @@
+{
+  "questId": 3105,
+  "info": {
+    "name": "Huge Creature of the Snowfield",
+    "parent": "Snowfield Giant",
+    "descriptions": {
+      "notStarted": "#p2020006# from #m211000000# was attacked by a huge yeti in the snowfield a while ago. Let\u0027s go and hear about this attack from #p2020006#.",
+      "inProgress": "#p2020006# says that he was attacked by a huge yeti while skiing in the snowy mountains of El Nath. What could have attacked #p2020006#? #b#p2020007##k knows a lot about snowfield creatures. Let\u0027s go and ask about them.",
+      "completed": "Asked #p2020007# about the creature that attacked #p2020006#. #p2020007# seems to know something about the creature."
+    },
+    "area": 33,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020006,
+      "minLevel": 90
+    },
+    "complete": {
+      "npc": 2020007
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "nextQuest": 3106
+    }
+  }
+}

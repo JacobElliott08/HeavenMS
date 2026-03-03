@@ -1,0 +1,50 @@
+{
+  "questId": 3647,
+  "info": {
+    "name": "Retrieve a Soul",
+    "parent": "Legends of Hometown",
+    "descriptions": {
+      "inProgress": "Chil Sung was trilled to here how to retrieve Chil Nam\u0027s soul from the Old Fox, but soon became sullen. He says he doesn\u0027t have the nerve or strength to get the Old Fox\u0027s tail. Let\u0027s help Chil Sung and hunt down the #rOld Fox#k and bring back the #bOld Fox\u0027s Tail#k!  \\n\\nOld Fox #r#a36471##k \\n#i4031793##t4031793#  #b#c4031793##k/1",
+      "completed": "Tickled Chil Nam\u0027s nose with the end of the Old Fox\u0027s Tail, and after sniffling a bit, Chil Nam suddenly returned to his old self."
+    },
+    "area": 37,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071005,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3643,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071003,
+      "items": [
+        {
+          "itemId": 4031793
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 7220001
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 204300,
+      "fame": 15,
+      "items": [
+        {
+          "itemId": 4031793,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

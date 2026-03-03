@@ -1,0 +1,35 @@
+{
+  "questId": 3007,
+  "info": {
+    "name": "One Clue",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "notStarted": "",
+      "inProgress": "Elma the Housekeeper told me she heard Hella mention something about an #bold lady#k. She also told me to go talk to Jade again if I want to know more about her. ",
+      "completed": ""
+    },
+    "area": 33,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012010,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3006,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "nextQuest": 3008
+    }
+  }
+}

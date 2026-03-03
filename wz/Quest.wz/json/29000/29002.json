@@ -1,0 +1,31 @@
+{
+  "questId": 29002,
+  "info": {
+    "name": "Title Challenge - Celebrity!",
+    "descriptions": {
+      "notStarted": "#b#eTitle Challenge - Celebrity#n\\n#kA title given to those who increase their popularity by 1,000 within the 30 day time limit.  I should talk to Dalair and try out for the #e#bCelebrity#n#k Medal.",
+      "inProgress": "#b#eTitle Challenge - Celebrity#n\\n#k - Time Left : #Qdaylimit#Days #Qhourlimit#Hours #Qminlimit#Minutes\\n - Popularity Level : #b#jpopgap##k / #jpopG#\\n               #jgaugePop# #jperPop# %",
+      "completed": "#b#eTitle Challenge - Celebrity#n\\n#k - Time Left : #Qdaylimit#Days #Qhourlimit#Hours #Qminlimit#Minutes\\n - Popularity Level : #b#jpopgap##k / #jpopG#\\n               #jgaugePop# #jperPop# %\\n\\nI raised my popularity by 1,000 within 30 days!  Even Dalair seemed surprised by it, and he gave me the \u0027#bCelebrity#k\u0027 title.  Ha, maybe I should try out for the \u0027#bMaple Idol Star#k\u0027 medal now."
+    },
+    "area": 51,
+    "timeLimit2": 2592000,
+    "medalItemId": 1142003
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000040,
+      "minLevel": 20,
+      "repeatIntervalMinutes": 0,
+      "startScript": "q29002s",
+      "items": [
+        {
+          "itemId": 1142003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000040,
+      "endScript": "q29002e"
+    }
+  }
+}

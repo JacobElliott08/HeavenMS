@@ -1,0 +1,25 @@
+{
+  "questId": 29506,
+  "info": {
+    "name": "The Gifted Carnivalian",
+    "descriptions": {
+      "notStarted": "If you think you have the highest victory rate in the 2nd Monster Carnival, acquire the #bGifted Carnivalian Medal#k from Spiegelmann!",
+      "inProgress": "If you think you have the highest victory rate in the 2nd Monster Carnival, acquire the #bGifted Carnivalian Medal#k from Spiegelmann!",
+      "completed": "You have acquired the #Gifted Carnivalian Medal#k for having the highest victory rate in the 2nd Monster Carnival."
+    },
+    "area": 10,
+    "medalItemId": 1142078
+  },
+  "requirements": {
+    "start": {
+      "npc": 2042005,
+      "startScript": "q29506s",
+      "minLevel": 51,
+      "repeatIntervalMinutes": 0
+    },
+    "complete": {
+      "endScript": "q29506e",
+      "npc": 2042005
+    }
+  }
+}

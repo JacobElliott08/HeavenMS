@@ -1,0 +1,28 @@
+{
+  "questId": 3835,
+  "info": {
+    "name": "Tae Soo\u0027s Account",
+    "parent": "The Forgotten Master",
+    "descriptions": {
+      "notStarted": "#bTae Soo#k, the kid in charge of protecting the Peach Farm of Mu Lung, apparently experienced something very strange...",
+      "inProgress": "While aimlessly walking around Sky Forest, Tae Soo was ambushed by a terrifying wild bear. Almost injured, Tae Soo completely froze up, not knowing what to do, until a helping hand arrived...by the form of bear. Tae Soo wanted to know what that bear was all about, and asked me to talk to #bNo Gong#k about him.",
+      "completed": "After hearing the story on the bear, No Gong had the heavy look of concern..."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091003,
+      "minLevel": 71
+    },
+    "complete": {
+      "npc": 2091000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 700
+    }
+  }
+}

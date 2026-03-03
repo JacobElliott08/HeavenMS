@@ -1,0 +1,46 @@
+{
+  "questId": 3223,
+  "info": {
+    "name": "Roly-Poly 6\u0027s Tool",
+    "descriptions": {
+      "notStarted": "I should go check out Roly-Poly 6 at Eos Tower",
+      "inProgress": "I met up with Roly-Poly 6 at Eos Tower. He wanted me to find a tool that he lost right where a ton of monsters are. I have a feeling #bBloctopus#k might have taken it...",
+      "completed": "I found the lost tool for Roly-Poly 6. I\u0027m hoping this will allow him to fix things at Eos Tower now."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040009,
+      "prerequisiteQuests": [
+        {
+          "questId": 3220,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040009,
+      "items": [
+        {
+          "itemId": 4031089
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1600,
+      "items": [
+        {
+          "itemId": 4031089,
+          "count": -1
+        },
+        {
+          "itemId": 2100016,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

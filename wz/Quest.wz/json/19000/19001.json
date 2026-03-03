@@ -1,0 +1,28 @@
+{
+  "questId": 19001,
+  "info": {
+    "name": "Maple Nut",
+    "descriptions": {
+      "completed": "Actively participating in the event celebrating MapleStory\u0027s 6th anniversary gave you the title of #b\u003cMaple Nut\u003e#k."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142101
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "normalAutoStart": true,
+      "startScript": "q19001s",
+      "prerequisiteQuests": [
+        {
+          "questId": 10285,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  }
+}

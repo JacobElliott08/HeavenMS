@@ -1,0 +1,65 @@
+{
+  "questId": 2097,
+  "info": {
+    "name": "A Spell that Seals Up a Critical Danger II",
+    "parent": "A Spell that Seals Up a Critical Danger",
+    "descriptions": {
+      "notStarted": "The Insignificant Being said he needs to gather up the ingredients necessary to use as a spell to seal up the danger that\u0027s been spread all over the deep regions of the Dungeon.",
+      "inProgress": "I need to gather up the items that the Insignificant Being needs to seal up the curse. The items are: 33 Wild Kargo\u0027s Spirit Rocks, 18 Tauromacis Spirit Rocks, and 18 Taurospear Spirit Rocks ... \\n\\n#t4031213# #b#c4031213#/33#k\\n#t4031215# #b#c4031215#/18#k\\n#t4031214# #b#c4031214#/18#k",
+      "completed": "I gathered up the spirit rocks for Wild Kargo, Taurmacis, and even Taurospear. Is there more left?"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061012,
+      "prerequisiteQuests": [
+        {
+          "questId": 2096,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061012,
+      "items": [
+        {
+          "itemId": 4031213,
+          "count": 33
+        },
+        {
+          "itemId": 4031214,
+          "count": 18
+        },
+        {
+          "itemId": 4031215,
+          "count": 18
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 45000,
+      "items": [
+        {
+          "itemId": 4031213,
+          "count": -33
+        },
+        {
+          "itemId": 4031214,
+          "count": -18
+        },
+        {
+          "itemId": 4031215,
+          "count": -18
+        },
+        {
+          "itemId": 2000005,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

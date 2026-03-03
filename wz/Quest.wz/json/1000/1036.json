@@ -1,0 +1,29 @@
+{
+  "questId": 1036,
+  "info": {
+    "name": "Robin the Walking Encyclopedia",
+    "descriptions": {
+      "notStarted": "#bRobin#k, who exudes confidence as he stands at Snail Hunting Ground 1, apparently knows a lot about job advancements and stats. I better go talk to him right now.",
+      "inProgress": "Robin told me that he\u0027ll teach me all I need to know about the stats, AP, and job advancement, then quiz me on it. I better learn some things about Ap first before continuing with the quest of Robin the Walking Encyclopedia.",
+      "completed": "I was able to pass Robin\u0027s quiz. Phew..."
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 2003,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 2003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 40
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "questId": 2277,
+  "info": {
+    "name": "Marshall\u0027s Refusal",
+    "descriptions": {
+      "notStarted": "Marshall refuses to help. What is stopping him? Report the bad news to #bLana#k.",
+      "inProgress": "Find the Locker Key Marshall lost and open the #bLocker#k at the subway station. He supposedly lost his Locker Key on the 5th-6th floor of the Shopping Center.",
+      "completed": "You found the Locker Key #bMarshall#k lost, but the locker closed shortly after you opened it. Try opening the locker one more time."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052121,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2276,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052118,
+      "items": [
+        {
+          "itemId": 4032506
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 13200,
+      "nextQuest": 2278,
+      "items": [
+        {
+          "itemId": 4032506,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

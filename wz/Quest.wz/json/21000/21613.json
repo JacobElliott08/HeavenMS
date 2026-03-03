@@ -1,0 +1,50 @@
+{
+  "questId": 21613,
+  "info": {
+    "name": "The Wolves\u0027 Test",
+    "descriptions": {
+      "notStarted": "You need to go see the pack of wolves that are here to meet #t1902016#. They are apparently waiting at #b#m914030000##k, which is connected to #b#m140010100##k.",
+      "inProgress": "#p1202008# thanked you for raising their baby pup, but demanded that you return #t1902016# to them. When you told them you weren\u0027t interested in returning him, the wolf decided to give you a test to see if you\u0027re worthy of raising a wolf. Now you just need to eliminate all the #o9300354#s #p1202008# has summoned.",
+      "completed": "You passed the test, but #p1202008# still seems to want a word with you..."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1202008,
+      "startScript": "q21613s",
+      "minLevel": 150,
+      "prerequisiteQuests": [
+        {
+          "questId": 21612,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1202008,
+      "items": [
+        {
+          "itemId": 4001193
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4001193,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

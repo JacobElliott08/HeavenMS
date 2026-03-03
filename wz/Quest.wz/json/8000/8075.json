@@ -1,0 +1,62 @@
+{
+  "questId": 8075,
+  "info": {
+    "name": "Sabitrama\u0027s Life Work",
+    "descriptions": {
+      "notStarted": "Sabitrama of Sleepywood is apparently losing sleep over something. What must that be?",
+      "inProgress": "A committee member? What the...\\nI feel like being pushed into this by Sabitrama, but I think it\u0027ll be fun solving the riddles of the ancient archives. The archive stated as such. \\n\\nRegarding the 1st Herb: \\nThe spirit of black and white bids adieu to the land and appears before me. Mark on the two silent spirits, and the spirit will intermingle to transform into the 1st Herb\\n\\nRegarding the 2nd Herb: \\nWhat do you think of the one that snuffs loneliness and darkness in the cradle, while the soul is vacated from the body? The soul that cannot return must find a soulmate that shall spend the eternity with. You\u0027re the doll, and inside, you shall find the 2nd Herb.\\n\\nHmmm...where do I begin?",
+      "completed": "Being called a committee member stinks, but I got paid well, and it was fun. The clues to the 3rd Herb are still nowhere to be found, but ... I actually feel like helping him out once more.\\nI should drop by sometime later."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061005,
+      "minLevel": 85
+    },
+    "complete": {
+      "npc": 1061005,
+      "items": [
+        {
+          "itemId": 4000022,
+          "count": 100
+        },
+        {
+          "itemId": 4000025,
+          "count": 100
+        },
+        {
+          "itemId": 4000147,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 4000022,
+          "count": -100
+        },
+        {
+          "itemId": 4000025,
+          "count": -100
+        },
+        {
+          "itemId": 4000147,
+          "count": -100
+        },
+        {
+          "itemId": 2040809,
+          "probability": 1
+        },
+        {
+          "itemId": 2040519,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

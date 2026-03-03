@@ -1,0 +1,32 @@
+{
+  "questId": 4659,
+  "info": {
+    "name": "Robo Upgrade!",
+    "descriptions": {
+      "notStarted": "Once the Baby Robot has been nurtured to reach level 15, I better take it to Garnox, who specializes in nurturing evolving pets.",
+      "inProgress": "Robots, a beautiful product of a perfect blend of technology and magic, can apparently transform into a more mature being. The process just needs requires some materials to work with. I\u0027ll need to get #b1 #t5380000##k and #b50 #t4000111#s#k and bring them to Garnox.",
+      "completed": "What used to be a small robot pet has grown up and became an Adult Robot."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9102001,
+      "repeatIntervalMinutes": 0,
+      "petRequirement": {}
+    },
+    "complete": {
+      "endScript": "q4659e",
+      "petRequirement": {},
+      "items": [
+        {
+          "itemId": 5380000
+        },
+        {
+          "itemId": 4000111,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

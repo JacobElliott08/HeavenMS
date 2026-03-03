@@ -1,0 +1,53 @@
+{
+  "questId": 3425,
+  "info": {
+    "name": "Porter\u0027s Mistake",
+    "parent": "The Control Program for Rombot",
+    "descriptions": {
+      "inProgress": "I met #bPorter#k at the Command Center in the Omega Sector and gave him Rombot\u0027s 3 memory cards, but oh my... he was unable to decipher one of the three, and destroyed it. I\u0027ll need to find another one of Rombot\u0027s Memory Card for Porter.",
+      "completed": "I watched over Porter\u0027s deciphering with an uneasy feeling, but thankfully he didn\u0027t make any mistake this time around."
+    },
+    "area": 37,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050013,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 3424,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050013,
+      "items": [
+        {
+          "itemId": 4000124
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031118,
+          "count": 2
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 5000,
+      "nextQuest": 3426,
+      "items": [
+        {
+          "itemId": 4000124,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

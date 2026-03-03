@@ -1,0 +1,75 @@
+{
+  "questId": 3074,
+  "info": {
+    "name": "Sending Relief",
+    "parent": "Lost in the Ocean",
+    "descriptions": {
+      "inProgress": "Kay of the Omega Sector complained of the lack of members available due to the battle against the aliens, and asked me if I could give this warp capsule, specially made in Omega Sector, to Robinson. A warp capsule that takes the person to the Omega Sector regardless of the place of origin? That\u0027s awesome!! I want to take it myself for a split second, until I found out that only the Omega Sector members can use it. Darn it...",
+      "completed": "Kay needed help from me, since he couldn\u0027t send the rescuers to save Robinson, and so I got the specially-made warp capsule and gave it to Robinson. Now he can go back to the Omega Sector and get himself fixed."
+    },
+    "area": 33,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2051001,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 3073,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060001,
+      "items": [
+        {
+          "itemId": 4031221
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031221
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4031221,
+          "count": -1
+        },
+        {
+          "itemId": 1002047,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 1002153,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 1002166,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 1002181,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 1002020,
+          "jobRestriction": 1180673
+        },
+        {
+          "itemId": 1002625,
+          "jobRestriction": 32800
+        }
+      ]
+    }
+  }
+}

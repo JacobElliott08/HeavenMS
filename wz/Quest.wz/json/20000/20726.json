@@ -1,0 +1,61 @@
+{
+  "questId": 20726,
+  "info": {
+    "name": "Information From Those Who Remember",
+    "descriptions": {
+      "notStarted": "Maybe #b#p1061011##k of #m105040300# can tell me something useful about #o9300285#...",
+      "inProgress": "#p1061011# told me he can give a useful information on #o9300285# if I can eliminate #r250 #o2230101#s#k for him. \\n\\n#o2230101##r #a207261##k",
+      "completed": "According to #p1061011#, #o9300285# is a little boy whose name is #r#p1104000##k..."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "minLevel": 28,
+      "prerequisiteQuests": [
+        {
+          "questId": 20725,
+          "state": "STARTED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "monsters": [
+        {
+          "monsterId": 9101001,
+          "count": 250
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4500
+    }
+  }
+}

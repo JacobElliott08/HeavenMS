@@ -1,0 +1,47 @@
+{
+  "questId": 2237,
+  "info": {
+    "name": "The Owner of the Mysterious Note",
+    "parent": "The Mysterious Note",
+    "descriptions": {
+      "notStarted": "There is a note inside the Ant Tunnel. Let\u0027s pick it up and see what it is.",
+      "inProgress": "You\u0027ve picked up a Mysterious Note inside the dungeon. Let\u0027s return this Note to its owner. Hm, could it belong to Mu Young?",
+      "completed": "Chrishrama says he feels the forces of evil coming from the dungeon and asks that you place a Charm on each of the Shaman Rocks nearby. It sounds a bit superstitious, but let\u0027s make him happy and do this favor for him. You have given the Note to Mu Young, whom you met inside the dungeon."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1063014,
+      "minLevel": 50
+    },
+    "complete": {
+      "npc": 1061014,
+      "items": [
+        {
+          "itemId": 4032250
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032250
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 30000,
+      "nextQuest": 2238,
+      "items": [
+        {
+          "itemId": 4032250,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

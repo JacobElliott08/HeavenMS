@@ -1,0 +1,189 @@
+{
+  "questId": 8843,
+  "info": {
+    "name": "Festival of Lights - Blessing the Festival reward",
+    "parent": "Festival of Lights",
+    "descriptions": {
+      "notStarted": "Now that I have the Hanukkah Present Box, I\u0027ll need to get this opened to see what\u0027s inside. Better go talk to Hannah.",
+      "inProgress": "Hannah promised to open the box for me. The box seems heavy though, so I may get something nice in return...",
+      "completed": "Hannah helped open up the box, and I got to receive what\u0027s inside it. Not bad!"
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201031,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2010010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 8830,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031521
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2000000,
+          "count": 25,
+          "probability": 70000
+        },
+        {
+          "itemId": 2000003,
+          "count": 25,
+          "probability": 70000
+        },
+        {
+          "itemId": 4020003,
+          "count": 10,
+          "probability": 30000
+        },
+        {
+          "itemId": 1322000,
+          "probability": 50000
+        },
+        {
+          "itemId": 2060000,
+          "count": 100,
+          "probability": 100000
+        },
+        {
+          "itemId": 4010004,
+          "count": 2,
+          "probability": 60000
+        },
+        {
+          "itemId": 1002143,
+          "probability": 5000
+        },
+        {
+          "itemId": 1432005,
+          "probability": 30
+        },
+        {
+          "itemId": 2061000,
+          "count": 100,
+          "probability": 100000
+        },
+        {
+          "itemId": 1040022,
+          "probability": 10000
+        },
+        {
+          "itemId": 1060031,
+          "probability": 10000
+        },
+        {
+          "itemId": 2048000,
+          "probability": 1
+        },
+        {
+          "itemId": 2000006,
+          "count": 5,
+          "probability": 50000
+        },
+        {
+          "itemId": 4011006,
+          "probability": 20000
+        },
+        {
+          "itemId": 2000001,
+          "count": 10,
+          "probability": 50000
+        },
+        {
+          "itemId": 2022121,
+          "count": 5,
+          "probability": 5000
+        },
+        {
+          "itemId": 1002138,
+          "probability": 13929
+        },
+        {
+          "itemId": 4010003,
+          "count": 2,
+          "probability": 50000
+        },
+        {
+          "itemId": 4010005,
+          "probability": 50000
+        },
+        {
+          "itemId": 2050004,
+          "count": 3,
+          "probability": 10000
+        },
+        {
+          "itemId": 2000005,
+          "count": 3,
+          "probability": 5000
+        },
+        {
+          "itemId": 2000004,
+          "count": 2,
+          "probability": 10000
+        },
+        {
+          "itemId": 1072103,
+          "probability": 1000
+        },
+        {
+          "itemId": 2000002,
+          "count": 5,
+          "probability": 50000
+        },
+        {
+          "itemId": 2002010,
+          "probability": 50000
+        },
+        {
+          "itemId": 1040044,
+          "probability": 10000
+        },
+        {
+          "itemId": 4010006,
+          "count": 2,
+          "probability": 50000
+        },
+        {
+          "itemId": 2002004,
+          "probability": 50000
+        },
+        {
+          "itemId": 4004000,
+          "probability": 20000
+        },
+        {
+          "itemId": 2041013,
+          "probability": 10
+        },
+        {
+          "itemId": 2041016,
+          "probability": 10
+        },
+        {
+          "itemId": 2041019,
+          "probability": 10
+        },
+        {
+          "itemId": 2041022,
+          "probability": 10
+        },
+        {
+          "itemId": 4031521,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

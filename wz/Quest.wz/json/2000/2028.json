@@ -1,0 +1,66 @@
+{
+  "questId": 2028,
+  "info": {
+    "name": "Collecting 1000 Cursed Dolls",
+    "parent": "Rowen the Fairy and the Cursed Doll",
+    "descriptions": {
+      "inProgress": "Rowen asked me one last time, this time #b1000 cursed dolls#k. Why does she need that much? Is she trying to sell them all???",
+      "completed": "I took down a bunch of Zombie Lupin\u0027s on a forest near Ellinia, and collected all #b1000 cursed dolls#k for Rowen. In return, she gave me a nice hat. I\u0027ve collected so many of those for her, but it looks like Zombie Lupin\u0027s aren\u0027t decreasing in any way shape or form ... what\u0027s going on? Anyway, at least it seems that the fairies may not have such animosity towards humans now ... and that\u0027s fine with me hehe ..."
+    },
+    "area": 30,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032101,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 2027,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032101,
+      "items": [
+        {
+          "itemId": 4000031,
+          "count": 1000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000,
+      "fame": 3,
+      "items": [
+        {
+          "itemId": 4000031,
+          "count": -1000
+        },
+        {
+          "itemId": 1002021,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 1002154,
+          "jobRestriction": 4330501
+        },
+        {
+          "itemId": 1002170,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 1002185,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 1002628,
+          "jobRestriction": 32800
+        }
+      ]
+    }
+  }
+}

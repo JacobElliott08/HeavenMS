@@ -1,0 +1,39 @@
+{
+  "questId": 20013,
+  "info": {
+    "name": "A Box with Goodies Inside",
+    "descriptions": {
+      "notStarted": "Let\u0027s start a conversation with #b#p1102007##k.",
+      "inProgress": "#p1102007#, after telling you about acquiring items from boxes, has asked that you collect a #b#t4032267##k and a #b#t4032268##k from the boxes scattered around the field. He says you can only break the boxes using #bRegular Attacks#k.",
+      "completed": "Upon receiving a #t4032267# and a #t4032268#, #p1102007# made you a fantastic chair using the materials. If you continue to your left, you\u0027ll meet the last brother, #p1102008#. Let\u0027s rush over."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102007,
+      "startScript": "q20013s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20012,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    },
+    "complete": {
+      "npc": 1102007,
+      "endScript": "q20013e",
+      "items": [
+        {
+          "itemId": 4032267
+        },
+        {
+          "itemId": 4032268
+        }
+      ]
+    }
+  }
+}

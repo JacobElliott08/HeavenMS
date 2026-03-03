@@ -1,0 +1,58 @@
+{
+  "questId": 2140,
+  "info": {
+    "name": "Beginner Thief\u0027s First Training Session",
+    "descriptions": {
+      "notStarted": "I\u0027ve become a Thief! I don\u0027t know what to do now. Let\u0027s go to a former Thief\u0027s trainer  #b#p1052001##k.",
+      "inProgress": " #p1052001# suggests to hunt monsters as basic training. He told me to defeat #r20 #o130100##k.  He told me #o130100# can be easily found near #m103000000# ... \\n\\n#o130100# #r#a21401##k",
+      "completed": " I hunted 20 #o130100#s and reported to  #p1052001#. Piece of cake!"
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1052001,
+      "monsters": [
+        {
+          "monsterId": 130100,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 590,
+      "items": [
+        {
+          "itemId": 2000000,
+          "count": 30
+        },
+        {
+          "itemId": 2000003,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

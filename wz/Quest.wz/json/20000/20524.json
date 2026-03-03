@@ -1,0 +1,67 @@
+{
+  "questId": 20524,
+  "info": {
+    "name": "Supplements for Mimiana",
+    "descriptions": {
+      "notStarted": "In order to strengthen #t1902005# so I can Mount it, then I must feed the creature with #p2060005#\u0027s Supplements. I better go visit #b#p2060005##k at #b#m230000000##k.",
+      "inProgress": "#p2060005# told me he would give me a discount on his supplements since I knew him, then proceeded to charge me 10 million mesos for them. Seriously, what\u0027s inside these Supplements?",
+      "completed": "Saddened, but undeterred, I managed to purchase #p2060005#\u0027s Supplements."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "minLevel": 50,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 20523,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032117
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 2060005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -10000000,
+      "items": [
+        {
+          "itemId": 4032117,
+          "jobRestriction": 64512
+        }
+      ]
+    }
+  }
+}

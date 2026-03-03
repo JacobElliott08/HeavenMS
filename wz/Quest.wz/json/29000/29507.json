@@ -1,0 +1,33 @@
+{
+  "questId": 29507,
+  "info": {
+    "name": "Wonderful Pet Owner",
+    "descriptions": {
+      "notStarted": "#b#eTitle Challenge - Wonderful Pet Owner#n\\n#kIf you have a pet, see if you can acquire #r1400 Closeness points#k with your pet! Dalair, on behalf of the God of Honor, is looking for passionate and caring pet owners. He says anyone who reaches #r1400 Closeness points#k with a pet will receive the #e#bWonderful Pet Owner#k#n title.",
+      "inProgress": "#b#eTitle Challenge - Wonderful Pet Owner#n#k\\n\\nAcquire #r1400#k Closeness points with your pet.",
+      "completed": "#b#eTitle Challenge - Wonderful Pet Owner#n#k\\n\\nYou have received the #bWonderful Pet Owner#k title and the associated medal."
+    },
+    "area": 51,
+    "medalItemId": 1142082
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000040,
+      "minLevel": 10
+    },
+    "complete": {
+      "npc": 9000040,
+      "minPetTameness": 1400,
+      "petRequirement": {}
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142082
+        }
+      ]
+    }
+  }
+}

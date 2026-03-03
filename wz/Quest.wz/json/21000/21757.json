@@ -1,0 +1,56 @@
+{
+  "questId": 21757,
+  "info": {
+    "name": "Neinheart the Strategist",
+    "descriptions": {
+      "notStarted": "Now that you know what\u0027s written in the letter… what should you do? You\u0027d better go to #b#m140000000##k and talk to #b#p1201000##k.",
+      "inProgress": "#p1201000# says that it\u0027s essential to warn #m130000000# about the Seal Stone and writes a letter urging them to protect it at all cost. Your job is to go to #b#m130000000##k and hand the letter to the Queen, but with that annoying strategist of the Queen, Neinheart, blocking the way, it might be difficult. Maybe you should just talk to the #bStrategist#k instead.",
+      "completed": "You met the Queen\u0027s strategist, #p1101002#. He took the letter and told you he\u0027d take it into consideration, but his eyes tell you otherwise. "
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201000,
+      "minLevel": 68,
+      "prerequisiteQuests": [
+        {
+          "questId": 21756,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1101002,
+      "endScript": "q21757e",
+      "items": [
+        {
+          "itemId": 4032330
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032330
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4032330,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

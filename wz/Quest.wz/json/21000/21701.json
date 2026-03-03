@@ -1,0 +1,54 @@
+{
+  "questId": 21701,
+  "info": {
+    "name": "Train or Die! 1",
+    "descriptions": {
+      "notStarted": "You certainly have doubts, but you\u0027ll give #b#p1202006##k the benefit of the doubt and receive some training from him.",
+      "inProgress": "According to #p1202006#, the first training lesson involves eliminating #r#o9300341#s#k. He makes it seem like it\u0027s some huge hurdle but they don\u0027t sound too difficult.\\r\\n\\r\\n#o9300341##r #a217011##k",
+      "completed": "You eliminated the #o9300341#s with ease. Judging from how enthusiastic #p1202006# reacted, you are even less inclined to trust him."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1202006,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 21700,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1202006,
+      "monsters": [
+        {
+          "monsterId": 9300341,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1400,
+      "items": [
+        {
+          "itemId": 2000022,
+          "count": 30
+        },
+        {
+          "itemId": 2000023,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

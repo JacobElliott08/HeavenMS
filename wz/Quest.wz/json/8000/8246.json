@@ -1,0 +1,126 @@
+{
+  "questId": 8246,
+  "info": {
+    "name": "Attendance Check",
+    "descriptions": {
+      "notStarted": "I wonder what #b#p9200000##k will give me if I give him these items I collected for the last 2 weeks.",
+      "inProgress": "I came to MapleStory everyday and collected all the scrumptious lunch items. From what I hear, it has something to do with the 5 types of snacks I collected...",
+      "completed": "I gave #b#p9200000##k the lunch snacks I had collected for 14 days. Hope they didn\u0027t rot! Anyways, he seemed ecstatic and gave me a cool lunchbox that can be used as a weapon."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9200000,
+      "minLevel": 10,
+      "startDate": "2008092500",
+      "endDate": "2008092600",
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522
+      ]
+    },
+    "complete": {
+      "npc": 9200000,
+      "items": [
+        {
+          "itemId": 4032058,
+          "count": 14
+        },
+        {
+          "itemId": 4032059,
+          "count": 14
+        },
+        {
+          "itemId": 4032060,
+          "count": 14
+        },
+        {
+          "itemId": 4032061,
+          "count": 14
+        },
+        {
+          "itemId": 4032062,
+          "count": 14
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1302098
+        },
+        {
+          "itemId": 1302099
+        },
+        {
+          "itemId": 1302100
+        },
+        {
+          "itemId": 1302101
+        },
+        {
+          "itemId": 4032058,
+          "count": -14
+        },
+        {
+          "itemId": 4032059,
+          "count": -14
+        },
+        {
+          "itemId": 4032060,
+          "count": -14
+        },
+        {
+          "itemId": 4032061,
+          "count": -14
+        },
+        {
+          "itemId": 4032062,
+          "count": -14
+        }
+      ]
+    }
+  }
+}

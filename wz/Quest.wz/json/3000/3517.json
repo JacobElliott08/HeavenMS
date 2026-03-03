@@ -1,0 +1,43 @@
+{
+  "questId": 3517,
+  "info": {
+    "name": "The One Who Walks Through the Road to Oblivion3",
+    "descriptions": {
+      "notStarted": "I received permission to go all the way to #m270030300#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test. ",
+      "inProgress": "#p2140000# said if I want to go in further, go to #b#m270030300##k and defeat #r999 #o8200011##k.  \\n\\n#o8200011# #r#a35171##k",
+      "completed": "I defeated 999 #o8200011#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030400#."
+    },
+    "area": 46
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140000,
+      "minLevel": 128,
+      "prerequisiteQuests": [
+        {
+          "questId": 3516,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2140000,
+      "monsters": [
+        {
+          "monsterId": 8200011,
+          "count": 999
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1366000,
+      "items": [
+        {
+          "itemId": 4005002
+        }
+      ]
+    }
+  }
+}

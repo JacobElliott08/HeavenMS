@@ -1,0 +1,33 @@
+{
+  "questId": 6901,
+  "info": {
+    "name": "Harmonia\u0027s first story",
+    "parent": "The Warrior\u0027s Extreme Path",
+    "descriptions": {
+      "inProgress": " #b#p2081100##k said she\u0027ll tell me the first truth and told me to come talk to her again when I\u0027m ready.",
+      "completed": "#b#p2081100##k told me about Jakum, which is the first truth.  She said come back to her when I\u0027m ready to hear the second truth."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081100,
+      "minLevel": 120,
+      "jobs": [
+        111,
+        121,
+        131
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6900,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081100
+    }
+  }
+}

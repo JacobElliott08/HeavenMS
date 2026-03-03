@@ -1,0 +1,55 @@
+{
+  "questId": 3025,
+  "info": {
+    "name": "Looking for the Wiseman in Henesys",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "notStarted": "",
+      "inProgress": "I met my end of the bargain by handing Grendel the Really Old the 2 Wisdom Crystals, and he met his end of the bargain by handing me the 2nd #bold piece of the map#k. Next up: The wisewoman at #bHenesysk.",
+      "completed": ""
+    },
+    "area": 33,
+    "order": 22
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3024,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012100,
+      "items": [
+        {
+          "itemId": 4031054,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031054,
+          "count": 2
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 4000,
+      "nextQuest": 3026,
+      "items": [
+        {
+          "itemId": 4031054,
+          "count": -2
+        }
+      ]
+    }
+  }
+}

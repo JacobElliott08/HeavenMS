@@ -1,0 +1,48 @@
+{
+  "questId": 3336,
+  "info": {
+    "name": "Acquiring the Seed for the Snowfield Rose",
+    "descriptions": {
+      "notStarted": "The #t4031696# that #p2111003# requested can only be obtained through #b#p2020005##k at #b#m211000000##k. I better go talk to #p2020005#.",
+      "inProgress": "#p2020005# said #t4031696# is something only the alchemists are aware of, and seemed surprised that I knew it. He then promised to give me #t4031696# as long as I defeat #r100 Leattys#k for him. \\n\\n#o5300000# #r#a33361##k",
+      "completed": "I finally received #t4031696# from #p2020005#. Good, now I better get back to #p2111003#."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "minLevel": 65,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3334,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031696
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "monsters": [
+        {
+          "monsterId": 5300000,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031696
+        }
+      ]
+    }
+  }
+}

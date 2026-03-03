@@ -1,0 +1,38 @@
+{
+  "questId": 3412,
+  "info": {
+    "name": "Eliminating Grays",
+    "descriptions": {
+      "notStarted": "I better go see Black Mesoranger, who should be somewhere around Kulan Field.",
+      "inProgress": "At a field around Omega Sector, I met this strangely-dressed man who called himself Black Mesoranger. He requested that I eliminate the alien that\u0027s been taking over Kulan Field, the #bBarnard Gray#k, 25 of them to be exact.\\n\\n#o4230116# #r#a34121#",
+      "completed": "I successfully completed the mission from Black Mesoranger by defeating the #bBarnard Grays#k. It seems, however, that there will be much more dangerous aliens monsters around Kulan Field"
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040018,
+      "minLevel": 37
+    },
+    "complete": {
+      "npc": 2040018,
+      "monsters": [
+        {
+          "monsterId": 4230116,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 2000011,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

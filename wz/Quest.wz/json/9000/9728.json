@@ -1,0 +1,32 @@
+{
+  "questId": 9728,
+  "info": {
+    "name": "매일매일 이벤트 3월 29일",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 신학기를 맞아 준비한 선물이 있다고 하는데..",
+      "inProgress": "#b#p9010010##k가 내게 줄 선물을 준비 중이라고 했다. 기대되는걸?",
+      "completed": "#b#t2310000##k를 선물로 받았다. 자유시장에서 아주 유용하게 사용하겠는 걸?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "startDate": "2007032900",
+      "endDate": "2007033000"
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2310000
+        }
+      ]
+    }
+  }
+}

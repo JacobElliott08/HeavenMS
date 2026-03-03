@@ -1,0 +1,50 @@
+{
+  "questId": 3451,
+  "info": {
+    "name": "The Lost Piece of the VIP Ticket",
+    "descriptions": {
+      "notStarted": "Where did the ripped piece of the VIP ticket go? I better go see Kevin the Soldier.",
+      "inProgress": "The ripped piece of the VIP Ticket has disappeared, so I asked Kevin the Soldier for some help..",
+      "completed": "Fortunately, even after losing a ripped piece of VIP ticket, Kevin the Soldier was picking up after me. Phew... thanks a lot \u003d)"
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050011,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3441,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3443
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031243
+        },
+        {
+          "itemId": 4031207
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050011
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031207
+        },
+        {
+          "itemId": 4031243
+        }
+      ]
+    }
+  }
+}

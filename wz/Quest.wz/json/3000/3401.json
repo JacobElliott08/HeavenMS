@@ -1,0 +1,53 @@
+{
+  "questId": 3401,
+  "info": {
+    "name": "Dr. Kim\u0027s Comments : Blueprint for New Robot",
+    "parent": "Dr. Kim\u0027s Comments",
+    "descriptions": {
+      "notStarted": "Dr. Kim of Omega Sector has apparently come up with something incredible...",
+      "inProgress": "Dr. Kim of Omega Sector gave me the Blueprint Machine for the new robot that\u0027s currently in development, and he requested that I show this to Chury, Hoony, and Gunny. I should meet up with #bChury#k first; he\u0027s at the #bOmega Sector Silo#k.",
+      "completed": "Dr. Kim gave me a mission to show Chury the blueprint of the new robot that he\u0027s currently making, and I did just that. Chury seemed impressed by it."
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050001,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3400,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050005,
+      "items": [
+        {
+          "itemId": 4031100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031100
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031100,
+          "count": -1
+        }
+      ],
+      "experience": 2400,
+      "nextQuest": 3402
+    }
+  }
+}

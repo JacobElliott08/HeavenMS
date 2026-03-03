@@ -1,0 +1,159 @@
+{
+  "questId": 6015,
+  "info": {
+    "name": "Keol\u0027s Order #1",
+    "descriptions": {
+      "notStarted": "Keol, the pompous working partner of Meren who is as irritable as they come in all of Maple, wants a word with me. I wonder what he wants to talk about...",
+      "inProgress": "Meren\u0027s coworker Keol requested that I make a shoe for him. Even though Meren had already accepted me as his apprentice, it seemed that Keol didn\u0027t agree with that. Apparently, he wasn\u0027t very pleased with Meren that he was willing to divulge his item-making secrets to everyone, regardless of the skill level. Keol asked me to make a pair of shoes for him... that even a Level 1 can make with ease. Seriously... does he think that low of me? Fine, I\u0027ll make the finest pair of those he\u0027ll ever see!\\n\\n#i4001174# #t4001174# #b#c4001174# / 1",
+      "completed": "Meren\u0027s coworker Keol requested that I make a shoe for him. Even though Meren had already accepted me as his apprentice, it seemed that Keol didn\u0027t agree with that. Apparently, he wasn\u0027t very pleased with Meren that he was willing to divulge his item-making secrets to everyone, regardless of the skill level. Keol asked me to make a pair of shoes for him... that even a Level 1 can make with ease. Seriously... does he think that low of me? But even after seeing my work, Keol just dismissed it as little more than adequate. He also commented that I\u0027ll need lots of practice, and gave me a measly Basic Enhancement Gem. I don\u0027t like this guy... and I definitely don\u0027t like his attitude."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2110002,
+      "minLevel": 45,
+      "prerequisiteQuests": [
+        {
+          "questId": 6029,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 6014,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112,
+        2200,
+        2210,
+        2211,
+        2212,
+        2213,
+        2214,
+        2215,
+        2216,
+        2217,
+        2218
+      ]
+    },
+    "complete": {
+      "npc": 2110002,
+      "items": [
+        {
+          "itemId": 4001174
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031966
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 25000,
+      "items": [
+        {
+          "itemId": 4001174,
+          "count": -1
+        },
+        {
+          "itemId": 4250200,
+          "probability": 1
+        },
+        {
+          "itemId": 4250100,
+          "probability": 1
+        },
+        {
+          "itemId": 4250300,
+          "probability": 1
+        },
+        {
+          "itemId": 4250400,
+          "probability": 1
+        },
+        {
+          "itemId": 4250500,
+          "probability": 1
+        },
+        {
+          "itemId": 4250600,
+          "probability": 1
+        },
+        {
+          "itemId": 4250700,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

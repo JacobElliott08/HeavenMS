@@ -1,0 +1,40 @@
+{
+  "questId": 4549,
+  "info": {
+    "name": "Hunger calls",
+    "parent": "Nuri\u0027s Health and Beauty",
+    "descriptions": {
+      "notStarted": "#b#p9270059##k looks so down and depressed. Maybe there\u0027s something you can do to make her feel better.",
+      "inProgress": "#b#p9270059##k is standing with a growling stomach. She doesn\u0027t want to eat anything else but famous #b#t2022203##k from Local Speciality Shop in Singapore or Kampung? Let\u0027s get #b10 \\n#t2022203##k for her. \\n\\n#t2022203# #r#c2022203#/10#k",
+      "completed": "Nothing taste better than #b#t2022203##k for an empty stomach."
+    },
+    "area": 49,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270059,
+      "minLevel": 60
+    },
+    "complete": {
+      "npc": 9270059,
+      "items": [
+        {
+          "itemId": 2022203,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "items": [
+        {
+          "itemId": 2022203,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

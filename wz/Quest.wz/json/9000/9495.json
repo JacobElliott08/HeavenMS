@@ -1,0 +1,46 @@
+{
+  "questId": 9495,
+  "info": {
+    "name": "노점상 주인 여씨의 새 메뉴",
+    "descriptions": {
+      "notStarted": "#b#p9310011##k에게 다시 말을 걸어보자.",
+      "inProgress": "#b#p9310011##k의 새 메뉴에 필요한 재료를 모아가자.\\n\\n#t04000187# #b#c04000187#/100#k",
+      "completed": "#b#p9310011##k의 사업을 도왔다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9310011,
+      "minLevel": 10,
+      "startDate": "2006101600",
+      "endDate": "2006110100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9494,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9310011,
+      "items": [
+        {
+          "itemId": 4000187,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200,
+      "items": [
+        {
+          "itemId": 4000187,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

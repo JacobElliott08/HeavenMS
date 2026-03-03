@@ -1,0 +1,45 @@
+{
+  "questId": 3206,
+  "info": {
+    "name": "Nemi\u0027s Lunchbox Delivery",
+    "descriptions": {
+      "notStarted": "I should go see Nemi, who\u0027s in Ludibrium...",
+      "inProgress": "Nemi of Ludibrium gave me a lunchbox and asked me if I could make a special delivery to her dad, #b#p2040015##k. Apparently, he forgot to bring his lunchbox to work today. She said her dad should be somewhere around the #bToy Factory#k.",
+      "completed": "I met #b#p2040015##k, who was at the toy factory, and gave him the lunchbox Nemi packed for him, but it looks like he wants to ask me for something..."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041005,
+      "minLevel": 20
+    },
+    "complete": {
+      "npc": 2040015,
+      "items": [
+        {
+          "itemId": 2020021
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 2020021
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 750,
+      "meso": 4500,
+      "items": [
+        {
+          "itemId": 2020021,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "questId": 2061,
+  "info": {
+    "name": "Special Taste of Florina Beach",
+    "descriptions": {
+      "notStarted": "Riel is trying to develop special dish of Florian Beach.",
+      "inProgress": "I need to collect some of the recipes to develop the Special Taste of Florina Beach. I heard that #b10 #t4000136#, 10 #t4000043#, 10 #t4000044#, and 10 #t4000029##k are necessary. Will Valen\u0027s new recipe succeed~?",
+      "completed": "I\u0027m familiar with working on Florina Beach. I visited Riel one more time and helped her out. Why is she so desperate to help Valen?"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1081100,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 2060,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1081100,
+      "items": [
+        {
+          "itemId": 4000029,
+          "count": 10
+        },
+        {
+          "itemId": 4000136,
+          "count": 10
+        },
+        {
+          "itemId": 4000043,
+          "count": 10
+        },
+        {
+          "itemId": 4000044,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "meso": 3000,
+      "items": [
+        {
+          "itemId": 4000043,
+          "count": -10
+        },
+        {
+          "itemId": 4000044,
+          "count": -10
+        },
+        {
+          "itemId": 4000029,
+          "count": -10
+        },
+        {
+          "itemId": 4000136,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

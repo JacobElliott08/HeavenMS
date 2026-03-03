@@ -1,0 +1,49 @@
+{
+  "questId": 6280,
+  "info": {
+    "name": " The Holy Knight\u0027s Sword",
+    "descriptions": {
+      "notStarted": "#p2081100# says he has something to tell me...",
+      "inProgress": " #p2081100# talked about holy power and told me to go to the statue in Orbis Tower. They say I can get this power if I get #b#t4031454##k and place it inside #b#t4031455##k and give it to #b#p2030005##k... I heard the explorer leader, Teng, knows about #t4031454#. I\u0027ll go see him first then go to the Cave of Life. \\n\\n#i4031455##t4031455# #b#c4031455#/1#k",
+      "completed": "  #p2030005#  in Orbis Tower gave me holy power!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081100,
+      "jobs": [
+        122
+      ]
+    },
+    "complete": {
+      "npc": 2030005,
+      "items": [
+        {
+          "itemId": 4031455
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200000,
+      "items": [
+        {
+          "itemId": 4031455,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 1221003,
+          "masterLevel": 10
+        },
+        {
+          "skillId": 1221004,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

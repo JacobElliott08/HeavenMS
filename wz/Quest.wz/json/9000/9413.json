@@ -1,0 +1,101 @@
+{
+  "questId": 9413,
+  "info": {
+    "name": "A Revenge on Gray the Alien",
+    "descriptions": {
+      "notStarted": "I should go see Alien Gray.",
+      "inProgress": "Whoa... Gray is taking an interest to this eraser... I mean, it\u0027s really nothing but a piece of rubber... okay, this is a good time to avenge the prank he pulled on me...",
+      "completed": "I wound up trading a useless eraser for a very useful item."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050002,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3420,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4001038
+        },
+        {
+          "itemId": 4001039
+        },
+        {
+          "itemId": 4001040
+        },
+        {
+          "itemId": 4001041
+        },
+        {
+          "itemId": 4001042
+        },
+        {
+          "itemId": 4001043
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050002,
+      "items": [
+        {
+          "itemId": 4001038
+        },
+        {
+          "itemId": 4001039
+        },
+        {
+          "itemId": 4001040
+        },
+        {
+          "itemId": 4001041
+        },
+        {
+          "itemId": 4001042
+        },
+        {
+          "itemId": 4001043
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4001040,
+          "count": -1
+        },
+        {
+          "itemId": 4001039,
+          "count": -1
+        },
+        {
+          "itemId": 4001038,
+          "count": -1
+        },
+        {
+          "itemId": 4001041,
+          "count": -1
+        },
+        {
+          "itemId": 4001042,
+          "count": -1
+        },
+        {
+          "itemId": 4001043,
+          "count": -1
+        },
+        {
+          "itemId": 1302049
+        }
+      ]
+    }
+  }
+}

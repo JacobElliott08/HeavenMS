@@ -1,0 +1,72 @@
+{
+  "questId": 4953,
+  "info": {
+    "name": "In Her Likeness",
+    "descriptions": {
+      "notStarted": "Looks like Jonas fixed the machine... yet it\u0027s still cranking out these crazy toys.  Maybe he is bonkers.  Or maybe he needs some more help.",
+      "inProgress": "Looks like Jonas needs help building a new doll, a more perfect likeness of Sophilia.  I don\u0027t think he realizes she\u0027s dead.  In any case, I have to collect #b30 Locks of Doll\u0027s Hair, 10 Heartstoppers, 10 Maple Candies, and 10 Pumpkin Taffies#k.  Why the candies?  I may never know...",
+      "completed": "I collected everything Jonas needed to build his new doll in the likeness of his daughter.  I have to say though... it looks nothing like her."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201077,
+      "minLevel": 15,
+      "endDate": "2007103123",
+      "prerequisiteQuests": [
+        {
+          "questId": 4952,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201077,
+      "items": [
+        {
+          "itemId": 2022245,
+          "count": 10
+        },
+        {
+          "itemId": 2022246,
+          "count": 10
+        },
+        {
+          "itemId": 4000400,
+          "count": 30
+        },
+        {
+          "itemId": 2022251,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 4031768
+        },
+        {
+          "itemId": 4000400,
+          "count": -30
+        },
+        {
+          "itemId": 2022245,
+          "count": -10
+        },
+        {
+          "itemId": 2022246,
+          "count": -10
+        },
+        {
+          "itemId": 2022251,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

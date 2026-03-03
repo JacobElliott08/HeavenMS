@@ -1,0 +1,26 @@
+{
+  "questId": 2231,
+  "info": {
+    "name": "Captain Al, Who Are You?",
+    "descriptions": {
+      "notStarted": "A middle-aged gentleman who laims to have been the leader of a Family for 30 mind-boggling years... the rumors about this man, #bCaptain Al#k, who can be found in #bLith Harbor#k and #bOrbis Park#k, are running rampant. What exactly is a Family and the Leader anyway? It sounds interesting... better ask #bCaptain Al#k that question myself.",
+      "inProgress": "#bCaptain Al#k seemed much more pleasant the rumors suggested. I have a lot to ask... and he said ask him when I\u0027m ready. How about now?",
+      "completed": "Captain Al\u0027s passion for adventure the Family are palpable. Forget the tear-jerking adventures of Captain Al; I\u0027m more interested in the concept of the Family... \\nFortunately, Captain Al told me to ask him anytime about the Family. Should I become a Leader myself? Well, first I\u0027ll need to find a Junior I can support."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002103,
+      "minLevel": 10
+    },
+    "complete": {
+      "npc": 1002103
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1500
+    }
+  }
+}

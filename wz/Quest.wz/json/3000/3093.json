@@ -1,0 +1,45 @@
+{
+  "questId": 3093,
+  "info": {
+    "name": "Snow Crystal 1",
+    "parent": "The View of the Ocean",
+    "descriptions": {
+      "notStarted": "#p2020005# seems to be pretty busy. I better pay another visit.",
+      "inProgress": "#p2020005# mentioned that, in order to make #t4031312#, I\u0027ll have to bring #b100 #t4031311#s#k to him. #t4031311# can be found through the monster called #b#o5300000##k, which lives in the Orbis Tower... \\n\\n#i4031311# #t4031311# #b#c4031311##k/100",
+      "completed": "I got all 100 #t4031311#s and gave them to #p2020005#. #p2020005# promised me to make #t4031312# soon, and wanted me to wait for a while."
+    },
+    "area": 33,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "prerequisiteQuests": [
+        {
+          "questId": 3092,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "items": [
+        {
+          "itemId": 4031311,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "items": [
+        {
+          "itemId": 4031311,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

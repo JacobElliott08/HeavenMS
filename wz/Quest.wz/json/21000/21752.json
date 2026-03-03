@@ -1,0 +1,57 @@
+{
+  "questId": 21752,
+  "info": {
+    "name": "Find the Key",
+    "descriptions": {
+      "notStarted": "Apparently, #p2132000 has the #t4032325# that can open the safe where the Seal Stone of Ellin Forest is stored. You\u0027d better head over to #b#m300010400##k and talk to #b#p2132000##k.",
+      "inProgress": "You ask #p2132000# for the keys, and he seems to panic. He tells you that he may have lost it. It looks like the #r#o5250002#s#k nearby have the key, so it\u0027s up to you to defeat them all and retrieve.\\r\\n\\r\\n#i4032326# #t4032326# #b#c4032326# / 10#k",
+      "completed": "#p2132000# found one of keys that #p2132000# lost and gave you the #t4032325#."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2132000,
+      "minLevel": 63,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 21751,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032325
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2132000,
+      "items": [
+        {
+          "itemId": 4032326,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032326,
+          "count": -10
+        },
+        {
+          "itemId": 4032325
+        }
+      ]
+    }
+  }
+}

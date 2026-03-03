@@ -1,0 +1,46 @@
+{
+  "questId": 8029,
+  "info": {
+    "name": "Actor Training",
+    "descriptions": {
+      "notStarted": "Mariwaka of Showa Town is apparently looking for someone. Perhaps I can help find them...",
+      "inProgress": "Mariwaka claims that if I audition well, then I get to make my debut on the big screen. Me? An actor? Hmm, maybe. I better go take care of some #b#o9400110#s#k and #b#o9400111#s#k. \\n#o9400110#  #r#a80291##k \\n#o9400111#  #r#a80292#",
+      "completed": "Mariwaka did well auditioning. Oh well, I feel like I\u0027m one step closer to becoming a movie star. Now all I need to do is meet Director Furano. Let\u0027s go!"
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120016,
+      "minLevel": 40
+    },
+    "complete": {
+      "npc": 9120016,
+      "monsters": [
+        {
+          "monsterId": 9400110,
+          "count": 10
+        },
+        {
+          "monsterId": 9400111,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2022025,
+          "count": 10
+        },
+        {
+          "itemId": 2022027,
+          "count": 10
+        }
+      ],
+      "experience": 4000
+    }
+  }
+}

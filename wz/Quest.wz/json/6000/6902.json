@@ -1,0 +1,33 @@
+{
+  "questId": 6902,
+  "info": {
+    "name": "Harmonia\u0027s second truth",
+    "parent": "The Warrior\u0027s Extreme Path",
+    "descriptions": {
+      "inProgress": " #b#p2081100##k said she\u0027ll tell me the second truth and told me to come talk to her again when I\u0027m ready.",
+      "completed": " #b#p2081100##k told me about Holycolas, which is the second truth.  She said she had one final story to tell me."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081100,
+      "minLevel": 120,
+      "jobs": [
+        111,
+        121,
+        131
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6901,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081100
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "questId": 4952,
+  "info": {
+    "name": "The Infernal Toy Machine",
+    "descriptions": {
+      "notStarted": "I keep hearing the groans and bellows of machinery echoing through the house.  What is making this racket?  Is it where these infernal toys are coming from?",
+      "inProgress": "I found Jonas Prendergast in his Toy Workshop at the top of the house, in front of a huge toy machine which seems to be the source of all these infernal toys!  It seems that his machine is not functioning properly.  If I collect #b50 Firewood#k, #b25 Screws#k, and #b25 Loaded Springs#k, Jonas can build the replacement part to get his machine working properly again.  I know that the Rocking Horses will have the #bFirewood#k and the Psycho Jacks will have the #bScrews and Loaded Springs#k.  I\u0027ve got to get what Jonas needs-perhaps this will stop it from churning out all these crazy toys!",
+      "completed": "I collected the parts Jonas needed to fix his machine.  I hope I haven\u0027t simply helped a madman create more of his messed up toys."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201077,
+      "minLevel": 15,
+      "endDate": "2007103123",
+      "prerequisiteQuests": [
+        {
+          "questId": 4945,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201077,
+      "items": [
+        {
+          "itemId": 4003000,
+          "count": 25
+        },
+        {
+          "itemId": 4000018,
+          "count": 50
+        },
+        {
+          "itemId": 4000399,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6500,
+      "items": [
+        {
+          "itemId": 4000018,
+          "count": -50
+        },
+        {
+          "itemId": 4003000,
+          "count": -25
+        },
+        {
+          "itemId": 4000399,
+          "count": -25
+        }
+      ]
+    }
+  }
+}

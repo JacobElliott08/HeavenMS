@@ -1,0 +1,44 @@
+{
+  "questId": 4956,
+  "info": {
+    "name": "Sophilia Doll",
+    "descriptions": {
+      "notStarted": "When I gave Sophilia\u0027s favorite doll to Jonas, it seemed to have awaken him from his madness.  He\u0027s realized that his Toy Machine has been corrupted and is churned out twisted versions of his former creations.  Because the machine can\u0027t be destroyed, Jonas has asked me to destroy as many of his creations as possible.  For every 50 Psycho Jacks, 50 Nightmares, or 50 Sophilia Dolls I destroy, Jonas has promised to reward me with something special. ",
+      "inProgress": "Looks like he wants me to destroy #b50 Sophilia Dolls#k. It shouldn\u0027t be too hard, I think. But they are scary looking for sure...",
+      "completed": "cI destroyed some of Jonas\u0027 creations and he rewarded me with some of his fantastic Toymaking gear!  It seems like a grim endless battle against the tireless Infernal Toy Machine... "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201077,
+      "minLevel": 15,
+      "endDate": "2007103123",
+      "prerequisiteQuests": [
+        {
+          "questId": 4954,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201077,
+      "monsters": [
+        {
+          "monsterId": 9400560,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 1102147
+        }
+      ]
+    }
+  }
+}

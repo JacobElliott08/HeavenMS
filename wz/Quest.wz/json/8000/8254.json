@@ -1,0 +1,95 @@
+{
+  "questId": 8254,
+  "info": {
+    "name": "Collection skills",
+    "descriptions": {
+      "notStarted": "Maple Administrator saw me helping Lazy Daisy the other day and called me for something. Better check on what the Maple Administrator has to say about this matter...",
+      "inProgress": "Now I\u0027m on a quest to test my fetching skills. She said the reward would be the some Maple gears! I need to provide her:\\n\\n#i4031017# #t4031017# #c4031017# / #r1#k\\n#i4011007# #t4011007# #c4011007# / #r5#k\\n#i4021009# #t4021009# #c4021009# / #r5#k\\n#i4003002# #t4003002# #c4003002# / #r5#k\\n#i4003001# #t4003001# #c4003001# / #r5#k\\n#i4003000# #t4003000# #c4003000# / #r30#k\\n",
+      "completed": "The administrator handed me the rewards. They do seem quite modest, but I helped them, so that\u0027s nice."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "prerequisiteQuests": [
+        {
+          "questId": 8251,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 4031017
+        },
+        {
+          "itemId": 4011007,
+          "count": 5
+        },
+        {
+          "itemId": 4021009,
+          "count": 5
+        },
+        {
+          "itemId": 4003002,
+          "count": 5
+        },
+        {
+          "itemId": 4003001,
+          "count": 5
+        },
+        {
+          "itemId": 4003000,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031017
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1002508
+        },
+        {
+          "itemId": 4011007,
+          "count": -5
+        },
+        {
+          "itemId": 4021009,
+          "count": -5
+        },
+        {
+          "itemId": 4003002,
+          "count": -5
+        },
+        {
+          "itemId": 4003001,
+          "count": -5
+        },
+        {
+          "itemId": 4003000,
+          "count": -30
+        },
+        {
+          "itemId": 1082252
+        },
+        {
+          "itemId": 4031017,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

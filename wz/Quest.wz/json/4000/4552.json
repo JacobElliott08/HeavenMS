@@ -1,0 +1,46 @@
+{
+  "questId": 4552,
+  "info": {
+    "name": "My Scarfs are Stolen!",
+    "parent": "Nuri\u0027s Health and Beauty",
+    "descriptions": {
+      "notStarted": "#b#p9270059##k\u0027s jealous sisters have taken away all of her scarfs, but #b#p9270059##k won\u0027t just sit back and ruin her reputation as the hottest fashion icon in the city. What will she do?",
+      "inProgress": "#b#p9270059##k is planning to have even more #b#t4000469#s#k than before. Will she able to get them? \\n\\n#t4000469# #r#c4000469#/100#k ",
+      "completed": "#b#p9270059##k looks more fabulous than ever. You certainly did her a great favor."
+    },
+    "area": 49,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270059,
+      "minLevel": 60,
+      "prerequisiteQuests": [
+        {
+          "questId": 4551,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270059,
+      "items": [
+        {
+          "itemId": 4000469,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50500,
+      "items": [
+        {
+          "itemId": 4000469,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

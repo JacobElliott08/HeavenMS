@@ -1,0 +1,39 @@
+{
+  "questId": 29914,
+  "info": {
+    "name": "King Pirate",
+    "descriptions": {
+      "notStarted": "#b#eTitle - King Pirate#n#\\r\\n#kChallenge yourself to the #b\u003cKing Pirate\u003e#k title, given only to powerful Pirates over Lv. 200. \\r\\n●Requirement(s) : Complete #b\u003c#y29304#\u003e#k",
+      "inProgress": "..",
+      "completed": "You have accomplished something incredible. You\u0027ve reached Lv. 200! You have earned the #b\u003cKing Pirate\u003e#k title."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142013
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "normalAutoStart": true,
+      "minLevel": 180,
+      "startScript": "q29914s",
+      "items": [
+        {
+          "itemId": 1142013
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522
+      ]
+    },
+    "complete": {
+      "npc": 9000066
+    }
+  }
+}

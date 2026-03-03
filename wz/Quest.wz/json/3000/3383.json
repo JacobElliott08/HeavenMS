@@ -1,0 +1,34 @@
+{
+  "questId": 3383,
+  "info": {
+    "name": "Moren\u0027s Upset",
+    "parent": "Gordon Passes His Magic",
+    "descriptions": {
+      "notStarted": "Keol and Ramain have been concerned lately because Moren seemed to be letting out a heavy sigh every other minute. They may not try to show it, but the two are struggling right now, so for the sake of these three, I better ask Moren what\u0027s up.",
+      "inProgress": "Gordon\u0027s Secret Technique! This is something I didn\u0027t even see coming. A secret technique that even the creator of the Maker skill cannot pray away. Moren had high expectations that this technique would further advance the Maker skill. I decided to visit Gordon in El Nath without notifying Moren. Who knows, I might be the one learning that skill instead.",
+      "completed": "After calmly answering Gordon\u0027s questions, I was able to have this rolling in no time. Gordon at first seemed taken aback that the very existence of the technique had been exposed, but seemed to have gotten over it quickly. He then made a proposition where if I pass his test, then he\u0027ll share his technique with me. I wonder what that test is..."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2110004,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 6029,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000
+    }
+  }
+}

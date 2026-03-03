@@ -1,0 +1,52 @@
+{
+  "questId": 28208,
+  "info": {
+    "name": "Kyrin\u0027s Request",
+    "parent": "Commotion on the Ship",
+    "descriptions": {
+      "notStarted": "#b#@1072008:##k in #bNautilus#k says she has a favor to request of you. Let\u0027s talk to her.",
+      "inProgress": "She says there are too many #rRibbon Pigs#k near the ship, which makes loading and unloading difficult for the passengers. She would like you to hunt the #rRibbon Pigs#k.\\nYou can easily find them in #b#m100030000##k.",
+      "completed": "#b#@1072008:##k in #bNautilus#k says there was something very valuable amongst the things she\u0027s lost. She says to go talk to #b#@1092002:##k in #bNautilus#k, but there is also something you need to do first."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28207,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "monsters": [
+        {
+          "monsterId": 1210101,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1400
+    }
+  }
+}

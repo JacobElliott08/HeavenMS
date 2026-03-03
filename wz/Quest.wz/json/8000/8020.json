@@ -1,0 +1,46 @@
+{
+  "questId": 8020,
+  "info": {
+    "name": "Yoona\u0027s Quiz on Shopping : Start",
+    "parent": "Yoona\u0027s Quiz on Shopping",
+    "descriptions": {
+      "notStarted": "I should meet Yoona at Southperry for a little quiz!",
+      "inProgress": "There\u0027s a quest before the quiz starts. I better take care of that fast.",
+      "completed": "I was able to safely obtain Beginner\u0027s Guide to Shopping at the Cash Shop."
+    },
+    "area": 20,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 20100,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 20100,
+      "items": [
+        {
+          "itemId": 4031180
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8021,
+      "items": [
+        {
+          "itemId": 4031180,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

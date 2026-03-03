@@ -1,0 +1,47 @@
+{
+  "questId": 3943,
+  "info": {
+    "name": "Byron\u0027s Recommendation Letter!",
+    "descriptions": {
+      "notStarted": "I\u0027ve been here at #m260000000# for a while... suddenly, #p2101005# contacted me, wanting to meet up with me. What is it?",
+      "inProgress": "#p2101005# told me I am now ready to make the job advancement, and told me he wanted to recommend me to #p1032001# of Victoria Island. I better take Byron\u0027s Recommendation Letter and go see #b#p1032001##k.",
+      "completed": "I showed #p1032001# the recommendation letter written by #p2101005#. #p1032001# told me he trusts #p2101005#\u0027s opinions, and told me to drop by whenever I am ready to make the advancement."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101005,
+      "minLevel": 30,
+      "jobs": [
+        200
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "items": [
+        {
+          "itemId": 4031621
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031621
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 4031621,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

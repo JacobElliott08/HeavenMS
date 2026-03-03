@@ -1,0 +1,32 @@
+{
+  "questId": 6160,
+  "info": {
+    "name": "Robeira\u0027s Book",
+    "parent": "Shammos\u0027s past",
+    "descriptions": {
+      "notStarted": "#p2020009# says she has something he wants to tell me...perhaps I should pay him a visit and see what could be so important. ",
+      "inProgress": "#p2020009# said she has a book she really wants to show me and told me to see #b#p2040052##k in the Helios Tower. I wonder why she dropped off the book there? Maybe the information is meant to kept secret...",
+      "completed": "#p2040052# agreed to find the book for me. I wonder what the book says, must be important..."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020009,
+      "jobs": [
+        212,
+        222,
+        232
+      ]
+    },
+    "complete": {
+      "npc": 2040052
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200000
+    }
+  }
+}

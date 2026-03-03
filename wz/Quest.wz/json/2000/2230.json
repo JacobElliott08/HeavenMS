@@ -1,0 +1,38 @@
+{
+  "questId": 2230,
+  "info": {
+    "name": "A Mysterious Small Egg",
+    "descriptions": {
+      "notStarted": "It sounds like someone is calling out my name. The dreamy eyes... the luscious purple hair... who are you?",
+      "inProgress": "The fairy with the dreamy eyes... and the luscious purple hair talked for a bit, but it wasn\u0027t understandable at all. After the fairy disappeared, I found a #bMysterious Small Egg#k inside my inventory. Didn\u0027t she say something about it being my friend...? Anyway, better go visit the fairy at #bEllinia#k, the town of Fairies.\\r\\n#b\u003cMessage from the Fairy\u003e\\nThe purple bellflower that soaks in the sun in between the skyscraping trees...Follow the path to the unknown that leads you to the bellflower. I will wait for you here.",
+      "completed": "The fairy with the dreamy eyes... and the luscious purple hair talked for a bit, but it wasn\u0027t understandable at all. After the fairy disappeared, I found a Mysterious Small Egg inside my inventory. Reliving the message the Fairy left for me, I went to the area and found Mar the Fairy hiding behind a huge bellflower. Mar mentioned something about being responsible for taking care of a living being, and then gave me a pet as a gift. The mysterious small egg turned out to be a Snail\u0027s egg.\\r\\nAlong with a message that this small snail can only be with me for 5 hours."
+    },
+    "area": 30,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032102,
+      "minLevel": 15,
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 1032102,
+      "endScript": "q2230e",
+      "items": [
+        {
+          "itemId": 4032086
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032086
+        }
+      ]
+    }
+  }
+}

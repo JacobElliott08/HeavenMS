@@ -1,0 +1,32 @@
+{
+  "questId": 21101,
+  "info": {
+    "name": "The Polearm-Wielding Hero",
+    "descriptions": {
+      "notStarted": "Apparently, a hero\u0027s weapon can recognize its owner, which means the weapon would react the moment you touched it...if you were indeed the hero that wielded a polearm, that is. You should head to town and click on #b#p1201001##k.",
+      "inProgress": "The moment you touch the #p1201001#, you feel memories flood through you, but you aren\u0027t sure if you\u0027re really reminiscing or just imagining things. You should try holding the #p1201001# one more time.",
+      "completed": "You remembered a time when you held the weapon, flashbacks of gripping the polearm in your two hands…while standing in front of the Black Mage. Yes, you were Aran, the warrior that wielded the polearm to perfection."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201001,
+      "startScript": "q21101s",
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 21100,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2000
+      ]
+    },
+    "complete": {
+      "npc": 1201001,
+      "endScript": "q21101e"
+    }
+  }
+}

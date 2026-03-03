@@ -1,0 +1,48 @@
+{
+  "questId": 2072,
+  "info": {
+    "name": "Stranger\u0027s Identity",
+    "parent": "Mystery of Naora Hospital",
+    "descriptions": {
+      "inProgress": "The Stranger I met in Naora Hospital was shockingly a Ghost! She was waiting for Naora, not knowing that she herself is dead... This Stranger wouldn\u0027t believe that she is dead. She told me that she needs #b100 Charms of the Undead#k in order to live again, and asked me to find it. Can she really live again with just these...? \\n\\n#t4000008# #c4000008#/100",
+      "completed": "#p1052105# who I met in Naora Hospital was a Ghost. She was staying in the Hospital, not knowing that she\u0027s dead. She couldn\u0027t live again with #t4000008#. It seems that she already knew she couldn\u0027t make it...I really hope she returns to heaven."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052105,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 2071,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052105,
+      "items": [
+        {
+          "itemId": 4000008,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 4000008,
+          "count": -100
+        },
+        {
+          "itemId": 1102053
+        }
+      ]
+    }
+  }
+}

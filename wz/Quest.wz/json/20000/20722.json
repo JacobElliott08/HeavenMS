@@ -1,0 +1,72 @@
+{
+  "questId": 20722,
+  "info": {
+    "name": "Wooden Mask",
+    "descriptions": {
+      "notStarted": "I better ask Agent #b#p1103004##k of #m102000000# about the new assignment.",
+      "inProgress": "#p1103004# told me something\u0027s not right in #b#m101030102##k, and wanted me to go there and eliminate #r#o2230110#s#k. After eliminating #r#o2230110##k, I also have to bring back #b#t4032146##k... \\n\\n#o2230110##r #a207221##k \\n#i4032146# #t4032146# #b#c4032146# / 1#k",
+      "completed": "I was able to eliminate #o2230110#s and brought back #b#t4032146##k. #p1103004# had a serious look on his face while looking at the detector..."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103004,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 20721,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1103004,
+      "items": [
+        {
+          "itemId": 4032146
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 2230110,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 4032146,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

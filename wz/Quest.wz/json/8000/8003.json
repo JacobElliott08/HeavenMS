@@ -1,0 +1,33 @@
+{
+  "questId": 8003,
+  "info": {
+    "name": "Grako\u0027s Request 2",
+    "parent": "Find Mariwaka\u0027s Purse!",
+    "descriptions": {
+      "inProgress": " I heard Grako\u0027s best friend #bMariwaka#k, who resides in Showa Town, is going through some hard times. I better go there and check it out myself.",
+      "completed": "I met up with Mariwaka. Yeah, it looks like something\u0027s troubling her..."
+    },
+    "area": 48,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120018,
+      "minLevel": 45,
+      "prerequisiteQuests": [
+        {
+          "questId": 8002,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120016
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8004
+    }
+  }
+}

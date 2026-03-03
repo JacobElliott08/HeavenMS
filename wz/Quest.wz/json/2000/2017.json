@@ -1,0 +1,113 @@
+{
+  "questId": 2017,
+  "info": {
+    "name": "Arwen and the Glass Shoe",
+    "descriptions": {
+      "notStarted": "I heard that Arwen the fairy from Ellinia has lost something...",
+      "inProgress": "Arwen the fairy from Ellinia told me that a couple of days ago, on the way to Perion, she was attacked by a monster covered in flame, and lost her very precious #bglass shoe#k in the process. Fairies love glimmering, shiny objects to the point of obsession, so obviously she wants it back badly ... I better hunt some monsters around Perion, and hopefully I can find it there.",
+      "completed": "I got Arwen from Ellinia the glass shoe she desperately wanted back. I got lucky, finding it from a nasty Fireboar ... phew. Anyway, as a sign of gratitude, she gave me a fairy item. It\u0027s really gorgeous and glimmering like a star ... dang, maybe I can use this to make something special ..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032100,
+      "minLevel": 25,
+      "repeatIntervalMinutes": 0,
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1032100,
+      "items": [
+        {
+          "itemId": 4001000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4000,
+      "items": [
+        {
+          "itemId": 4001000,
+          "count": -1
+        },
+        {
+          "itemId": 4003002,
+          "probability": 1
+        },
+        {
+          "itemId": 4003003,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

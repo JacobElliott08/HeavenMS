@@ -1,0 +1,127 @@
+{
+  "questId": 2023,
+  "info": {
+    "name": "Returned Secret Book",
+    "parent": "Mr. Wetbottom\u0027s Secret Book",
+    "descriptions": {
+      "inProgress": "I got Ronnie some yummy food for the Secret Book. I want to peek inside...",
+      "completed": "I got Mr. Wetbottom the precious Secret Book that he\u0027d been desperately looking for. I asked him if he\u0027s worried about Ronnie at all, only to hear that he\u0027ll be in good hands with the fairies... well, it\u0027d be best for Ronnie to be with the fairies, right? Anyway, I got the sauna clothes in return for the book... I guess wearing these cumbersome armors around sauna is a ridiculous thing to do. Might as well enjoy it now and chill here at the sauna..."
+    },
+    "area": 30,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061004,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 2020,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1061003,
+      "items": [
+        {
+          "itemId": 4031016
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031016
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 5000,
+      "meso": 10000,
+      "items": [
+        {
+          "itemId": 4031016,
+          "count": -1
+        },
+        {
+          "itemId": 1050018,
+          "gender": 0
+        },
+        {
+          "itemId": 1051017,
+          "gender": 1
+        }
+      ]
+    }
+  }
+}

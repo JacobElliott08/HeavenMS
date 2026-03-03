@@ -1,0 +1,53 @@
+{
+  "questId": 21617,
+  "info": {
+    "name": "Reacquiring the Life Water Ingredients",
+    "descriptions": {
+      "notStarted": "You need to make the #t4032334# again.  You know #b#p2060005##k in the #b#m230000003# of #m230000000##k sells this so you\u0027d better go see #p2060005# for another #t4032335#.",
+      "inProgress": "#p2060005# tells you it\u0027ll cost you 100 million mesos to buy the #t4032335# because the supply has become more limited since the last time you purchased it.\\r\\n\\r\\n#b100 million mesos#k",
+      "completed": "You paid #p2060005# 100 million mesos and purchased the #t4032335#... You\u0027d better make some #t4032334# right now."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "minLevel": 150,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 21616,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032334
+        },
+        {
+          "itemId": 4032335
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2060005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -100000000,
+      "items": [
+        {
+          "itemId": 4032335
+        }
+      ]
+    }
+  }
+}

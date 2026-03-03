@@ -1,0 +1,48 @@
+{
+  "questId": 9192,
+  "info": {
+    "name": "엘마의 일 돕기",
+    "parent": "엘마의 추석",
+    "descriptions": {
+      "inProgress": "엘마를 도와 루나픽시의 달조각 20개를 모아주기로 하였다. \\n\\n#k#t4000060:# #b#c4000060#/20#k",
+      "completed": "엘마를 도와 루나픽시의 달조각 20개를 모아주었다."
+    },
+    "area": 50,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012010,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2007092000",
+      "endDate": "2007100800",
+      "prerequisiteQuests": [
+        {
+          "questId": 9191,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012010,
+      "items": [
+        {
+          "itemId": 4000060,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4000060,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

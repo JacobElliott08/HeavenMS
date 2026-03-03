@@ -1,0 +1,85 @@
+{
+  "questId": 2038,
+  "info": {
+    "name": "Third Material for Building a New House",
+    "parent": "Ronnie \u0026 the Fairies Building a New House.",
+    "descriptions": {
+      "inProgress": "This time Ronnie wanted #b50 each of Drake\u0027s skull, Stone Gollem\u0027s pieces of rock, the skin of Croko, and Lupin\u0027s banana#k. I can probably get those from the monsters at the ant hole, prarie, and at swamp...this is getting quite difficult now...",
+      "completed": "I got them all for Ronnie. I\u0027m still not getting anything?? How many more times do I have to do this??"
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061004,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2037,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1061004,
+      "items": [
+        {
+          "itemId": 4000029,
+          "count": 50
+        },
+        {
+          "itemId": 4000014,
+          "count": 50
+        },
+        {
+          "itemId": 4000022,
+          "count": 50
+        },
+        {
+          "itemId": 4000033,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4000014,
+          "count": -50
+        },
+        {
+          "itemId": 4000022,
+          "count": -50
+        },
+        {
+          "itemId": 4000033,
+          "count": -50
+        },
+        {
+          "itemId": 4000029,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

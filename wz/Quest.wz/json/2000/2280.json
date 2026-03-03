@@ -1,0 +1,61 @@
+{
+  "questId": 2280,
+  "info": {
+    "name": "Costume Preparation",
+    "descriptions": {
+      "notStarted": "Lala is thrilled to hear that Blake is finally making his debut and happily agrees to help with the costumes. Assist #bLala#k to prepare the costumes.",
+      "inProgress": "Collect the costumes and props for Blake\u0027s debut performance and take them over to #bLala#k.",
+      "completed": "#bLala#k was thrilled to hear about Blake\u0027s debut and asked you to give her some time to think about which costumes would be best for the performance."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052119,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2279,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052119,
+      "items": [
+        {
+          "itemId": 4000525,
+          "count": 50
+        },
+        {
+          "itemId": 4000526,
+          "count": 50
+        },
+        {
+          "itemId": 4000527,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 16700,
+      "items": [
+        {
+          "itemId": 4000525,
+          "count": -50
+        },
+        {
+          "itemId": 4000526,
+          "count": -50
+        },
+        {
+          "itemId": 4000527,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

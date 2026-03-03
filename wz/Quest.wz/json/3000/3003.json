@@ -1,0 +1,70 @@
+{
+  "questId": 3003,
+  "info": {
+    "name": "Returning to Master Sergeant Fox",
+    "parent": "Alpha Platoon\u0027s Network of Communication",
+    "descriptions": {
+      "notStarted": "",
+      "inProgress": "Master Sergeant Fox asked me to meet #bStaff Sergeant Charlie, Sergeant Bravo, and Corporal Easy#k in order. I met them all just as Master Sergeant Fox told me. I should be returning to him right away.",
+      "completed": "Just like the way Master Sergeant Fox requested, I met his men in order of ranks and got the 3 pieces of an ancient document to him. He was really happy about it, and gave me the scroll made out of those pieces. He also wished that I could drop by sometime later and see how the other men are doing...maybe I should..."
+    },
+    "area": 33,
+    "order": 7
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030002,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 3041,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020003,
+      "items": [
+        {
+          "itemId": 4031049,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031049
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 7000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 2040704,
+          "probability": 1
+        },
+        {
+          "itemId": 2040705,
+          "probability": 1
+        },
+        {
+          "itemId": 2040707,
+          "probability": 1
+        },
+        {
+          "itemId": 2040708,
+          "probability": 1
+        },
+        {
+          "itemId": 4031049,
+          "count": -3
+        }
+      ]
+    }
+  }
+}

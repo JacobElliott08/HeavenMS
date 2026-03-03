@@ -1,0 +1,49 @@
+{
+  "questId": 28193,
+  "info": {
+    "name": "Virus is Spreading Via the Water?",
+    "parent": "The Cause of Sickness",
+    "descriptions": {
+      "notStarted": "#b#@1052001:##k in #bKerning City#k says he\u0027s completed his Sample analysis. Let\u0027s make a trip to see what he\u0027s discovered.",
+      "inProgress": "The virus had been spreading through the water. Let\u0027s talk to #b#@9201120:##k in #bKerning City#k.",
+      "completed": "#b#@9201120:##k in #bKerning City#k says he might have seen something strange near the Water Pipe."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "prerequisiteQuests": [
+        {
+          "questId": 28192,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 9201120
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

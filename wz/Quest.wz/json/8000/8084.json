@@ -1,0 +1,42 @@
+{
+  "questId": 8084,
+  "info": {
+    "name": "Sophia\u0027s Snack",
+    "descriptions": {
+      "notStarted": "#r#p1022100##k seems very fatigued.",
+      "inProgress": " In order to make a tasty #r#t2010005##k, she\u0027ll need #b20#k #b#t2012002#s#k. I should take out the monsters around the stump area, and I\u0027ll get them in no time.\\n#b#t2012002# #b#c2012002##k/20",
+      "completed": "I received #r#t2010005##k as promised. It tasted great, and I feel rejuvenated!"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022100,
+      "minLevel": 18
+    },
+    "complete": {
+      "npc": 1022100,
+      "items": [
+        {
+          "itemId": 2012002,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "items": [
+        {
+          "itemId": 2012002,
+          "count": -20
+        },
+        {
+          "itemId": 2010005,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

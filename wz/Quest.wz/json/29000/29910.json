@@ -1,0 +1,42 @@
+{
+  "questId": 29910,
+  "info": {
+    "name": "Gallant Warrior",
+    "descriptions": {
+      "notStarted": "#b#eTitle - Gallant Warrior#n#\\r\\n#kChallenge yourself to the  #b\u003cGallant Warrior\u003e#k title, given only to powerful Warriors over Lv. 200.\\r\\n●Requirement(s) : Complete #b\u003c#y29300#\u003e#k ",
+      "inProgress": "..",
+      "completed": "You have accomplished something incredible. You\u0027ve reached Lv. 200! You have earned the #b\u003cGallant Warrior\u003e#k title."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142009
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "normalAutoStart": true,
+      "minLevel": 180,
+      "startScript": "q29910s",
+      "items": [
+        {
+          "itemId": 1142009
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132
+      ]
+    },
+    "complete": {
+      "npc": 9000066
+    }
+  }
+}

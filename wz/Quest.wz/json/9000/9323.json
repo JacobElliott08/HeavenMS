@@ -1,0 +1,54 @@
+{
+  "questId": 9323,
+  "info": {
+    "name": "메이플스토리 1000일 기념 깃발",
+    "parent": "메이플스토리 1000일 기념 이벤트",
+    "descriptions": {
+      "notStarted": "그윈이 무언가 감사의 표시를 하고 싶어하는 것 같다.",
+      "inProgress": "그윈이 감사의 표시로 내가 갖고 있던 메이플스토리 1000일 기념 깃발에 이동속도 옵션을 15로 증가시켜겠다고 하는데...",
+      "completed": "그윈이 감사의 표시로 내가 갖고 있던 메이플스토리 1000일 기념 깃발에 이동속도 옵션을 15로 증가시켜 주었다."
+    },
+    "area": 50,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061013,
+      "endDate": "2006020100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9322,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1302035
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061013,
+      "items": [
+        {
+          "itemId": 1302035
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "meso": 1000,
+      "items": [
+        {
+          "itemId": 1302035,
+          "count": -1
+        },
+        {
+          "itemId": 1302036
+        }
+      ]
+    }
+  }
+}

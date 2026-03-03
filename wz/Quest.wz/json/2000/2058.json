@@ -1,0 +1,39 @@
+{
+  "questId": 2058,
+  "info": {
+    "name": "Special Taste of Florina Beach",
+    "descriptions": {
+      "notStarted": "A beautiful girl by the name of Riel from Florina Beach seems to be in need of help...",
+      "inProgress": "Riel introduced me to a part time job, where I have to collect #b10 Coconuts#k. Why don\u0027t I start collecting those delicious looking Coconuts over there on the right?\\n\\n#t4000136# #c4000136#/10",
+      "completed": "I brought back fresh coconuts just like Riel said.  Riel told me I can come back for work anytime I want. I guess I won\u0027t be starving here in Florina Beach."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1081100,
+      "minLevel": 35
+    },
+    "complete": {
+      "npc": 1081100,
+      "items": [
+        {
+          "itemId": 4000136,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "meso": 500,
+      "items": [
+        {
+          "itemId": 4000136,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "questId": 3643,
+  "info": {
+    "name": "Fox\u0027s Threat",
+    "parent": "Legends of Hometown",
+    "descriptions": {
+      "inProgress": "The God of Mountains, in shambles, was in deep thought. According to his story, a fox becomes an evil Old Fox after a long period of training. Chil Nam seems to have been possessed by this Old Fox. But the God of Mountains says he cannot defeat the Old Fox with his current powers and needs my help. \\n\\nGod of Mountains says the old members of Kamak Mountain, the #bGoblins#k, may know something about the Old Fox. Let\u0027s go see the goblins at #bDokebi House, near the Haunted House#k, and ask about how to defeat the Old Fox while the God of Mountains finds a way to break the Old Fox\u0027s spell.",
+      "completed": "Fortunately, the goblins shared their secret on how to defeat the Old Fox. The God of Mountains was relieved to hear the good news, and urged me to go tell Chil Sung about it. However, even if I told him how to defeat the Old Fox, is Chil Sung up to grab the Old Fox\u0027s tail?"
+    },
+    "area": 37,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071010,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3642,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071010,
+      "prerequisiteQuests": [
+        {
+          "questId": 3644,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3645,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3646,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 700
+    }
+  }
+}

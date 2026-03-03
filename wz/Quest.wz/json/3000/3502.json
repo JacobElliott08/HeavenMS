@@ -1,0 +1,43 @@
+{
+  "questId": 3502,
+  "info": {
+    "name": "The One Who Walks Down Memory Lane2",
+    "descriptions": {
+      "notStarted": "As #p2140000# said, I was able to pass #m270010100# and go all the way to #m270010200#.  But I couldn\u0027t move beyond that... I thought I was given permission, what\u0027s going on?  I\u0027m going to have to complain to #b#p2140000##k.",
+      "inProgress": "He said the permission he gave me was only up to #m270010200#, and that if I wanted to go in further,  I would have to prove myself for that as well.  When I told him that I definitely want to explore more, he said to go to #b#m270010200##k this time and defeat #r999 #o8200002##k... \\n\\n#o8200002# #r#a35021##k",
+      "completed": "I defeated 999 #o8200002#.  #p2140000# was once again impressed and granted me permission.  I get a feeling that this permission is only good up to #m270010300#.  If I want to go in further, will I have to prove my strength again?"
+    },
+    "area": 46
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140000,
+      "minLevel": 94,
+      "prerequisiteQuests": [
+        {
+          "questId": 3501,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2140000,
+      "monsters": [
+        {
+          "monsterId": 8200002,
+          "count": 999
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 222700,
+      "items": [
+        {
+          "itemId": 4021001
+        }
+      ]
+    }
+  }
+}

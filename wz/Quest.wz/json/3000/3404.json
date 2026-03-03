@@ -1,0 +1,48 @@
+{
+  "questId": 3404,
+  "info": {
+    "name": "Dr. Kim\u0027s Comments : A Meeting with Gunny",
+    "parent": "Dr. Kim\u0027s Comments",
+    "descriptions": {
+      "inProgress": "I met up with Gunny at a field around Omega Sector, handed him his #bLaser gun#k, and showed him the #bBlueprint Machine#k. Gunny appreciated my effort and requested that I report this all to Dr. Kim. This Command Center warp capsule seems like a useful item.",
+      "completed": "As Dr. Kim requested from the Command Center in the Omega Sector, I showed the blueprint of the new robot to Chury, Hoony, and Gunny, while simultaneously solving their problems. Dr. Kim was very pleased with the results, and wanted me to drop by again sometime, for he could use my help."
+    },
+    "area": 37,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050007,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3403,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050001
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031100
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 4500,
+      "meso": 12000,
+      "fame": 2,
+      "items": [
+        {
+          "itemId": 4031100,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

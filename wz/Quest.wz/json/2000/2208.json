@@ -1,0 +1,45 @@
+{
+  "questId": 2208,
+  "info": {
+    "name": "Bartol\u0027s Requests",
+    "descriptions": {
+      "notStarted": "If I\u0027m passing through the central corridors of The Nautilus, I should make sure to stop by and see Bartol. He said he could teach me an easier way to get there... ",
+      "inProgress": "Well, Bartol says that if I fulfill his request then he would give me a coupon that would allow me to use the warp machine to be warped to the Omega Sector. He says that he has some business to attend to with Shulynch, Muirhat and Black Bark and could use my help... ",
+      "completed": "I fulfilled Bartol\u0027s request and received the Omega Sector Warp Coupon in return. I can use this coupon to use the Warp Machine in The Nautilus\u0027 Control Room to be warped immediately to the Omega Sector.  "
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092011,
+      "minLevel": 30
+    },
+    "complete": {
+      "npc": 1092011,
+      "prerequisiteQuests": [
+        {
+          "questId": 2209,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2210,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2211,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4031890
+        }
+      ]
+    }
+  }
+}

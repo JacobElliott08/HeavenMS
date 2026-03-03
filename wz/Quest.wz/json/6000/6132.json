@@ -1,0 +1,53 @@
+{
+  "questId": 6132,
+  "info": {
+    "name": "Cold Flame",
+    "parent": "Caron\u0027s Notebook",
+    "descriptions": {
+      "inProgress": " I found an altar within a deep sea cavern that was emitting cold energy. If I start a cold fire and throw in the black book, I should find out more about the content inside--but what to do after? Perhaps taking the new book to #b#p2060100##k will yield answers. \\n\\n#i4161017##t4161017# #b#c4161017# / 1#k",
+      "completed": "The book\u0027s identity has been revealed. It was #bCaron\u0027s Note#k! One journey ends as another begins...now to find out more!"
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060100,
+      "jobs": [
+        232
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6131,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060100,
+      "items": [
+        {
+          "itemId": 4161017
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4001108
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 500000,
+      "items": [
+        {
+          "itemId": 4161017,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

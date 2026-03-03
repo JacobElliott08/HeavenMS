@@ -1,0 +1,27 @@
+{
+  "questId": 29918,
+  "info": {
+    "name": "Perion Donor Medal",
+    "descriptions": {
+      "completed": "Donations are a quick way to give back to the community. You have earned the #b\u003cPerion Donor\u003e#k title."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142016
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "normalAutoStart": true,
+      "startScript": "q29918s",
+      "items": [
+        {
+          "itemId": 1142016
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000066
+    }
+  }
+}

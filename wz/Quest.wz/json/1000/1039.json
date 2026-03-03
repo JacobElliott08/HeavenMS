@@ -1,0 +1,39 @@
+{
+  "questId": 1039,
+  "info": {
+    "name": "Helping Out Yoona",
+    "descriptions": {
+      "notStarted": "Apparently #bYoona#k is in a bit of trouble after wandering outside Amherst.",
+      "inProgress": "Yoona obviously didn\u0027t think it\u0027d be all that when she left town, only to realize that there were lots of monsters outside. To help her return home, she asked me to take care of some#rBlue Snails#k and #rShrooms#k.\\n\\nBlue Snail #r#a10391##k  \\nShroom #r#a10392##k",
+      "completed": "I told Yoona that I have taken care of some Blue Snails and Shrooms."
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 20100,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 20100,
+      "monsters": [
+        {
+          "monsterId": 100101,
+          "count": 10
+        },
+        {
+          "monsterId": 120100,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100
+    }
+  }
+}

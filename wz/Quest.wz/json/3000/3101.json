@@ -1,0 +1,47 @@
+{
+  "questId": 3101,
+  "info": {
+    "name": "Hughes\u0027s New Experiement",
+    "descriptions": {
+      "notStarted": "I heard #b#p2060006##k is in need of help...",
+      "inProgress": "For all the travelers visiting the beach, #p2060006# requested the antidote for #o4230201# to #p2012017#. For his studies, #b#p2012017##k needs #b100 #t4000158#s#k and #b100 #t4000159#s#k. \\n\\n#i4000158# #t4000158#  #b#c4000158##k / 100 \\n#i4000159# #t4000159#  #b#c4000159##k / 100",
+      "completed": "I gave #p2012017# all the materials needed to continue his research. I thought he was nothing but a lunatic scientist, but... maybe not."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060006,
+      "minLevel": 42
+    },
+    "complete": {
+      "npc": 2012017,
+      "items": [
+        {
+          "itemId": 4000158,
+          "count": 100
+        },
+        {
+          "itemId": 4000159,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 28290,
+      "fame": 3,
+      "items": [
+        {
+          "itemId": 4000158,
+          "count": -100
+        },
+        {
+          "itemId": 4000159,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

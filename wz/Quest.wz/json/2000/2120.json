@@ -1,0 +1,38 @@
+{
+  "questId": 2120,
+  "info": {
+    "name": "The Messenger of the Fairy Forest 1",
+    "parent": "The Messenger of the Fairy Forest",
+    "descriptions": {
+      "notStarted": "#p1032001#, the chief of #m101000000#, apparently wants my help. I better go see\\n#p1032001#.",
+      "inProgress": "#m101000000#\u0027s chief #p1032001# needed a favor, so I went. #p1032001# said when I go to #b#m240000000##k in Ossyria, and I need to see  #m240000000#. I\u0027d better hurry!",
+      "completed": "I received a request from the chief of #m101000000# and headed over to see #p1032001# as their messenger. #p1032001# was worried I may get lost on the way."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3242
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 2121,
+      "items": [
+        {
+          "itemId": 4161013
+        }
+      ]
+    }
+  }
+}

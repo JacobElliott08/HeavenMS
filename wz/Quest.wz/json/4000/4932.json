@@ -1,0 +1,43 @@
+{
+  "questId": 4932,
+  "info": {
+    "name": "Grendel The Really Old\u0027s Glorious Days",
+    "descriptions": {
+      "notStarted": "Grendel The Really Old... He lives deep in the forest of Ellinia. Since he\u0027s really old, he has to know SOMETHING about Bob. I shall see him now.",
+      "inProgress": "Grendel The Really Old was talking out of himself but I got to make him hear what I had to say. He is getting glasses. I hope his eyesight isn\u0027t too bad to recognize Bob... After all, Grendel is probably the oldest guy in this world.",
+      "completed": "Grendel The Really Old got very mad at me for hitting Bob to make him go into his shell. I knew he would know something but never would have guessed they were old friends. I guess I owe Bob a big apology. But how am I going to be able to do that to a snail, especially if he\u0027s not coming out from his shell?"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 4928,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800,
+      "fame": 1
+    }
+  }
+}

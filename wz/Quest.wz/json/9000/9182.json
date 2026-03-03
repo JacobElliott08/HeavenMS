@@ -1,0 +1,41 @@
+{
+  "questId": 9182,
+  "info": {
+    "name": "이얀의 일 돕기",
+    "parent": "이얀의 추석",
+    "descriptions": {
+      "inProgress": "이얀은 페리온 주변에 나타나 사람들을 괴롭히는 와일드보어 30마리를 퇴치해줄 것을 부탁했다. \\n\\n#o2230102# #r#a91821##k",
+      "completed": "이얀의 일을 도와 페리온 주변에 나타나는 와일드 보어를 처치하였다."
+    },
+    "area": 50,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022007,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2007092000",
+      "endDate": "2007100800",
+      "prerequisiteQuests": [
+        {
+          "questId": 9181,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022007,
+      "monsters": [
+        {
+          "monsterId": 2230102,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 11300
+    }
+  }
+}

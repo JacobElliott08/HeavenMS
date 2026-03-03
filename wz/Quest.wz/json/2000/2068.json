@@ -1,0 +1,34 @@
+{
+  "questId": 2068,
+  "info": {
+    "name": "Research on Animal Fossils",
+    "parent": "Dr. Betty\u0027s Research on Fossils",
+    "descriptions": {
+      "inProgress": "Dr. Betty in Ellinia told me that she needs #b1 #t4031151##k for her research. She asked me to find her daughter near Henesys, and bring it back to her. Where would Anne be?",
+      "completed": "I met Dr.Betty\u0027s daughter, Ann, playing near Henesys by herself."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032104,
+      "minLevel": 22,
+      "prerequisiteQuests": [
+        {
+          "questId": 2067,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012110
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "nextQuest": 2069
+    }
+  }
+}

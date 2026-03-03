@@ -1,0 +1,61 @@
+{
+  "questId": 28250,
+  "info": {
+    "name": "The Mystery of the White Portion",
+    "parent": "Unveiling the Map",
+    "descriptions": {
+      "notStarted": "#b#@1052001:##k in #bKerning City#k says he may be able to reveal the white portion of the #rDirty Treasure Map#k. Let\u0027s talk to him.",
+      "inProgress": "#b#@1052001:##k in #bKerning City#k has asked you to bring him #rInk#k (a drop item from #rOctopuses#k) in order to uncover the mystery of the Treasure Map. He says there is a hidden portal that will take you to a location filled with #rOctopuses#k near the yellow barricade in #b#m103010000##k.\\n\\nReport back to #b#@1052001:##k in #bKerning City#k upon completion.",
+      "completed": "The #rDirty Treasure Map#k is covered in Green, Red, and White.\\n\\nGreen was removed from the map using the Slime Eraser.\\nRed was vaporized by the Flint, and the curse of the animal\u0027s blood was released using Ayan Mercury\u0027s Microphone.\\nWhite, after being sprayed with the special Ink, quickly revealed the map.\\n\\nThe map has finally been completed!"
+    },
+    "area": 10,
+    "order": 8
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "prerequisiteQuests": [
+        {
+          "questId": 28249,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1052001,
+      "items": [
+        {
+          "itemId": 4001361,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1400,
+      "items": [
+        {
+          "itemId": 4001361,
+          "count": -20
+        },
+        {
+          "itemId": 4032489
+        }
+      ]
+    }
+  }
+}

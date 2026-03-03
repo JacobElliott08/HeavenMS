@@ -1,0 +1,59 @@
+{
+  "questId": 21603,
+  "info": {
+    "name": "Ryko the Wolf Pup",
+    "descriptions": {
+      "notStarted": "Is the #t4032332# ready? You should talk to #b#p2060000##k of #b#m230010201##k.",
+      "inProgress": "You receive the completed #t4032332# from #p2060000#. This should be enough to raise the Wolf Pup for a bit. You should head to #b#m140000000##k right away and give #b#p1202007##k the formula. Pucci is probably waiting somewhere around the #bSnowy Field 2#k.",
+      "completed": "Having finished the formula, the Wolf Pup seemed to have taken a liking toward you. #p1202007# ended up giving you the wolf pup, which he named #t1902015#, to raise. You vow to take good care of him."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060000,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 21601,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1202007,
+      "items": [
+        {
+          "itemId": 4032332
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032332
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032332,
+          "count": -1
+        },
+        {
+          "itemId": 1902015
+        }
+      ]
+    }
+  }
+}

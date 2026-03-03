@@ -1,0 +1,33 @@
+{
+  "questId": 8010,
+  "info": {
+    "name": "Dealing with Boss Kitty",
+    "parent": "Sakura, the Kitty, and the Orange Marble",
+    "descriptions": {
+      "notStarted": "Now I must try to talk with the Boss Kitty to propose a deal for that Orange Marble...",
+      "inProgress": "I could understand what the Boss Kitty said, but in order to regain #bOrange Marble#k, I\u0027ll have to perform a task first.",
+      "completed": "I\u0027ll have to answer every single question fired by the Boss Kitty right. Not only that, in order to even start the quiz, it\u0027ll require #b300 Fried Chickens#k. Crazy...I know cats love birds, but that\u0027s ridiculous..."
+    },
+    "area": 30,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120013,
+      "prerequisiteQuests": [
+        {
+          "questId": 8019,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120013
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8012
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "questId": 4930,
+  "info": {
+    "name": "The Rememberer\u0027s Passion Part 1",
+    "parent": "The Rememberer\u0027s Passion",
+    "descriptions": {
+      "notStarted": "The Rememberer sure would know who Bob is. He\u0027s the Rememberer! I should talk with The Rememberer to find out what he knows.",
+      "inProgress": "The Rememberer isn\u0027t relly being helpful today. Very slow talking, not really informative. I wonder why he is so... depres",
+      "completed": "He is MEAN! MEAN, MEAN, MEAN! He took away Bob\u0027s Snail Shell from me wtihout me letting him! Now, what do I have to do?"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 4928,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200,
+      "fame": -5,
+      "items": [
+        {
+          "itemId": 4031447,
+          "count": 0
+        }
+      ]
+    }
+  }
+}

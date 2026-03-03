@@ -1,0 +1,118 @@
+{
+  "questId": 2074,
+  "info": {
+    "name": "Find the Maple History Book",
+    "descriptions": {
+      "notStarted": "Jay of Henesys has something to ask regarding the Maple History Book.",
+      "inProgress": "#p1012109# of Henesys asked if I could find #b#t4031157##k, #b#t4031158##k, #b#t4031159##k and give them to #b#p2041022##k of Ludibrium. #b#t4031157##k was the one that went missing in on the way to Orbis; #b#t4031158##k being kept at a treasure chest at Grendel the Really Old\u0027s house in Ellinia; and #b#t4031159##k, apparently being stolen by the Chronos",
+      "completed": "I gathered up all 3 Maple History Books, gathered them up, and handed them to #p2041022# of Ludibrium."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012109,
+      "minLevel": 25,
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2041022,
+      "items": [
+        {
+          "itemId": 4031157
+        },
+        {
+          "itemId": 4031158
+        },
+        {
+          "itemId": 4031159
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "items": [
+        {
+          "itemId": 4031157,
+          "count": -1
+        },
+        {
+          "itemId": 4031158,
+          "count": -1
+        },
+        {
+          "itemId": 4031159,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "questId": 3042,
+  "info": {
+    "name": "Delivering a Mysterious Item",
+    "parent": "To the New World",
+    "descriptions": {
+      "notStarted": "I should go see Wing the Fairy, who should be in Ellinia.",
+      "inProgress": "I met up with Wing the Fairy of Ellinia. He grabbed me and asked me if I wanted to explore to a new world and train myself there. Unfortunately, that\u0027s not what he really meant by it. He just wanted me to be the delivery person and get this item to his friend #bKriel the Fairy#k in Orbis.",
+      "completed": "I went to Orbis and gave Kriel the Fairy a bottle of Tears of Kelvelos."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032106,
+      "minLevel": 40
+    },
+    "complete": {
+      "npc": 2012011,
+      "items": [
+        {
+          "itemId": 4031197
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031197
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 2000,
+      "nextQuest": 3043,
+      "items": [
+        {
+          "itemId": 4031197,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

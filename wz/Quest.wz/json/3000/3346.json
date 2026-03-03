@@ -1,0 +1,38 @@
+{
+  "questId": 3346,
+  "info": {
+    "name": "The Brutal Truth",
+    "parent": "Dr. De Lang\u0027s Notes",
+    "descriptions": {
+      "inProgress": "#m261000000#, the town of alchemists, has a dark history that had been hidden away from the public. #m261000000# was built where the Black Magician\u0027s Lab was a long time ago, when the Wizard ruled all of Ossyria. The town was initially growing with the experiments conducted by the Black Magician as foundation. If this fact is ever let out to the public, the damage to #m261000000#\u0027s reputation might be irreputable, they say...",
+      "completed": "#p2111002#, the missing alchemist ... His beginning of the tragedy might have stemmed from the town of #m261000000# in itself. The end of this story is..."
+    },
+    "area": 44,
+    "order": 8
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "minLevel": 75,
+      "prerequisiteQuests": [
+        {
+          "questId": 3345,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7500,
+      "items": [
+        {
+          "itemId": 4161034
+        }
+      ]
+    }
+  }
+}

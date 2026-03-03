@@ -1,0 +1,55 @@
+{
+  "questId": 21727,
+  "info": {
+    "name": "Zombie Mushrooms",
+    "descriptions": {
+      "notStarted": "This is your fourth assignment as an informant and you need to gather information about the erratic behavior of the #o2230101#s in #b#m105040300##k. You\u0027d better talk to #b#p1061019##k, the witness that reported the incident.",
+      "inProgress": "#p1061019# seems terrified to see so many #o2230101#s with such irritated faces. They are preventing him from entering the Ant Tunnel, so he\u0027s asked you to find out what has happened to the #o2230101#s. Looks like you\u0027ll have to eliminate the #r#o2230101#s#k and retrieve the #b#t4032321##k...\\r\\n\\r\\n#o9101001##r #a217271##k\\r\\n#i4032321# #t4032321# #b#c4032321# / 1#k",
+      "completed": "You eliminated the #o2230101#s and retrieved the #t4032321#. #p1061019# seemed to know something about the puppet…"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061019,
+      "minLevel": 28,
+      "prerequisiteQuests": [
+        {
+          "questId": 21726,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1061019,
+      "items": [
+        {
+          "itemId": 4032321
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9101001,
+          "count": 300
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7250,
+      "items": [
+        {
+          "itemId": 4032321,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

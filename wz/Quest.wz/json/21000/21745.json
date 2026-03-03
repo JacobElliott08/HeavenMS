@@ -1,0 +1,49 @@
+{
+  "questId": 21745,
+  "info": {
+    "name": "How to Meet Mu Gong",
+    "descriptions": {
+      "notStarted": "The letter issued by #o9300351# of the Black Wings... In order to deliver the letter to #p2091007#, you first must win over #p2091005#, who is one of his students. You\u0027d better head over to #b#m925020000##k and start sweet-talking #b#p2091005##k.",
+      "inProgress": "You ask nicely if you can see #p2091007#, but #p2091005#\u0027s stance remains the same: NO. That\u0027s when you decide to sweeten the pot, as instructed by #p2090004#, by offering healthy items for the body, which worked like magic. You\u0027d better start gathering up some #b#t4000293#s#k.\\r\\n\\r\\n#i4000293# #t4000293# #b#c4000293# / 100#k",
+      "completed": "When you brought the #t4000293#s to him, #p2091005# discreetly told you the way to #m925020000#\u0027s back alley. In front of #m925020000# are a some flags. You need to use the portal under the green flag on the right side to get to #p2091007#."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091005,
+      "minLevel": 54,
+      "prerequisiteQuests": [
+        {
+          "questId": 21744,
+          "state": "STARTED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2091005,
+      "items": [
+        {
+          "itemId": 4000293,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 38000,
+      "items": [
+        {
+          "itemId": 4000293,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

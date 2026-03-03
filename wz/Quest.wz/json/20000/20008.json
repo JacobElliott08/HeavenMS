@@ -1,0 +1,60 @@
+{
+  "questId": 20008,
+  "info": {
+    "name": "The Path of a Knight",
+    "descriptions": {
+      "notStarted": "It\u0027s time for me to receive the last test given by #b#p1102000# the Training Instructor#k in order for me to become the Knight-in-Training.",
+      "inProgress": "An eternal loyalty towards the Empress. The courage to stand up to the Black Mage. The will power required to help me keep my faith in tact. As long as I don\u0027t forget these three, I\u0027ll be able to fight until the very end as a proud member of Cygnus Knights.",
+      "completed": "An eternal loyalty towards the Empress. The courage to stand up to the Black Mage. The will power required to help me keep my faith in tact. As long as I don\u0027t forget these three, I\u0027ll be able to fight until the very end as a proud member of Cygnus Knights."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102000,
+      "startScript": "q20008s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20007,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 20010
+        },
+        {
+          "questId": 20011
+        },
+        {
+          "questId": 20012
+        },
+        {
+          "questId": 20013
+        },
+        {
+          "questId": 20014
+        },
+        {
+          "questId": 20015
+        },
+        {
+          "questId": 20016
+        },
+        {
+          "questId": 20017
+        },
+        {
+          "questId": 20018
+        },
+        {
+          "questId": 20019
+        },
+        {
+          "questId": 20020
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    }
+  }
+}

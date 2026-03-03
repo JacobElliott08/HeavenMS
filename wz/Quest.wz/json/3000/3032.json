@@ -1,0 +1,51 @@
+{
+  "questId": 3032,
+  "info": {
+    "name": "The Map is in One Piece",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "I got the #bMemory Powder#k from Corporal Easy. Now I need to get this to Alcaster."
+    },
+    "area": 33,
+    "order": 29
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030002,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3031,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "items": [
+        {
+          "itemId": 4031055
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031055
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 7850,
+      "nextQuest": 3033,
+      "items": [
+        {
+          "itemId": 4031055,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

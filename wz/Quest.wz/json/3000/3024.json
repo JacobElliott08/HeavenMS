@@ -1,0 +1,46 @@
+{
+  "questId": 3024,
+  "info": {
+    "name": "Grendel the Really Old and His Recovery",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "The wiseman of Ellinia, #bGrendel the Really Old#k, promised to give me the map piece in exchange for #b2 Wisdom Crystals#k. ",
+      "completed": "I gave Grendel the Really old Wisdom Crystals. Now I can get the map piece."
+    },
+    "area": 33,
+    "order": 21
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3023,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "items": [
+        {
+          "itemId": 4005001,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8320,
+      "nextQuest": 3025,
+      "items": [
+        {
+          "itemId": 4005001,
+          "count": -2
+        }
+      ]
+    }
+  }
+}

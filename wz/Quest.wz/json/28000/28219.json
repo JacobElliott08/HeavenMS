@@ -1,0 +1,73 @@
+{
+  "questId": 28219,
+  "info": {
+    "name": "Catch Valefor!",
+    "descriptions": {
+      "notStarted": "#b#@1052001:##k in #bKerning City#k says it is time to eliminate #rValefor#k the demon. Let\u0027s talk to him.",
+      "inProgress": "If you go to #b#m103030200##k, you will find a Dark Portal where #rValefor#k is hiding. You can enter using the #rLarge Model of a Coin#k you received from #bShumi#k.\\n\\nDefeat #rValefor#k!\\n\\nReport back to #b#@1052001:##k in #bKerning City#k upon completion.",
+      "completed": "You have defeated #rValefor#k whose seal had been broken. But who or what is responsible for the broken seal still remains a mystery."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "prerequisiteQuests": [
+        {
+          "questId": 28218,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1052001,
+      "monsters": [
+        {
+          "monsterId": 9400613
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032493
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032493
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 1003033
+        },
+        {
+          "itemId": 4032496
+        },
+        {
+          "itemId": 4032493,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

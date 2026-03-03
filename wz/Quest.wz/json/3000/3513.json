@@ -1,0 +1,29 @@
+{
+  "questId": 3513,
+  "info": {
+    "name": "Frozen Emotions",
+    "parent": "Road of Regrets",
+    "descriptions": {
+      "notStarted": "I received permission from #p2140000# but I wasn\u0027t able to get past #m270020500#.  Is there another problem?  I should go talk to #b#p2140000##k.",
+      "inProgress": "#o8220005#, the Ice Knight who protects the temple, has frozen his emotions so that regret would never cause him to fail a mission.  #p2140000# said it seems like #bmy emotions have been frozen as well#k while fighting him.  He continued to say that those with frozen emotions don\u0027t feel any regret and can\u0027t pass through the Lane of Regret... So what do I do? \\n\\n Then #p2140000# suggests perhaps #b#p2140002##k, who can make all sorts of things, might be able to help me.",
+      "completed": "I met with #p2140002#."
+    },
+    "area": 46,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140000,
+      "minLevel": 120,
+      "prerequisiteQuests": [
+        {
+          "questId": 3512,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2140002
+    }
+  }
+}

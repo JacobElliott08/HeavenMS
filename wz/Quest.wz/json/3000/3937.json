@@ -1,0 +1,45 @@
+{
+  "questId": 3937,
+  "info": {
+    "name": "The True Identity of Sand Bandits",
+    "descriptions": {
+      "notStarted": "I have passed all the tests from all members of the Sand Bandits, and I have heard from each one of them that I deserve to be a member myself. Now I better head off to their secret residence.",
+      "inProgress": "The captain of the Sand Bandits, #b#p2101010##k, told me I have done a good job passing all the tests, and told me a story about the Sultan and the queen of #m260000000#. After he was done with the conversation, he told me to look around #m260000000# once more, and let him know when I am ready.",
+      "completed": "I have finally become a member of the Sand Bandits through #p2101010#. As a member, my job is to do my best for #m260000000#."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101010,
+      "minLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 3930,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3933,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3936,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4031581
+        }
+      ]
+    }
+  }
+}

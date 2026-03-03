@@ -1,0 +1,29 @@
+{
+  "questId": 2292,
+  "info": {
+    "name": "Blake\u0027s Dream",
+    "descriptions": {
+      "notStarted": "Jake, who works at the subway station at the center of Kerning City has something on his mind.\\r\\nHead over to #bJake#k and see what\u0027s going on.\\r\\n",
+      "inProgress": "Jake says he wants nothing more than to see Blake achieve his dream. Who\u0027s Blake anyway?\\r\\nPass through the turnstile and go over to Kerning Square Station.\\r\\n",
+      "completed": "Blake has asked you to wait, as he was in the middle of something."
+    },
+    "area": 30,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052006,
+      "normalAutoStart": true,
+      "minLevel": 35,
+      "maxLevel": 50
+    },
+    "complete": {
+      "npc": 1052117
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2400
+    }
+  }
+}

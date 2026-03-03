@@ -1,0 +1,40 @@
+{
+  "questId": 8027,
+  "info": {
+    "name": "Read the Newspaper!",
+    "descriptions": {
+      "notStarted": " Apparently, Tsuri of Showa Town is going through a dilemma. What must that be? I should inquire further...",
+      "inProgress": "I met Tsuri at Showa Town, and he wanted me to bring him #b1 #t1002418##k. Should I help him out? \\n#t1002418#  #b#c1002418##k/1",
+      "completed": " I gave him one #t1002418##k. What? He wanted to read the toons? TOONS? Seriously? *sigh*."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120008,
+      "minLevel": 25
+    },
+    "complete": {
+      "npc": 9120008,
+      "items": [
+        {
+          "itemId": 1002418
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 16000,
+      "items": [
+        {
+          "itemId": 2040509
+        },
+        {
+          "itemId": 1002418,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

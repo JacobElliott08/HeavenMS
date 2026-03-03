@@ -1,0 +1,87 @@
+{
+  "questId": 9528,
+  "info": {
+    "name": "할로윈 사탕배달!!!",
+    "descriptions": {
+      "notStarted": "#b#t2022043##k를 많이 모았다면, #b#p1022006##k에게 말을 걸어보자.",
+      "inProgress": "아이들에게 나누어줄 사탕이 없는 #b#p1032104##k를 찾아가자.\\n\\n#t2022043# #b#c2022043#/100#k",
+      "completed": "#b#p1032104##k에게 사탕을 나누어 주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022006,
+      "minLevel": 46,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2006102600",
+      "endDate": "2006110600",
+      "items": [
+        {
+          "itemId": 2022043,
+          "count": 100
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032104,
+      "items": [
+        {
+          "itemId": 2022043,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 44200,
+      "items": [
+        {
+          "itemId": 2022043,
+          "count": -100
+        },
+        {
+          "itemId": 2020012,
+          "count": 20,
+          "probability": 1
+        },
+        {
+          "itemId": 2020013,
+          "count": 15,
+          "probability": 1
+        },
+        {
+          "itemId": 2020014,
+          "count": 20,
+          "probability": 1
+        },
+        {
+          "itemId": 2020015,
+          "count": 15,
+          "probability": 1
+        },
+        {
+          "itemId": 4004000,
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "itemId": 4004001,
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "itemId": 4004002,
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "itemId": 4004003,
+          "count": 2,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

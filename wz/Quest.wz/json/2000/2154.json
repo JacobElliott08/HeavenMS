@@ -1,0 +1,33 @@
+{
+  "questId": 2154,
+  "info": {
+    "name": "Hero of the Story",
+    "parent": "Legend of the Snail",
+    "descriptions": {
+      "inProgress": "Took Jay\u0027s advice and visited Mrs. Mingming to ask about Alloy, the author of Legend of the Snail. She said her grandfather\u0027s latest letter was about #bWing, the Fairy of Ellina#k, and suggested I go see Wing.",
+      "completed": "Wing the Fairy recalls Alloy as the human who obtained Mano\u0027s shell and prolonged his lifespan. Let\u0027s ask some more questions."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012106,
+      "minLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 2153,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032106
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5
+    }
+  }
+}

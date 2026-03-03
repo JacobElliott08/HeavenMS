@@ -1,0 +1,44 @@
+{
+  "questId": 9423,
+  "info": {
+    "name": "북극곰 로로의 반짝이는 별",
+    "descriptions": {
+      "notStarted": "코-크타운에 살고 있는 #b#p9001001##k를 찾아가보자.",
+      "inProgress": "별을 좋아하는 #b#p9001001##k에게 별 대신 반짝이는 코카-콜라 젬을 선물해보자. \\n\\n#t04000214:# #b#c04000214#/100#k  ",
+      "completed": "별을 좋아하는 #b#p9001001##k에게 반짝이는 #t04000214#을 선물했다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9001001,
+      "minLevel": 8,
+      "startDate": "2006070300",
+      "endDate": "2007112300"
+    },
+    "complete": {
+      "npc": 9001001,
+      "items": [
+        {
+          "itemId": 4000214,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4000214,
+          "count": -100
+        },
+        {
+          "itemId": 2022075,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

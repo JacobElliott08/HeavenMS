@@ -1,0 +1,95 @@
+{
+  "questId": 28109,
+  "info": {
+    "name": "MV\u0027s Treasure",
+    "descriptions": {
+      "notStarted": "Lara is looking for a brave adventurer who wants to prove their strength and courage by a dangerous task--finding MV\u0027s Treasure.",
+      "inProgress": "Lara asked me to find MV\u0027s Sabre in MV\u0027s Treasure Dungeon. She said that many monsters are guarding the treasure so I should be prepared. \\n\\n#i4032119# #t4032119# #b#c4032119#/1#k",
+      "completed": "Lara was really happy when I gave her MV\u0027s Sabre, and she gave me a nice gift in return."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9220016,
+      "repeatIntervalMinutes": 60,
+      "endDate": "2007112700",
+      "items": [
+        {
+          "itemId": 5252001
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9220016,
+      "items": [
+        {
+          "itemId": 4032119
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032119,
+          "count": -1
+        },
+        {
+          "itemId": 1002858,
+          "probability": 5
+        },
+        {
+          "itemId": 1002859,
+          "probability": 5
+        },
+        {
+          "itemId": 1002860,
+          "probability": 5
+        },
+        {
+          "itemId": 1002861,
+          "probability": 5
+        },
+        {
+          "itemId": 1032001,
+          "probability": 5
+        },
+        {
+          "itemId": 1032002,
+          "probability": 5
+        },
+        {
+          "itemId": 1032003,
+          "probability": 5
+        },
+        {
+          "itemId": 1032004,
+          "probability": 5
+        },
+        {
+          "itemId": 4020000,
+          "probability": 10
+        },
+        {
+          "itemId": 4020003,
+          "probability": 10
+        },
+        {
+          "itemId": 4020006,
+          "probability": 10
+        },
+        {
+          "itemId": 4020007,
+          "probability": 10
+        },
+        {
+          "itemId": 2022453,
+          "count": 10,
+          "probability": 12
+        }
+      ]
+    }
+  }
+}

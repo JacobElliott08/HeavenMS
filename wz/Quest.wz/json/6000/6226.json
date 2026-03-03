@@ -1,0 +1,45 @@
+{
+  "questId": 6226,
+  "info": {
+    "name": "Key to a Different World",
+    "descriptions": {
+      "notStarted": "#b#p2020005##k told me to see #b#p2041023##k in the passage of time of Ludibrium to get #b#t4031470##k.",
+      "inProgress": " #b#p2041023##k said #b#t4031473##k is behind one of the doors in the twisted corridor. However, he said he lost the key while being chased by the gate keeper....\\r\\n#i4031473##t4031473# #b#c4031473#/1",
+      "completed": " I returned the key back to #b#p2041023##k."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041023,
+      "jobs": [
+        212
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6225,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041023,
+      "items": [
+        {
+          "itemId": 4031473
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 4031473,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

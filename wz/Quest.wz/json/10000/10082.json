@@ -1,0 +1,24 @@
+{
+  "questId": 10082,
+  "info": {
+    "name": "메이플스토리 그린 캠페인",
+    "descriptions": {
+      "notStarted": "메이플스토리 그린 캠페인이 시작되었습니다. 운영자를 만나 자세한 이야기를 들어보세요.",
+      "inProgress": "메이플스토리 그린 캠페인이 시작되었습니다. 운영자를 만나 자세한 이야기를 들어보세요.",
+      "completed": "운영자에게 메이플스토리 그린캠페인 훈장을 받았습니다. 모든 NPC는 이 훈장을 축복할 것입니다."
+    },
+    "area": 50,
+    "order": 1,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "startScript": "q10082s",
+      "startDate": "2008111300",
+      "endDate": "2008121900",
+      "normalAutoStart": true,
+      "minLevel": 13
+    }
+  }
+}

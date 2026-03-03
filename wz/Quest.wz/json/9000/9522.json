@@ -1,0 +1,45 @@
+{
+  "questId": 9522,
+  "info": {
+    "name": "유령 옷 만들기!",
+    "descriptions": {
+      "notStarted": "할로윈 데이를 맞아 파티가 열린다고 한다. #b#p9010000##k를 찾아가 보자.",
+      "inProgress": "유령 옷을 만들 수 있도록 재료를 구해 #b#p1012106##k에게 가져다 주자. \\n\\n#t4000035# #b#c4000035#/100#k",
+      "completed": "#b#p1012106##k이 유령 옷을 만들 수 있도록 도와주었다. 하지만, 아직 많이 부족하다고 하니 시간이 날 때마다 도와주자."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 30,
+      "maxLevel": 45,
+      "startDate": "2006102600",
+      "endDate": "2006110600"
+    },
+    "complete": {
+      "npc": 1012106,
+      "items": [
+        {
+          "itemId": 4000035,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5200,
+      "items": [
+        {
+          "itemId": 2022043,
+          "count": 5
+        },
+        {
+          "itemId": 4000035,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

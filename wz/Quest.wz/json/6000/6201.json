@@ -1,0 +1,46 @@
+{
+  "questId": 6201,
+  "info": {
+    "name": "Shawn\u0027s  fear",
+    "parent": "Grief of darkness",
+    "descriptions": {
+      "inProgress": "I was told to bring #brequested object#k from an unrevealed relic.  A newly discovered relic...What could it possibly be? \\n\\n#i4031452##t4031452# #b#c4031452#/1",
+      "completed": "...I brought the requested object. It wasn\u0027t easy but I did it.  #p9040002# looked extremely happy, but a bit worried at the same time.  What could be bothering him?"
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9040002,
+      "jobs": [
+        422
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6200,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9040002,
+      "items": [
+        {
+          "itemId": 4031452
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1100000,
+      "items": [
+        {
+          "itemId": 4031452,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

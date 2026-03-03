@@ -1,0 +1,40 @@
+{
+  "questId": 9831,
+  "info": {
+    "name": "카산드라의 두번째 퀴즈!",
+    "parent": "카산드라의 메이플 퀴즈",
+    "descriptions": {
+      "inProgress": "#p9010010#의 메이플 퀴즈 그 두번째! 두번째 문제는 어떤 것일까? #p9010010#를 찾아가 보자.",
+      "completed": "두번째 문제도 쉽게 맞췄다. 이 정도라면 앞으로도 문제 없겠는걸~"
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "startDate": "2007042400",
+      "endDate": "2007052100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9830,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 150,
+      "items": [
+        {
+          "itemId": 4001126,
+          "count": 2
+        }
+      ]
+    }
+  }
+}

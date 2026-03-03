@@ -1,0 +1,57 @@
+{
+  "questId": 6230,
+  "info": {
+    "name": "Maple marble",
+    "parent": "Chaser of Darkness",
+    "descriptions": {
+      "notStarted": " I received #b#t04001110##k in the basement of the Ludibrium Castle. A letter with no name. I wonder who sent it... Let\u0027s go to the Cloudy Balcony, maybe there\u0027ll be some answers there...",
+      "inProgress": " When I got to Cloud Balcony, I was forcifully transported to somewhere.  The man there seemed like a familiar thief I had seen before.  But I couldn\u0027t put my finger on who he has exactly....He just demanded me to bring him #b#t04031456##k. Who is this guy?  Why is he telling me to do this? I feel like I should go up to the rooftop of Guild Headquarters where I can get a maple marble.... \\n\\n#i04031456##t04031456# #b#c04031456#/1#k",
+      "completed": " #b#p2041028##k spoke of #b#p2081400##k."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041028,
+      "jobs": [
+        412
+      ],
+      "items": [
+        {
+          "itemId": 4001110
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041028,
+      "items": [
+        {
+          "itemId": 4031456
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031476
+        },
+        {
+          "itemId": 4001110,
+          "count": -1
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 800000,
+      "items": [
+        {
+          "itemId": 4031456,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "questId": 1123,
+  "info": {
+    "name": "한태수의 사랑의 증표",
+    "descriptions": {
+      "notStarted": "#t4031691#를 받으려면 한태수를 찾아가보자.",
+      "inProgress": "한태수는 나의 사랑을 증명하라면서 #b#t4000278# 30#k개를 가져오라고 했다.\\n\\n#i4000278##t4000278# #b#c4000278# / 30#k",
+      "completed": "한태수에게 사랑의 증표를 얻었다."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091003,
+      "repeatIntervalMinutes": 0,
+      "infoNumber": 1100,
+      "infoEx": [
+        null
+      ],
+      "items": [
+        {
+          "itemId": 4031691
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091003,
+      "items": [
+        {
+          "itemId": 4000278,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000278,
+          "count": -30
+        },
+        {
+          "itemId": 4031691
+        }
+      ]
+    }
+  }
+}

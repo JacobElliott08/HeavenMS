@@ -1,0 +1,46 @@
+{
+  "questId": 3210,
+  "info": {
+    "name": "Just Another Day at Work",
+    "parent": "Just Another Day at Work",
+    "descriptions": {
+      "notStarted": "I should go see #b#p2040015##k, who should be somewhere around the Toy Factory",
+      "inProgress": "#bManager Karl#k, who\u0027s at the Toy Factory inside the Ludibrium Clocktower, wanted me to check up on his 10 Roly-Poly workers by taking pictures with them. The 10 have to be in the order... I should go see Eos Tower.",
+      "completed": "I found Roly-Poly 1 at the 98th floor of Eos Tower working hard, so I took a picture of him with the camera that #p2040015# gave me."
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040015,
+      "prerequisiteQuests": [
+        {
+          "questId": 3206,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040004,
+      "items": [
+        {
+          "itemId": 4031078
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031078
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 750,
+      "nextQuest": 3211
+    }
+  }
+}

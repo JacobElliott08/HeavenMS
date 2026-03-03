@@ -1,0 +1,34 @@
+{
+  "questId": 3925,
+  "info": {
+    "name": "True or False",
+    "parent": "Sand Bandits and Red Scorpions",
+    "descriptions": {
+      "notStarted": "After listening to #p2101000#, I realized they may be another secret organization besides Sand Bandits. Red Scorpions... who are they?",
+      "inProgress": "#p2101000# said that since the ring is from the Red Scorpions, who bully around people in the neighborhood, he stole it from them and gave it to others. What? So #p2101012# is a Red Scorpion? But he told me he\u0027s a Sand Bandit...",
+      "completed": "#p2101000# said #p2101012# is fake, and I may want to find the hideaway spot of the Red Scorpions, which should be nearby. He said only a special password can open the door, and the only revenge for me to them would be to steal their stolen treasures and give them to others... By the way, what did he mean by \"I already know the password?\""
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101000,
+      "minLevel": 27,
+      "prerequisiteQuests": [
+        {
+          "questId": 3924,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "questId": 3109,
+  "info": {
+    "name": "Holding Back the Snowman",
+    "parent": "Snowfield Giant",
+    "descriptions": {
+      "inProgress": "Scadur says the Snowman is angry because the Spirit of the Sculpture is damaged, and adds that we need to restore it. However, restoring the sculpture will take some time, and somebody needs to hold the Snowman back from attacking anyone else.\\n\\n#o8220001# #r#a31091##k",
+      "completed": "Blocked the Snowman and came back to Scadur. He says Alcaster has completed his preparations to restore the sculpture and tells me to go see him."
+    },
+    "area": 33,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020007,
+      "prerequisiteQuests": [
+        {
+          "questId": 3107,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020007,
+      "monsters": [
+        {
+          "monsterId": 8220001
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 539700
+    }
+  }
+}

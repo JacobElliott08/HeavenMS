@@ -1,0 +1,43 @@
+{
+  "questId": 20102,
+  "info": {
+    "name": "Path of a Blaze Wizard",
+    "descriptions": {
+      "notStarted": "The time has come. If I want to find out more about Blaze Wizards, the Magicians of Fire, I should talk to #b#p1101004#, the Chief Knight of Fire#k.",
+      "inProgress": "If I want to become a Cygnus Knight as a #bBlaze Wizard#k with flaming expectations for future missions, I should select #p1101004#.",
+      "completed": "I am now a Blaze Wizard!"
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101004,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 20103
+        },
+        {
+          "questId": 20104
+        },
+        {
+          "questId": 20105
+        },
+        {
+          "questId": 20100,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 20101
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    },
+    "complete": {
+      "npc": 1101004,
+      "endScript": "q20102e"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "questId": 9427,
+  "info": {
+    "name": "북극곰 포치의 썰매 만들기",
+    "descriptions": {
+      "notStarted": "코-크 타운에 있는 #b#p9001002##k를 찾아가 보자.",
+      "inProgress": "#b#p9001002##k가 썰매를 만들 수 있는 재료를 모아다 주자. \\n\\n#t04000216:# #b#c04000216#/30#k \\n#t04000217:# #b#c04000217#/30#k \\n#t04000209:# #b#c04000209#/10#k \\n#t04000210:# #b#c04000210#/10#k ",
+      "completed": "#b#p9001002##k가 형에게 선물할 썰매를 만드는 것을 도와주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9001002,
+      "minLevel": 20,
+      "startDate": "2006070300",
+      "endDate": "2007112300"
+    },
+    "complete": {
+      "npc": 9001002,
+      "items": [
+        {
+          "itemId": 4000216,
+          "count": 30
+        },
+        {
+          "itemId": 4000209,
+          "count": 10
+        },
+        {
+          "itemId": 4000217,
+          "count": 30
+        },
+        {
+          "itemId": 4000210,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 9001002,
+      "minLevel": 20
+    },
+    "onComplete": {
+      "experience": 1500,
+      "items": [
+        {
+          "itemId": 4000216,
+          "count": -30
+        },
+        {
+          "itemId": 4000217,
+          "count": -30
+        },
+        {
+          "itemId": 4000209,
+          "count": -10
+        },
+        {
+          "itemId": 4000210,
+          "count": -10
+        },
+        {
+          "itemId": 2022075,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

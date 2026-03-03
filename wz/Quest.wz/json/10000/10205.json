@@ -1,0 +1,38 @@
+{
+  "questId": 10205,
+  "info": {
+    "name": "Pendant of the Spirit",
+    "descriptions": {
+      "notStarted": "The Empress, who just returned to Maple World, has given a pendant for the explorers to Cassandra. I better talk to her for more information on this.",
+      "inProgress": "The Empress, who just returned to Maple World, has given a pendant for the explorers to Cassandra. I better talk to her for more information on this.",
+      "completed": "Within the black aura of the Black Mage, let\u0027s try to find #t4001237#. \\n\\n#i4001237# #t4001237# #b#c4001237# / 20#k"
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 13,
+      "endDate": "2009082600",
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 1122017
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1122017
+        }
+      ]
+    }
+  }
+}

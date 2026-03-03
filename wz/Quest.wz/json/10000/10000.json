@@ -1,0 +1,37 @@
+{
+  "questId": 10000,
+  "info": {
+    "name": "Suspicious Offer?!",
+    "descriptions": {
+      "notStarted": "An urgent message was sent from #b#p9000021##k.",
+      "inProgress": "An urgent message was sent from Agent #b#p9000021##k.",
+      "completed": "#bGaga#k came to see me and asked me to become an agent out of no where!  Not sure why, but I agreed without really thinking Now what do I do?  Come to think of it, the #bMaple Admin#k and #bCassandra#k both looked suspicious with their black sunglasses.  What\u0027s going on?  I think I need to talk to #bGaga#k for more details..."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "minLevel": 10,
+      "startDate": "2009060100",
+      "endDate": "2009082600",
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 9000021
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1072366,
+          "jobRestriction": 63,
+          "expirationDate": "2009090923"
+        }
+      ]
+    }
+  }
+}

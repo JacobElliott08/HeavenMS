@@ -1,0 +1,98 @@
+{
+  "questId": 28270,
+  "info": {
+    "name": "[Hunt] Pigs at the Corner",
+    "descriptions": {
+      "notStarted": "#b#@1052103:##k in #b#m103000000##k is worried because there are too many #rPigs#k around. Let\u0027s go find her.",
+      "inProgress": "She says there are too many #rPigs#k on the way to #b#m103000000##k from #b#m100000000##k.\\n\\nHunt 30 #rPigs#k in #b#m103020000##k!\\n\\nReport back to  #b#@1052103:##k in #b#m103000000##k upon completion.",
+      "completed": "You have swept the #rPigs#k that were blocking people\u0027s way to #b#m103000000##k!"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052103,
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1052103,
+      "monsters": [
+        {
+          "monsterId": 1210100,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 600
+    }
+  }
+}

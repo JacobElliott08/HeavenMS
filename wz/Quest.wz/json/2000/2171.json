@@ -1,0 +1,29 @@
+{
+  "questId": 2171,
+  "info": {
+    "name": "Can you please give Baine a helping hand?",
+    "parent": "A mysterious entity onboard The Nautilus",
+    "descriptions": {
+      "notStarted": "Baine\u0027s job is to monitor the sound waves of The Nautilus. The way the ship sounds is a good indicator of the overall well-being of the ship. Recently, Baine had apparently detected a strange sound coming through the walls on the lower deck. Could this be an ominous sign of things to come? ",
+      "inProgress": "When Baine detects the strange sound waves coming from The Nautilus, he asks #bBart#k, the  #bkeeper of the Watchtower#k, whether he\u0027s noticed any changes in sight. The watchtower is apparently on the eastern end of the shipping dock so I\u0027d better look around carefully.",
+      "completed": "Bart says that he\u0027s noticed some strange movements. I wonder what he saw?"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092002,
+      "minLevel": 10
+    },
+    "complete": {
+      "npc": 1094000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "nextQuest": 2172
+    }
+  }
+}

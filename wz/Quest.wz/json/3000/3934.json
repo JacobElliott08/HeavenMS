@@ -1,0 +1,34 @@
+{
+  "questId": 3934,
+  "info": {
+    "name": "The Lady with the Dagger",
+    "parent": "Sand Bandits According to Eleska",
+    "descriptions": {
+      "notStarted": "The word dagger written on the wall at #p2101002#... I think it\u0027s pointing at someone. I think there\u0027s only one person in #m260000000# carrying a dagger... Was her name #p2101002#?",
+      "inProgress": "#p2101002# is a member of the Sand Bandits! She looked quite intimidating, but when I summoned the courage to tell her that I wanted to be a member, #p2101002# told me if I had the guts and skills to enter the queen\u0027s treasure storage room and steal a treasure from there, then she\u0027ll accept me as a member of the Sand Bandits. For more information, she said I could ask #bsomeone inside the palace#k...",
+      "completed": "Inside the palace, I asked someone who\u0027s not on the queen\u0027s side, #p2101008# the storyteller, about the treasures."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101002,
+      "minLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 3927,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101008
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500
+    }
+  }
+}

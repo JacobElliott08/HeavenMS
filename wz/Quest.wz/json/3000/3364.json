@@ -1,0 +1,52 @@
+{
+  "questId": 3364,
+  "info": {
+    "name": "Studying Frankenroid 2",
+    "parent": "Keeny\u0027s Research on Frankenroid",
+    "descriptions": {
+      "inProgress": "Yulete seemed ecstatic to help Keeny out. Then he proceeded to bring out the well-organized blueprint of Frankenroid and told me to tell her if she had any questions, she\u0027s more than welcome to ask him herself. I better give this blueprint to #bKeeny#k.",
+      "completed": "After receiving the blueprint of Frankenroid, Keeny seemed beyond words. She felt like this would really help her make Humanoid A\u0027s wish come true."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2112014,
+      "prerequisiteQuests": [
+        {
+          "questId": 3363,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111005,
+      "items": [
+        {
+          "itemId": 4031775
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031775
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031775,
+          "count": -1
+        },
+        {
+          "itemId": 2040502
+        }
+      ]
+    }
+  }
+}

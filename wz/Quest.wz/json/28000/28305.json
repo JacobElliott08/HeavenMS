@@ -1,0 +1,41 @@
+{
+  "questId": 28305,
+  "info": {
+    "name": "Joe: \"Clear the Way\"",
+    "descriptions": {
+      "notStarted": "It looks like you found Olivia\u0027s father, Joe. Although he seems a little distraught, you will need to escort him to the front yard. ",
+      "inProgress": "Joe would like you to kill #b100 Glutton Ghouls, 1 Psycho Jack #kso that he’d be able to walk through the hallway untouched.",
+      "completed": "You were able to defeat the#b 100 Glutton Ghouls, 1 Psycho Jack #k. The hallway is now clear for him to escape."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201137,
+      "prerequisiteQuests": [
+        {
+          "questId": 28304,
+          "state": "COMPLETED"
+        }
+      ],
+      "endDate": "2009112500"
+    },
+    "complete": {
+      "npc": 9201137,
+      "monsters": [
+        {
+          "monsterId": 9400558
+        },
+        {
+          "monsterId": 9400556,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000
+    }
+  }
+}

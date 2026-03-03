@@ -1,0 +1,65 @@
+{
+  "questId": 4008,
+  "info": {
+    "name": "보관함의 열쇠",
+    "descriptions": {
+      "notStarted": "#b#t4031295##k를 헤네시스의 #b#p1012101##k에게 전해주자.",
+      "inProgress": "#b#p1012101##k의 기침이 나을 수 있도록 부탁한 물건을 구해가자.\\n\\n#i4000001##t4000001#  #b#c4000001#/50#k",
+      "completed": "#b#p1012101##k에게 받은 보관함 열쇠를 대만의 #b#p9330005##k에게 가져다 주자."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012101,
+      "minLevel": 42,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4007,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031303
+        },
+        {
+          "itemId": 4031295
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012101,
+      "items": [
+        {
+          "itemId": 4000001,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031295,
+          "count": -1
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031303
+        },
+        {
+          "itemId": 4000001,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

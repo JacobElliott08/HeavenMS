@@ -1,0 +1,53 @@
+{
+  "questId": 10300,
+  "info": {
+    "name": "Making the Witch\u0027s Secure Broomstick",
+    "descriptions": {
+      "notStarted": "When you use the Witch\u0027s precious treasure, #b#t01002971##k, you hear a voice that sounds like the Witch. ",
+      "inProgress": "The Witch says she must make a Broomstick she can ride in order to release the magic binding her and fly away.",
+      "completed": "Bon voyage!\\r\\nYou must help the Witch make her Broomstick 5 times by #rDecember 8th#k. Otherwise, it all goes to waste! "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010020,
+      "minLevel": 13,
+      "maxLevel": 30,
+      "endDate": "2009010100",
+      "infoNumber": 10299,
+      "items": [
+        {
+          "itemId": 1052202
+        }
+      ],
+      "infoEx": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "complete": {
+      "npc": 9010020,
+      "endScript": "q10300e",
+      "items": [
+        {
+          "itemId": 4032348,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032348,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

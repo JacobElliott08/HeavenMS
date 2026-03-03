@@ -1,0 +1,75 @@
+{
+  "questId": 3710,
+  "info": {
+    "name": "Getting Advice from Grendel the Really Old 2",
+    "parent": "The Sacred Barrier of the Forest",
+    "descriptions": {
+      "inProgress": "The grand magician of #m101000000#, #p1032001# , gave me a letter with the solution to take back to #b#p2081000##k and also told me to gather materials to strengthen the forest\u0027s barrier .\\n\\n#i4000232##t4000232#  #b#c4000232##k / 5\\n#i4000233##t4000233#  #b#c4000233##k / 5\\n#i4000234##t4000234#  #b#c4000234##k / 5\\n\\n#i4031410##t4031410#  #b#c4031410##k / 1",
+      "completed": " As requested by #p1032001#, I gathered up 5 each of #t4000232#, #t4000233#, and #t4000234#, along with #t4031410#, and took it to Tatamo."
+    },
+    "area": 41,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "minLevel": 85,
+      "prerequisiteQuests": [
+        {
+          "questId": 3709,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081000,
+      "items": [
+        {
+          "itemId": 4031410
+        },
+        {
+          "itemId": 4000232,
+          "count": 5
+        },
+        {
+          "itemId": 4000233,
+          "count": 5
+        },
+        {
+          "itemId": 4000234,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031410
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 50000,
+      "items": [
+        {
+          "itemId": 4000232,
+          "count": -5
+        },
+        {
+          "itemId": 4000233,
+          "count": -5
+        },
+        {
+          "itemId": 4000234,
+          "count": -5
+        },
+        {
+          "itemId": 4031410,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

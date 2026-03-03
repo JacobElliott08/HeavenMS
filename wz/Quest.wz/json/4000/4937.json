@@ -1,0 +1,49 @@
+{
+  "questId": 4937,
+  "info": {
+    "name": "Dances with Balrog\u0027s Barbarism Part 1",
+    "parent": "Dances with Balrog\u0027s Barbarism",
+    "descriptions": {
+      "notStarted": "This is a wild guess but... Wouldn\u0027t Dances with Balrog know a little bit about Bob? Who knows, I heard that he likes snails. Maybe I will go check with him.",
+      "inProgress": "I didn\u0027t know Dances with Balrog likes to EAT the snails... Now, what am I suppose to do?! It doesn\u0027t look like he is going to give me back Bob\u0027s Snail Shell anytime soon...",
+      "completed": "I had to take off from Dances with Balrog. Who can STAND all that endless talking? I should figure out a way to get Bob back other than talking him through..."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "minLevel": 35,
+      "endDate": "2005050505",
+      "prerequisiteQuests": [
+        {
+          "questId": 4928,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022000
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031447,
+          "count": -1
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1200,
+      "fame": -5
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "questId": 4915,
+  "info": {
+    "name": "Subani\u0027s Legacy - Deliverance",
+    "parent": "Subani\u0027s Legacy",
+    "descriptions": {
+      "notStarted": "John has finished deciphering the markings! I need to get back to the Temple Hive now!",
+      "inProgress": "John and I spoke again, and something unforeseen happened. I\u0027ll have to track down #b50 MesoGears Map Pieces#k so he can put together the map! He mentioned the robots he \"borrowed\" for some assistance went all crazy, kept saying \"#bI.AM.ROBOT#k\" as they scurried into the Krakian Jungle...",
+      "completed": "Finally done! I took the pieces back to John, and he\u0027s going to start piecing the map together. However, he did come across a strange ring that passed on to me. If this was the first treasure, I wonder where the rest is..."
+    },
+    "area": 45,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201051,
+      "minLevel": 44,
+      "prerequisiteQuests": [
+        {
+          "questId": 4914,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201051,
+      "items": [
+        {
+          "itemId": 4031681,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9800,
+      "fame": 5,
+      "items": [
+        {
+          "itemId": 4031681,
+          "count": -50
+        },
+        {
+          "itemId": 2022238,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

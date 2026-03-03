@@ -1,0 +1,45 @@
+{
+  "questId": 3923,
+  "info": {
+    "name": "A Request from a Member of the Sand Bandits?! 3",
+    "parent": "A Request from a Member of the Sand Bandits?!",
+    "descriptions": {
+      "notStarted": "Sand Bandits, the secret organization that works for the good people in #m260000000#. What can I do to help them? Since #b#p2101012##k of #b#m260010400##k is a member of the Sand Bandits, I should go talk to him.",
+      "inProgress": "#p2101012# told me the time is now to steal a treasure from the queen, and told me to go to the #bpalace#k. Since I can\u0027t be detected by the queen, I need to evade the security and the queen, #busing the hidden portals in the castle#k to end up on the queen\u0027s treasure chest and steal a #bring#k from there. Wait, why did he want the poisoned needle and the rope? They don\u0027t seem to be needed in this.\\n\\n#i4031578# #t4031578#  #b#c4031578##k/1",
+      "completed": "I gave #p2101012# the ring from the queen\u0027s treasure chest. Phew, good thing I did it. Wait... isn\u0027t something like this reserved for the experienced members of the team?"
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101012,
+      "minLevel": 27,
+      "prerequisiteQuests": [
+        {
+          "questId": 3922,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101012,
+      "items": [
+        {
+          "itemId": 4031578
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6300,
+      "items": [
+        {
+          "itemId": 4031578,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

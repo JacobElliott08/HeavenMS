@@ -1,0 +1,32 @@
+{
+  "questId": 10355,
+  "info": {
+    "name": "Delivering Cassandra\u0027s Album",
+    "descriptions": {
+      "inProgress": "The album holding Cassandra\u0027s baby pictures... Oh my, is this really her? You have a hunch that Gaga would love to see this!",
+      "completed": "When you gave Cassandra\u0027s old photo album to Gaga, he seemed elated to finally be free from Cassandra after this."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "endDate": "2009010100",
+      "items": [
+        {
+          "itemId": 4001316,
+          "count": 2
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000021,
+      "endScript": "q10355e",
+      "items": [
+        {
+          "itemId": 4001316
+        }
+      ]
+    }
+  }
+}

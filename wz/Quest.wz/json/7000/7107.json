@@ -1,0 +1,44 @@
+{
+  "questId": 7107,
+  "info": {
+    "name": "The Lost Piece of Crack",
+    "descriptions": {
+      "notStarted": "I lost the #t4031179# that #p2041023# gave me. I better go back to  #p2041021# and tell him the truth",
+      "inProgress": "I lost the #t4031179# that\u0027s been given to me by #p2041023#. After telling #b#p2041021##k of the situation, he wanted me to talk to Flo again. I\u0027m afraid #b#p2041023##k may be less than pleased by the fact that I lost a very valuable #b#t4031179##k.",
+      "completed": "After telling #p2041021# that I lost #t4031179#, he wanted me to go see #p2041023# again and talk to him. #p2041023# was pretty upset that I lost the valuable #t4031179#, but then wanted me to really make sure not to ever lose it again, while giving me the #rlast remaining #t4031179##k that he kept to himself. He warned me that this is the last one, and that if I ever lose it again, #rI won\u0027t be able to get it back ever again.#k. I better make sure not to lose it, and give it to #p2041021#."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041021,
+      "prerequisiteQuests": [
+        {
+          "questId": 7102,
+          "state": "STARTED"
+        },
+        {
+          "questId": 7104,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031179
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041023
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031179
+        }
+      ]
+    }
+  }
+}

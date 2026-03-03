@@ -1,0 +1,60 @@
+{
+  "questId": 29017,
+  "info": {
+    "name": "Title - Soul Conjurer",
+    "descriptions": {
+      "notStarted": "You can acquire the title of #b\u003cSoul Conjurer\u003e#k by eliminating undead monsters and sending them back to nirvana...",
+      "inProgress": "#b#eTitle - Soul Conjurer#k#n\\r\\nEliminate undead monsters and send them back to where they came from.\\n\\n1 #t2383036#\\n1 #t2384003#\\n1 #t2383037# \\n1 #t2383038# \\n1 #t2388008# \\n\\n#o5150001# #a290171#\\n#o6230602# #a290172#\\n#o5130107# #a290173#\\n#o5130108# #a290174#\\n#o6300005# #a290175#",
+      "completed": "You were able to eliminate the undead monsters and acquired the title of #b\u003cSoul Conjurer\u003e#k."
+    },
+    "area": 51,
+    "autoComplete": true,
+    "medalItemId": 1142138
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "minLevel": 57,
+      "prerequisiteQuests": [
+        {
+          "questId": 29016,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "monsters": [
+        {
+          "monsterId": 5150001,
+          "count": 444
+        },
+        {
+          "monsterId": 6230602,
+          "count": 444
+        },
+        {
+          "monsterId": 5130107,
+          "count": 444
+        },
+        {
+          "monsterId": 5130108,
+          "count": 444
+        },
+        {
+          "monsterId": 6300005,
+          "count": 44
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142138
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "questId": 9733,
+  "info": {
+    "name": "Help out Gordon!",
+    "descriptions": {
+      "notStarted": "Cassandra seems to be depressed.  What could maker her sad? I better go talk to her.",
+      "inProgress": "Gordon of El Nath had been busy creating a wooden puppet called Pinocchio, and it seems like he is stuck in limbo because he\u0027s short on materials to finish the puppet... better start gathering up some materials for Gordon\\r\\n\\r\\n#i4031933# #t4031933# #b#c4031933# / 30#k",
+      "completed": "I gathered up the materials and gave it to Cassandra. She seemed elated that she would be able to help Gordon with these new materials. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "maxLevel": 30,
+      "repeatIntervalMinutes": 30,
+      "startDate": "2009032400",
+      "endDate": "2009040700"
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q9733e",
+      "items": [
+        {
+          "itemId": 4031933,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

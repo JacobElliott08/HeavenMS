@@ -1,0 +1,54 @@
+{
+  "questId": 6103,
+  "info": {
+    "name": "Shammos\u0027s Advice",
+    "parent": "Extreme Temptation",
+    "descriptions": {
+      "inProgress": " Despite her vast knowledge of bow-based combat, #p2020010#, like #p1012100#, didn\u0027t know much about the skill. I hear #bShammos#k\u0027s rambling about something...Perhaps I should pay him a visit...\\n\\n#t4161026#  #b#c4161026# / 1#k",
+      "completed": "#p2022003# took the book and started reading it. Would he know something? He certainly appeared focused on deciphering what this new skill could be...I hope he can tell me more! "
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020010,
+      "jobs": [
+        312,
+        322
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6102,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2022003,
+      "items": [
+        {
+          "itemId": 4161026
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4161026
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 4161026,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

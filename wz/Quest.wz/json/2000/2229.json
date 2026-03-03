@@ -1,0 +1,58 @@
+{
+  "questId": 2229,
+  "info": {
+    "name": "A Way to Fight Off Sleep",
+    "descriptions": {
+      "notStarted": "I should go see #b#p1040001##k in #b#m106000300##k.",
+      "inProgress": "I met with #b#p1040001##k.  #b#p1040001##k says he can\u0027t stand guard at the dungeon entrance because he keeps falling asleep.  If this continues, something bad is bound to happen.  I need to find a potion that can fight off sleepiness and give it to #b#p1040001##k.\\n\\n#i02000000##t02000000# #b#c02000000#/1\\n#k#i02000001##t02000001# #b#c02000001#/1\\n#k#i02000002##t02000002# #b#c02000002#/1#k",
+      "completed": "I fed the potion to #b#p1040001##k but it was no use.  But  #b#p1040001##k was very appreciative of my efforts."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1040001,
+      "minLevel": 23
+    },
+    "complete": {
+      "npc": 1040001,
+      "items": [
+        {
+          "itemId": 2000000
+        },
+        {
+          "itemId": 2000001
+        },
+        {
+          "itemId": 2000002
+        },
+        {
+          "itemId": 2000003
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1700,
+      "items": [
+        {
+          "itemId": 2000000,
+          "count": -1
+        },
+        {
+          "itemId": 2000001,
+          "count": -1
+        },
+        {
+          "itemId": 2000002,
+          "count": -1
+        },
+        {
+          "itemId": 2000003,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

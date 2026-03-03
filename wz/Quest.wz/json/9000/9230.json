@@ -1,0 +1,36 @@
+{
+  "questId": 9230,
+  "info": {
+    "name": "수능 끝! 행복 시작!!",
+    "descriptions": {
+      "notStarted": "대학수학능력 시험이 끝남과 동시에 축복을 빌어주는 쿠키를 나눠주고 있다고 한다. 운영자 NPC를 만나보자.",
+      "inProgress": "운영자 NPC는 루디브리엄의 마르셀님이 축복의 염원을 담은 쿠키를 나눠주고 있다고 하였다. 루디브리엄이라.. 엘리니아 정거장에서 오르비스행 배를 타고.. 그 곳에서 다시 루디브리엄으로 가는 배를 타면 된다고 했지?",
+      "completed": "루디브리엄의 마르셀님을 만나 쿠키를 받았다. 이 자그마한 쿠키의 효과가 궁금하다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 25,
+      "maxLevel": 49,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2006111300",
+      "endDate": "2006112000"
+    },
+    "complete": {
+      "npc": 2041004
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3600,
+      "items": [
+        {
+          "itemId": 2022042,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "questId": 2196,
+  "info": {
+    "name": "Beginner Pirate\u0027s Fourth Training Session",
+    "descriptions": {
+      "notStarted": "I\u0027m finally starting to feel more comfortable in my skin as a Pirate. #bKyrin#k is offering to help train me for this final step... ",
+      "inProgress": "Kyrin wants to test the skills I\u0027ve acquired throughout my training. She wants me to hunt down #r10 green mushrooms#k. Green mushrooms are apparently much more powerful than the pigs so Kyrin is warning me to keep alert. \\n\\n#o 1110100# #r#a21961##k",
+      "completed": "I\u0027ve hunted down 10 green mushrooms. That was not an easy task, but in any case, it was a success! Kyrin, the Director of Job Advancement for Pirates, is finally acknowledging me as a real Pirate."
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 2195,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "monsters": [
+        {
+          "monsterId": 9101000,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 840,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 50,
+          "jobRestriction": 32
+        },
+        {
+          "itemId": 2000003,
+          "count": 50,
+          "jobRestriction": 32
+        },
+        {
+          "itemId": 2030000,
+          "count": 10,
+          "jobRestriction": 32
+        }
+      ]
+    }
+  }
+}

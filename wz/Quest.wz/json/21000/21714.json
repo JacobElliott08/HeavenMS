@@ -1,0 +1,55 @@
+{
+  "questId": 21714,
+  "info": {
+    "name": "Green Mushrooms",
+    "descriptions": {
+      "notStarted": "This is your second assignment as an informant and you need to ask #b#p1032101##k in #b#m101000000##k why the #o1110100#s have suddenly turned so aggressive.",
+      "inProgress": "#p1032101# says she\u0027s heard that a lot of monsters have been going crazy and that they all seem to have something in common: their strange behavior is tied to an odd puppet. Maybe this too is tied to the puppet? You should eliminate the #r#o1110130#s#k and find a #b#o1110100# puppet#k if you can.\\r\\n\\r\\n#o1110130##r #a217141##k\\r\\n#i4032316# #t4032316# #b#c4032316# / 1#k",
+      "completed": "You gave #p1032101# the #t4032316#. #p1032101# seemed shocked that the rumors were actually true and wanted to find out who was responsible for placing a puppet on the #o1110100#s."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032101,
+      "minLevel": 18,
+      "prerequisiteQuests": [
+        {
+          "questId": 21713,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1032101,
+      "items": [
+        {
+          "itemId": 4032316
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 1110130,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1770,
+      "items": [
+        {
+          "itemId": 4032316,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

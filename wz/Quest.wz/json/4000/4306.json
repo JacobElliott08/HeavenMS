@@ -1,0 +1,44 @@
+{
+  "questId": 4306,
+  "info": {
+    "name": "The Lantern at Mushroom Shrine",
+    "descriptions": {
+      "notStarted": "#b#p9120003##k, a proud resident of #b#m800000000##k, seems to be annoyed by something.",
+      "inProgress": "#p9120003# was indeed annoyed by something. She was disturbed that the #t4000222#s that are being used at #m800000000# is apparently stuck with ghosts. This isn\u0027t annoying; this is downright creepy. I better kill #b100 #o9400011#s#k and get her some #b#t4000222#s#k, just the way #p9120003# said.\\n\\n#o9400011# #r#a43061##k \\n#t4000222# #b#c4000222#/50",
+      "completed": "I eliminated #o9400011# and got some #t4000222#s for use. The more I think about it, I think #o9400011# is much more of a dangerous presence than an unlit street at night."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120003,
+      "minLevel": 35
+    },
+    "complete": {
+      "npc": 9120003,
+      "items": [
+        {
+          "itemId": 4000222,
+          "count": 50
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9400011,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10500,
+      "items": [
+        {
+          "itemId": 4000222,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

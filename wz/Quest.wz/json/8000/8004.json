@@ -1,0 +1,28 @@
+{
+  "questId": 8004,
+  "info": {
+    "name": "Mariwaka\u0027s Request",
+    "parent": "Find Mariwaka\u0027s Purse!",
+    "descriptions": {
+      "inProgress": "Mariwaka said she got her purse stolen a while ago, and asked me to ask Popo in front of the police station if the police is doing something about it, just in case they found it for her. Man, people in this town looove to ask for favors. So annoying!",
+      "completed": "Just like Mariwaka asked, I went to where Popo is."
+    },
+    "area": 48,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120016,
+      "minLevel": 45,
+      "prerequisiteQuests": [
+        {
+          "questId": 8003,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120014
+    }
+  }
+}

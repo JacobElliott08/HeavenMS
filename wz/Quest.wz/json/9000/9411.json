@@ -1,0 +1,77 @@
+{
+  "questId": 9411,
+  "info": {
+    "name": "하인즈의 특별한 선물",
+    "descriptions": {
+      "notStarted": "엘리니아의 대마법사 #b#p1032001##k님께서실한 여행자에게 큰 선물을 주신다고 한다.",
+      "inProgress": "자네는 진정 성실한 여행자인 것 같네.",
+      "completed": "성실함을 증명 받고 #b#t04031019##k를 받았다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "minLevel": 8,
+      "startDate": "2006050800",
+      "endDate": "2006050900",
+      "prerequisiteQuests": [
+        {
+          "questId": 9404,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9405,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9406,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9407,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9408,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9409,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9401,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9410,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9402,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9403,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4161012
+        },
+        {
+          "itemId": 4031019
+        }
+      ]
+    }
+  }
+}

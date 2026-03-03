@@ -1,0 +1,34 @@
+{
+  "questId": 3807,
+  "info": {
+    "name": "Intruder - The Herb Farm 1",
+    "parent": "Intruder - The Herb Farm",
+    "descriptions": {
+      "notStarted": "#b#p2092000##k, the owner of the herb farm at #b#m251000000##k, seemed to be in trouble...",
+      "inProgress": "#p2092000# seemed very concerned by the fact that a bunch of #b#o5120501#s#k have invaded the herb farm, pretending to be Ginsengs, and sucked up all the nutrients from the fertile soil. He wanted me to eliminate #r80 #o5120501#s#k so his Ginsengs can grow in his farm.\\n\\n#o5120501#  #r#a38071##k",
+      "completed": "I managed to eliminate the #o5120501#s that have made life miserable for the Ginsengs at the herb farm in #p2092000#."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2092000,
+      "minLevel": 50
+    },
+    "complete": {
+      "npc": 2092000,
+      "monsters": [
+        {
+          "monsterId": 5120501,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 18300
+    }
+  }
+}

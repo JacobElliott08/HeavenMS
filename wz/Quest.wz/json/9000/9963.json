@@ -1,0 +1,54 @@
+{
+  "questId": 9963,
+  "info": {
+    "name": "화이트 마우스 분장",
+    "descriptions": {
+      "notStarted": "2008 무자년기념 #t01012084#이 얻고 싶다면 #b카산드라#k에게로~",
+      "inProgress": "치즈창고에서 맛있는 #b#t04031895##k을 구해 가자. 치즈창고에 들어가려면 먼저 #b#p9010015##k의 허락을 받아야겠지?\\n\\n#i04031895# #t04031895#  #b#c04031895#/20#k",
+      "completed": "귀여운 #b#t01012084##k을 얻었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "endDate": "2008030100"
+    },
+    "complete": {
+      "npc": 9010010,
+      "items": [
+        {
+          "itemId": 4031895,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031895,
+          "count": -20
+        },
+        {
+          "itemId": 1012084,
+          "probability": 1
+        },
+        {
+          "itemId": 1012086,
+          "probability": 1
+        },
+        {
+          "itemId": 1012087,
+          "probability": 1
+        },
+        {
+          "itemId": 1012088,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

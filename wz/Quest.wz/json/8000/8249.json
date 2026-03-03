@@ -1,0 +1,82 @@
+{
+  "questId": 8249,
+  "info": {
+    "name": "Maple 7th Day Market card-game convention!",
+    "parent": "Maple 7th Day Market",
+    "descriptions": {
+      "notStarted": "The time for the Maple 7th Day Market has come. #b#p9209001##k is preparing another event now.",
+      "inProgress": "Now it is a Card-Game Convention she plans to host. As before, there is some great reward for the completion of this task.\\n\\n#i4000035# #t4000035# #c4000035# / #r10#k\\n#i4000114# #t4000114# #c4000114# / #r10#k\\n#i4030009# #t4030009# #c4030009# / #r10#k\\n#i3010001# #t3010001# #c3010001# / #r20#k\\n#i4030012# #t4030012# #c4030012# / #r250#k\\n",
+      "completed": "I completed #b#p9209001##k\u0027s final task. The public seems to have enjoyed a lot the events of the Maple 7th Day Market."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9209001,
+      "prerequisiteQuests": [
+        {
+          "questId": 8248,
+          "state": "COMPLETED"
+        }
+      ],
+      "minLevel": 30
+    },
+    "complete": {
+      "npc": 9209001,
+      "items": [
+        {
+          "itemId": 4000035,
+          "count": 10
+        },
+        {
+          "itemId": 4000114,
+          "count": 10
+        },
+        {
+          "itemId": 4030009,
+          "count": 10
+        },
+        {
+          "itemId": 3010001,
+          "count": 20
+        },
+        {
+          "itemId": 4030012,
+          "count": 250
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 77777,
+      "meso": 77777,
+      "items": [
+        {
+          "itemId": 4000035,
+          "count": -10
+        },
+        {
+          "itemId": 4000114,
+          "count": -10
+        },
+        {
+          "itemId": 4030009,
+          "count": -10
+        },
+        {
+          "itemId": 3010001,
+          "count": -20
+        },
+        {
+          "itemId": 4030012,
+          "count": -250
+        },
+        {
+          "itemId": 1142099
+        }
+      ]
+    }
+  }
+}

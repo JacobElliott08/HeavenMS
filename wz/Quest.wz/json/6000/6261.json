@@ -1,0 +1,55 @@
+{
+  "questId": 6261,
+  "info": {
+    "name": "A Mysterious Sentence",
+    "parent": "Ancient Ice Stone",
+    "descriptions": {
+      "notStarted": "So they say #b#p1032001##k is a magic book inscribed with ice and it contains powerful ice element magic. He/She said she\u0027s gonna break the spell on the book...",
+      "inProgress": "The book contains myterious writing that I can\u0027t understand. They say I need to go see  #b#p2020009##k, an elder in Ossyria who has studied magic for a long time...\\n\\n#t4161023# #b#c4161023# / 1#k",
+      "completed": "#b#p2020009##k explained about a magic called #r#q2221003##k and told me about a mysterious legend. According to her, she\u0027s not sure if this is a real magic book but if it\u0027s about #q2221003# it\u0027s definitely worth a try."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "minLevel": 120,
+      "jobs": [
+        222
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6260,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020009,
+      "items": [
+        {
+          "itemId": 4161023
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4161023
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 500000,
+      "items": [
+        {
+          "itemId": 4161023,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

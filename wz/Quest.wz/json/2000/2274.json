@@ -1,0 +1,33 @@
+{
+  "questId": 2274,
+  "info": {
+    "name": "Reception Party Preparation, Done!",
+    "descriptions": {
+      "notStarted": "After all that, you were finally able to convince Robby Fray, the seven star chef, to help. Report the good news to #bLana#k.",
+      "inProgress": "Next on the list is getting a makeup artist. Head over to #bTina#k and see if she\u0027ll help.",
+      "completed": "You met and talked with #bTina#k, but it seemed like she wanted you to do something for her first."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052121,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2273,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052122
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1280
+    }
+  }
+}

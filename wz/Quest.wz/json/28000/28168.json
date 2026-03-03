@@ -1,0 +1,59 @@
+{
+  "questId": 28168,
+  "info": {
+    "name": "Sticky Slimes!",
+    "parent": "Drought in Perion",
+    "descriptions": {
+      "notStarted": "#b#@9201120:##k in #b#m103000000##k says he knows the reason why the Water Pipe is clogged.",
+      "inProgress": "#r#o210100##k was responsible for the clogged Water Pipe.\\nLet\u0027s go over to #b#m102040000##k and hunt 30 #r#o210100#s#k! Report back to #b#@9201120:##k in #b#m103000000##k upon completion.",
+      "completed": "In your first mission as a Warrior, you have stopped the drought in Perion."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201120,
+      "prerequisiteQuests": [
+        {
+          "questId": 28167,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 9201120,
+      "monsters": [
+        {
+          "monsterId": 210100,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800
+    }
+  }
+}

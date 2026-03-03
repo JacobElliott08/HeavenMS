@@ -1,0 +1,33 @@
+{
+  "questId": 2122,
+  "info": {
+    "name": "Manji and the Secret Group",
+    "descriptions": {
+      "notStarted": "I heard #p1022002# of #m102000000# was visited by a group of strange people the other day...",
+      "inProgress": "#p1022002# told me a group of strangers came up to him and asked for help. He politely declined, but felt bad about it, and have been thinking about it ever since. He desired to send someone to help them for him, and asked me to prove my worth to him so he can send me there.\\n\\n#o2130100# #r#a21221#",
+      "completed": "I took care of 15 #o2130100#s, gaining approval from #p1022002#."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022002,
+      "minLevel": 18,
+      "maxLevel": 29
+    },
+    "complete": {
+      "npc": 1022002,
+      "monsters": [
+        {
+          "monsterId": 2130100,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1400
+    }
+  }
+}

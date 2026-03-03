@@ -1,0 +1,26 @@
+{
+  "questId": 1054,
+  "info": {
+    "name": "Cygnus Knights",
+    "descriptions": {
+      "notStarted": "Neinheart suddenly approaches you...",
+      "inProgress": "The Cygnus Knights… Neinheart wonders if you are interested in joining...",
+      "completed": "The Cygnus Knights… What is that?"
+    },
+    "area": 10,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "infoNumber": 1055,
+      "minLevel": 20,
+      "normalAutoStart": true,
+      "startScript": "q1054s",
+      "endDate": "2009020200",
+      "infoEx": [
+        null
+      ]
+    }
+  }
+}

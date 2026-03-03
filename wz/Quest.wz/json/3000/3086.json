@@ -1,0 +1,28 @@
+{
+  "questId": 3086,
+  "info": {
+    "name": "Spiruna\u0027s Prophecy",
+    "parent": "Orbis in Danger",
+    "descriptions": {
+      "notStarted": "I heard that #p2032001#, who resides at the Cloud Park of #m200000000#, made a disturbing prophecy. She may not have the best of personalities, but she\u0027s a prophet who correctly saw the future. What must it be that she saw...?",
+      "inProgress": "I ran to the Cloud Park of Orbis just to hear the disturbing prophecy from #b#p2032001##k herself. She said nonchalantly that #m200000000# will crash to the ground soon. I asked her of the ways to save #m200000000#, only to hear her say it\u0027s all going to be in vain, and decided not to help me out. I can\u0027t let #m200000000# crash down like that! I better go talk to #b#p2032001##k again.",
+      "completed": "I went to see #p2032001# again, but she sat down, motionless, as if she was meditating right then and there. Will #m200000000# crash and burn just like that? But then, a girl standing next to #p2032001# is looking at me as if she has something to say on this matter. Who must she be...?"
+    },
+    "area": 33,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2032001,
+      "minLevel": 30
+    },
+    "complete": {
+      "npc": 2032001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50
+    }
+  }
+}

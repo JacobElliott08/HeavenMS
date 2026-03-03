@@ -1,0 +1,30 @@
+{
+  "questId": 3714,
+  "info": {
+    "name": "The Remnants of Horned Tail...",
+    "descriptions": {
+      "notStarted": "After defeating Horned Tail, I was able to acquire Nine Spirit\u0027s Egg. I better take it to Nine Spirit\u0027s nest and see what happens.",
+      "inProgress": "When I placed the egg on the nest, the egg hatched, and a baby dragon emerged from the nest.",
+      "completed": "After returning Nine Spirit\u0027s Egg onto its nest, the baby dragon hatched from the egg. As soon as the dragon emerged, it coughed for a little bit, and spat out #b#t2041200##k."
+    },
+    "area": 41
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081011,
+      "repeatIntervalMinutes": 0,
+      "startScript": "q3714s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3706,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4001094
+        }
+      ]
+    }
+  }
+}

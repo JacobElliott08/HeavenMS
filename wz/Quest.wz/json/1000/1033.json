@@ -1,0 +1,37 @@
+{
+  "questId": 1033,
+  "info": {
+    "name": "What Sen Wants",
+    "parent": "Nina\u0027s Request",
+    "descriptions": {
+      "inProgress": "What Sen wanted was a nice, tasty #bMushroom Candy#k. I better tell this to #bNina#k.",
+      "completed": "I told Nina what Sen wanted right now."
+    },
+    "area": 20,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2001,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1032,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2102
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7,
+      "nextQuest": 1034
+    }
+  }
+}

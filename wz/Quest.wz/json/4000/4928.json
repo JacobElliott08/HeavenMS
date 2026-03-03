@@ -1,0 +1,66 @@
+{
+  "questId": 4928,
+  "info": {
+    "name": "Jay\u0027s Curiosity",
+    "descriptions": {
+      "notStarted": "It\u0027s weird... When I walked passed #bJay from Henesys#k the other day, he didn\u0027t answer my greetings and didn\u0027t even notice me there. It looked like he was working on some kind of riddle by himself. Let\u0027s find out what Jay is up to these days.",
+      "inProgress": "I don\u0027t believe I actually offered to help him on finding a historical figure just out of curiosity! I guess it won\u0027t hurt to check out the dungeon as #p1012109# requested... But I really doubt I would find anything there. It\u0027s a legend, myth, a fairy tale.",
+      "completed": "I found Bob from #m105090300# and talked with bunch of people about him. He is famous around this world."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012109,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 2075,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012109,
+      "prerequisiteQuests": [
+        {
+          "questId": 4936,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4929,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4930,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4931,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4932,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4031447,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

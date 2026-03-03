@@ -1,0 +1,64 @@
+{
+  "questId": 3813,
+  "info": {
+    "name": "The Outlaw in the Sea",
+    "descriptions": {
+      "notStarted": "#b#p2094000##k the bellflower is apparently searching for someone brave enough to rescue his King.",
+      "inProgress": "#p2094000# used to be the chamberlain of the King of Bellflowers. According to him, the Bellflowers never attacked humans and lived peacefully. That was, before Lord Pirate kidnapped #bThe King of Bellflowers, #p2094001##k. The Bellflowers, worried that #p2094001# might be in danger, reluctantly followed the Lord Pirate\u0027s orders and started attacking humans.instead. How cowardly of the Lord Pirate to disturb the peace of the Bellflowers by kidnapping their King!! That\u0027s despicable! I better defeat #r#o9300119##k and save the King of Bellflowers, #p2094001#! \\n\\n#o9300119#  #r#a38131##k\\n#o9300105#  #r#a38132##k\\n#o9300106#  #r#a38133##k",
+      "completed": "I was able to defeat #o9300105# and save #p2094001#, the King of Bellflowers. Hopefully, with the king now saved, the Bellflowers will resume their peaceful lives."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2094000,
+      "minLevel": 55,
+      "maxLevel": 100
+    },
+    "complete": {
+      "npc": 2094000,
+      "monsters": [
+        {
+          "monsterId": 9300119
+        },
+        {
+          "monsterId": 9300105
+        },
+        {
+          "monsterId": 9300106
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000,
+      "items": [
+        {
+          "itemId": 2041007,
+          "probability": 1
+        },
+        {
+          "itemId": 2041010,
+          "probability": 1
+        },
+        {
+          "itemId": 2041022,
+          "probability": 1
+        },
+        {
+          "itemId": 2041016,
+          "probability": 1
+        },
+        {
+          "itemId": 2041013,
+          "probability": 1
+        },
+        {
+          "itemId": 2041019,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

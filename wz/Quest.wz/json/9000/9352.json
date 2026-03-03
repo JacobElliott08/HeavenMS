@@ -1,0 +1,53 @@
+{
+  "questId": 9352,
+  "info": {
+    "name": "새마음 새출발!!",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 졸업, 입학을 축하한다는 말을 하고 싶다는데...",
+      "inProgress": "졸업, 입학을 모두 다 같이 축하하자며, #p9010010#는 하프링인 #b#p2081004##k이 선물을 준비했으니 #e리프레 마을#n을 찾아가 보라고 했다. #b#t4031272# 10개#k와 #b#t4000241# 5개#k만 가지고 가면 #b#p2081004##k게서 향수를 받을 수 있다는데...\\n\\n#t4031257# #b#c4031272#/10#k \\n#t4000241# #b#c4000241#/5#k",
+      "completed": "하프링들도 인간과 함께 졸업과 입학을 축하한다고 하니, 왠지 기분이 좋은걸?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 70,
+      "repeatIntervalMinutes": 360,
+      "startDate": "2007022600",
+      "endDate": "2007031200"
+    },
+    "complete": {
+      "npc": 2081004,
+      "items": [
+        {
+          "itemId": 4000241,
+          "count": 5
+        },
+        {
+          "itemId": 4031272,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 34800,
+      "items": [
+        {
+          "itemId": 4031272,
+          "count": -10
+        },
+        {
+          "itemId": 2022062,
+          "count": 3
+        },
+        {
+          "itemId": 4000241,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "questId": 21301,
+  "info": {
+    "name": "Catch that Thief!",
+    "descriptions": {
+      "notStarted": "So what exactly happened to make you return to the island? You\u0027d better go talk to #b#p1201002##k.",
+      "inProgress": "#p1201002# was devastated to have his #t4032312# stolen! The thief responsible for this mess, #o9001013#, apparently headed toward #m140020300#. Maybe he\u0027s planning to escape on a boat. You need to go to #m140020300# and battle #r#o9001013##k.\\r\\n\\r\\n#o9001013##r #a213011##k",
+      "completed": "You successfully eliminated #o9001013#, but the #t4032312# was nowhere to be found. When #p1201002# found out what happened, he went crazy."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201002,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 21300,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110
+      ]
+    },
+    "complete": {
+      "npc": 1201002,
+      "endScript": "q21301e",
+      "monsters": [
+        {
+          "monsterId": 9001013
+        }
+      ]
+    }
+  }
+}

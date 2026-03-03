@@ -1,10 +1,10 @@
 {
   "questId": 1000,
   "info": {
-    "name": "Borrowing Sera's Mirror",
-    "parent": "Sera's Mirror",
+    "name": "Borrowing Sera\u0027s Mirror",
+    "parent": "Sera\u0027s Mirror",
     "descriptions": {
-      "notStarted": "Let's go to Heena.",
+      "notStarted": "Let\u0027s go to Heena.",
       "inProgress": "I ran into Heena who was worrying about her face getting irritated by the strong sunlight. I have to get a mirror for Heena from her sister, Sarah.",
       "completed": "Heena asked me to go to her sister and get a mirror for her. I walked my way to Sarah."
     },
@@ -14,11 +14,12 @@
   "requirements": {
     "start": {
       "npc": 2101,
-      "jobs": [0],
+      "jobs": [
+        0
+      ],
       "items": [
         {
-          "itemId": 1042003,
-          "count": 1
+          "itemId": 1042003
         }
       ]
     },
@@ -27,7 +28,6 @@
     }
   },
   "actions": {
-    "onStart": {},
     "onComplete": {
       "nextQuest": 1001
     }

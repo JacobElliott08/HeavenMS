@@ -1,0 +1,49 @@
+{
+  "questId": 1018,
+  "info": {
+    "name": "Todd\u0027s How-to-Hunt",
+    "descriptions": {
+      "notStarted": "I hear Todd can teach us how to hunt...",
+      "inProgress": "Todd taught me to move towards upper right-hand side to attack and kill #bJr. Sentinel#k, and talk to #p2002#...\\n\\nJr. Sentinel #b#a10181##k\\n#t4000142# #b#c4000142#/1#k",
+      "completed": "I killed the monster just as Todd told me."
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 2004,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2002,
+      "items": [
+        {
+          "itemId": 4000142
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9300018
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10,
+      "items": [
+        {
+          "itemId": 4000142,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

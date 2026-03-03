@@ -1,0 +1,73 @@
+{
+  "questId": 21608,
+  "info": {
+    "name": "Nanuke\u0027s Advice",
+    "descriptions": {
+      "notStarted": "Since adolescent #t1902015# is now going through puberty, you decide to visit #b#p2060000##k in #b#m230010201##k and ask for some good advice.",
+      "inProgress": "#p2060000# tells you, when raising an adolescent wolf, it is an absolute must that the wolf be well-fed. She suggests that you make special formula specifically designed for adolescent wolves. #p2060000# volunteers to make some for you. Just gather the ingredients for her.\\r\\n\\r\\n#i4000182# #t4000182# #b#c4000182# / 200#k\\r\\n#i4000183# #t4000183# #b#c4000183# / 200#k\\r\\n#i4000184# #t4000184# #b#c4000184# / 200#k\\r\\n#i4032333# #t4032333# #b#c4032333# / 1#k",
+      "completed": "You brought the ingredients to #p2060000# and she worked her magic to create some special formula for adolescent wolves."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060000,
+      "minLevel": 100,
+      "prerequisiteQuests": [
+        {
+          "questId": 21607,
+          "state": "STARTED"
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2060000,
+      "items": [
+        {
+          "itemId": 4000182,
+          "count": 200
+        },
+        {
+          "itemId": 4000183,
+          "count": 200
+        },
+        {
+          "itemId": 4000184,
+          "count": 200
+        },
+        {
+          "itemId": 4032333
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000182,
+          "count": -200
+        },
+        {
+          "itemId": 4000183,
+          "count": -200
+        },
+        {
+          "itemId": 4000184,
+          "count": -200
+        },
+        {
+          "itemId": 4032333,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

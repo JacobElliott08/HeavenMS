@@ -1,0 +1,23 @@
+{
+  "questId": 28000,
+  "info": {
+    "name": "Maplemas Surprise Party!",
+    "descriptions": {
+      "notStarted": "There\u0027s an awesome Maplemas party going on in Happyville!",
+      "inProgress": "Extra extra! Happyville is holding an amazing party for Maplemas! For more details, please go see Rooney.",
+      "completed": "I talked to Rooney about the impending Maplemas party. Apparently it\u0027s a dress-up party, so I better go talk to Cliff about a possible potion for transformation."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250052,
+      "endDate": "2009012100",
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 1022101
+    }
+  }
+}

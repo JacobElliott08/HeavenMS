@@ -1,0 +1,46 @@
+{
+  "questId": 9511,
+  "info": {
+    "name": "주걸균의 대만명소",
+    "descriptions": {
+      "notStarted": "대만에 살고 있는 #b#p9330003##k을 만나 보자.",
+      "inProgress": "#b#p9330003##k씨가 부탁한 선글라스를 구해가자.\\n\\n#t4000199# #b#c4000199#/50#k",
+      "completed": "대만 여행 준비를 마쳤다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9330003,
+      "minLevel": 10,
+      "startDate": "2006101600",
+      "endDate": "2006110100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9510,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9330003,
+      "items": [
+        {
+          "itemId": 4000199,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1400,
+      "items": [
+        {
+          "itemId": 4000199,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

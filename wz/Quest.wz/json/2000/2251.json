@@ -1,0 +1,47 @@
+{
+  "questId": 2251,
+  "info": {
+    "name": "Zombie Mushroom Signal 3",
+    "parent": "Strange Mushrooms",
+    "descriptions": {
+      "notStarted": "The Rememberer still needs help figuring out what drove the mushrooms into a rage.",
+      "inProgress": "With those vague mushroom signals, The Rememberer hasn\u0027t been able to figure out what drove the mushrooms into a rage. He suggests studying Zombie Mushrooms.\\r\\n\\r\\n#i4032399:# #t4032399:# #c4032399# / 20\\r\\n",
+      "completed": "You finally managed to figure out the signals the mushrooms sent to themselves. #b#e\u0027Mushking of the Mushroom Castle is in danger. Watch out for King Pepe! Request help from the courageous adventurers of Maple World who are at least Level 30.\u0027 #n#k What does that mean?"
+    },
+    "area": 30,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "endScript": "q2251e",
+      "prerequisiteQuests": [
+        {
+          "questId": 2250,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "endScript": "q2251e",
+      "items": [
+        {
+          "itemId": 4032399,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 4032399,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

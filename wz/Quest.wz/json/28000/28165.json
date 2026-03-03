@@ -1,0 +1,65 @@
+{
+  "questId": 28165,
+  "info": {
+    "name": "Reporting the Training Results",
+    "descriptions": {
+      "notStarted": "Talk to #b#@9201119:##k in #b#m102000000##k upon completing your training.",
+      "inProgress": "Report to #b#@1022000:##k who lives at the very top of #b#m102000000##k since you\u0027ve completed the training.",
+      "completed": "You have reported to #p1022000# upon completing all of #b#p9201119##k\u0027s training courses."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201119,
+      "prerequisiteQuests": [
+        {
+          "questId": 28163,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 28164,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1022000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 50
+        },
+        {
+          "itemId": 2000003,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

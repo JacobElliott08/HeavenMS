@@ -1,0 +1,53 @@
+{
+  "questId": 8850,
+  "info": {
+    "name": "Amoria : Cupid\u0027s Courier - Beginner",
+    "parent": "Cupid\u0027s Courier - Beginner",
+    "descriptions": {
+      "notStarted": "The wife of a sailor, eh? I\u0027ll bet she needs some help.",
+      "inProgress": "I spoke with the lovely Angelique, and I\u0027m going to deliver #b25 Stiff Feathers#k to her husband, Richard, for her. He works on Tae Gong\u0027s ship in Aqua Road. Once I have everything, I\u0027ll head there, drop everything off, and let Angelique know her husband has everything.",
+      "completed": "I delivered the materials to Richard and he thanked me. His wife must be happy..."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201036,
+      "minLevel": 35,
+      "repeatIntervalMinutes": 1440,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 4031563,
+          "count": 0
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201038,
+      "items": [
+        {
+          "itemId": 4003004,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4003004,
+          "count": -25
+        },
+        {
+          "itemId": 4031563
+        }
+      ]
+    }
+  }
+}

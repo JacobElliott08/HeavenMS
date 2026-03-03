@@ -1,0 +1,54 @@
+{
+  "questId": 1024,
+  "info": {
+    "name": "Love Counseling ?!",
+    "descriptions": {
+      "notStarted": "#b#p2005##k said he needs to ask me something...I hope this isn\u0027t some weird favor...",
+      "inProgress": "#p2005# is helping  #b#p20001##k, the crew of  #b#m60000##k, to find ingredients for his girlfriend\u0027s present. He asked me to get  #b3 #t4000003##k and hand in to #p20001#. #t4000003#? It\u0027s a monster which looks like a tree stump. If I find #r#o0130100##k, I think I can get what he says. \\n\\n#i4000003##t4000003# #b#c4000003##k/3",
+      "completed": "I gave #p20001# #t4000003#. #p20001# is going to make a boat. When would he finish it? Would #p20100# be on #p20001#\u0027s boat?"
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 2005,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 20001,
+      "items": [
+        {
+          "itemId": 4000003,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 70,
+      "items": [
+        {
+          "itemId": 2010002,
+          "count": 5
+        },
+        {
+          "itemId": 2010003,
+          "count": 5
+        },
+        {
+          "itemId": 4000003,
+          "count": -3
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "questId": 3907,
+  "info": {
+    "name": "A Letter From the Sister",
+    "parent": "Jiyur\u0027s Sister",
+    "descriptions": {
+      "inProgress": "#p2101008#, the older sister of #p2101001#. As much as #p2101001# was concerned for her safety, she was concerned for his as well. I better take this letter she wrote for #b#p2101001##k and give it to him.",
+      "completed": "#p2101001# seemed ecstatic to receive a letter from #p2101008#. He must have been concerned that the horrendous queen might really give her a hard time."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101008,
+      "minLevel": 28,
+      "prerequisiteQuests": [
+        {
+          "questId": 3906,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101001,
+      "items": [
+        {
+          "itemId": 4031589
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031589
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 450,
+      "items": [
+        {
+          "itemId": 4031589,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

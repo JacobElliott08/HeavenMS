@@ -1,0 +1,46 @@
+{
+  "questId": 28329,
+  "info": {
+    "name": "The Object of Professor Foxwit\u0027s Interest",
+    "descriptions": {
+      "notStarted": "Professor Foxwit in NLC has a deep interest in the Turkey Commando’s Eye. If you happen to come across any of these eyes, be sure to bring them to Professor Foxwit in NLC. ",
+      "inProgress": "Professor Foxwit in NLC has a deep interest in the Turkey Commando’s Eye. If you happen to come across any of these eyes, be sure to bring them to Professor Foxwit in NLC. ",
+      "completed": "Professor Foxwit in NLC has told me a fascinating story about Turkey Commandos. "
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201052,
+      "minLevel": 10,
+      "startDate": "2009112500",
+      "endDate": "2009120100",
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 4032525
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201052,
+      "items": [
+        {
+          "itemId": 4032525
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": 50000,
+      "items": [
+        {
+          "itemId": 4032525,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

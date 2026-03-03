@@ -1,0 +1,37 @@
+{
+  "questId": 4936,
+  "info": {
+    "name": "Bruce\u0027s Research",
+    "descriptions": {
+      "notStarted": "Bruce, the monster researcher, might know something. Maybe he can tell me how old Bob actually is. If I get to know how old he is, wouldn\u0027t that be a discovery of something remarkable?",
+      "inProgress": "He does seem to know something about his age but he looks spooked. I shouldn\u0027t hesitate to ask him what is wrong!",
+      "completed": "Wow... Bruce told me that Bob\u0027s age is incalculable. This is getting serious, isn\u0027t it. A snail that even professional monster researcher can\u0027t tell the age. Maybe he was right about asking me to go see Winston. Maybe an archaeologist knows more about the history and the age issue than Bruce."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012111,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 4928,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012111,
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    }
+  }
+}

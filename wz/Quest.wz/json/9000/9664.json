@@ -1,0 +1,30 @@
+{
+  "questId": 9664,
+  "info": {
+    "name": "카산드라의 복수:해적 데비존 ",
+    "descriptions": {
+      "notStarted": "아무도 종적을 알지 못한다는 악명 높은 해적, 데비존. 하지만 #b#p9010010##k는 그 위치를 알고 있다는데…",
+      "inProgress": "#b#p9010010##k는 그녀의 옛 친구가 데비존에게 괴롭힘을 당한 적이있다며 무릉으로 가서 데비존을 퇴치하라고 했다. 데비존을 처치할 수 있을까? 백초마을의 #b#p2094000##k이라는 사람에게 가보자. ",
+      "completed": "#b#p2094000##k이라는 자, 도라지일 줄 몰랐어… 어쨌든 데비존을 퇴치해서 다행이다. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 55,
+      "maxLevel": 100,
+      "startDate": "2007011600",
+      "endDate": "2007020500"
+    },
+    "complete": {
+      "npc": 9010010,
+      "prerequisiteQuests": [
+        {
+          "questId": 9625,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "questId": 28228,
+  "info": {
+    "name": "The Legend Has It That...",
+    "parent": "The Legend of Ancient Bow",
+    "descriptions": {
+      "notStarted": "#b#@9201118:##k in #bHenesys#k says he knows someone who can tell you about the legend.",
+      "inProgress": "He says the fairies know the most about legends, but they are very reserved and will not talk to strangers.\\n\\nLet\u0027s go over to #bHenesys#k and talk to #b#@1012003:##k, who knows a good deal about the fairies.",
+      "completed": "#b#@1012003:##k in #bHenesys#k says he\u0027ll tell you what the fairies like. Let\u0027s talk to him."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201118,
+      "prerequisiteQuests": [
+        {
+          "questId": 28227,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1012003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

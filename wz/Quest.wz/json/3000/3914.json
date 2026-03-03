@@ -1,0 +1,37 @@
+{
+  "questId": 3914,
+  "info": {
+    "name": "Borrowing the Book from Wiz",
+    "parent": "Schegerazade the Storyteller",
+    "descriptions": {
+      "inProgress": "After hearing the whole story, #p2040052# decided to rent #p2101008# the book. There\u0027s also a rule in #m222020000# where any returned book should to replaced by another book, so I have to find one. Then... maybe I should put together a list of stories that #b#p2101008##k knows and make a book out of it.",
+      "completed": "When I told #p2101008# of #p2040052#\u0027s words, she smiled brightly and told me that she has a list of stories that have already been written on the paper, so she\u0027ll give me the collection of stories. Phew, thank goodness."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040052,
+      "minLevel": 36,
+      "prerequisiteQuests": [
+        {
+          "questId": 3913,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101008
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500
+    }
+  }
+}

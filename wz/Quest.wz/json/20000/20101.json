@@ -1,0 +1,46 @@
+{
+  "questId": 20101,
+  "info": {
+    "name": "Path of a Dawn Warrior",
+    "descriptions": {
+      "notStarted": "The time has come. If I want to find out more about Dawn Warriors, the Warriors of Light, I should talk to #b#p1101003#, the Chief Knight of Light#k.",
+      "inProgress": "If I want to become a Cygnus Knight as a #bDawn Warrior#k accompanied with honor and glory, I should select #p1101003#.",
+      "completed": "I am now a Dawn Warrior!"
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101003,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 20102
+        },
+        {
+          "questId": 20103
+        },
+        {
+          "questId": 20104
+        },
+        {
+          "questId": 20105
+        },
+        {
+          "questId": 20100,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 20101
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    },
+    "complete": {
+      "npc": 1101003,
+      "endScript": "q20101e"
+    }
+  }
+}

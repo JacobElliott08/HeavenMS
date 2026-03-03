@@ -1,0 +1,33 @@
+{
+  "questId": 10349,
+  "info": {
+    "name": "Preparing for the Arrival",
+    "descriptions": {
+      "notStarted": "Cassandra tells you she needs your help. You wonder what\u0027s going on…",
+      "inProgress": "Cassandra tells you to purchase a weapon from a nearby weapon shop for Aran.",
+      "completed": "The weapon you got for Aran…is that the weapon he\u0027ll actually be using? No way…it\u0027s actually giving you goose bumps thinking about it."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2009010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 10348,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10349e",
+      "items": [
+        {
+          "itemId": 1442000
+        }
+      ]
+    }
+  }
+}

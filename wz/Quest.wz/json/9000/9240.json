@@ -1,0 +1,35 @@
+{
+  "questId": 9240,
+  "info": {
+    "name": "수능 끝! 행복 시작!!!",
+    "descriptions": {
+      "notStarted": "대학수학능력 시험이 끝남과 동시에 축복을 빌어주는 쿠키를 나눠주고 있다고 한다. 운영자 NPC를 만나보자.",
+      "inProgress": "오르비스의 엘나스 마을에 있는 제이드가 쿠키를 잔뜩 준비해두고 나눠주고 있다고 한다. 엘리니아에서 오르비스 행 배를 타고 엘나스 마을로 가볼까?",
+      "completed": "엘나스의 벤치에 앉아있던 제이드 군이 쿠키를 나눠주었다. 이 쿠키가 어떤 축복을 내려준다는 걸까?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 50,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2006111300",
+      "endDate": "2006112000"
+    },
+    "complete": {
+      "npc": 2020006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 12000,
+      "items": [
+        {
+          "itemId": 2022042,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

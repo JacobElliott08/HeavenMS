@@ -1,0 +1,55 @@
+{
+  "questId": 28255,
+  "info": {
+    "name": "Searching for the Demon",
+    "descriptions": {
+      "notStarted": "#b#@1072008:##k in #bNautilus#k says the demon must be sealed again. Let\u0027s talk to her.",
+      "inProgress": "You will find a box you have not seen before in #b#m120000300##k. She says to use the #rOld Key#k you acquired awhile back to investigate the box, and that you will find a message from the demon.\\n\\nReport back to #b#@1072008:##k in #bNautilus#k upon completion.",
+      "completed": "You have found #rCrocell\u0027s Emblem#k."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28254,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "items": [
+        {
+          "itemId": 4032494
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 700,
+      "items": [
+        {
+          "itemId": 4032494,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

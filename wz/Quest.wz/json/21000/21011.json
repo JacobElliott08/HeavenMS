@@ -1,0 +1,30 @@
+{
+  "questId": 21011,
+  "info": {
+    "name": "The Missing Weapon",
+    "descriptions": {
+      "notStarted": "You should talk to #b#p1202002##k on your way back to town.",
+      "inProgress": "#p1202002# tells you it\u0027s an honor to meet a real hero and pleads with you to say hello to his brother #b#p1202003##k, who\u0027s also eager to meet a hero.",
+      "completed": "#p1202003# said that a true hero should never be without a weapon and gave you a sword. A hero without a weapon? Were you really a hero to begin with?"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1202002,
+      "prerequisiteQuests": [
+        {
+          "questId": 21010,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2000
+      ]
+    },
+    "complete": {
+      "npc": 1202003,
+      "endScript": "q21011e"
+    }
+  }
+}

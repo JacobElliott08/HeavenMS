@@ -1,0 +1,31 @@
+{
+  "questId": 1009,
+  "info": {
+    "name": "Rain\u0027s Maple Quiz 1",
+    "parent": "Rain\u0027s Maple Quiz",
+    "descriptions": {
+      "notStarted": "I\u0027m not a beginner anymore. Let\u0027s meet Rain and solve the Quiz!",
+      "inProgress": "I\u0027m not a MapleStory Beginner. Let\u0027s solve Rain\u0027s Quiz.",
+      "completed": "Rain\u0027s First Quiz was, what is the hot-key to open the Item Inventory? I\u0027ll make sure I remember the hot-key \"I\"..."
+    },
+    "area": 20,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 12101,
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 12101
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2,
+      "nextQuest": 1010
+    }
+  }
+}

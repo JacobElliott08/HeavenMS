@@ -1,0 +1,34 @@
+{
+  "questId": 3371,
+  "info": {
+    "name": "Juliet\u0027s Feelings",
+    "parent": "Juliet\u0027s Response",
+    "descriptions": {
+      "notStarted": "Juliet received a Snowfield Rose with Romeo\u0027s true feelings laden in it. I better go see her and see how she feels about the present.",
+      "inProgress": "Juliet was so happy about Romeo\u0027s Present that she wanted to give Romeo something in return. After taking some time wondering what would be the perfect present for him, she decided to... make him some clothes. She\u0027s an alchemist... how will she make clothes for him? Anyway, since Juliet asked for help, I\u0027ll need to see #bSirin#k of #bAriant#k.",
+      "completed": "When I told Sirin of Juliet\u0027s story, she told me to wait for a second. She didn\u0027t seem to be sweating it one bit."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2112003,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3370,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100
+    }
+  }
+}

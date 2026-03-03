@@ -1,0 +1,69 @@
+{
+  "questId": 28185,
+  "info": {
+    "name": "Reporting the Training Results to Grendel the Really Old",
+    "descriptions": {
+      "notStarted": "#b#@9201121:##k in #bEllinia#k says you must report the training results.",
+      "inProgress": "Go over to #b#@1032001:##k in #bEllinia#k and report the training results.",
+      "completed": "You have successfully completed the 4 rigorous training courses for Magicians."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201121,
+      "prerequisiteQuests": [
+        {
+          "questId": 28181,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 28182,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 28183,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 28184,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1032001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 100
+        },
+        {
+          "itemId": 2000003,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "questId": 3929,
+  "info": {
+    "name": "Sejan\u0027s Test",
+    "parent": "Sand Bandits According to Sejan",
+    "descriptions": {
+      "inProgress": "Sejan told me since I brought the food, I\u0027ll have to distribute them to the good people in this town, and asked me to drop some food on a random house when no one\u0027s watching. Since the town is also full of crazy thieves stealing things from others, I\u0027ll have to find a house where it\u0027s not a thief\u0027s house.",
+      "completed": "I gave food to the suffering residents of Ariant. I think I proved my worth, but Sejan still wasn\u0027t so sure."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101011,
+      "minLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 3928,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101011,
+      "items": [
+        {
+          "itemId": 4031580
+        }
+      ],
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "info": "2222",
+      "items": [
+        {
+          "itemId": 4031580,
+          "count": 4
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 2000
+    }
+  }
+}

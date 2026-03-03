@@ -1,0 +1,35 @@
+{
+  "questId": 3841,
+  "info": {
+    "name": "Master Goblin\u0027s Call",
+    "parent": "Eliminating King Sage Cat",
+    "descriptions": {
+      "notStarted": "As soon as I reach #b#m250010503##k, I can faintly hear a voice coming out of there...",
+      "inProgress": "Out of the blue, #rMaster Goblin#k decided to speak to me. Master Goblin seemed eager to dispell the rumors and misconceptions held towards him... is he for real?? I should head over to the #bRock Support of the Disappeared Statue#k at #bGoblin Forest 2#k as Master Goblin instructed.",
+      "completed": "Master Goblin reiterated he had no hard feelings towards Mu Lung, and that all this hatred stems from Do Gong, who\u0027s jealous of Master Goblin\u0027s mastery on spells. No way... I better talk to Master Goblin and find out myself."
+    },
+    "area": 44,
+    "order": 2,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091004,
+      "minLevel": 77,
+      "prerequisiteQuests": [
+        {
+          "questId": 3840,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091004
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 750
+    }
+  }
+}

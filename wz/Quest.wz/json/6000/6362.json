@@ -1,0 +1,36 @@
+{
+  "questId": 6362,
+  "info": {
+    "name": "Papulatus in the Past",
+    "parent": "The Secret Behind Space-Time Transformations",
+    "descriptions": {
+      "inProgress": "That\u0027s kind of strange. This doesn\u0027t really look like the Origin of the Clocktower as I remember it. I\u0027d better go and talk to Papulatus.",
+      "completed": "What? I\u0027m really in the past? How in the world did I get here?"
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2043000,
+      "minLevel": 120,
+      "jobs": [
+        512
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6361,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2043000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200000
+    }
+  }
+}

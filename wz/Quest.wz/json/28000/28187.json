@@ -1,0 +1,57 @@
+{
+  "questId": 28187,
+  "info": {
+    "name": "Show Kyrin What You\u0027ve Got!",
+    "descriptions": {
+      "notStarted": "#b#@1072008:##k in #bNautilus#k says she is going to test you in something. Let\u0027s go find her.",
+      "inProgress": "She says she\u0027ll test to see if you have what it takes to become a Magician.\\nShe says to hunt #rPigs#k and #rRibbon Pigs#k.\\nYou can easily find them in #b#m100030000##k.\\n\\nLet\u0027s go back to #b#@1072008:##k in #bNautilus#k upon completion.",
+      "completed": "#b#p1072008##k has confirmed your capabilities as a Magician."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28186,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "monsters": [
+        {
+          "monsterId": 1210100,
+          "count": 30
+        },
+        {
+          "monsterId": 1210101,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1400
+    }
+  }
+}

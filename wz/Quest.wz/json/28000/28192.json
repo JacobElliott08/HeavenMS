@@ -1,0 +1,77 @@
+{
+  "questId": 28192,
+  "info": {
+    "name": "Virus Sample Research",
+    "parent": "The Cause of Sickness",
+    "descriptions": {
+      "notStarted": "#b#@1052001:##k in #bKerning City#k says he must look into the likelihood of the virus spreading. Let\u0027s talk to him.",
+      "inProgress": "You must hunt the #rOctopuses#k and the #rOrange Mushrooms#k and collect the Virus Samples.\\n\\nThere is a hidden place in #b#m103010000##k where there are a lot of #rOctopuses#k and #rOrange Mushrooms#k.\\nPay close attention to the yellow barricade.\\n\\nReport back to #b#@1052001:##k in #bKerning City#k.",
+      "completed": "#b#@1052001:##k in #bKerning City#k says he\u0027s completed his Sample analysis. Let\u0027s make a trip to see what he\u0027s discovered."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "prerequisiteQuests": [
+        {
+          "questId": 28191,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1052001,
+      "items": [
+        {
+          "itemId": 4001364
+        },
+        {
+          "itemId": 4001365
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 1120100,
+          "count": 30
+        },
+        {
+          "monsterId": 1210102,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200,
+      "items": [
+        {
+          "itemId": 4001364,
+          "count": -1
+        },
+        {
+          "itemId": 4001365,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

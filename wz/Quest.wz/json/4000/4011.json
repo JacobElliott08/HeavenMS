@@ -1,0 +1,52 @@
+{
+  "questId": 4011,
+  "info": {
+    "name": "주걸균의 음악상자",
+    "descriptions": {
+      "notStarted": "주걸균이 도움이 필요하다고 한다. 대만의 #b#p9330003##k을 다시 찾아가 보자.",
+      "inProgress": "주걸균의 연인인 #b#p9330019##k에게 음악상자를 가져다 주자.\\n\\n#i4031353##t4031353#  #b#c4031353#/1#k",
+      "completed": "#b#p9330019##k에게 주걸균의 사랑이 담긴 선물을 전해 주었다."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9330003,
+      "minLevel": 80,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4006,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9330019,
+      "items": [
+        {
+          "itemId": 4031353
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031353
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4031353,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

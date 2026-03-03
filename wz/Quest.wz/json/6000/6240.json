@@ -1,0 +1,35 @@
+{
+  "questId": 6240,
+  "info": {
+    "name": "Flame Bird",
+    "parent": "The Legendary Fire Bird",
+    "descriptions": {
+      "notStarted": " #b#p2081001##k says he heard an interesting story....",
+      "inProgress": " #b#p2081001##k said he heard that someone spotted the legendary fire bird.  He said the bird\u0027s nest might be in the volcanic cave and told me to go check it out.  I heard #b#m921100200##k was spotted deep inside the Cave of Distress.  I wonder where that is...let\u0027s go find out. \\n\\n#i4001113##t4001113# #b#c4001113#/1#k",
+      "completed": "#b#p2081001##k said he will find out how to hatch the egg."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081001,
+      "jobs": [
+        312
+      ]
+    },
+    "complete": {
+      "npc": 2081001,
+      "items": [
+        {
+          "itemId": 4001113
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800000
+    }
+  }
+}

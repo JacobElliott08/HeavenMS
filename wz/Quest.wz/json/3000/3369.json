@@ -1,0 +1,40 @@
+{
+  "questId": 3369,
+  "info": {
+    "name": "Romeo\u0027s Present",
+    "parent": "Romeo\u0027s Flowers",
+    "descriptions": {
+      "notStarted": "Romeo had finally received the okay to date Juliet, but he had been hard at work researching. Has he been dating well? Let\u0027s check up on #bRomeo#k.",
+      "inProgress": "Romeo was still worried about what to get her, so I advised him to get Juliet a flower. Like a true alchemist, Romeo thought of the Snowfield Rose and asked me to help him get one. Thankfully, he knew how to make the seeds, so all I need to do is get the #bMay Mist#k. \\n\\n#i4000361##t4000361# #b#c4000361##k/20 ",
+      "completed": "I found the Snowfield Rose and gave it to Romeo. Romeo told me to wait as he wants to finalize the process himself, with all his heart."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2112004,
+      "minLevel": 70
+    },
+    "complete": {
+      "npc": 2112004,
+      "items": [
+        {
+          "itemId": 4000361,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4000361,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

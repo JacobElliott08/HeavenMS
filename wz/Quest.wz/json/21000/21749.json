@@ -1,0 +1,40 @@
+{
+  "questId": 21749,
+  "info": {
+    "name": "Back to the Past",
+    "descriptions": {
+      "notStarted": "When you reach Level 63, #b#p1002104##k sends you a message.",
+      "inProgress": "According to #p1002104#, one of the clocktowers in #m220000000# has broken down. This clocktower manages time, and when it broke, it somehow created a path to the past. Exploring the past could reveal some information about Seal Stones. #bThe busted clocktower with the time-control room can be accessed through the ladder on the top floor of Helios Tower#k, so you should make you way over there.",
+      "completed": "According to #p1002104#, one of the clocktowers in #m220000000# has broken down. This clocktower manages time, and when it broke, it somehow created a path to the past. Exploring the past could reveal some information about Seal Stones. #bThe busted clocktower with the time-control room can be accessed through the ladder on the top floor of Helios Tower#k, so you should make your way over there."
+    },
+    "area": 6,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 63,
+      "normalAutoStart": true,
+      "startScript": "q21749s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21748,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1002104
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500
+    }
+  }
+}

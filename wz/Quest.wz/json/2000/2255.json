@@ -1,0 +1,41 @@
+{
+  "questId": 2255,
+  "info": {
+    "name": "Karcasa\u0027s Memory",
+    "parent": "About the Mushroom Castle...",
+    "descriptions": {
+      "notStarted": "Karcasa has information on Mushroom Castle. You\u0027d better go talk to him.",
+      "inProgress": "Karcasa claims he\u0027ll remember information about the Mushroom Castle if he eats some carrots right now… Really? \\r\\n\\r\\n#i4000325:# #t4000325:# #c4000325# / 30\\r\\n",
+      "completed": "You gathered the carrots and gave them to Karcasa in exchange for information about the Mushroom Castle."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101013,
+      "minLevel": 26,
+      "maxLevel": 36
+    },
+    "complete": {
+      "npc": 2101013,
+      "items": [
+        {
+          "itemId": 4000325,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "items": [
+        {
+          "itemId": 4000325,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

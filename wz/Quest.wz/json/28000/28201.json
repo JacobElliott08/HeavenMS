@@ -1,0 +1,56 @@
+{
+  "questId": 28201,
+  "info": {
+    "name": "Even More Challenging Training-2",
+    "descriptions": {
+      "notStarted": "#b#@9201120:##k in #bKerning City#k says he\u0027ll begin the second training. Let\u0027s talk to him.",
+      "inProgress": "He says to hunt #rOrange Mushrooms#k and collect 20 #rOrange Mushroom Caps#k.\\nHe says you\u0027ll easily find them in #b#m102040000##k.\\n\\nReport back to #b#@9201120:##k in #bKerning City#k upon completion.",
+      "completed": "You\u0027ve completed #bErvine#k\u0027s second training!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201120,
+      "prerequisiteQuests": [
+        {
+          "questId": 28199,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 9201120,
+      "items": [
+        {
+          "itemId": 4000001,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4000001,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

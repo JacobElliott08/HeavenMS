@@ -1,0 +1,84 @@
+{
+  "questId": 10105,
+  "info": {
+    "name": "Book of Cygnus Vol. 2",
+    "parent": "Book of Cygnus",
+    "descriptions": {
+      "notStarted": "Time to find Vol.2 of Book of Cygnus. I wonder what\u0027s written on it this time.",
+      "inProgress": "Time to find Vol.2 of Book of Cygnus. I wonder what\u0027s written on it this time.",
+      "completed": "I managed to read Vol.2, which was torn."
+    },
+    "area": 50,
+    "order": 2,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2009072900",
+      "normalAutoStart": true,
+      "startDate": "2009071500",
+      "minLevel": 13,
+      "prerequisiteQuests": [
+        {
+          "questId": 10104,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        0,
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10105e",
+      "items": [
+        {
+          "itemId": 2430001,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

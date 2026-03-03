@@ -1,0 +1,45 @@
+{
+  "questId": 3358,
+  "info": {
+    "name": "Parwen\u0027s Pass",
+    "parent": "The Secret, Quiet Passage",
+    "descriptions": {
+      "notStarted": "#p2111006# is the chatty ghost at the basement lab of #m261000000#. Apparently, he knows a secret passage in #m261000000# that no one is aware of... I better go talk to #b#p2111006##k.",
+      "inProgress": "#p2111006# said that a long time ago, when he was an alchemist at #m261000000#, he had a #bpass#k that gave him access to the secret passage that connects Zenumist to  Alcadno. ...a Secret Passage? That sounds very interesting! #t4031745# believed that #rCytis#k might have taken it, so I\u0027ll have to find the pass myself and use it at the entrance of the Secret Passage.\\n\\n#i4031745##t4031745# #b#c4031745##k/1",
+      "completed": "I brought #t4031745# to the entrance of the Secret Passage, but the door didn\u0027t open. What the..."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111006,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3318,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111006,
+      "items": [
+        {
+          "itemId": 4031745
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000,
+      "items": [
+        {
+          "itemId": 4031745,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

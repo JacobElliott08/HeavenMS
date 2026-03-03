@@ -1,0 +1,58 @@
+{
+  "questId": 4942,
+  "info": {
+    "name": "The Past in the Present",
+    "parent": "Old Man Tom\u0027s Word",
+    "descriptions": {
+      "notStarted": "a",
+      "inProgress": "Jonas gave me his Toy Workshop Key.  He wants me to find someone who will keep it safe and ensure that his twisted toys can\u0027t escape his house.",
+      "completed": "Turns out Old Man Tom is Thomlin Prendergast, Jonas\u0027 younger brother.  I gave him Jonas\u0027 Toy Workshop key to keep.  He gave me Sophilia\u0027s Necklace, for helping put the spirits in Prendergast Mansion to rest."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201079,
+      "minLevel": 15,
+      "prerequisiteQuests": [
+        {
+          "questId": 4954,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4941,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031772
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201079,
+      "items": [
+        {
+          "itemId": 4031772
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 2022243,
+          "count": 5
+        },
+        {
+          "itemId": 4031772,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

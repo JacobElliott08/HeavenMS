@@ -1,0 +1,65 @@
+{
+  "questId": 21616,
+  "info": {
+    "name": "The Chief Wolf\u0027s Rage",
+    "descriptions": {
+      "notStarted": "You may have lost, then found your #t1902017#, but you wish to raise it in a healthy environment. What should you do? You\u0027d better head over to #b#m914030000##k of #b#m140000000##k and see #b#p1202008##k.",
+      "inProgress": "#p1202008# was angry to see that one of his kids was not raised with respect and gave you a tongue-lashing. He then ordered you to make another #t4032334#...\\r\\n\\r\\n#i4032334# #t4032334# #b#c4032334# / 1#k",
+      "completed": "You made another #t4032334# and with that,you were able to raise #t1902017# into an adult wolf. You promise to never, ever lose your wolf again."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1202008,
+      "minLevel": 150,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 21614,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1902016
+        },
+        {
+          "itemId": 1902017
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1202008,
+      "items": [
+        {
+          "itemId": 4032334
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032334,
+          "count": -1
+        },
+        {
+          "itemId": 1902016,
+          "count": -1
+        },
+        {
+          "itemId": 1902017
+        }
+      ]
+    }
+  }
+}

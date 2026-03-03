@@ -1,0 +1,26 @@
+{
+  "questId": 2245,
+  "info": {
+    "name": "To Tristan\u0027s Tomb",
+    "descriptions": {
+      "notStarted": "You could not defeat the Jr. Balrog in Tristan\u0027s Tomb and you want to give it another shot.",
+      "inProgress": "You could not defeat the Jr. Balrog in Tristan\u0027s Tomb and you want to give it another shot.",
+      "completed": "You went back to Tristan\u0027s Tomb and met Tristan\u0027s Spirit after finally defeating the Jr. Balrog."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061014,
+      "startScript": "q2245s",
+      "minLevel": 50,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 2238,
+          "state": "STARTED"
+        }
+      ]
+    }
+  }
+}

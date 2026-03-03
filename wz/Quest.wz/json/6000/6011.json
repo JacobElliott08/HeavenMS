@@ -1,0 +1,51 @@
+{
+  "questId": 6011,
+  "info": {
+    "name": "Dragon Rider",
+    "descriptions": {
+      "notStarted": "You have now reached the apex of the Maple world, the one who is considered the ultimate thief. To commemorate your sterling accomplishment of reaching level 200,  #b#p2081400##k has something in store for you.",
+      "inProgress": "It\u0027s the one thing that countless thieves, the dominant forces in the dark, strived for, but couldn\u0027t get... but now, #p2081400# is introducing me to #t1902002#... I heard only the very best in the world of Maple can be friends with #t1902002#.",
+      "completed": "At a point where I never thought I could go any higher, I made a new friend that certainly put me over the top."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081400,
+      "minLevel": 200,
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422
+      ]
+    },
+    "complete": {
+      "npc": 2081400,
+      "items": [
+        {
+          "itemId": 1902001
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "minLevel": 200
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1902001,
+          "count": -1
+        },
+        {
+          "itemId": 1902002
+        }
+      ]
+    }
+  }
+}

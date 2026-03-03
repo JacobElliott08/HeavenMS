@@ -1,0 +1,54 @@
+{
+  "questId": 6101,
+  "info": {
+    "name": "The Ancient Book",
+    "parent": "Extreme Temptation",
+    "descriptions": {
+      "inProgress": "After I handed him all the ingredients,  #p2040052# sprinkled the ink on the book.  Before our eyes, the ink soaked into the pages and restored the words! It revealed information about the Bowman\u0027s ultimate skill!  What could that be? It sounds powerful...I should go ask #b#p1012100##k. \\n\\n#t4161024#  #b#c4161024# / 1#k. ",
+      "completed": "When I asked #p1012100# about the book, she was shocked! I related the entire tale of the ink restoring the pages, and how #p2040052# mentioned it was made with invisible ink to prevent knowledge of this technique from spreading into unworthy hands. She has agreed to take a further look into the book to find out more. "
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040052,
+      "jobs": [
+        312,
+        322
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6100,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012100,
+      "items": [
+        {
+          "itemId": 4161024
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4161024
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 4161024,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

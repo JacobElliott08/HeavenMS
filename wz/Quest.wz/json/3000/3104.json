@@ -1,0 +1,71 @@
+{
+  "questId": 3104,
+  "info": {
+    "name": "Finding Horn Flute",
+    "descriptions": {
+      "notStarted": "Oh no! I lost the #t4031190# that lets me talk to #p2012019#. What should I do? I better go talk to #b#p2012012##k again.",
+      "inProgress": "#p2012012# told me since she had already made it once, making #t4031190# again shouldn\u0027t be a big problem, and asked me to gather up the materials for it. Since she said this time, it won\u0027t even require as many materials, I better go get #b50 #t4000073#s#k, #b10 #t4003004#s#k, and #b10 #t4000021#s#k? \\n\\n#i4000073# #t4000073# #b#c4000073#/50#k\\n#i4003004# #t4003004# #b#c4003004#/10 \\n#i4000021# #t4000021# #b#c4000021#/10#k#k",
+      "completed": "I gave #p2012012# all the materials needed, and I wound up getting another #t4031190#. Phew... #p2012012# told me to visit her again if I ever get to lose #t4031190# again, but I better start watching out for myself."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012012,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3055,
+          "state": "STARTED"
+        },
+        {
+          "questId": 3054,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031190
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012012,
+      "items": [
+        {
+          "itemId": 4000073,
+          "count": 50
+        },
+        {
+          "itemId": 4003004,
+          "count": 10
+        },
+        {
+          "itemId": 4000021,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000073,
+          "count": -50
+        },
+        {
+          "itemId": 4003004,
+          "count": -10
+        },
+        {
+          "itemId": 4000021,
+          "count": -10
+        },
+        {
+          "itemId": 4031190
+        }
+      ]
+    }
+  }
+}

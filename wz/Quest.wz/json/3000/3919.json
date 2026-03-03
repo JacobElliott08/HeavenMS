@@ -1,0 +1,34 @@
+{
+  "questId": 3919,
+  "info": {
+    "name": "Recovering the Book The Little Prince 1",
+    "parent": "Recovering the Book The Little Prince",
+    "descriptions": {
+      "notStarted": "The strange boy I saw in the middle of the Nihal Desert... apparently, #p2040052# of #b#m222020000##k claimed to know something about him. I better go talk to #b#p2040052##k.",
+      "inProgress": "I told #p2040052# about the boy I saw in Nihal Desert, and he seemed shocked. He said the boy is from a folk tale that ended up here because of the crack in dimension at the Helios Tower. He said #p2101006# gets lonely fast, and he shouldn\u0027t be sitting in the desert by himself, so #p2040052# asked me to get back the book #p2101006# from him.",
+      "completed": "I found #p2101006# at Nihal Desert. Looking at a young-looking boy with a sad look in his face, I didn\u0027t know what to say... I didn\u0027t know what to do to straighten up this mumbled folk tale."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040052,
+      "minLevel": 32,
+      "prerequisiteQuests": [
+        {
+          "questId": 3918,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000
+    }
+  }
+}

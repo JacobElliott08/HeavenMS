@@ -1,0 +1,35 @@
+{
+  "questId": 3952,
+  "info": {
+    "name": "The Bounty Hunt",
+    "parent": "The Desert Bounty",
+    "descriptions": {
+      "notStarted": "#b#p2101000##k of #b#m260000000##k has heard a rumor...",
+      "inProgress": "#r#o3220001##k, the cactus monster that is threatening the desert! The #bSand Bandits#k have offered a bounty for #o3220001#. The Sand Bandits? When asked, #p2101000# begins to say something random and suggests asking #bthe leader of the Sand Bandits#k... Hmm, the Sand Bandits, huh?",
+      "completed": "You have met the leader of the Sand Bandits, #p2101010#. #p2101010# says that the Sand Bandits have put a bounty on #o3220001# to protect the desert, but there is a problem. Some people worship #o3220001# as the guardian deity of the desert, and are hence against the hunt. He says the first thing to do is to convince #p2100001#, the representative of the people who worship him."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101000,
+      "minLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101010,
+      "prerequisiteQuests": [
+        {
+          "questId": 3937,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  }
+}

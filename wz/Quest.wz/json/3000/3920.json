@@ -1,0 +1,55 @@
+{
+  "questId": 3920,
+  "info": {
+    "name": "Recovering the Book The Little Prince 2",
+    "parent": "Recovering the Book The Little Prince",
+    "descriptions": {
+      "inProgress": "I asked #p2101006# about the fox, but he didn\u0027t seem to know. I took some time wondering what to do... until I realized something and promised #p2101006# to be his friend. He smiled and nodded accordingly, and gave me the book Little Prince. Now I should give this to #b#p2040052##k.",
+      "completed": "When I told #p2040052# I promised to be friends with #p2101006#, he let out a sigh of relief, and thanked me for my gesture. Hopefully this straightened out the distorted part in the book #p2101006#. It feels weird being a part of a folk tale..."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101006,
+      "minLevel": 32,
+      "prerequisiteQuests": [
+        {
+          "questId": 3919,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040052,
+      "items": [
+        {
+          "itemId": 4031591
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031591
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 6800,
+      "items": [
+        {
+          "itemId": 4031591,
+          "count": -1
+        },
+        {
+          "itemId": 2020012,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

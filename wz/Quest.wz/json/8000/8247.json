@@ -1,0 +1,65 @@
+{
+  "questId": 8247,
+  "info": {
+    "name": "Donate Your Notebook",
+    "descriptions": {
+      "notStarted": "I wonder what all the commotion is about. Rumor has it that there\u0027s a race going on. The team that collects the most Notebooks will win. The reward is also said to be very nice...",
+      "inProgress": "I\u0027m really anxious to find out which team is winning. I gotta get more players involved to win this race!",
+      "completed": "I gave Maple Administrator the Notebook. She seemed very ecstatic, as if it was for him... seriously, what did she do with all those notebooks?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "endDate": "2008100800",
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "endScript": "q8247e"
+    }
+  }
+}

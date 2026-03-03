@@ -1,0 +1,34 @@
+{
+  "questId": 10070,
+  "info": {
+    "name": "저택의 비밀- 페토의 과거",
+    "parent": "페토와 집사 그리고 유령T",
+    "descriptions": {
+      "inProgress": "페토는 왜 여기 유령으로 있는 것일까?",
+      "completed": "질투심이었구나..페토는 조나스의 질투 때문에 집에서 쫓겨났어."
+    },
+    "area": 50,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120008,
+      "startDate": "2008101600",
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10069,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2500
+    }
+  }
+}

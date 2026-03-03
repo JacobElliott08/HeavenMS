@@ -1,0 +1,30 @@
+{
+  "questId": 2293,
+  "info": {
+    "name": "The Last Song",
+    "descriptions": {
+      "notStarted": "Try to remember the last song Spirit of Rock performed.\\r\\nIf you can\u0027t remember, the only thing left to do is to destroy Spirit of Rock again.",
+      "inProgress": "Try to remember the last song Spirit of Rock performed.\\r\\nIf you can\u0027t remember, the only thing left to do is to destroy Spirit of Rock again.",
+      "completed": "You told Maestro Rho the last song Spirit of Rock performed."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052120,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "startScript": "q2293s",
+      "prerequisiteQuests": [
+        {
+          "questId": 2288,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052120,
+      "endScript": "q2293e"
+    }
+  }
+}

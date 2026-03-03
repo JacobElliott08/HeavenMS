@@ -1,0 +1,36 @@
+{
+  "questId": 9163,
+  "info": {
+    "name": "추석 상식 4. 우리나라의 명절",
+    "parent": "한국의 명절 추석",
+    "descriptions": {
+      "inProgress": "우리나라 명절에 대한 문제입니다.",
+      "completed": "명절은 계절적·자연적 정서와 제례 및 민속적 요소가 내포되어, 우리 민족이 전통적으로 지내온 축일이다."
+    },
+    "area": 50,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2006092600",
+      "endDate": "2006101600",
+      "prerequisiteQuests": [
+        {
+          "questId": 9162,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1100,
+      "nextQuest": 9164
+    }
+  }
+}

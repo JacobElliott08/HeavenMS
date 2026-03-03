@@ -1,0 +1,50 @@
+{
+  "questId": 4959,
+  "info": {
+    "name": "The File Thickens Part 2",
+    "parent": "The File Thickens",
+    "descriptions": {
+      "notStarted": "a",
+      "inProgress": "I got my questionnarie from Jonas. Now is time for me to hand over this document to Falcon. Maybe he can go back to MBI if I hand him this?",
+      "completed": "I gave Agent Falcon\u0027s Paranormal Subject Questionnaire to Jonas and had him fill it out.  Finding him in the labyrinthine mansion was the hard part... Jonas was actually quite cooperative, especially for a spirit.  In any case, I returned the completed form to Falcon, who was ecstatic that he didn\u0027t have to set foot inside the creepy old mansion again."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201077,
+      "minLevel": 15,
+      "endDate": "2007103123",
+      "prerequisiteQuests": [
+        {
+          "questId": 4951,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201075,
+      "items": [
+        {
+          "itemId": 4031766
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9900,
+      "items": [
+        {
+          "itemId": 4020008,
+          "count": 5
+        },
+        {
+          "itemId": 4031766,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

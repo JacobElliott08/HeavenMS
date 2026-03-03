@@ -1,0 +1,67 @@
+{
+  "questId": 2133,
+  "info": {
+    "name": "Beginner Magician\u0027s Second Training Session",
+    "descriptions": {
+      "notStarted": " With help from the Magician trainer,  I became stronger but still have a long way to go. Let\u0027s go to #b#p1032001##k again for my second training session.",
+      "inProgress": " #p1032001# told me to continue hunting monsters as I\u0027m still training. This time, I have to hunt #r20 #o0210100##k. 20 #o0210100#... I\u0027m a little nervous, but can\u0027t stop here!\\n\\n#o0210100# #r#a21331##k",
+      "completed": " After eliminating 20 #o0210100# and reported to #p1032001#. #p1032001# looked happy, and even smiled at me! "
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 2132,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "monsters": [
+        {
+          "monsterId": 210100,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 323,
+      "items": [
+        {
+          "itemId": 2000001,
+          "count": 30
+        },
+        {
+          "itemId": 2000003,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

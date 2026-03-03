@@ -1,0 +1,59 @@
+{
+  "questId": 20533,
+  "info": {
+    "name": "The Birth of Shinjo",
+    "parent": "The Birth of Shinjo",
+    "descriptions": {
+      "notStarted": "Let\u0027s go check with #b#p1102002##k, the Mount Instructor, to see whether your Mount will recover its health if it goes into the special Incubator.",
+      "inProgress": "#p1102002# says he\u0027s done everything he could but the Mount keeps getting weaker and weaker. As a last resort, he suggests you seek help from #b#p1101001##k. He then hints that you may gain something more valuable if you #bsincerely devote time and energy to your Mount#k.",
+      "completed": "The Mount which #p1101001# had revived was not the same #t1902006#."
+    },
+    "area": 15,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102002,
+      "minLevel": 120,
+      "prerequisiteQuests": [
+        {
+          "questId": 20532,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1902006
+        }
+      ],
+      "jobs": [
+        1112,
+        1212,
+        1312,
+        1412,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1101001,
+      "items": [
+        {
+          "itemId": 1902006
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1902006,
+          "count": -1
+        },
+        {
+          "itemId": 1902007
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "questId": 2085,
+  "info": {
+    "name": "In search of Wing the Fairy",
+    "parent": "Icarus and the Flying Pill",
+    "descriptions": {
+      "notStarted": "I wonder how Icarus\u0027s doing with the flying balloon...maybe I should go check up on him at Kerning City.",
+      "inProgress": "Icarus had failed to make the flying balloon, but his never-ending quest for flight remains. This time he wants to deviate from the scientific approach to flight and opts for the magical approach, and asks me to see his best friend #b#p1032106##k at Ellinia, the town of fairies. Apparently Wing the Fairy knows the way to make #b\u0027#t4031163#\u0027#k...I\u0027ll need to see that fairy at Ellinia for Icarus\u0027s sake."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052106,
+      "minLevel": 42,
+      "prerequisiteQuests": [
+        {
+          "questId": 2089,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2084,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032106
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "nextQuest": 2086
+    }
+  }
+}

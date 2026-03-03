@@ -1,0 +1,68 @@
+{
+  "questId": 3082,
+  "info": {
+    "name": "Kenta\u0027s Research 3",
+    "descriptions": {
+      "notStarted": "Has #p2060005#, the animal instructor at Aquarium Zoo, been getting the results he wanted? I better go find out...",
+      "inProgress": "I met up with #p2060005#, the animal instructor at Aquarium Zoo, again. This time, he mentioned that the fishes near Aquarium have generally transformed more than others, and that he wanted to find out the conditions of the living organisms at the east coast and west coast. He wanted me to gather up another set of DNA samples for him. \\n\\n#t4031265#  #b#c4031265##k / 1\\n#t4031266#  #b#c4031266##k / 1\\n#t4031267#  #b#c4031267##k / 1",
+      "completed": "I helped #p2060005#, the animal instructor at Aquarium Zoo, out again. So the animals in Aqua Road have been slowly changing in a negative way without anyone noticing... why is that happening? Can #p2060005# find out?"
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "prerequisiteQuests": [
+        {
+          "questId": 3081,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060005,
+      "items": [
+        {
+          "itemId": 4031266
+        },
+        {
+          "itemId": 4031267
+        },
+        {
+          "itemId": 4031265
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2060005,
+      "minLevel": 37
+    },
+    "onComplete": {
+      "experience": 6500,
+      "items": [
+        {
+          "itemId": 4031265,
+          "count": -1
+        },
+        {
+          "itemId": 4031266,
+          "count": -1
+        },
+        {
+          "itemId": 4031267,
+          "count": -1
+        },
+        {
+          "itemId": 4031242,
+          "count": 10
+        },
+        {
+          "itemId": 2022040,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

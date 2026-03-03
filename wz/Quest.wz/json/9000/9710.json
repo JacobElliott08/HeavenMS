@@ -1,0 +1,39 @@
+{
+  "questId": 9710,
+  "info": {
+    "name": "카산드라의 휴대폰",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 전해줄 기쁜 소식이 있다고 하는데…",
+      "inProgress": "#b#p9010010##k가 잃어버린 고장난 휴대폰을 찾아 #b#p9010008##k에게 수리를 맡기고, 푸짐한 졸업,입학 축하 선물의 당첨기회도 얻자.\\n\\n#i4031557##t4031557# #b#c4031557#/1#k",
+      "completed": "#b#p9010008##k는 졸업,입학을 축하하며 선물을 준다고 했다 메이플스토리 공식홈페이지(maplestory.nexon.com)에서 당첨자 확인 하는 것을 잊지 말자.\\n아마, 당첨자 발표는 2월 23일, 3월 6일, 3월 13일 이라고 했지?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "startDate": "2007021500",
+      "endDate": "2007031200"
+    },
+    "complete": {
+      "npc": 9010008,
+      "items": [
+        {
+          "itemId": 4031557
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4031557,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

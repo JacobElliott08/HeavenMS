@@ -1,0 +1,48 @@
+{
+  "questId": 4510,
+  "info": {
+    "name": "The secret of the past",
+    "parent": "The Secret of Ghostship",
+    "descriptions": {
+      "notStarted": "#b#p9270030##k in Boat Quay looks like he could use some help of mine. He seems very scared of something. Let\u0027s go find out.",
+      "inProgress": "#p9270030# told me this weird story about a ghost ship and ghosts along the coast line. Shall I believe him? He is just a nameless wanderer in town, but he seemed to be serious about the story. Let\u0027s go and find out if he is telling me the truth. There should be #b#o9420509##k and #b#o9420510##k somewhere around Boat Quay and I am about to eliminate them!\\n\\n#o9420509#  #r#a45101##k\\n#o9420510#  #r#a45102##k",
+      "completed": "What a surprise! #p9270030# was telling me the truth! I should go see him again since I feel that there are more stories he wants to tell me!"
+    },
+    "area": 48,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270030,
+      "minLevel": 58
+    },
+    "complete": {
+      "npc": 9270030,
+      "monsters": [
+        {
+          "monsterId": 9420509,
+          "count": 100
+        },
+        {
+          "monsterId": 9420510,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 2022212,
+          "count": 5
+        },
+        {
+          "itemId": 2022214,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

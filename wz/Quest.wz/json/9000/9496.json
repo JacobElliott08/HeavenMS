@@ -1,0 +1,34 @@
+{
+  "questId": 9496,
+  "info": {
+    "name": "사진기사 조씨의 중국 안내",
+    "descriptions": {
+      "notStarted": "#b#p9310011##k에게 다시 말을 걸어보자.",
+      "inProgress": "상해 여행을 많이 다닌 #b#p9310012##k를 만나 보자.",
+      "completed": "#b#p9310012##k를 만났다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9310011,
+      "minLevel": 10,
+      "startDate": "2006101600",
+      "endDate": "2006110100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9495,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9310012
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100
+    }
+  }
+}

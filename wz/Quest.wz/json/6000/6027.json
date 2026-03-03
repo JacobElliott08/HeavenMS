@@ -1,0 +1,133 @@
+{
+  "questId": 6027,
+  "info": {
+    "name": "Keol\u0027s Special Order",
+    "parent": "Keol\u0027s Order #13",
+    "descriptions": {
+      "notStarted": "Keol, the pompous working partner of Meren who is as irritable as they come in all of Maple, has a special order for me to process. Better go see what it is.",
+      "inProgress": "The moment Keol saw me walk in, he let me have it. That\u0027s because a very important order came from Abdullah VIII, and Meren decided to let me take care of it! Wow... I didn\u0027t know Meren had that much faith in me. Anyway, since Keol seems very upset over this, I\u0027ll have to go make the delivery myself.\\n\\n#i4001186# #t4001186# #b#c4001186# / 1",
+      "completed": "The moment Keol saw me walk in, he let me have it. That\u0027s because a very important order came from Abdullah VIII, and Meren decided to let me take care of it! Wow... I didn\u0027t know Meren had that much faith in me. Anyway, since Keol seemed way too upset to go, I had to go make the delivery myself."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2110002,
+      "minLevel": 105,
+      "prerequisiteQuests": [
+        {
+          "questId": 6026,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 6036,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112,
+        2200,
+        2210,
+        2211,
+        2212,
+        2213,
+        2214,
+        2215,
+        2216,
+        2217,
+        2218
+      ]
+    },
+    "complete": {
+      "npc": 2101009,
+      "items": [
+        {
+          "itemId": 4001186
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031978
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 450000,
+      "items": [
+        {
+          "itemId": 4001186,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

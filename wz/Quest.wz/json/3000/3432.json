@@ -1,0 +1,50 @@
+{
+  "questId": 3432,
+  "info": {
+    "name": "Collecting 300 Mateon Tentacles",
+    "parent": "The Antidote",
+    "descriptions": {
+      "notStarted": "I should go see Rice the Medic at the Omega Sector.",
+      "inProgress": "Rice said the research has gone well, but realized it required much more materials than the ones I got for him, so I\u0027ll have to give him #b300 Mateon Tentacles#k.\\n\\n#t4000120# #b#c4000120##k/300",
+      "completed": "Rice the Medic of Omega Sector requested the #b300 Mateon Tentacles#k, and I gathered up all of them. Will this prove to be a turning point on the research? I should go see Rice right about the time when the tentacles run out."
+    },
+    "area": 37,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050010,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 3431,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050010,
+      "items": [
+        {
+          "itemId": 4000120,
+          "count": 300
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 13000,
+      "items": [
+        {
+          "itemId": 4000120,
+          "count": -300
+        },
+        {
+          "itemId": 2000004,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

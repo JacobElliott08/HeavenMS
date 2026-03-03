@@ -1,0 +1,63 @@
+{
+  "questId": 8035,
+  "info": {
+    "name": "Maya\u0027s Concerns 2",
+    "parent": "Maya\u0027s Concerns",
+    "descriptions": {
+      "notStarted": "The condition of the baby Lioner concerns me. I better go to Maya\u0027s house.",
+      "inProgress": " Now, the baby Lioner is poisoned! In order to detox the poison, it\u0027ll require #b50 #t02050000##ks, #b30 #t04000076#s#k, and #b30 #t04000058#s#k. Gotta hurry! \\n#t02050000#  #b#c02050000##k/50 \\n#t04000076#  #b#c04000076##k/30 \\n#t04000058#  #b#c04000058##k/30",
+      "completed": "The medicine should detox any poison in its body after a good night sleep. Is this it? I better ask Maya."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012101,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 8034,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012101,
+      "items": [
+        {
+          "itemId": 2050000,
+          "count": 50
+        },
+        {
+          "itemId": 4000058,
+          "count": 30
+        },
+        {
+          "itemId": 4000076,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8036,
+      "items": [
+        {
+          "itemId": 2050000,
+          "count": -50
+        },
+        {
+          "itemId": 4000058,
+          "count": -30
+        },
+        {
+          "itemId": 4000076,
+          "count": -30
+        }
+      ],
+      "experience": 25000
+    }
+  }
+}

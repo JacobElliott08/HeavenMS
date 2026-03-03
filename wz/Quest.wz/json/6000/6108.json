@@ -1,0 +1,52 @@
+{
+  "questId": 6108,
+  "info": {
+    "name": "Junior Balrog in a Different World",
+    "parent": "Extreme Temptation",
+    "descriptions": {
+      "inProgress": "#b#p1061012##k said he\u0027ll teach me the ultimate skill once I go to #m910500000# and get #b300 #o9300085##k. It\u0027s almost within my grasp! \\n\\n#o9300085# #r#a61081##k ",
+      "completed": "After completing the training to catch Junior Balrogs in #m910500000#, I acquired the Bowman\u0027s ultimate skill! Power is now mine--I shall master this skill and use it triumph over my enemies in battle!"
+    },
+    "area": 10,
+    "order": 9
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061012,
+      "jobs": [
+        312,
+        322
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6107,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061012,
+      "monsters": [
+        {
+          "monsterId": 9300085,
+          "count": 300
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000000,
+      "skills": [
+        {
+          "skillId": 3121008,
+          "masterLevel": 10
+        },
+        {
+          "skillId": 3221007,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

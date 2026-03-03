@@ -1,0 +1,74 @@
+{
+  "questId": 3305,
+  "info": {
+    "name": "Re-acquiring Zenumist Cape",
+    "descriptions": {
+      "notStarted": "I lost #t1102135#. Without it, I can\u0027t prove that I\u0027m Zenumist. What should I do? I better go talk to the president of the Zenumist Society, #b#p2111000##k.",
+      "inProgress": "#p2111000# gave me that look of disappointment as he asked me to bring the items required to make another #t1102135#. Those items are #b#t4000021##k and #b#t4021003##k, with #b10,000 mesos#k. Thank goodness I can make another one. \\n\\n#i4000021##t4000021# #b#c4000021##k/10 \\n#i4021003##t4021003# #b#c4021003##k/5",
+      "completed": "I got #t1102135# again. Without it, I can\u0027t be accepted as a Zenumist. I better not lose it again."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111000,
+      "minLevel": 30,
+      "repeatIntervalMinutes": 4320,
+      "startScript": "q3305s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3349
+        },
+        {
+          "questId": 3302,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3347
+        },
+        {
+          "questId": 3348
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1102135
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111000,
+      "items": [
+        {
+          "itemId": 4021003,
+          "count": 5
+        },
+        {
+          "itemId": 4000021,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2111000
+    },
+    "onComplete": {
+      "meso": -10000,
+      "items": [
+        {
+          "itemId": 1102135
+        },
+        {
+          "itemId": 4000021,
+          "count": -10
+        },
+        {
+          "itemId": 4021003,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

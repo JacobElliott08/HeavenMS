@@ -1,0 +1,58 @@
+{
+  "questId": 4522,
+  "info": {
+    "name": "The Lost White Essence",
+    "descriptions": {
+      "notStarted": "If I lost the #bwhite essence#k, I should go visit #bRalph the wanderer#k again.",
+      "inProgress": "I should go eliminate Mr. Anchor once more and gather the red essence. I should really take care of the White Essence this time if Ralph the wanderer gives me the item this time.\\n\\n#o9420512#  #r#a45221##k\\n#t4000383#  #r#c4000383#/300",
+      "completed": "Phew... I really should go take care of the #bCapt. Latanica#k this time and bring peace to the Boat Quay Town."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270030,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 4513,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4000381,
+          "count": -1
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270030,
+      "items": [
+        {
+          "itemId": 4000383,
+          "count": 300
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9420512,
+          "count": 300
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000381
+        },
+        {
+          "itemId": 4000383,
+          "count": -300
+        }
+      ]
+    }
+  }
+}

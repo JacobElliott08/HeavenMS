@@ -1,0 +1,60 @@
+{
+  "questId": 20730,
+  "info": {
+    "name": "Find the Puppeteer!",
+    "descriptions": {
+      "notStarted": "I better report the information gathered in #m105040300# to #b#p1101002##k.",
+      "inProgress": "#p1101002# told me he\u0027s certain the boy carrying the doll is indeed #o9300285#, and assigned me to enter the #bhome of #o9300285##k at the Cave of #o2230100# and defeat #r#p1104000# the #o9300285##k. \\n\\n#o9300285##r #a207301##k",
+      "completed": "I was able to defeat #p1104000# the #o9300285#. Afterwards, when I asked #p1101002# of the word \"Black Wings\" that I picked up during our battle, he revealed that the Black Wings are a group that follows the Black Mage and #p1104000# was also a member as well."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "minLevel": 28,
+      "prerequisiteQuests": [
+        {
+          "questId": 20725,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1101002,
+      "monsters": [
+        {
+          "monsterId": 9300285
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 12000
+    }
+  }
+}

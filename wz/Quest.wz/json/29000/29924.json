@@ -1,0 +1,33 @@
+{
+  "questId": 29924,
+  "info": {
+    "name": "The Revived Aran",
+    "descriptions": {
+      "notStarted": "You still don\u0027t remember anything…",
+      "inProgress": "You still don\u0027t remember anything…",
+      "completed": "You still don\u0027t remember anything…"
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142129
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "startScript": "q29924s",
+      "normalAutoStart": true,
+      "minLevel": 10,
+      "items": [
+        {
+          "itemId": 1142129
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    }
+  }
+}

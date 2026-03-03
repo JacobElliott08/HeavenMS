@@ -1,0 +1,38 @@
+{
+  "questId": 9705,
+  "info": {
+    "name": "정해년맞이 돼지변신",
+    "descriptions": {
+      "notStarted": "새해가 밝았다. 이벤트를 진행하느라 고생하는 #b#p9010010##k에게 새해인사를 가자.",
+      "inProgress": "#b#p9010010##k는 #b#p9010000##k에게 새해 인사를 하라고 했다.",
+      "completed": "어디, 돼지로 한번 변신해 볼까?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2007021300",
+      "endDate": "2007022700",
+      "items": [
+        {
+          "itemId": 2210001
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2210001
+        }
+      ]
+    }
+  }
+}

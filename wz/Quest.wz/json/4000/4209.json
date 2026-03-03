@@ -1,0 +1,48 @@
+{
+  "questId": 4209,
+  "info": {
+    "name": "아픈 뱀을 위한 영양식 I I",
+    "parent": "뱀을 위한 영양식",
+    "descriptions": {
+      "notStarted": "태국의 플로팅 마켓에 있는 #b#p9250001##k 아주머니의 애완용 뱀이 병이 다 낫지 않은 것 같다. 아파폰 아주머니를 다시 찾아가 보자.",
+      "inProgress": "#b#p9250001##k 아주머니의 애완용 뱀에게 줄 영양식을 구해가자.\\n\\n#i4000252##t4000252# #b#c4000252#/50#k",
+      "completed": "#b#p9250001##k 아주머니의 애완용 뱀에게 줄 영양식을 구해다 주었다. 어서 나아야 할텐데…"
+    },
+    "area": 48,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250001,
+      "minLevel": 10,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4208,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9250001,
+      "items": [
+        {
+          "itemId": 4000252,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4000252,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

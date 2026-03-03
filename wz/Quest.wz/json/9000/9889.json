@@ -1,0 +1,103 @@
+{
+  "questId": 9889,
+  "info": {
+    "name": "조각난 주문서",
+    "descriptions": {
+      "notStarted": "#b#t04001136##k에 대해 궁금하다면 #b카산드라#k에게 가보자. ",
+      "inProgress": "#b카산드라#k는 #t04001136# 30장을 가지고 오면, 무기 공격력 주문서로 바꿀 수 있다고 했다. \\n#t04001136#은 카산드라가 매일 주는 선물상자나 마스터 몬스터 현상수배를 마치면 얻을 수 있다는데...\\n\\n#i04001136# #t04001136# #b#c04001136#/30#k",
+      "completed": "#b카산드라#k에게 무기공격력 주문서를 얻었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2007092000"
+    },
+    "complete": {
+      "npc": 9010010,
+      "items": [
+        {
+          "itemId": 4001136,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2043001,
+          "probability": 1
+        },
+        {
+          "itemId": 2043101,
+          "probability": 1
+        },
+        {
+          "itemId": 2043201,
+          "probability": 1
+        },
+        {
+          "itemId": 2043301,
+          "probability": 1
+        },
+        {
+          "itemId": 2043701,
+          "probability": 1
+        },
+        {
+          "itemId": 2043801,
+          "probability": 1
+        },
+        {
+          "itemId": 2044001,
+          "probability": 1
+        },
+        {
+          "itemId": 2044101,
+          "probability": 1
+        },
+        {
+          "itemId": 2044201,
+          "probability": 1
+        },
+        {
+          "itemId": 2044301,
+          "probability": 1
+        },
+        {
+          "itemId": 2044401,
+          "probability": 1
+        },
+        {
+          "itemId": 2044501,
+          "probability": 1
+        },
+        {
+          "itemId": 2044601,
+          "probability": 1
+        },
+        {
+          "itemId": 2044701,
+          "probability": 1
+        },
+        {
+          "itemId": 4001136,
+          "count": -30
+        },
+        {
+          "itemId": 2044801,
+          "probability": 1
+        },
+        {
+          "itemId": 2044901,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

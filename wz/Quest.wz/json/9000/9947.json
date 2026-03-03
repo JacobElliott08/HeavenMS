@@ -1,0 +1,31 @@
+{
+  "questId": 9947,
+  "info": {
+    "name": "인형을 돌려드리겠어요.",
+    "descriptions": {
+      "notStarted": "인형만들기는 너무 어려운것 같다. 아무래도 조나스에게 헝겊인형을 돌려주는 것이 좋을것 같다.",
+      "inProgress": "조나스에게 인형을 돌려주었다.",
+      "completed": "인형만들기는 너무 어려운것 같다. 결국 포기해버리고 조나스에게 헝겊인형을 돌려주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120004,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2005051102",
+      "endDate": "2008110600",
+      "startScript": "q9947s",
+      "prerequisiteQuests": [
+        {
+          "questId": 9929
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4220021
+        }
+      ]
+    }
+  }
+}

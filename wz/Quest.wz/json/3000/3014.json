@@ -1,0 +1,67 @@
+{
+  "questId": 3014,
+  "info": {
+    "name": "Acquiring the Fairy Dust",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "I got #bKriel the Fairy#k all the items she asked for, and got the #bFairy Dust#k in return. Now all I need to do is get this to Spiruna and see what happens."
+    },
+    "area": 33,
+    "order": 11
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012011,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3013,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2032001,
+      "items": [
+        {
+          "itemId": 4031051
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031051
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 10590,
+      "nextQuest": 3015,
+      "items": [
+        {
+          "itemId": 4031051,
+          "count": -1
+        },
+        {
+          "itemId": 2041001,
+          "probability": 1
+        },
+        {
+          "itemId": 2041002,
+          "probability": 1
+        },
+        {
+          "itemId": 2041004,
+          "probability": 1
+        },
+        {
+          "itemId": 2041005,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "questId": 21703,
+  "info": {
+    "name": "Train or Die! 3",
+    "descriptions": {
+      "notStarted": "This #b#p1202006##k is so full of it, but you might as well receive more training from him.",
+      "inProgress": "According to #p1202006#, the third lesson involves eliminating #r#o9300343#s#k. He says it\u0027s a terribly scary monster to fight, but seriously, how scary could a #o1210100# be, really... \\r\\n\\r\\n#o9300343##r #a217031##k",
+      "completed": "You finished off the #o9300343#s without breaking a sweat! #p1202006# then tells you he\u0027s taught you everything that he knows about combat and says that you can go back down the mountain. What…?! You\u0027re not even standing on a mountain!"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1202006,
+      "minLevel": 10,
+      "startScript": "q21703s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21702,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1202006,
+      "endScript": "q21703e",
+      "monsters": [
+        {
+          "monsterId": 9300343,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2000022,
+          "count": 30
+        },
+        {
+          "itemId": 2000023,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

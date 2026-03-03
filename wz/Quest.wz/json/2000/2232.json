@@ -1,0 +1,28 @@
+{
+  "questId": 2232,
+  "info": {
+    "name": "Find a Junior!",
+    "parent": "Captain Al\u0027s Passing of Knowledge",
+    "descriptions": {
+      "notStarted": "#bCaptain Al#k told me to see him if I was ever interested in starting a Family. Better go visit him at either #bLith Harbor#k or #bOrbis Park#k. ",
+      "inProgress": "Captain Al\u0027s mission was simple! He just asked me to find a Junior that I want to support. I better register at least one Junior, then report the results to him.\\n\\n#rAdd at least one Junior#k\\n(From the Family window[HotKey : F], press the Pedigree button to check )",
+      "completed": "I succeeded in adding a Junior under me! Of course, that\u0027s how great my leadership is... haha."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002103,
+      "prerequisiteQuests": [
+        {
+          "questId": 2231,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "endScript": "q2232e"
+    }
+  }
+}

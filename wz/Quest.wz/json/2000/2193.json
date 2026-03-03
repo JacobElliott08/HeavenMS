@@ -1,0 +1,60 @@
+{
+  "questId": 2193,
+  "info": {
+    "name": "The Beginner Pirate\u0027s First Training Session",
+    "descriptions": {
+      "notStarted": "I\u0027ve finally become a Pirate... But I have no idea what I\u0027m supposed to do... I should go to Kyrin, the Pirate Director of Job Advancement. ",
+      "inProgress": "Kyrin suggests that I go on a light monster hunt to start training. She wants me to hunt down #r11 pigs#k. There\u0027s apparently a lot of pigs near Henesys.. \\n\\n#o1210100# #r#a21931##k",
+      "completed": "I\u0027ve hunted down 11 pigs and reported the results to Kyrin. Hehe... That was no sweat!"
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "monsters": [
+        {
+          "monsterId": 1210100,
+          "count": 11
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 590,
+      "items": [
+        {
+          "itemId": 2000000,
+          "count": 30,
+          "jobRestriction": 32
+        },
+        {
+          "itemId": 2000003,
+          "count": 30,
+          "jobRestriction": 63
+        }
+      ]
+    }
+  }
+}

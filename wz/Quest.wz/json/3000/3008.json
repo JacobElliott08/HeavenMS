@@ -1,0 +1,33 @@
+{
+  "questId": 3008,
+  "info": {
+    "name": "Looking For the Old Lady",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "Jade said the \"old lady\" may be #bSpriuna#k, who lives in a small house around where the Orbis park monsters walk around, and recommends that I go see her immediately."
+    },
+    "area": 33,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020006,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3007,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2032001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "nextQuest": 3009
+    }
+  }
+}

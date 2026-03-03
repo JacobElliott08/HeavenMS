@@ -1,0 +1,49 @@
+{
+  "questId": 3743,
+  "info": {
+    "name": "The New and Improved, Oberon",
+    "parent": "Year 2230- Imminent Collapse!",
+    "descriptions": {
+      "inProgress": "Andy says, based on the findings from the previous time travels, it is likely that the Fifth Time Sand is in the year 2230. He wants you to defeat Oberon, an android even more advanced than Aufheben, and bring back the Time Sand.",
+      "completed": "As Andy suspected, Oberon had the Fifth Time Sand. You have successfully defeated Oberon and found the Fifth Time Sand in the dangerous tower in the year 2230."
+    },
+    "area": 41,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082004,
+      "minLevel": 85,
+      "prerequisiteQuests": [
+        {
+          "questId": 3742,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082004,
+      "items": [
+        {
+          "itemId": 4032518
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 8220012
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200000,
+      "items": [
+        {
+          "itemId": 4032518,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

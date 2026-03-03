@@ -1,0 +1,43 @@
+{
+  "questId": 20105,
+  "info": {
+    "name": "Path of a Thunder Breaker",
+    "descriptions": {
+      "notStarted": "The time has come. If I want to find out more about Thunder Breakers, the Pirates of Lightning, I should talk to #b#p1101007#, the Chief Knight of Lightning#k.",
+      "inProgress": "If I want to become a Cygnus Knight as a Thunder Breaker who thoroughly enjoys thrilling adventures, I should select #p1101007#.",
+      "completed": "I am now a Thunder Breaker!"
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101007,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 20102
+        },
+        {
+          "questId": 20103
+        },
+        {
+          "questId": 20104
+        },
+        {
+          "questId": 20100,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 20101
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    },
+    "complete": {
+      "npc": 1101007,
+      "endScript": "q20105e"
+    }
+  }
+}

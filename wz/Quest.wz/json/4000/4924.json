@@ -1,0 +1,55 @@
+{
+  "questId": 4924,
+  "info": {
+    "name": "Brand Materia",
+    "parent": "Brand Materia",
+    "descriptions": {
+      "notStarted": "Looks like the Glimmer Man is looking for a rare material from the alternate dimension of Versal, the very #b#t4031760##k that I now possess.  Perhaps I should visit him in New Leaf City and see what he wants with it.  Maybe he\u0027ll reward me for bringing him some...",
+      "inProgress": "I visited the Glimmer Man, and discovered that he\u0027s an ultra-powerful mage whose ability to turn his entire body into pure diamond (hence his name) has allowed him to journey to space and other inhospitable environments.  Through the vast knowledge he\u0027s acquired during his explorations, he\u0027s also become somewhat of a renowned weapons creator and arms dealer.\\r\\nThe Glimmer Man has landed in Masteria looking for something called #b#t4031760##k, a rare element from the alternate dimension of Versal he\u0027s been dying to experiment with.  To thank me for recovering some and bringing it to him, he\u0027s promised to make me a weapon of my own from it. However, I\u0027ve got to also track down #b7 #t4021008#s#k and return these to him as well.  Only then can he reduce the naturally unstable Materia down to a useable form.  A weapon made from an otherwordly material! I wonder what it does...",
+      "completed": "I returned to the Glimmer Man and he synthesized the #b#t4031760##k and the #b7 #t4021008#s#k I gave him to form a Materia Orb.  He\u0027s said his precocious friend Spindle can turn this into a weapon, so I should see him when I\u0027m ready to make the weapon...WOOT!  Spindle is currently residing in the Omega Sector.  Additionally, anytime I find more White Versal Materia, I can bring it to the Glimmer Man and he\u0027ll create another Materia Orb for me so I can make another weapon!"
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201083,
+      "minLevel": 10,
+      "items": [
+        {
+          "itemId": 4031760
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201083,
+      "items": [
+        {
+          "itemId": 4031760
+        },
+        {
+          "itemId": 4021008,
+          "count": 7
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000,
+      "items": [
+        {
+          "itemId": 4031760,
+          "count": -1
+        },
+        {
+          "itemId": 4021008,
+          "count": -7
+        },
+        {
+          "itemId": 4031761
+        }
+      ]
+    }
+  }
+}

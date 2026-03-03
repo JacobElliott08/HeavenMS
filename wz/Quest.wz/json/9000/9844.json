@@ -1,0 +1,32 @@
+{
+  "questId": 9844,
+  "info": {
+    "name": "Regulate the Star Pixies",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k seems to have something urgent to tell you.",
+      "inProgress": "Hunt the Star Pixies that are casting magic on anyone and everyone, and report to #b#p2012020##k. \\n\\n#o3230200# #r#a98441##k",
+      "completed": "You regulated the Star Pixies that were out of control."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 30,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2007052900",
+      "endDate": "2007061800"
+    },
+    "complete": {
+      "npc": 2012020,
+      "endScript": "huntUP4",
+      "monsters": [
+        {
+          "monsterId": 3230200,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "questId": 3360,
+  "info": {
+    "name": "Verifying the Password",
+    "parent": "The Secret, Quiet Passage",
+    "descriptions": {
+      "inProgress": "#p2111006# said he came up with the master code that\u0027ll allow me to gain free access to the Secret Passage, and gave me a long list of numbers. Sigh... this is so complicated, I\u0027ll have to write it down somewhere.",
+      "completed": "When I entered the master key #p2111006# gave me, the Secret Passage opened up, and now I have unlimited access to the passage. Hmm... he\u0027s much more helpful than I thought."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111006,
+      "minLevel": 70,
+      "startScript": "q3360s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3359,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111006,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "info": "0"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "questId": 8256,
+  "info": {
+    "name": "Lost Spirits.",
+    "parent": "Lost Spirits",
+    "descriptions": {
+      "notStarted": "A new traveler is in the town of El Nath, I wonder what his story is...perhaps something to do with Zakum? I should pay him a visit; I heard his name is Adonis. ",
+      "inProgress": "I visited El Nath, and found Adonis. He\u0027s speaking to me now...",
+      "completed": "Adonis and I had an enlightening conversation about Zakum, and the residents of the former town. It appears that Zakum gains additional power from what Adonis calls \"Zakum Diamonds\".  They are souls of those who fell in battle against the mighty Zakum.  As they were fellow warriors and adventurers like me, their souls must be released.  If I can find a relic of the old town, such as a Crystal Blade, Miner\u0027s Hat, El Nathian Cape or Cloak of Corruption and combine it with a Zakum Diamond, I can perform a \u0027Liberation Ritual\" that will free the soul by transferring their power into that item.  I can then wear the enchanted item for extra strength in battle!  Only thing is, Zakum Diamonds only come from one place, Zakum himself.  This won\u0027t be easy..."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201106,
+      "minLevel": 50,
+      "repeatIntervalMinutes": 1440,
+      "prerequisiteQuests": [
+        {
+          "questId": 8255,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201106,
+      "monsters": [
+        {
+          "monsterId": 8800002
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000
+    }
+  }
+}

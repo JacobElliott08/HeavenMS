@@ -1,0 +1,89 @@
+{
+  "questId": 3454,
+  "info": {
+    "name": "Wave Translator",
+    "descriptions": {
+      "notStarted": "Let\u0027s go to #b#m221040100##k to find #b#p2050002##k.",
+      "inProgress": "When you tell #p2050001# that you couldn\u0027t get any useful information from #p2050002#, he suggests he build #b#t4031927##k. He asks you to find the materials so that he can build the translator that can decode the ultrasonic waves that Grays send each other using their tentacles. \\n\\n#i4000119##t4000119# #b#c4000119#/30#k\\n#i4000118##t4000118# #b#c4000118#/30#k\\n#i4000125##t4000125# #b#c4000125#/1#k\\n#i4031926##t4031926# #b#c4031926#/10#k",
+      "completed": "When you brought him all the materials he\u0027s asked for, #p2050001# made you a #t4031927#. Hmm, but he says this one might malfunction since he hasn\u0027t had the time to test it..."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050001,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3453,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3456
+        },
+        {
+          "questId": 3457
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031927
+        },
+        {
+          "itemId": 4031928
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050001,
+      "items": [
+        {
+          "itemId": 4000119,
+          "count": 30
+        },
+        {
+          "itemId": 4000118,
+          "count": 30
+        },
+        {
+          "itemId": 4000125
+        },
+        {
+          "itemId": 4031926,
+          "count": 10
+        }
+      ],
+      "endScript": "q3454e"
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000119,
+          "count": -30
+        },
+        {
+          "itemId": 4000118,
+          "count": -30
+        },
+        {
+          "itemId": 4000125,
+          "count": -1
+        },
+        {
+          "itemId": 4031926,
+          "count": -10
+        },
+        {
+          "itemId": 4031927,
+          "probability": 1
+        },
+        {
+          "itemId": 4031928,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

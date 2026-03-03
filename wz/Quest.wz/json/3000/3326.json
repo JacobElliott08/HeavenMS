@@ -1,0 +1,34 @@
+{
+  "questId": 3326,
+  "info": {
+    "name": "Keeny\u0027s Secret",
+    "parent": "The Fairy in Despair 2",
+    "descriptions": {
+      "notStarted": "#p2111004# is a fairy who always wears a sad face. Is her daughter #p2111005# getting better now? I better go see #b#p2111004##k again.",
+      "inProgress": "#p2111004# told me #p2111005# still hasn\u0027t been fully cured, and asked me to go see #b#p2012018##k once more and get another medicine from him.",
+      "completed": "#p2012018# acted as if he knew I\u0027d come back...why?  Perhaps there is more to this than I realized..."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111004,
+      "minLevel": 52,
+      "prerequisiteQuests": [
+        {
+          "questId": 3325,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012018
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

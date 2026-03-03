@@ -1,0 +1,31 @@
+{
+  "questId": 9505,
+  "info": {
+    "name": "바다의 날 퀴즈 1",
+    "parent": "바다의 날 퀴즈",
+    "descriptions": {
+      "notStarted": "바다의 날을 맞이하여 바다에 대해 자세히 알아보고 싶다면 #b#p9010000##k를 찾아가자.",
+      "inProgress": "메이플스토리의 바다에 관한 문제이다.",
+      "completed": "메이플스토리의 바닷속에 관련된 문제를 맞췄다."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "startDate": "2006053000",
+      "endDate": "2006060700"
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200,
+      "nextQuest": 9506
+    }
+  }
+}

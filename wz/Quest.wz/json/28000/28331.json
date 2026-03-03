@@ -1,0 +1,44 @@
+{
+  "questId": 28331,
+  "info": {
+    "name": "Festival of Lights - Building the Altar",
+    "parent": "Festival of Lights",
+    "descriptions": {
+      "notStarted": "Hmm, that woman looks like she\u0027s preparing some sort of celebration... I should check it out.",
+      "inProgress": "I spoke with Hannah, and she\u0027s preparing a Festival of Lights. I\u0027ve agreed to help her build the Altar by gathering 25 Altar Pieces. She mentioned that the monsters would already have an axe stuck in them, so I should hunt those.",
+      "completed": "I collected the 25 Altar Pieces and returned to Hannah. She was happy, and began building the Altar. She also mentioned that I could come back for more work when I have a chance"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201031,
+      "minLevel": 23
+    },
+    "complete": {
+      "npc": 9201031,
+      "items": [
+        {
+          "itemId": 4031445,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4031445,
+          "count": -25
+        },
+        {
+          "itemId": 2022121,
+          "count": 2
+        }
+      ]
+    }
+  }
+}

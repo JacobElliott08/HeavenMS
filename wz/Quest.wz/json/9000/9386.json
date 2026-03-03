@@ -1,0 +1,41 @@
+{
+  "questId": 9386,
+  "info": {
+    "name": "MapleStory 3rd Anniversary Bonanza",
+    "descriptions": {
+      "notStarted": "To commemorate the 3 year anniversary of MapleStory, apparently there\u0027s going to be a huge event. I better go see #b#p9010000##k in town.",
+      "inProgress": "I better find #b#t04031297##k that a lot of the monsters around the area may have.\\n\\n#t04031297:# #b#c4031297#/1",
+      "completed": "I took the party invitation, clarified that I\u0027m a traveler in the world of Maple, and received #b#t1002508##k. #b#p9010000##k can\u0027t make it to the party, and asked me instead to talk to #b#p1002100##k of Lith Harbor."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "startDate": "2008050100",
+      "endDate": "2008051400"
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 4031297
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031297,
+          "count": -1
+        },
+        {
+          "itemId": 1002508
+        }
+      ]
+    }
+  }
+}

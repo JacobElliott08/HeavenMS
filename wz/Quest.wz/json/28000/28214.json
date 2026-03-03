@@ -1,0 +1,66 @@
+{
+  "questId": 28214,
+  "info": {
+    "name": "The Secret of the Golden Feather",
+    "parent": "A Strange Burglary Case",
+    "descriptions": {
+      "notStarted": "#b#@9201119:##k in #bPerion#k says there is something you need in order to identify the #rGolden Feather#k.",
+      "inProgress": "Let\u0027s collect the following materials in order to accurately identify the #rGolden Feather#k.\\n\\n20 #rLeaves#k (a drop item from #rDark Stumps#k that can be easily found in #b#m101040000##k and #b#m102010000##k.)\\n20 #rFlints#k (a drop item from #rDark Stumps#k.)\\n\\nReport back to #b#@9201119:##k in #bPerion#k when you finish collecting all the items.",
+      "completed": "#b#@9201119:##k in #bPerion#k says you must inform #b#@1032001:##k in #bEllinia#k of this."
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201119,
+      "prerequisiteQuests": [
+        {
+          "questId": 28213,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 9201119,
+      "items": [
+        {
+          "itemId": 4001356,
+          "count": 20
+        },
+        {
+          "itemId": 4000005,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200,
+      "items": [
+        {
+          "itemId": 4000005,
+          "count": -20
+        },
+        {
+          "itemId": 4001356,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

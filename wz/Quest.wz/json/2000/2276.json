@@ -1,0 +1,33 @@
+{
+  "questId": 2276,
+  "info": {
+    "name": "Makeup Artist, Booked!",
+    "descriptions": {
+      "notStarted": "You booked a makeup artist. Report the good news to #bLana#k.",
+      "inProgress": "This time, you must book a hair stylist. Go over to #bMarshall#k and ask for help.",
+      "completed": "#bMarshall#k says he can\u0027t design Blake\u0027s hair. Why not? This can\u0027t be good. Discuss it with #bLana#k."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052121,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2275,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052124
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1280
+    }
+  }
+}

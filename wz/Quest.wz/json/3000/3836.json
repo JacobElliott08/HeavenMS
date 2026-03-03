@@ -1,0 +1,33 @@
+{
+  "questId": 3836,
+  "info": {
+    "name": "No Gong\u0027s Student",
+    "parent": "The Forgotten Master",
+    "descriptions": {
+      "inProgress": "No Gong had a student who was struck by a Goblin\u0027s spell and started attacking innocent people around the neighborhood, and his name is #bTae Roon#k... the most intelligent student No Gong had ever taught. He is currently in exile out of this town, hoping for the spells to weaken as time goes by...  \\n\\n No Gong suspected that since he helped Tae Soo out, the spell might be weakening the grip on him, and wanted me to confirm this with #bDo Gong#k.",
+      "completed": "Do Gong told me he\u0027ll do anything to help Tae Roon out. I better go talk to Do Gong once more."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091000,
+      "minLevel": 71,
+      "prerequisiteQuests": [
+        {
+          "questId": 3835,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 700
+    }
+  }
+}

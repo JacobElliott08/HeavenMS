@@ -1,0 +1,51 @@
+{
+  "questId": 20017,
+  "info": {
+    "name": "The First Knight Training",
+    "descriptions": {
+      "notStarted": "As #p1101002# has said, you must reach Lv.10 before you can become a Knight-in-Training. Let\u0027s head over to #b#m130010000##k to find #b#p1102000#, the Training Instructor#k.",
+      "inProgress": "You met #p1102000#, the Training Instructor, in #m130010000#. According to #p1102000#, there isn\u0027t a single monster in Ereve, so you must train against illusory creatures named Mimis, which #p1101001# summons. Then #p1102000# asked that you hunt #r#o100122##ks.",
+      "completed": "You met #p1102000#, the Training Instructor, in #m130010000#. According to #p1102000#, there isn\u0027t a single monster in Ereve, so you must train against illusory creatures named Mimis, which #p1101001# summons. Then #p1102000# asked that you hunt #r#o100122##ks."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102000,
+      "startScript": "q20017s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20016,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    },
+    "complete": {
+      "npc": 1102000,
+      "monsters": [
+        {
+          "monsterId": 100122,
+          "count": 15
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 430,
+      "items": [
+        {
+          "itemId": 2000020,
+          "count": 10
+        },
+        {
+          "itemId": 2000021,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

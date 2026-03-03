@@ -1,0 +1,52 @@
+{
+  "questId": 4554,
+  "info": {
+    "name": "Daddy\u0027s Birthday Party",
+    "parent": "Surprise Birthday Party",
+    "descriptions": {
+      "notStarted": "#b#p9270058##k\u0027s daddy is planning to invite 50 most close friends to his birthday party. #b#p9270058##k suggested an idea of giving them with rare gift at the party. What would be the perfect gift to all of the guests?",
+      "inProgress": "#b#p9270058##k thought of #b#t4000470##k as a special gift to all guests to her daddy\u0027s birthday party. She now needs #b50 #t4000470##k before the party begins. \\n\\n#o9420532# #r#a45541##k \\n#t4000470# #r#c4000470#/50#k ",
+      "completed": "#b#t4000470##k was a superb gift and every guests who came to birthday party of #b#p9270058##k\u0027s daddy were surprised at the unexpected gift and had a jolly time together. "
+    },
+    "area": 49,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270058,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 4553,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270058,
+      "items": [
+        {
+          "itemId": 4000470,
+          "count": 50
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9420532,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 16000,
+      "items": [
+        {
+          "itemId": 4000470,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

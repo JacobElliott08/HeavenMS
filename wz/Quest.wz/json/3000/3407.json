@@ -1,0 +1,65 @@
+{
+  "questId": 3407,
+  "info": {
+    "name": "Retrieving the Robotic Parts",
+    "descriptions": {
+      "notStarted": "I should go see Dr. Kim at the Command Center in the Omega Sector.",
+      "inProgress": "I met with Dr. Kim again at the Command Center. Dr. Kim was furious over the fact that someone stole 3 boxes full of robotic parts. He requested that I check into the hidden place at the Boswell Field, break all the Alien boxes, and recover the 3 missing boxes.\\n\\n#t4031141# #b#c4031141##k/1\\n#t4031142# #b#c4031142##k/1\\n#t4031143# #b#c4031143##k/1",
+      "completed": "I retrieved the 3 boxes full of robotic parts that were stolen by the Aliens, and gave them back to Dr. Kim at the Command Center. This should speed up the development of the new robot."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050001,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3406,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050001,
+      "items": [
+        {
+          "itemId": 4031141
+        },
+        {
+          "itemId": 4031142
+        },
+        {
+          "itemId": 4031143
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4200,
+      "items": [
+        {
+          "itemId": 2030011,
+          "count": 3
+        },
+        {
+          "itemId": 2030012,
+          "count": 3
+        },
+        {
+          "itemId": 4031141,
+          "count": -1
+        },
+        {
+          "itemId": 4031142,
+          "count": -1
+        },
+        {
+          "itemId": 4031143,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

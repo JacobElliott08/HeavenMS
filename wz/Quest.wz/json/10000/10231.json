@@ -1,0 +1,25 @@
+{
+  "questId": 10231,
+  "info": {
+    "name": "Golden Pig\u0027s Egg",
+    "descriptions": {
+      "notStarted": "If you have a #b#t4001255##k, go find #bGoldrich#k across Treasure Island.",
+      "inProgress": "Goldrich seems extremely interested in your #b#t4001255##k.",
+      "completed": "When you gave #b#t4001255##k to Goldrich, he gave you EXP in return."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2084002,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2009010100",
+      "startScript": "q10231s",
+      "items": [
+        {
+          "itemId": 4001255
+        }
+      ]
+    }
+  }
+}

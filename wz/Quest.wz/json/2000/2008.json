@@ -1,0 +1,55 @@
+{
+  "questId": 2008,
+  "info": {
+    "name": "Delivering the Weird Medicine",
+    "parent": "Maya and the Weird Medicine",
+    "descriptions": {
+      "inProgress": "I traded the #bsparkling rock#k with Teo of Lith Harbor for the #bweird medicine#k. Now, all I need to do is get this to #rMaya#k, and I\u0027m done, but the more I think about it, the more I regret saying yes. Anyway, this medicine looks quite tasty. If I ever find myself thirsty and without any water, maybe I should just drink it myself. Hahaha...",
+      "completed": "I went back to Henesys and handed Maya the weird medicine.  Hopefully she\u0027ll get better after taking this. As a sign of thanks, Maya got me 5,000 mesos and a #bbrown bamboo hat#k. This hat ... I mean, it looks like it\u0027s going to help when I\u0027m walking under a blazing sun, but it looks so old and raggedy ... and if I put it on, it makes this weird noise that feels as if some insect is walking around and stuff ... am I going to be alright ... ???"
+    },
+    "area": 30,
+    "order": 7
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002001,
+      "minLevel": 15,
+      "prerequisiteQuests": [
+        {
+          "questId": 2007,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012101,
+      "items": [
+        {
+          "itemId": 4031006
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031006
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 2000,
+      "meso": 5000,
+      "items": [
+        {
+          "itemId": 4031006,
+          "count": -1
+        },
+        {
+          "itemId": 1002026
+        }
+      ]
+    }
+  }
+}

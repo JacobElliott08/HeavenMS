@@ -1,0 +1,60 @@
+{
+  "questId": 28191,
+  "info": {
+    "name": "The Coughing Dark Lord",
+    "parent": "The Cause of Sickness",
+    "descriptions": {
+      "notStarted": "#b#@1012100:##k in #bHenesys#k says she has a favor to ask. Let\u0027s go see her.",
+      "inProgress": "Let\u0027s take the Cold Medicine to #b#@1052001:##k in #bKerning City#k.",
+      "completed": "#b#@1052001:##k in #bKerning City#k says he must look into the likelihood of the virus spreading. Let\u0027s talk to him."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012100,
+      "prerequisiteQuests": [
+        {
+          "questId": 28190,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1052001,
+      "items": [
+        {
+          "itemId": 4032490
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 4032490,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

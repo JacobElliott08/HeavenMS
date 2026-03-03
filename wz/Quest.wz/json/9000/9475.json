@@ -1,0 +1,61 @@
+{
+  "questId": 9475,
+  "info": {
+    "name": "커닝시티의 유령 소동 ",
+    "descriptions": {
+      "notStarted": "아직 커닝시티에 유령이 출현한다고 한다. #b#p2040050##k를 다시 찾아가 보자.",
+      "inProgress": "커닝시티 지하철에 나타나는 유령을 물리치자.\\n\\n#o4230102# #r#a94751##k \\n#o3230101# #r#a94752##k \\n#t04000035# #b#c04000035#/20#k",
+      "completed": "커닝시티에 나타나는 유령을 물리쳤다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040050,
+      "minLevel": 30,
+      "maxLevel": 69,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2006072000",
+      "endDate": "2006090100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9474,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040050,
+      "items": [
+        {
+          "itemId": 4000035,
+          "count": 20
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 4230102,
+          "count": 100
+        },
+        {
+          "monsterId": 3230101,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7600,
+      "items": [
+        {
+          "itemId": 4000035,
+          "count": -20
+        },
+        {
+          "itemId": 2100029
+        }
+      ]
+    }
+  }
+}

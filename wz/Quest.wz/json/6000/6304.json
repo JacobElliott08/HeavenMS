@@ -1,0 +1,76 @@
+{
+  "questId": 6304,
+  "info": {
+    "name": "Regained Will Power",
+    "parent": "Strong Will",
+    "descriptions": {
+      "notStarted": " ",
+      "inProgress": " I received the #b#t4031463##k from #p2040050#.  Should I be givng this braclet to #b#p2060100##k? But I desperately need the will power.... \\n\\n#i4031463##t4031463# #b#c4031463# / 1#k",
+      "completed": "When I give the bracelet to #p2060100#, she gave me #b#t2280002##k. Now I got the will power back, but do I need to worry about #p2060100#?  I think #p2040050# might\u0027ve put some secret device on the braclet...that makes me feel a lil better"
+    },
+    "area": 10,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040050,
+      "repeatIntervalMinutes": 0,
+      "jobs": [
+        112,
+        122,
+        132,
+        212,
+        222,
+        232,
+        312,
+        322,
+        412,
+        422,
+        512,
+        522,
+        2112,
+        2217,
+        2218
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6303,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 2280002
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060100,
+      "items": [
+        {
+          "itemId": 4031463
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031463
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031463,
+          "count": -1
+        },
+        {
+          "itemId": 2280002
+        }
+      ]
+    }
+  }
+}

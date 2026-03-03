@@ -1,0 +1,83 @@
+{
+  "questId": 28344,
+  "info": {
+    "name": "Hunter\u0027s Profission",
+    "descriptions": {
+      "notStarted": "Scadur seems up to something big this time. I should move to El Nath and see what he is looking for...",
+      "inProgress": "So Scadur is going to set-up a \"Leather Festival\" on El Nath... I\u0027m out to find and collect all these items for him. Hope the reward of this mission is really worth it...\\n\\n#i4000021# #t4000021# #c4000021# / #r60#k\\n#i4000264# #t4000264# #c4000264# / #r30#k\\n#i4000281# #t4000281# #c4000281# / #r30#k\\n#i4000295# #t4000295# #c4000295# / #r30#k\\n#i4000030# #t4000030# #c4000030# / #r15#k\\n#i4032475# #t4032475# #c4032475# / #r10#k",
+      "completed": "I helped Scadur in his \"Leather Festival\", held on El Nath."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020007,
+      "minLevel": 70
+    },
+    "complete": {
+      "npc": 2020007,
+      "items": [
+        {
+          "itemId": 4000021,
+          "count": 60
+        },
+        {
+          "itemId": 4000264,
+          "count": 30
+        },
+        {
+          "itemId": 4000281,
+          "count": 30
+        },
+        {
+          "itemId": 4000295,
+          "count": 30
+        },
+        {
+          "itemId": 4000030,
+          "count": 15
+        },
+        {
+          "itemId": 4032475,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000021,
+          "count": -60
+        },
+        {
+          "itemId": 4000264,
+          "count": -30
+        },
+        {
+          "itemId": 4000281,
+          "count": -30
+        },
+        {
+          "itemId": 4000295,
+          "count": -30
+        },
+        {
+          "itemId": 4000030,
+          "count": -15
+        },
+        {
+          "itemId": 4032475,
+          "count": -10
+        },
+        {
+          "itemId": 2022184,
+          "count": 10
+        }
+      ],
+      "experience": 150000,
+      "fame": 2
+    }
+  }
+}

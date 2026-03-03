@@ -1,0 +1,98 @@
+{
+  "questId": 2035,
+  "info": {
+    "name": "Luke the Security Man\u0027s Wish to Travel",
+    "descriptions": {
+      "notStarted": "I hear that Luke the Security Guy made up his mind on something...",
+      "inProgress": "I met Luke at the entrance of the dungeon again. The Snake Drink back then is gone now because his mom drank it all...anyway, Luke was ready to quit the boring life of a security man and wanted to travel...and to make a glove that befits the traveling, Mr. Smith of Perion suggested #b1 black feather, 10 Orihalcon Plates, 50 dragon skins, 40 screws, and 3 horns of Taurospear!!#k That\u0027s insane...well, I\u0027m guessing he wants me to collect them for him...oh, do the fairies of Ellinia know something about it?",
+      "completed": "I got Luke all the materials he needed for the nice glove, and return, he gave me a very precious item that has been passed down from generaition to generation, an #bold bronze normal Helm#k. I feel like I\u0027m losing out on this deal...but I can\u0027t get mad at him since it\u0027s been passed down from generation to generatoin. I heard Mr. Thunder can make this helmet even better...I should go there sometime later.."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1040000,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2018,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1040000,
+      "items": [
+        {
+          "itemId": 4011005,
+          "count": 10
+        },
+        {
+          "itemId": 4000046,
+          "count": 3
+        },
+        {
+          "itemId": 4000030,
+          "count": 50
+        },
+        {
+          "itemId": 4003000,
+          "count": 40
+        },
+        {
+          "itemId": 4031042
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 22000,
+      "items": [
+        {
+          "itemId": 4031042,
+          "count": -1
+        },
+        {
+          "itemId": 4011005,
+          "count": -10
+        },
+        {
+          "itemId": 4000030,
+          "count": -50
+        },
+        {
+          "itemId": 4003000,
+          "count": -40
+        },
+        {
+          "itemId": 4000046,
+          "count": -3
+        },
+        {
+          "itemId": 1002100
+        }
+      ]
+    }
+  }
+}

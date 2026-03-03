@@ -1,0 +1,31 @@
+{
+  "questId": 10312,
+  "info": {
+    "name": "Gaga\u0027s Glasses",
+    "descriptions": {
+      "notStarted": "You have found an interesting artifact.",
+      "inProgress": "You have found a pair of glasses that look like Gaga\u0027s. Let\u0027s take them to Gaga and see if he recognizes them.",
+      "completed": "Gaga was thrilled that you found the glasses he lost when he was abducted by a UFO."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9040000,
+      "minLevel": 13,
+      "startDate": "2010022200",
+      "endDate": "2010030800",
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 4001304
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000021,
+      "endScript": "q10312e"
+    }
+  }
+}

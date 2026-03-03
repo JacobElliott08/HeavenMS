@@ -1,0 +1,59 @@
+{
+  "questId": 2033,
+  "info": {
+    "name": "Chris\u0027s Request",
+    "parent": "Nella \u0026 Kerning City Citizen\u0027s Request",
+    "descriptions": {
+      "inProgress": "I got the second request from Nella. Chris got his pillow stolen few days ago and he can\u0027t sleep well since then. To make a new pillow, he wants #b50 stiff feathers#k and #b20 leathers#k. I should get them ASAP.",
+      "completed": "I got what Chris asked for and I got refined steal and bronze. Chris can finally sleep well in his new pillow. I should get back to Nella for more requests."
+    },
+    "area": 30,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052103,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 2032,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052103,
+      "items": [
+        {
+          "itemId": 4003004,
+          "count": 50
+        },
+        {
+          "itemId": 4000021,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2100,
+      "items": [
+        {
+          "itemId": 4003004,
+          "count": -50
+        },
+        {
+          "itemId": 4000021,
+          "count": -20
+        },
+        {
+          "itemId": 4011001
+        },
+        {
+          "itemId": 4011000
+        }
+      ]
+    }
+  }
+}

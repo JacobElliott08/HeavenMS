@@ -1,0 +1,26 @@
+{
+  "questId": 9990,
+  "info": {
+    "name": "Gaga\u0027s Maple Leaf",
+    "descriptions": {
+      "notStarted": "A Golden Maple Leaf fell from a full grown maple tree.  I should take it to Gaga who is the keeper of the maple trees.",
+      "inProgress": "I took the golden Maple Leaf to Gaga, the keeper of the maple tree.",
+      "completed": "I should take the Golden Maple Leaf that fell from the Maple Tree to Gaga, the Maple Tree keeper.  Gaga said that this Maple Leaf can be used to plant another Maple Tree and gave me a gift for bringing it to him."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 10,
+      "endDate": "2009061623",
+      "startScript": "q9990s",
+      "items": [
+        {
+          "itemId": 4001168
+        }
+      ]
+    }
+  }
+}

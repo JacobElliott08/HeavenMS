@@ -1,0 +1,39 @@
+{
+  "questId": 2249,
+  "info": {
+    "name": "Zombie Mushroom Signal 1",
+    "parent": "Strange Mushrooms",
+    "descriptions": {
+      "notStarted": "The Rememberer needs help figuring out what drove the mushrooms into a rage.",
+      "inProgress": "The Rememberer suggests that someone should study the Zombie Mushrooms.\\r\\n\\r\\n\\r\\n#o2230101# #a22491#\\r\\n",
+      "completed": "You\u0027ve helped further the study of Zombie Mushrooms."
+    },
+    "area": 30,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "prerequisiteQuests": [
+        {
+          "questId": 2248,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "monsters": [
+        {
+          "monsterId": 2230101,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "questId": 29923,
+  "info": {
+    "name": "Legendary Hunter",
+    "descriptions": {
+      "completed": "No one can trump your hunting skills! You have earned the #b\u003cLegendary Hunter\u003e#k title."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142005
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "minLevel": 10,
+      "normalAutoStart": true,
+      "startScript": "q29923s",
+      "items": [
+        {
+          "itemId": 1142005
+        }
+      ]
+    }
+  }
+}

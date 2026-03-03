@@ -1,0 +1,156 @@
+{
+  "questId": 9383,
+  "info": {
+    "name": "바이킨의 검은색 보물상자",
+    "descriptions": {
+      "notStarted": "\u0027#p9000009#\u0027이 항해에서 주워 온 보물상자가 열리지 않는다고 하는데..",
+      "inProgress": "#b#p9000009##k이 항해 중 주워 온 보물상자 중에 열리지 않는 검은색의 보물상자가 있다고 한다. 이 보물상자를 열기 위해서는 돌로 만든 열쇠가 필요하다고 한다. 돌로 만든 열쇠를 제작하기 위해서는 #b#t4000022# 30개#k, #b#t04000025# 30개#k, #b#t04000177# 10개#k가 필요하다면서 재료를 구해다 달라고 부탁했다.\\n\\n#t4000022#  #b#c4000022##k / 30\\n#t4000025#  #b#c4000025##k / 30\\n#t4000177#  #b#c04000177##k / 10",
+      "completed": "돌로 만든 열쇠를 만들기 위해 3종류의 골렘들이 떨어트리는 돌조각을 구해왔다. #p9000009#은 이것들로 열쇠를 만들어서 검은색 보물상자를 열 수 있었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000009,
+      "minLevel": 60,
+      "maxLevel": 69,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2006032300",
+      "endDate": "2006040400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9385,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        111,
+        112,
+        120,
+        121,
+        122,
+        130,
+        131,
+        132,
+        200,
+        210,
+        211,
+        212,
+        220,
+        221,
+        222,
+        230,
+        231,
+        232,
+        300,
+        310,
+        311,
+        312,
+        320,
+        321,
+        322,
+        400,
+        410,
+        411,
+        412,
+        420,
+        421,
+        422
+      ]
+    },
+    "complete": {
+      "npc": 9000009,
+      "items": [
+        {
+          "itemId": 4000022,
+          "count": 30
+        },
+        {
+          "itemId": 4000025,
+          "count": 30
+        },
+        {
+          "itemId": 4000177,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800,
+      "items": [
+        {
+          "itemId": 4000022,
+          "count": -30
+        },
+        {
+          "itemId": 4000025,
+          "count": -30
+        },
+        {
+          "itemId": 4000177,
+          "count": -10
+        },
+        {
+          "itemId": 1302041,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1322038,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1412015,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1402022,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1422017,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1432022,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1442033,
+          "jobRestriction": 2
+        },
+        {
+          "itemId": 1382023,
+          "jobRestriction": 4
+        },
+        {
+          "itemId": 1372021,
+          "jobRestriction": 4
+        },
+        {
+          "itemId": 1452030,
+          "jobRestriction": 8
+        },
+        {
+          "itemId": 1462026,
+          "jobRestriction": 8
+        },
+        {
+          "itemId": 1332036,
+          "jobRestriction": 16
+        },
+        {
+          "itemId": 1472037,
+          "jobRestriction": 16
+        },
+        {
+          "itemId": 1312020,
+          "jobRestriction": 2
+        }
+      ]
+    }
+  }
+}

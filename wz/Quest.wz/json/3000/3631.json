@@ -1,0 +1,54 @@
+{
+  "questId": 3631,
+  "info": {
+    "name": "The Storybook on The Kids That Became the Sun and the Moon storybook",
+    "descriptions": {
+      "notStarted": "I\u0027m sure I received the storybook from #p2071008# after helping him out. Where did it go? Should I go see Haetnim again?",
+      "inProgress": "#b#p2040052# from Helios Tower Library has requested me to get #b#t4031270##k for him. Hmmm ... I\u0027m pretty sure I received it the last time I helped Haetnim out, but I can\u0027t seem to find it. After discussing the matters with Haetnim, he promised to give me the storybook if I buy #b5 #t2020001#s#k for his hungry sister.\\n\\n#t2020001#  #b#c2020001##k / 5",
+      "completed": "I gave Haetnim 5 #t2020001#s just as he requested to reacquire #t4031270#."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071008,
+      "prerequisiteQuests": [
+        {
+          "questId": 3629,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3630,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031270
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071008,
+      "items": [
+        {
+          "itemId": 2020001,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2020001,
+          "count": -5
+        },
+        {
+          "itemId": 4031270
+        }
+      ]
+    }
+  }
+}

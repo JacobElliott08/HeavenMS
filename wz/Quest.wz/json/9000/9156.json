@@ -1,0 +1,85 @@
+{
+  "questId": 9156,
+  "info": {
+    "name": "월묘와 함께하는 풍요로운 명절",
+    "descriptions": {
+      "notStarted": "#t4032040#을 굉장히 먹고 싶어하는 사람이 있다는데, 누굴까? #b#p9010000##k를 찾아가 물어보자.",
+      "inProgress": "#p9010000#는 #b달나라#k에 살고 있는 #b#p9001105##k가 #b#t4032040##k를 먹고 싶어한다고 말했다. 월묘가 떡 말고 다른 것도 먹나? #t4032040#를 가지고 달나라로 가보자. ",
+      "completed": "#p9001105#는 70년동안 오직 월묘의 떡만 먹었다며 이제 떡은 지긋지긋하다고 말했다. 이젠 #t2022352#을 먹고 싶다는데... #t2022352#을 먹은 #p9001105#는, 이렇게 맛있는 건 처음이라며 계속 가져다 달라고 말했다. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 51,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2008090500",
+      "endDate": "2008092600",
+      "items": [
+        {
+          "itemId": 4032040
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9001105,
+      "items": [
+        {
+          "itemId": 4032040
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 90000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4032040,
+          "count": -1
+        },
+        {
+          "itemId": 2190000,
+          "count": 5,
+          "probability": 30
+        },
+        {
+          "itemId": 2022003,
+          "count": 20,
+          "probability": 18
+        },
+        {
+          "itemId": 2040003,
+          "probability": 10
+        },
+        {
+          "itemId": 2040823,
+          "probability": 10
+        },
+        {
+          "itemId": 2048001,
+          "probability": 5
+        },
+        {
+          "itemId": 2048004,
+          "probability": 5
+        },
+        {
+          "itemId": 2040803,
+          "probability": 5
+        },
+        {
+          "itemId": 4031019,
+          "probability": 3
+        },
+        {
+          "itemId": 2050004,
+          "count": 50,
+          "probability": 30
+        }
+      ]
+    }
+  }
+}

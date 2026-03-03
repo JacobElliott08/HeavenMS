@@ -1,0 +1,45 @@
+{
+  "questId": 6250,
+  "info": {
+    "name": "The Bowman\u0027s Inner Eye",
+    "descriptions": {
+      "notStarted": " Let\u0027s go see my former trainer, #b#p2081300##k.",
+      "inProgress": " #b#p2081300##k told me about his past and suggested that I go see #b#p1012100##k to find his missing #b#t4031465##k if I feel like I\u0027ve reached a plateau in my training. He says Kentaurus should have the gloves....\\n\\n#i4031465##t4031465# #b#c4031465#/1",
+      "completed": " #b#p1012100##k remembered the gloves that he gave to a boy long time ago and taught me a new skill called Hurricane.  It is a skill that allows me to shoot lightning fast and powerful arrows."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081300,
+      "jobs": [
+        312
+      ]
+    },
+    "complete": {
+      "npc": 1012100,
+      "items": [
+        {
+          "itemId": 4031465
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000000,
+      "items": [
+        {
+          "itemId": 4031465,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 3121004,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

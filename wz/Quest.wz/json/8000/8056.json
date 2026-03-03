@@ -1,0 +1,41 @@
+{
+  "questId": 8056,
+  "info": {
+    "name": "Traveling Around Maple 4",
+    "parent": "Traveling Around Maple",
+    "descriptions": {
+      "notStarted": "After observing the stunning scenery of Orbis, I should start up a conversation with Elma.",
+      "inProgress": "Elma offered to take me to Ludibrium. Once I get there, she advised me to look for Marcel...",
+      "completed": "I was able to meet up with Marcel. Where will I go next?"
+    },
+    "area": 40,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012010,
+      "startDate": "2005010100",
+      "endDate": "2005010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 8055,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041004
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8057,
+      "items": [
+        {
+          "itemId": 2022024,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

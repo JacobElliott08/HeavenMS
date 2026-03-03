@@ -1,0 +1,58 @@
+{
+  "questId": 9426,
+  "info": {
+    "name": "북극곰 로로의 하늘로 가는 사다리 2",
+    "descriptions": {
+      "notStarted": "코-크타운에 살고 있는 #b#p9001001##k를 찾아가보자.",
+      "inProgress": "별을 좋아하는 #b#p9001001##k가 하늘 꼭대기까지 올라가 별을 구경할 수 있도록 사다리를 만드는 것을 도와주자. \\n\\n#t04000211:# #b#c04000211#/100#k \\n#t04000212:# #b#c04000212#/100#k",
+      "completed": "#b#p9001001##k가 하늘 꼭대기까지 올라가서 별을 볼 수 있도록 도와주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9001001,
+      "minLevel": 30,
+      "startDate": "2006070300",
+      "endDate": "2007112300",
+      "prerequisiteQuests": [
+        {
+          "questId": 9425,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9001001,
+      "items": [
+        {
+          "itemId": 4000212,
+          "count": 100
+        },
+        {
+          "itemId": 4000211,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6300,
+      "items": [
+        {
+          "itemId": 4000211,
+          "count": -100
+        },
+        {
+          "itemId": 4000212,
+          "count": -100
+        },
+        {
+          "itemId": 2022075,
+          "count": 15
+        }
+      ]
+    }
+  }
+}

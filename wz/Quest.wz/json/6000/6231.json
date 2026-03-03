@@ -1,0 +1,67 @@
+{
+  "questId": 6231,
+  "info": {
+    "name": "Three winds",
+    "parent": "Chaser of Darkness",
+    "descriptions": {
+      "notStarted": " #b#p2041028##k knows #p2081400#... I wonder what he wants to say?",
+      "inProgress": "#p2041028# asked me to find three winds and go see #b#p2081400##k. #b#t04031457#. #t04031458#. #t04031459#.#k There\u0027s nothing in here that\u0027s easy to get. He said he\u0027ll give me a skill....I wonder what? Seeing that he mentions #p2081400#, I think he\u0027s one of #p2081400#\u0027s followers...\\n\\n#i04031457##t04031457# #b#c04031457#/1#k \\n#i04031458##t04031458# #b#c04031458#/1#k \\n#i04031459##t04031459# #b#c04031459#/1#k",
+      "completed": " #p2081400# gave me a new skill, #r#q4121008##k! I must find a way to master this skill..."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041028,
+      "jobs": [
+        412
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6230,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081400,
+      "items": [
+        {
+          "itemId": 4031457
+        },
+        {
+          "itemId": 4031458
+        },
+        {
+          "itemId": 4031459
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2200000,
+      "items": [
+        {
+          "itemId": 4031457,
+          "count": -1
+        },
+        {
+          "itemId": 4031458,
+          "count": -1
+        },
+        {
+          "itemId": 4031459,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 4121008,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

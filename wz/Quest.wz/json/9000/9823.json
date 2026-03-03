@@ -1,0 +1,86 @@
+{
+  "questId": 9823,
+  "info": {
+    "name": "동물들을 위한 특식",
+    "descriptions": {
+      "notStarted": "아쿠아리움 동물원의 사육사 #b#p2060005##k가 부탁할 것이 있다고 한다.",
+      "inProgress": "#b#p2060005##k는 동물원 식구들에게 줄 먹이를 가지고 오라고 했다. \\n\\n#b#t02010003:# #k#c02010003#/3#k \\n#b#t04000029:# #k#c04000029#/30#k \\n#b#t04000166:# #k#c04000166#/50#k",
+      "completed": "#b#p2060005##k대신 동물원 식구들에게 준 특식을 준비해 주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "minLevel": 25,
+      "maxLevel": 39,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2007050400",
+      "endDate": "2007051400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9822,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060005,
+      "items": [
+        {
+          "itemId": 4000029,
+          "count": 30
+        },
+        {
+          "itemId": 4000166,
+          "count": 50
+        },
+        {
+          "itemId": 2010003,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 2010003,
+          "count": -3
+        },
+        {
+          "itemId": 4000029,
+          "count": -30
+        },
+        {
+          "itemId": 4000166,
+          "count": -50
+        },
+        {
+          "itemId": 4031242
+        },
+        {
+          "itemId": 4140103,
+          "probability": 1
+        },
+        {
+          "itemId": 4010006,
+          "count": 3,
+          "probability": 2
+        },
+        {
+          "itemId": 4010000,
+          "count": 3,
+          "probability": 2
+        },
+        {
+          "itemId": 4020006,
+          "count": 3,
+          "probability": 2
+        }
+      ]
+    }
+  }
+}

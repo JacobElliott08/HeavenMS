@@ -1,0 +1,43 @@
+{
+  "questId": 3420,
+  "info": {
+    "name": "The Effort to Make-up",
+    "descriptions": {
+      "notStarted": "I better go see Yellow Mesoranger at the Safety Zone.",
+      "inProgress": "I met with Yellow Mesoranger at a field around Omega Sector. She alerted me that she\u0027s aware of the fact that I helped out Alien Gray, and that if I am to dispel the notion that I\u0027m on the alien\u0027s side, I\u0027ll have to make an effort to make-up for my blunders. In order to regain their trust, I\u0027ll have to eliminate the aliens. \\n\\n#o4230118# #r#a34201#",
+      "completed": "I may have helped out Alien Gray in a moment of chaos, but after successfully completing the mission Yellow Mesoranger gave me, I think I regained some of her trust. It just seems like the aliens do not want to peacefully coexist with us."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041011,
+      "minLevel": 44,
+      "prerequisiteQuests": [
+        {
+          "questId": 3419,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041011,
+      "monsters": [
+        {
+          "monsterId": 4230118,
+          "count": 120
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 19000,
+      "items": [
+        {
+          "itemId": 1032018
+        }
+      ]
+    }
+  }
+}

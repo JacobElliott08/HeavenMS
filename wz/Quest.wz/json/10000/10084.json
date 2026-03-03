@@ -1,0 +1,31 @@
+{
+  "questId": 10084,
+  "info": {
+    "name": "피아의 응원",
+    "descriptions": {
+      "notStarted": "피아가 그린캠페인을 응원하기 위해 기다리고 있습니다.",
+      "inProgress": "피아가 그린캠페인을 응원해 준다.",
+      "completed": "피아가 그린캠페인을 응원해 주었다."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012102,
+      "startDate": "2008111300",
+      "endDate": "2008121900",
+      "minLevel": 13,
+      "prerequisiteQuests": [
+        {
+          "questId": 10082,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012102,
+      "endScript": "q10084e"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "questId": 3828,
+  "info": {
+    "name": "An Evidence of Slaying the Captain",
+    "parent": "Operation Eliminate Red-Nosed Pirates",
+    "descriptions": {
+      "notStarted": "#b#p2092001##k of #b#m251000000##k seems to be thinking of eliminating #rRed-Nosed Pirates#k...  maybe there\u0027s something I can do to help. I better go see #p2092001#.",
+      "inProgress": "#p2092001# suspects that #r#o7130104##k of the Red-Nosed Pirates is responsible for this mess. In order to help him out, I must find a way to eliminate #o7130104#... I better eliminate #o7130104# and bring #b#t4031436##k as evidence. \\n\\n#i4031436##t4031436#  #b#c4031436##k/20",
+      "completed": "Once I showed #p2092001# #t4031436#, he seemed very ecstatic. To see a grown man be so ecstatic makes me feel equally as good. Hopefully this will in turn transport those herbs safely to #m250000000#."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2092001,
+      "prerequisiteQuests": [
+        {
+          "questId": 3827,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2092001,
+      "items": [
+        {
+          "itemId": 4031436,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 38000,
+      "items": [
+        {
+          "itemId": 4031436,
+          "count": -20
+        },
+        {
+          "itemId": 2040801
+        }
+      ]
+    }
+  }
+}

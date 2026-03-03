@@ -1,0 +1,44 @@
+{
+  "questId": 9428,
+  "info": {
+    "name": "동생을 아끼는 북극곰 푸치",
+    "descriptions": {
+      "notStarted": "#b#p9001005##k가 개구쟁이 동생 때문에 걱정이 많다고 한다. 코-크 타운에 살고 있는 북극곰 푸치를 찾아가보자.",
+      "inProgress": "#b#p9001002##k가 안전하게 마을 밖을 다닐 수 있도록 도와주자.\\n\\n#o9500145# #r#a94281##k \\n#o9500146# #r#a94282##k",
+      "completed": "#b#p9001005##k의 동생이 안전하게 마을 밖을 돌아다닐 수 있도록 도와주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9001005,
+      "minLevel": 20,
+      "startDate": "2006070300",
+      "endDate": "2007122300"
+    },
+    "complete": {
+      "npc": 9001005,
+      "monsters": [
+        {
+          "monsterId": 9500145,
+          "count": 100
+        },
+        {
+          "monsterId": 9500146,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3200,
+      "items": [
+        {
+          "itemId": 2022075,
+          "count": 8
+        }
+      ]
+    }
+  }
+}

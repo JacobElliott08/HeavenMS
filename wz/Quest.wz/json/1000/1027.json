@@ -1,0 +1,36 @@
+{
+  "questId": 1027,
+  "info": {
+    "name": "Mai\u0027s Request",
+    "parent": "For a new world",
+    "descriptions": {
+      "notStarted": "#b#p12100##k stands at #b#m50000##k. They say she is the strongest in Maple Island.... Why is she here? What\u0027s her life story like? Let\u0027s see #p12100#.",
+      "inProgress": "#p12100# is a new adventurer and worker on Victoria Island. But the elder, #p12000# in #m1010000# hired her in case of any dangerous situations on Maple Island. #p12100# says it\u0027s a hard time now because of all the work....Let\u0027s tell #b#p12000##k what #p12100# said.",
+      "completed": "#p12000# agreed with what #p12100# said. He said it\u0027s better to hire more workers. Then he asked me to tell #b#p1002101##k in #b#m104000000##k... #m104000000# is in Victoria Island...I have to go to  #b#p22000##k in #b#m60000##k."
+    },
+    "area": 20,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 12100,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 12000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20
+    }
+  }
+}

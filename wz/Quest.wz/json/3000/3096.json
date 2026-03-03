@@ -1,0 +1,34 @@
+{
+  "questId": 3096,
+  "info": {
+    "name": "Kenta\u0027s Advice",
+    "descriptions": {
+      "notStarted": "I should go pay a visit to Kenta, the animal trainer at Aquarium Zoo, with my pet.",
+      "inProgress": "#p2060005#, the animal instructor at Aquarium Zoo, mentioned that if the pet\u0027s loyalty increases, then the pet will start walking in the same pace as its master, and offered a chance to increase the loyalty level of my pet. He gave me a task of finding #b5 pieces of paper#k hidden away somewhere in Aqua Road with my pet, and increase the closeness of my pet by #bat least 15#k. He even gave me a clue in that I should look into a #bbox#k at the bottom of the ocean... okay, now off to find the papers! \\n\\n#t4031274#  #b#c4031274##k / 1\\n#t4031275#  #b#c4031275##k / 1\\n#t4031276#  #b#c4031276##k / 1\\n#t4031277#  #b#c4031277##k / 1\\n#t4031278#  #b#c4031278##k / 1",
+      "completed": "I looked through the box at the very bottom of Aqua Road and wound up finding the 5 pieces of paper, with my pet accompanying my every move. Then I went back to Aquarium Zoo to see Kenta, and while going through the mission, the loyalty level had already been increased. My pet is now walking in the same pace as I am... wow..."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3083,
+          "state": "COMPLETED"
+        }
+      ],
+      "petRequirement": {}
+    },
+    "complete": {
+      "npc": 2060005,
+      "petRequirement": {}
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "petSpeed": 1
+    }
+  }
+}

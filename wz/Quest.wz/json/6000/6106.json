@@ -1,0 +1,54 @@
+{
+  "questId": 6106,
+  "info": {
+    "name": " Insignificant Being",
+    "parent": "Extreme Temptation",
+    "descriptions": {
+      "inProgress": "#p1061011# said #b#p1061012##k will know about the Bowman\u0027s ultimate skill. At last! I\u0027m on my way there now! \\n\\n#t4161029# #b#c4161029# / 1",
+      "completed": "#p1061012# was aware of the book and gave me the answers I needed. I see that my journey has just begun, but I will gain tremendous power should I see it through to completion. Onward!"
+    },
+    "area": 10,
+    "order": 7
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "jobs": [
+        312,
+        322
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6105,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061012,
+      "items": [
+        {
+          "itemId": 4161029
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4161029
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 4161029,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

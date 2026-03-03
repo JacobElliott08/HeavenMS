@@ -1,0 +1,62 @@
+{
+  "questId": 8851,
+  "info": {
+    "name": "Amoria : Cupid\u0027s Courier - Warrior",
+    "parent": "Cupid\u0027s Courier - Warrior",
+    "descriptions": {
+      "notStarted": "The wife of a sailor, eh? I\u0027ll bet she needs some help.",
+      "inProgress": "I spoke with the lovely Angelique, and I\u0027m going to deliver #b15 Sticky Spiderwebs#k to her husband, Richard, for her. He works on Tae Gong\u0027s ship in Aqua Road. Once I have everything, I\u0027ll head there, drop everything off, and let Angelique know her husband has everything.",
+      "completed": "I delivered the materials to Richard and he thanked me. His wife must be happy..."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201036,
+      "minLevel": 35,
+      "repeatIntervalMinutes": 1440,
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132
+      ],
+      "items": [
+        {
+          "itemId": 4031564,
+          "count": 0
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201038,
+      "items": [
+        {
+          "itemId": 4000098,
+          "count": 15
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4000098,
+          "count": -15
+        },
+        {
+          "itemId": 4031564
+        }
+      ]
+    }
+  }
+}

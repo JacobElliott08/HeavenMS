@@ -1,0 +1,54 @@
+{
+  "questId": 2086,
+  "info": {
+    "name": "The Ingredients for the Flying Pill",
+    "parent": "Icarus and the Flying Pill",
+    "descriptions": {
+      "inProgress": "I meet Wing the Fairy at Ellinia, and he doesn\u0027t seem to like people in general. How is he best friends with Icarus in the first place?? Anyway, he says in order to make #b#t4031163##k, he\u0027ll need #b50 #t4000036#s#k and #b20 #t4031165#s#k. So that\u0027s all it takes?\\n\\n#t4000036# #c4000036##k/50\\n#t4031165# #c4031165##k/20",
+      "completed": "As Wing the Fairy asked, I got her mysterious medicine and leaves of witch grass. Could she make Flying Pill with these?"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032106,
+      "minLevel": 42,
+      "prerequisiteQuests": [
+        {
+          "questId": 2085,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032106,
+      "items": [
+        {
+          "itemId": 4031165,
+          "count": 20
+        },
+        {
+          "itemId": 4000036,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "nextQuest": 2087,
+      "items": [
+        {
+          "itemId": 4000036,
+          "count": -50
+        },
+        {
+          "itemId": 4031165,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

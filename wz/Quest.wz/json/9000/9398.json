@@ -1,0 +1,28 @@
+{
+  "questId": 9398,
+  "info": {
+    "name": "The Secrets Behind the Mundane Statue",
+    "descriptions": {
+      "notStarted": "Apparently, the truth behind the long-time legend of mysterious Monster Statue is out... I better go see #b#p9010000##k and hear the story behind it.",
+      "inProgress": "I better go see #b#p2040050##k, the one responsible for uncovering truth behind these strange Monster Crystal Statues.",
+      "completed": " I met up with #b#p2040050##k, who knows the secret behind these Monster Crystal Statues..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "startDate": "2008042900",
+      "endDate": "2008061700"
+    },
+    "complete": {
+      "npc": 2040050
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "questId": 10426,
+  "info": {
+    "name": "폴라로이드가 필요해요.",
+    "descriptions": {
+      "notStarted": "달사진을 찍을 폴라로이드가 필요하다면 #b아기 월묘#k를 찾아가 보자.",
+      "inProgress": "달사진을 찍을 폴라로이드가 필요하다면 #b아기 월묘#k를 찾아가 보자.",
+      "completed": "폴라로이드는 보름달 가까이에서 더블클릭해야 사진을 찍을 수 있다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9001102,
+      "endDate": "2009101900",
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 10425,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 2430031
+        },
+        {
+          "itemId": 4032430
+        },
+        {
+          "itemId": 4032431
+        },
+        {
+          "itemId": 4032432
+        },
+        {
+          "itemId": 4032433
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9001102
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2430031,
+          "expirationDate": "2009101900"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "questId": 3332,
+  "info": {
+    "name": "Keeny\u0027s Pal Humanoid A",
+    "parent": "A Present for Keeny",
+    "descriptions": {
+      "notStarted": "At #b#m261000000##k, there\u0027s this strange form of life that resides in town. Humanoid may be a machine on the outside, but he can also be classified as a human being... I better pay a visit to #b#p2111003##k.",
+      "inProgress": "#p2111003# did not remember anything from the past. He does not even remember who created him. He did tell me, however, that he has a friend and that\u0027s why he doesn\u0027t feel alone, and that friend is #p2111005#... a tight bond between Humanoid and a Fairy? That\u0027s interesting! He wanted to give #p2111005# a present, and asked me to get #b#t4000357##k and #b#t4000358##k for him, so he can make one for her. \\n\\n#i4000357##t4000357# #b#c4000357##k/100  \\n#i4000358##t4000358# #b#c4000358##k/100",
+      "completed": "I gave #p2111003# all the materials he asked for. He then told me to wait as he began making the present."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111003,
+      "minLevel": 45
+    },
+    "complete": {
+      "npc": 2111003,
+      "items": [
+        {
+          "itemId": 4000357,
+          "count": 100
+        },
+        {
+          "itemId": 4000358,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9500,
+      "items": [
+        {
+          "itemId": 4000357,
+          "count": -100
+        },
+        {
+          "itemId": 4000358,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

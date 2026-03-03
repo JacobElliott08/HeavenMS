@@ -1,0 +1,227 @@
+{
+  "questId": 2115,
+  "info": {
+    "name": "POLLUTED! \u003c2-Curse Eye\u003e",
+    "descriptions": {
+      "notStarted": "I heard there\u0027s a warning sign on monsters somewhere Deep in the Forest...",
+      "inProgress": "Eliminate #b999#k #o3230100#s, then find \"The Rememberer.\" \\n\\n#o3230100# #r#a21151##k",
+      "completed": "I tried eliminating the #o3230100#s all-together, but the number didn\u0027t seem to decrease at all."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1063004,
+      "maxLevel": 65,
+      "repeatIntervalMinutes": 1440,
+      "prerequisiteQuests": [
+        {
+          "questId": 2109,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "monsters": [
+        {
+          "monsterId": 3230100,
+          "count": 999
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 2043000,
+          "jobRestriction": 2099202,
+          "probability": 9
+        },
+        {
+          "itemId": 2043100,
+          "jobRestriction": 2099202,
+          "probability": 9
+        },
+        {
+          "itemId": 2043200,
+          "jobRestriction": 2099202,
+          "probability": 9
+        },
+        {
+          "itemId": 2044000,
+          "jobRestriction": 2099202,
+          "probability": 9
+        },
+        {
+          "itemId": 2044100,
+          "jobRestriction": 2099202,
+          "probability": 9
+        },
+        {
+          "itemId": 2044200,
+          "jobRestriction": 2099202,
+          "probability": 9
+        },
+        {
+          "itemId": 2044300,
+          "jobRestriction": 2099202,
+          "probability": 9
+        },
+        {
+          "itemId": 2044400,
+          "jobRestriction": 2099202,
+          "probability": 9
+        },
+        {
+          "itemId": 2044500,
+          "jobRestriction": 8200,
+          "probability": 36
+        },
+        {
+          "itemId": 2044600,
+          "jobRestriction": 8200,
+          "probability": 36
+        },
+        {
+          "itemId": 2044700,
+          "jobRestriction": 16400,
+          "probability": 36
+        },
+        {
+          "itemId": 2043300,
+          "jobRestriction": 16400,
+          "probability": 36
+        },
+        {
+          "itemId": 2043700,
+          "jobRestriction": 4100,
+          "probability": 36
+        },
+        {
+          "itemId": 2043800,
+          "jobRestriction": 4100,
+          "probability": 36
+        },
+        {
+          "itemId": 2041013,
+          "probability": 1
+        },
+        {
+          "itemId": 2041019,
+          "probability": 1
+        },
+        {
+          "itemId": 2041022,
+          "probability": 1
+        },
+        {
+          "itemId": 2041016,
+          "probability": 1
+        },
+        {
+          "itemId": 2020013,
+          "count": 3,
+          "probability": 216
+        },
+        {
+          "itemId": 2020014,
+          "count": 2,
+          "probability": 216
+        },
+        {
+          "itemId": 2020015,
+          "count": 2,
+          "probability": 216
+        },
+        {
+          "itemId": 2000004,
+          "count": 10,
+          "probability": 72
+        },
+        {
+          "itemId": 2043001,
+          "jobRestriction": 2099202,
+          "probability": 4
+        },
+        {
+          "itemId": 2043101,
+          "jobRestriction": 2099202,
+          "probability": 4
+        },
+        {
+          "itemId": 2043201,
+          "jobRestriction": 2099202,
+          "probability": 4
+        },
+        {
+          "itemId": 2044001,
+          "jobRestriction": 2099202,
+          "probability": 4
+        },
+        {
+          "itemId": 2044101,
+          "jobRestriction": 2099202,
+          "probability": 4
+        },
+        {
+          "itemId": 2044201,
+          "jobRestriction": 2099202,
+          "probability": 4
+        },
+        {
+          "itemId": 2044301,
+          "jobRestriction": 2099202,
+          "probability": 4
+        },
+        {
+          "itemId": 2044401,
+          "jobRestriction": 2099202,
+          "probability": 4
+        },
+        {
+          "itemId": 2044501,
+          "jobRestriction": 8200,
+          "probability": 16
+        },
+        {
+          "itemId": 2044601,
+          "jobRestriction": 8200,
+          "probability": 16
+        },
+        {
+          "itemId": 2044701,
+          "jobRestriction": 16400,
+          "probability": 16
+        },
+        {
+          "itemId": 2043301,
+          "jobRestriction": 16400,
+          "probability": 16
+        },
+        {
+          "itemId": 2043701,
+          "jobRestriction": 4198404,
+          "probability": 16
+        },
+        {
+          "itemId": 2043801,
+          "jobRestriction": 4198404,
+          "probability": 16
+        },
+        {
+          "itemId": 2044801,
+          "jobRestriction": 32800,
+          "probability": 16
+        },
+        {
+          "itemId": 2044901,
+          "jobRestriction": 32800,
+          "probability": 16
+        }
+      ]
+    }
+  }
+}

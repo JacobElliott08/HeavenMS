@@ -1,0 +1,48 @@
+{
+  "questId": 9183,
+  "info": {
+    "name": "이얀의 보름달",
+    "parent": "이얀의 추석",
+    "descriptions": {
+      "inProgress": "이얀이 나의 소원을 위해 보름달을 보여주겠다고 한다..이건..환상일까? \\n\\n#o9500001# #r#a91831##k",
+      "completed": "메이플스토리의 보름달을 보며 소원을 빌었다."
+    },
+    "area": 50,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022007,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2007092000",
+      "endDate": "2007100800",
+      "prerequisiteQuests": [
+        {
+          "questId": 9182,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022007,
+      "monsters": [
+        {
+          "monsterId": 9500001
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 2100021,
+          "count": 3
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 26000
+    }
+  }
+}

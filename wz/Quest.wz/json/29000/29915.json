@@ -1,0 +1,29 @@
+{
+  "questId": 29915,
+  "info": {
+    "name": "Mu Lung Dojo Vanquisher",
+    "descriptions": {
+      "notStarted": "#b#eTitle - Mu Lung Dojo Vanquisher#n#\\r\\n#k#b\u003cMu Lung Dojo Vanquisher\u003e#k, a coveted title given only to Mu Lung Dojo experts. \\r\\n●Requirement(s) : Acquire the #bMu Lung Dojo Vanquisher Medal#k from #bMu Lung Dojo#k.",
+      "completed": "You have earned the #b\u003cMu Lung Dojo Vanquisher\u003e#k title by defeating all of the master monsters in Mu Lung Dojo."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142064
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091005,
+      "startScript": "q29915s",
+      "minLevel": 25,
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 1142064
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091005
+    }
+  }
+}

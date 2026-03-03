@@ -1,0 +1,34 @@
+{
+  "questId": 8041,
+  "info": {
+    "name": "Monster Rumor Mill",
+    "parent": "Monster Rumor Mill",
+    "descriptions": {
+      "notStarted": " I heard Scadur of El Nath got attacked by a monster. I better go talk to him.",
+      "inProgress": " Apparently, Foxy, I mean, Master Sergeant Fox also got attacked by that infamous monster. I better check out what\u0027s up.",
+      "completed": "In order to gather up the information regarding the monster, I\u0027ll have to do Master Sergeant Fox a favor. Are you kidding me?"
+    },
+    "area": 33,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020007,
+      "minLevel": 80,
+      "prerequisiteQuests": [
+        {
+          "questId": 8040,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8042
+    }
+  }
+}

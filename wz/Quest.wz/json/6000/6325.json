@@ -1,0 +1,37 @@
+{
+  "questId": 6325,
+  "info": {
+    "name": "Maple Warrior Skill Book",
+    "descriptions": {
+      "notStarted": "If you somehow lose the Maple Warrior Skill Book, you should go visit #b#p1201002##k.",
+      "inProgress": "This should do, right? You\u0027d better go talk to #b#p1201002##k.",
+      "completed": "You received a new skill book from #b#p1201002##k."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201002,
+      "items": [
+        {
+          "itemId": 2280003
+        }
+      ],
+      "jobs": [
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1201002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2280003
+        }
+      ]
+    }
+  }
+}

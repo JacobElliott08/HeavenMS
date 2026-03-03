@@ -1,0 +1,63 @@
+{
+  "questId": 28164,
+  "info": {
+    "name": "Advanced Training-2",
+    "descriptions": {
+      "notStarted": "#b#@9201119:##k in #b#m102000000##k says he\u0027ll begin the second training.",
+      "inProgress": "#b#@9201119:##k\u0027s second training requires you to collect #r#t4000005#s#k.\\n\\n #r#o1110101#s#k drop #r#t4000005#s#k.\\n\\nAnd #r#o1110101##k can be easily found in #b#m101040000##k and #b#m102010000##k.\\n\\nLet\u0027s report back to #b#@9201119:##k in #b#m102000000##k upon completion.",
+      "completed": "You have completed #b#p9201119##k\u0027s second training!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201119,
+      "prerequisiteQuests": [
+        {
+          "questId": 28162,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        1100,
+        1110,
+        1111,
+        1112,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 9201119,
+      "items": [
+        {
+          "itemId": 4000005,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200,
+      "items": [
+        {
+          "itemId": 4000005,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

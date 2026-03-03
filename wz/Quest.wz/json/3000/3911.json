@@ -1,0 +1,58 @@
+{
+  "questId": 3911,
+  "info": {
+    "name": "Making the Fancy Sword",
+    "parent": "Dancer Sword",
+    "descriptions": {
+      "inProgress": "#p2100001# told me making a dancer sword at #m260000000# is very difficult, but he told me if I bring the items to decorate the sword with, then he\u0027ll consider it... they turn out to be #b#t4031568##k, #b#t4000335##k, and #b5,000 mesos#k. I better go get the materials right now.\\n\\n#i4031568# #t4031568#  #b#c4031568##k/4 \\n#i4000335# #t4000335#  #b#c4000335##k/30",
+      "completed": "I have gotten all the materials required to make the Dancer Sword, along with 5,000 mesos, and gave them all to #p2100001#. With that, maybe I can get the Dancer Sword from him"
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2100001,
+      "minLevel": 32,
+      "prerequisiteQuests": [
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3910,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2100001,
+      "items": [
+        {
+          "itemId": 4031568,
+          "count": 4
+        },
+        {
+          "itemId": 4000335,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "meso": -5000,
+      "items": [
+        {
+          "itemId": 4031568,
+          "count": -4
+        },
+        {
+          "itemId": 4000335,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

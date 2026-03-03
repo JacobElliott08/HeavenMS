@@ -1,0 +1,40 @@
+{
+  "questId": 3736,
+  "info": {
+    "name": "Nex the Time Guard",
+    "parent": "Year 2216- The Ruins",
+    "descriptions": {
+      "notStarted": "Andy the Time Traveler says he has something to tell you before your fourth time travel.",
+      "inProgress": "Andy the Time Traveler has informed you that you must pass the test Next the Gatekeeper of Time, who lives in the Old Tree of Tera, gives you before embarking on your fourth time travel. Enter the Old Tree of Tera and pass Nex\u0027s test.",
+      "completed": "You have passed the fourth test given by Nex the Gatekeeper of Time and earned the right to travel to another time. You can now teleport to the ruins of the city in year 2216. Go to the Time Gate with the Time Traveler\u0027s Pocket Watch."
+    },
+    "area": 41,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082004,
+      "minLevel": 81,
+      "prerequisiteQuests": [
+        {
+          "questId": 3731,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082004,
+      "monsters": [
+        {
+          "monsterId": 8120100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 130000,
+      "nextQuest": 3737
+    }
+  }
+}

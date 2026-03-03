@@ -1,0 +1,38 @@
+{
+  "questId": 4301,
+  "info": {
+    "name": "Kino Konoko vs Fire Raccoon",
+    "descriptions": {
+      "notStarted": "#b#p9110002##k, who resides in the Mushroom Shrine, is having a bit of trouble with Fire Racoons. I should see if I can help!",
+      "inProgress": "Kino Konoko tells me that the food vendors and restaurants in #m800000000# are suffering from #b#o9400001#s#k attacking their places. I better help them out. I would not want to miss out on some great food around here! Now, where can I find #o9400001#?\\n\\n#o9400001# #r#a43011##k",
+      "completed": "I let #p9110002# know that I took care of 100 #o9400001#s. She was ecstatic, to say the least. Hopefully that\u0027ll keep the #m800000000# food from disappearing..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9110002,
+      "minLevel": 25
+    },
+    "complete": {
+      "npc": 9110002,
+      "monsters": [
+        {
+          "monsterId": 9400001,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 2022022,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

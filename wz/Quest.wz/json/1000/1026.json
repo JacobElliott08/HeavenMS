@@ -1,0 +1,68 @@
+{
+  "questId": 1026,
+  "info": {
+    "name": "Delivering Nutritious Juice to Shanks",
+    "parent": "Maria and Shanks",
+    "descriptions": {
+      "notStarted": "Would #b#p2103##k make a nutritious juice? Seems to ask for more...",
+      "inProgress": "#p2103# asked me to give nutritious juice to  #b#p22000##k, the captain of #b#m60000##k. Hmm...are they dating?",
+      "completed": "I gave #p22000#  #p2103#\u0027s nutritious juice.  #p22000# looked happy... #p2103# and  #p22000# are dating. The juice looks...pretty nasty, actually; but #p22000# was encouraged and gave me some advice."
+    },
+    "area": 20,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2103,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1025,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 22000,
+      "items": [
+        {
+          "itemId": 4031556
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031556
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 2000000,
+          "count": 10
+        },
+        {
+          "itemId": 2000003,
+          "count": 10
+        },
+        {
+          "itemId": 4031556,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

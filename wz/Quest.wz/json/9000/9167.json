@@ -1,0 +1,36 @@
+{
+  "questId": 9167,
+  "info": {
+    "name": "추석 상식 8. 홍동백서",
+    "parent": "한국의 명절 추석",
+    "descriptions": {
+      "inProgress": "제사상 차림법의 홍동백서의 뜻은?",
+      "completed": "홍동백서(紅東白西)는 붉은색은 동쪽, 흰색은 서쪽에 진설하는 것이다."
+    },
+    "area": 50,
+    "order": 8
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2006092600",
+      "endDate": "2006101600",
+      "prerequisiteQuests": [
+        {
+          "questId": 9166,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3100,
+      "nextQuest": 9168
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "questId": 8257,
+  "info": {
+    "name": "Dinner Fixins\u0027",
+    "descriptions": {
+      "notStarted": "It\u0027s time for Thanksgiving and I\u0027m ready for some home cookin\u0027! I should pay Mom and Dad a visit over in Henesys!",
+      "inProgress": "I\u0027m helping Mom and Dad make Thanksgiving dinner! I have to gather one of each ingredient: 1 ear of #b#t2020029##k, a can of #b#t2022262##k, a #b#t2022263##k, bowl of #b#t2022264##k and best of all, #b#t2022261##k. They promised me an #b#t4031529##k if I return quickly. I guess the Turkeys stole all the ingredients to make Thanksgiving fixins\u0027... I guess they think that without the fixins\u0027, there\u0027ll be no dinner!  No dinner?  No way!  Time to defeat some battle-hardened Turkeys!",
+      "completed": "My trusty weapon did a fine job of ruffling those rowdy turkeys\u0027 feathers, and I obtained all of the ingredients for Mom and Dad. In return, they gave me my #b#t4031529##k! I guess doing chores does pay off! I can take this to any of the Store Vendors in New Leaf City, and receive a #bNexon Game Card#k for it! ...I\u0027d better get out of here before Aunt Petunia shows up! Mom mentioned that I can help her with dinner once a day until it\u0027s time to eat!"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201003,
+      "minLevel": 20,
+      "repeatIntervalMinutes": 1440,
+      "endDate": "2008121600"
+    },
+    "complete": {
+      "npc": 9201003,
+      "items": [
+        {
+          "itemId": 2020029
+        },
+        {
+          "itemId": 2022261
+        },
+        {
+          "itemId": 2022262
+        },
+        {
+          "itemId": 2022263
+        },
+        {
+          "itemId": 2022264
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 2020029,
+          "count": -1
+        },
+        {
+          "itemId": 2022264,
+          "count": -1
+        },
+        {
+          "itemId": 2022263,
+          "count": -1
+        },
+        {
+          "itemId": 2022262,
+          "count": -1
+        },
+        {
+          "itemId": 2022261,
+          "count": -1
+        },
+        {
+          "itemId": 4031864
+        }
+      ]
+    }
+  }
+}

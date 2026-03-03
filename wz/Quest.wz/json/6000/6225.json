@@ -1,0 +1,53 @@
+{
+  "questId": 6225,
+  "info": {
+    "name": " Switching Attributes",
+    "parent": " Inverse Attributes",
+    "descriptions": {
+      "notStarted": " I completed making #b#t4031451##k but there\u0027s no use. I\u0027ll have to ask #b#p2020005##k to find out how to give magic powers to the summoned-being so it becomes my familiar.",
+      "inProgress": "As I showed him the completed summoned-being\u0027s frame #b#p2020005##k said all that\u0027s left is to get the Spiritual Stone, which will ignite its\u0027 power. He said I would be able to find the stone in another world and that #b#p2041023##k would know how to get there.\\r\\n#i4031470##t4031470# #b#c4031470#/1",
+      "completed": "Using #t4031497#, I mastered #r#q2121005##k!"
+    },
+    "area": 10,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "jobs": [
+        212
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6223,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "items": [
+        {
+          "itemId": 4031470
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500000,
+      "items": [
+        {
+          "itemId": 4031470,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 2121005,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

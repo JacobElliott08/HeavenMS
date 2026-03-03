@@ -1,0 +1,36 @@
+{
+  "questId": 9849,
+  "info": {
+    "name": "No Gong\u0027s Test",
+    "descriptions": {
+      "notStarted": "Did you hear #b#p2091000##k, the physical trainer of Mu Lung, might need help?",
+      "inProgress": "#b#p2091000##k says your test is to defeat Grizzly and Panda. They may just be bears, but they are training to become masters, so defeating them won\u0027t be as easy as you think.\\n\\n#o5120500# #r#a98491##k \\n#o6130203# #r#a98492##k",
+      "completed": "You have returned after defeating Grizzly and Panda. However, No Gong says you still have a long way to go until you can become a master. What? Why does he keep doing this? Is he even planning on making you into a master?"
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091000,
+      "minLevel": 60,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2007052900",
+      "endDate": "2007061800"
+    },
+    "complete": {
+      "npc": 2091000,
+      "endScript": "huntUP8",
+      "monsters": [
+        {
+          "monsterId": 5120500,
+          "count": 100
+        },
+        {
+          "monsterId": 6130203,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

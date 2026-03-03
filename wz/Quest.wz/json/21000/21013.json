@@ -1,0 +1,39 @@
+{
+  "questId": 21013,
+  "info": {
+    "name": "A Gift for the Hero",
+    "descriptions": {
+      "notStarted": "You should talk to #b#p1202005##k, standing on the road to town.",
+      "inProgress": "#p1202005# confesses that he\u0027s always wanted to build one particular gift for a hero and that he\u0027s stored all the necessary components in a box. He asks you to break open the box and bring him the items inside. Break boxes by swinging at them with regular attacks, then collect the #b#t4032309##k and #b#t4032310##k.",
+      "completed": "You received a chair from #p1202005#. #p1202005# encouraged you by telling you that you are still a hero even though you\u0027ve lost your powers."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1202005,
+      "startScript": "q21013s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21012,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2000
+      ]
+    },
+    "complete": {
+      "npc": 1202005,
+      "endScript": "q21013e",
+      "items": [
+        {
+          "itemId": 4032309
+        },
+        {
+          "itemId": 4032310
+        }
+      ]
+    }
+  }
+}

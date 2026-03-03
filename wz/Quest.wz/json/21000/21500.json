@@ -1,0 +1,42 @@
+{
+  "questId": 21500,
+  "info": {
+    "name": "Weapon Acknowledges Its Owner",
+    "descriptions": {
+      "notStarted": "As soon as you reach Level 200, #b#p1201002##k strikes up a conversation with you...?!",
+      "inProgress": "#p1201002# tells you to come to #b#m140000000##k. He has something he wants to tell you.",
+      "completed": "#p1201002# tells you that you are almost back to you old, heroic self, and as proof, gives you a powerful skill called Hero\u0027s Echo."
+    },
+    "area": 6,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201002,
+      "minLevel": 200,
+      "normalAutoStart": true,
+      "jobs": [
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1201002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142133
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 20001005,
+          "skillLevel": 1,
+          "masterLevel": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "questId": 3926,
+  "info": {
+    "name": "Screwing the Red Scorpions",
+    "parent": "Sand Bandits and Red Scorpions",
+    "descriptions": {
+      "inProgress": "Like #p2101000# told me to do, I went into the hideaway spot of Red Scorpions and stole some treasures from there. Now I\u0027ll have to leave this off at a random resident\u0027s house. Sirin made it clear that a house with X on it is related to Red Scorpions, and therefore not give it to them...",
+      "completed": "I left the treasures at a house with O marked on it. This should be enough of a revenge for the Red Scorpions..."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2103007,
+      "minLevel": 27,
+      "prerequisiteQuests": [
+        {
+          "questId": 3925,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101000,
+      "items": [
+        {
+          "itemId": 4031579
+        }
+      ],
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "info": "2222",
+      "items": [
+        {
+          "itemId": 4031579,
+          "count": 4
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 6500
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "questId": 3817,
+  "info": {
+    "name": "Making Body \u0026 Physics Medicine2",
+    "parent": "Making Body \u0026 Physics Medicine",
+    "descriptions": {
+      "notStarted": "Is #b#t2022144##k just about ready? I better ask #b#p2091002##k.",
+      "inProgress": "I finally received #b#t4031552##k from #p2091002#. Hmmm... it smells much better than I thought! I better take this to #b#p2091000##k immediately.",
+      "completed": "I managed to deliver #t2022144# to #p2091000#. I actually feel a little envious of the students that will be taking this to further strengthen their training... fortunately, #p2091000# gave me some #t2022144#, too. Will this taste alright?"
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091002,
+      "prerequisiteQuests": [
+        {
+          "questId": 3816,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091000,
+      "items": [
+        {
+          "itemId": 4031552
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031552
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 13000,
+      "items": [
+        {
+          "itemId": 4031552,
+          "count": -1
+        },
+        {
+          "itemId": 2022144,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

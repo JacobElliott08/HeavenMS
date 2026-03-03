@@ -1,0 +1,51 @@
+{
+  "questId": 3916,
+  "info": {
+    "name": "Schegerazade the Storyteller",
+    "parent": "Schegerazade the Storyteller",
+    "descriptions": {
+      "inProgress": "#p2040052# of #m222020000#의 have started to prepare some storybooks for #p2101008#. No idea when the queen may act up again, so I better go to #b#m260000000##k and give it to #b#p2101008##k right now.",
+      "completed": "After receiving the book, #p2101008# let out a sigh of relief. Hopefully these books will be enough for her for a while... poor #p2101008#...when will she be freed from the wrath of the queen?"
+    },
+    "area": 44,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040052,
+      "minLevel": 36,
+      "prerequisiteQuests": [
+        {
+          "questId": 3915,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101008,
+      "items": [
+        {
+          "itemId": 4031573
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031573
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 9000,
+      "items": [
+        {
+          "itemId": 4031573,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

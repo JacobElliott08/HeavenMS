@@ -1,0 +1,59 @@
+{
+  "questId": 28196,
+  "info": {
+    "name": "The Demon Behind It All",
+    "parent": "Unveiling the Secret",
+    "descriptions": {
+      "notStarted": "#b#@1022000:##k in #bPerion#k says he\u0027s identified the emblem. Let\u0027s go see what he\u0027s discovered.",
+      "inProgress": "He says the emblem signifies #rMarbas#k, who is known for spreading diseases. He was sealed in #bEllinia#k, but someone has broken the seal.\\n\\nFirst things first, though. He says you he needs a lot of Trees to stop the virus from spreading.\\nHe says to hunt #rDark Stumps#k and #rAxe Stumps#k.\\n(He says they can be easily found in #b#m102020100##k.)\\n\\nReturn to #b#@1022000:##k in Perion upon completion.",
+      "completed": "The emblem signified #rMarbas#k the demon; the virus was stopped by blocking the Water Pipe with the Trees."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28195,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1022000,
+      "monsters": [
+        {
+          "monsterId": 1110101,
+          "count": 30
+        },
+        {
+          "monsterId": 1130100,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200
+    }
+  }
+}

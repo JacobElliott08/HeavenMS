@@ -1,0 +1,28 @@
+{
+  "questId": 4995,
+  "info": {
+    "name": "The Spirit of Maplemas",
+    "descriptions": {
+      "notStarted": "To help her decide between Maplemas and Versalmas, Little Suzy wants me to go talk to Maple Claws.  I\u0027m sure she\u0027s back in town now in Happyville.",
+      "inProgress": "To help Little Suzy decide between Maplemas and Versalmas, I spoke to Maple Claws about Suzy\u0027s dilemma.  Maple Claws listened and asked me to deliver a message to Suzy.  I should talk to her in a bit.",
+      "completed": "Maple Claws gave me a message for Suzy: that as long as she remembers the essence of the Maplemas Spirit, it doesn\u0027t really matter what holiday traditions she chooses to follow this year.  I should return to Suzy with Maple Claws\u0027 message once I\u0027ve also spoken to O-Pongo."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201030,
+      "minLevel": 10,
+      "endDate": "2008011500",
+      "prerequisiteQuests": [
+        {
+          "questId": 4994,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201030
+    }
+  }
+}

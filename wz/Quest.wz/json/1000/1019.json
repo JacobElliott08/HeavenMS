@@ -1,0 +1,40 @@
+{
+  "questId": 1019,
+  "info": {
+    "name": "Sam\u0027s Suggestion",
+    "descriptions": {
+      "notStarted": "Sam suggested me to meet Mai...",
+      "inProgress": "When I talked to Sam, he first told me to go to the East...and he told me to hunt #r10#k #b#o100100##k...and meet #p12100#. \\n\\n#b#o100100# #r#a10191##k",
+      "completed": "As Sam told me, I hunted #r10#k #o100100##k...and met #p12100#."
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 2005,
+      "maxLevel": 7,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 12100,
+      "monsters": [
+        {
+          "monsterId": 100100,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "questId": 2093,
+  "info": {
+    "name": "I Need to Find My Daughter 2",
+    "parent": "I Need to Find My Daughter",
+    "descriptions": {
+      "inProgress": "Amazingly, Ayan recovered from amnesia with the help of the toy sword. That\u0027s just amazing!!! The only thing left now is for Ayan and Bruce to finally meet up, but first, I got to get this letter from Ayan to Bruce.",
+      "completed": "I\u0027m so glad that Ayan got her memory back. I\u0027m even gladder that Bruce got to finally see his daughter again! What a moment..."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022007,
+      "prerequisiteQuests": [
+        {
+          "questId": 2092,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012111,
+      "items": [
+        {
+          "itemId": 4031173
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031173
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 200,
+      "meso": 500,
+      "items": [
+        {
+          "itemId": 4031173,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

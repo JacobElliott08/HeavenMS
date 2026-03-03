@@ -1,0 +1,71 @@
+{
+  "questId": 2135,
+  "info": {
+    "name": "Beginner Magician\u0027s Last Training Session",
+    "descriptions": {
+      "notStarted": "I\u0027ve improved a lot. #b #p1032001##k wants to test me!",
+      "inProgress": "#p1032001# asked me to hunt #r10 #o1110101##k. #o1110101#, unlike #o0210100#, is much stronger. BE ALERT! \\n\\n#o1110101# #r#a21351##k",
+      "completed": "I killed 10 #o1110101#. Still need to be trained, but I think I\u0027m quite a good Magician."
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 2134,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "monsters": [
+        {
+          "monsterId": 1110101,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 470,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 50
+        },
+        {
+          "itemId": 2000003,
+          "count": 50
+        },
+        {
+          "itemId": 2030000,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

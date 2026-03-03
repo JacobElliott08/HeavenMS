@@ -1,0 +1,45 @@
+{
+  "questId": 9842,
+  "info": {
+    "name": "Icarus\u0027s Mushroom Bites",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k seems to have something urgent to tell you.",
+      "inProgress": "Icarus is craving Mushroom Bites. Collect the ingredients and take them over to #b#p1052106##k.\\n\\n#o2220100# #r#a98421##k \\n#o1120100# #r#a98422##k \\n#t04000009# #b#c04000009#/20#k \\n#t04000006# #b#c04000006#/20#k",
+      "completed": "You helped #b#p1052106##k make delicious Mushroom Bites."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2007052900",
+      "endDate": "2007061800"
+    },
+    "complete": {
+      "npc": 1052106,
+      "endScript": "huntUP3",
+      "items": [
+        {
+          "itemId": 4000006,
+          "count": 20
+        },
+        {
+          "itemId": 4000009,
+          "count": 20
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 2220100,
+          "count": 50
+        },
+        {
+          "monsterId": 1120100,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

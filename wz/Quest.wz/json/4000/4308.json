@@ -1,0 +1,54 @@
+{
+  "questId": 4308,
+  "info": {
+    "name": "Water Goblin\u0027s Cucumber",
+    "descriptions": {
+      "notStarted": "#b#p9120003##k\u0027s farm, located at #b#m800000000##k, seems to have been robbed. What happened?",
+      "inProgress": "#p9120003# states that the only items stolen at her farm are the #b#t4000223#s#k, and she was very confident that it was the work of #b#o9400012##k. She asked me to eliminate 80 #o9400012#s and recover 40 #t4000223#s in the process. A monster that prefers to eat #t4000223#? Interesting, especially since most kids hate that\\n\\n#o9400012# #r#a43081##k \\n#t4000223# #b#c4000223#/40",
+      "completed": "After eliminating #o9400012#s and recovering a whole bunch of #t4000223#s, #p9120003# had the look of satisfaction on her face."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120003,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 4307,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120003,
+      "items": [
+        {
+          "itemId": 4000223,
+          "count": 40
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9400012,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 9120003,
+      "minLevel": 55
+    },
+    "onComplete": {
+      "experience": 21500,
+      "items": [
+        {
+          "itemId": 4000223,
+          "count": -40
+        }
+      ]
+    }
+  }
+}

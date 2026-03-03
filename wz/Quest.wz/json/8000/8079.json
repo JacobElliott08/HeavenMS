@@ -1,0 +1,29 @@
+{
+  "questId": 8079,
+  "info": {
+    "name": "Umi Needs Money",
+    "parent": "Umi\u0027s Ambition",
+    "descriptions": {
+      "notStarted": "I heard #r#p9120005##k of Showa Town is setting up a master plan. I better hear this.",
+      "inProgress": "She wanted to purchase a machine owned by #r#p2050002##k which is made out of the finest technology in the universe, but was short on money, so #r#p9120005##k asked me to pitch in for her. #n5,000,000 mesos is a LOT of money...",
+      "completed": "I handed #r#p9120005##k 5,000,000 mesos. Can she buy it, though?"
+    },
+    "area": 48,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120005,
+      "minLevel": 50
+    },
+    "complete": {
+      "npc": 9120005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "meso": -5000000
+    }
+  }
+}

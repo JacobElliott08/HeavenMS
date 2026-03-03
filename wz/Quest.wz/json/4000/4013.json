@@ -1,0 +1,56 @@
+{
+  "questId": 4013,
+  "info": {
+    "name": "목걸이를 찾아서 2",
+    "descriptions": {
+      "notStarted": "#b#p9330020##k에게 다시 말을 걸어보자.",
+      "inProgress": "#b#p9330028##k를 만나 쥬디의 목걸이를 되찾고 그녀의 연인 주걸균에게 가져다 주자. \\n\\n#i4031354##t4031354#  #b#c4031354#/1#k",
+      "completed": "주걸균에게 연인의 목걸이와 함께 그녀의 마음을 전해 주었다."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9330020,
+      "minLevel": 80,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4012,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9330003,
+      "items": [
+        {
+          "itemId": 4031354
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031356
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 47200,
+      "fame": 2,
+      "items": [
+        {
+          "itemId": 4031354,
+          "count": -1
+        },
+        {
+          "itemId": 1032023
+        }
+      ]
+    }
+  }
+}

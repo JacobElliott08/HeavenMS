@@ -1,0 +1,51 @@
+{
+  "questId": 3709,
+  "info": {
+    "name": "Getting Advice from Grendel the Really Old  1",
+    "parent": "The Sacred Barrier of the Forest",
+    "descriptions": {
+      "inProgress": " After hearing about the red trees, \\n#b#p2081000##k didn\u0027t think it was unusal. He wanted to hear #p1032001#, the grand magician of #m101000000#\u0027s opinion and asked me to see #b#p1032001##k.",
+      "completed": "Since #p2081000# wanted #p1032001#\u0027s adivce on the red trees, I went to go see #p1032001# in #m101000003# #m101000000# to ask him."
+    },
+    "area": 41,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081000,
+      "minLevel": 85,
+      "prerequisiteQuests": [
+        {
+          "questId": 3708,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "items": [
+        {
+          "itemId": 4031411
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031411
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 4031411,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

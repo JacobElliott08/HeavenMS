@@ -1,0 +1,75 @@
+{
+  "questId": 8067,
+  "info": {
+    "name": "The Man of Convention",
+    "parent": "Freed From Darkness",
+    "descriptions": {
+      "notStarted": "#b#p1012109##k seems to catch on to something here. I\u0027ll need to hear this.",
+      "inProgress": "He said #p9120011#\u0027s doll that is laden with #t4000144# may be controlled by something. I can\u0027t just stand still listening to this! I\u0027ll have to gather up #b50 #t04000148#s#k from #b#o7130300##k, as well as #b50 #t04000147#s#k from #b#o7130010##k. \\nSince #p9120011# is crying, I\u0027ll have to return #b#t04000147##k to her first and hand #b#t04000147##k to her, then go to where #b#p1012109##k is.\\n\\n#t04000148# #b#c04000148##k/50\\n#t04000147# #b#c04000147##k/50",
+      "completed": "After handing #b#t04000147##k to #p9120011#, a blinding light engulfted the dolls, and then they transformed back to their original state. Too bad #b#t04000148##k disappeared in the process. What should I do? I better go talk to #b#p9120011##k."
+    },
+    "area": 48,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012109,
+      "minLevel": 90,
+      "prerequisiteQuests": [
+        {
+          "questId": 8066,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120011,
+      "items": [
+        {
+          "itemId": 4000147,
+          "count": 50
+        },
+        {
+          "itemId": 4000148,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 40000,
+      "nextQuest": 8068,
+      "items": [
+        {
+          "itemId": 4000147,
+          "count": -50
+        },
+        {
+          "itemId": 4000148,
+          "count": -50
+        },
+        {
+          "itemId": 2044005,
+          "probability": 1
+        },
+        {
+          "itemId": 2044205,
+          "probability": 1
+        },
+        {
+          "itemId": 2044105,
+          "probability": 1
+        },
+        {
+          "itemId": 2041041,
+          "probability": 1
+        },
+        {
+          "itemId": 2040907,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

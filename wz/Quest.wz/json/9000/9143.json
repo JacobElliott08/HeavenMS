@@ -1,0 +1,104 @@
+{
+  "questId": 9143,
+  "info": {
+    "name": "월묘와 함께하는 풍요로운 추석",
+    "descriptions": {
+      "notStarted": "#t4031187#을 간절히 원하는 사람이 있다는데, 누굴까? #b#p9010000##k를 찾아가 보자.",
+      "inProgress": "#p9010000#는 #b달나라#k에 살고 있는 #b#p9001103##k가 맛있는 #b#t4031187##k을 구하고 있다고 말했다. 월묘가 송편을? 무슨 일이지? 금송편을 가지고 달나라로 가보자. ",
+      "completed": "#p9001103#는 요즘은 월묘의 떡보다 인간의 떡이 더 맛있는 것 같다며 그 비결이 뭔지 알기 위해 #t4031187#을 구하고 있다고 말했다. 비결을 알아내기 전까지 계속 #t4031187#을 구한다고 하니, #t4031187#이 생기는대로 가져다 주자. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 13,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2008090500",
+      "endDate": "2008092600",
+      "items": [
+        {
+          "itemId": 4031187
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9001103,
+      "items": [
+        {
+          "itemId": 4031187
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4031187,
+          "count": -1
+        },
+        {
+          "itemId": 2012000,
+          "count": 5,
+          "probability": 10
+        },
+        {
+          "itemId": 2012001,
+          "count": 5,
+          "probability": 10
+        },
+        {
+          "itemId": 2012002,
+          "count": 5,
+          "probability": 10
+        },
+        {
+          "itemId": 2012003,
+          "count": 5,
+          "probability": 10
+        },
+        {
+          "itemId": 2020013,
+          "count": 3,
+          "probability": 10
+        },
+        {
+          "itemId": 2020014,
+          "probability": 10
+        },
+        {
+          "itemId": 2020015,
+          "probability": 10
+        },
+        {
+          "itemId": 2000002,
+          "count": 10,
+          "probability": 10
+        },
+        {
+          "itemId": 2040000,
+          "probability": 4
+        },
+        {
+          "itemId": 2041000,
+          "probability": 4
+        },
+        {
+          "itemId": 2041022,
+          "probability": 4
+        },
+        {
+          "itemId": 2040703,
+          "probability": 4
+        },
+        {
+          "itemId": 2040707,
+          "probability": 4
+        }
+      ]
+    }
+  }
+}

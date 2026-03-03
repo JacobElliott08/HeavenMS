@@ -1,0 +1,28 @@
+{
+  "questId": 2002,
+  "info": {
+    "name": "Maya of Henesys",
+    "parent": "Maya and the Weird Medicine",
+    "descriptions": {
+      "notStarted": "I hear that #p1012101# is very sick...",
+      "inProgress": "I met this girl named Maya at the old, raggedy townstreet of Henesys. She\u0027s been suffering from illness for a long time, so she doesn\u0027t look too well to even live a normal life. #bWeird Medicine#k... what a strange name, and she said she\u0027ll get a little bit better by taking that... I better go to Lith Harbor and see this guy Teo...",
+      "completed": "Maya wanted me to go see Teo of Lith Harbor, so I did just that. He promised to give me the Weird Medicine only after I get him a Sparkling Rock."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012101,
+      "minLevel": 15
+    },
+    "complete": {
+      "npc": 1002001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 2003
+    }
+  }
+}

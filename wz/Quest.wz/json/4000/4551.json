@@ -1,0 +1,46 @@
+{
+  "questId": 4551,
+  "info": {
+    "name": "My Lovely Scarf",
+    "parent": "Nuri\u0027s Health and Beauty",
+    "descriptions": {
+      "notStarted": "#b#p9270059##k, one of the most fashionable people in the city, is anxious to get trendy fashion item #b#t4000469##k faster than any others.",
+      "inProgress": "#b#p9270059##k has made up her mind not to go out in the city without a matching #b#t4000469##k to go with her new outfit. And she needs 50 of them to choose from. \\n\\n#t4000469# #r#c4000469#/50#k ",
+      "completed": "She does look pretty with the scarf on her. Before long, there will be many people who will want to have one of those trandy scarfs."
+    },
+    "area": 49,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270059,
+      "minLevel": 60,
+      "prerequisiteQuests": [
+        {
+          "questId": 4550,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270059,
+      "items": [
+        {
+          "itemId": 4000469,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "items": [
+        {
+          "itemId": 4000469,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

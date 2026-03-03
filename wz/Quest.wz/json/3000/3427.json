@@ -1,0 +1,56 @@
+{
+  "questId": 3427,
+  "info": {
+    "name": "Porter\u0027s Secret Letter",
+    "parent": "The Missing Dropship",
+    "descriptions": {
+      "notStarted": "I should go see Porter of the Omega Sector.",
+      "inProgress": "#bPorter#k, who\u0027s at the Command Center in the Omega Sector, requested that I deliver a letter to #bKay the Engineer#k at the Omega Sector Silo. This letter has to be delivered on time, so I\u0027ll have to hurry up and give it to her. I wonder what\u0027s written in this though... maybe it\u0027s a love letter. Hahaha.",
+      "completed": "I gave Kay the Engineer, who was at the Omega Sector Silo, the letter from Porter. Unfortunately, it doesn\u0027t look like a love letter. It\u0027s about a disappeared Dropship"
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050013,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 3072
+        },
+        {
+          "questId": 3426,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2051001,
+      "items": [
+        {
+          "itemId": 4031126
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031126
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 2500,
+      "nextQuest": 3428,
+      "items": [
+        {
+          "itemId": 4031126,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

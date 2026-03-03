@@ -1,0 +1,47 @@
+{
+  "questId": 2213,
+  "info": {
+    "name": "JM\u0027s Request",
+    "parent": "The Monster and the Evil Scheme",
+    "descriptions": {
+      "notStarted": "#b#m103000000# #p1052002##k is looking for someone to uncover the hidden truth about the #rscheme#k...",
+      "inProgress": "JM says a monster known as the  #r#o6220000##k has been appearing in the #m103000000# sewer system, and wants someone to find out whether it is someone\u0027s evil scheme to put #m103000000# in danger. He says the person who will help identify the root of this problem must be strong enough to defeat #rthe alligators in the swamp region#k... \\n\\n#i4000032##t4000032#  #b#c4000032##k/50 #k \\n#i4000033##t4000033#  #b#c4000033##k/50",
+      "completed": "When you come back after defeating the alligators in the swamp, JM is convinced that you\u0027re strong enough to manage the task. He asks you to come back later so that he can tell you what the next step entails."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052002,
+      "minLevel": 65
+    },
+    "complete": {
+      "npc": 1052002,
+      "items": [
+        {
+          "itemId": 4000032,
+          "count": 50
+        },
+        {
+          "itemId": 4000033,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000032,
+          "count": -50
+        },
+        {
+          "itemId": 4000033,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

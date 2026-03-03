@@ -1,0 +1,39 @@
+{
+  "questId": 6410,
+  "info": {
+    "name": "Mission Free the Monsters",
+    "descriptions": {
+      "notStarted": "Shulynch is sending me an SOS signal. Is there an emergency?",
+      "inProgress": "Rolonay\u0027s old friend, Delli, who, in the past, worked with Rolonay to rescue the monsters that were spellbound by evil powers, is apparently now in grave danger. Shulynch wants me to help rescue her. I\u0027ll go and rescue Delli!",
+      "completed": "I rescued Delli and learned how to become friends with monsters in return."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092008,
+      "minLevel": 120,
+      "jobs": [
+        522
+      ]
+    },
+    "complete": {
+      "npc": 2095000,
+      "infoNumber": 6411,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200000,
+      "skills": [
+        {
+          "skillId": 5221009,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

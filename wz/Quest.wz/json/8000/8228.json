@@ -1,0 +1,33 @@
+{
+  "questId": 8228,
+  "info": {
+    "name": "Lost in Translation 2",
+    "descriptions": {
+      "notStarted": "I should see if John needs my help with anything...",
+      "inProgress": "After showing John the #bCoded Communique#k that Jack gave me, John used a Hyper Glyph to try to decipher the symbols... to no avail.  While John attempts to fix and recalibrate the Hyper Glyphs to work on these symbols, he asked me to show the letter around to the #bother experts in town#k.  Maybe they can shine some light on all this...",
+      "completed": "I told John about Elpam\u0027s translation, and John was able to fill in some more of the blanks for me.  I need to get this new information Jack and see what else he knows..."
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201051,
+      "startScript": "q8228s",
+      "prerequisiteQuests": [
+        {
+          "questId": 8227,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201055,
+      "endScript": "q8228e",
+      "items": [
+        {
+          "itemId": 4032032
+        }
+      ]
+    }
+  }
+}

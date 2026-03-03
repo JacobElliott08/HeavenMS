@@ -1,0 +1,92 @@
+{
+  "questId": 9415,
+  "info": {
+    "name": "Hectagon Crystal Necklace and the Seal Cushion",
+    "descriptions": {
+      "notStarted": "#bArwen#k of #bEllinia#k seems to be enamored with jewelry...",
+      "inProgress": "Arwen\u0027s eyes after seeing the Hectagon Crystal necklace told a whole story. She really seemed to want one. She said she\u0027ll give me the precious Seal Cushion if I give her #bHectgon Crystal Necklace#k and a #bMonster Eraser#k...\\n\\n#t4001116# #b#c4001116#/1#k\\n#t4001038# #b#c4001038#/1#k\\n#t4001039# #b#c4001039#/1#k\\n#t4001040# #b#c4001040#/1#k\\n#t4001041# #b#c4001041#/1#k\\n#t4001042# #b#c4001042#/1#k\\n#t4001043# #b#c4001043#/1#k",
+      "completed": "After giving her the Hectagon Crystal Necklace and a Monster Eraser, I was able to obtain a lovely Seal Cushion."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032100,
+      "repeatIntervalMinutes": 0,
+      "items": [
+        {
+          "itemId": 4001116
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032100,
+      "items": [
+        {
+          "itemId": 4001038
+        },
+        {
+          "itemId": 4001039
+        },
+        {
+          "itemId": 4001040
+        },
+        {
+          "itemId": 4001041
+        },
+        {
+          "itemId": 4001042
+        },
+        {
+          "itemId": 4001043
+        },
+        {
+          "itemId": 4001116
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4001038,
+          "count": -1
+        },
+        {
+          "itemId": 4001039,
+          "count": -1
+        },
+        {
+          "itemId": 4001040,
+          "count": -1
+        },
+        {
+          "itemId": 4001041,
+          "count": -1
+        },
+        {
+          "itemId": 4001042,
+          "count": -1
+        },
+        {
+          "itemId": 4001043,
+          "count": -1
+        },
+        {
+          "itemId": 3010007,
+          "probability": 50
+        },
+        {
+          "itemId": 3010008,
+          "probability": 50
+        },
+        {
+          "itemId": 4001116,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

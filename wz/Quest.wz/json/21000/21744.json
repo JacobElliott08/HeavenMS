@@ -1,0 +1,61 @@
+{
+  "questId": 21744,
+  "info": {
+    "name": "The Shadow Knight\u0027s Letter",
+    "descriptions": {
+      "notStarted": "You wonder how #p2090004# will take the contents of the #t4220151# now that it\u0027s restored? You should talk to #b#p2090004##k in #b#m250000000##k.",
+      "inProgress": "#p2090004# seems to be genuinely panicking and wants you to deliver the #t4220151# to #b#p2091007##k. But how in the world are you going to meet him when he resides at the very top floor of #m925020000#? That\u0027s when #p2090004# mentioned the ultimate weakness of #p2091007#\u0027s student, #b#p2091005##k. You\u0027d better head over to see #p2091005#.",
+      "completed": "You met #p2091007# and handed him #o9300351#\u0027s Letter of Warning."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2090004,
+      "minLevel": 54,
+      "prerequisiteQuests": [
+        {
+          "questId": 21742,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2091007,
+      "prerequisiteQuests": [
+        {
+          "questId": 21745,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032343
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032343
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 200,
+      "items": [
+        {
+          "itemId": 4032343,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "questId": 6190,
+  "info": {
+    "name": "The Plot to Kidnap Tylus!",
+    "parent": "Conspiracy of kidnapping Tylus",
+    "descriptions": {
+      "notStarted": " I was attacked by #o8150000# while on the plane to #m200000000#. After protecting the passengers from #o8150000# and defeating him, I obtained a strange document. It was a conspiracy to kidnap #p2020008#, the elder of warriors in #m211000000#. I\u0027m worried. Let\u0027s go discuss it with #p2081100#.",
+      "inProgress": "#p2081100# said that I only found half of the document. He advised me to take the half sheet and go see #b#p2032001##k to find the missing part.  \\n\\n#t4001111# #b#c4001111# / 1#k",
+      "completed": "I told #p2032001# about the conspiracy to kidnap #p2020008# . He\u0027s thinking of a way to stop it..."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081100,
+      "jobs": [
+        112,
+        122,
+        132
+      ],
+      "items": [
+        {
+          "itemId": 4001111
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2032001,
+      "items": [
+        {
+          "itemId": 4001111
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 4001111,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

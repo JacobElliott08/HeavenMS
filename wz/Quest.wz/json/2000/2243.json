@@ -1,0 +1,49 @@
+{
+  "questId": 2243,
+  "info": {
+    "name": "This is something you can make with Balrog Skin.",
+    "parent": "The Strange Man",
+    "descriptions": {
+      "notStarted": "Let\u0027s start a conversation with the strange man.",
+      "inProgress": "The strange man said he\u0027d show you something if you bring him 20 sheets of Balrog Skin.",
+      "completed": "He made you a scroll using the sheets of Balrog Skin."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061016,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2242,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061016,
+      "items": [
+        {
+          "itemId": 4001261,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 2040736
+        },
+        {
+          "itemId": 4001261,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

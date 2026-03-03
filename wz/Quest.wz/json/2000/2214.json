@@ -1,0 +1,37 @@
+{
+  "questId": 2214,
+  "info": {
+    "name": "The Run-down Huts in the Swamp",
+    "parent": "The Monster and the Evil Scheme",
+    "descriptions": {
+      "inProgress": "It seems like the next step entails collecting information. JM says that he is going to leave something for you inside the #bhut#k found deep inside the swamp, so you can retrieve it #bfrom 5 p.m. to 8 p.m.#k... Let\u0027s keep track of time and head over to #b#m107000300##k.",
+      "completed": "You have a crumpled piece of paper containing the list of informants in your hands. Let\u0027s go find the informants listed on the paper."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052002,
+      "prerequisiteQuests": [
+        {
+          "questId": 2213,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052108,
+      "endScript": "q2214e"
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031894
+        }
+      ]
+    }
+  }
+}

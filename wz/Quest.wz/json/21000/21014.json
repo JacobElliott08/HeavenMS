@@ -1,0 +1,29 @@
+{
+  "questId": 21014,
+  "info": {
+    "name": "Lilin\u0027s Account",
+    "descriptions": {
+      "notStarted": "Now that you\u0027re safely in town, you should listen to #b#p1201000#\u0027s#k account of what happened in the past, and how you became a hero in the first place.",
+      "inProgress": "According to #p1201000#, a few hundred years ago, a group of #bheroes#k valiantly fought against the #rBlack Mage#k who controlled Maple World. Apparently, you\u0027re one of them. But because of the Black Mage\u0027s curse, you lost your memories and abilities, and was frozen in ice until you were awakened recently.",
+      "completed": "According to #p1201000#, a few hundred years ago, a group of #bheroes#k valiantly fought against the #rBlack Mage#k, who controlled Maple World. Apparently, you\u0027re one of them. But because of the Black Mage\u0027s curse, you lost your memories and abilities, and was frozen in ice until you were awakened recently."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201000,
+      "minLevel": 5,
+      "jobs": [
+        2000
+      ]
+    },
+    "complete": {
+      "npc": 1201000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 140
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "questId": 7300,
+  "info": {
+    "name": "Moira\u0027s Whereabouts",
+    "parent": "War of the Dragons",
+    "descriptions": {
+      "notStarted": " I heard recently #p2081000# in #m240000000# often looks up at the sky. Who is he waiting for? Let\u0027s go see #p2081000#.",
+      "inProgress": " #p2081000# in #m240000000# was concerned about #b#p2081006##k, a close magician friend, because he had recently lost contact with her. #p2081006# is very close to dragons in Minar Forest and a few days ago, she went to the forest because she heard that the dragons were under danger. Since then, she lost all contact with her.  What could\u0027ve possibly happened the dragons in Minar Forest and where has #p2081006# disappeared to? Wouldn\u0027t I be able to find her somewhere #bbeyond Dragon\u0027s Forest#k?",
+      "completed": " #p2081000# asked me look for magician #p2081006#.  After getting lost for awhile, I was finally able to meet #p2081006# at the top of the entrance of the Cave of Life at the dragon\u0027s nest."
+    },
+    "area": 41,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081000,
+      "minLevel": 80
+    },
+    "complete": {
+      "npc": 2081006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000
+    }
+  }
+}

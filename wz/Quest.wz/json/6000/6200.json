@@ -1,0 +1,30 @@
+{
+  "questId": 6200,
+  "info": {
+    "name": "A Peculiar Request",
+    "parent": "Grief of darkness",
+    "descriptions": {
+      "notStarted": " A request came in from #b#p2020011##k. A request from him?  Must be because of my last job...",
+      "inProgress": " #p2020011# said it had to do with finding an item. He didn\u0027t tell me what it is or why he needs it.... Since it\u0027s coming from #p2020011# I guess I\u0027ll just do it but I wonder what this is all about? Anyway, let\u0027s go to #b#p9040002##k at the Excavation Site.",
+      "completed": "#p9040002# seemed very anxious. What exactly does he want? I should press on, maybe I\u0027ll find out..."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020011,
+      "jobs": [
+        422
+      ]
+    },
+    "complete": {
+      "npc": 9040002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200000
+    }
+  }
+}

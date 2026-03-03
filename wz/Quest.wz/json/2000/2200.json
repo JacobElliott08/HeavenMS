@@ -1,0 +1,42 @@
+{
+  "questId": 2200,
+  "info": {
+    "name": "Eliminate the Mixed Golems",
+    "descriptions": {
+      "notStarted": "Muirhat is worried about the evil spirits that have infiltrated Victoria Island as of late. I wonder what I could do to help? I should go see Muirhat on the top deck of The Nautilus.",
+      "inProgress": "Victoria Island has already been infused with evil spirits. But I refuse to give up like this. I need to eliminate #r100 Mixed Golems#k to stop these evil creatures from further spreading their evilness in Victoria Island. \\n\\n#o 5150000# #r#a22001##k",
+      "completed": "I\u0027ve eliminated 100 Mixed Golems. I wonder if I\u0027ve made a difference in Victoria Island?"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092007,
+      "minLevel": 58,
+      "prerequisiteQuests": [
+        {
+          "questId": 2199,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092007,
+      "monsters": [
+        {
+          "monsterId": 5150000,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 1092007,
+      "minLevel": 58
+    },
+    "onComplete": {
+      "experience": 110000
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "questId": 8069,
+  "info": {
+    "name": "Tsuri\u0027s Special Seafood 1",
+    "parent": "Tsuri\u0027s Special Seafood",
+    "descriptions": {
+      "notStarted": "Tsuri of Showa Town seems to be in a tight spot. Wonder why...",
+      "inProgress": "It would be nice to go catch a fish without having to go underwater, but ... oh well, that\u0027s alright. You should get #b#t04000153##k that #b#o3210450##k has. \\n\\n#t04000153#  #b#c04000153##k/1",
+      "completed": "It\u0027d be nice to catch a fair share of fishes, but ... I\u0027ll have to come back later and see how this goes."
+    },
+    "area": 48,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120008,
+      "minLevel": 35
+    },
+    "complete": {
+      "npc": 9120008,
+      "items": [
+        {
+          "itemId": 4000153
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8070,
+      "items": [
+        {
+          "itemId": 4000153,
+          "count": -1
+        }
+      ],
+      "experience": 5000
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "questId": 29500,
+  "info": {
+    "name": "Title Challenge - Maple Idol Star",
+    "descriptions": {
+      "notStarted": "#b#eTitle Challenge - Maple Idol Star#n(Special Title)\\n#kWho is the most beloved Mapler?  The Monk of Honor, Dalair, said this person will be given the #e#bMaple Idol Star#k#n title.",
+      "inProgress": "#b#eTitle Challenge - Maple Idol Star#n(Special Title)\\n\\n#k - Popularity : #b#jpop##k",
+      "completed": "#b#eTitle Challenge - Maple Idol Star#n(Special Title)\\n\\n#k - Popularity : #b#jpop##k \\n\\n\u0027#bMaple Idol Star#k, the title that is given to the most popular person in Maple World\u0027...  Dalair said you have to have a good strategy in order to claim this title which you can only try out for once a month."
+    },
+    "area": 51,
+    "medalItemId": 1142006
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000040,
+      "repeatIntervalMinutes": 0,
+      "startScript": "q29500s",
+      "items": [
+        {
+          "itemId": 1142003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000040,
+      "endScript": "q29500e"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "questId": 29008,
+  "info": {
+    "name": "Undersea Explorer",
+    "descriptions": {
+      "notStarted": "Let\u0027s earn the #b\u003cUndersea Explorer\u003e#k title by exploring the deep waters of Aqua Road.",
+      "inProgress": "#b#eTitle - Undersea Explorer#k#n\\r\\nExplore the 10 main regions of Aqua Road.\\r\\n#b● Status : #R27013# / 10 Completed.",
+      "completed": "You have earned the #b\u003cUndersea Explorer\u003e#k title for exploring various places in Aqua Road."
+    },
+    "area": 51,
+    "medalItemId": 1142115
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 20,
+      "npc": 9000066
+    },
+    "complete": {
+      "npc": 9000040,
+      "infoNumber": 27013,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142115
+        }
+      ]
+    }
+  }
+}

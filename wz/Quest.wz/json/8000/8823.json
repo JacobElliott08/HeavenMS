@@ -1,0 +1,62 @@
+{
+  "questId": 8823,
+  "info": {
+    "name": "Thanksgiving : Pumpkin Pie",
+    "descriptions": {
+      "notStarted": "Hmm...there\u0027s an old woman over in Henesys...maybe she needs some help cooking?",
+      "inProgress": "I spoke with that kind old woman, Grandma Benson, and she needs some help with baking the pies. I\u0027ve agreed to gather #bthe ingredients#k for her, maybe she\u0027ll give me a pie to take with me...I hope so! \\n\\n#t4031418# #c4031418# / #r1#k\\n#t4031419# #c4031419# / #r1#k#k\\n#t4031420# #c4031420# / #r1#k#k\\n#t4031421# #c4031421# / #r1#k",
+      "completed": "I finished gathering the ingredients for Grandma Benson, and she can finally bake the pies. I received a taste in return, and in something that can help me during a tough battle."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201029,
+      "minLevel": 15,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2007121000"
+    },
+    "complete": {
+      "npc": 9201029,
+      "items": [
+        {
+          "itemId": 4031418
+        },
+        {
+          "itemId": 4031419
+        },
+        {
+          "itemId": 4031420
+        },
+        {
+          "itemId": 4031421
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2022113
+        },
+        {
+          "itemId": 4031418,
+          "count": -1
+        },
+        {
+          "itemId": 4031419,
+          "count": -1
+        },
+        {
+          "itemId": 4031420,
+          "count": -1
+        },
+        {
+          "itemId": 4031421,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

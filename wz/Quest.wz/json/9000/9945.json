@@ -1,0 +1,59 @@
+{
+  "questId": 9945,
+  "info": {
+    "name": "인형찾기",
+    "parent": "소필리아의 버려진 인형",
+    "descriptions": {
+      "notStarted": "굴뚝 속에 사는 #b#p2120008##k. 그는 이 헌티드 맨션에서 꽤 오래 지낸 것 같다... ",
+      "inProgress": "#p2120008#에게 #p2120005#의 #t4031837#을 찾아야 한다고 사정을 설명하자, 그는 조금 고민하는 표정을 짓더니 인형찾기를 도와주겠다고 말했다. 대신 그에게로 #b#t2022256##k를 몇 개 달라는데... 그 정도라면 어렵지 않지. \\n\\n#i2022256# #t2022256#  #b#c2022256#/10#k",
+      "completed": "유령T에게 #t2022256#를 주고 #p2120005#의 #t4031837#을 받았다. "
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120008,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 9944,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9942,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031837
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120008,
+      "items": [
+        {
+          "itemId": 2022256,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2022256,
+          "count": -10
+        },
+        {
+          "itemId": 4031837
+        }
+      ]
+    }
+  }
+}

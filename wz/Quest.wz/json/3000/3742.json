@@ -1,0 +1,40 @@
+{
+  "questId": 3742,
+  "info": {
+    "name": "Nex the Time Guard",
+    "parent": "Year 2230- Imminent Collapse!",
+    "descriptions": {
+      "notStarted": "Andy the Time Traveler says he has something to tell you before your fifth time travel.",
+      "inProgress": "Andy the Time Traveler has informed you that you must pass the test Nex the Gatekeeper of Time, who lives in the Old Tree of Tera, gives you before embarking on your fifth time travel. Enter the Old Tree of Tera and pass Nex\u0027s test.",
+      "completed": "You have passed the fifth test given by Nex the Gatekeeper of Time and earned the right to travel to another time. You can now teleport to the dangerous towers of the year 2230. Go to the Time Gate with the Time Traveler\u0027s Pocket Watch."
+    },
+    "area": 41,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082004,
+      "minLevel": 85,
+      "prerequisiteQuests": [
+        {
+          "questId": 3737,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082004,
+      "monsters": [
+        {
+          "monsterId": 8120101
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 140000,
+      "nextQuest": 3743
+    }
+  }
+}

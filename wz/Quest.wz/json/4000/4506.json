@@ -1,0 +1,57 @@
+{
+  "questId": 4506,
+  "info": {
+    "name": "Technical Assignment",
+    "descriptions": {
+      "notStarted": "Rumor has that #b#p9270029##k in CBD is kind of sick.  I should go find out what\u0027s up with him.",
+      "inProgress": "#p9270029# asked me to gather some requirements for his school work.  Why is he asking such things from me?  He didn\u0027t seem that sick!  Anyway,  I will be kind enough to help him out this time.  But only this time though.  Let\u0027s just gather those items and deliver it to #p9270034#.\\n\\n#t4000374#  #r#c4000374#/2#k\\n#t4000375#  #r#c4000375#/6#k\\n#t4000376#  #r#c4000376#/1#k",
+      "completed": "I was able to provide #p9270034# the required items for #p9270029#.  Hope he does the same for me when I feel sick!"
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270029,
+      "minLevel": 45
+    },
+    "complete": {
+      "npc": 9270034,
+      "items": [
+        {
+          "itemId": 4000374,
+          "count": 2
+        },
+        {
+          "itemId": 4000375,
+          "count": 6
+        },
+        {
+          "itemId": 4000376
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 4003000,
+          "count": 20
+        },
+        {
+          "itemId": 4000375,
+          "count": -6
+        },
+        {
+          "itemId": 4000376,
+          "count": -1
+        },
+        {
+          "itemId": 4000374,
+          "count": -2
+        }
+      ]
+    }
+  }
+}

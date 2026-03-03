@@ -1,0 +1,26 @@
+{
+  "questId": 28337,
+  "info": {
+    "name": "Cupid\u0027s Lost Arrows",
+    "descriptions": {
+      "notStarted": "Have you heard about #bCupid\u0027s Lost Arrows#k? You can find out more from #rCassandra.#k",
+      "inProgress": "Please bring me #b50 Cupid\u0027s Lost Arrows.#k You can get them from any monster. I will give you an awesome Valentines present when you bring them to me!",
+      "completed": "You can repeat this quest every 2 hours until #rFebruary 17th 2010.#k However, you\u0027ll only be able to receive the Cupid Wings Cape once. After that, you\u0027ll just receive additional #bEXP.#k"
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 120,
+      "startDate": "2010020300",
+      "endDate": "2010021800"
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q28337e"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "questId": 21722,
+  "info": {
+    "name": "Ghost Stumps",
+    "descriptions": {
+      "notStarted": "This is your third assignment as an informant and this one involves studying the strange-acting #o1140130#s with #p1103004# in #b#m102000000##k. You\u0027d better go talk to #b#p1103004##k.",
+      "inProgress": "#p1103004# seems to already know that the #o1140130#s\u0027 erratic behavior was caused by a puppet and tells you to enter #m101030101# to defeat #r100 #o1140130#s#k and retrieve #o1140130#\u0027s puppet. She also says that if you can\u0027t find the puppet even after eliminating 100, you should just come back to see her...\\r\\n\\r\\nRegardless of Personality #o9101002##r #a217221##k",
+      "completed": "You defeated 100 #o1140130#s but didn\u0027t find any puppets. #p1103004# told you that #o1140130#\u0027s puppet has been detected nearby and that something seems very wrong…"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103004,
+      "minLevel": 23,
+      "prerequisiteQuests": [
+        {
+          "questId": 21721,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1103004,
+      "monsters": [
+        {
+          "monsterId": 9101002,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3900
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "questId": 9142,
+  "info": {
+    "name": "풍요로운 추석",
+    "descriptions": {
+      "notStarted": "헤네시스의 웃어른이신 스탄 장로님께 금송편을 선물해보는 건 어떨까?",
+      "inProgress": "헤네시스의 웃어른이신 스탄 장로님께 금송편을 드리며 추석 인사를 드려볼까?",
+      "completed": "헤네시스의 웃어른이신 스탄 장로님께 안부를 여쭈어 보는 보람찬 추석이다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2007092100",
+      "items": [
+        {
+          "itemId": 4031187
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012003,
+      "items": [
+        {
+          "itemId": 4031187
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4031187,
+          "count": -1
+        },
+        {
+          "itemId": 2012000,
+          "count": 5,
+          "probability": 10
+        },
+        {
+          "itemId": 2012001,
+          "count": 5,
+          "probability": 10
+        },
+        {
+          "itemId": 2012002,
+          "count": 5,
+          "probability": 10
+        },
+        {
+          "itemId": 2012003,
+          "count": 5,
+          "probability": 10
+        },
+        {
+          "itemId": 2020013,
+          "count": 3,
+          "probability": 10
+        },
+        {
+          "itemId": 2020014,
+          "probability": 10
+        },
+        {
+          "itemId": 2020015,
+          "probability": 10
+        },
+        {
+          "itemId": 2000002,
+          "count": 10,
+          "probability": 10
+        },
+        {
+          "itemId": 2040000,
+          "probability": 4
+        },
+        {
+          "itemId": 2041000,
+          "probability": 4
+        },
+        {
+          "itemId": 2041022,
+          "probability": 4
+        },
+        {
+          "itemId": 2040703,
+          "probability": 4
+        },
+        {
+          "itemId": 2040707,
+          "probability": 4
+        }
+      ]
+    }
+  }
+}

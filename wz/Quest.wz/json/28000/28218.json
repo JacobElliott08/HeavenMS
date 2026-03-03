@@ -1,0 +1,55 @@
+{
+  "questId": 28218,
+  "info": {
+    "name": "Shumi, the Coin Mania",
+    "descriptions": {
+      "notStarted": "#b#@1052102:##k in #bKerning City#k says she is willing to give you an item that looks valuable, though she can\u0027t just give it to you for free. Let\u0027s talk to her first.",
+      "inProgress": "Let\u0027s catch the #rBubblings#k in the #bSubway of Kerning City#k.\\n\\nReport back to #b#@1052102:##k in #bKerning City#k upon completion.",
+      "completed": "You have acquired a big #rModel Coin#k, which you will use as a bait to catch #rValefor#k."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052102,
+      "prerequisiteQuests": [
+        {
+          "questId": 28217,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1052102,
+      "monsters": [
+        {
+          "monsterId": 1210103,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200,
+      "items": [
+        {
+          "itemId": 4032485
+        }
+      ]
+    }
+  }
+}

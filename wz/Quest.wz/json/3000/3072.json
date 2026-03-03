@@ -1,0 +1,53 @@
+{
+  "questId": 3072,
+  "info": {
+    "name": "The Bottled-up Letter",
+    "parent": "Lost in the Ocean",
+    "descriptions": {
+      "notStarted": "I got a hold of a letter of help from someone who had been sent somewhere near the current at Aquarium. I wonder where exactly the writer is...",
+      "inProgress": "I picked up a letter of help from someone. Through the dry sand inside the glass bottle, I was able to find Robinson, who had been asking for help for a while. He seemed tired from the long solitary stay at the island, and he wanted to me to get him a bottle, too. \\n\\n#t2022000# #b#c2022000##k/1",
+      "completed": "I wound up giving Robinson, who had been trapped in this island for a long time, a nice clean bottle of water. How did he end up getting lost in the first place? "
+    },
+    "area": 33,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060001,
+      "minLevel": 35,
+      "items": [
+        {
+          "itemId": 4031209
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060001,
+      "items": [
+        {
+          "itemId": 2022000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031209,
+          "count": -1
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 5000,
+      "nextQuest": 3073,
+      "items": [
+        {
+          "itemId": 2022000,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

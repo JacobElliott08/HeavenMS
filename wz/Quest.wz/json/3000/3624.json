@@ -1,0 +1,55 @@
+{
+  "questId": 3624,
+  "info": {
+    "name": "The Storybook on Brotherly Love",
+    "descriptions": {
+      "notStarted": "I\u0027m sure I received the storybook after helping out the brothers Chil Sung and Chil Nam. Where did it go? Should I go see Chil Nam again?",
+      "inProgress": "#b#p2040052## from Helios Tower Library has requested me to get #b#t4031237##k for him. I was pretty sure I received it while helping out the brothers Chil Sung and Chil Nam, but I can\u0027t find it for some reason. I visited Chil Nam and explained the matters to him, and he made a deal with me. If I give his brother #b5 #t4000095#s#k, then he\u0027ll give me the storybook.\\n\\n#t4000095# #b#c4000095##k/5",
+      "completed": "I acquired 5 #t4000095#s and gave them to Chil Sung, as requested by Chil Nam, in order to reacquire #t4031237#."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071003,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3605,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3617,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031237
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071005,
+      "items": [
+        {
+          "itemId": 4000095,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031237
+        },
+        {
+          "itemId": 4000095,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

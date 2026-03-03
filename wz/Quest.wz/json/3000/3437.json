@@ -1,0 +1,40 @@
+{
+  "questId": 3437,
+  "info": {
+    "name": "Eliminating Plateon and Mecateon",
+    "descriptions": {
+      "notStarted": "I better go see Green Mesoranger, who should be somewhere around Boswell Field.",
+      "inProgress": "I met up with Green Meoranger again at the Boswell Field of Omega Sector. As a last task, Green Mesoranger asked me to eliminate the #bPlateons#k again, and collect #bMecateon\u0027s#k weapons, which are very high-quality. I need to take out #b150 Plateons#k and collect #b120 Mecateon\u0027s Laser Guns#k for him.\\n\\n#o4230120# #r#a34371##k\\n#t4000122# #b#c4000122##k/120",
+      "completed": "Just the way the mission stated by Green Mesoranger of Boswell Field, I took out the Plateons and collected Mecateon\u0027s laser guns. Green Mesoranger seemed genuinely surprised by the fact that I took care of all the missions, and told me it\u0027d be a pleasure to work with me again. Now, THAT felt good!"
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040017,
+      "minLevel": 41,
+      "prerequisiteQuests": [
+        {
+          "questId": 3436,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040017,
+      "items": [
+        {
+          "itemId": 4000122,
+          "count": 120
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 4230120,
+          "count": 150
+        }
+      ],
+      "endScript": "q3437e"
+    }
+  }
+}

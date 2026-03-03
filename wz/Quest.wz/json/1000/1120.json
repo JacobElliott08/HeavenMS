@@ -1,0 +1,49 @@
+{
+  "questId": 1120,
+  "info": {
+    "name": "티군의 사랑의 증표",
+    "descriptions": {
+      "notStarted": "#t4031688#를 받으려면 보좌관 티군을 찾아가보자.",
+      "inProgress": "보좌관 티군은 나의 사랑을 증명하라면서 #b#t4000106# 20#k개를 가져오라고 했다.\\n\\n#i4000106##t4000106# #b#c4000106# / 20#k",
+      "completed": "보좌관 티군에게 사랑의 증표를 얻었다."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041022,
+      "repeatIntervalMinutes": 0,
+      "infoNumber": 1100,
+      "infoEx": [
+        null
+      ],
+      "items": [
+        {
+          "itemId": 4031688
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041022,
+      "items": [
+        {
+          "itemId": 4000106,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000106,
+          "count": -20
+        },
+        {
+          "itemId": 4031688
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "questId": 3027,
+  "info": {
+    "name": "Looking for the Wiseman in Kerning City",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "I met my end of the bargain by handing Athena Pierce the 2 DEX Crystals, and she met her end of the bargain by handing me the 3rd #bold piece of map#k. Last up: The wiseman at #bKerning City#k."
+    },
+    "area": 33,
+    "order": 24
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012100,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3026,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052001,
+      "items": [
+        {
+          "itemId": 4031054,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031054,
+          "count": 3
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 4000,
+      "nextQuest": 3028,
+      "items": [
+        {
+          "itemId": 4031054,
+          "count": -3
+        }
+      ]
+    }
+  }
+}

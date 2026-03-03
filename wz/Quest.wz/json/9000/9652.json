@@ -1,0 +1,41 @@
+{
+  "questId": 9652,
+  "info": {
+    "name": "주인없는 스노우보드",
+    "descriptions": {
+      "notStarted": "행복한 마을의 #b#p9001006##k가 스노우보드를 주워서 주인을 찾고 있다고 한다. ",
+      "inProgress": "#b#p9001006##k는 잠시 후 스노우보드를 보여주겠다고 했는데, 내 것이라고 거짓말을 해볼까?",
+      "completed": "#b#p9001006##k에게서 스노우보드를 받았다. 역시 솔직하게 말하길 잘했어."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9001006,
+      "minLevel": 45,
+      "repeatIntervalMinutes": 129600,
+      "endDate": "2008030100"
+    },
+    "complete": {
+      "npc": 9001006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1442016,
+          "probability": 24
+        },
+        {
+          "itemId": 1442017,
+          "probability": 5
+        },
+        {
+          "itemId": 1442030,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "questId": 2203,
+  "info": {
+    "name": "Eliminate the Tauromacis",
+    "descriptions": {
+      "notStarted": "Muirhat is worried about the evil spirits that have infiltrated Victoria Island as of late. I wonder what I could do to help? I should go see Muirhat on the top deck of The Nautilus.",
+      "inProgress": "Victoria Island has already been infused with evil spirits. But I refuse to give up like this. I need to eliminate #r30 Tauromacis#k and #r100 Cold Eyes#k to stop these evil creatures from further spreading their evilness in Victoria Island.\\n\\n#o 7130100# #r#a22031##k\\n#o 4230100# #r#a22032##k ",
+      "completed": "I\u0027ve eliminated 100 Tauromacis. I wonder if I\u0027ve made a difference in Victoria Island?"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092007,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 2202,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092007,
+      "monsters": [
+        {
+          "monsterId": 7130100,
+          "count": 30
+        },
+        {
+          "monsterId": 4230100,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 1092007,
+      "minLevel": 70
+    },
+    "onComplete": {
+      "experience": 180000,
+      "items": [
+        {
+          "itemId": 2020012,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "questId": 8037,
+  "info": {
+    "name": "Lionel\u0027s Necklace 1",
+    "parent": "Lionel\u0027s Necklace",
+    "descriptions": {
+      "notStarted": "Anyway, how\u0027s that baby Lioner doing? I better check on it at Maya\u0027s house.",
+      "inProgress": "Maya decided to disguise Lionel as a housecat by dressing it up with a necklace. Since buying one at a local department store may give it away, she wanted me to ask Teo of Lith Harbor for help.",
+      "completed": "Teo decided to help make Lionel\u0027s necklace."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012101,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 8036,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1002001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8038
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "questId": 10340,
+  "info": {
+    "name": "The Return!",
+    "descriptions": {
+      "notStarted": "Cassandra told you that her crystal ball is telling her that \u0027he\u0027 is coming back. Who is \u0027he,\u0027 anyway? You should visit #bCassandra#k and find out more about this.",
+      "inProgress": "Cassandra states that the crystal ball will tell you everything.",
+      "completed": "Cassandra\u0027s crystal ball showed Aran\u0027s impending revival. Aran… You want to know more about him!"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 13,
+      "endDate": "2009010100",
+      "startScript": "q10340s"
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "questId": 4646,
+  "info": {
+    "name": "Pet Instructor Test",
+    "parent": "Trainer\u0027s Command",
+    "descriptions": {
+      "notStarted": "Pet Trainer Bartos told me if I can prove to him that I am capable of handling pets, then he\u0027ll teach me a secret method to handle more than one type of pet...I should visit the Pet Park over in Henesys (by enterting through the hidden portal near the Cat statue). ",
+      "inProgress": "In order to prove my worth as a pet trainer, I\u0027ll have to find the hidden note somewhere in the Pet Park.",
+      "completed": "I found the note! Finally! Bartos looks like he wants one more thing before teaching me the secret technique..."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012006,
+      "petRequirement": {}
+    },
+    "complete": {
+      "npc": 1012006,
+      "items": [
+        {
+          "itemId": 4031921
+        }
+      ],
+      "petRequirement": {}
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 4647,
+      "items": [
+        {
+          "itemId": 4031921,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

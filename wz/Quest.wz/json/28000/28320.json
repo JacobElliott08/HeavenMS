@@ -1,0 +1,32 @@
+{
+  "questId": 28320,
+  "info": {
+    "name": "Father: \"Dirty House\"",
+    "descriptions": {
+      "notStarted": "Well, the hallway is clear, but it doesn\u0027t appear like Joe is ready to move. What is it now?",
+      "inProgress": "Joe wants you to go #rfetch his butler, Steward#k, for him. Who does he think you are--his butler?",
+      "completed": "You finally located #rSteward the butler#k in the right room. He doesn\u0027t appear to be too happy at your arrival, though. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201137,
+      "prerequisiteQuests": [
+        {
+          "questId": 28319,
+          "state": "COMPLETED"
+        }
+      ],
+      "endDate": "2009112500"
+    },
+    "complete": {
+      "npc": 9201143
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

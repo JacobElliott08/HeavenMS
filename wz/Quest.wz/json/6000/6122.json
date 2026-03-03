@@ -1,0 +1,54 @@
+{
+  "questId": 6122,
+  "info": {
+    "name": "Bahamut\u0027s Power 2",
+    "parent": "Dragon Heart",
+    "descriptions": {
+      "notStarted": " I spoek with #b#p2081007##k, who mentioned that the dragon is not at its full power yet. I must find a way to increase its power further...perhaps through a ritual or item?",
+      "inProgress": "Raul has agreed to help me further. He told me to gather #b30 #t04031483##k if I want to raise #q2321003#\u0027s power. I should be able to strengthen the dragon even more! \\n\\n#i4031483##t4031483# #b#c4031483#/30#k",
+      "completed": " After a long hunt, I gave Raul #t4031483#. Using it in an ancient ritual, he increased #q2321003#\u0027s power even more. Yet something tells me there is more power within the dragon, waiting to be unlocked..."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081007,
+      "jobs": [
+        232
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6121,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081007,
+      "items": [
+        {
+          "itemId": 4031483,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 150000,
+      "items": [
+        {
+          "itemId": 4031483,
+          "count": -30
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 2321003,
+          "masterLevel": 20
+        }
+      ]
+    }
+  }
+}

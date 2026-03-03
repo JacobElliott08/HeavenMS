@@ -1,0 +1,52 @@
+{
+  "questId": 20612,
+  "info": {
+    "name": "Another New Skill for Blaze Wizards",
+    "descriptions": {
+      "notStarted": "I better ask #b#p1101004##k about this new skill per comments from #p1101002#.",
+      "inProgress": "#p1101004#told me that if I wanted to learn a new skill, I\u0027ll have to prove my skills again by entering #bHall #4#k at #m130020000#, where a tougher test will take place... \\n\\n#i4032126# #t4032126# #b#c4032126# / 1#k",
+      "completed": "I managed to defeat the boss monster again and brought back #t4032126# in return. #p1101004# told me I have proven that I deserve to learn the new skill and taught me Meteo Shower."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101004,
+      "minLevel": 110,
+      "prerequisiteQuests": [
+        {
+          "questId": 20610,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1101004,
+      "items": [
+        {
+          "itemId": 4032126
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032126,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 12111003,
+          "masterLevel": 20
+        }
+      ]
+    }
+  }
+}

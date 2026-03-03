@@ -1,0 +1,35 @@
+{
+  "questId": 2313,
+  "info": {
+    "name": "The Story Behind the Case",
+    "descriptions": {
+      "notStarted": "The Head Security Officer of Mushking Empire has something to say.",
+      "inProgress": "You need to visit the Mushking Empire\u0027s Secretary of Domestic Affairs.",
+      "completed": "You listened intently as the Mushking Empire\u0027s Secretary of Domestic Affairs gave you a timeline of what happened."
+    },
+    "area": 30,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300005,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2312,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4000,
+      "nextQuest": 2314
+    }
+  }
+}

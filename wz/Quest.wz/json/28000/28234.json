@@ -1,0 +1,46 @@
+{
+  "questId": 28234,
+  "info": {
+    "name": "Revival of the Demon",
+    "parent": "Solomon\u0027s Bow",
+    "descriptions": {
+      "notStarted": "#b#@1022000:##k in #bPerion#k wants to know more about #rSolomon\u0027s Bow#k.",
+      "inProgress": "Initially disappointed at the weak bow, #b#@1022000:##k further did some inspection and found a faded emblem that was once sealed on the bow.\\n\\nThis must mean that the seal of the demon has been broken!\\n\\nRush over to #bKerning City#k and talk to #b#@1052001:##k, a very dependable source of information.",
+      "completed": "#b#@1052001:##k in #bKerning City#k says he\u0027s discovered the location of the demon, but you can\u0027t enter without a certain item. Let\u0027s talk to him."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28233,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1052001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

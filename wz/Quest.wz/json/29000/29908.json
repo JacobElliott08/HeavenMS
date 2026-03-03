@@ -1,0 +1,37 @@
+{
+  "questId": 29908,
+  "info": {
+    "name": "Advanced Knight",
+    "descriptions": {
+      "notStarted": "You can acquire the #b\u003cAdvanced Knight\u003e#k title by completing the 3rd Job Advancement as a Knight.",
+      "inProgress": "You can acquire the #b\u003cAdvanced Knight\u003e#k title by completing the 3rd Job Advancement as a Knight.",
+      "completed": "You have been given the #b\u003cAdvanced Knight\u003e#k title for guarding Shinsoo\u0027s Teardrop."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142068
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 70,
+      "normalAutoStart": true,
+      "npc": 1101000,
+      "startScript": "q29908s",
+      "jobs": [
+        1111,
+        1112,
+        1211,
+        1212,
+        1311,
+        1312,
+        1411,
+        1412,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1101000
+    }
+  }
+}

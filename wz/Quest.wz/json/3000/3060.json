@@ -1,0 +1,56 @@
+{
+  "questId": 3060,
+  "info": {
+    "name": "Food-Hunting for Moppie",
+    "descriptions": {
+      "notStarted": "Moppie\u0027s master Huckle had completely forgotten about his trusty dog as he was conducting his studies in Orbis Tower. He felt so horrible that he wanted to at least feed Moppie with something...",
+      "inProgress": "Huckle asked me for a favor, and wanted me to get some fish for Moppie, his favorite dish. I better head downstairs at the bottom of Orbis Tower and collect the fish that Jr. Pepe has. A 100 should be fine. \\n\\n#t4000088# #b#c4000088#/100#k",
+      "completed": "I gathered up 100 of Jr. Pepe\u0027s Fishes and got them to Moppie as a favor from Huckle. "
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030012,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3059,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012019,
+      "items": [
+        {
+          "itemId": 4000088,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "items": [
+        {
+          "itemId": 2020006,
+          "count": 10
+        },
+        {
+          "itemId": 2120000,
+          "count": 30
+        },
+        {
+          "itemId": 4001019,
+          "count": 4
+        },
+        {
+          "itemId": 4000088,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

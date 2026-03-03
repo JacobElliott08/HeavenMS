@@ -1,0 +1,33 @@
+{
+  "questId": 10420,
+  "info": {
+    "name": "Winter Bingo",
+    "descriptions": {
+      "notStarted": "There\u0027s no better time for Bingo than in the middle of a dreary winter! Check the Bingo board every day and receive some awesome prizes when you\u0027ve filled up the entire Bingo board! Try making it to the game every day!\\n\\n\u003cEvent Periods\u003e\\nFebruary 22, 2010 - March 26, 2010",
+      "inProgress": "There\u0027s no better time for Bingo than in the middle of a dreary winter! Check the Bingo board every day and receive some awesome prizes when you\u0027ve filled up the entire Bingo board! Try making it to the game every day!\\n\\n\u003cEvent Periods\u003e\\nFebruary 22, 2010 - March 26, 2010",
+      "completed": "There\u0027s no better time for Bingo than in the middle of a dreary winter! Check the Bingo board every day and receive some awesome prizes when you\u0027ve filled up the entire Bingo board! Try making it to the game every day!\\n\\n\u003cEvent Periods\u003e\\nFebruary 22, 2010 - March 26, 2010"
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 91,
+      "startDate": "2010022200",
+      "endDate": "2010032700",
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10420e",
+      "items": [
+        {
+          "itemId": 4032422,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

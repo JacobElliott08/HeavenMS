@@ -1,0 +1,66 @@
+{
+  "questId": 2195,
+  "info": {
+    "name": "Beginner Pirate\u0027s Third Training Session",
+    "descriptions": {
+      "notStarted": "I\u0027m finally getting used to being a Pirate, but I still have a lot more to learn. #bKyrin#k says she can help me...",
+      "inProgress": "According to Kyrin, I need to train for more composure and perseverance in order to become a great Pirate. She wants me to hunt down 43 pigs this time. #r43 pigs#k indeed... That\u0027s no joke!  \\n\\n#o 1210100# #r#a21951##k",
+      "completed": "Finally! I\u0027ve hunted down all 43 pigs... Phew...That wasn\u0027t as easy!"
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 2194,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "monsters": [
+        {
+          "monsterId": 1210100,
+          "count": 43
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 645,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 30,
+          "jobRestriction": 32
+        },
+        {
+          "itemId": 2000003,
+          "count": 50,
+          "jobRestriction": 32
+        }
+      ]
+    }
+  }
+}

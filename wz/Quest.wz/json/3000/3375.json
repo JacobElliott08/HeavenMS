@@ -1,0 +1,51 @@
+{
+  "questId": 3375,
+  "info": {
+    "name": "Romeo\u0027s Love Letter",
+    "parent": "Romeo\u0027s Love Letter",
+    "descriptions": {
+      "inProgress": "After finally completing the letter, Romeo asked me if I could deliver the letter to #bJuliet#k for him. What am I, their loyal servant???",
+      "completed": "After receiving Romeo\u0027s heartfelt letter, Juliet shed a tear of joy. I don\u0027t understand how that letter brought her to tears, but..."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2112004,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3374,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2112003,
+      "items": [
+        {
+          "itemId": 4031778
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031778
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4031778,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

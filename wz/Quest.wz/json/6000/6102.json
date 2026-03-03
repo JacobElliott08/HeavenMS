@@ -1,0 +1,54 @@
+{
+  "questId": 6102,
+  "info": {
+    "name": "The Bowman\u0027s Ultimate Skill",
+    "parent": "Extreme Temptation",
+    "descriptions": {
+      "inProgress": "While studying the book, Athena remarked that she\u0027s heard about the Bowman\u0027s Ultimate Skill but has never seen one of these books before. She told me that if one masters this skill, they might even surpass her in level.  To discover more, she told me to go see #bRene#k...\\n\\n#t4161025#  #b#c4161025# / 1#k for more information. This is shaping up to be quite a journey...",
+      "completed": "I traveled to the frozen fields of El Nath and gave the book to Rene. She was intrigued by the book as well, and wants to study it a bit more before she tells me more information. "
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012100,
+      "jobs": [
+        312,
+        322
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6101,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020010,
+      "items": [
+        {
+          "itemId": 4161025
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4161025
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 4161025,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

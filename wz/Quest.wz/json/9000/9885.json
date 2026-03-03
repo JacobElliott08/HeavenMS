@@ -1,0 +1,30 @@
+{
+  "questId": 9885,
+  "info": {
+    "name": "현상수배 : 스노우맨",
+    "descriptions": {
+      "notStarted": "#b카산드라#k가 전해 줄 소식이 있다고 한다. 어서 그녀를 찾아가 보자.",
+      "inProgress": "예티를 마음대로 조종하는 스노우맨을 퇴치해야 한다. \\n\\n#o8220001##r #a98851##k",
+      "completed": "#b카산드라#k의 부탁을 들어주었다. 9월 19일까지는 하루에 한번씩 그녀를 찾아가 도와주어야겠다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 90,
+      "startDate": "2007081600",
+      "endDate": "2007092000",
+      "startScript": "q9885s"
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q9885e",
+      "monsters": [
+        {
+          "monsterId": 8220001
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "questId": 29510,
+  "info": {
+    "name": "Foxwit\u0027s Research",
+    "descriptions": {
+      "notStarted": "Let\u0027s go find Foxwit.",
+      "inProgress": "Foxwit needs the drops of some raid bosses to research the cause of the recent upheavals. Guess it\u0027s time to join some expeditions.\\n\\n#i4021010##t4021010#  #b#c4021010##k / 1\\n#i4032133##t4032133#  #b#c4032133##k / 1",
+      "completed": "I have returned the items Foxwit asked for. The rewards were esplendid."
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201052,
+      "minLevel": 130
+    },
+    "complete": {
+      "items": [
+        {
+          "itemId": 4032133
+        },
+        {
+          "itemId": 4021010
+        }
+      ],
+      "npc": 9201052
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4021010,
+          "count": -1
+        },
+        {
+          "itemId": 2010006,
+          "count": 50
+        },
+        {
+          "itemId": 2002021,
+          "count": 80,
+          "probability": 1
+        },
+        {
+          "itemId": 2002020,
+          "count": 80,
+          "probability": 1
+        },
+        {
+          "itemId": 1442030
+        },
+        {
+          "itemId": 4011004,
+          "count": 2,
+          "probability": 1
+        },
+        {
+          "itemId": 4010004,
+          "count": 18
+        },
+        {
+          "itemId": 4032133,
+          "count": -1
+        },
+        {
+          "itemId": 4010006,
+          "count": 15
+        },
+        {
+          "itemId": 4010006,
+          "count": 18
+        }
+      ],
+      "experience": 50000
+    }
+  }
+}

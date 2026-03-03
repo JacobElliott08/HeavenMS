@@ -1,0 +1,38 @@
+{
+  "questId": 21721,
+  "info": {
+    "name": "Your Third Informant Assignment",
+    "descriptions": {
+      "notStarted": "You have now reached Level 23, which means #p1002104# will soon be giving you your third assignment as an informant. You should head to #b#m104000000##k and talk to #b#p1002104##k.",
+      "inProgress": "#p1002104# suspects that the #o1140100# case in #m102000000# is similar to the ones in #m100000000# and #m101000000# and asks you to gather some information related to the present case. To get the details, you have to head over to #b#m102000000##k and talk to #b#p1103004##k... ",
+      "completed": "You met with #p1103004# in #m102000000#."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 23,
+      "prerequisiteQuests": [
+        {
+          "questId": 21720,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1103004
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 400
+    }
+  }
+}

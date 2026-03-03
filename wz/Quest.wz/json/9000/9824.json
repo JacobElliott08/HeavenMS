@@ -1,0 +1,73 @@
+{
+  "questId": 9824,
+  "info": {
+    "name": "아쿠아로드 청소하기",
+    "descriptions": {
+      "notStarted": "아쿠아리움 동물원의 사육사 #b#p2060005##k가 어린이날 준비로 바쁘다고 하는데..",
+      "inProgress": "#b#p2060005##k는 어린이날을 맞아 동물원을 찾는 방문객들을 위해 근처의 물고기들을 물리쳐 줄 것을 부탁했다. \\n\\n#o4230201# #r#a98241##k \\n#o4230124# #r#a98243##k\\n#o4230123# #r#a98242# ",
+      "completed": "#b#p2060005##k가 어린이날 준비하는 것을 도와주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "minLevel": 40,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2007050400",
+      "endDate": "2007051400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9822,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060005,
+      "monsters": [
+        {
+          "monsterId": 4230201,
+          "count": 80
+        },
+        {
+          "monsterId": 4230123,
+          "count": 80
+        },
+        {
+          "monsterId": 4230124,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000,
+      "items": [
+        {
+          "itemId": 4031242
+        },
+        {
+          "itemId": 4140103,
+          "probability": 1
+        },
+        {
+          "itemId": 4020007,
+          "count": 3,
+          "probability": 2
+        },
+        {
+          "itemId": 4020008,
+          "count": 3,
+          "probability": 2
+        },
+        {
+          "itemId": 4010006,
+          "count": 3,
+          "probability": 2
+        }
+      ]
+    }
+  }
+}

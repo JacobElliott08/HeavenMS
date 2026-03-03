@@ -1,0 +1,42 @@
+{
+  "questId": 20531,
+  "info": {
+    "name": "Kiridu\u0027s Calling",
+    "parent": "The Birth of Shinjo",
+    "descriptions": {
+      "notStarted": "Suddenly, #p1101002# approaches you.",
+      "inProgress": "#p1101002# suggested that you take your Mount and go see #b#p1102002#, the Mount Instructor,#k saying that your Mount may be in trouble.",
+      "completed": "#p1101002# suggested that you take your Mount and go see #p1102002#, the Mount Instructor, saying that your Mount may be in trouble."
+    },
+    "area": 15,
+    "order": 1,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "minLevel": 120,
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 1902006
+        }
+      ],
+      "jobs": [
+        1112,
+        1212,
+        1312,
+        1412,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1102002,
+      "items": [
+        {
+          "itemId": 1902006
+        }
+      ]
+    }
+  }
+}

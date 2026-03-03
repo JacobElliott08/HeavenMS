@@ -1,0 +1,20 @@
+{
+  "questId": 1047,
+  "info": {
+    "name": "Designated Monster Effect",
+    "descriptions": {
+      "notStarted": "Designated Monster Effect",
+      "inProgress": "Collect 5 #b#M1047# cards#k and receive bonus EXP when hunting.\\r\\nWhen hunting #r#M1047##b, receive #r#x1047# #b#k ",
+      "completed": "You have received bonus EXP from the Monster Book effect after hunting the designated monster."
+    },
+    "area": 50,
+    "timeLimit": 3600,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2006,
+      "repeatIntervalMinutes": 0
+    }
+  }
+}

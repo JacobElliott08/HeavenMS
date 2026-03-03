@@ -1,0 +1,39 @@
+{
+  "questId": 2239,
+  "info": {
+    "name": "Balrog and the Seal",
+    "parent": "Manji and Balrog",
+    "descriptions": {
+      "notStarted": "Manji\u0027s apprentice, Mu Young, has a pensive look on his face. Shall we hear what he has to say?",
+      "inProgress": "Mu Young says his master was right to worry. He says, Balrog, who was sealed by Tristan a number of decades ago, is preparing to reemerge. He has asked you to form a Expeditionary Team to prevent Balrog from reviving.",
+      "completed": "Mu Young says his master was right to worry. He says, Balrog, who was sealed by Tristan a number of decades ago, is preparing to reemerge. He has asked you to form a Expeditionary Team to prevent Balrog from reviving.\\r\\nBut as you tried to prevent Balrog\u0027s revival, he disappeared into thin air, and you had to tell Mu Young."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061014,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2235,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061014,
+      "monsters": [
+        {
+          "monsterId": 8830003
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 130000
+    }
+  }
+}

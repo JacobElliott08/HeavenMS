@@ -1,0 +1,48 @@
+{
+  "questId": 9392,
+  "info": {
+    "name": "로니의 잃어버린 초대권",
+    "descriptions": {
+      "notStarted": "#b#p1052106##k는 동물원에 함께갈 친구가 없다고 했다. #b#p1052106##k가 친구와 함께 동물원에 가는 것을 도와주자.",
+      "inProgress": "#b#t04031304##k을 찾아서 엘리니아 북쪽 숲 어딘가에 살고 있는 #b#p1061004##k에게 가져다 주자. \\n\\n#b#t04031304:# #k#c04031304#/1#k",
+      "completed": "#b#p1061004##k가 어린이날을 맞아 아쿠아리움 동물원에 갈 수 있게 도와주었다. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052106,
+      "startDate": "2006050500",
+      "endDate": "2006050900",
+      "prerequisiteQuests": [
+        {
+          "questId": 9391,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061004,
+      "items": [
+        {
+          "itemId": 4031304
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 2000001,
+          "count": 10
+        },
+        {
+          "itemId": 4031304,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

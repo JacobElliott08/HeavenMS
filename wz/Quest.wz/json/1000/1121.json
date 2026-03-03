@@ -1,0 +1,49 @@
+{
+  "questId": 1121,
+  "info": {
+    "name": "뮤즈의 사랑의 증표",
+    "descriptions": {
+      "notStarted": "#t4031689#를 받으려면 뮤즈를 찾아가보자.",
+      "inProgress": "뮤즈는 나의 사랑을 증명하라면서 #b#t4000167# 20#k개를 가져오라고 했다.\\n\\n#i4000167##t4000167# #b#c4000167# / 20#k",
+      "completed": "뮤즈에게 사랑의 증표를 얻었다."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060006,
+      "repeatIntervalMinutes": 0,
+      "infoNumber": 1100,
+      "infoEx": [
+        null
+      ],
+      "items": [
+        {
+          "itemId": 4031689
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060006,
+      "items": [
+        {
+          "itemId": 4000167,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000167,
+          "count": -20
+        },
+        {
+          "itemId": 4031689
+        }
+      ]
+    }
+  }
+}

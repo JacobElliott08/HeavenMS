@@ -1,0 +1,56 @@
+{
+  "questId": 21705,
+  "info": {
+    "name": "To Victoria Island",
+    "descriptions": {
+      "notStarted": "Your training continues. You must keep progressing until the Black Mage is defeated once and for all. You should ask #b#p1201000##k what to do next.",
+      "inProgress": "#p1201000# says you can only train so much in #m140000000# and suggests you venture to #bVictoria Island#k. She directs you to an ally of hers, #b#p1002104# the Information Dealer#k, in #b#m104000004##k.\\r\\n\\r\\nIn order to reach #m104000000#, you must leave #m140000000# by boarding a ship. From town, head to your right and continue past the snow-covered field to arrive at a small port operated by penguins.  Once there, talk to #b#p1200003##k to board the ship.  ",
+      "completed": "#p1002104# the Information Dealer was once a resident of #m140000000# eagerly awaiting the Hero\u0027s revival, but he eventually lost hope and left town. He\u0027s a distant cousin of #p1201000#. He must have felt bad about leaving #p1201000# all by herself, because he promised to help #p1002104# anytime she needed it."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201000,
+      "minLevel": 13,
+      "prerequisiteQuests": [
+        {
+          "questId": 21704,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1002104,
+      "items": [
+        {
+          "itemId": 4032338
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032338
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4032338,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

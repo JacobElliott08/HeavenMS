@@ -1,0 +1,57 @@
+{
+  "questId": 28325,
+  "info": {
+    "name": "Dirty Treasure Map",
+    "descriptions": {
+      "notStarted": "#bKyrin#k in #bNautilus#k has something to give you.",
+      "inProgress": "Let\u0027s uncover the hidden secrets of the Treasure Map.",
+      "completed": "The Treasure Map has been completed, but there are no treasures!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28242,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28252,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4220153
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

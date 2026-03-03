@@ -1,0 +1,29 @@
+{
+  "questId": 9624,
+  "info": {
+    "name": "초성퀴즈 (12월 17일)",
+    "descriptions": {
+      "notStarted": "#b#p9010000##k가 초성퀴즈를 준비했다고 한다. 그 동안 갈고 닦은 퀴즈 실력을 뽐내러 가볼까?",
+      "inProgress": "초성퀴즈라.. 어떤 문제가 나올지 궁금한걸? #p9010000#에게 말을 걸어 #b오늘의 퀴즈!#k를 풀어봐야겠다.",
+      "completed": "오늘의 초성퀴즈를 완료하였다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 10,
+      "startDate": "2006121700",
+      "endDate": "2006121800"
+    },
+    "complete": {
+      "npc": 9010000,
+      "prerequisiteQuests": [
+        {
+          "questId": 9625,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  }
+}

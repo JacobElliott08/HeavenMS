@@ -1,0 +1,55 @@
+{
+  "questId": 2121,
+  "info": {
+    "name": "The Messenger of the Fairy Forest 2",
+    "parent": "The Messenger of the Fairy Forest",
+    "descriptions": {
+      "notStarted": "After some convincing from the chief of #m101000000# #p1032001#, I have decided to leave #m101000000# as the messenger of #p1032001#. #p1032001# warned me that I may get lost on the way there since it\u0027s my first time there, and gave me #tLeafre Guidebook# as well as a flight ticket. By the way, what\u0027s this item that I\u0027m suppose to deliver to Tatamo?",
+      "inProgress": "I received a request from #p1032001#, the chief of #m101000000#, to head to a place called #b#m240000000##k of Ossyria. #m240000000# is a town entrenched in Minar Forest somewhere in Ossyria, and I was told to deliver an item to the chief of the town, Chief Tatamo, for him. I\u0027ll have to deliver the #b#t4031345##k that #p1032001# gave to #b#p2081000##k of #b#m240000000##k.",
+      "completed": "I managed to deliver the Pure Water of Protection that Chief Tatamo requested to Grendel The Really Old, the chief of Ellinia.  As a sign of gratitude, Chief Tatamo gave me 2 magic seeds that allows me to teleport between Ellinia and Leafre."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "prerequisiteQuests": [
+        {
+          "questId": 2120,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081000,
+      "items": [
+        {
+          "itemId": 4031345
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031345
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4031346,
+          "count": 2
+        },
+        {
+          "itemId": 4031345,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "questId": 6110,
+  "info": {
+    "name": "Manji\u0027s Test",
+    "descriptions": {
+      "notStarted": "I obtained a book I can\u0027t read. It looks like it\u0027s written in a strange language. The writing is crude, almost like an animal wrote it...a kind of monster language. I wonder if #b#p1022002##k would know how to read it. Couldn\u0027t hurt to speak with him...",
+      "inProgress": "My hunch paid off. When I asked #b#p1022002##k about the book, he examined the language closer and came to a conclusion. He said the book is about the #bRush#k skill. He offered to translate, but he said that I must prove myself as one worthy to obtain such power--a true warrior in his eyes. I must eliminate #r200 #o9300087##k in #m910500100# located at the entrance of the Sanctuary, deep in Sleepywood. Manji saw that I was surprised by the high number and advised me to make a party with a few of like-minded companions to ensure victory. This is precisely what friends are for...\\n\\n#o9300087# #r#a61101##k",
+      "completed": "With a bit of help from my trusty weapon, I easily defeated the requisite number that #p1022002##k requested. As promised, he translated the book, and it revealed the famed skill known as Rush. I can\u0027t wait to try it out!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022002,
+      "repeatIntervalMinutes": 0,
+      "jobs": [
+        112,
+        122,
+        132
+      ],
+      "items": [
+        {
+          "itemId": 4001112
+        },
+        {
+          "itemId": 2280012
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022002,
+      "monsters": [
+        {
+          "monsterId": 9300087,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4001112,
+          "count": -1
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2280012,
+          "jobRestriction": 2
+        }
+      ]
+    }
+  }
+}

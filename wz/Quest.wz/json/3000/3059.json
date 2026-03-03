@@ -1,0 +1,32 @@
+{
+  "questId": 3059,
+  "info": {
+    "name": "A Request from Moppie",
+    "descriptions": {
+      "notStarted": "I should check up on Moppie, as he is waiting for his master who left him with the words \"I\u0027ll be back\" as he went on his studies.",
+      "inProgress": "I should find Moppie\u0027s master, Huckle, since he was the one that Moppie with the words \"I\u0027ll be back\" as he went on his studies. Huckle should be somewhere safe in Orbis Tower working on his studies ... but where exactly?",
+      "completed": "I found Huckle, who was diligently working on his studies at the Orbis Tower. He looked like he hadn\u0027t bathed in weeks."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012019,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3058,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030012
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000
+    }
+  }
+}

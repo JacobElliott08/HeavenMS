@@ -1,0 +1,30 @@
+{
+  "questId": 8189,
+  "info": {
+    "name": "Pet\u0027s Re-Evolution",
+    "descriptions": {
+      "notStarted": "If I ever get tired of the evolving pet \u0027s current look, then I can re-evolve the evolving pet again for a different look.",
+      "inProgress": "The re-evolution requires 1 #b#t5380000##k and 10,000 mesos again, just like the first time.",
+      "completed": "The re-evolution had succeeded and now the evolving pet sports a different look."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9102001,
+      "minPetTameness": 1642,
+      "repeatIntervalMinutes": 0,
+      "petRequirement": {}
+    },
+    "complete": {
+      "minPetTameness": 1642,
+      "endScript": "q8189e",
+      "petRequirement": {},
+      "items": [
+        {
+          "itemId": 5380000
+        }
+      ]
+    }
+  }
+}

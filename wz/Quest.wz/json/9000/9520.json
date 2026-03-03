@@ -1,0 +1,45 @@
+{
+  "questId": 9520,
+  "info": {
+    "name": "할로윈 데이 사탕포장!",
+    "descriptions": {
+      "notStarted": "할로윈 데이를 맞아 파티가 열린다고 한다. #b#p9010000##k를 찾아가 보자.",
+      "inProgress": "아이들에게 나누어줄 사탕의 포장재료를 모아서 #b#p1012003##k을 찾아가자. \\n\\n#t4000002# #b#c4000002#/100#k",
+      "completed": "#b#p1012003##k이 아이들에게 나누어 줄 사탕을 준비하는 것을 도왔다. 하지만, 아직 많이 부족하다고 하니 시간이 날 때마다 도와주자."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 10,
+      "maxLevel": 29,
+      "startDate": "2006102600",
+      "endDate": "2006110600"
+    },
+    "complete": {
+      "npc": 1012003,
+      "items": [
+        {
+          "itemId": 4000002,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 700,
+      "items": [
+        {
+          "itemId": 2022043,
+          "count": 3
+        },
+        {
+          "itemId": 4000002,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

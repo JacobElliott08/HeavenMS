@@ -1,0 +1,63 @@
+{
+  "questId": 8038,
+  "info": {
+    "name": "Lionel\u0027s Necklace 2",
+    "parent": "Lionel\u0027s Necklace",
+    "descriptions": {
+      "notStarted": "Teo decided to help make Lionel\u0027s necklace. I better ask him right now.",
+      "inProgress": "Teo seemed really busy, so I decided to gather up the items myself. I better gather up #b50 #t04000033#s#k, #b50 #t04000030#s#k, and #b7 #t04000061##k and give them to Teo.\\n\\n#t04000033#  #b#c04000033##k/50\\n#t04000030#  #b#c04000030##k/50\\n#t04000061#  #b#c04000061##k/7",
+      "completed": " After handing Teo the items, he sent it to the jeweler, who made it for him fairly quickly. A beautiful necklace with Alligator and Dragon skin. I better show this to Maya now."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002001,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 8037,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1002001,
+      "items": [
+        {
+          "itemId": 4000061,
+          "count": 7
+        },
+        {
+          "itemId": 4000030,
+          "count": 50
+        },
+        {
+          "itemId": 4000033,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8039,
+      "items": [
+        {
+          "itemId": 4000061,
+          "count": -7
+        },
+        {
+          "itemId": 4000030,
+          "count": -50
+        },
+        {
+          "itemId": 4000033,
+          "count": -50
+        }
+      ],
+      "experience": 16000
+    }
+  }
+}

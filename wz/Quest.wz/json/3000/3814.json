@@ -1,0 +1,39 @@
+{
+  "questId": 3814,
+  "info": {
+    "name": "Pirate\u0027s Map",
+    "descriptions": {
+      "notStarted": "#b#p9000009##k of #b#m104000000##k apparently has been waiting for the right time to do something big..",
+      "inProgress": "#p9000009# seemed eager to fight the stormy sea, and wanted me to find #b#t4001119##k, the map that featured the secret path through the stormy sea. According to #p9000009#, the one that has all 6 divided pieces of #b#t4001118##k happens to be the only person that has survived the stormy sea, #rLord Pirate#k... Hey, that means I have to go through the lair of Lord Pirate! \\n\\n#t4001118#  #b#c4001118##k/6",
+      "completed": "I was able to gather up all the #t4001118#s from the lair of Lord Pirate and gave them to #p9000009#. Obtaining the map, #p9000009# seemed ecstatic to finally be able to tackle on the stormy sea. I mean, he\u0027s acutely aware of the dangers that lurks over him, and yet he seemed to eager to attack the water. #p9000009# really must be one heck of a traveler."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000009,
+      "minLevel": 55,
+      "maxLevel": 100
+    },
+    "complete": {
+      "npc": 9000009,
+      "items": [
+        {
+          "itemId": 4001118,
+          "count": 6
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 40000,
+      "items": [
+        {
+          "itemId": 4001118,
+          "count": -6
+        }
+      ]
+    }
+  }
+}

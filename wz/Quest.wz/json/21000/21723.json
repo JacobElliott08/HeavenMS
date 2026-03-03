@@ -1,0 +1,50 @@
+{
+  "questId": 21723,
+  "info": {
+    "name": "Find the Puppet",
+    "descriptions": {
+      "notStarted": "This is your third assignment as an informant and you\u0027re at #b#m102000000##k with #p1103004#, investigating the causes of the #o1140130#s\u0027 erratic behavior. You should talk to #b#p1103004##k.",
+      "inProgress": "#p1103004# tells you that the #o1140130#s\u0027 erratic behavior was caused by a puppet, but the puppet is not necessarily on the #o1140130#s\u0027 bodies, but somewhere outside. You should search the #bPile of Relics#k in #b#m101030101##k and find the #b#t4032319##k.\\r\\n\\r\\n#i4032319# #t4032319# #b#c4032319# / 5#k",
+      "completed": "You retrieved all of the #t4032319#s. #p1103004# seemed genuinely shocked that the puppets were used for such a purpose and told you she\u0027d have to write a report on this. A report? What report?"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103004,
+      "minLevel": 24,
+      "prerequisiteQuests": [
+        {
+          "questId": 21722,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1103004,
+      "items": [
+        {
+          "itemId": 4032319,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4500,
+      "items": [
+        {
+          "itemId": 4032319,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

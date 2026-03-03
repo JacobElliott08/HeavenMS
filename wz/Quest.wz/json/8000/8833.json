@@ -1,0 +1,30 @@
+{
+  "questId": 8833,
+  "info": {
+    "name": "New Year\u0027s Wishes 1",
+    "parent": "New Year : New Year\u0027s Wishes",
+    "descriptions": {
+      "notStarted": "Can\u0027t believe its New Year\u0027s already! Looks like the Maple Administrator has something for me!",
+      "inProgress": "Can\u0027t believe its New Year\u0027s already! Looks like the Maple Administrator has something for me!",
+      "completed": "The Maple Administrator opened my present for me! Sweet!"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "startDate": "2006123110",
+      "endDate": "2007010102"
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031520
+        }
+      ]
+    }
+  }
+}

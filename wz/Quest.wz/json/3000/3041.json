@@ -1,0 +1,46 @@
+{
+  "questId": 3041,
+  "info": {
+    "name": "A Request from Corporal Easy",
+    "parent": "Alpha Platoon\u0027s Network of Communication",
+    "descriptions": {
+      "inProgress": "I found Corporal Easy somewhere around the Orbis Tower, and he asked me to get him #b2 refined #t4021005#s#k while giving me an item which is to be given to Master Sergeant Fox.",
+      "completed": "I gave two sapphire to corporal Easy. If I get what he gives me, I can go to Master Sergeant Fox."
+    },
+    "area": 33,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030002,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 3002,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030002,
+      "items": [
+        {
+          "itemId": 4021005,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "nextQuest": 3003,
+      "items": [
+        {
+          "itemId": 4021005,
+          "count": -2
+        }
+      ]
+    }
+  }
+}

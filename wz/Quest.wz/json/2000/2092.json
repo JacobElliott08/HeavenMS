@@ -1,0 +1,56 @@
+{
+  "questId": 2092,
+  "info": {
+    "name": "I Need to Find My Daughter 1",
+    "parent": "I Need to Find My Daughter",
+    "descriptions": {
+      "notStarted": "I wonder how Bruce is doing in Henesys these days...",
+      "inProgress": "I met up with Bruce in Henesys, and he had great news: He finally found his daughter!!! There was one problem, however: She seems to be suffering from amnesia, Bruce gave me a toy that his daughter played around while growing up, and asked me if I can give that to her. ",
+      "completed": "I found Ayan and gave her the toy sword. "
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012111,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 2088,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2082,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022007,
+      "items": [
+        {
+          "itemId": 4031174
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031174
+        }
+      ]
+    },
+    "onComplete": {
+      "nextQuest": 2093,
+      "items": [
+        {
+          "itemId": 4031174,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

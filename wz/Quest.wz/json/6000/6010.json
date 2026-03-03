@@ -1,0 +1,48 @@
+{
+  "questId": 6010,
+  "info": {
+    "name": "Dragon Rider",
+    "descriptions": {
+      "notStarted": "You have now reached the apex of the Maple world, the one who is considered the ultimate Bowman. To commemorate your sterling accomplishment of reaching level 200,  #b#p2081300##k has something in store for you.",
+      "inProgress": "It\u0027s the one thing that countless bowmen, who have used bows to pierce the darkness this world offers, strived for, but couldn\u0027t get... but now, #p2081300# is introducing me to #t1902002#... I heard only the very best in the world of Maple can be friends with #t1902002#.",
+      "completed": "At a point where I never thought I could go any higher, I made a new friend that certainly put me over the top."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081300,
+      "minLevel": 200,
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322
+      ]
+    },
+    "complete": {
+      "npc": 2081300,
+      "items": [
+        {
+          "itemId": 1902001
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1902001,
+          "count": -1
+        },
+        {
+          "itemId": 1902002
+        }
+      ]
+    }
+  }
+}

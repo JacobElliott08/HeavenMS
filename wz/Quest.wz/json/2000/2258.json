@@ -1,0 +1,36 @@
+{
+  "questId": 2258,
+  "info": {
+    "name": "Meerkats Listen During the Day",
+    "parent": "About the Mushroom Castle...",
+    "descriptions": {
+      "notStarted": "You should ask the Camel Cab for information about the Mushroom Castle.",
+      "inProgress": "Apparently, Meerkats spread rumors like wildfire during the day. Defeat enough Meerkats in a limited amount of time to keep the rumor from spreading.\\r\\n\\r\\n#o2100108# #a22581#\\r\\n"
+    },
+    "area": 44,
+    "order": 4,
+    "timeLimit": 300
+  },
+  "requirements": {
+    "start": {
+      "npc": 2110005,
+      "startScript": "q2258s",
+      "prerequisiteQuests": [
+        {
+          "questId": 2257,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2110005,
+      "endScript": "q2258e",
+      "monsters": [
+        {
+          "monsterId": 2100108,
+          "count": 40
+        }
+      ]
+    }
+  }
+}

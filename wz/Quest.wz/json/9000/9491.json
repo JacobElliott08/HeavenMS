@@ -1,0 +1,45 @@
+{
+  "questId": 9491,
+  "info": {
+    "name": "맛있는 당고",
+    "descriptions": {
+      "notStarted": "#b#p9110002##k에게 다시 말을 걸어보자.",
+      "inProgress": "#b#p9110002##k가 먹고 싶어하는 쫄깃하고 떡으로 만든 #b#t2022014##k를 구해가자. \\n\\n#t2022014# #b#c2022014#/1#k",
+      "completed": "#b#p9110002##k에게 맛있는 #b#t2022014##k를 구해다 주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9110002,
+      "minLevel": 10,
+      "startDate": "2006101600",
+      "endDate": "2006110100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9490,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9110002,
+      "items": [
+        {
+          "itemId": 2022014
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 2022014,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

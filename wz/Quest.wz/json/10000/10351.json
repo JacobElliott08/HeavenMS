@@ -1,0 +1,28 @@
+{
+  "questId": 10351,
+  "info": {
+    "name": "The Hero\u0027s Memory",
+    "descriptions": {
+      "notStarted": "All of a sudden, you find yourself gathering the 12 Aran Memory Fragments Cassandra talked about, but…you still don\u0027t have enough yet. You\u0027d better go talk to #bCassandra#k.",
+      "inProgress": "Wait a minute, she was acting like she was going to give you an Aran Memory Fragment… That kind of annoys you, but you guess you should talk to Cassandra if you want to collect more Aran Memory Fragments.",
+      "completed": "You can see 12 Aran Memory Fragments being gathered up in one place, but these fragments…seem a lot more interesting…"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2009010100",
+      "startScript": "q10351s",
+      "prerequisiteQuests": [
+        {
+          "questId": 10350,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  }
+}

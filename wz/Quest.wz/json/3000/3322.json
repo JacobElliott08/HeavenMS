@@ -1,0 +1,43 @@
+{
+  "questId": 3322,
+  "info": {
+    "name": "Phyllia\u0027s Pendant",
+    "descriptions": {
+      "notStarted": "After combining all the information I got through Zenumist, Alcadno, and #p2111006#, I realized the person that knew the missing alchemist the most was his wife #b#p2111004##k. I better go look for her.",
+      "inProgress": "When I asked #p2111004# of #p2111002#, she seemed to be on the defensive. She couldn\u0027t believe I actually talked to #p2111002#. In order to make #p2111004# believe in me, I better provide solid evidence... maybe I should find the #bpendant#k that #p2111002# wanted to give her.",
+      "completed": "After seeing the pendant, #p2111004# finally accepted the fact that I met with #p2111002#. She seemed distrustful of both Zenumist and Alcadno. According to her, #p2111002#\u0027s experiment touched a nerve with an important secret of #m261000000#, and the presidents of both societies had been more than eager to keep #p2111002#\u0027s work and the accident quiet."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111004,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3321,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111004,
+      "items": [
+        {
+          "itemId": 4031697
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 4031697,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

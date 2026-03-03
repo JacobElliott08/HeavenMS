@@ -1,0 +1,34 @@
+{
+  "questId": 28107,
+  "info": {
+    "name": "Discovering Secrets",
+    "parent": "The Terror of MV!",
+    "descriptions": {
+      "notStarted": "Charles the Adventurer prepared something for all Maplers... Let\u0027s go find him.",
+      "inProgress": "Charles has asked us to get 7 secret letters. Charles said we can find them in a pile of stones.  Where should we start to look? \\n\\n#i4032118# #t4032118# #b#c4032118#/7#k",
+      "completed": "You\u0027ve accomplished your job and gained EXP and 1500 mesos. You can move on to the next quest!"
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9200000,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 60,
+      "endDate": "2007112700"
+    },
+    "complete": {
+      "npc": 9220018,
+      "items": [
+        {
+          "itemId": 4032248
+        },
+        {
+          "itemId": 4032118,
+          "count": 7
+        }
+      ]
+    }
+  }
+}

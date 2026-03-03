@@ -1,0 +1,55 @@
+{
+  "questId": 10285,
+  "info": {
+    "name": "You are a True Maple Lover ♥",
+    "descriptions": {
+      "notStarted": "Because you kept the 15-Day Dreamer Medal safe, a Maple Admin came to see you.",
+      "inProgress": "The Maple Admin, touched at how passionate you were about Maple, exchanged your 15-Day Dreamer Medal for a Maple Lover Medal.",
+      "completed": "The Maple Admin, touched at how passionate you were about Maple, exchanged your 15-Day Dreamer Medal for a Maple Lover Medal."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 15,
+      "startDate": "2009062500",
+      "endDate": "2009073000",
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 1142099
+        },
+        {
+          "itemId": 1142100
+        },
+        {
+          "itemId": 1142101
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 1142099
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142099,
+          "count": -1
+        },
+        {
+          "itemId": 1142100
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "questId": 10072,
+  "info": {
+    "name": "페토인형 만들기",
+    "parent": "페토의 용서",
+    "descriptions": {
+      "inProgress": "페토로 변신해서 저주를 풀어주자. 우선 페토 인형이 있어야해! #b천조각 20개#k를 유령 T에게 주면 되지?\\n\\n#i04031838# #t04031838# #b#c04031838# / 20#k",
+      "completed": "유령T가 페토 인형을 만들고 있다. "
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120008,
+      "startDate": "2008101600",
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10071,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120008,
+      "items": [
+        {
+          "itemId": 4031838,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200,
+      "items": [
+        {
+          "itemId": 4031838,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

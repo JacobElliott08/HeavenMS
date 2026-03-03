@@ -1,0 +1,38 @@
+{
+  "questId": 1037,
+  "info": {
+    "name": "Help Hunt the Snails",
+    "parent": "Sam\u0027s Request",
+    "descriptions": {
+      "notStarted": "#bSam#k at the Snail Hunting Ground 1 apparently is looking for me. I better go see him right now...",
+      "inProgress": "Sam asked me to take care of some snails to protect #bMaria#k, who ventured off town to collect some mushrooms. I better slay #r10 Snails#k and notify Maria that the field is clear.\\n\\nSnail #r#a10371##k",
+      "completed": "I told Maria I took care of the snails."
+    },
+    "area": 20,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2005,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 2103,
+      "monsters": [
+        {
+          "monsterId": 100100,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 60,
+      "nextQuest": 1038
+    }
+  }
+}

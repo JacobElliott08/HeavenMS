@@ -1,0 +1,29 @@
+{
+  "questId": 2219,
+  "info": {
+    "name": "Information from Jake",
+    "descriptions": {
+      "notStarted": "According to the information provided on the #t4031894#, #p1052006# is one of the informants that JM wants you to see. Let\u0027s go find #b#p1052006##k.",
+      "inProgress": "While chatting away, #p1052006# suddenly mentions something regarding the #o9300003#... that #o9300003# wasn\u0027t always gigantic. He says it was a  #o210100# that exponentially grew due to the #bGrowth Powder#k...",
+      "completed": "While chatting away, #p1052006# suddenly mentions something regarding the #o9300003#... that #o9300003# wasn\u0027t always gigantic. He says it was a  #o210100# that exponentially grew due to the #bGrowth Powder#k..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052006,
+      "startScript": "q2219s",
+      "prerequisiteQuests": [
+        {
+          "questId": 2214,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031894
+        }
+      ]
+    }
+  }
+}

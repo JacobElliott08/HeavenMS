@@ -1,0 +1,41 @@
+{
+  "questId": 2418,
+  "info": {
+    "name": "Using Double Stab",
+    "descriptions": {
+      "notStarted": "Power B. Fore at the training center wants you to learn how to use a new skill.",
+      "inProgress": "Power B. Fore is teaching you how to use a new skill. Use Double Stab to eliminate some Stumps.\\r\\n\\r\\n#o130100# #a24181# (Use Double Stab)",
+      "completed": "You used Double Stab to eliminate some Stumps."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052113,
+      "prerequisiteQuests": [
+        {
+          "questId": 2413,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422
+      ]
+    },
+    "complete": {
+      "npc": 1052113,
+      "monsters": [
+        {
+          "monsterId": 130100,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

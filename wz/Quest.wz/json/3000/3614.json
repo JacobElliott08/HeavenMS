@@ -1,0 +1,49 @@
+{
+  "questId": 3614,
+  "info": {
+    "name": "Kong Ji\u0027s Rice Wine",
+    "descriptions": {
+      "notStarted": "Apparently, the place that makes the best Rice Wine in Korean Folk Town is Kong Ji\u0027s...",
+      "inProgress": "I went to Kong Ji\u0027s tavern because apparently her place was the best at making rice wine in Folk Town. She asked for 3 Three-Tailed Foxtails and 1,000 mesos in return for some rice wine.\\n\\n#t4000172# #b#c4000172##k/3",
+      "completed": "I gave Kong Ji 3 #t4000172#s and 1,000 mesos for 5 bottles of rice wine."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071004,
+      "minLevel": 37,
+      "repeatIntervalMinutes": 1440,
+      "prerequisiteQuests": [
+        {
+          "questId": 3621,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071004,
+      "items": [
+        {
+          "itemId": 4000172,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -1000,
+      "items": [
+        {
+          "itemId": 4000172,
+          "count": -3
+        },
+        {
+          "itemId": 2022052,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

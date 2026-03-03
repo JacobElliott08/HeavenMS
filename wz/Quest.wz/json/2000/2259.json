@@ -1,0 +1,29 @@
+{
+  "questId": 2259,
+  "info": {
+    "name": "Scorpions Can\u0027t Listen at Night",
+    "parent": "About the Mushroom Castle...",
+    "descriptions": {
+      "notStarted": "What? He can\u0027t tell you because the Meerkats may overhear? What to do? You\u0027d better talk to the Camel again.",
+      "inProgress": "He agrees that the Meerkats might eavesdrop and tells you to go to \u0027#bSahel 1#k\u0027 for a private conversation."
+    },
+    "area": 44,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2110005,
+      "startScript": "q2259s",
+      "prerequisiteQuests": [
+        {
+          "questId": 2258,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2110005,
+      "endScript": "q2259e"
+    }
+  }
+}

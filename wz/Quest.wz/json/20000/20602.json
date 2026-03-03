@@ -1,0 +1,52 @@
+{
+  "questId": 20602,
+  "info": {
+    "name": "A New Skill for Blaze Wizards",
+    "descriptions": {
+      "notStarted": "If I think long and hard about #p1101002#\u0027s words, that means I may be able to learn a new skill from #b#p1101004##k",
+      "inProgress": "#p1101004# told me there is indeed a new skill, but it\u0027s dangerous for me to learn the skill right now based on my level. He also proceeded to challenge me to prove that I deserve to learn the new skill. To prove it, I must head over to #m130020000#, enter #bthe 3rd Drill Hall#k, and bring back #t4032121#...\\n\\n#i4032121# #t4032121# #b#c4032121# / 1#k",
+      "completed": "I was able to defeat the boss monster and bring back #t4032121#. #p1101004# told me that I deserved to learn the new skill and taught me something called Ifrit."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101004,
+      "minLevel": 100,
+      "prerequisiteQuests": [
+        {
+          "questId": 20600,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1101004,
+      "items": [
+        {
+          "itemId": 4032121
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032121,
+          "count": -1
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 12111004,
+          "masterLevel": 20
+        }
+      ]
+    }
+  }
+}

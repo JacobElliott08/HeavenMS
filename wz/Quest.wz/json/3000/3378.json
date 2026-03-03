@@ -1,0 +1,51 @@
+{
+  "questId": 3378,
+  "info": {
+    "name": "Juliet\u0027s Lunchbox",
+    "parent": "Juliet\u0027s Lunchbox",
+    "descriptions": {
+      "inProgress": "Juliet\u0027s Lunchbox is now complete. It doesn\u0027t look all that great, but... seriously, she made this for Romeo, a person she dearly loves, so come on, it can\u0027t be toxic, right? Whatever happens to him, I\u0027m sure the great alchemists in Magatia can save him. I\u0027m worried about the lunchbox, but I better still give this to #bRomeo#k.",
+      "completed": "Romeo seemed very ecstatic to receive the lunchbox. Hopefully he won\u0027t die on me."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2112003,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3376,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2112004,
+      "items": [
+        {
+          "itemId": 4031779
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031779
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4031779,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

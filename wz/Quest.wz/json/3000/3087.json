@@ -1,0 +1,84 @@
+{
+  "questId": 3087,
+  "info": {
+    "name": "Lightening Up Orbis",
+    "parent": "Orbis in Danger",
+    "descriptions": {
+      "inProgress": "I ran into a mysterious girl at #p2032001#\u0027s house. She mentioned that the reason Orbis is sinking is because there are too many monsters around at the Cloud Terrace these days. She requested that I take out #b80 each#k of #r#o3210200#, #o3210201#, and #o3210202##k.\\n\\n#o3210200# #r#a30871##k\\n#o3210201# #r#a30872##k\\n#o3210202# #r#a30873##k",
+      "completed": "Just the way the mysterious girl at #p2032001#\u0027s house requested, I took out a 80 each of #o3210200#, #o3210201#, and #o3210202#. Doing this may have slowed down Orbis\u0027s inevitable crash, but that still means it\u0027ll crash later. By the way, who is this girl? She must be aware of the danger that\u0027s befallen Orbis. I should talk to her again..."
+    },
+    "area": 33,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2032000,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3086,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2032000,
+      "monsters": [
+        {
+          "monsterId": 3210200,
+          "count": 80
+        },
+        {
+          "monsterId": 3210201,
+          "count": 80
+        },
+        {
+          "monsterId": 3210202,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4500,
+      "items": [
+        {
+          "itemId": 4010001,
+          "count": 5,
+          "probability": 2
+        },
+        {
+          "itemId": 4010000,
+          "count": 5,
+          "probability": 2
+        },
+        {
+          "itemId": 4010002,
+          "count": 5,
+          "probability": 2
+        },
+        {
+          "itemId": 4010005,
+          "count": 5,
+          "probability": 2
+        },
+        {
+          "itemId": 4010003,
+          "count": 5,
+          "probability": 2
+        },
+        {
+          "itemId": 4010004,
+          "count": 5,
+          "probability": 1
+        },
+        {
+          "itemId": 4010006,
+          "count": 5,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

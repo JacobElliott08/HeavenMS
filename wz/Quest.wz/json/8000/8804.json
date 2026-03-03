@@ -1,0 +1,62 @@
+{
+  "questId": 8804,
+  "info": {
+    "name": "Independence Day : Cody\u0027s Barbecue Party",
+    "descriptions": {
+      "notStarted": "Cody from Henesys is looking for my help. I hear that it is only for the limited time. Better go to Henesys and check out what he wants before time runs out!",
+      "inProgress": "Cody mentioned he is throwing a #rBarbecue party for Independence Day#k! He needs #b50 Pigs\u0027 Heads, 50 Tree Branches and 50 Leathers#k to prepare for the Barbecue. I wonder what leather has to do with a Barbecue...\\n\\n#t4000017# #b#c4000017##k/50 \\n#t4000003# #b#c4000003##k/50 \\n#t4000021# #b#c4000021##k/50",
+      "completed": "I gave #bCody#k the materials needed for the Barbecue! I got some #bdelicious Barbecue#k and an #bIndependence Day Hat#k for a reward! "
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9200000,
+      "repeatIntervalMinutes": 11520,
+      "endDate": "2006070600"
+    },
+    "complete": {
+      "npc": 9200000,
+      "items": [
+        {
+          "itemId": 4000017,
+          "count": 50
+        },
+        {
+          "itemId": 4000003,
+          "count": 50
+        },
+        {
+          "itemId": 4000021,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "items": [
+        {
+          "itemId": 1002527
+        },
+        {
+          "itemId": 2022079,
+          "count": 10
+        },
+        {
+          "itemId": 4000017,
+          "count": -50
+        },
+        {
+          "itemId": 4000003,
+          "count": -50
+        },
+        {
+          "itemId": 4000021,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

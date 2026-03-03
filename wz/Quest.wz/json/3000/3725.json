@@ -1,0 +1,38 @@
+{
+  "questId": 3725,
+  "info": {
+    "name": "The Hidden Truth about the Past",
+    "parent": "Year 2099- The Harbor",
+    "descriptions": {
+      "inProgress": "Andy the Time Traveler has requested that you travel to Midnight Harbor in the year 2099 to investigate and if possible, destroy the giant robot, if it exists.",
+      "completed": "You traveled to Midnight Harbor in the year 2099 as Andy the Time Traveler has requested, during which time you spotted a giant robot and destroyed it as instructed."
+    },
+    "area": 41,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082004,
+      "minLevel": 73,
+      "prerequisiteQuests": [
+        {
+          "questId": 3724,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082004,
+      "monsters": [
+        {
+          "monsterId": 7220005
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 120000
+    }
+  }
+}

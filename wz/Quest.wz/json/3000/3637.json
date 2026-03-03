@@ -1,0 +1,74 @@
+{
+  "questId": 3637,
+  "info": {
+    "name": "Judging the Axe",
+    "descriptions": {
+      "notStarted": "As the Mountain God said, if I got an axe from Dark Axestump, let\u0027s go to the Mountain God and ask him to see if it\u0027s indeed the steel axe.",
+      "inProgress": "The Mountain God told me if I bring the #baxe#k that #r#o2130100##k had, then he\u0027ll look into it and see if it\u0027s indeed the steel axe of the tree cutter or not. I need to pick up an axe from Dark Stump and bring it back to the Mountain God.",
+      "completed": "The Mountain God carefully looked through the axe that I picked up, and told me what kind of axe that was. If I ever find the tree cutter\u0027s steel axe, then I\u0027ll have to return it to the tree cutter who lives somewhere around the Black Mountain."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071010,
+      "minLevel": 45,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3636,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031315
+        },
+        {
+          "itemId": 4000215
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071010
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4000215,
+          "count": -1
+        }
+      ]
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031315,
+          "probability": 10
+        },
+        {
+          "itemId": 4031316,
+          "probability": 18
+        },
+        {
+          "itemId": 4031317,
+          "probability": 18
+        },
+        {
+          "itemId": 4031318,
+          "probability": 18
+        },
+        {
+          "itemId": 4031319,
+          "probability": 18
+        },
+        {
+          "itemId": 4031320,
+          "probability": 18
+        }
+      ]
+    }
+  }
+}

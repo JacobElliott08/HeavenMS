@@ -1,0 +1,63 @@
+{
+  "questId": 2087,
+  "info": {
+    "name": "Delivering the Flying Pill",
+    "parent": "Icarus and the Flying Pill",
+    "descriptions": {
+      "inProgress": "#bWing the Fairy#k of Ellinia asked me to take the Flying Pill to Icarus. So this little pill is all it takes to fly? I need to get this to Icarus ASAP.",
+      "completed": "I got Icarus the Flying Pill that Wing the Fairy of Ellinia made. I hope it works for him."
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032106,
+      "minLevel": 42,
+      "prerequisiteQuests": [
+        {
+          "questId": 2086,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052106,
+      "items": [
+        {
+          "itemId": 4031163
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031163
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 13000,
+      "items": [
+        {
+          "itemId": 4031163,
+          "count": -1
+        },
+        {
+          "itemId": 1102054,
+          "probability": 1
+        },
+        {
+          "itemId": 1102055,
+          "probability": 1
+        },
+        {
+          "itemId": 1102056,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "questId": 9509,
+  "info": {
+    "name": "바다의 날 퀴즈 5",
+    "parent": "바다의 날 퀴즈",
+    "descriptions": {
+      "notStarted": "바다의 날을 맞이하여 바다에 대해 자세히 알아보고 싶다면 #b#p9010000##k를 찾아가자.",
+      "inProgress": "바다환경보호와 관련된 퀴즈이다.",
+      "completed": "항상 바다 환경을 위해 노력해야겠다."
+    },
+    "area": 50,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "startDate": "2006053000",
+      "endDate": "2006060700",
+      "prerequisiteQuests": [
+        {
+          "questId": 9508,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1100
+    }
+  }
+}

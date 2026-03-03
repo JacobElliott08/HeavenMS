@@ -1,0 +1,53 @@
+{
+  "questId": 9301,
+  "info": {
+    "name": "\u0027하인즈\u0027님께 인사드리기",
+    "parent": "새해 문안 인사",
+    "descriptions": {
+      "inProgress": "#p9010000#로부터 빅토리아 아일랜드의 각 마을에 있는 #b5명의 현자#k에게 새해 문안인사를 드리고 마지막에 주시는 #b어떤 물건#k을 받아와 달라는 부탁을 받았다. #p9010000#의 지시대로 페리온에 있는 #p1022000#를 찾아가 인사를 드리자 #b연하장#k을 주면서 #b엘리니아#k에 계시는 #b#p1032001##k님을 찾아가서 문안 인사를 하라고 했다.",
+      "completed": "#p1022000#의 부탁으로 엘리니아에 계시는 #p1032001#님께 문안인사를  드렸다."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022000,
+      "repeatIntervalMinutes": 129600,
+      "endDate": "2008021400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9300,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "items": [
+        {
+          "itemId": 4031075
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031075
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 450,
+      "nextQuest": 9302,
+      "items": [
+        {
+          "itemId": 4031075,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "questId": 6297,
+  "info": {
+    "name": "The Black Spirit\u0027s Blessing Power 2",
+    "parent": "Spirit Blessing",
+    "descriptions": {
+      "inProgress": "#b#p2041023##k told me to bring the #bViking\u0027s Sail#k if I want to fully awaken #q1321007#\u0027s power. \\n\\n#i4000134##t4000134# #b#c4000134# / 500#k",
+      "completed": " We used #t4000134#  to draw out #q1321007#\u0027s memory and fully awakened his blessing power."
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041023,
+      "jobs": [
+        132
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6296,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041023,
+      "items": [
+        {
+          "itemId": 4000134,
+          "count": 500
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 150000,
+      "items": [
+        {
+          "itemId": 4000134,
+          "count": -500
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 1320009,
+          "masterLevel": 25
+        }
+      ]
+    }
+  }
+}

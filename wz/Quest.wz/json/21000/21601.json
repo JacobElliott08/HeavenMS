@@ -1,0 +1,57 @@
+{
+  "questId": 21601,
+  "info": {
+    "name": "Formula for Your Wolf Pup",
+    "descriptions": {
+      "notStarted": "You should ask #b#p2060000##k of #b#m230010201##k about how to raise a wolf.",
+      "inProgress": "#p2060000# says that she knows a bit about raising wolves and tells you that she will make #bWolf Pup Formula#k for the weakened baby wolf. The ingredients for the formula include #b#t4000157##k, which can be found on seals, and #t4032331#, which #b#p2060005##k sells.\\r\\n\\r\\n#i4000157# #t4000157# #b#c4000157# / 50#k\\r\\n#i4032331# #t4032331# #b#c4032331# / 1#k",
+      "completed": "Armed with all the ingredients, #p2060000# asked you to wait while she finishes making the #t4032332#."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060000,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 21600,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2060000,
+      "items": [
+        {
+          "itemId": 4000157,
+          "count": 50
+        },
+        {
+          "itemId": 4032331
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000157,
+          "count": -50
+        },
+        {
+          "itemId": 4032331,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

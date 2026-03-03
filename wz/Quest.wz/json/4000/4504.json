@@ -1,0 +1,46 @@
+{
+  "questId": 4504,
+  "info": {
+    "name": "Stop\u0027em!",
+    "descriptions": {
+      "notStarted": "Let\u0027s go look for #b#p9270028##k in CBD!",
+      "inProgress": "#b#p9270028##k has asked me to gather up #b#t4000369#s and #t4000370#s#k to make it a lot more safer for Singapore Children to walk around.  Well, somebody just don\u0027t follow the rules, do they?  I should Help #p9270028# to make Singapore a better place.\\n\\n#t4000369#  #r#c4000369#/100#k\\n#t4000370#  #r#c4000370#/100#k",
+      "completed": "After helping #p9270028#, I feel much safer to walk around in CBD.  Hope all the children are feeling the same!"
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270028,
+      "minLevel": 25
+    },
+    "complete": {
+      "npc": 9270028,
+      "items": [
+        {
+          "itemId": 4000369,
+          "count": 100
+        },
+        {
+          "itemId": 4000370,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 4000369,
+          "count": -100
+        },
+        {
+          "itemId": 4000370,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

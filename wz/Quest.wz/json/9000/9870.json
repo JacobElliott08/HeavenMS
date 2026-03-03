@@ -1,0 +1,51 @@
+{
+  "questId": 9870,
+  "info": {
+    "name": "아르미의 1500일 기념폭죽",
+    "descriptions": {
+      "notStarted": "헤네시스 공원의 아르미가 1500일을 기념하여 뭔가 준비했다는데...",
+      "inProgress": "재료만 모아가면 불꽃놀이를 할 수 있는 폭죽을 만들어 주겠다고 한다.\\n\\n#t04001127# #b#c04001127#/5#k\\n#t04001128# #b#c04001128#/5#k",
+      "completed": "아르미는 하루에 한번씩 폭죽을 만들어 준다는데.."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010014,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2007060600",
+      "endDate": "2007061800"
+    },
+    "complete": {
+      "npc": 9010014,
+      "items": [
+        {
+          "itemId": 4001127,
+          "count": 5
+        },
+        {
+          "itemId": 4001128,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4001127,
+          "count": -5
+        },
+        {
+          "itemId": 4001128,
+          "count": -5
+        },
+        {
+          "itemId": 2022185
+        }
+      ]
+    }
+  }
+}

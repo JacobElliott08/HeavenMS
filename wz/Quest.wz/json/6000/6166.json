@@ -1,0 +1,37 @@
+{
+  "questId": 6166,
+  "info": {
+    "name": "Robeira and Shammos",
+    "parent": "Shammos\u0027s past",
+    "descriptions": {
+      "inProgress": " #p2022003# became quiet for some reason. What\u0027s the matter? Let\u0027s go talk to #b#p2022003##k.",
+      "completed": " #p2022003# seems to have regained consciousness."
+    },
+    "area": 10,
+    "order": 7
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020009,
+      "jobs": [
+        212,
+        222,
+        232
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6165,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2022003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100000
+    }
+  }
+}

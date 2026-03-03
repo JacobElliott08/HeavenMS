@@ -1,0 +1,85 @@
+{
+  "questId": 9389,
+  "info": {
+    "name": "Party with Jane",
+    "descriptions": {
+      "notStarted": "#b#p1002100##k, who lives in Lith Harbor, wants to join the MapleStory 3rd Anniversary Bonanza..  I better help #b#p1002100##k make her way to the party.",
+      "inProgress": "In order to attend the party with #b#p1002100##k, I\u0027ll have to prove my level of courage and power to her dad by slaying tough monsters.\\n\\n#t04000028:# #b#c04000028:#/3#k \\n#t04000046:# #b#c04000046:#/3#k \\n#o7130100#  #r#a93891##k\\n#o7130101#  #r#a93892##k  \\n#r!Warning : Please don\u0027t lose #b#t1002508##k.",
+      "completed": "After helping #b#p1002100##k in her quest to go to the party, she strengthened my #b#t01002508##k as promised."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002100,
+      "minLevel": 71,
+      "startDate": "2008050100",
+      "endDate": "2008051400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9388
+        },
+        {
+          "questId": 9386,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9387
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1002508
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1002100,
+      "items": [
+        {
+          "itemId": 4000046,
+          "count": 3
+        },
+        {
+          "itemId": 1002508
+        },
+        {
+          "itemId": 4000028,
+          "count": 3
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 7130100,
+          "count": 30
+        },
+        {
+          "monsterId": 7130101,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000,
+      "items": [
+        {
+          "itemId": 4000028,
+          "count": -3
+        },
+        {
+          "itemId": 4000046,
+          "count": -3
+        },
+        {
+          "itemId": 1002508,
+          "count": -1
+        },
+        {
+          "itemId": 1002511
+        }
+      ]
+    }
+  }
+}

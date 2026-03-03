@@ -1,0 +1,54 @@
+{
+  "questId": 4215,
+  "info": {
+    "name": "플로팅마켓 수호대 가입하기5",
+    "parent": "플로팅마켓 수호대 가입하기",
+    "descriptions": {
+      "notStarted": "마을의 장로님인 #b#p9250014##k의 도장을 받아야 하는데, 명상 중이시라고 한다. 잠시 후에 말을 걸어보자.",
+      "inProgress": "마지막으로 만날 요원은 #b#p9250004##k이다. 들리는 소문에 의하면 그분은 유명한 무예타이 사부라고 하던데.. ",
+      "completed": "마지막 요원인 #b#p9250004##k를 만났다."
+    },
+    "area": 48,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250014,
+      "minLevel": 10,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4214,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9250004,
+      "items": [
+        {
+          "itemId": 4031386
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031386
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 250,
+      "items": [
+        {
+          "itemId": 4031386,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "questId": 1117,
+  "info": {
+    "name": "이얀의 사랑의 증표",
+    "descriptions": {
+      "notStarted": "#t4031685#를 받으려면 이얀을 찾아가보자.",
+      "inProgress": "이얀은 나의 사랑을 증명하라면서 #b#t4000018# 40#k개를 가져오라고 했다.\\n\\n#i4000018##t4000018# #b#c4000018# / 40#k",
+      "completed": "이얀에게 사랑의 증표를 얻었다."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022007,
+      "repeatIntervalMinutes": 0,
+      "infoNumber": 1100,
+      "infoEx": [
+        null
+      ],
+      "items": [
+        {
+          "itemId": 4031685
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022007,
+      "items": [
+        {
+          "itemId": 4000018,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000018,
+          "count": -40
+        },
+        {
+          "itemId": 4031685
+        }
+      ]
+    }
+  }
+}

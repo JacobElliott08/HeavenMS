@@ -1,0 +1,45 @@
+{
+  "questId": 3722,
+  "info": {
+    "name": "The Crying Girl\u0027s Sketchbook",
+    "parent": "Year 2021- Just Another Day",
+    "descriptions": {
+      "inProgress": "Find Loose-Leaf Pages from the Sketchbook the Slimes ate and return it to the Crying Girl.\\r\\n",
+      "completed": "You have collected the Loose-Leaf Pages from the Sketchbook and returned them to the Girl. However, the girl seemed to be even more saddened by the pages that were chewed up by the Slimes."
+    },
+    "area": 41,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082006,
+      "minLevel": 72,
+      "prerequisiteQuests": [
+        {
+          "questId": 3721,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082006,
+      "items": [
+        {
+          "itemId": 4032513,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 65000,
+      "items": [
+        {
+          "itemId": 4032513,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

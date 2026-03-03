@@ -1,0 +1,41 @@
+{
+  "questId": 8052,
+  "info": {
+    "name": "Umi\u0027s Spiced Veggies",
+    "descriptions": {
+      "notStarted": "Umi of Showa Town sounds like she\u0027s stuck in a tough spot. I should go talk to her.",
+      "inProgress": "She said she needed a solid rock to help her make spice vegetables. A solid rock...speaking of which, I remember hearing that #b#o6400100##k the monster collects them. \\n#t04000131#  #b#c04000131##k/80",
+      "completed": "Umi\u0027s spiced vegetables sure sound enticing. I should go get some later~!"
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120005,
+      "minLevel": 75
+    },
+    "complete": {
+      "npc": 9120005,
+      "items": [
+        {
+          "itemId": 4000131,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000131,
+          "count": -80
+        },
+        {
+          "itemId": 2040713
+        }
+      ],
+      "experience": 20000
+    }
+  }
+}

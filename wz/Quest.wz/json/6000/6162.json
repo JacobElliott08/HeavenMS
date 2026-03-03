@@ -1,0 +1,37 @@
+{
+  "questId": 6162,
+  "info": {
+    "name": " Another Crazy Genius?!",
+    "parent": "Shammos\u0027s past",
+    "descriptions": {
+      "inProgress": " After an uneasy silence, #p1032001# spoke at last. He said that the main character of the book is none other than #p2022003#, who used to be a human and a genius Magician. Then he asked me to go check out the elder\u0027s official residence, #b#p2022003##k, to see how he\u0027s doing these days...",
+      "completed": "#p2022003# is still out of it. But I think I heard him say #p1032001# .."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "jobs": [
+        212,
+        222,
+        232
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6161,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2022003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200000
+    }
+  }
+}

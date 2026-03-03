@@ -1,0 +1,27 @@
+{
+  "questId": 29916,
+  "info": {
+    "name": "Henesys Donor Medal",
+    "descriptions": {
+      "completed": "Donations are a quick way to give back to the community. You have earned the #b\u003cHenesys Donor\u003e#k title."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142014
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "normalAutoStart": true,
+      "startScript": "q29916s",
+      "items": [
+        {
+          "itemId": 1142014
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000066
+    }
+  }
+}

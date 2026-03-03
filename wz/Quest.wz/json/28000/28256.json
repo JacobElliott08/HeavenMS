@@ -1,0 +1,73 @@
+{
+  "questId": 28256,
+  "info": {
+    "name": "Treasure, and Crocell the Demon",
+    "descriptions": {
+      "notStarted": "#b#@1072008:##k in #bNautilus#k says it is now time to defeat #rCrocell#k. Let\u0027s go find her.",
+      "inProgress": "If you go to #b#m100030000##k, you will find the Dark Portal where #rCrocell#k is hiding. You can enter using #rCrocell\u0027s Emblem#k. Defeat #rCrocell#k!\\n\\nReport back to #b#@1072008:##k in #bNautilus#k upon completion.",
+      "completed": "Although you have defeated #rCrocell#k, whose seal had been broken, who or what is responsible for the broken seal still remains a mystery."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28255,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "monsters": [
+        {
+          "monsterId": 9400611
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032494
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032494
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 1003035
+        },
+        {
+          "itemId": 4032496
+        },
+        {
+          "itemId": 4032494,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

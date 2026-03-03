@@ -1,0 +1,48 @@
+{
+  "questId": 6120,
+  "info": {
+    "name": "The Dragon\u0027s Guardian",
+    "parent": "Dragon Heart ",
+    "descriptions": {
+      "notStarted": "#b#p2081007##k, guardian of the holy dragon Nine Spirit. I heard he knows a lot about dragons.",
+      "inProgress": "I met Raul, who introduced himself as the knight who guards the holy dragon, Nine Spirit. He needs help making the dragon grow and I\u0027ve agreed to assist him. He told me to get #b#t04031449##k in order to make the baby dragon display it\u0027s potential power. #t04031449# can only be obtained from a living dragon....If I catch a Wyvern, I\u0027m sure I can get it. \\n\\n#i4031449##t4031449# #b#c4031449#/20#k",
+      "completed": "After a bit of Wyvern hunting, I brought #t4031449#, Raul breathed power to the baby dragon. Now the baby dragon has #r#q2321003##k\u0027s power!"
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081007,
+      "jobs": [
+        232
+      ]
+    },
+    "complete": {
+      "npc": 2081007,
+      "items": [
+        {
+          "itemId": 4031449,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300000,
+      "items": [
+        {
+          "itemId": 4031449,
+          "count": -20
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 2321003,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

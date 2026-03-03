@@ -1,0 +1,41 @@
+{
+  "questId": 8058,
+  "info": {
+    "name": "Traveling Around Maple 6",
+    "parent": "Traveling Around Maple",
+    "descriptions": {
+      "notStarted": " After observing the magnificent view of El Nath, I should start up a conversation with Scadur",
+      "inProgress": "Scadur offered to take me to Omega Sector. Once I get there, he advised me to look for Jr. Officer Medin...",
+      "completed": "I was able to meet up with Jr. Officer Medin. Where will I go next?"
+    },
+    "area": 40,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020007,
+      "startDate": "2005010100",
+      "endDate": "2005010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 8057,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050009
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 8059,
+      "items": [
+        {
+          "itemId": 2002011,
+          "count": 3
+        }
+      ]
+    }
+  }
+}

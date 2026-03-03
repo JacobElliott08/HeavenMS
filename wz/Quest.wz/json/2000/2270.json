@@ -1,0 +1,33 @@
+{
+  "questId": 2270,
+  "info": {
+    "name": "My dream is to...",
+    "descriptions": {
+      "notStarted": "Blake has a dream...but he wants you to talk to him about it in a little bit, since he\u0027s in the middle of something.",
+      "inProgress": "Blake wants to be a singer! Will his dream come true? Talk to #bLana#k the CEO of Big Hit Records. She\u0027s shopping in Kerning Square.",
+      "completed": "Will Blake\u0027s dream ever come true?"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052117,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2292,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052121
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1320
+    }
+  }
+}

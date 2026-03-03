@@ -1,0 +1,45 @@
+{
+  "questId": 21729,
+  "info": {
+    "name": "4th Assignment Completed",
+    "descriptions": {
+      "notStarted": "This is your fourth assignment as an informant and while you\u0027ve found the puppeteer\u0027s cave, you need a password to enter. Maybe #p1061019# knows what the password could be? Go talk to #b#p1061019##k in #b#m105040300##k.",
+      "inProgress": "#p1061019# says that he doesn\u0027t know anything about the password but says that he saw the puppeteer scribble something onto #p1061006# that just might be the password. Find out what the password is by talking to #b#p1061006##k and tell #b#p1002104##k the password is as well.\\r\\n\\r\\n#y21730# #b(#u20730#)#k",
+      "completed": "So you found out the password but decided to first return to #p1002104# and debrief him on the case. This concludes your fourth Informant Assignment. Next up, Operation Puppeteer Headquarters?"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061019,
+      "minLevel": 28,
+      "startScript": "q21729s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21728,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1002104,
+      "prerequisiteQuests": [
+        {
+          "questId": 21730,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500
+    }
+  }
+}

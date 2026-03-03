@@ -1,0 +1,46 @@
+{
+  "questId": 4303,
+  "info": {
+    "name": "Hanako\u0027s Foxtail Muffler 2",
+    "parent": "Hanako\u0027s Foxtail Wardrobe",
+    "descriptions": {
+      "notStarted": "#b#p9120001##k, who wanted to make a #t4000066# muffler, haven\u0027t finished making it. I wonder what she\u0027s lacking...",
+      "inProgress": "#p9120001# wanted to make a muffler out of #t4000066#, so I gave her 100 #t4000066#s. Despite the work, #p9120001# flat-out insisted that she asked for 300 all along, and demanded that I get her 200 more. I didn\u0027t need to hear that from her, but I\u0027ll have to get her 200 more... #b200 more #t4000066#s#k? That\u0027s a lot!\\n\\n#t4000066# #b#c4000066#/200",
+      "completed": "I gave #p9120001# 200 #t4000066#s. Hopefully this will do."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120001,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 4302,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120001,
+      "items": [
+        {
+          "itemId": 4000066,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "items": [
+        {
+          "itemId": 4000066,
+          "count": -200
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "questId": 6164,
+  "info": {
+    "name": "Grendel the Really Old\u0027s Apology",
+    "parent": "Shammos\u0027s past",
+    "descriptions": {
+      "inProgress": " #p2022003# seems very resentful.  #p1032001# asked me to tell him that he\u0027s sorry. But would #p2022003# even accept his apology?  Either way,  let\u0027s go to #b#p2022003##k and relay #p1032001#\u0027s message.",
+      "completed": "#p2022003# just kept shouting #p2020009# and #p1032001#\u0027s name. I wonder if he\u0027s really crazy..."
+    },
+    "area": 10,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "jobs": [
+        212,
+        222,
+        232
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6163,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2022003
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200000
+    }
+  }
+}

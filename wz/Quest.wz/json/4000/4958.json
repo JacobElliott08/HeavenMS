@@ -1,0 +1,43 @@
+{
+  "questId": 4958,
+  "info": {
+    "name": "Halloween : Entering the house",
+    "descriptions": {
+      "notStarted": "I\u0027ve made it into the Prendergast Mansion! I don\u0027t know what  Old Man Tom would react to my success though...",
+      "inProgress": "I\u0027ve made it into the Prendergast Mansion! I don\u0027t know what  Old Man Tom would react to my success though...",
+      "completed": "I\u0027ve made it into the Prendergast Mansion! I don\u0027t know what  Old Man Tom would react to my success though..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201079,
+      "items": [
+        {
+          "itemId": 1002140,
+          "count": 1000
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201079,
+      "items": [
+        {
+          "itemId": 1002140,
+          "count": 1000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1,
+      "items": [
+        {
+          "itemId": 1002140,
+          "count": 0
+        }
+      ]
+    }
+  }
+}

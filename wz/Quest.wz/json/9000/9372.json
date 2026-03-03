@@ -1,0 +1,34 @@
+{
+  "questId": 9372,
+  "info": {
+    "name": "기억하고 있는 자를 찾아서...",
+    "descriptions": {
+      "notStarted": "마을을 습격한 몬스터들을 물리치고 #t4031282#을 #p9010000#에게 가져갔다. #p9010000#는 위험한 #t4031282#을 보고 두려움을 느끼는데...",
+      "inProgress": "#t4031282#을 보고 위험하다는 것을 느낀 #b#p9010000##k는 #b#t4031282##k을 봉인할 수 있는 사람을 소개시켜 줬다. 그의 이름은 #b#p1061011##k... 그를 찾기 위해서는 던전 안에 있는 마을인 #r#m105040300##k로 가야한다고 하는데...",
+      "completed": "던전 안에 있는 마을인 #m105040300#에서 \u0027#p1061011#\u0027를 찾을 수 있었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "startDate": "2006112400",
+      "endDate": "2007092400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9370,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100
+    }
+  }
+}

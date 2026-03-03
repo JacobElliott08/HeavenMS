@@ -1,0 +1,44 @@
+{
+  "questId": 10459,
+  "info": {
+    "name": "골드리치의 나침반",
+    "descriptions": {
+      "notStarted": "카산드라가 골드리치의 보물섬에 무슨 일이 생긴 것 같다고 하는데.. #b카산드라#를 찾아가 보자.",
+      "inProgress": "보물섬의 위치를 알려줄 나침반이 필요하다면 카산드라에게 말을 걸자.",
+      "completed": "몬스터들에게서 #b나침반용 N,E,W,S#k를 모두 모았다면 #b#t2430007##k을 더블클릭하면 골드리치의 보물섬으로 갈 수 있는 #t2430008#를 만들 수 있다고 한다. \\n\\n#i3994102##t3994102#  #b#c3994102#/1#k \\n#i3994103##t3994103#  #b#c3994103#/1#k \\n#i3994104##t3994104#  #b#c3994104#/1#k \\n#i3994105##t3994105#  #b#c3994105#/1#k \\n#i2430007##t2430007#  #b#c2430007#/1#k"
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 13,
+      "normalAutoStart": true,
+      "repeatIntervalMinutes": 30,
+      "startDate": "2009103000",
+      "endDate": "2009103100",
+      "items": [
+        {
+          "itemId": 2430007
+        },
+        {
+          "itemId": 2430008
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 2430007
+        }
+      ]
+    }
+  }
+}

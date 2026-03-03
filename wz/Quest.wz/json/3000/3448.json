@@ -1,0 +1,83 @@
+{
+  "questId": 3448,
+  "info": {
+    "name": "Mason the Collector",
+    "parent": "Mason the Collector",
+    "descriptions": {
+      "notStarted": "I should meet Mason, who newly moved into a previously-empty house at Ludibrium.",
+      "inProgress": "The bird with an odd way of talking, Mason the Collector is always busy looking for something to collect. It especially has a fondness for sparkling objects, and apparently found the Aurora Marble at the Warped Path of Time. Hmmm... wonder who has that item? \\n\\n#t4031189::# #b#c4031189#/1#k",
+      "completed": "At the Warped Path of Time, I took out the Lazy Buffys, collected the Aurora Marble, and handed it to Mason."
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041027,
+      "minLevel": 60
+    },
+    "complete": {
+      "npc": 2041027,
+      "items": [
+        {
+          "itemId": 4031189
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2700,
+      "items": [
+        {
+          "itemId": 4031189,
+          "count": -1
+        },
+        {
+          "itemId": 4004000,
+          "probability": 10
+        },
+        {
+          "itemId": 4004001,
+          "probability": 10
+        },
+        {
+          "itemId": 4004002,
+          "probability": 10
+        },
+        {
+          "itemId": 4011007,
+          "probability": 10
+        },
+        {
+          "itemId": 4011006,
+          "probability": 10
+        },
+        {
+          "itemId": 4011005,
+          "probability": 10
+        },
+        {
+          "itemId": 4080006,
+          "probability": 10
+        },
+        {
+          "itemId": 4080010,
+          "probability": 10
+        },
+        {
+          "itemId": 4004004,
+          "probability": 5
+        },
+        {
+          "itemId": 4004003,
+          "probability": 5
+        },
+        {
+          "itemId": 4080011,
+          "probability": 10
+        }
+      ]
+    }
+  }
+}

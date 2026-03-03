@@ -1,0 +1,48 @@
+{
+  "questId": 9987,
+  "info": {
+    "name": "Materials for the Mysterious Fabric",
+    "parent": "Snow Silk and the Mysterious Fabric ",
+    "descriptions": {
+      "inProgress": "Winston the archaeologist said the reason he is looking for the Snow Silk is to get the #bMysterious Fabric#k, which is made from Snow Silk.  The Snow Silk is said to add Mysterious Power to any object that is made with it and he said if I\u0027m interested in this #bMysterious Fabric#k, to gather #b10 Snow Silks#k and to go see Arwen the Fairy.\\n\\n#i4001166# #t4001166# #b#c4001166# / 10",
+      "completed": "As Winston the archaeologist advised, I gathered 10 Snow Silk and went to go see Arwen the fairy.  Arwen was amazed that I collected 10 Snow Silk and secretly made the Mysterious Fabric for me without the other fairies knowing.  Arwen warned me of the Mysterious Fabric\u0027s power and advised me that if she were to have a Mysterious Fabric, that she would go see #e#bFrancois #k#n."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022006,
+      "minLevel": 10,
+      "endDate": "2009061623",
+      "prerequisiteQuests": [
+        {
+          "questId": 9986,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032100,
+      "items": [
+        {
+          "itemId": 4001166,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4001166,
+          "count": -10
+        },
+        {
+          "itemId": 4031945
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "questId": 3918,
+  "info": {
+    "name": "The Little Prince that Loves the Stars",
+    "parent": "For the Little Prince",
+    "descriptions": {
+      "notStarted": "I remember seeing a boy sitting in the middle of the desert with a rose. He must not have been thirsty, because he kept worrying about the rose. I wonder if he\u0027s doing alright. I better go see him.",
+      "inProgress": "The strange boy was gazing up on the sky, then said to me in a sad tone, that he can\u0027t see a star. A star? What kind of a star is he looking at? I felt pretty sad watching him make a sad face wondering why he can\u0027t see a star, so I promised him I\u0027ll get #b#t4000333##k from #r#o2100108##k so he can see his star.  \\n\\n#i4000333# #t4000333#  #b#c4000333##k/20",
+      "completed": "After I gave that strange boy the #t4000333#, he flashed that bright smile of his. He said he\u0027s from a different planet... what does he mean? Is he an alien? He\u0027s hard to understand, but seeing him smile like that made me feel less weird about him."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101006,
+      "minLevel": 32,
+      "prerequisiteQuests": [
+        {
+          "questId": 3917,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101006,
+      "items": [
+        {
+          "itemId": 4000333,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4650,
+      "items": [
+        {
+          "itemId": 1032010
+        },
+        {
+          "itemId": 4000333,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

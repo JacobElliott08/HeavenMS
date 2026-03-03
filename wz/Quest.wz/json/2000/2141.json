@@ -1,0 +1,64 @@
+{
+  "questId": 2141,
+  "info": {
+    "name": "Beginner Thief\u0027s Second Training Session",
+    "descriptions": {
+      "notStarted": "I became stronger but have a long way to go. Let\u0027s go to #b#p1052001##k again for training. ",
+      "inProgress": "#p1052001# told me keep hunting monsters as I lacking basic training. He told me to eliminate #r50 #o130100##k... \\n\\n#o130100# #r#a21411##k",
+      "completed": "I\u0027ve eliminated 50 #o130100# and reported to #p1052001#. 50 of them....I\u0027m great, I thought. Then, #p1052001# warned me that I should not let my head swell too big..."
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 2140,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052001,
+      "monsters": [
+        {
+          "monsterId": 130100,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 610,
+      "items": [
+        {
+          "itemId": 2000001,
+          "count": 30
+        },
+        {
+          "itemId": 2000003,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

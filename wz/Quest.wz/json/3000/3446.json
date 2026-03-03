@@ -1,0 +1,45 @@
+{
+  "questId": 3446,
+  "info": {
+    "name": "The Soul Collector",
+    "descriptions": {
+      "notStarted": "Ghosthunter Bob of Ludibrium is complaining that he lost the vacuum that gathers up the spirits in it..",
+      "inProgress": "Apparently, once Ghosthunter Bob focuses on eating, he will never realize about anything and everything, including the thefts. This is the reason he had no idea his Soul Collector had been missing. I better help him find it back. \\n\\n#t4031193# #b#c4031193##k/1 \\n#o8141000# Eliminate #r#a34461##k",
+      "completed": "I helped Ghosthunter Bob recover the lost Soul Collector."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041026,
+      "minLevel": 85,
+      "repeatIntervalMinutes": 1440
+    },
+    "complete": {
+      "npc": 2041026,
+      "items": [
+        {
+          "itemId": 4031193
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 8141000,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 63000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4031193,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "questId": 7301,
+  "info": {
+    "name": "Secret Medicine for Transformation",
+    "parent": "War of the Dragons",
+    "descriptions": {
+      "inProgress": " Moira, whom I met at the entrance of the Cave of Life, asked me to defeat Horntail. She said that she would make me a secret medicine that allows one to transform into a dragon, which I\u0027ll need to pass through the entrance of the cave that is guarded by Horntail\u0027s follower, Keroben . \\nLet\u0027s get back to Moira with all the ingredients.\\n\\n#i4001075##t4001075#  #b#c4001075##k / 1\\n#i4000267##t4000267#  #b#c4000267##k / 1\\n#i4001076##t4001076#  #b#c4001076##k / 1\\n#i4001077##t4001077#  #b#c4001077##k / 10\\n#i4001078##t4001078#  #b#c4001078##k / 1",
+      "completed": "Moira told me about the war of the dragons and asked me to defeat Horntail. Moira said that she will make me a secret medicine to transform if I bring him/her all the ingredients he/she had asked me, which I would need to get passed #p2081005# and enter Horntail\u0027s cave.. Let\u0027s get all the ingredients to Moira. Moira made me a secret medicine that can transform me into Cornian."
+    },
+    "area": 41,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081006,
+      "prerequisiteQuests": [
+        {
+          "questId": 7300,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081006,
+      "items": [
+        {
+          "itemId": 4001077,
+          "count": 10
+        },
+        {
+          "itemId": 4001078
+        },
+        {
+          "itemId": 4001075
+        },
+        {
+          "itemId": 4001076
+        },
+        {
+          "itemId": 4000267
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300000,
+      "buffItemId": 2210003,
+      "items": [
+        {
+          "itemId": 4001075,
+          "count": -1
+        },
+        {
+          "itemId": 4000267,
+          "count": -1
+        },
+        {
+          "itemId": 4001076,
+          "count": -1
+        },
+        {
+          "itemId": 4001077,
+          "count": -10
+        },
+        {
+          "itemId": 4001078,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

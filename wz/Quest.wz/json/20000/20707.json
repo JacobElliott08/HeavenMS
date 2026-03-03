@@ -1,0 +1,76 @@
+{
+  "questId": 20707,
+  "info": {
+    "name": "Revolt of the Pigs",
+    "descriptions": {
+      "notStarted": "I\u0027ll need to talk to Agent #b#p1103001##k of #m100000000#, who apparently received some disturbing news.",
+      "inProgress": "Was I too late in finding that black shadow? Apparently, the #o1210100#s at the #o1210100# Farm have caused a revolt. The agent believes that one of Black Mage\u0027s men has probably set up a device in the area that causes such chaos. #p1103001# assigned me to defeat the #r#o1210100#s#k and if I happen to come across an item called #b#t4032130##k, then I should bring it back to him. \\n\\n#o1210100##r #a207071##k \\n#o1210101##r #a207072##k \\n#i4032130# #t4032130# #b#c4032130# / 1#k",
+      "completed": "I was able to eliminate #o1210100#s and prevented their revolt from being carried out any further. After handing in the #p1103001# to #t4032130#, he had a disturbed look on his face. I wonder what\u0027s going on."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103001,
+      "minLevel": 14,
+      "prerequisiteQuests": [
+        {
+          "questId": 20706,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1103001,
+      "items": [
+        {
+          "itemId": 4032130
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 1210100,
+          "count": 100
+        },
+        {
+          "monsterId": 1210101,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1500,
+      "items": [
+        {
+          "itemId": 4032130,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

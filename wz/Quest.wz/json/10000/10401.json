@@ -1,0 +1,26 @@
+{
+  "questId": 10401,
+  "info": {
+    "name": "The True Winter King / Winter Queen Event of 2010!",
+    "descriptions": {
+      "notStarted": "Winter is here, and the chilly cold is already affecting everyone! If you wish to become the Winter King or Winter Queen of 2010, you\u0027d better go see Cassandra.",
+      "inProgress": "What, she\u0027s going to give you a present? All you did was train diligently throughout the winter!",
+      "completed": "On a cold winter day in 2010, you have become the ultimate Winter King or Winter Queen."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 13,
+      "endDate": "2010021700",
+      "startScript": "q10401s",
+      "normalAutoStart": true,
+      "infoNumber": 10402,
+      "infoEx": [
+        null
+      ]
+    }
+  }
+}

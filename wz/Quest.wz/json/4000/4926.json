@@ -1,0 +1,37 @@
+{
+  "questId": 4926,
+  "info": {
+    "name": "Interstellar Relics",
+    "descriptions": {
+      "notStarted": "a",
+      "inProgress": "Professor Foxwit spoke with me about the space-based Artifacts suddenly being discovered. He\u0027s believes he can invent new and different items with them by using the knowledge he\u0027s acquired over years of time-travel. He is willing to experiment on any Artifacts I should find. If I bring him a valid set of those I find, he\u0027ll be able to tell me what I can make and give me a blueprint to make it...",
+      "completed": "Professor Foxwit spoke with me about the space-based Artifacts suddenly being discovered. He\u0027s believes he can invent new and different items with them by using the knowledge he\u0027s acquired over years of time-travel. He is willing to experiment on any Artifacts I should find. If I bring him a valid set of those I find, he\u0027ll be able to tell me what I can make and give me a blueprint to make it..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201052,
+      "items": [
+        {
+          "itemId": 1002140,
+          "count": 1000
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201052,
+      "items": [
+        {
+          "itemId": 1002140,
+          "count": 1000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1
+    }
+  }
+}

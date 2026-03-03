@@ -1,0 +1,62 @@
+{
+  "questId": 1038,
+  "info": {
+    "name": "Maria\u0027s Letter",
+    "parent": "Sam\u0027s Request",
+    "descriptions": {
+      "inProgress": "Maria said that she feels relieved that the snails are gone, and that she can now concentrate on collecting the mushrooms. To make sure no one worries about her, she told me to give this letter to #bChief Lucas#k of #bAmherst#k.",
+      "completed": "After reading the letter, Lucas seemed quite relieved, and told me he has someone he wants to introduce to me #bthat can train me#k."
+    },
+    "area": 20,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2103,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1037,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 12000,
+      "items": [
+        {
+          "itemId": 4031800
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031800
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 40,
+      "items": [
+        {
+          "itemId": 2000000,
+          "count": 5
+        },
+        {
+          "itemId": 2000003,
+          "count": 5
+        },
+        {
+          "itemId": 4031800,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

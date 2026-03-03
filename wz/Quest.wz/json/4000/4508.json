@@ -1,0 +1,66 @@
+{
+  "questId": 4508,
+  "info": {
+    "name": "Angie\u0027s Beloved Costume 2",
+    "parent": "Angie\u0027s Beloved Costume",
+    "descriptions": {
+      "notStarted": "#p9270032#, who is obsessed with fashion, is looking for help once more. What should it be this time?",
+      "inProgress": "She is definitely obsessed with fashion! She wants another dress. Wonder how many dresses she has in her closet. Is she a fashion model or something? Well, let\u0027s just give her what she needs.\\n\\n#t4000035#  #r#c4000035#/25#k\\n#t4000021#  #r#c4000021#/25#k\\n#t4021003#  #r#c4021003#/5",
+      "completed": "Angie rewarded carrot cake to me to show her appreciation for gathering the items for her new clothes. It looks so delicious."
+    },
+    "area": 48,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270032,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 4507,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270032,
+      "items": [
+        {
+          "itemId": 4000035,
+          "count": 25
+        },
+        {
+          "itemId": 4021003,
+          "count": 5
+        },
+        {
+          "itemId": 4000021,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4500,
+      "items": [
+        {
+          "itemId": 2022205,
+          "count": 20
+        },
+        {
+          "itemId": 4000021,
+          "count": -25
+        },
+        {
+          "itemId": 4021003,
+          "count": -5
+        },
+        {
+          "itemId": 4000035,
+          "count": -25
+        }
+      ]
+    }
+  }
+}

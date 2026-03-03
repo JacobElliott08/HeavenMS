@@ -1,0 +1,23 @@
+{
+  "questId": 2222,
+  "info": {
+    "name": "The Forest of Evil",
+    "parent": "The Forest of Evil",
+    "descriptions": {
+      "notStarted": "#b#p1032100##k who lives in #b#m101000000##k was in a dangerous situation... ",
+      "inProgress": "Arwen says she was attacked by a giant monkey monster in the forest. Although she\u0027s wasn\u0027t hurt, she was angry that something like this was still happening because #p1032001# had casted the magic of darkness during his days of youth. Let\u0027s go find #b#p1032001##k.",
+      "completed": "#p1032001# admits that he did, indeed, make a mistake a while back when he was young that is still affecting #m101000000#. He asks  you to find #b#p1040002##k the cat in #b#m101020000##k to see what information you can get regarding the monster that attacked Arwen."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032100,
+      "minLevel": 50
+    },
+    "complete": {
+      "npc": 1032001
+    }
+  }
+}

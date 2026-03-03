@@ -1,0 +1,44 @@
+{
+  "questId": 21758,
+  "info": {
+    "name": "Neinheart\u0027s Thanks",
+    "descriptions": {
+      "notStarted": "#b#p1101002##k is sending you a message…",
+      "inProgress": "#p1101002# thanks you for protecting the tears of the Divine Bird and wants to give you a reward for it. You\u0027d better head over to #b#m130000000##k.",
+      "completed": "As a token of his appreciation, #p1101002# taught you a new skill and mumbled that he hoped you might one day join forces with him. That smile of his seemed to convey a million subtle meanings."
+    },
+    "area": 6,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "minLevel": 70,
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 21757,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1101002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "skills": [
+        {
+          "skillId": 21110002,
+          "masterLevel": 20
+        }
+      ]
+    }
+  }
+}

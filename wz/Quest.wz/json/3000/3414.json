@@ -1,0 +1,42 @@
+{
+  "questId": 3414,
+  "info": {
+    "name": "The History of Zeta Leticulan",
+    "descriptions": {
+      "notStarted": "I better go see Black Mesoranger, who should be somewhere around Kulan Field.",
+      "inProgress": "I met Black Mesoranger again at a field around Omega Sector. She said the notes have been deciphered, and they revealed that the original planet in which the Grays lived in has been affected with lethal contaminants. Ever since then, they\u0027ve been looking for a new place to live in, and the Earth turned out to be an ideal place for them. She said that she needed to see which lethal containments aliens couldn\u0027t stand that currently infest their original planet, and requested that I extract the #bskin cells of Barnard Gray, Zeta Gray, Ultra Gray, and Chief Gray#k.\\n\\n#t4031103# #b#c4031103##k/1\\n#t4031104# #b#c4031104##k/1\\n#t4031105# #b#c4031105##k/1\\n#t4031106# #b#c4031106##k/1",
+      "completed": "I extracted the cells of #bBarnard Gray, Zeta Gray, Ultra Gray, and Chief Gray#k, and handed them to Black Mesoranger, who was at a field around Omega Sector. If the pollutants are poisonous enough for them to leave the planet for good, then our planet may not be safe for much longer..."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040018,
+      "minLevel": 45,
+      "prerequisiteQuests": [
+        {
+          "questId": 3413,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040018,
+      "items": [
+        {
+          "itemId": 4031103
+        },
+        {
+          "itemId": 4031104
+        },
+        {
+          "itemId": 4031105
+        },
+        {
+          "itemId": 4031106
+        }
+      ],
+      "endScript": "q3414e"
+    }
+  }
+}

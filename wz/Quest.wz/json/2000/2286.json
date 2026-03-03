@@ -1,0 +1,50 @@
+{
+  "questId": 2286,
+  "info": {
+    "name": "Request for a New Song",
+    "descriptions": {
+      "notStarted": "Lana wants you to request a new song from a genius composer? Maestro Rho is not only known for his talents but is also infamous for his arrogance. Oh well, gotta do what you gotta do. Go talk to #bMaestro Rho#k and request a new song.",
+      "inProgress": "Destroy the Cheap Amplifiers and find Maestro Rho\u0027s lost MP3 player. Follow the sound coming from the 7th-8th floor to where #bJune#k is on duty.",
+      "completed": "When you found the MP3 player and returned it to Maestro Rho, he said he wanted to listen to some music before helping you. How rude! But this is for Blake, so you should ask him again... And try to be nice."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052120,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2285,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052120,
+      "items": [
+        {
+          "itemId": 4032509
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 4300011,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 14100,
+      "items": [
+        {
+          "itemId": 4032509,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

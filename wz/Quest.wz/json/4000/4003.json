@@ -1,0 +1,64 @@
+{
+  "questId": 4003,
+  "info": {
+    "name": "오씨의 버블티 사업",
+    "parent": "껌팔이 소녀의 효심",
+    "descriptions": {
+      "notStarted": "#b#p9330018##k를 찾아가 #b#p9330017##k의 할머니께 드릴 음식을 구하자.",
+      "inProgress": "#b#p9330018##k가 새로운 사업에 쓸 버블을 구해다 주자.\\n\\n#i4000254##t4000254#  #b#c4000254#/30#k\\n#i4000255##t4000255#  #b#c4000255#/30#k\\n#i4000256##t4000256#  #b#c4000256#/30",
+      "completed": "#b#p9330018##k의 일을 돕고 맛있는 죽을 얻었다."
+    },
+    "area": 48,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9330018,
+      "minLevel": 35,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4002,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9330018,
+      "items": [
+        {
+          "itemId": 4000254,
+          "count": 30
+        },
+        {
+          "itemId": 4000255,
+          "count": 30
+        },
+        {
+          "itemId": 4000256,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5400,
+      "items": [
+        {
+          "itemId": 4000254,
+          "count": -30
+        },
+        {
+          "itemId": 4000255,
+          "count": -30
+        },
+        {
+          "itemId": 4000256,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

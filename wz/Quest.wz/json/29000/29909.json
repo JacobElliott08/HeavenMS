@@ -1,0 +1,32 @@
+{
+  "questId": 29909,
+  "info": {
+    "name": "Chief Knight",
+    "descriptions": {
+      "notStarted": "You can acquire the #b\u003cChief Knight\u003e#k title by blocking the curse of the Black Witch.",
+      "inProgress": "You can acquire the #\u003cChief Knight\u003e#k title by blocking the curse of the Black Witch.",
+      "completed": "You have saved the Empress from danger by blocking the curse of the Black Witch. For your tremendous accomplishment, you have received the#b\u003cChief Knight\u003e#k title, the highest position in the Cygnus Knights."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142069
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 120,
+      "normalAutoStart": true,
+      "npc": 1101000,
+      "startScript": "q29909s",
+      "jobs": [
+        1112,
+        1212,
+        1312,
+        1412,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1101000
+    }
+  }
+}

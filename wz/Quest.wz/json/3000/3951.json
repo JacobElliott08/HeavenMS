@@ -1,0 +1,33 @@
+{
+  "questId": 3951,
+  "info": {
+    "name": "The Tree Cutter\u0027s Test",
+    "descriptions": {
+      "notStarted": "#b#p2071011##k in #b#m222010102##k is looking for me? That\u0027s strange.  What does he want with me...? ",
+      "inProgress": "I spoke with #p2071011#.  He saw that I come here often, so he wanted to tell me to stay away from this dangerous place.  But, seriously?  He\u0027s afraid to walk around the forest because of #o5100003#?  If I don\u0027t convince #p2071011# that I\u0027m strong enough to handle myself here, he might physically drag me out of  #m222000000#.  I better hurry up and prove it to him!\\n\\n#r30 minute time limit\\n#k#o5100003#  #r#a39511##k",
+      "completed": "#p2071011# was amazed that I was able to hunt all the #o5100003# in such a short time.  But after all that work, all I got was permission to freely roam around the forest...  Wonderful..."
+    },
+    "area": 37,
+    "timeLimit": 1800
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071011,
+      "minLevel": 53
+    },
+    "complete": {
+      "npc": 2071011,
+      "monsters": [
+        {
+          "monsterId": 5100003,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000
+    }
+  }
+}

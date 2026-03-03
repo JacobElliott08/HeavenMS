@@ -1,0 +1,97 @@
+{
+  "questId": 6800,
+  "info": {
+    "name": "An Arrangement from the Goddess.",
+    "descriptions": {
+      "notStarted": "After countless battles... the goddess has prepared something for me. I better go visit the Statue of Goddess at Orbis.",
+      "inProgress": "The statue was always silent, but all of a sudden, I could hear a voice. The goddess told me as a person that has reached the highest level that is available, and challenged me to step up and put in the effort to help others. She told me to let her know of my decision. Hmm...",
+      "completed": "I received a new skill from the Goddess called the Echo of the Hero. This isn\u0027t for my own benefit, but for everyone else around me. The statue, which always had a sad face on, seems to be smiling as I look at it once more."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030005,
+      "minLevel": 200,
+      "jobs": [
+        0,
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 2030005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "skills": [
+        {
+          "skillId": 1005,
+          "skillLevel": 1,
+          "masterLevel": 1
+        }
+      ]
+    }
+  }
+}

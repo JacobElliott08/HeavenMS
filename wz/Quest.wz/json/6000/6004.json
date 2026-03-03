@@ -1,0 +1,69 @@
+{
+  "questId": 6004,
+  "info": {
+    "name": "Lost Saddle",
+    "descriptions": {
+      "notStarted": "I lost the #t1912000# that I received from #b#p2060005##k!  What should I do?  Hmmm... maybe I should go see #p2060005#. I hope he\u0027s nice enough to give me another one!",
+      "inProgress": "#p2060005# says that making a #t1912000# for monster riding requires special ingredients.  He needs #b200#t4000171#, 200 #t4000030#, 200 #t4000055##k.  #p2060005# says he will also need #b5 million mesos#k for \"research purposes\".  I believe this is otherwise known as \"extortion\". He\u0027s probably a bit upset at me for losing the first one. Oh well, looks like I\u0027ve got some work to do...\\n\\n#i4000171##t4000171# #b#c4000171#/200#",
+      "completed": " I returned to #p2060005# with the proper materials and the 5 million meso extortion--I mean \"Research Fee\". In return for my efforts, I received #t1912000# from #p2060005#.  I should be able ride monsters again with this. I\u0027ll be sure not to lose it again!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 6002,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1912000
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060005,
+      "items": [
+        {
+          "itemId": 4000030,
+          "count": 200
+        },
+        {
+          "itemId": 4000055,
+          "count": 200
+        },
+        {
+          "itemId": 4000171,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "meso": -5000000,
+      "items": [
+        {
+          "itemId": 4000171,
+          "count": -200
+        },
+        {
+          "itemId": 4000030,
+          "count": -200
+        },
+        {
+          "itemId": 4000055,
+          "count": -200
+        },
+        {
+          "itemId": 1912000
+        }
+      ]
+    }
+  }
+}

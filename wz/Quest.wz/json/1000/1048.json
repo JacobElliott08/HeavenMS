@@ -1,0 +1,26 @@
+{
+  "questId": 1048,
+  "info": {
+    "name": "Job Recommendation",
+    "descriptions": {
+      "notStarted": "The Maple Administrator seems willing to lend me a hand on job selections...",
+      "inProgress": "I was still just getting my feet wet in this game, so the Maple Administrator decided to help select a job for me.",
+      "completed": "I was still just getting my feet wet in this game, so the Maple Administrator decided to help select a job for me."
+    },
+    "area": 20,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "maxLevel": 10,
+      "endDate": "2009010100",
+      "startScript": "q1048s",
+      "normalAutoStart": true,
+      "jobs": [
+        0
+      ]
+    }
+  }
+}

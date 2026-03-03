@@ -1,0 +1,42 @@
+{
+  "questId": 3002,
+  "info": {
+    "name": "Missing Corporal Easy",
+    "parent": "Alpha Platoon\u0027s Network of Communication",
+    "descriptions": {
+      "notStarted": "",
+      "inProgress": "Inside El Nath, I found #bMaster Sergeant Fox#k, who seemed to have crashlanded here. He asked if I can find 3 of his men and if they are doing their job whereever they are. The ones I need to meet up are #bStaff Sergeant Charlie, Corporal Easy, and Sergeant Bravo#k, and they should be around Ossyria. He\u0027d prefer that I meet them in the order of their ranks. I found #bStaff Sergeant Charlie and Sergeant Bravo#k. Now I have to find #bCorporal Easy#k next.",
+      "completed": "I found #bCorporal Easy#k in the middle of an old-looking tower far from El Nath. He said he\u0027s been doing his duties and that, while investigating around the area, he found this piece of an ancient document that he wants me to deliver to Master Sergeant Fox."
+    },
+    "area": 33,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030001,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 3040,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030002
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031049
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1200,
+      "nextQuest": 3041
+    }
+  }
+}

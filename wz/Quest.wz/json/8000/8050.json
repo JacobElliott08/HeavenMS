@@ -1,0 +1,39 @@
+{
+  "questId": 8050,
+  "info": {
+    "name": "Today\u0027s Schedule",
+    "descriptions": {
+      "notStarted": "I think Betty of Ellinia is stuck in a difficult spot. I\u0027ll need to talk to her on this.",
+      "inProgress": "Betty usually operates under a strict schedule, and lives by her own routine. Hmmm, I see, so without a watch to let her know the time, there\u0027s no way she\u0027ll be able to follow a strict schedule. According to her, #b#o3230306##k has the #b#t04000115#",
+      "completed": "Betty got her watch fixed, and went right back on schedule, as if she\u0027s trying to make up for the lost time. Maybe she\u0027d be more relaxed if the watch was never fixed...Nah..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032104,
+      "minLevel": 35
+    },
+    "complete": {
+      "npc": 1032104,
+      "items": [
+        {
+          "itemId": 4000115,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "meso": 20000,
+      "items": [
+        {
+          "itemId": 4000115,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

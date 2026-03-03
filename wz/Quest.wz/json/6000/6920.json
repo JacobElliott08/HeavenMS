@@ -1,0 +1,50 @@
+{
+  "questId": 6920,
+  "info": {
+    "name": " Rene\u0027s Introduction Letter",
+    "parent": "The Bowman\u0027s Extreme Path",
+    "descriptions": {
+      "notStarted": " I\u0027ve reached a limit to my training as a Bowman...Is there a level beyond this? I should ask  #b#p2020010##k who helped me with the third job advancement.",
+      "inProgress": "#b#p2020010##k told me to see the bishop  #b#p2081300##k in Minar Forest if I want to find the path of becoming a greater Bowman.",
+      "completed": "#b#p2081300##k said he will guide me to the path that will lead me to the magician\u0027s extreme power."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020010,
+      "minLevel": 120,
+      "jobs": [
+        311,
+        321
+      ]
+    },
+    "complete": {
+      "npc": 2081300,
+      "items": [
+        {
+          "itemId": 4031513
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031513
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 20000,
+      "items": [
+        {
+          "itemId": 4031513,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "questId": 20703,
+  "info": {
+    "name": "3rd Acclimation Training",
+    "descriptions": {
+      "notStarted": "I shall receive the 3rd Acclimation Training from #b#p1102000##k.",
+      "inProgress": "This time, the monsters in question for the Acclimation Training are #r#o9300273#s#k. He warned me that these monsters have quite a temper and that I better be careful. I better return to #bthe 1st Drill Hall#k and hunt #o9300273#s. \\n\\n#o9300273##r #a207031##k",
+      "completed": "I was able to hunt 30 #o9300273#s. Now that I have reached Level 13, I should return to #p1101002# and receive an assignment."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102000,
+      "minLevel": 10,
+      "maxLevel": 15,
+      "prerequisiteQuests": [
+        {
+          "questId": 20702,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1102000,
+      "monsters": [
+        {
+          "monsterId": 9300273,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2800,
+      "items": [
+        {
+          "itemId": 2000020,
+          "count": 50,
+          "jobRestriction": 64512
+        },
+        {
+          "itemId": 2000021,
+          "count": 50,
+          "jobRestriction": 64512
+        }
+      ]
+    }
+  }
+}

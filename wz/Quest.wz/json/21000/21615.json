@@ -1,0 +1,53 @@
+{
+  "questId": 21615,
+  "info": {
+    "name": "Gathering Ingredients for the Wolf\u0027s Life Water",
+    "descriptions": {
+      "notStarted": "One of the ingredients for the #t4032334# is the #t4032335#. Maybe #b#p2060005##k at the #b#m230000003# of #m230000000##k sells it? You\u0027d better go see #p2060005#.",
+      "inProgress": "#p2060005# tells you that the #t4032335# that was given by the wolves living in #m230000003# is available, but only at a price. She says it\u0027ll cost you 80 million mesos.\\r\\n\\r\\n#b80,000,000 mesos#k",
+      "completed": "You purchased the #t4032335# from #p2060005#. You\u0027ll use it to make some #t4032334#."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 150,
+      "repeatIntervalMinutes": 0,
+      "npc": 2060005,
+      "prerequisiteQuests": [
+        {
+          "questId": 21614,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032335
+        },
+        {
+          "itemId": 4032334
+        }
+      ],
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2060005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -80000000,
+      "items": [
+        {
+          "itemId": 4032335
+        }
+      ]
+    }
+  }
+}

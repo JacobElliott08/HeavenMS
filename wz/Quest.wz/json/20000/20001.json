@@ -1,0 +1,60 @@
+{
+  "questId": 20001,
+  "info": {
+    "name": "Neinheart the Tactician",
+    "descriptions": {
+      "notStarted": "Now I\u0027ll have to meet up with #p1101000#\u0027s Tactician, #b#p1101002##k, and discuss what I have to do in the future.",
+      "inProgress": "#p1101002# claimed that I may be too weak to fight for Maple World, and therefore refused to name me as a Knight-in-Training. He stated that the training period towards becoming a Knight-in-Training is already set up, and that I\u0027ll need to meet up with #b#p1102000#, the Training Instructor#k.",
+      "completed": "#p1101002# claimed that I may be too weak to fight for Maple World, and therefore refused to name me as a Knight-in-Training. He stated that the training period towards becoming a Knight-in-Training is already set up, and that I\u0027ll need to meet up with #b#p1102000#, the Training Instructor#k."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "startScript": "q20001s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20000,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 20010
+        },
+        {
+          "questId": 20011
+        },
+        {
+          "questId": 20012
+        },
+        {
+          "questId": 20013
+        },
+        {
+          "questId": 20014
+        },
+        {
+          "questId": 20015
+        },
+        {
+          "questId": 20016
+        },
+        {
+          "questId": 20017
+        },
+        {
+          "questId": 20018
+        },
+        {
+          "questId": 20019
+        },
+        {
+          "questId": 20020
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    }
+  }
+}

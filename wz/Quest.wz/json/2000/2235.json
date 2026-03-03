@@ -1,0 +1,34 @@
+{
+  "questId": 2235,
+  "info": {
+    "name": "Manji\u0027s Request",
+    "parent": "Manji and Balrog",
+    "descriptions": {
+      "notStarted": "Manji, a solitary warrior in Perion, has asked to see you. He\u0027s never been the type to initiate a conversation, let alone a meeting! It must be something important. Let\u0027s go see Manji in Perion.",
+      "inProgress": "Manji says he felt a threatening energy coming from the deep end of the dungeon, so he asked his young apprentice, #bMu Young#k, to investigate. Unfortunately, he hasn\u0027t heard from Mu Young since! He\u0027d like you to find the young man. If the last time Manji heard anything from Mu Young was when he was investigating the central dungeon of Victoria, couldn\u0027t he still be inside? ",
+      "completed": "Manji says he felt a threatening energy coming from the deep end of the dungeon, so he asked his young apprentice, #bMu Young#k, to investigate. Unfortunately, he hasn\u0027t heard from Mu Young since! He\u0027d like you to find the young man. If the last time Manji heard anything from Mu Young was when he was investigating the central dungeon of Victoria, couldn\u0027t he still be inside? \\r\\nYou were able to find Manji\u0027s apprentice, Mu Young, in the Underground Temple of the central dungeon."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022002,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2047,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061014
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000
+    }
+  }
+}

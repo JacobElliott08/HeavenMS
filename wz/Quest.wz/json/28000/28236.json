@@ -1,0 +1,46 @@
+{
+  "questId": 28236,
+  "info": {
+    "name": "Catching the Demon",
+    "parent": "Solomon\u0027s Bow",
+    "descriptions": {
+      "notStarted": "#b#@1052001:##k in #bKerning City#k say he has located the demon but has no way of catching him. Let\u0027s talk to him first.",
+      "inProgress": "#b#@1012100:##k in #bHenesys#k is said to be the descendant of the hero who made #rSolomon\u0027s Bow#k. Find her and see if you can get her to tell you how to recover the power of Solomon\u0027s Bow.",
+      "completed": "#b#@1012100:##k in #bHenesys#k says she knows how to restore the power of Solomon\u0027s Bow. Let\u0027s talk to her."
+    },
+    "area": 10,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "prerequisiteQuests": [
+        {
+          "questId": 28235,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1012100
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

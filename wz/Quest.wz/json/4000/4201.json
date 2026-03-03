@@ -1,0 +1,54 @@
+{
+  "questId": 4201,
+  "info": {
+    "name": "리사의 복수",
+    "parent": "예뻐지고 싶은 폰라",
+    "descriptions": {
+      "notStarted": "나는 단지 소문에 대해서만 얘기했을 뿐인데 리사는 얼굴이 벌겋게 될 정도로 화를 내며 보아하니 그녀는 쉽게 화장품을 주지 않을 것 같다. 아무래도 그녀가 복수 하는 것을 도와 줘야 할 것 같은데… , #b#p2012012##k에게 다시 말을 걸어보자.",
+      "inProgress": "악성 루머를 퍼뜨린 #b#p2012017##k에게 복수해주기 위해서 그에게 가짜 설계도를 가져다 주라고 한다.\\n\\n#t04031391# #b#c04031391#/1#k",
+      "completed": "#p2012017#에게 #t04031391#를 가져다 주었다. #p2012017#는 그것이 전설의 설계도인줄 알고 기뻐하고 있다."
+    },
+    "area": 48,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012012,
+      "minLevel": 25,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4200,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012017,
+      "items": [
+        {
+          "itemId": 4031391
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031391
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 400,
+      "items": [
+        {
+          "itemId": 4031391,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

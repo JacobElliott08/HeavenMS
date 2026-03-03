@@ -1,0 +1,53 @@
+{
+  "questId": 6296,
+  "info": {
+    "name": "The Black Spirit\u0027s Blessing Power 1",
+    "parent": "Spirit Blessing",
+    "descriptions": {
+      "inProgress": " #b#p2041023##k told me to bring #b200 #t4000134##k to increase #q1321007#\u0027s power..\\n\\n#i4000134##t4000134# #b#c4000134# / 200#k",
+      "completed": "#t4000143# awakened #q1321007#\u0027s power."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041023,
+      "jobs": [
+        132
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6295,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041023,
+      "items": [
+        {
+          "itemId": 4000134,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 4000134,
+          "count": -200
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 1320009,
+          "masterLevel": 15
+        }
+      ]
+    }
+  }
+}

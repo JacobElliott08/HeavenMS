@@ -1,0 +1,37 @@
+{
+  "questId": 20201,
+  "info": {
+    "name": "Knighthood Exam: Dawn Warrior",
+    "descriptions": {
+      "notStarted": "According to #p1101002#, I can take my Knighthood Exam if I go see #b#p1101003##k, the Chief Knight of Light. I better head over to Ereve and meet #p1101003#.",
+      "inProgress": "The Knighthood Exam has started. The test itself is actually quite simple. I just need to reach the end of the Training Forest, enter #bthe 2nd Drill Hall#k, and defeat the Tiguru inside while bringing back #t4032096#. I better find #b30 #t4032096#s#k and bring them back to #p1101003#. \\n\\n#i4032096# #t4032096# #b#c4032096# / 30#k",
+      "completed": "I have successfully completed the Knighthood Exam and officially dropped the \"in-Training\" from my title. As a bonafide Cygnus Knight, I shall do my best to work hard so I will never be ashamed of myself."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101003,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 20200,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1100
+      ]
+    },
+    "complete": {
+      "npc": 1101003,
+      "endScript": "q20201e",
+      "items": [
+        {
+          "itemId": 4032096,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "questId": 1046,
+  "info": {
+    "name": "Biggs\u0027s Story on Victoria Island.",
+    "descriptions": {
+      "notStarted": "I better go to #bSouthperry#k and meet up with #bBiggs#k to learn more about Victoria Island, like Bari said.",
+      "inProgress": "Biggs told me the basics needed to learn more about Victoria Island, and advised me that everyone that has landed in Victoria Island from Maple Island needs to visit Olaf. Once I get to Victoria Island, I better head to #bLith Harbor#k and meet up with #bOlaf#k.",
+      "completed": "Olaf seemed genuinely happy to meet a new traveler, and told me if I needed any information on job advancements, he\u0027s the man to talk to."
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 20002,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1045,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1002101
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 2000014,
+          "count": 100
+        },
+        {
+          "itemId": 2000013,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

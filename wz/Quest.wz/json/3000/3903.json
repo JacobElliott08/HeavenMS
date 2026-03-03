@@ -1,0 +1,34 @@
+{
+  "questId": 3903,
+  "info": {
+    "name": "Queen\u0027s Tea 1",
+    "parent": "Queen\u0027s Tea",
+    "descriptions": {
+      "notStarted": "Famous for being frivolous to a fault, the queen of #b#m260000000##k is also known for her picky taste... I better go see #b#p2101007##k.",
+      "inProgress": "The queen #p2101007# was complaining that the tea made with #t4000331#, considered the finest in this world, is not up to her taste. Seriously, if that expensive tea doesn\u0027t taste good, then what is? After some more complaining, she decided to drink a different tea, and asked me to get #b#t4031577##k from #b#p2012012##k of #b#m200000000##k.",
+      "completed": "When I asked #p2012012# about #t4031577#, #p2012012# gave me an awkward, disapproving look."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101007,
+      "minLevel": 23,
+      "prerequisiteQuests": [
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012012
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

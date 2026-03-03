@@ -1,0 +1,50 @@
+{
+  "questId": 3602,
+  "info": {
+    "name": "The Brothers\u0027 Stack of Rice 2",
+    "parent": "Brotherly Love",
+    "descriptions": {
+      "inProgress": "Chil Nam insisted that his brother, who is the oldest child, should have more food than him, and stuck out a #t4031229# from his stack. He then requested that I place it on top of Chil Sung\u0027s stack of rice in front of his house.",
+      "completed": "I received a #t4031229# from Chil Nam, and placed it on top of a stack of rice in front of Chil Sung\u0027s house."
+    },
+    "area": 37,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071003,
+      "prerequisiteQuests": [
+        {
+          "questId": 3601,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2072000,
+      "items": [
+        {
+          "itemId": 4031246
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031246
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4031246,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "questId": 2216,
+  "info": {
+    "name": "Information from Mr. Pickall",
+    "descriptions": {
+      "notStarted": "According to the information provided on the #t4031894#, #p9000008# is one of the informants that JM wants you to go see. Let\u0027s go find #b#p9000008##k.",
+      "inProgress": "According to #p9000008#, #o6220000# looks a lot like #o3110100# but bigger, and it can even use magic. Anyway... He seems like a nice man.",
+      "completed": "According to #p9000008#, #o6220000# looks a lot like #o3110100# but  bigger, and it can even use magic. "
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000008,
+      "startScript": "q2216s",
+      "prerequisiteQuests": [
+        {
+          "questId": 2214,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031894
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "questId": 9261,
+  "info": {
+    "name": "앤의 편지",
+    "parent": "앤의 크리스마스 선물",
+    "descriptions": {
+      "notStarted": "#b#m100010000##k의 #b#p1012110##k이 뭔가 고민이 있는 듯한데…",
+      "inProgress": "#m100010000#에 쓸쓸하게 웅크려 앉은 #p1012110#. 어쩐지 평소보다도 더 외로워 보이는 얼굴로 #p1012110#은 #p2001000# 할아버지에게 편지를 전달해 달라고 말했다. 크리스마스에도 혼자 저렇게 쓸쓸해 보이니 도와줘야겠다는 생각이 들기는 하는데… #b#p2001000##k는 어디 있더라? 평소에는 만나기 어려운 사람인 것 같은데…? #b#m101000000#의 #p1022101##k라면 알고 있지 않을까?",
+      "completed": "행복한 마을에 있는 #p2001000#에게 #b#t04031426##k를 가져다 주었다. 그는 #p1012110#의 선물을 준비해 줄 테니, 조금 후에 다시 오라고 말했다. 다행히도 이번에는 #p1012110#도 선물을 받을 수 있을 것 같다. "
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012110,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 259200,
+      "startDate": "2006112300",
+      "endDate": "2007030100"
+    },
+    "complete": {
+      "npc": 2001000,
+      "items": [
+        {
+          "itemId": 4031426
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031426
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 350,
+      "items": [
+        {
+          "itemId": 2000000,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 2000002,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 2000001,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 2000003,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 3992000,
+          "count": 30,
+          "probability": 1
+        },
+        {
+          "itemId": 3992001,
+          "probability": 1
+        },
+        {
+          "itemId": 3992002,
+          "probability": 1
+        },
+        {
+          "itemId": 3992004,
+          "probability": 1
+        },
+        {
+          "itemId": 3992024,
+          "probability": 1
+        },
+        {
+          "itemId": 3992025,
+          "probability": 1
+        },
+        {
+          "itemId": 3992026,
+          "probability": 1
+        },
+        {
+          "itemId": 3992027,
+          "probability": 1
+        },
+        {
+          "itemId": 3992028,
+          "probability": 1
+        },
+        {
+          "itemId": 3992029,
+          "probability": 1
+        },
+        {
+          "itemId": 4031426,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

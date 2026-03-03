@@ -1,0 +1,66 @@
+{
+  "questId": 3314,
+  "info": {
+    "name": "Life Alchemy, and the Missing Alchemist",
+    "descriptions": {
+      "notStarted": "Out of the blue, Alcadno\u0027s #p2111009# told me he wanted to reward me for helping him out with various favors... something doesn\u0027t seem right, but I\u0027ll just think of it as a positive event. I should go see #b#p2111009##k.",
+      "inProgress": "#p2111009# seemed grateful that I\u0027ve helped him, and asked me to take a pill that he left for me at the top of the table in the upper lab. He also asked me to come down and see him again before the effect wears off. What is this, is he conducting an experiment on me?",
+      "completed": "I knew it! I knew the medicine was dangerous. Fortunately, I was able to receive an antidote, but this is crazy! According to Russellon, the experiment he conducted was something he did with the #bmissing alchemist#k, a friend of his. The missing alchemist must have worked on something like changing the human\u0027s body form..."
+    },
+    "area": 44,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111009,
+      "minLevel": 52,
+      "prerequisiteQuests": [
+        {
+          "questId": 3313,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111009,
+      "endScript": "q3314e"
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 12500,
+      "items": [
+        {
+          "itemId": 2022199,
+          "count": 20,
+          "probability": 1
+        },
+        {
+          "itemId": 2022224,
+          "count": 20,
+          "probability": 5
+        },
+        {
+          "itemId": 2022225,
+          "count": 20,
+          "probability": 5
+        },
+        {
+          "itemId": 2022226,
+          "count": 20,
+          "probability": 5
+        },
+        {
+          "itemId": 2022227,
+          "count": 20,
+          "probability": 5
+        },
+        {
+          "itemId": 2022228,
+          "count": 20,
+          "probability": 5
+        }
+      ]
+    }
+  }
+}

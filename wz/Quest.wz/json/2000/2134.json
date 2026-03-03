@@ -1,0 +1,67 @@
+{
+  "questId": 2134,
+  "info": {
+    "name": "Beginner Magician\u0027s Third Training Session",
+    "descriptions": {
+      "notStarted": "I\u0027m getting stronger. #b#p1032001##k suggests another training session as I\u0027m improving gradually .",
+      "inProgress": "#p1032001#\u0027s training is to eliminate #r35 #o0210100##k. I\u0027ve dealt with these many times and have nothing to worry about. Let\u0027s go and get #o0210100#. \\n\\n#o0210100# #r#a21341##k",
+      "completed": "I hunted down 35 #o0210100# 35. It wasn\u0027t easy but I did it! Haha. I think I\u0027m quite good!"
+    },
+    "area": 10,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032001,
+      "maxLevel": 40,
+      "normalAutoStart": true,
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 2133,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032001,
+      "monsters": [
+        {
+          "monsterId": 210100,
+          "count": 35
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 345,
+      "items": [
+        {
+          "itemId": 2000002,
+          "count": 30
+        },
+        {
+          "itemId": 2000003,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

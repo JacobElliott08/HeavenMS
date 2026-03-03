@@ -1,0 +1,70 @@
+{
+  "questId": 3434,
+  "info": {
+    "name": "Collecting 500 Mateon Tentacles",
+    "parent": "The Antidote",
+    "descriptions": {
+      "notStarted": "I should go see Rice the Medic at the Omega Sector.",
+      "inProgress": "Rice said the research has gone well, but realized it required much more materials than the ones I got for him, so I\u0027ll have to give him #b500 Mateon Tentacles#k.\\n\\n#t4000120# #b#c4000120##k/500",
+      "completed": "I gathered up enough Mateon Tentacles for Rice the Medic at the Omega Sector to make the new antidote. Was that the reason? It looks like Rice created the medicine that even the great Dr. Pepper couldn\u0027t make. Once he gets the patent on it and mass-produce it, he may be sitting on a huge pile of cash. Will he share a little bit of that with me~??"
+    },
+    "area": 37,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050010,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 3433,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050010,
+      "items": [
+        {
+          "itemId": 4000120,
+          "count": 500
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 18000,
+      "items": [
+        {
+          "itemId": 4000120,
+          "count": -500
+        },
+        {
+          "itemId": 1072018,
+          "jobRestriction": 1180673
+        },
+        {
+          "itemId": 1072126,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 1072116,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 1072119,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 1072110,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 1072300,
+          "jobRestriction": 32800
+        }
+      ]
+    }
+  }
+}

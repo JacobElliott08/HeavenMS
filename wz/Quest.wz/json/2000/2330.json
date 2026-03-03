@@ -1,0 +1,44 @@
+{
+  "questId": 2330,
+  "info": {
+    "name": "Stop the Wedding",
+    "descriptions": {
+      "notStarted": "The time has finally come for the showdown. You should go see #b#p1300001##k.",
+      "inProgress": "You need to eliminate #bKing Pepe#k and his #b3 Yeti Brothers#k.",
+      "completed": "You eliminated #bKing Pepe#k and his #b3 Yeti Brothers#k."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300000,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2323,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300000,
+      "monsters": [
+        {
+          "monsterId": 3300005
+        },
+        {
+          "monsterId": 3300006
+        },
+        {
+          "monsterId": 3300007
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 33000
+    }
+  }
+}

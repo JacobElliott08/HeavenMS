@@ -1,0 +1,33 @@
+{
+  "questId": 10326,
+  "info": {
+    "name": "Louie\u0027s Cleat",
+    "descriptions": {
+      "notStarted": "Find the legendary Cleat that Vaughn Lee, Stan, and Louie made together in their youth. But which of them deserves to receive the Cleat once it\u0027s found?",
+      "inProgress": "You have decided to return the Louie to Vaughn Lee. Let\u0027s take the Louie over to Vaughn Lee in Magatia!",
+      "completed": "When you hand the Cleat to Louie, he praises you, saying you\u0027re a great judge of character."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "startDate": "2010022200",
+      "endDate": "2010030800",
+      "items": [
+        {
+          "itemId": 4001307,
+          "count": 2
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2110002,
+      "endScript": "q10326e",
+      "items": [
+        {
+          "itemId": 4001307
+        }
+      ]
+    }
+  }
+}

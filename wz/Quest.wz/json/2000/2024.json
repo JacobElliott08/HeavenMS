@@ -1,0 +1,77 @@
+{
+  "questId": 2024,
+  "info": {
+    "name": "Collecting 100 Cursed Dolls",
+    "parent": "Rowen the Fairy and the Cursed Doll",
+    "descriptions": {
+      "notStarted": "I think Rowen the Fairy in Ellinia has something to ask me...",
+      "inProgress": "I ran into #bRowen#k again, the same Rowen who I got a fresh milk from for Ronnie, the son of Mr. Wetbottom. She seemed to be keeping her guards up against humans then, but it looks like she\u0027s accepting me as Ronnie\u0027s friend...Rowen is assistant of the head magician of Ellinia, Grendel the Really Old, and he\u0027s been concerned about the cursed dolls that Grendel the Really Old made with his black magic a long long time ago. The dolls had been sealed up for a while, until a bunch of Lupin\u0027s took them and ran away. They have since turned into zombies, and have been destroying the forest. To return the forest to how it was before, someone needs to take down the Zombie Lupin\u0027s and take away the #bcursed dolls#k from them ... well, I readily accepted the request of collecting #b100 cursed dolls#k, but am I going to be okay against those crazy monkeys??",
+      "completed": "I took down a bunch of Zombie Lupin\u0027s on a forest near Ellinia, and collected all #b100 cursed dolls#k for Rowen. In return, she gave me 7 ores. Will the forest really return to normal with this?"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032101,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 2023,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032101,
+      "items": [
+        {
+          "itemId": 4000031,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4000031,
+          "count": -100
+        },
+        {
+          "itemId": 4010000,
+          "count": 7,
+          "probability": 1
+        },
+        {
+          "itemId": 4010001,
+          "count": 7,
+          "probability": 1
+        },
+        {
+          "itemId": 4010002,
+          "count": 7,
+          "probability": 1
+        },
+        {
+          "itemId": 4010003,
+          "count": 7,
+          "probability": 1
+        },
+        {
+          "itemId": 4010004,
+          "count": 7,
+          "probability": 1
+        },
+        {
+          "itemId": 4010005,
+          "count": 7,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

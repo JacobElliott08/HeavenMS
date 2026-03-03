@@ -1,0 +1,55 @@
+{
+  "questId": 3625,
+  "info": {
+    "name": "The Storybook on Kong Ji and Pat Ji",
+    "descriptions": {
+      "notStarted": "I\u0027m sure I received the storybook after helping out Kong Ji. Where did it go? Should I go see Kong Ji again?",
+      "inProgress": "#b#p2040052# from Helios Tower Library has requested me to retrieve #b#t4031236##k. Hmmm ... I\u0027m pretty sure I received it the last time I helped Kong Ji out, but I can\u0027t seem to find it. After discussing the matters with her, she promised to give me the storybook if I gather up #b5 #t4000166#s#k for her family dinner later tonight.\\n\\n#t4000166# #b#c4000166##k/5",
+      "completed": "I gave Kong Ji 5 #t4000166#s just as she requested to reacquire #t4031236#."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071004,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3621,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3616,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031236
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071004,
+      "items": [
+        {
+          "itemId": 4000166,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000166,
+          "count": -5
+        },
+        {
+          "itemId": 4031236
+        }
+      ]
+    }
+  }
+}

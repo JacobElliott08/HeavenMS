@@ -1,0 +1,52 @@
+{
+  "questId": 3242,
+  "info": {
+    "name": "The Messenger of the Toy Palace  1",
+    "parent": "The Messenger of the Toy Palace",
+    "descriptions": {
+      "notStarted": "#p2041004#, the security guard of #m220000000#, has something in plan for me. I should go visit #p2041004#.",
+      "inProgress": "I went to #m220000000# to visit #p2041004#, the security guard of #m220000000#, because he had an offer for me. #p2041004# requested that I, as a representative of the #m220000000# castle, visit a place called #m240000000#, and if I was really interested in heading there as a messenger of #m220000000#, then I should eliminate #r10 Ratz, 10 Black Ratz, and 10 Red Ratz#k first.\\n\\nRetz #r#a32421##k\\nBlack Ratz #r#a32422##k\\nRatz #r#a32423##k",
+      "completed": "At the suggestion from #p2041004#, the security guard of #m220000000#, I headed to #m240000000# as the messenger of #m220000000#. #p2041004# graciously provided me with #b#t4161013##k. What\u0027s the item I\u0027m supposed to give him, though?"
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041004,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 2120
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041004,
+      "monsters": [
+        {
+          "monsterId": 3110102,
+          "count": 10
+        },
+        {
+          "monsterId": 3210205,
+          "count": 10
+        },
+        {
+          "monsterId": 3210208,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 3243,
+      "items": [
+        {
+          "itemId": 4161013
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "questId": 20014,
+  "info": {
+    "name": "The Empress is Waiting",
+    "descriptions": {
+      "notStarted": "Let\u0027s start a conversation with #b#p1102008##k.",
+      "inProgress": "In a courteous tone of voice, #p1102008# said he wanted to quiz you on your newly-gained knowledge to make sure that you learned the necessary basics of Maple World. When you completed the quiz, #p1102008# gave you a #t4032269# and asked you to report to #bEmpress #p1101000##k.",
+      "completed": "You went to see Empress #p1101000#, and the pale and fragile Empress welcomed you with a warm smile."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102008,
+      "prerequisiteQuests": [
+        {
+          "questId": 20013,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000
+      ]
+    },
+    "complete": {
+      "npc": 1101000,
+      "items": [
+        {
+          "itemId": 4032269
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032269
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 140,
+      "items": [
+        {
+          "itemId": 4032269,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

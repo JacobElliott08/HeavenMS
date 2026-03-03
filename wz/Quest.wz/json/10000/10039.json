@@ -1,0 +1,32 @@
+{
+  "questId": 10039,
+  "info": {
+    "name": "Surprise Event : Special Alphabets",
+    "descriptions": {
+      "notStarted": "They say that Cassandra will be giving out a Special Alphabet Letter on Back To School day! The Cassandra is only giving it out on that one day, so I\u0027d better to get it now!",
+      "inProgress": "Cassandra is apparently giving out 1 letter you ask for. They\u0027re only doing this for 1-day on Back To School day!",
+      "completed": "I received a Special Alphabet letter on Back To School day as part of MapleStory\u0027s Surprise Back To School event."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 13,
+      "endDate": "2009092300",
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 10034,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "q10039e"
+    }
+  }
+}

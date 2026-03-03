@@ -1,0 +1,57 @@
+{
+  "questId": 28226,
+  "info": {
+    "name": "Back to Hill",
+    "parent": "Antique Search",
+    "descriptions": {
+      "notStarted": "#b#@1072008:##k in #bNautilus#k says she\u0027s being pestered by #rRibbon Pigs#k. Let\u0027s talk to her.",
+      "inProgress": "#b#@1072008:##k in #bNautilus#k says the #rRibbon Pigs#k are too loud and requests that you eliminate the #rRibbon Pigs#k.\\nShe says you can easily find them in #b#m100030000##k.\\n\\nReport back to #b#@1072008:##k in #bNautilus#k upon completion.",
+      "completed": "Let\u0027s take the Antique to  #b#@9201118:##k in #bHenesys#k."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28225,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "monsters": [
+        {
+          "monsterId": 1210101,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1400,
+      "items": [
+        {
+          "itemId": 4001353
+        }
+      ]
+    }
+  }
+}

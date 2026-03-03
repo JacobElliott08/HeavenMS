@@ -1,0 +1,42 @@
+{
+  "questId": 2157,
+  "info": {
+    "name": "Sacrifice to King Clang",
+    "parent": "Defeat King Clang!",
+    "descriptions": {
+      "notStarted": "Rumor has it that a fearful monster is lurking about the beautiful #bFlorina Beach#k. #bRiel#k, a girl of the Florina Beach, must know something about this monster.",
+      "inProgress": "The terrible monster #rKing Clang#k followed the warm current all the way to Florina Beach. Riel says that beautiful girls are being sacrificed to suppress King Clang\u0027s anger. Riel and her sisters, Roel and Rael, have taken a bet on who will be sacrificed to the monster, and asks me to be the judge of their dreadful bet. They can\u0027t be serious about this, right?\\n\\n#y2158# #b#u2158##k\\n#y2159# #b#u2159##k\\n#y2160# #b#u2160##k",
+      "completed": "Helping Riel"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1081100,
+      "minLevel": 55
+    },
+    "complete": {
+      "npc": 1081100,
+      "prerequisiteQuests": [
+        {
+          "questId": 2159,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2160,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2158,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

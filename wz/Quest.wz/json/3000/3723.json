@@ -1,0 +1,33 @@
+{
+  "questId": 3723,
+  "info": {
+    "name": "The Boy and the Girl",
+    "parent": "Year 2021- Just Another Day",
+    "descriptions": {
+      "inProgress": "The Brainy Boy swore that he would find more Loose-Leaf Pages from the Crying Girl\u0027s Sketchbook, including her drawing of a Robot. This sounds like something Andy mentioned. Perhaps you should tell him about this.",
+      "completed": "When Andy heard the story about the kids, said it was a useful piece of information and that you should prepare yourself for your next time travel. "
+    },
+    "area": 41,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082005,
+      "minLevel": 72,
+      "prerequisiteQuests": [
+        {
+          "questId": 3722,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082004
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000
+    }
+  }
+}

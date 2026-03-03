@@ -1,0 +1,36 @@
+{
+  "questId": 4205,
+  "info": {
+    "name": "폰라의 파티복과 유리구두",
+    "parent": "파티에 가고 싶은 폰라",
+    "descriptions": {
+      "notStarted": "태국의 플로팅마켓에 있는 #b#p9250000##k에게 고민이 있다고 한다. 도와 줄 일은 없는지 찾아가 보자.",
+      "inProgress": "얼마 안 있으면 마을에서 축제가 열리는데 #p9250000#는 파티에 입고 갈 옷이 없다고 한다. 마을의 장로인 #b#p9250014##k에게 가서 #p9250000#에게 줄 파티복과 파티용 유리구두를 구하자.",
+      "completed": "마을의 장로를 겨우 만났다. 하지만 부인을 설득한 시간을 달라는데…"
+    },
+    "area": 48,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250000,
+      "minLevel": 25,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4204,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9250014
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "questId": 4486,
+  "info": {
+    "name": "Santa Cat\u0027s request",
+    "parent": "Helping to Clean Chimney ",
+    "descriptions": {
+      "notStarted": "#b#p9201030##k, who is planning on extensive chimney cleaning, needs some help. #b#p9201030##k should be somewhere around the Chimney in Happyville.  You should find out.",
+      "inProgress": "You met Santa Kitty #b#p9201030##k in Happyville, who asked you to find Rina#b#p1010100##k in Henesys in order to borrow a Chimney Sweep and a Flashlight to be used for cleaning the Chimney.",
+      "completed": "You\u0027ve successfully borrowed a Chimney Sweep and a Flashlight from Rina#p1010100#k in Henesys."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201030,
+      "minLevel": 25,
+      "endDate": "2010010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 4483,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1010100
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 4487
+    }
+  }
+}

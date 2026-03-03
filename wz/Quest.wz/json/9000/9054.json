@@ -1,0 +1,55 @@
+{
+  "questId": 9054,
+  "info": {
+    "name": "Beat the Heat \u003cMedium\u003e-1st Stage",
+    "parent": "Beat the Heat \u003cMedium\u003e",
+    "descriptions": {
+      "notStarted": "Apparently Maple Administrator has prepared an event for the summer. But where\u0027s the admin??",
+      "inProgress": "As summer rolls on, The Maple Adminstrator has prepared an event called \u0027Beat the Heat\u0027 for the health of the users, most of which would be in front of the air-conditioner or a fan. As a warm-up, she asked me to defeat #b50 #o5200000#s#k and #b20 #o3000000#s#k?\\n\\n#o5200000# #r#a90542##k\\n#o3000000# #r#a90541#",
+      "completed": "I met the Maple Administrator, and passed the 1st Stage of the Medium level of #bBeat the Heat#k."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 26,
+      "maxLevel": 45,
+      "startDate": "2005081900",
+      "endDate": "2005090300",
+      "prerequisiteQuests": [
+        {
+          "questId": 9057
+        },
+        {
+          "questId": 9051
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "monsters": [
+        {
+          "monsterId": 3000000,
+          "count": 20
+        },
+        {
+          "monsterId": 5200000,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3700,
+      "items": [
+        {
+          "itemId": 2001000,
+          "count": 25
+        }
+      ]
+    }
+  }
+}

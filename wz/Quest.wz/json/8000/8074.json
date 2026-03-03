@@ -1,0 +1,34 @@
+{
+  "questId": 8074,
+  "info": {
+    "name": "The Meaning of the Code",
+    "parent": "A Puzzling Code",
+    "descriptions": {
+      "notStarted": "Should I head over to the small grave that serves as the answer to the code written on the bizarre-looking statue? I should--knowing is better than not knowing.",
+      "inProgress": "Solving the code took me to this small grave. I better let Kinokonoko knowof this.",
+      "completed": "I told Kinokonoko everything I knew in regards to this puzzling code."
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030004,
+      "minLevel": 69,
+      "prerequisiteQuests": [
+        {
+          "questId": 8073,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9110002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000
+    }
+  }
+}

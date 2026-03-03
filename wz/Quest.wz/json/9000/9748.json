@@ -1,0 +1,42 @@
+{
+  "questId": 9748,
+  "info": {
+    "name": "가가의 선물",
+    "descriptions": {
+      "notStarted": "발렌타인데이에 초콜릿을 받은 보답으로 #b#p9000021##k가 뭔가 선물을 하고 싶다고 한다. 선물이라면 사양할 필요 없겠지?",
+      "inProgress": "#p9000021#는 초콜릿에 대한 보답으로 자장면을 주겠다며 잠시만 기다려 달라고 했다.",
+      "completed": "#p9000021#가 직접 만든 자장면을 받았다. 뭔가 깊은 감정이 서린 자장면인데... 맛있게 먹을 수 있을까?"
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2009041000",
+      "endDate": "2009042000",
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 9672,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000021
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 2022156
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "questId": 3457,
+  "info": {
+    "name": "The Battle Against Zeno",
+    "descriptions": {
+      "notStarted": "The #b#p2050002##k, who has failed at keeping #o6220001# under control, informs you that #m221000000# will be in danger if nothing is done to control #o6220001# soon. Let\u0027s hurry over to #b#p2050001##k and let him know.",
+      "inProgress": "When you tell #p2050001# everything you\u0027ve heard from #p2050002# using the Wave Translator, #p2050001# asks you to defeat Zeno for the safety of this world. Based on #p2050001#\u0027s speculation, #o6220001# can be found in a place called #b#m221040301##k, where you can reach from #m221040300#. Let\u0027s rush over to defeat #r#o6220001##k once and for all! \\n\\n#o6220001# #r#a34571##k",
+      "completed": "You have defeated #o6220001# and reported your progress to #p2050001#. Not only does #m221000000# have to worry about the safety of the world, but also the safety of the #p2050002#... No wonder #m221000000# is always busy."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050001,
+      "prerequisiteQuests": [
+        {
+          "questId": 3456,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050001,
+      "monsters": [
+        {
+          "monsterId": 6220001
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 180000,
+      "fame": 12
+    }
+  }
+}

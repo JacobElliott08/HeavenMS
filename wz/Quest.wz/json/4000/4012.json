@@ -1,0 +1,34 @@
+{
+  "questId": 4012,
+  "info": {
+    "name": "목걸이를 찾아서 1",
+    "descriptions": {
+      "notStarted": "#b#p9330019##k에게 다시 말을 걸어보자.",
+      "inProgress": "#b#p9330019##k의 목걸이를 가지고 있는 #b#p9330020##k을 찾아가자.",
+      "completed": "#b#p9330020##k을 만났다."
+    },
+    "area": 48
+  },
+  "requirements": {
+    "start": {
+      "npc": 9330019,
+      "minLevel": 80,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4011,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9330020
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200
+    }
+  }
+}

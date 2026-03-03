@@ -1,0 +1,46 @@
+{
+  "questId": 28215,
+  "info": {
+    "name": "A Burglar Demon",
+    "parent": "A Strange Burglary Case",
+    "descriptions": {
+      "notStarted": "#b#@9201119:##k in #bPerion#k says you must inform #b#@1032001:##k in #bEllinia#k of this.",
+      "inProgress": "Let\u0027s go find #b#@1032001:##k in #bEllinia#k and tell him what the demon looks like.",
+      "completed": "You discovered that a demon named #rValefor#k was behind the burglary case in #bEllinia#k."
+    },
+    "area": 10,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201119,
+      "prerequisiteQuests": [
+        {
+          "questId": 28214,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1032001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

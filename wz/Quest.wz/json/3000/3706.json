@@ -1,0 +1,40 @@
+{
+  "questId": 3706,
+  "info": {
+    "name": "Dragon Squad\u0027s Mission",
+    "parent": "The Missing Hero",
+    "descriptions": {
+      "notStarted": "I think I hear someone\u0027s groaning somewhere in Dragon\u0027s Canyon. Sounds like someone\u0027s injured...",
+      "inProgress": " I ran into #b#p2081007##k, who was badly injured on the ground at Dragon\u0027s Canyon. Raul explained to me about his mission, and asked if I could finish it for him. The mission is to bring back #b#t4001094##k safely, which Horntail kidnapped, back to its nest.  He says If I defeat Horntail and bring #b#t4001094##k back to its nest, I will be able to meet someone...",
+      "completed": " I defeated Horntail and returned #b#t4001094##k back to its nest as #b#p2081007##k, the Dragon Squad leader.  Then I saw #b#p2081008##k hatch from the egg.  Will the baby dragon survive on its own in Minar Forest?"
+    },
+    "area": 41,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081007,
+      "minLevel": 80,
+      "prerequisiteQuests": [
+        {
+          "questId": 3705,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081008
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 90000,
+      "buffItemId": 2022109,
+      "items": [
+        {
+          "itemId": 2041200
+        }
+      ]
+    }
+  }
+}

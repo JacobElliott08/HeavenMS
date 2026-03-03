@@ -1,0 +1,29 @@
+{
+  "questId": 10014,
+  "info": {
+    "name": "Today\u0027s Mission!",
+    "descriptions": {
+      "notStarted": "Please check today\u0027s mission",
+      "inProgress": "I should clear the mission that is given to me each day!",
+      "completed": "I should clear the mission that is given to me each day!  What is today\u0027s mission?"
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000036,
+      "minLevel": 10,
+      "startDate": "2009060100",
+      "endDate": "2009082600",
+      "startScript": "q10014s",
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 10000,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  }
+}

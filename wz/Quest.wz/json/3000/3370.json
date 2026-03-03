@@ -1,0 +1,51 @@
+{
+  "questId": 3370,
+  "info": {
+    "name": "Romeo\u0027s Flowers",
+    "parent": "Romeo\u0027s Flowers",
+    "descriptions": {
+      "inProgress": "Romeo was able to complete the making of Snowfield Rose, but he\u0027s terribly shy. So shy that he was too terrified to give the flower to #bJuliet#k himself, and asked me to deliver the flower to her for him. I didn\u0027t know he was like this...",
+      "completed": "I gave Juliet Romeo\u0027s flower. Thankfully, she seemed very satisfied with the choice of the present. Good thing he didn\u0027t give her something like a Scorpion Needle."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2112004,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3369,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2112003,
+      "items": [
+        {
+          "itemId": 4031799
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031799
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4031799,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "questId": 28118,
+  "info": {
+    "name": "4 Year Anniversary Cake",
+    "descriptions": {
+      "notStarted": "I finished the birthday cake for #rMapleStory\u0027s 4 Year Anniversary#k! \\nI should take the cake to #b#p9000021##k.",
+      "inProgress": "I finished the birthday cake for #rMapleStory\u0027s 4 Year Anniversary#k! \\nI should take the cake to #b#p9000021##k.",
+      "completed": "I delivered the finished cake to #b#p9000021##k.  He was so thrilled as if it were his own birthday... I wonder what the connection is between #p9000021# and MapleStory? "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "minLevel": 10,
+      "endDate": "2009061623",
+      "startScript": "q28118s",
+      "infoNumber": 28119,
+      "items": [
+        {
+          "itemId": 4220074
+        }
+      ],
+      "repeatIntervalMinutes": 0
+    }
+  }
+}

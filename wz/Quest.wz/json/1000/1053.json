@@ -1,0 +1,36 @@
+{
+  "questId": 1053,
+  "info": {
+    "name": "Becoming a Pirate",
+    "descriptions": {
+      "notStarted": "The Maple Administrator told me that I may be best suited to be a Pirate.",
+      "inProgress": "The Maple Administrator told me she\u0027ll take me to The Nautilus now to help me make the job advancement as a Pirate.",
+      "completed": "Should I go ahead and make the job advancement as a Pirate?"
+    },
+    "area": 20,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 10,
+      "maxLevel": 20,
+      "endDate": "2009010100",
+      "startScript": "q1053s",
+      "normalAutoStart": true,
+      "infoNumber": 7631,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 1048,
+          "state": "COMPLETED"
+        }
+      ],
+      "infoEx": [
+        null
+      ]
+    }
+  }
+}

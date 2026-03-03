@@ -1,0 +1,35 @@
+{
+  "questId": 29007,
+  "info": {
+    "name": "Ludus Lake Explorer",
+    "descriptions": {
+      "notStarted": "You can earn the #b\u003cLudus Lake Explorer\u003e#k title by exploring the Ludus Lake region.",
+      "inProgress": "#b#eTitle - Ludus Lake Explorer#k#n\\r\\nExplore the 10 main regions of Ludus Lake.\\r\\n#b● Status : #R27012# / 10 Completed.",
+      "completed": "You have earned the #b\u003cLudus Lake Explorer\u003e#k title for exploring various places in Ludus Lake."
+    },
+    "area": 51,
+    "medalItemId": 1142114
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 20,
+      "npc": 9000066
+    },
+    "complete": {
+      "npc": 9000040,
+      "infoNumber": 27012,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142114
+        }
+      ]
+    }
+  }
+}

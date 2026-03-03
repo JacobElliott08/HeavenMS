@@ -1,0 +1,56 @@
+{
+  "questId": 9191,
+  "info": {
+    "name": "엘마의 트집",
+    "parent": "엘마의 추석",
+    "descriptions": {
+      "inProgress": "엘마가 추석을 어떻게 보내고 있는지 알아보기 위해 오르비스로 찾아갔다. 그런데.. 그녀는.. 나의 강함을 시험해보고자 하는 듯 한데... \\n\\n#t4000058# #b#c4000058#/30#k",
+      "completed": "네펜데스를 처치하여 엘마에게 나의 강함을 확인시켜주었다."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2007092000",
+      "endDate": "2007100800",
+      "prerequisiteQuests": [
+        {
+          "questId": 9190,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012010,
+      "items": [
+        {
+          "itemId": 4000058,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000,
+      "nextQuest": 9192,
+      "items": [
+        {
+          "itemId": 2022004,
+          "count": 10
+        },
+        {
+          "itemId": 2022005,
+          "count": 10
+        },
+        {
+          "itemId": 4000058,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "questId": 9508,
+  "info": {
+    "name": "바다의 날 퀴즈 4",
+    "parent": "바다의 날 퀴즈",
+    "descriptions": {
+      "notStarted": "바다의 날을 맞이하여 바다에 대해 자세히 알아보고 싶다면 #b#p9010000##k를 찾아가자.",
+      "inProgress": "바다와 날씨와의 관계된 문제이다.",
+      "completed": "바다가 없다면 눈이나 비가 오지 않는다."
+    },
+    "area": 50,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "startDate": "2006053000",
+      "endDate": "2006060700",
+      "prerequisiteQuests": [
+        {
+          "questId": 9507,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 9010000,
+      "minLevel": 8
+    },
+    "onComplete": {
+      "experience": 800,
+      "nextQuest": 9509
+    }
+  }
+}

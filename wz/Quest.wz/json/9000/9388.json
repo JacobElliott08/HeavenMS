@@ -1,0 +1,67 @@
+{
+  "questId": 9388,
+  "info": {
+    "name": "Jane\u0027s Errands",
+    "descriptions": {
+      "notStarted": "#b#p1002100##k, who lives in Lith Harbor, wants to join the MapleStory 3rd Anniversary Bonanza..  I better help #b#p1002100##k make her way to the party.",
+      "inProgress": "#b#p1002100##k says she can\u0027t go to the party until she takes care of the errands her dad gave her. I better help #b#p1002100##k make it to the party. \\n\\n#o2230100#  #r#a93881##k\\n#o3230100#  #r#a93882##k \\n#r!Warning : Do not lose #b#t1002508##k.",
+      "completed": " After helping #b#p1002100##k in her quest to go to the party, she strengthened my #b#t01002508##k as promised."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002100,
+      "minLevel": 31,
+      "maxLevel": 70,
+      "startDate": "2008050100",
+      "endDate": "2008051400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9386,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 9387
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1002508
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1002100,
+      "items": [
+        {
+          "itemId": 1002508
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 2230100,
+          "count": 50
+        },
+        {
+          "monsterId": 3230100,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 1002508,
+          "count": -1
+        },
+        {
+          "itemId": 1002510
+        }
+      ]
+    }
+  }
+}

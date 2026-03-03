@@ -1,0 +1,42 @@
+{
+  "questId": 8233,
+  "info": {
+    "name": "Rags to Riches",
+    "parent": "Bounty Hunter.",
+    "descriptions": {
+      "notStarted": "With all the strange occurrences in Masteria and New Leaf City, Lita Lawless must be busy! I\u0027ll bet that she\u0027s willing to accept my help...maybe I can earn some mesos in the process! A quick jaunt to the Kerning City subway and I\u0027ll be on my way to New Leaf City!",
+      "inProgress": "I spoke with LIta, and it seems that there strange, powerful spirits drifting about the Phantom Forest. These strange spirits seemingly have no desire, save for tormenting others. I\u0027ve agreed to eliminate 30 of them, and bring their soiled rags to Lita as proof of valor. I\u0027d better keep sharp-that forest has driven quite a few travelers mad with its confusion...",
+      "completed": "I navigated the Phantom Forest and collected 30 of the Soiled Rags the Elder Wraiths had upon them. It was strange to finally fight one, they were eerily quiet for being so vicious. I wonder if there\u0027s more to their story...perhaps someone in the Phantom Forest would know..."
+    },
+    "area": 45,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201054,
+      "minLevel": 70,
+      "startScript": "q8233s"
+    },
+    "complete": {
+      "npc": 9201054,
+      "items": [
+        {
+          "itemId": 4032011,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100000,
+      "meso": 200000,
+      "items": [
+        {
+          "itemId": 4032011,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

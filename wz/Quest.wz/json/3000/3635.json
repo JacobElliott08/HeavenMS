@@ -1,0 +1,46 @@
+{
+  "questId": 3635,
+  "info": {
+    "name": "The Fox Hunt",
+    "descriptions": {
+      "notStarted": "I should go visit #p2071000#, who is the chief of the Korean Folk Town.",
+      "inProgress": "#b#p2071000##k, the landlord of the Korean Folk Town, is concerned that the residents of the Folk Town is rapidly getting sick these days because of a bunch of #r#o5100004#s#k from the Black Mountain that put curse on any person that crosses their path. In order to end the curse that is affecting the town, he said it requires #b999 foxtails#k, and since each #t4000172# has #b3 tails#k, I need to get #b333 #t4000172#s#k for him. \\n\\n#t4000172#  #b#c4000172##k / 333",
+      "completed": "To cure the curse of the Three-Tailed Fox that is affecting the residents in Folk Town, I gathered up 333 #t4000172#s like Chumji asked. Chumji thanked me for my work, and gave me an all-purpose medicine."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071000,
+      "minLevel": 57
+    },
+    "complete": {
+      "npc": 2071000,
+      "items": [
+        {
+          "itemId": 4000172,
+          "count": 333
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2071000,
+      "minLevel": 57
+    },
+    "onComplete": {
+      "experience": 30000,
+      "items": [
+        {
+          "itemId": 2050004,
+          "count": 100
+        },
+        {
+          "itemId": 4000172,
+          "count": -333
+        }
+      ]
+    }
+  }
+}

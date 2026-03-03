@@ -1,0 +1,39 @@
+{
+  "questId": 10303,
+  "info": {
+    "name": "The Witch\u0027s Treasure Chest",
+    "descriptions": {
+      "notStarted": "#b#p9000059##k says he has something to tell you and it has to do with the Witch.",
+      "inProgress": "He says he\u0027ll tell you how to open the Witch\u0027s Treasure Chest. ",
+      "completed": "Remember you can open the Witch\u0027s Treasure Chest by leaving one #b#t4001300##k in front of the chest per day. \\r\\nRemember everything goes to waste if you don\u0027t release all 5 seals by #rDecember 8th#k."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000059,
+      "minLevel": 13,
+      "endDate": "2009010100",
+      "items": [
+        {
+          "itemId": 4001300
+        },
+        {
+          "itemId": 1002971
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000059
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4001300
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "questId": 28121,
+  "info": {
+    "name": "Preparing for Cody\u0027s 4 Year Anniversary Party!",
+    "descriptions": {
+      "notStarted": "#b#p9200000##k is said to be preparing something for MapleStory\u0027s 4 year anniversary.  I should go see what he\u0027s up to.",
+      "inProgress": "Cody asked me to get him a #t04032307# from the Cake dungeon in NLC so he can prepare for Maple\u0027s 4 year anniversary party. \\n\\n #i04032307# #t04032307# #b#c04032307##k / 4",
+      "completed": "#p9200000# was thankful and gave me a special gift.  It feels good to know that I\u0027ve contributed to the preparation of Maple\u0027s 4 year anniversary party.  I heard that throughout the Maple 4 year anniversary celebration, they will need candles everyday so I should go see Cody everyday.."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9200000,
+      "endDate": "2009061623",
+      "minLevel": 40,
+      "maxLevel": 59
+    },
+    "complete": {
+      "npc": 9200000,
+      "items": [
+        {
+          "itemId": 4032307,
+          "count": 4
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032307,
+          "count": -4
+        },
+        {
+          "itemId": 2210032,
+          "probability": 1
+        },
+        {
+          "itemId": 2210033,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

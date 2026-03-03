@@ -1,0 +1,36 @@
+{
+  "questId": 9165,
+  "info": {
+    "name": "추석 상식 6. 추석의 한자 표기법",
+    "parent": "한국의 명절 추석",
+    "descriptions": {
+      "inProgress": "추석을 한자로 어떻게 표기할까요?",
+      "completed": "추석은 가을 秋(추), 저녁, 기울 夕(석)자로 秋夕이라고 표기한다."
+    },
+    "area": 50,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2006092600",
+      "endDate": "2006101600",
+      "prerequisiteQuests": [
+        {
+          "questId": 9164,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2300,
+      "nextQuest": 9166
+    }
+  }
+}

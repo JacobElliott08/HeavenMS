@@ -1,0 +1,54 @@
+{
+  "questId": 28252,
+  "info": {
+    "name": "Searching for the Treasures",
+    "parent": "The Completed Treasure Map",
+    "descriptions": {
+      "notStarted": "#b#@1012003:##k in #bHenesys#k claims to know the location indicated on the #rDirty Treasure Map#k. Let\u0027s go find him.",
+      "inProgress": "He says he\u0027s certain that he\u0027s seen it while he was visiting #bNautilus#k, and suggests you go to #b#m100030000##k to search and investigate the area.\\n\\nReport back to #b#@1012003:##k in #bHenesys#k upon completion.",
+      "completed": "#b#@1012003:##k in #bHenesys#k says it is necessary that you look into the emblem on the #rOld Worn-out Paper#k. Let\u0027s talk to him."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012003,
+      "prerequisiteQuests": [
+        {
+          "questId": 28251,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1012003,
+      "items": [
+        {
+          "itemId": 4001363
+        },
+        {
+          "itemId": 4001362
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 700
+    }
+  }
+}

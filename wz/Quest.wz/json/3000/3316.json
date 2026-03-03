@@ -1,0 +1,34 @@
+{
+  "questId": 3316,
+  "info": {
+    "name": "Han the Broker\u0027s Info",
+    "parent": "Alcadno and the Missing Alchemist",
+    "descriptions": {
+      "inProgress": "We need someone that can reveal the truth, said #p2111001#. He then proceeded to tell me a story about #p2111002#. According to him, #p2111002# was in close contact with #p2111007# before he turned up missing, which means I\u0027ll have to go see #b#p2111007##k. In order to talk to Han the Broker, I\u0027ll have to come up with some mesos...",
+      "completed": "#p2111007# seems to know something about #p2111002#."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111001,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3315,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111007
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "meso": -50000
+    }
+  }
+}

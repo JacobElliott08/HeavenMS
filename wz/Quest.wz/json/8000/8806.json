@@ -1,0 +1,30 @@
+{
+  "questId": 8806,
+  "info": {
+    "name": "Nanuke and the Chair",
+    "descriptions": {
+      "notStarted": "Nanuke apparently has something for everyone. He\u0027s way out there at the Whale Island. I should go see him...",
+      "inProgress": "Nanuke and his huskies greeted me with open arms. He proceeded to give me a resting chair as a way of celebrating the summer. Pretty ironic, considering he lives in perhaps the coldest place in MapleStory. Anyway, I should sit on this chair and relax for a bit..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060000,
+      "repeatIntervalMinutes": 72000,
+      "endDate": "2006091400"
+    },
+    "complete": {
+      "npc": 2060000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 3010000
+        }
+      ]
+    }
+  }
+}

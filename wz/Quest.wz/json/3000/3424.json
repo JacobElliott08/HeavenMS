@@ -1,0 +1,46 @@
+{
+  "questId": 3424,
+  "info": {
+    "name": "Porter the Undependable",
+    "parent": "The Control Program for Rombot",
+    "descriptions": {
+      "inProgress": "I need 3 of Rombot\u0027s Memory Cards so #bPorter#k of Omega Sector can decipher them.",
+      "completed": "Porter made a colossal mistake and destroyed one of Rombot\u0027s Memory Cards. I can\u0027t believe I just trusted this man to do this job!"
+    },
+    "area": 37,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050013,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 3423,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050013,
+      "items": [
+        {
+          "itemId": 4000124,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "nextQuest": 3425,
+      "items": [
+        {
+          "itemId": 4000124,
+          "count": -3
+        }
+      ]
+    }
+  }
+}

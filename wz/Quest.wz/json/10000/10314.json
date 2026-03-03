@@ -1,0 +1,31 @@
+{
+  "questId": 10314,
+  "info": {
+    "name": "A Shiny Watch",
+    "descriptions": {
+      "notStarted": "You have found an interesting artifact.",
+      "inProgress": "A watch...? Whose is this? Let\u0027s report it to a Maple Admin!",
+      "completed": "This fancy watch apparently belongs to Corba. Will you take it to Corba yourself? Or will you leave it with the Maple Admin?"
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9040000,
+      "minLevel": 13,
+      "startDate": "2010022200",
+      "endDate": "2010030800",
+      "normalAutoStart": true,
+      "items": [
+        {
+          "itemId": 4001306
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "endScript": "q10314e"
+    }
+  }
+}

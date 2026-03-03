@@ -1,0 +1,26 @@
+{
+  "questId": 29932,
+  "info": {
+    "name": "Protector of Pharaoh",
+    "descriptions": {
+      "notStarted": "Visit the mysterious pyramid in Ariant. You may be able to acquire the #b\u003cProtector of Pharaoh\u003e#k title.",
+      "inProgress": "#e#bChallenge yourself to earn the Protector of Pharaoh title!#k#n\\r\\n* Requirements: Eliminate #b50,000 monsters#k in Nett\u0027s Pyramid \\r\\n* Current Count: #b#R7760##k\\r\\nAfter completing the requirements, see #bDuarte#k to receive your medal.\\r\\n",
+      "completed": "Acquired the #bProtector of Pharaoh#k title."
+    },
+    "area": 51,
+    "medalItemId": 1142142
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "minLevel": 40
+    },
+    "complete": {
+      "npc": 9000066,
+      "infoNumber": 7760,
+      "infoEx": [
+        null
+      ]
+    }
+  }
+}

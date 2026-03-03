@@ -1,0 +1,52 @@
+{
+  "questId": 3804,
+  "info": {
+    "name": "Eliminating the Spirited Cats",
+    "parent": "Do Gong\u0027s Teaching",
+    "descriptions": {
+      "notStarted": "The document that contains all the mysterious skills necessary to become the Master. I found all the loose pages, but #b#p2091001##k looked concerned as he ran through #t4000299#. What\u0027s the problem now? When will he make me a Master? I better talk to #p2091001#.",
+      "inProgress": "After looking through #t4000299#, #p2091001# stated that there were cat footprints everywhere, and concluded that some street cats may have read the document and secretly obtained those skills. #p2091001# stressed that there should not be cats like those roaming around the forest, for they\u0027ll present danger to all of us. He asked that I eliminate #r20 #o6130209#s#k for him, and bring back #b5 #t4031433#s#k...\\n\\n#t4031433# #b#c4031433##k/5  \\n#o6130209#  #r#a38041##k",
+      "completed": "After eliminating #o6130209#s and bringing back #t4031433#s, #p2091001# commended me for the job well done, but refused to hand me #o5120506#. He mentioned that the document will allow me to obtain those skills, but learning the skills that way would make me no different than those street-cats-turned-monsters, and recommended that I train slowly but surely. That, and only that, he said, would allow me to become the true Master. Sigh... that all went for a naught, but he did say the right thing. When will I become the true Master?"
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091001,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3803,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091001,
+      "items": [
+        {
+          "itemId": 4031433,
+          "count": 5
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 6130209,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000,
+      "items": [
+        {
+          "itemId": 4031433,
+          "count": -5
+        }
+      ]
+    }
+  }
+}

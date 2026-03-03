@@ -1,0 +1,74 @@
+{
+  "questId": 7303,
+  "info": {
+    "name": "Making the Secret Medicine for Transformation",
+    "descriptions": {
+      "notStarted": " I want to enter the Cave of Life one more time...I wonder if I could get the transformation medicine again.  Let\u0027s go see Moira again.",
+      "inProgress": "Moira told me to bring her all the ingredients if I want the transformation medicine again. Let\u0027s get back to Moira with all the ingredients.\\n\\n#i4001103##t4001103#  #b#c4001103##k / 1\\n#i4000267##t4000267#  #b#c4000267##k / 1\\n#i4001104##t4001104#  #b#c4001104##k / 1\\n#i4001105##t4001105#  #b#c4001105##k / 10\\n#i4001078##t4001078#  #b#c4001078##k / 1",
+      "completed": " I gave Moira all the ingredients again and she made me a tarnsformation medicine that allows me to transform into  Cornian."
+    },
+    "area": 41
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081006,
+      "minLevel": 80,
+      "repeatIntervalMinutes": 60,
+      "prerequisiteQuests": [
+        {
+          "questId": 7301,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081006,
+      "items": [
+        {
+          "itemId": 4001078
+        },
+        {
+          "itemId": 4001103
+        },
+        {
+          "itemId": 4001104
+        },
+        {
+          "itemId": 4001105,
+          "count": 10
+        },
+        {
+          "itemId": 4000267
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000,
+      "buffItemId": 2210003,
+      "items": [
+        {
+          "itemId": 4000267,
+          "count": -1
+        },
+        {
+          "itemId": 4001103,
+          "count": -1
+        },
+        {
+          "itemId": 4001104,
+          "count": -1
+        },
+        {
+          "itemId": 4001105,
+          "count": -10
+        },
+        {
+          "itemId": 4001078,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

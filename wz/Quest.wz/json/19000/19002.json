@@ -1,0 +1,25 @@
+{
+  "questId": 19002,
+  "info": {
+    "name": "The 2nd Honorable Mesoranger",
+    "descriptions": {
+      "inProgress": "Due to your impressive performance and results in the event, you have received the #b\u003cHonorable Mesoranger\u003e#k title from the Maple Admin.",
+      "completed": "Due to your impressive performance and results in the event, you have received the #b\u003cHonorable Mesoranger\u003e#k title from the Maple Admin."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142123
+  },
+  "requirements": {
+    "start": {
+      "normalAutoStart": true,
+      "npc": 9010000,
+      "startScript": "q19002s",
+      "items": [
+        {
+          "itemId": 1142123
+        }
+      ]
+    }
+  }
+}

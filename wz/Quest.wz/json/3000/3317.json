@@ -1,0 +1,33 @@
+{
+  "questId": 3317,
+  "info": {
+    "name": "Dr. De Lang\u0027s Friend",
+    "parent": "Alcadno and the Missing Alchemist",
+    "descriptions": {
+      "inProgress": "After I gave him his fee, #p2111007# told me something in his smirky way. He asked me if I knew #b#p2040050##k. ... #p2040050#? Well, he\u0027s also an alchemist, I suppose... Which means he may have a connection with #m261000000#! What was his relationship with #p2111002#? I better go see #p2040050#.",
+      "completed": "#p2040050# was friends with #p2111002#. According to him, #b#p2111002#\u0027s Secret Notes#k can be found somewhere... Secret Notes? #p2040050# told me he can\u0027t find the location where the Secret Notes are hidden either, but he was sure the key was #bmade out of silver#k."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111007,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3316,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040050
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 70000
+    }
+  }
+}

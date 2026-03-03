@@ -1,0 +1,37 @@
+{
+  "questId": 21401,
+  "info": {
+    "name": "Taming the Polearm",
+    "descriptions": {
+      "notStarted": "Something must be wrong with the #b#p1201002##k. What\u0027s going on, you wonder? Why is he in so much pain?",
+      "inProgress": "#p1201002# confesses that, because he spent the last few hundred years without a master, the hint of darkness that existed in his heart has begun to spiral out of control in the form of rage. He\u0027s begging you to get rid of the rage. Apparently, if you defeat #p1201002#, the rage will stop. It doesn\u0027t look easy by any means, but it is what a master must do. You\u0027d better take on the #r#o9001014##k.\\r\\n\\r\\n#o9001014##r #a214011##k",
+      "completed": "You were able to defeat the #o9001014#. Once the rage subsided, #p1201002# helped awaken more of your past powers."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201002,
+      "minLevel": 120,
+      "startScript": "q21401s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21400,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2111
+      ]
+    },
+    "complete": {
+      "npc": 1201002,
+      "endScript": "q21401e",
+      "monsters": [
+        {
+          "monsterId": 9001014
+        }
+      ]
+    }
+  }
+}

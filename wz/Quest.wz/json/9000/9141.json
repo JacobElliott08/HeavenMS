@@ -1,0 +1,53 @@
+{
+  "questId": 9141,
+  "info": {
+    "name": "추석 금송편 만들기",
+    "descriptions": {
+      "notStarted": "추석 음식으로 만든 분홍 송편 10개를 금송편 1개와 바꿀 수 있다는데? 금송편이라.. 이걸 유용하게 쓸 수 있을 것도 같은데...",
+      "inProgress": "추석 음식으로 만든 분홍 송편을 10개 갖고 갔더니 금송편으로 바꿔준다고 하였다.\\n\\n#t2022037:# #b#c2022037#/10#k",
+      "completed": "분홍송편 10개를 모아 금송편으로 바꾸었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 13,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2008090500",
+      "endDate": "2008092600",
+      "items": [
+        {
+          "itemId": 2022037,
+          "count": 10
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 2022037,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "items": [
+        {
+          "itemId": 2022037,
+          "count": -10
+        },
+        {
+          "itemId": 4031187
+        },
+        {
+          "itemId": 2030004
+        }
+      ]
+    }
+  }
+}

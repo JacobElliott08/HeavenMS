@@ -1,0 +1,67 @@
+{
+  "questId": 20710,
+  "info": {
+    "name": "Hidden Inside the Trash Can",
+    "descriptions": {
+      "notStarted": "I\u0027ll need to talk to Agent #b#p1103002##k of #m103000000# about the next assignment.",
+      "inProgress": "#p1103002# told me that sources confessed to a huge number of #bstrange dolls#k dumped inside the #m103000000# subway, and that he wanted me to bring back one of those. I\u0027ll have to dig in through the #btrash can inside the subway#k in #m103000000#... \\n\\n#i4032136# #t4032136# #b#c4032136# / 1#k",
+      "completed": "I managed to find #t4032136# and gave it to #p1103002#."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103002,
+      "minLevel": 16,
+      "startScript": "q20710s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20709,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1103002,
+      "items": [
+        {
+          "itemId": 4032136
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800,
+      "items": [
+        {
+          "itemId": 4032136,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

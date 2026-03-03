@@ -1,0 +1,35 @@
+{
+  "questId": 10067,
+  "info": {
+    "name": "가면신사의 조언2",
+    "parent": "페토와 집사 그리고 유령T",
+    "descriptions": {
+      "notStarted": "페토라니 처음 듣는 이름이다. 누구일까? ",
+      "inProgress": "조나스와 루드밀라를 제외하고 이 집에 오래 있었던 사람은 누구일까?",
+      "completed": "집사에게서 페토에 대해 들었다."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120000,
+      "startDate": "2008101600",
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10066,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120002
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50
+    }
+  }
+}

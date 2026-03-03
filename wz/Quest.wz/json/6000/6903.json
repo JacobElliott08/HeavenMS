@@ -1,0 +1,33 @@
+{
+  "questId": 6903,
+  "info": {
+    "name": "Harmonia\u0027s third story",
+    "parent": "The Warrior\u0027s Extreme Path",
+    "descriptions": {
+      "inProgress": "#b#p2081100##k said she\u0027ll tell me the final story and told me to come talk to her again when I\u0027m ready.",
+      "completed": "#b#p2081100##k told me about a lake stopped in time, which is the third truth.  Then she said come back and talk to her when I\u0027m ready to prove my skills."
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081100,
+      "minLevel": 120,
+      "jobs": [
+        111,
+        121,
+        131
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6902,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081100
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "questId": 21706,
+  "info": {
+    "name": "An Information Dealer\u0027s Work",
+    "descriptions": {
+      "notStarted": "You should start training in Victoria Island and ask #bthe Information Dealer of #m104000000##k, named #b#p1002104##k, for some help.",
+      "inProgress": "#p1002104# tells you there\u0027s no better way to learn the inner workings of the world than to be an Information Dealer, and he offers you a position working with him. #p1002104# then gives you a simple quest to introduce you to the roles of an Information Dealer and informant. The quest involves finding out the latest rumors the crewmembers of #b#p1002001##k have been talking about.\\r\\n\\r\\n#y21707# #b(#u21706#)#k",
+      "completed": "You relayed to #p1002104# all the rumors you heard from #p1002001#. You guess this is the type of thing that informants do all the time."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 13,
+      "prerequisiteQuests": [
+        {
+          "questId": 21705,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1002104,
+      "prerequisiteQuests": [
+        {
+          "questId": 21707,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 620
+    }
+  }
+}

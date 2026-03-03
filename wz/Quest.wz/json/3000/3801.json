@@ -1,0 +1,40 @@
+{
+  "questId": 3801,
+  "info": {
+    "name": "No Gong\u0027s Teaching2",
+    "parent": "No Gong\u0027s Teaching",
+    "descriptions": {
+      "notStarted": "Despite defeating 10 #o5120503# just as #b#p2091000##k ordered, he had that look of \"that\u0027s really nothing\". What? Okay, that\u0027s really not cool. I better go see #p2091000# again.",
+      "inProgress": "Without any explanation, #p2091000# ordered to me to take on #r20 #o5120503#s#k.  \\n\\n#o5120503# #r#a38011##k",
+      "completed": "Even though I was successful in taking on all the #o5120503#s, #p2091000# compliment my work one bit. He\u0027s really getting on my nerves now..."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091000,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 3800,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091000,
+      "monsters": [
+        {
+          "monsterId": 5120503,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 16000
+    }
+  }
+}

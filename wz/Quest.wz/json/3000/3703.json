@@ -1,0 +1,54 @@
+{
+  "questId": 3703,
+  "info": {
+    "name": "Pam\u0027s Request",
+    "descriptions": {
+      "notStarted": "I\u0027d better go see #p2081004# at #m240000000#.",
+      "inProgress": "I ran into #p2081004#, who\u0027s responsible for singing for the egg at #m240000000#. #p2081004# liked to sing, but was also interested in playing instruments, and wanted to make a big flute. In order to do so, she asked that I gather up #b50 #t4000231#s",
+      "completed": "I gave Pam 50 #t4000231#s. Pam seemed excited by the prospect of making a huge pan flute out of those small pan flutes and eventually play beautiful music for the eggs."
+    },
+    "area": 41
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081004,
+      "minLevel": 78
+    },
+    "complete": {
+      "npc": 2081004,
+      "items": [
+        {
+          "itemId": 4000231,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 44000,
+      "items": [
+        {
+          "itemId": 4000231,
+          "count": -50
+        },
+        {
+          "itemId": 2040704,
+          "probability": 1
+        },
+        {
+          "itemId": 2040705,
+          "probability": 1
+        },
+        {
+          "itemId": 2040707,
+          "probability": 1
+        },
+        {
+          "itemId": 2040708,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "questId": 2083,
+  "info": {
+    "name": "Icarus\u0027s Hang Glider",
+    "descriptions": {
+      "notStarted": "Apparently there\u0027s someone at Kerning City by the name of #p1052106# that stands on top of a building just staring at the sky 24/7.",
+      "inProgress": "I got to meet #b#p1052106##k on top of a building at Kerning City. He seems like a nice guy who has an unquenchable thirst for flying, and he wants to create a Hang Glider to fulfill his dream of flying. He asks me if I can gather up the materials for the Hang Glider, and even though the process of making the Hang Glider seems dubious at best, I can\u0027t say no to his sincere desire to fly. I\u0027ll need to get him #b50 #t4000042#s, 10 #t4003001#s, and 50 #t4003004#s#k.\\n\\n#t4000042# #b#c4000042##k/50\\n#t4003001# #b#c4003001##k/10\\n#t4003004# #b#c4003004##k/50",
+      "completed": "I got the materials needed for #p1052106# to make the Hang Glider and realize his dream of flying. I just wonder if Stirge\u0027s wings are enough to make the Hang Glider. I don\u0027t know if this will really work, though, so I\u0027ll check up on him around the time when the Hang Glider should be ready to take flight."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052106,
+      "minLevel": 32,
+      "prerequisiteQuests": [
+        {
+          "questId": 2091,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052106,
+      "items": [
+        {
+          "itemId": 4003001,
+          "count": 10
+        },
+        {
+          "itemId": 4000042,
+          "count": 50
+        },
+        {
+          "itemId": 4003004,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 4000042,
+          "count": -50
+        },
+        {
+          "itemId": 4003001,
+          "count": -10
+        },
+        {
+          "itemId": 4003004,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

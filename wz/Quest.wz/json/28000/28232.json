@@ -1,0 +1,46 @@
+{
+  "questId": 28232,
+  "info": {
+    "name": "Another Storyteller",
+    "parent": "Solomon\u0027s Bow",
+    "descriptions": {
+      "notStarted": "#b#@1020000:##k in #bPerion#k may also know something about Solomon\u0027s Bow. Let\u0027s talk to him.",
+      "inProgress": "#b#@1020000:##k says he\u0027s certainly seen the bow before, but that was about it.\\n\\nThen he suggests #b#@1022000:##k in #bPerion#k must know more about the bow. Let\u0027s talk to him.",
+      "completed": "#b#@1022000:##k in #bPerion#k says he has something else he wants to say about #rSolomon\u0027s Bow#k."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1020000,
+      "prerequisiteQuests": [
+        {
+          "questId": 28231,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1022000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

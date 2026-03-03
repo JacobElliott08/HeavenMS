@@ -1,0 +1,45 @@
+{
+  "questId": 2114,
+  "info": {
+    "name": "POLLUTED! \u003c1-Evil Eye\u003e",
+    "descriptions": {
+      "notStarted": "I heard there\u0027s a warning sign on monsters somewhere around The Cave of Evil Eye...",
+      "inProgress": "Eliminate #b999#k #o2230100#s, then find \"The Rememberer.\" \\n\\n#o2230100# #r#a21141##k",
+      "completed": "I tried eliminating the #o2230100#s all-together, but the number didn\u0027t seem to decrease at all."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1063005,
+      "maxLevel": 57,
+      "repeatIntervalMinutes": 1440,
+      "prerequisiteQuests": [
+        {
+          "questId": 2108,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "monsters": [
+        {
+          "monsterId": 2230100,
+          "count": 999
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4000,
+      "items": [
+        {
+          "itemId": 2000006,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

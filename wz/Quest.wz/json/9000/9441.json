@@ -1,0 +1,52 @@
+{
+  "questId": 9441,
+  "info": {
+    "name": "더위 탈출 프로젝트 초급 2단계",
+    "descriptions": {
+      "notStarted": "무더위가 짜증난다면 #b#p9010000##k를 찾아가 보자.",
+      "inProgress": "#b#p9010000##k는 더운 날씨로 인해 여행자들에게 심술을 부리는 몬스터들을 물리쳐 달라고 했다. \\n\\n#o1210100# #r#a94411##k \\n#o1120100# #r#a94412##k",
+      "completed": "#b#p9010000##k를 만나 더위탈출 프로젝트를 무사히 수행하였다"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "maxLevel": 29,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2006062200",
+      "endDate": "2006072400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9440,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "monsters": [
+        {
+          "monsterId": 1210100,
+          "count": 100
+        },
+        {
+          "monsterId": 1120100,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 2001000,
+          "count": 25
+        }
+      ]
+    }
+  }
+}

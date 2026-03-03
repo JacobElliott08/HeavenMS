@@ -1,0 +1,147 @@
+{
+  "questId": 6029,
+  "info": {
+    "name": "Meren\u0027s New Discovery",
+    "descriptions": {
+      "notStarted": "#b#m261000000##k is the land where Alcadnos and Zenumists form an uneasy truce in... one day, a news exploded in the Maple World where an alchemist from Zenumist, #b#p2110004##k, discovered a new method that will change the way alchemy works. #p2110004# was also looking for a capable apprentice that will spread his work to mainstream, and this caused a huge number of people to head over to #m261000000#...\\r\\nHe\u0027s apparently staying at #m261000002# of #m261000000#, which is a town of alchemists at Nihal Desert.",
+      "inProgress": "After spending a number of years conducting experiments, #b#b#p2110004##k, an alchemist under Zenumist Society, finally discovered a #bnew method#k of producing items, where the item can be created solely out of alchemy. To learn his new method, I visited #p2110004#. He said in order to acquire this new method, I\u0027ll have to take three classes... #bthe fundamentals of alchemy, the basic theory of science, and the actual application of alchemy#k...Sheesh, when can I attend all those classes?",
+      "completed": "#b#m261000000##k is the land where Alcadno and Zenumist form an uneasy truce in... one day #p2110004#, the alchemist from Zenumist, #b#p2110004##k, discovered a new method of item creation that relies solely on alchemy. Apparently, #p2110004# has been looking for an apprentice for his new method, so I went ahead to #m261000000# to visit him."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2110004,
+      "minLevel": 45,
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112,
+        2200,
+        2210,
+        2211,
+        2212,
+        2213,
+        2214,
+        2215,
+        2216,
+        2217,
+        2218
+      ]
+    },
+    "complete": {
+      "npc": 2110004,
+      "prerequisiteQuests": [
+        {
+          "questId": 6031,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 6032,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 6030,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "info": "000"
+    },
+    "onComplete": {
+      "experience": 50000,
+      "items": [
+        {
+          "itemId": 4161037
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 1007,
+          "skillLevel": 1,
+          "masterLevel": 3
+        },
+        {
+          "skillId": 10001007,
+          "skillLevel": 1,
+          "masterLevel": 3
+        },
+        {
+          "skillId": 20001007,
+          "skillLevel": 1,
+          "masterLevel": 3
+        },
+        {
+          "skillId": 20011007,
+          "skillLevel": 1,
+          "masterLevel": 3
+        }
+      ]
+    }
+  }
+}

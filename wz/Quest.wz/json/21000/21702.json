@@ -1,0 +1,54 @@
+{
+  "questId": 21702,
+  "info": {
+    "name": "Train or Die! 2",
+    "descriptions": {
+      "notStarted": "You still don\u0027t trust this #b#p1202006##k, but you might as well receive some training from him.",
+      "inProgress": "According to #p1202006#, the second lesson involves eliminating #r#o9300342#s#k. Again, he still makes it sound like it\u0027s some huge hurdle, but again, they don\u0027t sound very tough.\\r\\n\\r\\n#o9300342##r #a217021##k",
+      "completed": "You defeated the #o9300342#s with ease! #p1202006# may be giving you words of encouragement, but his words are worth very little."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1202006,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 21701,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1202006,
+      "monsters": [
+        {
+          "monsterId": 9300342,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "items": [
+        {
+          "itemId": 2000022,
+          "count": 30
+        },
+        {
+          "itemId": 2000023,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

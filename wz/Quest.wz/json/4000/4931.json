@@ -1,0 +1,58 @@
+{
+  "questId": 4931,
+  "info": {
+    "name": "The Rememberer\u0027s Passion Part 2",
+    "parent": "The Rememberer\u0027s Passion",
+    "descriptions": {
+      "notStarted": "I found it! I found Bob again! He must have escaped from The Rememberer by himself! I feel really terrible that I let this kind of things happen. I am going back to The Rememberer to tell him to lighten up.",
+      "inProgress": "I don\u0027t think The Rememberer gets the whole idea of me doing this. Bob may be just another monster but I know what is right or wrong. And I am going to pay back just the way he did to me. I need to get 1 #b#t4000019##k other than Bob\u0027s to pull this off.",
+      "completed": "I got him! The Remeberer will always remember this day. The day he got tricked by me! Ok. I should stop doing things like this though."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 4930,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4928,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031447
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "items": [
+        {
+          "itemId": 4000019
+        },
+        {
+          "itemId": 4031447
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4000019,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

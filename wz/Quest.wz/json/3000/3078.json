@@ -1,0 +1,67 @@
+{
+  "questId": 3078,
+  "info": {
+    "name": "The Blocked Path of the Ocean",
+    "descriptions": {
+      "notStarted": "I should be able to see #p2060101# deep in the underwater... somewhere around #m230040400#.",
+      "inProgress": "I met #b#p2060101##k in between #m230040400# at an empty ship that\u0027s been wrecked. He said he\u0027s been looking for the traces of his missing men. He came down here to check out the irregular activities that have been taking place here, and one day he lost contact with his men. Not only did he lose them, but he said the path to the bottom of the ocean is blocked too, so he asked me for help on looking for traces of his men. I should wander around looking for #bitems that can be used as evidence#k. If the items the men have used are still here, then maybe the #bsharks#k that have been roaming around #b#m230040400##k is the one to blame... I should find a #bflashlight#k, a #bcamera#k and a #bnotebook#k, and give them back to #b#p2060101##k.",
+      "completed": "#p2060101#, whom I\u0027ve met at #m230040400#, asked me to find traces of his men that have disappeared. I was able to gather up the flashlight, the camera, and the notebook that his men used at the time of the attack. Unfortunately, I wasn\u0027t able to find any of the missing men."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060101,
+      "minLevel": 90
+    },
+    "complete": {
+      "npc": 2060101,
+      "items": [
+        {
+          "itemId": 4031252
+        },
+        {
+          "itemId": 4031254
+        },
+        {
+          "itemId": 4031255
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 70000,
+      "items": [
+        {
+          "itemId": 4031254,
+          "count": -1
+        },
+        {
+          "itemId": 4031255,
+          "count": -1
+        },
+        {
+          "itemId": 4031252,
+          "count": -1
+        },
+        {
+          "itemId": 2041005,
+          "probability": 15
+        },
+        {
+          "itemId": 2041002,
+          "probability": 15
+        },
+        {
+          "itemId": 2041004,
+          "probability": 35
+        },
+        {
+          "itemId": 2041001,
+          "probability": 35
+        }
+      ]
+    }
+  }
+}

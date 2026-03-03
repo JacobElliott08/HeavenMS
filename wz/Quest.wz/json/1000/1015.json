@@ -1,0 +1,36 @@
+{
+  "questId": 1015,
+  "info": {
+    "name": "Rain\u0027s Maple Quiz 7",
+    "parent": "Rain\u0027s Maple Quiz",
+    "descriptions": {
+      "notStarted": "This is #b#p12101##k\u0027s last Maple Quiz! I\u0027m excited. Let\u0027s do it!",
+      "inProgress": "Finally the last Quiz. Now I think I\u0027m not a beginner~",
+      "completed": "Rain advised me to leave Maple Island and go for a greater journey. In Victoria Island, you can choose your job, and face a whole lot of new adventures. Ok...let\u0027s go to Maple Island\u0027s South Ferry..."
+    },
+    "area": 20,
+    "order": 7
+  },
+  "requirements": {
+    "start": {
+      "npc": 12101,
+      "prerequisiteQuests": [
+        {
+          "questId": 1014,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 12101
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20
+    }
+  }
+}

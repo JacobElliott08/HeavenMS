@@ -1,0 +1,51 @@
+{
+  "questId": 21015,
+  "info": {
+    "name": "Basic Fitness Training 1",
+    "descriptions": {
+      "notStarted": "#p1201000#\u0027s debriefing allowed you to understand the gist of what happened between the heroes and the Black Mage. You have a hunch there may be another showdown with the Black Mage down the road, and that you\u0027ll be an important part of it. You should see what #b#p1201000##k thinks you should do next.",
+      "inProgress": "#p1201000# tells you that you\u0027ll have to do everything you can to regain your abilities. First, however she suggests you warm up, seeing how you were frozen in ice for hundreds of years. The first level of basic training is monster hunting. You\u0027d better head to #b#m140020000##k and start hunting.",
+      "completed": "You were able to defeat the #o0100131#s."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1201000,
+      "startScript": "q21015s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21014,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2000
+      ]
+    },
+    "complete": {
+      "npc": 1201000,
+      "monsters": [
+        {
+          "monsterId": 100131,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 320,
+      "items": [
+        {
+          "itemId": 2000022,
+          "count": 15
+        },
+        {
+          "itemId": 2000023,
+          "count": 15
+        }
+      ]
+    }
+  }
+}

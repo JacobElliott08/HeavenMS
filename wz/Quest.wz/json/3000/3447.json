@@ -1,0 +1,109 @@
+{
+  "questId": 3447,
+  "info": {
+    "name": "Destroying the Power of Evil",
+    "descriptions": {
+      "notStarted": "Dark Tachion is an altered version of Tachion, which is the source of power that forms the Time Sphere. It should be deemed dangerous now, and since a creepy, evil force keeps seeping out of it, it must be a dangerous time here. I should destroy this at the lava deep in El Nath.",
+      "inProgress": "After taking care of Papulatus, it coughed up Dark Tachion, emitting a dark force in the process. To destroy this, I went to the deepest part of El Nath where the lava flows. I better destroy this by dropping it in the boiling lava.",
+      "completed": "After entering a hidden area where the lava flows, I found a Suspicious Lava. This is where I threw the Dark Tachion to destroy it. The force of evil disappeared along with the Tachion itself."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2032004,
+      "minLevel": 105,
+      "items": [
+        {
+          "itemId": 4031196
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 2032004,
+      "items": [
+        {
+          "itemId": 4031196
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 126000,
+      "items": [
+        {
+          "itemId": 4031196,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "questId": 3733,
+  "info": {
+    "name": "Survivor Search",
+    "parent": "Year 2215- The Bombing",
+    "descriptions": {
+      "inProgress": "May was happy that you were able to reduce the population of the noisy Robbies, but was also concerned that she may be the only survivor left. She asks you to investigate the area where the missile landed and search for survivors.",
+      "completed": "You have searched the area all the way to the location where the missile landed, as May requested. Fortunately, you were able to find a male survivor named Bao. How is it that he doesn\u0027t even have a tiny scratch on him?"
+    },
+    "area": 41,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082009,
+      "minLevel": 78,
+      "prerequisiteQuests": [
+        {
+          "questId": 3732,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000
+    }
+  }
+}

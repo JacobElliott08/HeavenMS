@@ -1,0 +1,46 @@
+{
+  "questId": 2323,
+  "info": {
+    "name": "Over the Castle Walls (3)",
+    "descriptions": {
+      "notStarted": "You think the #bSecretary of Magic#k might shed some light on how to climb past the wall.\\r\\n",
+      "inProgress": "You need to gather #b100 #t4000501#s#k to bring to the #bSecretary of Magic#k for creating the #bThorn Remover#k.",
+      "completed": "You gathered #b100 #t4000501#s#k and gave them to the #bSecretary of Magic#k."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1300003,
+      "minLevel": 30,
+      "maxLevel": 38,
+      "prerequisiteQuests": [
+        {
+          "questId": 2322,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1300004,
+      "items": [
+        {
+          "itemId": 4000501,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 17000,
+      "nextQuest": 2324,
+      "items": [
+        {
+          "itemId": 4000501,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

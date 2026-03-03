@@ -1,0 +1,86 @@
+{
+  "questId": 9387,
+  "info": {
+    "name": "Jane\u0027s Permission",
+    "descriptions": {
+      "notStarted": "#b#p1002100##k, who lives in Lith Harbor, wants to join the MapleStory 3rd Anniversary Bonanza..  I better help #b#p1002100##k make her way to the party.",
+      "inProgress": "To earn the permission from her dad, #b#p1002100##k decided to make a Mushroom Stew for him. \\n #eMushroom Stew: Ingredients#n \\n#t04000011:# #b#c04000011#/5#k \\n#t04000009:# #b#c04000009#/5#k \\n#t04000012:# #b#c04000012#/20#k \\n#t04000015:# #b#c04000015#/20 \\n #r!Warning : Please do not lose #b#t1002508##k.",
+      "completed": "After helping #b#p1002100##k in her quest to go to the party, she strengthened my #b#t01002508##k as promised."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002100,
+      "minLevel": 8,
+      "maxLevel": 30,
+      "startDate": "2008050100",
+      "endDate": "2008051400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9386,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1002508
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1002100,
+      "items": [
+        {
+          "itemId": 1002508
+        },
+        {
+          "itemId": 4000015,
+          "count": 20
+        },
+        {
+          "itemId": 4000009,
+          "count": 5
+        },
+        {
+          "itemId": 4000011,
+          "count": 5
+        },
+        {
+          "itemId": 4000012,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4000011,
+          "count": -5
+        },
+        {
+          "itemId": 4000009,
+          "count": -5
+        },
+        {
+          "itemId": 4000012,
+          "count": -20
+        },
+        {
+          "itemId": 4000015,
+          "count": -20
+        },
+        {
+          "itemId": 1002508,
+          "count": -1
+        },
+        {
+          "itemId": 1002509
+        }
+      ]
+    }
+  }
+}

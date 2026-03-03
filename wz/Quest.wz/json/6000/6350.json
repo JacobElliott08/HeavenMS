@@ -1,0 +1,53 @@
+{
+  "questId": 6350,
+  "info": {
+    "name": "Body of Steel",
+    "descriptions": {
+      "notStarted": "I\u0027ve learned the super transformation skill but I don\u0027t really know how to use it freely as of yet. I can\u0027t figure out what the problem is! I\u0027d better ask Kyrin.",
+      "inProgress": "I apparently need to do some intense training in order to be able to freely use the super transformation skill. One of the benefits of super transformation is that it will strengthen me and give me a body of steel! I\u0027d better go observe the Blue Dragon Turtles whose bodies are equally as hard, and try to stand up against them. To prove that I\u0027ve completed the training, I must defeat #r150 Blue Dragon Turtles#k and bring #b50 Sturdy Leather #k pieces to Kyrin. \\n\\n#i4031871##t4031871#  #b#c4031871# / 50#k \\n#o8140700#  #r#a63501##k ",
+      "completed": "I took the proof of my training to Kyrin and she taught me the Demolition Skill in return. "
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "minLevel": 120,
+      "jobs": [
+        512
+      ]
+    },
+    "complete": {
+      "npc": 1090000,
+      "items": [
+        {
+          "itemId": 4031871,
+          "count": 50
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 8140700,
+          "count": 150
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000000,
+      "items": [
+        {
+          "itemId": 4031871,
+          "count": -50
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 5121004,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

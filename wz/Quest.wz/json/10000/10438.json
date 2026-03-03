@@ -1,0 +1,137 @@
+{
+  "questId": 10438,
+  "info": {
+    "name": "가가의 남색 크레파스",
+    "parent": "가가의 크레파스",
+    "descriptions": {
+      "inProgress": "그림 그리기는 좋아하지만 색칠하기에는 서툰 카산드라가 레인보우위크에 사용할 무지개 그림을 마저 완성해 달라고 부탁했다. 천하의 카산드라도 못하는 일이 있다니... 7색의 크레파스는 가가가 가지고 있다고 하는데 카산드라의 부탁이라고 솔직하게 말하면 크레파스를 안 빌려줄지도 모른다.  \\n또, 요일마다 빌려주는 크레파스의 색이 다르다는데 무슨 수로 크레파스를 빌려서 그림을 완성하지? #b\\r\\n- 월요일 : 빨간색\\n- 화요일 : 주황색\\n- 수요일 : 노란색\\n- 목요일 : 초록색\\n- 금요일 : 파란색\\n- 토요일 : 남색\\n- 일요일 : 보라색\\n#r* 특별히 10월31일, 11월1일에는 원하는 색을 빌릴 수 있다.",
+      "completed": "그림 그리기는 좋아하지만 색칠하기에는 서툰 카산드라가 레인보우위크에 사용할 무지개 그림을 마저 완성해 달라고 부탁했다. 천하의 카산드라도 못하는 일이 있다니... 7색의 크레파스는 가가가 가지고 있다고 하는데 카산드라의 부탁이라고 솔직하게 말하면 크레파스를 안 빌려줄지도 모른다.  \\n또, 요일마다 빌려주는 크레파스의 색이 다르다는데 무슨 수로 크레파스를 빌려서 그림을 완성하지? #b\\r\\n- 월요일 : 빨간색\\n- 화요일 : 주황색\\n- 수요일 : 노란색\\n- 목요일 : 초록색\\n- 금요일 : 파란색\\n- 토요일 : 남색\\n- 일요일 : 보라색\\n#r* 특별히 10월31일, 11월1일에는 원하는 색을 빌릴 수 있다."
+    },
+    "area": 50,
+    "order": 8
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "startDate": "2009102400",
+      "endDate": "2009102500",
+      "repeatIntervalMinutes": 0,
+      "infoNumber": 10430,
+      "infoEx": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 10430,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4220152
+        },
+        {
+          "itemId": 4001331
+        },
+        {
+          "itemId": 4001333
+        },
+        {
+          "itemId": 4001334
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000021,
+      "items": [
+        {
+          "itemId": 4001334
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4001333
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 3000,
+      "items": [
+        {
+          "itemId": 4001331
+        },
+        {
+          "itemId": 4001334,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

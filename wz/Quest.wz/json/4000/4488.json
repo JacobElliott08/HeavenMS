@@ -1,0 +1,45 @@
+{
+  "questId": 4488,
+  "info": {
+    "name": "Warm Milk Delivery",
+    "parent": "To sleep Icarus",
+    "descriptions": {
+      "notStarted": "Dalphs#b#9220005##k in Happyville has a favor to ask of you.",
+      "inProgress": "You met with Dalphs#b#p9220005##k in Happyville. He asked if you could bring a glass of warm milk to #bIcarus in Kerning City#.\\n\\n#t4031884# #b#c4031884##k/1",
+      "completed": "You delivered a glass of warm milk to Icarus#b#p1010100##k in Kerning City."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9220005,
+      "endDate": "2010010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 4483,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052106,
+      "items": [
+        {
+          "itemId": 4031884
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 4489,
+      "items": [
+        {
+          "itemId": 4031884,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

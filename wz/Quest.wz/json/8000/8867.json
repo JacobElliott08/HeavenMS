@@ -1,0 +1,56 @@
+{
+  "questId": 8867,
+  "info": {
+    "name": "Amoria : Circle of Trust 1 (The Unmarried Couple)",
+    "parent": "Circle of Trust",
+    "descriptions": {
+      "notStarted": "An unhappy couple in Amoria? I should go find out what\u0027s wrong...",
+      "inProgress": "I spoke with Gary and Shatima, and it looks like their rings were broken and taken in to #b20 Ring Fragments#k by some Tweeters. Looks like I\u0027ll have to clip some wings to find them all...",
+      "completed": "I returned to the Rings to Gary and Shatima, and now they can get married! Phew, a lot of work, but well worth it!"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201037,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 8862,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201037,
+      "items": [
+        {
+          "itemId": 4031526
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4000,
+      "items": [
+        {
+          "itemId": 4031526,
+          "count": -1
+        },
+        {
+          "itemId": 2022121
+        },
+        {
+          "itemId": 2002001,
+          "count": 2
+        },
+        {
+          "itemId": 2000005,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

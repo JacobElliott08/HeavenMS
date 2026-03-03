@@ -1,0 +1,43 @@
+{
+  "questId": 3508,
+  "info": {
+    "name": "The One Who Walks Down the Road of Regrets1",
+    "descriptions": {
+      "notStarted": "I received permission from #p2140000# and was finally able to go past the Door of Regret.  But as usual, I couldn\u0027t go past #m270020100#.  I\u0027ll probably have to take a test from #b#p2140000##k to go beyond there...",
+      "inProgress": "#p2140000# said if I want to go in further, go to #b#m270020100##k and defeat #r999 #o8200005##k. \\n\\n#o8200005# #r#a35081##k",
+      "completed": "I defeated 999 #o8200005# 999.  #p2140000# granted me permission.  Of course, this permission only allows to me to go up to #m270020200#."
+    },
+    "area": 46
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140000,
+      "minLevel": 106,
+      "prerequisiteQuests": [
+        {
+          "questId": 3507,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2140000,
+      "monsters": [
+        {
+          "monsterId": 8200005,
+          "count": 999
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 422400,
+      "items": [
+        {
+          "itemId": 4021005
+        }
+      ]
+    }
+  }
+}

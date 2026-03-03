@@ -1,0 +1,67 @@
+{
+  "questId": 3049,
+  "info": {
+    "name": "Estelle and the Syrup",
+    "descriptions": {
+      "notStarted": "I should go check out Estelle, who should be somewhere around Ellinia.",
+      "inProgress": "Estelle asked me to gather up the ingredients necessary to make syrup. She promised to hook me up with a very tasty syrup if I get those for her. \\n\\n #t4000029# #b#c4000029##k/60 \\n #t2012002# #b#c2012002##k/30 \\n #t4000017# #b#c4000017##k/10",
+      "completed": "Estelle fixed me a bottle of sugary sweet syrup."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032105,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3048,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031201
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032105,
+      "items": [
+        {
+          "itemId": 4000029,
+          "count": 60
+        },
+        {
+          "itemId": 4000017,
+          "count": 10
+        },
+        {
+          "itemId": 2012002,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000029,
+          "count": -60
+        },
+        {
+          "itemId": 2012002,
+          "count": -30
+        },
+        {
+          "itemId": 4000017,
+          "count": -10
+        },
+        {
+          "itemId": 4031201
+        }
+      ]
+    }
+  }
+}

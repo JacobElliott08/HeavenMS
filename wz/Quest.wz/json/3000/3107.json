@@ -1,0 +1,39 @@
+{
+  "questId": 3107,
+  "info": {
+    "name": "Snowman\u0027s Rage",
+    "parent": "Snowfield Giant",
+    "descriptions": {
+      "inProgress": "Told Scadur of what I learned from Jade. His face looks grim. He thinks something must have happened to the Snowman, and asks me to investigate the area where it appears. Could the truth be found around #b#m211040101##k?\\n\\nFound a clue. #b#u3108##k",
+      "completed": "Found a strange item near the town. It looks like a broken piece of something. It looks like ice."
+    },
+    "area": 33,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020007,
+      "prerequisiteQuests": [
+        {
+          "questId": 3106,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020007,
+      "prerequisiteQuests": [
+        {
+          "questId": 3108,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "nextQuest": 3109
+    }
+  }
+}

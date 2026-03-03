@@ -1,0 +1,115 @@
+{
+  "questId": 3537,
+  "info": {
+    "name": "Breaking the Force Field",
+    "descriptions": {
+      "notStarted": "I wanted to go deep inside the temple, but I couldn\u0027t because of the intruder\u0027s force field.  I should try making the item that can destroy the force field with help from #p2140000#.",
+      "inProgress": "In order to make the #t4032002#, the item that can destroy the force field, I need 10 Smiley Masks, 10 #t4000451#, 10 #t4000456# and 1 each of #t4000460#, #t4000461# and #t4000462#.  All these items can only be found in the Temple of Time.",
+      "completed": "When I brought all the ingredients to #p2140000#, he made me the #t4032002#.  Now I should be able to go deep inside the temple again."
+    },
+    "area": 46
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140000,
+      "repeatIntervalMinutes": 1440,
+      "prerequisiteQuests": [
+        {
+          "questId": 3536,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032002
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 2140000,
+      "items": [
+        {
+          "itemId": 4000446,
+          "count": 10
+        },
+        {
+          "itemId": 4000451,
+          "count": 10
+        },
+        {
+          "itemId": 4000456,
+          "count": 10
+        },
+        {
+          "itemId": 4000460
+        },
+        {
+          "itemId": 4000461
+        },
+        {
+          "itemId": 4000462
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2140000,
+      "intervalMinutes": 1440
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000446,
+          "count": -10
+        },
+        {
+          "itemId": 4000451,
+          "count": -10
+        },
+        {
+          "itemId": 4000456,
+          "count": -10
+        },
+        {
+          "itemId": 4000460,
+          "count": -1
+        },
+        {
+          "itemId": 4000461,
+          "count": -1
+        },
+        {
+          "itemId": 4000462,
+          "count": -1
+        },
+        {
+          "itemId": 4032002
+        }
+      ]
+    }
+  }
+}

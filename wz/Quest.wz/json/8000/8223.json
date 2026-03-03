@@ -1,0 +1,56 @@
+{
+  "questId": 8223,
+  "info": {
+    "name": "Storming the Castle",
+    "descriptions": {
+      "notStarted": "To enter the Grandmaster Hall of Crimsonwood Keep and find the new twisted Masters, Jack Barricade says I\u0027ll need to find some way to open the gate to the Keep\u0027s Inner Sanctum.  Perhaps someone who has firsthand knowledge of the Keep will know what I need... and I know just who to ask!",
+      "inProgress": "I asked Lukan about the Inner Sanctum Gate, and as I surmised, he knew how to get in.  Being a well-respected Stormcaster Knight, he was given a #bCrimsonwood Keystone#k by the Keep\u0027s Grandmasters.  However, Lukan thinks that I\u0027m mad to assault the castle and refuses to give me the key, calling it a suicide mission.  However, if I can whittle down the Keep\u0027s defenders, he\u0027ll relent and give me the Keystone.  I\u0027ve already put the hurt on the Stormbreakers, but I\u0027ll need to defeat at least #b75 Windraiders, 75 Firebrands#k, and #b75 Nightshadows#k more to put a sizeable enough dent in this evil army!",
+      "completed": "I defeated the twisted Crimsonwood warriors!  And true to his word, Lukan gave me his #bCrimsonwood Keystone#k.  He also said that although the Keystone will physically unlock the Inner Sanctum Gate, the red energy field that surrounds them is foreign to him, and likely a new addition by the Keep\u0027s new Masters.  I should take the key back to Jack Barricade and let him know what I\u0027ve discovered."
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201098,
+      "minLevel": 70,
+      "startScript": "q8223s",
+      "prerequisiteQuests": [
+        {
+          "questId": 8230,
+          "state": "STARTED"
+        },
+        {
+          "questId": 8222,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201098,
+      "monsters": [
+        {
+          "monsterId": 9400576,
+          "count": 75
+        },
+        {
+          "monsterId": 9400578,
+          "count": 75
+        },
+        {
+          "monsterId": 9400579,
+          "count": 75
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 220000,
+      "items": [
+        {
+          "itemId": 3992041
+        }
+      ]
+    }
+  }
+}

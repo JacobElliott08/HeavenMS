@@ -1,0 +1,39 @@
+{
+  "questId": 21716,
+  "info": {
+    "name": "Second Assignment, Completed!",
+    "descriptions": {
+      "notStarted": "This is your second assignment as an informant and you must relay #p1032112#\u0027s eyewitness account to #b#p1032101##k in #b#m101000000##k.",
+      "inProgress": "#p1032101# is sure that the changes happening to the #o1110100#s is connected with the kid carrying the puppets and tells you to be extra cautious. Now that this case is pretty much wrapped up, you should relay the information to #b#p1002104##k.",
+      "completed": "You told #p1002104# why the #o1110100#s have become so aggressive, and that concluded your second assignment as an informant. But you wonder, will the fairies be able to watch over the forest all by themselves?"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032101,
+      "minLevel": 18,
+      "startScript": "q21716s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21715,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1002104
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 400
+    }
+  }
+}

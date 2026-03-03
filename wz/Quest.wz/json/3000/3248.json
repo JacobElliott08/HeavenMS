@@ -1,0 +1,55 @@
+{
+  "questId": 3248,
+  "info": {
+    "name": "Operation Strategy 1 : Collect All the Eggs",
+    "parent": "The Clocktower Monster Wipe-Out Operation",
+    "descriptions": {
+      "notStarted": "#b#p2041026##k in the #b#m220000000# Clocktower basement#k has proposed to begin a Clocktower Monster Wipe-Out Operation. What does he mean by that? Let\u0027s go find #p2041026#.",
+      "inProgress": "The Clocktower Monster Wipe-Out Operation has begun. #p2041026# asks you to bring back #b#o4230113##k, #b#o3230306##k, and #b#t4031991##k... It seems he wants to exterminate all the eggs first. Alright, whatever he wants!\\nHe says you can find other eggs by hunting #rTick, Tick-Tock, or Chronos type monsters#k, but #b#o5220003s# have a tendency to hatch their eggs in another bird\u0027s nest#k, so their eggs would be amongst eggs of other birds. It seems you have to crack other eggs to find it and take it over to #t4031991#. \\n\\n#i2022354##t2022354# #b#c2022354#/10#k \\n#i2022355##t2022355# #b#c2022355#/10#k \\n#i4031991##t4031991# #b#c4031991#/10#k",
+      "completed": "You have found all the eggs and gave them to #p2041026#. Ghosthunter Bob seems satisfied and suggest you engage in the operation. "
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041026,
+      "minLevel": 59
+    },
+    "complete": {
+      "npc": 2041026,
+      "items": [
+        {
+          "itemId": 2022354,
+          "count": 10
+        },
+        {
+          "itemId": 2022355,
+          "count": 10
+        },
+        {
+          "itemId": 4031991,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2022354,
+          "count": -10
+        },
+        {
+          "itemId": 2022355,
+          "count": -10
+        },
+        {
+          "itemId": 4031991,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

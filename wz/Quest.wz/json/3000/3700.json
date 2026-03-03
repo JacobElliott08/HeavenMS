@@ -1,0 +1,50 @@
+{
+  "questId": 3700,
+  "info": {
+    "name": "Ito\u0027s Request",
+    "descriptions": {
+      "notStarted": "I\u0027d better go see #p2081002# at #m240000000#.",
+      "inProgress": "#p2081002#, who\u0027s in charge of taking care of the egg for #m240000000#, wanted to keep the egg warm at all times, and wanted to cover it up with fluffly feathers of #o7130500#. I was asked if I could gather up some feathers of #b#t4000226##k and #b#t4000229##k.\\n\\n#i4000226##t4000226#  #b#c4000226##k / 55\\n#i4000229##t4000229#  #b#c4000229##k / 75",
+      "completed": "As requested by #p2081002#, I gathered up some furballs of Rash. #p2081002# proceeded to put the feathers together and covered the egg up with it."
+    },
+    "area": 41
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081002,
+      "minLevel": 70
+    },
+    "complete": {
+      "npc": 2081002,
+      "items": [
+        {
+          "itemId": 4000229,
+          "count": 75
+        },
+        {
+          "itemId": 4000226,
+          "count": 55
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 33000,
+      "items": [
+        {
+          "itemId": 4000226,
+          "count": -55
+        },
+        {
+          "itemId": 4000229,
+          "count": -75
+        },
+        {
+          "itemId": 2022089,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

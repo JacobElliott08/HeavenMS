@@ -1,0 +1,53 @@
+{
+  "questId": 2285,
+  "info": {
+    "name": "Music Preparation",
+    "descriptions": {
+      "notStarted": "Lana says she needs to pick out a song for Blake. Talk to #bLana#k for more details on what she needs.",
+      "inProgress": "Blake needs a song to perform. Find the CDs at the music shop on the 7th-8th floor and deliver them to #bLana#k.",
+      "completed": "Lana said the existing hits weren\u0027t good enough and asked you to get a new song from #bMaestro Rho#k."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052121,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2284,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052121,
+      "items": [
+        {
+          "itemId": 4000528,
+          "count": 50
+        },
+        {
+          "itemId": 4000529,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15100,
+      "items": [
+        {
+          "itemId": 4000528,
+          "count": -50
+        },
+        {
+          "itemId": 4000529,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

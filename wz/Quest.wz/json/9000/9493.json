@@ -1,0 +1,40 @@
+{
+  "questId": 9493,
+  "info": {
+    "name": "까마귀 사냥",
+    "descriptions": {
+      "notStarted": "#b#p9110002##k에게 다시 말을 걸어보자.",
+      "inProgress": "벚꽃나무를 훼손하는 까마귀를 퇴치하자. \\n\\n#o9400000# #r#a94931##k ",
+      "completed": "이제는 벚꽃이 만발하겠지..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9110002,
+      "minLevel": 10,
+      "startDate": "2006101600",
+      "endDate": "2006110100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9492,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9110002,
+      "monsters": [
+        {
+          "monsterId": 9400000,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200
+    }
+  }
+}

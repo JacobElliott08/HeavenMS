@@ -1,0 +1,30 @@
+{
+  "questId": 3927,
+  "info": {
+    "name": "The Existence of the Secret Organization",
+    "descriptions": {
+      "notStarted": "#b#m260000000##k is famous for producing #t4011008#, but the people of #m260000000# don\u0027t seem to be wealthy, and that\u0027s because of the queen... Maybe #b#p2101000##k, who dances in the middle of the town, knows a thing or two about the queen.",
+      "inProgress": "When I asked #p2101000# about the queen, she started complaining about the queen\u0027s lack of humanity, and mentioned #bSand Bandits#k in the process. Apparently, Sand Bandits steal the treasures of the greedy queen and give them to the struggling folks in this town, all done in a secretive manner. A good thief? Not bad. When I told her I was interested in joining Sand Bandits, #p2101000# thought about it for a while and told me if I can find #bthe wall that has something written about Sand Bandits#k, then I may be able to find them. I better find the wall and then return to #b#p2101000##k.",
+      "completed": "I found the wall that had the symbolism of Sand Bandits written on. When I looked closer, there seems to be a clue on the Sand Bandits... A dagger, an iron hammer, a bow, an arrow? What does that mean?"
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101000,
+      "minLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101000,
+      "infoEx": [
+        null
+      ]
+    }
+  }
+}

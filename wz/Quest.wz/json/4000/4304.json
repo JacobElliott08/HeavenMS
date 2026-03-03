@@ -1,0 +1,46 @@
+{
+  "questId": 4304,
+  "info": {
+    "name": "Hanako\u0027s Foxtail Coat",
+    "parent": "Hanako\u0027s Foxtail Wardrobe",
+    "descriptions": {
+      "notStarted": "#p9120001# seemed to be dissatisfied with just having a #t4000066# muffler, and wants something more. What would that be...",
+      "inProgress": "It turns out #p9120001# wanted not just a #t4000066# muffler, but a #t4000066# coat. Seriously, why does she need a coat at #m800000000#... This defies anyone\u0027s logic, but oh well... How am I going to gather up #b400 #t4000066#s#k?\\n\\n #t4000066# #b#c4000066#/400",
+      "completed": "I gave #p9120001# 400 #t4000066#s. I understand her need for pretty things, but wearing a muffler AND a coat at #m800000000#? #p9120001#\u0027s just weird."
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120001,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 4303,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120001,
+      "items": [
+        {
+          "itemId": 4000066,
+          "count": 400
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 4000066,
+          "count": -400
+        }
+      ]
+    }
+  }
+}

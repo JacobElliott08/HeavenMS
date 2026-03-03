@@ -1,0 +1,49 @@
+{
+  "questId": 2415,
+  "info": {
+    "name": "Using Power Strike",
+    "descriptions": {
+      "notStarted": "Power B. Fore at the training center wants you to learn how to use a new skill.",
+      "inProgress": "Power B. Fore is teaching you how to use a new skill. Use Power Strike to eliminate some Stumps. \\r\\n\\r\\n#o130100# #a24151# (Use Power Strike)",
+      "completed": "You used Power Strike to eliminate some Stumps."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022104,
+      "prerequisiteQuests": [
+        {
+          "questId": 2410,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132
+      ]
+    },
+    "complete": {
+      "npc": 1022104,
+      "monsters": [
+        {
+          "monsterId": 130100,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200
+    }
+  }
+}

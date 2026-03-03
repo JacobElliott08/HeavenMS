@@ -1,0 +1,40 @@
+{
+  "questId": 10322,
+  "info": {
+    "name": "Artifact Hunt Participation Prize",
+    "descriptions": {
+      "notStarted": "You\u0027ve obtained over 5000 points in Artifact Hunt. The Maple Admin says he\u0027ll reward you with a Participation Prize.",
+      "inProgress": "You\u0027ve obtained over 5000 points in Artifact Hunt and received a Participation Prize from Gaga.",
+      "completed": "You can receive presents as well as a boost in your AP if you rank within the top 10. Would you like to take the challenge?"
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "startDate": "2010022200",
+      "endDate": "2010030800",
+      "normalAutoStart": true,
+      "infoNumber": 10310,
+      "infoEx": [
+        null
+      ]
+    },
+    "complete": {
+      "npc": 9000021
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1003073
+        },
+        {
+          "itemId": 1022103
+        }
+      ]
+    }
+  }
+}

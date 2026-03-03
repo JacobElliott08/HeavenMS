@@ -1,0 +1,42 @@
+{
+  "questId": 10016,
+  "info": {
+    "name": "우수요원뱃지를 획득하라!",
+    "parent": "오늘의 미션!  ",
+    "descriptions": {
+      "inProgress": "오늘의 미션! \\r\\n\u003c메모리칩을 지키고 #b우수요원 뱃지 1개#k를 획득하라!\u003e\\n\\n오늘의 미션은 #b우수요원 뱃지#k를 획득하는 것이다. 믿을 수 있는 정보원의 첩보에 따르면 #b요원W#k의 #bMS-07 작전#k의 임무수행을 도와주면 우수요원 뱃지를 받을 수 있다고 한다.\\n때가 되면 #b요원W#k가 찾아온다고 하는데...",
+      "completed": "오늘의 미션을 완료했습니다."
+    },
+    "area": 50,
+    "order": 1,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000036,
+      "minLevel": 10,
+      "startDate": "2008070100",
+      "endDate": "2008090500",
+      "infoNumber": 10025,
+      "infoEx": [
+        null
+      ]
+    },
+    "complete": {
+      "npc": 9000036,
+      "infoNumber": 10025,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2022336
+        }
+      ]
+    }
+  }
+}

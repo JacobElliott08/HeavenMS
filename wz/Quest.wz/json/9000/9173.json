@@ -1,0 +1,49 @@
+{
+  "questId": 9173,
+  "info": {
+    "name": "넬라의 보름달",
+    "parent": "넬라의 추석",
+    "descriptions": {
+      "notStarted": "넬라는 지금까지 연휴를 이렇게 즐겁게 보낸 적이 없었다고 하는데...",
+      "inProgress": "추석 연휴에 달을 보고 소원을 빌었느냐며 넬라는 자신이 소원을 빌 수 있는 달이 들어있는 보따리를 주겠다고 한다. 무엇일까? 보따리를 열어볼까? \\n\\n#o9500000# #r#a91731##k",
+      "completed": "보따리 안에는 둥그런 보름달이 들어있었다. 그 보름달에 나의 소원을 빌었다."
+    },
+    "area": 50,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052103,
+      "repeatIntervalMinutes": 43200,
+      "startDate": "2007092000",
+      "endDate": "2007100800",
+      "prerequisiteQuests": [
+        {
+          "questId": 9172,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052103,
+      "monsters": [
+        {
+          "monsterId": 9500000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 2100020,
+          "count": 3
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 3000
+    }
+  }
+}

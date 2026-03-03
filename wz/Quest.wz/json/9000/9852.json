@@ -1,0 +1,30 @@
+{
+  "questId": 9852,
+  "info": {
+    "name": "서쪽바다 갈림길",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k가 급히 전할 소식이 있나본데… 머리 위의 전구를 클릭해보자.",
+      "inProgress": "#b#p9010010##k가 급히 전할 소식이 있나본데… 머리 위의 전구를 클릭해보자.",
+      "completed": "#b#p9010010##k의 마법에 걸린 것만 같다."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "repeatIntervalMinutes": 180,
+      "startDate": "2007052900",
+      "endDate": "2007061800"
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "buffItemId": 2022187
+    }
+  }
+}

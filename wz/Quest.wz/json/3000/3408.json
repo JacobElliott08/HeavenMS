@@ -1,0 +1,43 @@
+{
+  "questId": 3408,
+  "info": {
+    "name": "Eliminating Aliens",
+    "descriptions": {
+      "notStarted": "I should go see Dr. Kim at the Command Center in the Omega Sector.",
+      "inProgress": "Dr. Kim of the Command Center notified me that a powerful new Alien has appeared somewhere around the Boswell Field, and wanted me to eliminate it for them. He said he had to ask me for help since the new robot isn\u0027t ready just yet... I need to head over to the hidden place at the Boswell Field and defeat at least 5 #bMT-09#k\u0027s.\\n\\n#o5120100# #r#a34081#",
+      "completed": "I managed to eliminate all 5 MT-09\u0027s that Dr. Kim of the Command Center requested. I really hope that the new robot is made soon, so I don\u0027t have to ever do this again."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050001,
+      "minLevel": 40,
+      "prerequisiteQuests": [
+        {
+          "questId": 3407,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050001,
+      "monsters": [
+        {
+          "monsterId": 5120100,
+          "count": 5
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 9200,
+      "items": [
+        {
+          "itemId": 1032011
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "questId": 6904,
+  "info": {
+    "name": " Hero\u0027s Quality",
+    "parent": "The Warrior\u0027s Extreme Path",
+    "descriptions": {
+      "inProgress": " #b#p2081100##k told me if I want to advance to the 4th job, I would have to prove that I am a true hero. He said to bring him #b#t4031344##k and #b#t4031343##k to prove that I am a true hero.\\r\\n#i4031344##t4031344# #b#c4031344#/1#k\\n#i4031343##t4031343# #b#c4031343#/1",
+      "completed": "When I brought #b#t4031344##k and #b#t4031343##k to him, he said I have proved that I\u0027m a true hero and told me to come back and talk to him when I\u0027m ready for the 4th job."
+    },
+    "area": 10,
+    "order": 5
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081100,
+      "minLevel": 120,
+      "jobs": [
+        111,
+        121,
+        131
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6903,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081100,
+      "items": [
+        {
+          "itemId": 4031343
+        },
+        {
+          "itemId": 4031344
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000,
+      "items": [
+        {
+          "itemId": 4031344,
+          "count": -1
+        },
+        {
+          "itemId": 4031343,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

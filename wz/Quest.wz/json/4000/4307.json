@@ -1,0 +1,38 @@
+{
+  "questId": 4307,
+  "info": {
+    "name": "Eliminating Ghosts",
+    "descriptions": {
+      "notStarted": "#b#p9120003##k of #b#m800000000##k seems to have something to tell me. I wonder what it is...",
+      "inProgress": "#p9120003# told me I have a whole bunch of #o9400003#s around me. That\u0027s creepy, to say the least. I better kill off #b80 #o9400003#s#k right now.\\n\\n#o9400003# #r#a43071#",
+      "completed": "After letting #p9120003# know that I\u0027ve killed 80 #o9400003#s, she tells me that there aren\u0027t any #o9400003#s hovering around me. Phew..."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120003,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 4306,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120003,
+      "monsters": [
+        {
+          "monsterId": 9400003,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20600
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "questId": 3413,
+  "info": {
+    "name": "Eliminating Chief Gray",
+    "descriptions": {
+      "notStarted": "I better go see Black Mesoranger, who should be somewhere around Kulan Field.",
+      "inProgress": "I met with Black Mesoranger again at a field around Omega Sector. She wanted me to take out #bChief Grays#k, considered as a high rank among the Grays, as well as collect 3 of their #bnotes#k from them. Chief Grays are very rare among all Grays and they are few and far between. How am I going to find them? \\n\\n#t4031102# #b#c4031102##k/3",
+      "completed": "I took 3 #bnotes#k from the Chief Grays and gave them to Black Mesoranger, who was at a field around Omega Sector. Apparently, these notes contain the history of the Grays... hopefully these notes can be deciphered soon!"
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040018,
+      "minLevel": 43,
+      "prerequisiteQuests": [
+        {
+          "questId": 3412,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040018,
+      "items": [
+        {
+          "itemId": 4031102,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 15000,
+      "meso": 25000,
+      "items": [
+        {
+          "itemId": 4031102,
+          "count": -3
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "questId": 8025,
+  "info": {
+    "name": "Yoona\u0027s Quiz on Shopping 5",
+    "parent": "Yoona\u0027s Quiz on Shopping",
+    "descriptions": {
+      "notStarted": "I better solve Yoona\u0027s last question on shopping.",
+      "inProgress": "Last question. Gotta finish STRONG!",
+      "completed": " I learned something about the restrictions regarding the weapon avatar items. This should help me navigate through the Cash Shop with no problem whatsoever!"
+    },
+    "area": 20,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 20100,
+      "jobs": [
+        0
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 8024,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 20100
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2000003,
+          "count": 30,
+          "jobRestriction": 1
+        },
+        {
+          "itemId": 1092003,
+          "jobRestriction": 1
+        }
+      ]
+    }
+  }
+}

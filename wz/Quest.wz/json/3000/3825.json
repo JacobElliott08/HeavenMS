@@ -1,0 +1,61 @@
+{
+  "questId": 3825,
+  "info": {
+    "name": "Swallow\u0027s Medicine",
+    "parent": "Do Gong Seeking Swallow",
+    "descriptions": {
+      "notStarted": "#p2091001# asked me to visit #b#p2091002##k as he prepares a #bmedicine#k for #p2071006#...",
+      "inProgress": "#p2091002# was more than willing to make the medicine for #p2071006#, but...I have to gather up the missing ingredients for it...\\n\\n#i4000292##t4000292#  #b#c4000292##k/20   \\n#i4000276##t4000276#  #b#c4000276##k/50    \\n#i4000279##t4000279#  #b#c4000279##k/50",
+      "completed": "#b#p2091002##k told me to wait for a second as he makes the medicine."
+    },
+    "area": 44,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091002,
+      "prerequisiteQuests": [
+        {
+          "questId": 3824,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2091002,
+      "items": [
+        {
+          "itemId": 4000292,
+          "count": 20
+        },
+        {
+          "itemId": 4000276,
+          "count": 50
+        },
+        {
+          "itemId": 4000279,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 4000276,
+          "count": -50
+        },
+        {
+          "itemId": 4000279,
+          "count": -50
+        },
+        {
+          "itemId": 4000292,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

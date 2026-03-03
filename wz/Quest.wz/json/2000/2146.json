@@ -1,0 +1,38 @@
+{
+  "questId": 2146,
+  "info": {
+    "name": "Monstrous Tree Stumpy",
+    "parent": "The Old Tree",
+    "descriptions": {
+      "inProgress": "Visited Doctor #p1022006# again. He says #o3220000# seems to take all the nutrients from #m102000000#. He also added that if this continues, #m102000000# would become a wasteland devoid of life. The #r#o3220000##k must be eliminated.\\n\\n#o3220000#  #r#a21461##k",
+      "completed": "Acting on Doctor #p1022006#\u0027s request, I\u0027ve tracked down and eliminated #o3220000# that was nourishing on#m102000000#. Will this help #m102000000# return to its original state?"
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022006,
+      "prerequisiteQuests": [
+        {
+          "questId": 2145,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022006,
+      "monsters": [
+        {
+          "monsterId": 3220000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 43500,
+      "fame": 5
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "questId": 3954,
+  "info": {
+    "name": "Defeat Deo",
+    "parent": "The Desert Bounty",
+    "descriptions": {
+      "notStarted": "You\u0027ve managed to convince #p2100001# somehow. Let\u0027s go report to #p2101010#.",
+      "inProgress": "You\u0027ve reported that #p2100001# has been convinced. #p2101010# grins with satisfaction, nods, and suggests you defeat #r#o3220001##k. Hmm, convincing was challenging enough, but now he wants you to defeat a monster? Sigh... but let\u0027s not forget that there is a bounty. That should motivate you a little. \\n\\n#k#o3220001#  #r#a39541##k",
+      "completed": "You have defeated #o3220001# and told #p2101010#. #p2101010# laughs heartily and tells you that you\u0027ve done well. Huh? Is that it? What happened to the bounty? #p2101010# says the bounty isn\u0027t for the members of the Sand Bandits."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101010,
+      "prerequisiteQuests": [
+        {
+          "questId": 3953,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101010,
+      "monsters": [
+        {
+          "monsterId": 3220001
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 55500,
+      "fame": 6
+    }
+  }
+}

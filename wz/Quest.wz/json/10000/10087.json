@@ -1,0 +1,31 @@
+{
+  "questId": 10087,
+  "info": {
+    "name": "천지의 응원",
+    "descriptions": {
+      "notStarted": "천지가 그린캠페인을 응원하기 위해 기다리고 있다.",
+      "inProgress": "천지가 그린캠페인을 응원해 준다.",
+      "completed": "천지가 그린캠페인을 응원해 주었다."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000007,
+      "startDate": "2008111300",
+      "endDate": "2008121900",
+      "minLevel": 13,
+      "prerequisiteQuests": [
+        {
+          "questId": 10082,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000007,
+      "endScript": "q10087e"
+    }
+  }
+}

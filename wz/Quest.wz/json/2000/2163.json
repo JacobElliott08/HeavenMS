@@ -1,0 +1,33 @@
+{
+  "questId": 2163,
+  "info": {
+    "name": "Athena Pierce\u0027s Smile",
+    "parent": "The Lost Letter",
+    "descriptions": {
+      "inProgress": "I wonder how Kyrin and Athena Pierce know each other? Let me see what Athena Pierce has to say about that.",
+      "completed": "How surprising! Athena Pierce and Kyrin used to be practically family! I had no idea that the two had such a deep history."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012100,
+      "minLevel": 10,
+      "prerequisiteQuests": [
+        {
+          "questId": 2162,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012100
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100
+    }
+  }
+}

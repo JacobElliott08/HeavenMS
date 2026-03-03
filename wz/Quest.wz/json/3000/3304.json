@@ -1,0 +1,54 @@
+{
+  "questId": 3304,
+  "info": {
+    "name": "Alcadno Cape",
+    "parent": "Joining Alcadno",
+    "descriptions": {
+      "inProgress": "I received #t4031704# from the broker. I was told to give it to #p2111001# and answer the questions in the order that the broker told me in order to become a member of Alcadno... I better remember the sequences that #p2111007# gave me when I go see #p2111001#.",
+      "completed": "After a number of tough, tough questions, #p2111001# finally accepted me as a member of Alcadno. Flashing his trademark glass eye as he gave me #t1102136#, the head of the Alcadno Society may look intimidating, but he\u0027s a really nice person."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111007,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3303,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111001,
+      "items": [
+        {
+          "itemId": 4031704
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031704
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 1102136
+        },
+        {
+          "itemId": 4031704,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

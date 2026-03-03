@@ -1,0 +1,37 @@
+{
+  "questId": 6262,
+  "info": {
+    "name": "The Snow Mountain\u0027s Ice Stone",
+    "parent": "Ancient Ice Stone",
+    "descriptions": {
+      "notStarted": "#b#p2020009##k recognized the book right away. ",
+      "inProgress": " #b#p2020009##k told me to go see  #b#p2030000##k, the guardian of Snow Mountain in El Nath, if I want to get #q2221003#. I know he\u0027s the guardian of Snow Mountain, but would he know such a thing?",
+      "completed": " The guard by Snow Mountain, #b#p2030000##k said it\u0027s nonsense to break the ice engraved ancient letters as it\u0027s protected by magic. #r#q2221003##k is too appealing to give up here. The blacksmith, #b#p2020000##k, could make a hammer that can break the ice..."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020009,
+      "minLevel": 120,
+      "jobs": [
+        222
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6261,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500000
+    }
+  }
+}

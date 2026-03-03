@@ -1,0 +1,44 @@
+{
+  "questId": 28217,
+  "info": {
+    "name": "The Demon Likes...",
+    "descriptions": {
+      "notStarted": "#b#@1052001:##k in #bKerning City#k says he needs a valuable item that can be used as a bait to catch #rValefor#k. Let\u0027s talk to him.",
+      "inProgress": "You need a valuable bait to lure #rValefor#k. Go talk to #b#@1052102:##k in the #bSubway Entrance#k of Kerning City.",
+      "completed": "In order to find something valuable to use as bait to catch Valefor, you were told to find #b#p1052102##k in #bKerning City#k."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "prerequisiteQuests": [
+        {
+          "questId": 28216,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1052102
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

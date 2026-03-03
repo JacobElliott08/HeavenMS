@@ -1,0 +1,35 @@
+{
+  "questId": 2063,
+  "info": {
+    "name": "Mrs. Ming Ming\u0027s Second Worry",
+    "parent": "Mrs. Ming Ming\u0027s Second Worry",
+    "descriptions": {
+      "notStarted": "I heard Mrs. Ming Ming in Henesys has a new worry...",
+      "inProgress": "I met Mrs. Ming Ming again in Henesys who was preparing for the village festival. She said she needs food to prepare for the festival, and asked me to collect #b20 Pig\u0027s heads, 60 Octopus Legs, and Estelle\u0027s Special Sauce#k. To get the special sauce, I think I\u0027ll have to go find Estelle near Ellinia.",
+      "completed": "I met up with #bEstelle#k near Ellinia to get her #bSpecial Sauce#k, but she apparently she doesn\u0027t want to give it to me for free..."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012106,
+      "minLevel": 21,
+      "prerequisiteQuests": [
+        {
+          "questId": 2062,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1032105
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2400,
+      "nextQuest": 2064
+    }
+  }
+}

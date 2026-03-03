@@ -1,0 +1,77 @@
+{
+  "questId": 20713,
+  "info": {
+    "name": "A Deal With Mr. Pickall",
+    "descriptions": {
+      "notStarted": "Per #p1103002#\u0027s order, I better go up to #b#p9000008##k and ask for the real #t4032138#.",
+      "inProgress": "#p9000008# told me he couldn\u0027t give me the real doll because he wasn\u0027t paid a dime for this work. In fact, he wanted me to pay him the fee for it. He even suggested that if I couldn\u0027t pay for it, then I\u0027ll have to work. I\u0027ll need to give him #b#t4032139##k, which is very common among #r#o1210103#s#k, in order for him to cough up the real doll. \\n\\n#i4032139# #t4032139# #b#c4032139# / 10#k",
+      "completed": "I was able to give #t4032139# to #p9000008# and received the real #t4032138#."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000008,
+      "repeatIntervalMinutes": 60,
+      "prerequisiteQuests": [
+        {
+          "questId": 20714
+        },
+        {
+          "questId": 20712,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032138
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 9000008,
+      "items": [
+        {
+          "itemId": 4032139,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4032139,
+          "count": -10
+        },
+        {
+          "itemId": 4032138
+        }
+      ]
+    }
+  }
+}

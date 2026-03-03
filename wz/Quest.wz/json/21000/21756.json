@@ -1,0 +1,39 @@
+{
+  "questId": 21756,
+  "info": {
+    "name": "A Letter to the Queen",
+    "descriptions": {
+      "notStarted": "When you reach Level 68, #b#p1002104##k send a message.",
+      "inProgress": "Apparently, #p1201000# succeeded in decoding the letter and it contains some surprising information! Better head over to #b#m140000000##k immediately and talk to #b#p1201000##k about the contents of the letter.",
+      "completed": "Amazingly, the letter written by the heroes was addressed to the Queen of the time. The actual content of the letter simply asked that the Queen take good care of the Seal Stone of #m130000000#. "
+    },
+    "area": 6,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 68,
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 21755,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1201000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500
+    }
+  }
+}

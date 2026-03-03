@@ -1,0 +1,49 @@
+{
+  "questId": 1115,
+  "info": {
+    "name": "마야의 사랑의 증표",
+    "descriptions": {
+      "notStarted": "#t4031683#를 받으려면 마야를 찾아가보자.",
+      "inProgress": "마야는 나의 사랑을 증명하라면서 #b#t4000001# 40#k개를 가져오라고 했다.\\n\\n#i4000001##t4000001# #b#c4000001# / 40#k",
+      "completed": "마야에게 사랑의 증표를 얻었다."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012101,
+      "repeatIntervalMinutes": 0,
+      "infoNumber": 1100,
+      "infoEx": [
+        null
+      ],
+      "items": [
+        {
+          "itemId": 4031683
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012101,
+      "items": [
+        {
+          "itemId": 4000001,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000001,
+          "count": -40
+        },
+        {
+          "itemId": 4031683
+        }
+      ]
+    }
+  }
+}

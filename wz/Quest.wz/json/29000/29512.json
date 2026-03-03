@@ -1,0 +1,32 @@
+{
+  "questId": 29512,
+  "info": {
+    "name": "Monster Expert",
+    "descriptions": {
+      "notStarted": "#b#eTitle Challenge - Monster Expert#n\\nCollect #k#b30 Monster Cards#k. Dalair, on behalf of the God of Honor, is looking for explorers who know everything there is to know about the monsters in Maple World. He says anyone who collects more than 30 Monster Cards will receive the #bMonster Expert#k#n title.",
+      "inProgress": "Collect the Monster Cards, which will help you understand the tendencies, habitats, and dropped items of various monsters. Some cards have special powers that will help you in your adventures.",
+      "completed": "#b#eTitle Challenge - Monster Expert#n#k\\n\\nYou have received the #bMonster Expert#k title and the associated medal."
+    },
+    "area": 51,
+    "medalItemId": 1142083
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000040,
+      "minLevel": 10
+    },
+    "complete": {
+      "npc": 9000040,
+      "minMonsterBookCards": 30
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142083
+        }
+      ]
+    }
+  }
+}

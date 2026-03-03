@@ -1,0 +1,59 @@
+{
+  "questId": 20706,
+  "info": {
+    "name": "A Black Shadow in the Pig Farm",
+    "descriptions": {
+      "notStarted": "I\u0027ll need to talk to Agent #b#p1103001##k of #m100000000#, who seems to have some new information to share.",
+      "inProgress": "#p1103001#, who claims black shadows have been spotted all around #b#m100020000##k, asked me if I could investigate the forest in East. He told me to #broam around my mouse cursor until I can click on something, then click on it#k.",
+      "completed": "I reported the suspicious black shadow hidden in the forest that I spotted to #p1103001#."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103001,
+      "minLevel": 14,
+      "prerequisiteQuests": [
+        {
+          "questId": 20705,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1103001,
+      "infoNumber": 20731,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

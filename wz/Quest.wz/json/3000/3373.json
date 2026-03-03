@@ -1,0 +1,51 @@
+{
+  "questId": 3373,
+  "info": {
+    "name": "Juliet\u0027s Response",
+    "parent": "Juliet\u0027s Response",
+    "descriptions": {
+      "inProgress": "Juliet was able to make the clothes. It was very well-made, actually. She must be good with her hands. There\u0027s one slight problem, though... I wonder if she\u0027ll really give it to Romeo, because it is DEFINITELY FOR WOMEN!! I knew something wasn\u0027t right. Despite the concerns, Juliet asked me to give this \"dress\" to #bRomeo#k.",
+      "completed": "Romeo seemed very happy to receive the clothes that Juliet made for him. Seriously, is he going to wear that dress with the pink ribbon on? Alchemists are really strange.. that\u0027s for sure."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2112003,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3372,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2112004,
+      "items": [
+        {
+          "itemId": 4031777
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031777
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100,
+      "items": [
+        {
+          "itemId": 4031777,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "questId": 9421,
+  "info": {
+    "name": "비밀의 코카-콜라 원액만들기",
+    "descriptions": {
+      "notStarted": "코카-콜라 제조법을 알고 있는 #b#p9001005##k를 찾아가자.",
+      "inProgress": "코-크플레이 닷컴 (#bwww.cokeplay.com#k)에 가면 #b#t4031325##k의 재료를 구할 수 있다.  \\n\\n#t4031322:# #b#c4031322#/1#k \\n#t4031323:# #b#c4031323#/1#k \\n#t4031324:# #b#c4031324#/1#k ",
+      "completed": "#b#t4031322#,#t4031323#,#t4031324##k를 적절히 배합해 #b#t4031325##k를 만들어 보았다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9001005,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2006070300",
+      "endDate": "2007030100"
+    },
+    "complete": {
+      "npc": 9001005,
+      "items": [
+        {
+          "itemId": 4031322
+        },
+        {
+          "itemId": 4031323
+        },
+        {
+          "itemId": 4031324
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031322,
+          "count": -1
+        },
+        {
+          "itemId": 4031323,
+          "count": -1
+        },
+        {
+          "itemId": 4031324,
+          "count": -1
+        },
+        {
+          "itemId": 2022076,
+          "count": 15,
+          "probability": 2
+        },
+        {
+          "itemId": 2022077,
+          "count": 12,
+          "probability": 2
+        },
+        {
+          "itemId": 2022078,
+          "count": 10,
+          "probability": 2
+        },
+        {
+          "itemId": 4031325,
+          "probability": 6
+        },
+        {
+          "itemId": 2022075,
+          "count": 12,
+          "probability": 6
+        }
+      ]
+    }
+  }
+}

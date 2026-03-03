@@ -1,0 +1,34 @@
+{
+  "questId": 21720,
+  "info": {
+    "name": "The Puppeteer\u0027s Warning",
+    "descriptions": {
+      "notStarted": "What would #p1002104# say about the Black Wings? You should talk to #b#p1002104##k, the Information Dealer in #b#m104000000##k, and find out.",
+      "inProgress": "He tells you that the Black Wings are an organization conspiring to resurrect the Black Mage and says that this information must be relayed to #b#p1201000##k as well, so he wants you to let #p1201000# know about the situation.  In the mean time, Tru plans on utilizing his network as an Information Dealer to gather as much information on the Black Wings as possible.",
+      "completed": "#p1201000# thought that the fact that an organization like the Black Wings even exists...means that the Black Mage\u0027s resurrection is imminent. She encouraged you to train that much harder to regain your old, heroic form. She then taught you a skill called #bPolearm Booster#k which she she learned by poring over an ancient document!"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 22,
+      "prerequisiteQuests": [
+        {
+          "questId": 21719,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1201000,
+      "endScript": "q21720e"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "questId": 21733,
+  "info": {
+    "name": "Gathering Some Strange Information",
+    "descriptions": {
+      "notStarted": "The moment you reach Level 31, you receive a message from #b#p1002104##k. Is it about a new Informant Assignment? But he\u0027s never mentioned anything about it before…",
+      "inProgress": "#p1002104# says he has an urgent message for you and asks you to come to #b#m104000004##k right away. You wonder what\u0027s going on.",
+      "completed": "So it turned out that the message was from a fake #p1002104# who belongs to the Black Wings. In other words, the whole thing was a trap laid by the puppeteer to throw you off guard. Luckily, you were able to defeat the puppeteer, but he got away at the last second again. Meanwhile, #p1002104# was ambushed while waiting for a skill from #p1201000# to arrive. Luckily, he kept it safe and gave you the #bCombo Mastery#k skill."
+    },
+    "area": 6,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 31,
+      "normalAutoStart": true,
+      "npc": 1204007,
+      "startScript": "q21733s",
+      "prerequisiteQuests": [
+        {
+          "questId": 21732,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1002104,
+      "endScript": "q21733e",
+      "monsters": [
+        {
+          "monsterId": 9300345
+        }
+      ],
+      "infoNumber": 21762,
+      "infoEx": [
+        null
+      ]
+    }
+  }
+}

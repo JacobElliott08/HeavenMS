@@ -1,0 +1,29 @@
+{
+  "questId": 1031,
+  "info": {
+    "name": "Heena and Sera",
+    "descriptions": {
+      "notStarted": "#bMaple World#k, where fantasy and reality meet and have pie! This is the world where many people are eager to listen to my own story. I better go talk to #bHeena#k first.",
+      "inProgress": "Heena told me her sister #bSera#k also likes to meet with new travelers, and wanted me to go see her. Apparently, Sera\u0027s near by, hanging laundry. I better head #bright#k.",
+      "completed": "Sera told me to take the #bportal on the right#k and move forward."
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 2100
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5
+    }
+  }
+}

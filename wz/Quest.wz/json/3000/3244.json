@@ -1,0 +1,48 @@
+{
+  "questId": 3244,
+  "info": {
+    "name": "Disgruntled Roly-Poly Worker",
+    "descriptions": {
+      "notStarted": "#p2040013# apparently has been skipping lunch these days because of heavy workload... I better check it out.",
+      "inProgress": "#p2040013# complained to me that he had been missing lunch lately because of the #o3210205#s that were all over Eos Tower. The angered #p2040013# wanted me to kill #b20 #o3210205#s#k and bring him #b5 #t4000096#s#k.\\n\\n#i4000096##t4000096# #b#c4000096#/5#k\\n#o3210205# #r#a32441##k",
+      "completed": "I was able to help out #p2040013#, who had been missing lunch almost everyday because of the #o3210205#s invading Eos Tower, by killing off those #o3210205#s and giving him some walnuts in the process."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040013,
+      "minLevel": 20,
+      "repeatIntervalMinutes": 1440
+    },
+    "complete": {
+      "npc": 2040013,
+      "items": [
+        {
+          "itemId": 4000096,
+          "count": 5
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 3210205,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000096,
+          "count": -5
+        },
+        {
+          "itemId": 4001020,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

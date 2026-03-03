@@ -1,0 +1,53 @@
+{
+  "questId": 28116,
+  "info": {
+    "name": "Urban Warrior",
+    "descriptions": {
+      "notStarted": "This is Icebyrd Slimm, mayor of New Leaf City. I want to thank you for helping us get the city up and running. I have something for you, so come see me immediately!",
+      "inProgress": "As a bonus for helping get the city up and running, Icebyrd has given me a Warrior\u0027s Throne! This is sure to help me in the battles to come!",
+      "completed": "As a bonus for helping get the city up and running, Icebyrd has given me a Warrior\u0027s Throne! This is sure to help me in the battles to come!"
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201050,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 4915,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4917,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4918,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 4911,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 28106,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201050
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "items": [
+        {
+          "itemId": 3010012
+        }
+      ]
+    }
+  }
+}

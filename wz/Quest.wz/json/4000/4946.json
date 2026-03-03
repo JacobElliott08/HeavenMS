@@ -1,0 +1,56 @@
+{
+  "questId": 4946,
+  "info": {
+    "name": "Family Jewels",
+    "descriptions": {
+      "notStarted": "Oh...looks like Ludmilla is not quite done with me yet. I\u0027d better head back and see what that nag wants now...",
+      "inProgress": "I spoke with Ludmilla, and big surprise---her Cherry Pie Ghoulash didn\u0027t lure Jonas out. I think he probably pushed a bookcase in front of the door to ensure he never sees her again, but that\u0027s just a theory. At any rate, it looks like now her prized jewelry has mysteriously disappeared. She thinks Sophilia\u0027s taken it, but I\u0027m not sure if I buy that, seeing as how she\u0027s...not around to do that. I have to gather #b20 #t4031769#s#k and #b10 #t4031770#s#k and bring them back to her.  The woman complains way too much... sheesh. ",
+      "completed": "I found Ludmilla\u0027s beloved jewelry for her.  In return she gave me a worn, but well-loved doll. It\u0027s seen better days, but it has charm. Someone is probably looking for this..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201076,
+      "minLevel": 15,
+      "endDate": "2007103123",
+      "prerequisiteQuests": [
+        {
+          "questId": 4945,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201076,
+      "items": [
+        {
+          "itemId": 4031769,
+          "count": 20
+        },
+        {
+          "itemId": 4031770,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8500,
+      "items": [
+        {
+          "itemId": 4031767
+        },
+        {
+          "itemId": 4031769,
+          "count": -20
+        },
+        {
+          "itemId": 4031770,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

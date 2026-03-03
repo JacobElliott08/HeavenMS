@@ -1,0 +1,33 @@
+{
+  "questId": 21000,
+  "info": {
+    "name": "Find the Missing Kid 1",
+    "descriptions": {
+      "notStarted": "You hear someone scream from the ark, saying something about a kid that\u0027s gone missing. The ark can\u0027t leave until the kid\u0027s on board. What should you do?",
+      "inProgress": "#p1209000# is pleading with you to find the child. The kid\u0027s apparently lost somewhere in the forest. She says you\u0027re the only one who even has a chance of succeeding... #bSo you\u0027d better go into the forest and look for him!#k",
+      "completed": "You barely managed to find the kid deep in the forest. You\u0027d better take him back to the ark."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1209000,
+      "startScript": "q21000s",
+      "infoNumber": 21002,
+      "infoEx": [
+        null
+      ],
+      "jobs": [
+        2000
+      ]
+    },
+    "complete": {
+      "npc": 1209006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 21001
+    }
+  }
+}

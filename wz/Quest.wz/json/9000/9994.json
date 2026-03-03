@@ -1,0 +1,59 @@
+{
+  "questId": 9994,
+  "info": {
+    "name": "Repairing the Maple Cape",
+    "descriptions": {
+      "notStarted": "I think my Maple Cape has a hole.  I should go see Francois.",
+      "inProgress": "When I went to go see Francois to repair my Maple Cape, she told me she doesn\u0027t know how to repair it.  Instead, she told me to go see #Lisa#k from Orbis who taught her how to make the cape.  She also told me to take #b10 Snow Silks#k just in case she needs it to repair the cape.\\n\\n#i4001166# #t4001166# #b#c4001166# / 10\\n#i1102166##k #t1102166# #b#c1102166# / 1",
+      "completed": "Francois told me to go see #bLisa#k in Orbis to repair the hole in the Maple Cape... When I took the Maple Cape along with 10 Snow Silks to Lisa, she not only perfectly repaired it with her hidden sewing skills but she also made the cape stronger than before.  I had no idea Lisa had this kind of skill.  "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032002,
+      "minLevel": 35,
+      "endDate": "2009061623",
+      "prerequisiteQuests": [
+        {
+          "questId": 9988,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1102166
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012012,
+      "items": [
+        {
+          "itemId": 4001166,
+          "count": 10
+        },
+        {
+          "itemId": 1102166
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4001166,
+          "count": -10
+        },
+        {
+          "itemId": 1102166,
+          "count": -1
+        },
+        {
+          "itemId": 1102167
+        }
+      ]
+    }
+  }
+}

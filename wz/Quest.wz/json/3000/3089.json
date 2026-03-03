@@ -1,0 +1,33 @@
+{
+  "questId": 3089,
+  "info": {
+    "name": "The Sprayer Elma Borrowed 1",
+    "parent": "Orbis in Danger",
+    "descriptions": {
+      "inProgress": "The key tool used to fix the Orbis clouds is the Cloud Sprayer, but ever since Elma the Housekeeper borrowed it some 50 years ago, the sprayer hasn\u0027t been seen since. 50 years, and still no return??? I better go see #bElma the Housekeeper#k.",
+      "completed": "I met up with Elma and received the #t4031308# that she borrowed 50 years ago. I should go back to Spiruna\u0027s house now."
+    },
+    "area": 33,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2032000,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3088,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500
+    }
+  }
+}

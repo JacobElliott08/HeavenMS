@@ -1,0 +1,35 @@
+{
+  "questId": 10062,
+  "info": {
+    "name": "가면신사의 조언1",
+    "parent": "조이의 정체",
+    "descriptions": {
+      "notStarted": "조이의 광기 어린 모습이 무섭다. 어떤 이유로 이렇게 됐을까? 가면신사에게 한번 물어보자!",
+      "inProgress": "가면신사는 이야기가 아직 끝나지 않았다며 할로윈에 재미를 위해 나에게 계속 찾으라고 했다.",
+      "completed": "조이의 광기 어린 모습이 무서워 이유를 묻고자 가면신사에게 찾아갔더니 가면 신사는 할로윈 이야기는 아직 끝나지 않았다며 마지막까지 이야기를 찾아보라고 한다."
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120000,
+      "startDate": "2008101600",
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 9943,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50
+    }
+  }
+}

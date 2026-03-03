@@ -1,0 +1,31 @@
+{
+  "questId": 6140,
+  "info": {
+    "name": "Return of the Dark Lord",
+    "parent": "The One Hidden in the Shadow",
+    "descriptions": {
+      "notStarted": "#b#p2081400##k says he has something to tell me...perhaps I should pay him a visit.",
+      "inProgress": " #b#p2081400##k told me to meet #b#p1052001##k. Now that I think about it, it\u0027s been a long time since I\u0027ve seen the Dark Lord. He never seems to age...",
+      "completed": "#p1052001# said he has some interesting suggestions and that if I\u0027m interested, he\u0027ll tell me more."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081400,
+      "jobs": [
+        412,
+        422
+      ]
+    },
+    "complete": {
+      "npc": 1052001
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300000
+    }
+  }
+}

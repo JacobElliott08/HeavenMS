@@ -1,0 +1,63 @@
+{
+  "questId": 8221,
+  "info": {
+    "name": "The Mark of Heroism",
+    "descriptions": {
+      "notStarted": "Lukan told me about the Valley of Heroes and the giant Menhir columns barring the way through.  He mentioned that the Heroic Statues that line the valley would also act as teleporters, for only someone who had an artifact known as the Marker of Heroism.  Perhaps someone well-versed in ancient artifacts would know something about these Markers of Heroism... I think I may have an idea on who to ask.  Otherwise, it\u0027s time for some ledge hopping!",
+      "inProgress": "I was right: John Barricade\u0027s extensive knowledge about ancient civilizations and items has paid off again!  He\u0027ll give me the Barricades\u0027 Marker of Heroism if I reimburse him for the materials they had to acquire to recreate it: #b1 Power Crystal#k, #b10 Gold Ores#k and #b4 Typhon Feathers#k.  The only problem: Typhons nest in the upper reaches of the mountain!  To get up the mountain, I\u0027ll have to go through the Valley first!  Ugh!  Looks like a catch-22!  Hmmm, I guess I could see if someone else might have these feathers... I wonder if anyone else has already made it through the Valley on their own?",
+      "completed": "John gave me the Marker of Heroism artifact after I brought him the hard-to-find Typhon feathers and the other materials.  Now I\u0027ll be able to the Heroic Statues to get through the Valley.  However, it\u0027s not all candy and cake yet; I still need to figure out the correct statues to use, but at least it\u0027ll make it easier for me to move around.  Guess I\u0027ll try each statue as I go along and see where they lead!"
+    },
+    "area": 45
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201051,
+      "minLevel": 70,
+      "startScript": "q8221s",
+      "prerequisiteQuests": [
+        {
+          "questId": 8222,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201051,
+      "items": [
+        {
+          "itemId": 4032005,
+          "count": 4
+        },
+        {
+          "itemId": 4010006,
+          "count": 10
+        },
+        {
+          "itemId": 4004000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000,
+      "items": [
+        {
+          "itemId": 4032005,
+          "count": -4
+        },
+        {
+          "itemId": 4010006,
+          "count": -10
+        },
+        {
+          "itemId": 4004000,
+          "count": -1
+        },
+        {
+          "itemId": 3992039
+        }
+      ]
+    }
+  }
+}

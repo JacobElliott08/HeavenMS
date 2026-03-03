@@ -1,0 +1,42 @@
+{
+  "questId": 6360,
+  "info": {
+    "name": "The Study of Space-Time Transformation",
+    "parent": "The Secret Behind Space-Time Transformations",
+    "descriptions": {
+      "notStarted": "Rolonay has been deeply immersed in the study of transformation across space and time. I wonder if there\u0027s anything I can do to help in his research. ",
+      "inProgress": "Rolonay thinks that he\u0027ll have to rely on some openings between Papulatus\u0027 dimensions to transform through space and time. But that won\u0027t be as easy as long as Papulatus is around! Rolonay suggests defeating Papulatus to find a clue that might lead to finding the openings between dimensions. I should defeat #rPapulatus#k and look for #bany strange or special objects#k to help Rolonay with his research.    ",
+      "completed": "When I defeated Papulatus, I received a strange key. I gave the key to Rolonay, thinking that it might actually be a crucial piece of clue."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092012,
+      "minLevel": 120,
+      "jobs": [
+        512
+      ]
+    },
+    "complete": {
+      "npc": 1092012,
+      "items": [
+        {
+          "itemId": 4031869
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800000,
+      "items": [
+        {
+          "itemId": 4031869,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

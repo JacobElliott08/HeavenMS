@@ -1,0 +1,56 @@
+{
+  "questId": 3100,
+  "info": {
+    "name": "Delivering Food to Spiruna",
+    "descriptions": {
+      "notStarted": "I heard #b#p2012011##k of #b#m200000000##k have something to take care of...",
+      "inProgress": "According to #p2012011#, #p2032001# the crazy old lady lives with her student somewhere around Cloud Park. They usually stop by the grocery store and buy some food, but they hadn\u0027t come by over the last few days. Concerned, #p2012011# asked me to deliver the food to #b#p2032001#\u0027s student#k for him...\\n\\n#i2010003# #t2010003#  #b#c2010003##k / 20  \\n#i2010000# #t2010000#  #b#c2010000##k / 20 \\n#i2010002# #t2010002#  #b#c2010002##k / 20",
+      "completed": "I managed to deliver the food to #p2032001#\u0027s student."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012011,
+      "minLevel": 30
+    },
+    "complete": {
+      "npc": 2032000,
+      "items": [
+        {
+          "itemId": 2010000,
+          "count": 20
+        },
+        {
+          "itemId": 2010002,
+          "count": 20
+        },
+        {
+          "itemId": 2010003,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7500,
+      "meso": 4000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 2010002,
+          "count": -20
+        },
+        {
+          "itemId": 2010000,
+          "count": -20
+        },
+        {
+          "itemId": 2010003,
+          "count": -20
+        }
+      ]
+    }
+  }
+}

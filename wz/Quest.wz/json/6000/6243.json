@@ -1,0 +1,52 @@
+{
+  "questId": 6243,
+  "info": {
+    "name": "Frostprey",
+    "parent": "The Legendary Ice Bird",
+    "descriptions": {
+      "notStarted": "#b#p2081003##k says he found a good place to hatch Freezer.",
+      "inProgress": "#p2081003# thinks the highest nest in the sky should be able to hatch it. Sounds good.  Let\u0027s go there. \\n\\n#o9300090# #r#a62431#",
+      "completed": " I can use the power of Frostprey now!"
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081003,
+      "jobs": [
+        322
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6242,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4001114
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081003,
+      "monsters": [
+        {
+          "monsterId": 9300090
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1200000,
+      "skills": [
+        {
+          "skillId": 3221005,
+          "masterLevel": 10
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "questId": 10380,
+  "info": {
+    "name": "Aran\u0027s Return",
+    "descriptions": {
+      "notStarted": "You reach Level 20 and #b#p9010000##k suddenly starts talking to you about something…",
+      "inProgress": "Aran has returned to Maple World! Maple Admin and #p1201000# have teamed up to host an event in celebration of the return of Aran. Apparently, if you reach #bLevel 30(50, 70) as Aran#k, #p1201000# will reward you with a special gift.",
+      "completed": "Aran has returned to Maple World! Maple Admin and #p1201000# have teamed up to host an event in celebration of the return of Aran. Apparently, if you reach #bLevel 30(50, 70) as Aran#k, #p1201000# will reward you with a special gift."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 20,
+      "endDate": "2010061000",
+      "startScript": "q10380s",
+      "normalAutoStart": true
+    }
+  }
+}

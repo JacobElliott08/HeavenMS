@@ -1,0 +1,61 @@
+{
+  "questId": 3091,
+  "info": {
+    "name": "The Ocean View : Kriel\u0027s Offer",
+    "parent": "The View of the Ocean",
+    "descriptions": {
+      "notStarted": "Kriel, a fairy that resides in Orbis, surely has never been underwater before, right? I mean, she has wings that are good for navigating the friendly skies, and definitely not for navigating underwater. Anyway, I should go see Kriel the Fairy.",
+      "inProgress": "Kriel, a proud owner of a set of wings, was blowing off travelers that weren\u0027t fortunate enough to have them. I don\u0027t think she has a clue that there are numerous breathtaking places that just cannot be reached by flying. According to Lisa, Kriel\u0027s not to enthused with the fact that she can only hear about the rumors of Aqua Road and not being able to go there in person. Anyway, Lisa suggested that I buy Kriel \"The Official Aqua Road Photo Album\" from #bMuse#k. Muse, huh... Another trip underwater... \\n\\n#i4031310# #t4031310#   #b#c4031310##k / 1",
+      "completed": "I gave Muse 100 snow crystals and purchased the Official Aqua Road Photo Album, then gave it to Kriel for the viewing. After seeing her admit how beautiful Aqua Road is, I must say I felt validated by it, but it also seems like she set the whole thing up for this from the get go. Oh well, at least Kriel\u0027s happy, and that\u0027s good enough for me."
+    },
+    "area": 33,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012011,
+      "minLevel": 30
+    },
+    "complete": {
+      "npc": 2012011,
+      "prerequisiteQuests": [
+        {
+          "questId": 3094,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031310
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "items": [
+        {
+          "itemId": 2040705,
+          "probability": 1
+        },
+        {
+          "itemId": 2040704,
+          "probability": 1
+        },
+        {
+          "itemId": 2040707,
+          "probability": 1
+        },
+        {
+          "itemId": 2040708,
+          "probability": 1
+        },
+        {
+          "itemId": 4031310,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

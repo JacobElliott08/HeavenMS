@@ -1,0 +1,54 @@
+{
+  "questId": 3538,
+  "info": {
+    "name": "Beyond the Ruins",
+    "descriptions": {
+      "notStarted": "#p2140000# made the intruder\u0027s force field ineffective.  What was this intruder planning to do?  I should ask #b#p2140000##k.",
+      "inProgress": "#p2140000# said that he has no idea what the intruder wanted especially when there\u0027s nothing but a ruin deep in the temple and nothing to take from the Path of Past.  \u0027Perhaps the #rMirror of the Goddess#k...?\u0027, he mumbled and then shook his head and said \u0027no way....\u0027.  But just in case, he told me to go past #b#m270040000#, to #m270050000##k and check...",
+      "completed": "When I told #p2140000# that someone summoned a strange monster from the Mirror of the Goddess, his face turned pale."
+    },
+    "area": 46
+  },
+  "requirements": {
+    "start": {
+      "npc": 2140000,
+      "minLevel": 120,
+      "prerequisiteQuests": [
+        {
+          "questId": 3536,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 2140000,
+      "infoNumber": 7402,
+      "infoEx": [
+        null
+      ]
+    }
+  }
+}

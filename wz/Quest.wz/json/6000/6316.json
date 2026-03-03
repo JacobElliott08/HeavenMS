@@ -1,0 +1,45 @@
+{
+  "questId": 6316,
+  "info": {
+    "name": "Key to a Different World",
+    "descriptions": {
+      "notStarted": "#b#p2020005##k told me to see #b#p2041023##k in #m220000000# #m220050300# to get #b#t4031470##k.",
+      "inProgress": "#b#p2041023##k said to open the door in #m220060400#, I\u0027ll need #b#t4031##k. However, he says he lost the key while being chased by #r#o8160000##k....\\r\\n#i4031496##t4031496# #b#c4031496#/1",
+      "completed": " I gave #t4031496# back to #b#p2041023##k."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041023,
+      "jobs": [
+        222
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6315,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041023,
+      "items": [
+        {
+          "itemId": 4031496
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 4031496,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

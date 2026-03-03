@@ -1,0 +1,55 @@
+{
+  "questId": 2015,
+  "info": {
+    "name": "Talking to Stan",
+    "parent": "Alex the Runaway Kid",
+    "descriptions": {
+      "notStarted": "",
+      "inProgress": "At the entrance of Henesys Park, I met Alex\u0027s father Stan, the chief of Henesys. I couldn\u0027t even start up a conversation with him at first, but he did offer to speak to me only if I get him #b30 Evil Eye\u0027s tails and 60 pig ribbons#k to fix this town. Jeez, why do I have to go through this much trouble just to talk to this grumpy old man?\\n\\n#t4000007# #b#c4000007##k/30\\n#t4000002# #b#c4000002##k/60",
+      "completed": "I talked with Alex\u0027s father, Stan, to settle the misunderstandings. For the return, I got Alex\u0027s mother\u0027s gold watch."
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012003,
+      "minLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 2014,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012003,
+      "items": [
+        {
+          "itemId": 4000007,
+          "count": 30
+        },
+        {
+          "itemId": 4000002,
+          "count": 60
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1600,
+      "nextQuest": 2016,
+      "items": [
+        {
+          "itemId": 4000007,
+          "count": -30
+        },
+        {
+          "itemId": 4000002,
+          "count": -60
+        }
+      ]
+    }
+  }
+}

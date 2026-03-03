@@ -1,0 +1,51 @@
+{
+  "questId": 2183,
+  "info": {
+    "name": "A Banquet for the Whalians",
+    "parent": "A Banquet for the Whalians",
+    "descriptions": {
+      "inProgress": "I\u0027m finally done cooking the special entree for the Whalians. I\u0027d better take it to #bPorchay#k quick!",
+      "completed": "I don\u0027t think the Whalians will have to worry about food for a while."
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060005,
+      "minLevel": 20,
+      "prerequisiteQuests": [
+        {
+          "questId": 2182,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092013,
+      "items": [
+        {
+          "itemId": 4031851
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031851
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 3500,
+      "items": [
+        {
+          "itemId": 4031851,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

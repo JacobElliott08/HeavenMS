@@ -1,0 +1,112 @@
+{
+  "questId": 8251,
+  "info": {
+    "name": "Assembling the toy-armada!",
+    "descriptions": {
+      "notStarted": "It seems the aliens started to plunder cows from the farms around #bHenesys#k. I will check with #bLazy Daisy#k what is going on.",
+      "inProgress": "#bLazy Daisy#k figured out that assembling an armada to fight back the aliens would stop them from their current plundering actions. Let\u0027s help her!\\n\\n#i4000099# #t4000099# #c4000099# / #r100#k\\n#i4000104# #t4000104# #c4000104# / #r100#k\\n#i4000105# #t4000105# #c4000105# / #r100#k\\n#i4000118# #t4000118# #c4000118# / #r100#k\\n#i4000122# #t4000122# #c4000122# / #r100#k\\n#i4000124# #t4000124# #c4000124# / #r10#k\\n#i4000125# #t4000125# #c4000125# / #r10#k\\n#i4000126# #t4000126# #c4000126# / #r10#k\\n",
+      "completed": "That teached these aliens a lesson or two. Now #bHenesys\u0027#k farms are well-suited against any other attacks from UFOs. Mission complete."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9209008,
+      "minLevel": 50
+    },
+    "complete": {
+      "npc": 9209008,
+      "items": [
+        {
+          "itemId": 4000099,
+          "count": 100
+        },
+        {
+          "itemId": 4000104,
+          "count": 100
+        },
+        {
+          "itemId": 4000105,
+          "count": 100
+        },
+        {
+          "itemId": 4000118,
+          "count": 100
+        },
+        {
+          "itemId": 4000122,
+          "count": 100
+        },
+        {
+          "itemId": 4000124,
+          "count": 10
+        },
+        {
+          "itemId": 4000125,
+          "count": 10
+        },
+        {
+          "itemId": 4000126,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000,
+      "meso": 20000,
+      "items": [
+        {
+          "itemId": 4000099,
+          "count": -100
+        },
+        {
+          "itemId": 4000104,
+          "count": -100
+        },
+        {
+          "itemId": 4000105,
+          "count": -100
+        },
+        {
+          "itemId": 4000118,
+          "count": -100
+        },
+        {
+          "itemId": 4000122,
+          "count": -100
+        },
+        {
+          "itemId": 4000124,
+          "count": -10
+        },
+        {
+          "itemId": 4000125,
+          "count": -10
+        },
+        {
+          "itemId": 4000126,
+          "count": -10
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 100,
+          "skillLevel": 1,
+          "masterLevel": 1
+        },
+        {
+          "skillId": 10000100,
+          "skillLevel": 1,
+          "masterLevel": 1
+        },
+        {
+          "skillId": 20000100,
+          "skillLevel": 1,
+          "masterLevel": 1
+        }
+      ]
+    }
+  }
+}

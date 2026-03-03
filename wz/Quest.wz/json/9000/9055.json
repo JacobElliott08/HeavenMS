@@ -1,0 +1,57 @@
+{
+  "questId": 9055,
+  "info": {
+    "name": "Beat the Heat \u003cMedium\u003e - 2nd Stage",
+    "parent": "Beat the Heat \u003cMedium\u003e",
+    "descriptions": {
+      "notStarted": "I should go visit Maple Administrator for Beat the Heat, 2nd Stage.",
+      "inProgress": "For the 2nd Stage task, the Maple Administrator asked me to gather up #b10 #t4031168#s#k, which can be obtained through defeating #b#o5200002##k and #b#o5200001##k.\\n\\n#t4031168# #b#c4031168##k/10",
+      "completed": "I met the Maple Administrator, and passed the 2nd stage of the Medium level of #bBeat the Heat#k."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "startDate": "2005082400",
+      "endDate": "2005090300",
+      "prerequisiteQuests": [
+        {
+          "questId": 9054,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "prerequisiteQuests": [
+        {
+          "questId": 9054,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031168,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4000,
+      "items": [
+        {
+          "itemId": 2001000,
+          "count": 30
+        },
+        {
+          "itemId": 4031168,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

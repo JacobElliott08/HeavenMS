@@ -1,0 +1,49 @@
+{
+  "questId": 6302,
+  "info": {
+    "name": "Carta\u0027s Worn Bracelet",
+    "parent": "Strong Will",
+    "descriptions": {
+      "inProgress": "#p2060100# said that the will power needs to be made into medicine for it to be absorbed back. However, she said she won\u0027t do it unless I bring her her #b#t4031463##k.  She says I can get it from #b#p2040050##k.",
+      "completed": " Would #b#p2040050##k know about  #p2060100#\u0027s bracelet?"
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060100,
+      "jobs": [
+        112,
+        122,
+        132,
+        212,
+        222,
+        232,
+        312,
+        322,
+        412,
+        422,
+        512,
+        522,
+        2112,
+        2217,
+        2218
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6301,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040050
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 35000
+    }
+  }
+}

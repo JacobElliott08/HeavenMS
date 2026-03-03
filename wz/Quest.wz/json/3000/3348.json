@@ -1,0 +1,59 @@
+{
+  "questId": 3348,
+  "info": {
+    "name": "For Alcadno",
+    "descriptions": {
+      "notStarted": "#p2111002#, the missing alchemist. What he wanted, and the dark truth behind #m261000000#... All these previously hidden facts have been revealed. Now it\u0027s the matter of choice. If I am to choose Alcadno, I\u0027ll have to head to where #r#p2111001##k is.",
+      "inProgress": "If I handed #b#t4161033##k to #p2111001#, then the truth about #m261000000#, as well as all things #p2111002# strived for would be hidden forever. If that really is what I want for this to happen,  then I have no choice but to hand in #t1102135# and the note to Maed.",
+      "completed": "I gave #p2111001# #t4161033#, and received a brand new Alcadno Cape. This has made me forfeit my right to contemn the Alcadnos. I am now one of them."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111001,
+      "minLevel": 75,
+      "prerequisiteQuests": [
+        {
+          "questId": 3349
+        },
+        {
+          "questId": 3346,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3347
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111001,
+      "items": [
+        {
+          "itemId": 1102136
+        },
+        {
+          "itemId": 4161034
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000,
+      "items": [
+        {
+          "itemId": 1102136,
+          "count": -1
+        },
+        {
+          "itemId": 1102140
+        },
+        {
+          "itemId": 4161034,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

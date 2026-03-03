@@ -1,0 +1,38 @@
+{
+  "questId": 2159,
+  "info": {
+    "name": "Helping Roel",
+    "descriptions": {
+      "notStarted": "Riel, Rael and Roel starts betting on who will be offered to King Clang. The winner gets to be the sacrifice! How can I help these girls get to their senses? Let\u0027s meet with #bRoel#k.",
+      "inProgress": "Roel looks just like Riel but with a tougher attitude! Her dare was to take out #r50 Lorangs#k. Roel asks me to help her win the bet. I\u0027d better help her with this, and then talk about how ridiculous this bet is. \\n\\n#o3230102# #r#a21591##k",
+      "completed": "Defeated all Lorangs for Roel."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1081101,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2157,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1081101,
+      "monsters": [
+        {
+          "monsterId": 3230102,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "questId": 28200,
+  "info": {
+    "name": "Even More Challenging Training-1",
+    "descriptions": {
+      "notStarted": "#b#@9201120:##k in #bKerning City#k says he\u0027ll begin the first training. Let\u0027s talk to him.",
+      "inProgress": "He says to hunt 30 #rOrange Mushrooms#k.\\nThey can be easily found in #b#m102040000##k. Report back to #b#@9201120:##k in #bKerning City#k upon completion.",
+      "completed": "You\u0027ve completed #bErvine#k\u0027s first training!"
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201120,
+      "prerequisiteQuests": [
+        {
+          "questId": 28199,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 9201120,
+      "monsters": [
+        {
+          "monsterId": 1210102,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

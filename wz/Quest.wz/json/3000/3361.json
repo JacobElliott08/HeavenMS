@@ -1,0 +1,44 @@
+{
+  "questId": 3361,
+  "info": {
+    "name": "Zenumist and the Ostracized Research",
+    "descriptions": {
+      "notStarted": "Apparently, #b#p2111008##k, an alchemist from Zenumist, wants something...",
+      "inProgress": "#p2111008# mentioned that there was an alchemist that has been ostracized by everyone for trying to combine the works of Zenumist and Alcadno, #b#p2112014##k, and he was interested in obtaining the Lab Report. He wanted me to acquire #b#t4031774##k for him, and in order to do so, I\u0027ll have to find someone that is aware of #p2112014#\u0027s current whereabouts... \\n\\n#i4031774##t4031774# #b#c4031774##k/1 ",
+      "completed": "I acquired #t4031774# and gave it to #p2111008#. Peering through the results, Bedin\u0027s eyes were flashing with interest."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111008,
+      "minLevel": 70,
+      "maxLevel": 85,
+      "prerequisiteQuests": [
+        {
+          "questId": 3362
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111008,
+      "items": [
+        {
+          "itemId": 4031774
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 40000,
+      "meso": 50000,
+      "items": [
+        {
+          "itemId": 4031774,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

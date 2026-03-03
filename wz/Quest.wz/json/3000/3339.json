@@ -1,0 +1,34 @@
+{
+  "questId": 3339,
+  "info": {
+    "name": "Dr. De Lang\u0027s Underground Study",
+    "parent": "Dr. De Lang\u0027s Notes",
+    "descriptions": {
+      "notStarted": "#b#p2111004##k is the wife of the missing alchemist #p2111002#. If I need to investigate more on #p2111002#, I better go talk to her.",
+      "inProgress": "When I told #p2111004# of my intentions to investigate more on #p2111002#, she contended that she\u0027d rather prefer me conducting this as opposed to people from Alcadno or Zenumist. She then proceeded to tell me something that no one is aware of: #p2111002#\u0027s #bunderground study#k. It may have been gathering dust from no one visiting, but I may be able to find a clue or two there...",
+      "completed": "At #p2111002#\u0027s underground study, I was able to locate a strange book. Maybe this book contains Dr. De Lang\u0027s Secret Notes! A hole that\u0027s found in the middle of the book looks like if I find the right item, it may fit perfect in the hole... if the key to the Secret Notes is made out of silver, as mentioned by the Wandering Alchemist, then maybe #b#t4031744##k is the key."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111004,
+      "minLevel": 75,
+      "prerequisiteQuests": [
+        {
+          "questId": 3322,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111016
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000
+    }
+  }
+}

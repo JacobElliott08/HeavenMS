@@ -1,0 +1,63 @@
+{
+  "questId": 9443,
+  "info": {
+    "name": "더위 탈출 프로젝트 중급 2단계",
+    "descriptions": {
+      "notStarted": "무더위가 짜증난다면 #b#p9010000##k를 찾아가 보자.",
+      "inProgress": "#b#p9010000##k는 시원한 바다에서 수영을 하면서 더위를 잊어 보라고 했다. \\n\\n#o3210450# #r#a94431##k \\n#o4230201# #r#a94432##k",
+      "completed": "#b#p9010000##k를 만나 더위탈출 프로젝트를 무사히 수행하였다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 30,
+      "maxLevel": 69,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2006062200",
+      "endDate": "2006072400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9442,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "monsters": [
+        {
+          "monsterId": 3210450,
+          "count": 50
+        },
+        {
+          "monsterId": 4230201,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 8500,
+      "items": [
+        {
+          "itemId": 2001001,
+          "count": 25,
+          "probability": 1
+        },
+        {
+          "itemId": 2001000,
+          "count": 20,
+          "probability": 1
+        },
+        {
+          "itemId": 2001002,
+          "count": 15,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

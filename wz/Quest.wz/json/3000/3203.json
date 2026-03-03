@@ -1,0 +1,108 @@
+{
+  "questId": 3203,
+  "info": {
+    "name": "Eos Tower Threatened!",
+    "descriptions": {
+      "notStarted": "I should go see Marcel at Ludibrium.",
+      "inProgress": "Marcel of Ludibrium asked me to take care of #b20 Block Golems#k and #b12 King Block Golems#k that seem prevalent around Eos Tower.\\n\\n#o4230110# #r#a32031##k\\n#o4230109# #r#a32032#",
+      "completed": "I took care of the #bBlock Golems#k and #bKing Block Golems#k that Marcel of Ludibrium asked me to do. "
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041004,
+      "minLevel": 35,
+      "prerequisiteQuests": [
+        {
+          "questId": 3202,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041004,
+      "monsters": [
+        {
+          "monsterId": 4230110,
+          "count": 12
+        },
+        {
+          "monsterId": 4230109,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7000,
+      "items": [
+        {
+          "itemId": 2044501,
+          "probability": 1
+        },
+        {
+          "itemId": 2044601,
+          "probability": 1
+        },
+        {
+          "itemId": 2043001,
+          "probability": 1
+        },
+        {
+          "itemId": 2043201,
+          "probability": 1
+        },
+        {
+          "itemId": 2043301,
+          "probability": 1
+        },
+        {
+          "itemId": 2044001,
+          "probability": 1
+        },
+        {
+          "itemId": 2044101,
+          "probability": 1
+        },
+        {
+          "itemId": 2043101,
+          "probability": 1
+        },
+        {
+          "itemId": 2044201,
+          "probability": 1
+        },
+        {
+          "itemId": 2044301,
+          "probability": 1
+        },
+        {
+          "itemId": 2044401,
+          "probability": 1
+        },
+        {
+          "itemId": 2043701,
+          "probability": 1
+        },
+        {
+          "itemId": 2043801,
+          "probability": 1
+        },
+        {
+          "itemId": 2044701,
+          "probability": 1
+        },
+        {
+          "itemId": 2044801,
+          "probability": 1
+        },
+        {
+          "itemId": 2044901,
+          "probability": 1
+        }
+      ]
+    }
+  }
+}

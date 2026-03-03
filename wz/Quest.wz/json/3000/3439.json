@@ -1,0 +1,44 @@
+{
+  "questId": 3439,
+  "info": {
+    "name": "Where\u0027s the Power of Origin?",
+    "descriptions": {
+      "notStarted": "I should go visit General Maestro at the Omega Sector..",
+      "inProgress": "I met General Maestro, who\u0027s in command of a humongous army at the Omega Sector. The general said after investigating the dull crystals from the Drum Bunnies, he realized that the aliens may have a clue about this, and instructed me to find Alien Gray. There may be an item around Alien Gray that may provide clues for this. Of course, it won\u0027t just cough up the item, so I may have to look around the area where it\u0027s at. \\n\\n#t4031136# #c4031136#/1",
+      "completed": "Just like the way General Mastro instructed, I found a hidden document that appeared to have been purposely hidden Alien Gray. The general said, after putting the document through Alien Language Translator, it said a Dark Cryastal Ore with its dark force will turn a harmless doll into a monster. He wanted all the crystals gone before it gets too late."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050008,
+      "minLevel": 31,
+      "prerequisiteQuests": [
+        {
+          "questId": 3438,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050008,
+      "items": [
+        {
+          "itemId": 4031136
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4200,
+      "meso": 15000,
+      "items": [
+        {
+          "itemId": 4031136,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

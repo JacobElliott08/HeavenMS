@@ -1,0 +1,21 @@
+{
+  "questId": 3453,
+  "info": {
+    "name": "Zeno, the Formidable Enemy",
+    "descriptions": {
+      "notStarted": " #b#p2050001##k from #b#m221000000##k has requested your cooperation to save the world...",
+      "inProgress": "Boasting a firm build and intelligence, #o6220001# is a new type of robotic ordnance. But #o6220001# has been acting strangely as of late... It attacks everything including the Grays. #p2050001#, curious as to why #o6220001# has suddenly turned ill-tempered, has asked you to talk to #b#p2050002##k to gather information about #o6220001#.",
+      "completed": "When asked about #o6220001#, #p2050002# denies knowing anything about it... Hm, he seems suspicious."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050001,
+      "minLevel": 65
+    },
+    "complete": {
+      "npc": 2050002
+    }
+  }
+}

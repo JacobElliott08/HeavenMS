@@ -1,0 +1,29 @@
+{
+  "questId": 8072,
+  "info": {
+    "name": "An Old Code",
+    "parent": "A Puzzling Code",
+    "descriptions": {
+      "notStarted": "Kinokonoko of the Mushroom Shrine apparently found something. I should check it out.",
+      "inProgress": "Kinokonoko asked me if I could solve this puzzling code. What does this code mean...?",
+      "completed": " I managed to solve the code Kinokonoko gave me--answers lie in Sleepywood."
+    },
+    "area": 48,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9110002,
+      "minLevel": 69
+    },
+    "complete": {
+      "npc": 1061006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10000,
+      "nextQuest": 8073
+    }
+  }
+}

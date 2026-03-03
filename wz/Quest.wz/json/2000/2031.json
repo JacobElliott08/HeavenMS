@@ -1,0 +1,76 @@
+{
+  "questId": 2031,
+  "info": {
+    "name": "Andre\u0027s Request",
+    "parent": "Nella \u0026 Kerning City Citizen\u0027s Request",
+    "descriptions": {
+      "inProgress": "I got the third request from Nella. Andre from the hair salon wanted some Seafood Soup. I should get #b100 Octopus Legs#k and #bPure Water#k for his Seafood Soup ingredients.",
+      "completed": "I gave what Andre asked for and I got the glove for return. I hope he enjoys his hearty bowl of Seafood Soup. I should get back to Nella for more requests."
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052103,
+      "minLevel": 15,
+      "prerequisiteQuests": [
+        {
+          "questId": 2030,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052103,
+      "items": [
+        {
+          "itemId": 4000006,
+          "count": 100
+        },
+        {
+          "itemId": 2022000
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4000006,
+          "count": -100
+        },
+        {
+          "itemId": 2022000,
+          "count": -1
+        },
+        {
+          "itemId": 1082002,
+          "jobRestriction": 1180673
+        },
+        {
+          "itemId": 1082004,
+          "jobRestriction": 2099202
+        },
+        {
+          "itemId": 1082020,
+          "jobRestriction": 4198404
+        },
+        {
+          "itemId": 1082013,
+          "jobRestriction": 8200
+        },
+        {
+          "itemId": 1082032,
+          "jobRestriction": 16400
+        },
+        {
+          "itemId": 1082183,
+          "jobRestriction": 32800
+        }
+      ]
+    }
+  }
+}

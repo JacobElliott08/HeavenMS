@@ -1,0 +1,38 @@
+{
+  "questId": 4481,
+  "info": {
+    "name": "Socks Creation Recipes",
+    "descriptions": {
+      "notStarted": "Mrs. Claus, who previously wouldn\u0027t open up about Santa Claus, finally started talking to you after realizing you had read up on Santa Claus. As you expected, there was another reason behind Santa Claus leaving.",
+      "inProgress": "Mrs. Claus told you about the importance of the Christmas Socks. However, she also said that making quality socks is not an easy task. The sock factory ceased its production due to a case of robbery, but she\u0027ll be able to make them again with a little bit of your help.\\n\\n#t4161039# #b#c4161039##k/1",
+      "completed": "You brought #bSanta Encyclopedia No.3#k to Mrs. Claus who was having a hard time remembering how to make Christmas Socks. But it all came back to her after reading the book. You should wait a while until she finds the frame for the socks."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9250051,
+      "minLevel": 25,
+      "endDate": "2010010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 4480,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9250051,
+      "items": [
+        {
+          "itemId": 4161039
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000
+    }
+  }
+}

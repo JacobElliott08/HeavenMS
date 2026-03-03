@@ -1,0 +1,48 @@
+{
+  "questId": 3629,
+  "info": {
+    "name": "The Kids That Became the Sun and the Moon",
+    "descriptions": {
+      "notStarted": "I heard there\u0027s a boy somewhere in Korean Folk Town that needs my help.",
+      "inProgress": "#b#p2071008##k is a boy that lives in Korean Folk Town with his mother and a little sister. He seemed to be in a hurry for something, so I asked him what\u0027s up, and he told me a story of what happened today. Apparently, his mother went out for a little bit, and while she was away from home, a tiger from the Black Mountain came to town and threatened to eat his sister and him. He said he has to leave town today before the tiger catches him tonight, and told me he needed #b20 #t4031268#s#k from #bHodori#k. And for reasons unknown, he also wanted me to get #b1 #t4031269##k that #r#o2230106##k gives.\\n\\n#t4031268#  #b#c4031268##k / 20\\n#t4031269#  #b#c4031269##k / 1",
+      "completed": "#p2071008# from Korean Folk Town requested for 20 #t4031268#s and 1 #t4031269#. I got him the iterms, and he gave me #t4031270#."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2071008,
+      "minLevel": 37
+    },
+    "complete": {
+      "npc": 2071008,
+      "items": [
+        {
+          "itemId": 4031268,
+          "count": 20
+        },
+        {
+          "itemId": 4031269
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 16000,
+      "items": [
+        {
+          "itemId": 4031268,
+          "count": -20
+        },
+        {
+          "itemId": 4031269,
+          "count": -1
+        },
+        {
+          "itemId": 4031270
+        }
+      ]
+    }
+  }
+}

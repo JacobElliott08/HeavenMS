@@ -1,0 +1,58 @@
+{
+  "questId": 2009,
+  "info": {
+    "name": "Pia and the Blue Mushroom",
+    "descriptions": {
+      "notStarted": "Let\u0027s start looking for Pia in Henesys",
+      "inProgress": "Underneath the watchtower at Henesys park, I met Pia, who was wearing a teddy bear costume. She was talking about how, on the way to Ellinia, she ran into a couple of blue mushrooms and had a hard time with them. She wanted me to show them who\u0027s the boss, and as a proof, she wanted #b60 blue mushroom caps and 60 green mushroom caps#k ... but I can see why she\u0027s being attacked anyway ... anyone that walks around wearing those is bound to be attacked !!!",
+      "completed": "I got Pia, who had been chilling under the watchtower at Henesys Park, the stuff she requested, #b60 blue mushroom caps and 60 green mushroom caps#k. For that, she got me the scroll for armor def. ... she said all I need to do is click on it at item window, and drag it to the armor. Simple, but ... what if this doesn\u0027t work ????"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012102,
+      "minLevel": 20
+    },
+    "complete": {
+      "npc": 1012102,
+      "items": [
+        {
+          "itemId": 4000009,
+          "count": 40
+        },
+        {
+          "itemId": 4000012,
+          "count": 40
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 3000,
+      "items": [
+        {
+          "itemId": 2040000,
+          "probability": 1
+        },
+        {
+          "itemId": 2040001,
+          "probability": 1
+        },
+        {
+          "itemId": 2040002,
+          "probability": 1
+        },
+        {
+          "itemId": 4000012,
+          "count": -40
+        },
+        {
+          "itemId": 4000009,
+          "count": -40
+        }
+      ]
+    }
+  }
+}

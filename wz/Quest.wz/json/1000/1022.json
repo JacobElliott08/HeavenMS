@@ -1,0 +1,50 @@
+{
+  "questId": 1022,
+  "info": {
+    "name": "Lucas\u0027 Cute Daughter",
+    "descriptions": {
+      "notStarted": "They say there\u0027s a request for elder #b#p12000##k in #b#m1010000##k.",
+      "inProgress": "#p12000# is worried about his daughter in #b#m60000##k. To make the way safe for his daughter on her way home, he asked me to catch #r#o0130101##k. #o0130101#? Hmmm~ tough one..Then after killing #o0130101#, shall I go to  #b#p20100##k? \\n #k \\n#o0130101# #r#a10221# #k",
+      "completed": "I let #p20100# know I beat off all of #o0130101#. Yes!"
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 12000,
+      "maxLevel": 10,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 20100,
+      "monsters": [
+        {
+          "monsterId": 130101,
+          "count": 7
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 70,
+      "items": [
+        {
+          "itemId": 2010000,
+          "count": 5
+        },
+        {
+          "itemId": 2010009,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

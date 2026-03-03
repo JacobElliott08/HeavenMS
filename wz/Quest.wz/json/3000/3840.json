@@ -1,0 +1,40 @@
+{
+  "questId": 3840,
+  "info": {
+    "name": "Weakening King Sage Cat",
+    "parent": "Eliminating King Sage Cat",
+    "descriptions": {
+      "notStarted": "The Head Mental Trainer of #bMu Lung#k, #bDo Gong#k, seems to be concerned about something...",
+      "inProgress": "The source of awful concern for Do Gong was Master Goblin, who over the course of thousand years have digressed from a promising Master to a bona-fide Master Goblin. Do Gong pleaded with me to defeat Master Goblin, who\u0027s responsible for tricking Tae Roon and is primed to trick his way into Mu Lung. In order to weaken Master Goblin, I\u0027ll first have to eliminate Sage Cats and recover #bcat dolls#k from the battle.  \\n\\n#i4000289# #t4000289# #b#c4000289##k/100",
+      "completed": "I managed to defeat the Sage Cats and recovered the cat dolls. After casting spells on those cat dolls, Do Gong wanted me to head to #b#m250010503##k to see if the spells were casted right. Off to the Goblin Forest."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091001,
+      "minLevel": 77
+    },
+    "complete": {
+      "npc": 2091001,
+      "items": [
+        {
+          "itemId": 4000289,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1500,
+      "items": [
+        {
+          "itemId": 4000289,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

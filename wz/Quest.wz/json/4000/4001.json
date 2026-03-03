@@ -1,0 +1,52 @@
+{
+  "questId": 4001,
+  "info": {
+    "name": "아종의 취미생활 2",
+    "parent": "아종의 취미생활",
+    "descriptions": {
+      "notStarted": "인형을 수집하는 취미가 있는 대만의 #b#p9330016##k을 만나보자.",
+      "inProgress": "#b#p9330016##k이 갖고 싶어 하는 인형을 모아주자.\\n\\n#i4000258##t4000258#  #b#c4000258#/50",
+      "completed": "#b#p9330016##k이 갖고 싶어하는 #b#t4000258##k 모아 주고 맛있는 요리를 얻었다."
+    },
+    "area": 48,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9330016,
+      "minLevel": 45,
+      "startDate": "2000010100",
+      "endDate": "2000010200",
+      "prerequisiteQuests": [
+        {
+          "questId": 4000,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9330016,
+      "items": [
+        {
+          "itemId": 4000258,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 12000,
+      "items": [
+        {
+          "itemId": 4000258,
+          "count": -50
+        },
+        {
+          "itemId": 2022097,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

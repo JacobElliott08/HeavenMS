@@ -1,0 +1,28 @@
+{
+  "questId": 8291,
+  "info": {
+    "name": "A Versal Tradition",
+    "descriptions": {
+      "notStarted": "To help her decide between Maplemas and Versalmas, Little Suzy wants me to go talk to O-Pongo.  I\u0027d better speak with this strange green mouse and find out more details about Versalmas.",
+      "inProgress": "To help Little Suzy decide between Maplemas and Versalmas, I spoke to O-Pongo about Suzy\u0027s dilemma.  O-Pongo listened and asked me to deliver a message to Suzy.  I should talk to her in a bit.  ",
+      "completed": "Versal Power! I spoke with O-Pongo, the Versalmas Mouse, who is the \"Santa\" for the Versal version of Maplemas, and learned a great deal about Versalmas.  He told me about the customs for their holiday--quite different from the Maple World! The world of Versal is usually shrouded in darkness; Versalmas is an annual holiday that celebrates the emergence of the sun in their world, which shines for 90 straight days and only for these 90 days.  For Versalmas, children receive presents every day for the first 30 days, and get cool treats like Sugar-coated Olives and Caramel Onions! Sounds pretty awesome... Now I\u0027d better speak with Maple Claws and head back to Suzy... It makes me wonder for myself though, which holiday would I pick to celebrate?  Hmmm..."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201091,
+      "minLevel": 10,
+      "endDate": "2009012100",
+      "prerequisiteQuests": [
+        {
+          "questId": 8289,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9201091
+    }
+  }
+}

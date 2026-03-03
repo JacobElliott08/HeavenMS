@@ -1,0 +1,43 @@
+{
+  "questId": 3904,
+  "info": {
+    "name": "Queen\u0027s Tea 2",
+    "parent": "Queen\u0027s Tea",
+    "descriptions": {
+      "inProgress": "#p2012012# told me although she may not know who #p2101007# is, she didn\u0027t want to just give #t4031577# to me easily, and told me if I really wanted #t4031577#, then I\u0027ll have to eliminate #r30 #o5200000#s#k. \\n\\n#o5200000#  #r#a39041#",
+      "completed": "I eliminated 30 #o5200000#s and went back to #p2012012#."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012012,
+      "minLevel": 23,
+      "prerequisiteQuests": [
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3903,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012012,
+      "monsters": [
+        {
+          "monsterId": 5200000,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000
+    }
+  }
+}

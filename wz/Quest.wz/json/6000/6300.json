@@ -1,0 +1,44 @@
+{
+  "questId": 6300,
+  "info": {
+    "name": "Carta\u0027s sin",
+    "parent": "Strong Will",
+    "descriptions": {
+      "notStarted": " #b#p2081000##k from #b#m240000000##k villiage says he has some information for me...",
+      "inProgress": " I learned that Humans used to have strong will power to resist temptation, which prevented them from getting seduced by the monsters. But, #bwitch #p2060100##k took away the people\u0027s will power and since then, humans have been falling into seduction.  I wonder if this is really true.  Let\u0027s go ask #p2060100#.",
+      "completed": " #p2060100# doesn\u0027t look too thrilled."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081000,
+      "jobs": [
+        112,
+        122,
+        132,
+        212,
+        222,
+        232,
+        312,
+        322,
+        412,
+        422,
+        512,
+        522,
+        2112,
+        2217,
+        2218
+      ]
+    },
+    "complete": {
+      "npc": 2060100
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 20000
+    }
+  }
+}

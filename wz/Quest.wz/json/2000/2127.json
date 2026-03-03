@@ -1,0 +1,29 @@
+{
+  "questId": 2127,
+  "info": {
+    "name": "To the Desert...",
+    "descriptions": {
+      "notStarted": "I\u0027m now ready to go to whereever #p1022002# is going to take me. I should go see #p1022002# now.",
+      "inProgress": "Where is #p1022002# going to take me...",
+      "completed": "#p1022002# have sent me to Nihal Desert."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022002,
+      "minLevel": 18,
+      "maxLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 2122,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1022002,
+      "endScript": "q2127e"
+    }
+  }
+}

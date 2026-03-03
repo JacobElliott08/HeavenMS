@@ -1,0 +1,33 @@
+{
+  "questId": 2271,
+  "info": {
+    "name": "Lana\u0027s Decision",
+    "descriptions": {
+      "notStarted": "#bLana#k the CEO of Big Hit Records says she needs a few moments to decide whether Blake has what it takes to make a big debut. Talk to her in a minute to see what she decides.",
+      "inProgress": "Finally! Blake will be able to make his debut! But first, you must convince the seven star chef #bRobby Fray#k to cater Blake\u0027s afterparty.",
+      "completed": "What? #bRobby Fray#k needs a favor? Well, you gotta do what you gotta do to help Blake make his debut. Talk to Robby Fray again."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052121,
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2270,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052123
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1280
+    }
+  }
+}

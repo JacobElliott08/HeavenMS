@@ -1,0 +1,26 @@
+{
+  "questId": 29503,
+  "info": {
+    "name": "Title Challenge - Donation King",
+    "descriptions": {
+      "notStarted": "#b#eTitle Challenge - Donation King#n(Special Title)\\n#kA symbol of wealth and honor that is given to one person: try out for the #e#bDonation King#k#n title!  I heard they are choosing Donation Kings to represent each town.  I should go see the Monk of Honor, #b#p9000040##k.",
+      "inProgress": "#b#eTitle Challenge - Donation King#n(Special Title)\\n#k\\n - Time Left : #Qminlimit#Minutes #Qseclimit#Seconds\\n - Donated Amount : #b#jmoney##k Mesos\\n\\n At the beginning of each month, the donation record of every town is reset.   Dalair said simply donating a large amount of money will not win me this award, but he said I must demonstrate wisdom. ",
+      "completed": "#b#eTitle Challenge - Donation King#n(Special Title)\\n#k\\n - Time Left : #Qminlimit#Minutes #Qseclimit#Seconds\\n - Donated Town : #b#jm##k\\n - Donated Amount : #b#jmoney##k Mesos\\n\\nAt the beginning of each month, the donation record of every town is reset.   Dalair said simply donating a large amount of money will not win me this award, but said I must demonstrate wisdom. "
+    },
+    "area": 51,
+    "timeLimit2": 3600,
+    "medalItemId": 1142014
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000040,
+      "minLevel": 30,
+      "repeatIntervalMinutes": 0,
+      "startScript": "q29503s"
+    },
+    "complete": {
+      "npc": 9000040,
+      "endScript": "q29503e"
+    }
+  }
+}

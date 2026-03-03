@@ -1,0 +1,44 @@
+{
+  "questId": 3803,
+  "info": {
+    "name": "The Lost Document",
+    "parent": "Do Gong\u0027s Teaching",
+    "descriptions": {
+      "notStarted": "Apparently at #b#m250000000##k, there\u0027s someone by the name of #b#p2091001##k who is the meditation instructor on the Masters, and he knows a way to become the Legendary Being.",
+      "inProgress": "#p2091001# stated that there\u0027s a scroll out there that should help one to become the Master. Unfortunately, the scroll that contains all the skills have been lost by #p2091001# once at #m250010501# around the Peach Farm, only to find it back later. Alas, the scroll is old and ragged, with ripped pages here and there. So, does that mean if I find the ripped #b#t4000299##k, then I can become a Master myself?\\n\\n#t4000299# #i4000299#  #b#c4000299##k/10",
+      "completed": "I managed to find #t4000299#, and brought it back to #p2091001#. Unfortunately, #p2091001# had the look of great concern as he rummaged through #o5120506#..."
+    },
+    "area": 44,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091001,
+      "minLevel": 55
+    },
+    "complete": {
+      "npc": 2091001,
+      "items": [
+        {
+          "itemId": 4000299,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2091001,
+      "minLevel": 55
+    },
+    "onComplete": {
+      "experience": 22000,
+      "items": [
+        {
+          "itemId": 4000299,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

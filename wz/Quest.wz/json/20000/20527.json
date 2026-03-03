@@ -1,0 +1,61 @@
+{
+  "questId": 20527,
+  "info": {
+    "name": "A Knight\u0027s Pride",
+    "descriptions": {
+      "notStarted": "#p1101002# said he had something to tell me... again...",
+      "inProgress": "#p1101002# was worried that I was at Level 100 and still riding a regular #t1902005#, which is beneath my level as a high-ranked Knight. He then informed me about Monster Mount. I guess I can find out more about an enhanced Mount from #b#p1102002# the Mount Trainer#k...",
+      "completed": "#p1101002# was worried that I was at Level 100 and still riding a regular #t1902005#, which is beneath my level as a high-ranked Knight. He then informed me about Monster Mount. I guess I can find out more about an enhanced Mount from #p1102002# the Mount Trainer..."
+    },
+    "area": 15,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "minLevel": 100,
+      "startScript": "q20527s",
+      "normalAutoStart": true,
+      "prerequisiteQuests": [
+        {
+          "questId": 20523,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 1902005
+        },
+        {
+          "itemId": 1902006
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1101002
+    }
+  }
+}

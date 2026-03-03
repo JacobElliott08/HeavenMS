@@ -1,0 +1,37 @@
+{
+  "questId": 2244,
+  "info": {
+    "name": "Tristan\u0027s Successor",
+    "descriptions": {
+      "notStarted": "You hear Tristan\u0027s Spirit calling you from the Underground Temple. Let\u0027s rush over to Tristan\u0027s Tomb.",
+      "inProgress": "Tristan\u0027s Spirit says he\u0027d acknowledge you as his successor if you prevent Balrog from reviving. Wow, the successor of a legendary hero of Maple World? That\u0027s a once-in-a-lifetime opportunity! Let\u0027s do it!",
+      "completed": "Upon preventing Balrog\u0027s revival 200 times, you have been named Tristan\u0027s Successor. "
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061017,
+      "minLevel": 50
+    },
+    "complete": {
+      "npc": 1061017,
+      "monsters": [
+        {
+          "monsterId": 8830003,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142079
+        }
+      ],
+      "experience": 6800
+    }
+  }
+}

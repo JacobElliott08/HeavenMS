@@ -1,0 +1,56 @@
+{
+  "questId": 21732,
+  "info": {
+    "name": "The Black Wings\u0027 Conspiracy",
+    "descriptions": {
+      "notStarted": "The document you extracted from #o9300344# turns out to be a Black Wings document! Unfortunately, the document is written in code. What should you do? Go to #b#m104000000##k and talk to #b#p1002104##k for some advice.",
+      "inProgress": "Looks like the only person that can decode the document is #p1201000#. Head over to #b#m140000000##k and ask #b#p1201000##k to help.",
+      "completed": "The document says that the Black Wings possess an item known as the #t4032323#. #p1204002#, the puppeteer, is utilizing his special skills in mob manipulation to look for a certain Seal Stone. But what does that mean? What exactly are the Black Wings after?"
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 21731,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1201000,
+      "items": [
+        {
+          "itemId": 4032341
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032341
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4032341,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "questId": 3031,
+  "info": {
+    "name": "Acquiring the Memory Powder",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "Corporal Easy promised me to hand me the Memory Powder in exchange for #b3 Toenails of Werewolf#k. Apparently those Werewolves reside deep in the snowfield...\\n\\n#t4000053# #b#c4000053##k/3",
+      "completed": "I gave Toenails of Werewolf to Corporal Easy."
+    },
+    "area": 33,
+    "order": 28
+  },
+  "requirements": {
+    "start": {
+      "npc": 2030002,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3030,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030002,
+      "items": [
+        {
+          "itemId": 4000053,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6340,
+      "nextQuest": 3032,
+      "items": [
+        {
+          "itemId": 4000053,
+          "count": -3
+        }
+      ]
+    }
+  }
+}

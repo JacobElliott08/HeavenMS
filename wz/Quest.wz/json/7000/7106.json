@@ -1,0 +1,41 @@
+{
+  "questId": 7106,
+  "info": {
+    "name": "The Lost Medal",
+    "descriptions": {
+      "notStarted": "If I lost the Ludibrium Medal, then I better go see Mr. Bouffon. ",
+      "inProgress": "I told #rMr. Bouffon#k that I lost the Ludibrium Medal. He told me he was going to give me another chance and that I should go see #rFlo#k immediately.",
+      "completed": "I was able to regain the lost Ludibrium Medal from Flo. I should seriously take care of Papulatus this time."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041021,
+      "repeatIntervalMinutes": 4320,
+      "prerequisiteQuests": [
+        {
+          "questId": 7103,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031172
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041023
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031172
+        }
+      ]
+    }
+  }
+}

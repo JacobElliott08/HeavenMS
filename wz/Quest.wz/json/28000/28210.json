@@ -1,0 +1,62 @@
+{
+  "questId": 28210,
+  "info": {
+    "name": "Commotion on the Ship, No More!",
+    "parent": "Commotion on the Ship",
+    "descriptions": {
+      "notStarted": "Talk to #b#@1092002:##k in #bNautilus#k to deliver #rKyrinvana\u0027s Guitar#k and ask about the #rLost Statue#k.",
+      "inProgress": "Let\u0027s talk to #b#@1092002:##k in #bNautilus#k.",
+      "completed": "You have fulfilled the request of #b#p1072008##k in #bNautilus#k and completed the #rKyrinvana\u0027s Guitar#k. In addition, you have managed to minimize the damage of the Pigs and solve the mystery behind the #rLost Statue#k."
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092002,
+      "prerequisiteQuests": [
+        {
+          "questId": 28209,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4032484
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1092002,
+      "items": [
+        {
+          "itemId": 4032484
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300,
+      "items": [
+        {
+          "itemId": 4032484,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

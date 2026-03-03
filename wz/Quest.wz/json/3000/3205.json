@@ -1,0 +1,50 @@
+{
+  "questId": 3205,
+  "info": {
+    "name": "The Lost Guard",
+    "descriptions": {
+      "notStarted": "A lost guard is found somewhere around Eos Tower...",
+      "inProgress": "I found the lost guard at the 93rd floor of Eos Tower. He needs to get to 59th floor to go back to work, but is too scared to go with the monsters around, and wants me to gather up #b15 worn-out goggles#k and #b15 propellers#k.\\n\\n#t4000103# #b#c4000103##k/15\\n#t4000123# #b#c4000123##k/15",
+      "completed": "I ran back to the lost guard at the 93rd floor of Eos Tower and gave him the proof of eliminating the monsters in the vicinity of where we were. In return, I was able to get the Scroll of Eos Rock, which activates the Eos Rock located in a number of places at the Tower. By activating the rock, it\u0027ll enable us to teleport to the next Eos Rock. And since he needs to get down to 59th floor, I\u0027m sure there\u0027s more mess to come..."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2040023,
+      "minLevel": 20,
+      "repeatIntervalMinutes": 1440
+    },
+    "complete": {
+      "npc": 2040023,
+      "items": [
+        {
+          "itemId": 4000103,
+          "count": 15
+        },
+        {
+          "itemId": 4000123,
+          "count": 15
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4001020,
+          "count": 20
+        },
+        {
+          "itemId": 4000123,
+          "count": -15
+        },
+        {
+          "itemId": 4000103,
+          "count": -15
+        }
+      ]
+    }
+  }
+}

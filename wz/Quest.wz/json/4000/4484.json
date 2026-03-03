@@ -1,0 +1,46 @@
+{
+  "questId": 4484,
+  "info": {
+    "name": "Cliff\u0027s Request",
+    "parent": "Cliff\u0027s Rudolph",
+    "descriptions": {
+      "notStarted": "There is an old man looking sad on the 2nd floor of center tower in Happyville. It must be hard to just pass him by, knowing that he is sad. Go find him and offer him some help.",
+      "inProgress": "#bCliff#k has been feeling lonely ever since Torr left to help Santa Claus. You will need to go to the highest point in town to take a picture of #bTorr#k pulling Santa\u0027s sleigh.\\n\\n#t4031881# #b#c4031881##k/1",
+      "completed": "What?! #bTorr#k is not in the sleigh formation. Rumor has it that there is a Reindeer crying around the corner of town. Could it be #bTorr#k?"
+    },
+    "area": 50,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2001000,
+      "minLevel": 25,
+      "endDate": "2010010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 4483,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2001000,
+      "items": [
+        {
+          "itemId": 4031881
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 4485,
+      "items": [
+        {
+          "itemId": 4031881,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

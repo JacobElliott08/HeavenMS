@@ -1,0 +1,53 @@
+{
+  "questId": 9304,
+  "info": {
+    "name": "복주머니 배달",
+    "parent": "새해 문안 인사",
+    "descriptions": {
+      "inProgress": "#p9010000#가 부탁한대로 빅토리아 아일랜드에 있는 #b5명의 현자#k에게 모두 문안 인사를 드렸더니, 노틸러스에 계신 #p1072008#님께서 #b#t04031669##k를 주셨다. 이것을 가지고 #b#p9010000##k에게 돌아가야한다.",
+      "completed": "#p1072008#님께 받은 #b#t04031669##k를 메이플 운영자에게 가져다 주었다."
+    },
+    "area": 50,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1090000,
+      "repeatIntervalMinutes": 129600,
+      "endDate": "2008021400",
+      "prerequisiteQuests": [
+        {
+          "questId": 9306,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 4031669
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031669
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 450,
+      "nextQuest": 9305,
+      "items": [
+        {
+          "itemId": 4031669,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

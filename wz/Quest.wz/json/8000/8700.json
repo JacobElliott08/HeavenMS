@@ -1,0 +1,56 @@
+{
+  "questId": 8700,
+  "info": {
+    "name": "2006 Easter : Easter Basket",
+    "descriptions": {
+      "notStarted": "I better go check and see the Maple Administrator. She may have something in store for me...",
+      "inProgress": "The Maple Administrator needs #b100 Tree Branches#k, #b100 Squishy Liquids#k, and #b1 Red ribbon#k to make me an #rEaster Basket#k. I better go get those right now! \\n\\n#t4000003# #b#c4000003#/100#k\\n#t4000004# #b#c4000004#/100#k\\n#t4031192# #b#c4031192#/1#k",
+      "completed": "I got the Easter Basket from the Maple Administrator. Mad Bunny may need this for something... I should go see him now."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 1440,
+      "endDate": "2006041200"
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 4000003,
+          "count": 100
+        },
+        {
+          "itemId": 4000004,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800,
+      "items": [
+        {
+          "itemId": 4031283,
+          "expirationDate": "2006042700"
+        },
+        {
+          "itemId": 4000003,
+          "count": -100
+        },
+        {
+          "itemId": 4000004,
+          "count": -100
+        },
+        {
+          "itemId": 4031192,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

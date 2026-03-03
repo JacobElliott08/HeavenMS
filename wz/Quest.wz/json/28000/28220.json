@@ -1,0 +1,44 @@
+{
+  "questId": 28220,
+  "info": {
+    "name": "Encounter with Hill, the Antique Collector",
+    "descriptions": {
+      "notStarted": " #b#@1012100:##k in #bHenesys#k says she\u0027ll help you train further. Let\u0027s go find her.",
+      "inProgress": "Find #b#@9201118:##k in #bHenesys#k for additional training.",
+      "completed": "The Path of a Bowman.."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012100,
+      "prerequisiteQuests": [
+        {
+          "questId": 2139,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 9201118
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200
+    }
+  }
+}

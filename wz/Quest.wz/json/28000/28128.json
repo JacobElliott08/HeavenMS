@@ -1,0 +1,38 @@
+{
+  "questId": 28128,
+  "info": {
+    "name": "In Search of the Miwok Artifact",
+    "descriptions": {
+      "notStarted": "I heard Kopee Relicseeker is looking to find the #bMiwok Artifact#k. Let\u0027s go ask Kopee Relicseeker what she\u0027s after.",
+      "inProgress": "Kopee Relicseeker and Toh Relicseeker say they are looking for Miwok Artifacts that have been lost. Let\u0027s acquire the #bMiwok Artifact Piece#k from the monsters and take them to her. ",
+      "completed": "Kopee Relicseeker was so happy to find a sign of the Miwok Artifact. She and Toh Relicseeker said they would stay for a while and further search for the Miwok Artifact. "
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201116,
+      "endDate": "2009082600",
+      "minLevel": 12
+    },
+    "complete": {
+      "npc": 9201116,
+      "items": [
+        {
+          "itemId": 4032404
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 4032404,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

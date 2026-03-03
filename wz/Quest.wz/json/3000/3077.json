@@ -1,0 +1,38 @@
+{
+  "questId": 3077,
+  "info": {
+    "name": "Carta\u0027s Fortune-Telling",
+    "parent": "Carta the Sea Witch",
+    "descriptions": {
+      "notStarted": "I gathered up all the materials that #p2060100# asked me get. Maybe I can now find out what happened to Gail.",
+      "inProgress": "According to #b#p2060100##k, something terrible indeed happened to Gail. What can possibly happen underwater? Anyway, I should let #b#p2060006##k of this immediately. I hope he takes it well...",
+      "completed": "I told #b#p2060006##k the result of #b#p2060100##k\u0027s fortune-telling. What does it mean by the dark fog that surrounds Gail? #p2060006# was trying to act calm, but I could tell she\u0027s feeling nervous about Gail. Is #p2060100#\u0027s stuff really worth believing?"
+    },
+    "area": 33,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060100,
+      "prerequisiteQuests": [
+        {
+          "questId": 3076,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2060006
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 1102048
+        }
+      ]
+    }
+  }
+}

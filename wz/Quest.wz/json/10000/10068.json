@@ -1,0 +1,34 @@
+{
+  "questId": 10068,
+  "info": {
+    "name": "집사의 시달림",
+    "parent": "페토와 집사 그리고 유령T",
+    "descriptions": {
+      "inProgress": "굴뚝에서 나를 도와 주었던 유령T가 범인일까? 일단 유령T를 만나봐야겠다.",
+      "completed": "유령 T는 자신이 누구인지 기억을 하고 있지 못했다."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120002,
+      "startDate": "2008101600",
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10067,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120008
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50
+    }
+  }
+}

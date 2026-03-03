@@ -1,0 +1,44 @@
+{
+  "questId": 3941,
+  "info": {
+    "name": "Stealing Queen\u0027s Order of Silk",
+    "descriptions": {
+      "notStarted": "The first mission as a member of the Sand Bandits is to steal an order of silk that the queen ordered. Disguised as #p2101004#, I have to go to #b#m260010600##k and get the order of silk from #b#p2101013##k.",
+      "inProgress": "#p2101013# keeps giving me a suspicious look. Arrrghhh... I better talk well and just get the #bsilk#k.",
+      "completed": "I finally got the silk from #p2101013#. Phew... it really is hard to pretend like someone else... anyway, since I succeeded, I better return to #p2101010#!"
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101013,
+      "minLevel": 29,
+      "repeatIntervalMinutes": 0,
+      "startScript": "q3941s",
+      "prerequisiteQuests": [
+        {
+          "questId": 3940,
+          "state": "STARTED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031571
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101013,
+      "endScript": "q3941e"
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031571
+        }
+      ]
+    }
+  }
+}

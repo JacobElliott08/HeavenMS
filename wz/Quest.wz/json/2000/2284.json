@@ -1,0 +1,43 @@
+{
+  "questId": 2284,
+  "info": {
+    "name": "Lavender Scent",
+    "descriptions": {
+      "notStarted": "Lana says the freesia scent is perfect for the Female Mannequin\u0027s Wig. Better tell #bLala#k.",
+      "inProgress": "Rush to #bLana#k before the scent fades and ask her which costume this lavender scent would best complement.",
+      "completed": "#bLana#k said the lavender scent wasn\u0027t exactly perfect for the Fedora, but that it would work. \\r\\nAsk #bLana#k what other tasks are left on her to-do list."
+    },
+    "area": 30,
+    "timeLimit": 40
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052119,
+      "forbiddenBuffs": [],
+      "minLevel": 35,
+      "maxLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 2283,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2285
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1052121,
+      "requiredBuffs": []
+    }
+  },
+  "actions": {
+    "onStart": {
+      "buffItemId": 2022633
+    },
+    "onComplete": {
+      "nextQuest": 2285,
+      "experience": 2300
+    }
+  }
+}

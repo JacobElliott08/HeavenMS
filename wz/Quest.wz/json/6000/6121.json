@@ -1,0 +1,54 @@
+{
+  "questId": 6121,
+  "info": {
+    "name": "Bahamut\u0027s Power 1",
+    "parent": "Dragon Heart",
+    "descriptions": {
+      "notStarted": " After speaking with #b#p2081007##k, he said the dragon has not reached maturity. There must be something I can do to increase its\u0027 power...",
+      "inProgress": "Raul told me to gather #b25 #t4031482##k if I want to raise #q2321003#\u0027s power. It\u0027s time to hunt! \\n\\n#i4031482##t4031482# #b#c4031482#/25#k",
+      "completed": "After I gave Raul #t4031482#, he awakened #q2321003#\u0027s power. I can feel it radiating...magnificent!"
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081007,
+      "jobs": [
+        232
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6120,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081007,
+      "items": [
+        {
+          "itemId": 4031482,
+          "count": 25
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 4031482,
+          "count": -25
+        }
+      ],
+      "skills": [
+        {
+          "skillId": 2321003,
+          "masterLevel": 15
+        }
+      ]
+    }
+  }
+}

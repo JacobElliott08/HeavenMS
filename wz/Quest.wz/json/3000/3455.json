@@ -1,0 +1,41 @@
+{
+  "questId": 3455,
+  "info": {
+    "name": "The Endangered Lives of Grays",
+    "descriptions": {
+      "notStarted": "How well does the Wave Translator work? Let\u0027s hurry over to #m221040100# and try talking to #b#p2050002##k.",
+      "inProgress": "While hiding the #t4031927# behind your back, you approached #p2050002#. #p2050002# tells you that nothing is going on but says something completely different through the ultrasonic waves.",
+      "completed": "You\u0027ve gotten a bunch of #ruseless information#k... which means the Wave Translator probably malfunctioned. Let\u0027s return to #b#p2050001# and have him build you a new #t4031927#.#k"
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2050002,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3457
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031927
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050002
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031927,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

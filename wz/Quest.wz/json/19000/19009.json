@@ -1,0 +1,29 @@
+{
+  "questId": 19009,
+  "info": {
+    "name": "Combo King",
+    "descriptions": {
+      "notStarted": "If you get a combo of 500 or more, you will receive the title Combo King.",
+      "inProgress": "If you get a combo of 500 or more, you will receive the title Combo King.",
+      "completed": "You got a combo of at least 500 and received the title Combo King."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142136
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "minLevel": 15,
+      "endDate": "2010012000",
+      "normalAutoStart": true,
+      "jobs": [
+        2000,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    }
+  }
+}

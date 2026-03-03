@@ -1,0 +1,45 @@
+{
+  "questId": 3313,
+  "info": {
+    "name": "Destroy the Roid",
+    "descriptions": {
+      "notStarted": "#b#p2111009##k, an alchemist from #m261000000#, seems to be proficient at concocting and experimenting with medicine. He mentioned that he\u0027s short on something again. What would he be short on this time? I better go see #p2111009#.",
+      "inProgress": "Out of the blue, #p2111009# asked me to destroy #r#o5110301##k, which can be found at the storage area in the basement. Destroying #o5110301# wouldn\u0027t be impossible... but why? Does this have something to do with getting in the way of the Zenumist Society?  \\n\\n#o5110301# #r#a33131##k ",
+      "completed": "After destroying the #o5110301#s, I reported the results to #p2111009#. He then flashed a smile of satisfaction and relief.  What the...something about this creeps me out!"
+    },
+    "area": 44,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111009,
+      "minLevel": 52,
+      "prerequisiteQuests": [
+        {
+          "questId": 3312,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111009,
+      "monsters": [
+        {
+          "monsterId": 5110301,
+          "count": 80
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 43000,
+      "items": [
+        {
+          "itemId": 2020012,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "questId": 28333,
+  "info": {
+    "name": "New Year\u0027s Presents from Cassandra",
+    "descriptions": {
+      "notStarted": "Cassandra says she\u0027s giving out New Year\u0027s presents every day for those who log in. So go visit the ever so generous Cassandra!",
+      "inProgress": "What presents has #bCassandra#k prepared?",
+      "completed": "#bCassandra#k says she will give out a New Year\u0027s present every day until January 19th for simply logging in."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 13,
+      "startDate": "2010010100",
+      "endDate": "2010012000",
+      "startScript": "q28333s"
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  }
+}

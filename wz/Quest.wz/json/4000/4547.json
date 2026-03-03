@@ -1,0 +1,52 @@
+{
+  "questId": 4547,
+  "info": {
+    "name": "Tires are missing!",
+    "parent": "Chee Wee\u0027s Worries",
+    "descriptions": {
+      "notStarted": "Lots of people are having trouble going around the town because their tires are suddenly being stolen by sneaky creatures known as #b#o9420530##k. Who could retrieve all those stolen tires from these villains? ",
+      "inProgress": "#b#p9270060##k is eager to bring those stolen tires back from #b#o9420530##k. Why don\u0027t you step up and save all those people from such an inconvenience? \\n\\n#o9420530# #r#a45471##k \\n#t4000468# #r#c4000468#/50#k ",
+      "completed": "#b#o9420530##k may seems disppeared for now, but you can never be sure if there won\u0027t be any more of them coming back to town and stealing things from innocent people."
+    },
+    "area": 49,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270060,
+      "minLevel": 57,
+      "prerequisiteQuests": [
+        {
+          "questId": 4546,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270060,
+      "items": [
+        {
+          "itemId": 4000468,
+          "count": 50
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9420530,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 33000,
+      "items": [
+        {
+          "itemId": 4000468,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

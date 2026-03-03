@@ -1,0 +1,26 @@
+{
+  "questId": 19005,
+  "info": {
+    "name": "Top 10 in Artifact Hunt",
+    "descriptions": {
+      "inProgress": "You can earn a title if you make the top 10 in Artifact Hunt.",
+      "completed": "You have earned a title for making the top 10 in Artifact Hunt."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142124
+  },
+  "requirements": {
+    "start": {
+      "startScript": "q19005s",
+      "normalAutoStart": true,
+      "npc": 9000066,
+      "endDate": "2010030300",
+      "items": [
+        {
+          "itemId": 1142124
+        }
+      ]
+    }
+  }
+}

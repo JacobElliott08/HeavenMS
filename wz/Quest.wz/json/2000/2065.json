@@ -1,0 +1,49 @@
+{
+  "questId": 2065,
+  "info": {
+    "name": "Searching for Fossils",
+    "parent": "Winston\u0027s Fossil Dig-up",
+    "descriptions": {
+      "notStarted": "I heard that #p1022006# the archaeologist is searching for something in the Rocky Mountains on the East side of Perion...",
+      "inProgress": "#b#p1022006##k the archaeologist who I ran into on the rocky mountains on the east side of Perion said he lost the fossils he collected near Perion. He asked me to bring back #b100 #t4031146##k and #b100 #t4031147##k which #b#o1110100##k and #b#o1130100##k took. How can he lose something so important like that? He is careless than he looks...\\n\\n#t4031146# #c4031146#/100\\n#t4031147# #c4031147#/100",
+      "completed": "I found the fossil which #b#p1022006##k lost."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022006,
+      "minLevel": 20
+    },
+    "complete": {
+      "npc": 1022006,
+      "items": [
+        {
+          "itemId": 4031147,
+          "count": 100
+        },
+        {
+          "itemId": 4031146,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4500,
+      "nextQuest": 2066,
+      "items": [
+        {
+          "itemId": 4031146,
+          "count": -100
+        },
+        {
+          "itemId": 4031147,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

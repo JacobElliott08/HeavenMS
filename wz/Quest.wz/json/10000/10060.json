@@ -1,0 +1,38 @@
+{
+  "questId": 10060,
+  "info": {
+    "name": "카산드라의 특별한 선물",
+    "descriptions": {
+      "notStarted": "#b카산드라#k가 내게 할말이 있는 듯한데...",
+      "inProgress": "#b카산드라#k가 내게 줄 것이 있다고 하는데...",
+      "completed": "#b카산드라#k가 이상한 약을 주었다. 한번 마셔볼까?"
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2008103100"
+    },
+    "complete": {
+      "npc": 9010010,
+      "items": [
+        {
+          "itemId": 2210021
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2210021,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

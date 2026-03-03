@@ -1,0 +1,28 @@
+{
+  "questId": 10079,
+  "info": {
+    "name": "조이의 뉘우침",
+    "descriptions": {
+      "inProgress": "페토로 변신하여 조이의 저주를 풀어주자.",
+      "completed": "페토로 변신하여 조이의 저주를 풀어주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2120007,
+      "startDate": "2008101600",
+      "endDate": "2008110600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10074,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2120007,
+      "endScript": "q10079e"
+    }
+  }
+}

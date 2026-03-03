@@ -1,0 +1,36 @@
+{
+  "questId": 9432,
+  "info": {
+    "name": "북극곰 포치의 부탁",
+    "descriptions": {
+      "notStarted": "#b북극곰 포치#k가 부탁할 것이 있다고 한다. 코-크 타운으로 가려면 우선 #b코-크베어 운영자#k를 만나야겠지?",
+      "inProgress": "#b북극곰 포치#k는 형과 함께 마실 코-카 콜라를 가져와 달라고 한다. \\n\\n#t4031322# #b#c4031322#/1#k\\n#t4031323# #b#c4031323#/1#k  \\n#t4000216# #b#c4000216#/50#k",
+      "completed": "#b북극곰 포치#k는 다음에도 또 코카-콜라 재료를 가져와 달라고 했다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9001002,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2007112900",
+      "endDate": "2008040100"
+    },
+    "complete": {
+      "npc": 9001002,
+      "endScript": "q9432e",
+      "items": [
+        {
+          "itemId": 4031322
+        },
+        {
+          "itemId": 4031323
+        },
+        {
+          "itemId": 4000216,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

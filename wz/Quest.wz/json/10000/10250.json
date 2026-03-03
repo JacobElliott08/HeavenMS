@@ -1,0 +1,51 @@
+{
+  "questId": 10250,
+  "info": {
+    "name": "콩쥐의 봄꽃연구3",
+    "descriptions": {
+      "notStarted": "메이플월드에 더 많은 봄꽃을 피우기 위한 연구가 곳곳에서 일어나고 있다. 봄꽃 아가씨 카산드라를 찾아가보자.",
+      "inProgress": "메이플월드에 더 많은 봄꽃이 피어날 수 있도록 도와주자.",
+      "completed": "봄꽃연구를 도와주어 메이플월드에 더 많은 봄꽃이 피어날 수 있게 되었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 50,
+      "maxLevel": 89,
+      "startDate": "2009021900",
+      "endDate": "2009032600",
+      "repeatIntervalMinutes": 0,
+      "items": [
+        {
+          "itemId": 2022528,
+          "count": 3
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2071004,
+      "endScript": "q10250e",
+      "items": [
+        {
+          "itemId": 2022528,
+          "count": 3
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 2022528,
+          "count": -3
+        },
+        {
+          "itemId": 1012141
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "questId": 8888,
+  "info": {
+    "name": "Summer Break: Cody\u0027s BBQ...",
+    "descriptions": {
+      "notStarted": "Hooray for Summer! I heard Cody\u0027s having a barbecue! I better head over and see if I can help!",
+      "inProgress": "I spoke with Cody, and it looks like he needs help. I\u0027ll need to grab 30 #b#t4031660##k and bring them back to Cody so he can finish cooking. Just the sound of all that makes me hungry!",
+      "completed": "I got all the ingredients Cody needed to start the barbecue! With the items he gave me, I can continue to enjoy the summer in style!"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9200000,
+      "minLevel": 70,
+      "maxLevel": 200,
+      "repeatIntervalMinutes": 60,
+      "startDate": "2008062500",
+      "endDate": "2008071600",
+      "prerequisiteQuests": [
+        {
+          "questId": 8218,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9200000,
+      "items": [
+        {
+          "itemId": 4031660,
+          "count": 30
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 10100,
+      "items": [
+        {
+          "itemId": 4031660,
+          "count": 0
+        },
+        {
+          "itemId": 2022184
+        }
+      ]
+    }
+  }
+}

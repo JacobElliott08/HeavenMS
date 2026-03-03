@@ -1,0 +1,38 @@
+{
+  "questId": 21713,
+  "info": {
+    "name": "Your Second Informant Assignment",
+    "descriptions": {
+      "notStarted": "You have reached Level 18, which means #p1002104# will give you your second assigment as an informant. Head over to #b#m104000000##k and talk to #b#p1002104##k.",
+      "inProgress": "The second assignment involves dealing with the suddenly-violent #o1110100#s. Seems quite similar to the first assigment... You should head over to #b#m101000000##k and meet with #b#p1032101##k to discuss the cause of the #o1110100#s\u0027 distress.",
+      "completed": "You met with #p1032101# in #m101000000#."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 18,
+      "prerequisiteQuests": [
+        {
+          "questId": 21712,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1032101
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 400
+    }
+  }
+}

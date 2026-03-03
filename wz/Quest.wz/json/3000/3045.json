@@ -1,0 +1,46 @@
+{
+  "questId": 3045,
+  "info": {
+    "name": "Ericsson Loves Cats",
+    "parent": "The Chaos behind Alfonse Green and the Nependeath Juice",
+    "descriptions": {
+      "notStarted": "I should go see Ericsson.",
+      "inProgress": "Ericsson was way too busy playing around with his cats and not have enough time making the sap of Nependeath. What can I do to make one?",
+      "completed": "I got the Lunar Wristband for Ericsson\u0027s beloved kitty, Nero."
+    },
+    "area": 33,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012018,
+      "prerequisiteQuests": [
+        {
+          "questId": 3044,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012018,
+      "items": [
+        {
+          "itemId": 4031199
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "fame": 1,
+      "nextQuest": 3047,
+      "items": [
+        {
+          "itemId": 4031199,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

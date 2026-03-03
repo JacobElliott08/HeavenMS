@@ -1,0 +1,30 @@
+{
+  "questId": 29928,
+  "info": {
+    "name": "Aran the Hero",
+    "descriptions": {
+      "notStarted": "You feel like you\u0027ve restored most of your past memories as well as your abilities.",
+      "inProgress": "You feel like you\u0027ve restored most of your past memories as well as your abilities.",
+      "completed": "You feel like you\u0027ve restored most of your past memories as well as your abilities."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142133
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "normalAutoStart": true,
+      "minLevel": 200,
+      "startScript": "q29928s",
+      "items": [
+        {
+          "itemId": 1142133
+        }
+      ],
+      "jobs": [
+        2112
+      ]
+    }
+  }
+}

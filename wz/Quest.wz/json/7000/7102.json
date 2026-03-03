@@ -1,0 +1,51 @@
+{
+  "questId": 7102,
+  "info": {
+    "name": "The Time Sphere",
+    "parent": "Protect Ludibrium",
+    "descriptions": {
+      "notStarted": "I may need to take care of some more business while creating the time sphere. I should go see #p2041021#.",
+      "inProgress": "#p2041021# wanted me to collect #t4031179:# through #p2041023#...\\n\\n#t4031179:# #r#c4031179#/1#k",
+      "completed": "I found the #t4031179:# that #p2041021# was talking about. Apparently, to defeat Papulatus, we need to be at least lvl 80 or higher..."
+    },
+    "area": 37,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041021,
+      "prerequisiteQuests": [
+        {
+          "questId": 7101,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2041021,
+      "prerequisiteQuests": [
+        {
+          "questId": 7104,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031179
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5600,
+      "meso": 15000,
+      "items": [
+        {
+          "itemId": 4031179,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

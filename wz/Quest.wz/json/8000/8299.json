@@ -1,0 +1,80 @@
+{
+  "questId": 8299,
+  "info": {
+    "name": "Chief Stan\u0027s Piece of Mind of Maple",
+    "descriptions": {
+      "notStarted": "#bChief Stan#k knows about your quest for the #rMind of Maple#k. He is awaiting your arrival, so go prove your worth to him.",
+      "inProgress": "Follow the instructions #bChief Stan#k, and defeat the monsters to gather up the appropriate items and prove him your worth.\\n\\n#t4032234:##r #c4032234#/20#k\\n#t4032235:##r #c4032235#/20#k\\n#t4032236:##r #c4032236#/20#k\\n#t4032237:##r #c4032237#/20#k\\n#t4032238:##r #c4032238#/20#k",
+      "completed": "You have finally received an item of approval from Chief Stan. What does this have to do with restoring #rMind of Maple#k?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012003,
+      "minLevel": 10,
+      "endDate": "2009022423",
+      "prerequisiteQuests": [
+        {
+          "questId": 8298,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012003,
+      "items": [
+        {
+          "itemId": 4032234,
+          "count": 20
+        },
+        {
+          "itemId": 4032235,
+          "count": 20
+        },
+        {
+          "itemId": 4032236,
+          "count": 20
+        },
+        {
+          "itemId": 4032237,
+          "count": 20
+        },
+        {
+          "itemId": 4032238,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2000,
+      "items": [
+        {
+          "itemId": 4032234,
+          "count": -20
+        },
+        {
+          "itemId": 4032235,
+          "count": -20
+        },
+        {
+          "itemId": 4032236,
+          "count": -20
+        },
+        {
+          "itemId": 4032237,
+          "count": -20
+        },
+        {
+          "itemId": 4032238,
+          "count": -20
+        },
+        {
+          "itemId": 4032239
+        }
+      ]
+    }
+  }
+}

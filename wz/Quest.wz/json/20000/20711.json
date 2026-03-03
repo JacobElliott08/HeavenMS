@@ -1,0 +1,73 @@
+{
+  "questId": 20711,
+  "info": {
+    "name": "Fake Doll",
+    "descriptions": {
+      "notStarted": "Agent #b#p1103002##k of #m103000000# found a new information he\u0027d like to share with me.",
+      "inProgress": "#p1103002# told me that the dolls inside the trash can were fake and that the real dolls may have already been absorbed by #o1210103#s. He then assigned me to defeat #r100 #o1210103#s#k and bring back #b30 #t4032137#s#k...\\n\\n#o1210103##r #a207111##k \\n#i4032137# #t4032137# #b#c4032137# / 30#k",
+      "completed": "I was able to eliminate the #o1210103#s and bring back #t4032137#s to #p1103002#."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1103002,
+      "minLevel": 16,
+      "prerequisiteQuests": [
+        {
+          "questId": 20710,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1103002,
+      "items": [
+        {
+          "itemId": 4032137,
+          "count": 30
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 1210103,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2200,
+      "items": [
+        {
+          "itemId": 4032137,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

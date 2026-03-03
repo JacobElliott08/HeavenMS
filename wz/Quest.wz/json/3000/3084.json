@@ -1,0 +1,46 @@
+{
+  "questId": 3084,
+  "info": {
+    "name": "Nanuke\u0027s Ingredients",
+    "descriptions": {
+      "notStarted": "Deep in the snow at the Snowy Whale Island, #p2060000# found something he really wants to eat... I wonder what it is...",
+      "inProgress": "Deep in the snow at the Snowy Whale Island, #p2060000# wanted to eat something that he\u0027d never eaten before in his life. Apparently, his friend #p2060006#, who lives at #m230000000#, offered to make him a tasty new dish, so long as he gathers up the ingredients for her. The problem is... those ingredients are really difficult to gather up. I better go gather up #b150 #t4000183#s#k and #b80 #t4000181#s#k for #p2060000#, so I can deliver them to #b#p2060006##k.\\n\\n#t4000183#  #b#c4000183##k / 150\\n#t4000181#  #b#c4000181##k / 80",
+      "completed": "Deep in the snow at the Snowy Whale Island, #p2060000# wanted to eat something that he\u0027d never eaten before in his life. He also said if I gather up 150 #t4000183#s and 80 #t4000181#s, then #p2060006# will make a tasty meal for him... So I gathered up the ingredients and met up with #p2060006#. #p2060006# wanted me to wait while she makes the tasty dish for Nanuke, and asked to see her later."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2060000,
+      "minLevel": 95
+    },
+    "complete": {
+      "npc": 2060006,
+      "items": [
+        {
+          "itemId": 4000181,
+          "count": 80
+        },
+        {
+          "itemId": 4000183,
+          "count": 150
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 80000,
+      "items": [
+        {
+          "itemId": 4000183,
+          "count": -150
+        },
+        {
+          "itemId": 4000181,
+          "count": -80
+        }
+      ]
+    }
+  }
+}

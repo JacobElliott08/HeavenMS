@@ -1,0 +1,37 @@
+{
+  "questId": 1029,
+  "info": {
+    "name": "Sam\u0027s Advice",
+    "descriptions": {
+      "notStarted": "A kind guy on Maple Island, #bSam#k wanted to give me some Beginner advice...who says beginners aren\u0027t lucky?",
+      "inProgress": "Sam taught me #bHow to use AP#k which I can get whenever my level gets up. The investment of  AP determines my power (STR), intelligence (INT), agility (DEX), luck (LUK). My investment choice of AP will increase my HP and MP. \\n\\nwhoa.. Fantastic! I learned a lot thanks to him. Sam said there is one more thing to tell me.",
+      "completed": "Sam told me to go to Victoria Island if I want to be a stronger adventurer through a Job Advancement. I can choose from a Warrior, a Magician, a Bowman, a Thief and a Pirate on Victoria Island. Each job has a stat requirement to join and train on that path: #bWarrior is STR 35, Magician INT 20, Bowman DEX 25, Thief DEX 25#k. I\u0027ll remember that and invest AP in the proper stats of the job i want!"
+    },
+    "area": 20,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2005,
+      "minLevel": 2,
+      "maxLevel": 3,
+      "normalAutoStart": true,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2005
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "questId": 3241,
+  "info": {
+    "name": "Cleaning Up Helios Tower",
+    "descriptions": {
+      "notStarted": "Helios Tower opened recently for public, and apparently #p2041004# has been going through some trouble thanks to the growing number of #o3210208#s at the tower.",
+      "inProgress": "#p2041004#, the security guard of Ludibrium, approached me and asked for a favor. He was concerned about the growing number of #b#o3210208##k at the Helios Tower, which has recently opened for travelers. According to him, the #o3210208#s have been blocking the travelers\u0027 path, as well as destroying the elevators in the tower, and he wanted me to eliminate some #o3210208#s for him.\\n\\n#o3210208#  #r#a32411#",
+      "completed": "With a request from #p2041004#, the security guard of Ludibrium, I went into Helios Tower and eliminated 20 #o3210208#s, the striped rats that have been destroying the elevators at the tower."
+    },
+    "area": 37
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041004,
+      "minLevel": 35
+    },
+    "complete": {
+      "npc": 2041004,
+      "monsters": [
+        {
+          "monsterId": 3210208,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2041004,
+      "minLevel": 35
+    },
+    "onComplete": {
+      "experience": 8000,
+      "items": [
+        {
+          "itemId": 2000011,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

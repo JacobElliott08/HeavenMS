@@ -1,0 +1,105 @@
+{
+  "questId": 28265,
+  "info": {
+    "name": "The Rememberer\u0027s Training-3",
+    "descriptions": {
+      "notStarted": "#b#@1061011:##k in #bSleepywood#k says he has Special Training-3 prepared for you.",
+      "inProgress": "Hunt 50 #rEvil Eyes#k.",
+      "completed": "You have completed the #b#@1061011:##k\u0027s Special Training-3."
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "minLevel": 25,
+      "prerequisiteQuests": [
+        {
+          "questId": 28262,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        100,
+        110,
+        120,
+        130,
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512,
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "monsters": [
+        {
+          "monsterId": 2230100,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4000
+    }
+  }
+}

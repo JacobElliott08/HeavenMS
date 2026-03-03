@@ -1,0 +1,51 @@
+{
+  "questId": 3915,
+  "info": {
+    "name": "Schegerazade\u0027s Storybook",
+    "parent": "Schegerazade the Storyteller",
+    "descriptions": {
+      "inProgress": "As told by #p2040052#, #p2101008# gave me a collection of pages that she wrote stories on in a form of a book. Okay, so all I have to do is give this to #b#p2040052##k, right? Okay off to #b#m222020000##k.",
+      "completed": "#p2040052# saw the pile of pages that #p2101008# wrote, and was clearly happy with it. Hopefully this book will allow #p2101008# to concentrate on her work... I better return to #p2101008#."
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101008,
+      "minLevel": 36,
+      "prerequisiteQuests": [
+        {
+          "questId": 3914,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2040052,
+      "items": [
+        {
+          "itemId": 4031572
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031572
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4031572,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

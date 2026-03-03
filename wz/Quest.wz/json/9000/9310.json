@@ -1,0 +1,66 @@
+{
+  "questId": 9310,
+  "info": {
+    "name": "Valentine\u0027s Day : Heart Chocolate",
+    "descriptions": {
+      "notStarted": "You can make a special chocolate for the special someone with the ingredients you can gather up yourself. Go see Ace of Hearts and make the Valentine\u0027s Day Chocolate full of love ~~",
+      "inProgress": "#b#p2041017##k said he can make a nice package for a chocolate with a heart-shaped box, laden with a special spell full of love, as long as I gather up the materials for both the chocolate and the package. #t4031110#, and #t4031109# can be acquired through monsters, while #t4031111# and #t4031112# can be acquired through #bCoco#k. \\n\\n#t4031110# #c4031110# / #r1#k\\n#t4031109# #c4031109# / #r1#k\\n\\n#t4031111# #c4031111# / #r1#k\\n#t4031112# #c4031112# / #r1#k",
+      "completed": "Ace of Hearts helped me make a Heart Chocolate laden with a spell full of love. \\n\\n\"The power of love shall protect you...\""
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 2041017,
+      "minLevel": 8,
+      "repeatIntervalMinutes": 60,
+      "startDate": "2007020500",
+      "endDate": "2007021600"
+    },
+    "complete": {
+      "npc": 2041017,
+      "items": [
+        {
+          "itemId": 4031109
+        },
+        {
+          "itemId": 4031110
+        },
+        {
+          "itemId": 4031111
+        },
+        {
+          "itemId": 4031112
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800,
+      "meso": -1000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4031110,
+          "count": -1
+        },
+        {
+          "itemId": 4031109,
+          "count": -1
+        },
+        {
+          "itemId": 4031111,
+          "count": -1
+        },
+        {
+          "itemId": 4031112,
+          "count": -1
+        },
+        {
+          "itemId": 4140100
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "questId": 7302,
+  "info": {
+    "name": " Badge of a Squad Member",
+    "descriptions": {
+      "notStarted": "Moira says she has a personal request...",
+      "inProgress": "Moira tells me that she was once a member of the Dragon Squad, and that she is worried about other members, now scattered to the winds. She asked me to look for the badge of the members. She said if I bring three badges from the members and the certificates from Zakum, Papulatus and Pianus by defeating them in battle, she would appoint me as an #rHonorary Squad Member#k and show me the #bsecret passage to cave#k that only members know about....\\n\\n#i4001080##t4001080# #b#c4001080#/1#k\\n#i4001081##t4001081# #b#c4001081#/1#k\\n#i4001082##t4001082# #b#c4001082#/1#k\\n#i4001085##t4001085# #b#c4001085#/1#k\\n#i4001083##t4001083# #b#c4001083#/1#k\\n#i4001084##t4001084# #b#c4001084#/1#k",
+      "completed": " I gave three member badges and also Zakum, Papulatus and Pianus certificates to Moira. She then appointed me an Honorary squad member and showed me the secret passage to the cave."
+    },
+    "area": 41
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081006,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 7301,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4001086
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081006,
+      "items": [
+        {
+          "itemId": 4001085
+        },
+        {
+          "itemId": 4001080
+        },
+        {
+          "itemId": 4001081
+        },
+        {
+          "itemId": 4001082
+        },
+        {
+          "itemId": 4001083
+        },
+        {
+          "itemId": 4001084
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 50000,
+      "items": [
+        {
+          "itemId": 4001080,
+          "count": -1
+        },
+        {
+          "itemId": 4001081,
+          "count": -1
+        },
+        {
+          "itemId": 4001082,
+          "count": -1
+        },
+        {
+          "itemId": 4001083,
+          "count": -1
+        },
+        {
+          "itemId": 4001084,
+          "count": -1
+        },
+        {
+          "itemId": 4001085,
+          "count": -1
+        },
+        {
+          "itemId": 4001086
+        }
+      ]
+    }
+  }
+}

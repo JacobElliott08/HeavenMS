@@ -1,0 +1,38 @@
+{
+  "questId": 29001,
+  "info": {
+    "name": "Title Challenge - Quest Specialist",
+    "descriptions": {
+      "notStarted": "#b#eTitle Challenge - Quest Specialist#n\\n#k A Warrior who completes 800 quests, not including event quests... I don\u0027t even know if that\u0027s possible.  The Monk of Honor, Dalair, said a title called #e#bQuest Specialist#k#n will be given to the one who accomplishes this amazing feat.",
+      "inProgress": "#b#eTitle Challenge - Quest Specialist#n\\n\\n#k - Completed Quests : #b#jcmpcnt##k / 800(excluding events)\\n                              #jgaugeQCnt# #jperQCnt# %",
+      "completed": "#b#eTitle Challenge - Quest Specialist#n\\n\\n#k - Completed Quests : #b#jcmpcnt##k / 800(not including events)\\n                               #jgaugeQCnt# #jperQCnt# %\\n\\nI finished 800 quests, not including event quests!  On behalf of the God of Honor, Dalair awarded me with the title, \u0027#bQuest Specialist#k\u0027. "
+    },
+    "area": 51,
+    "medalItemId": 1142002
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000040,
+      "minLevel": 30,
+      "repeatIntervalMinutes": 0,
+      "items": [
+        {
+          "itemId": 1142002
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000040,
+      "completedQuests": []
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142002
+        }
+      ]
+    }
+  }
+}

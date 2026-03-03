@@ -1,0 +1,60 @@
+{
+  "questId": 29018,
+  "info": {
+    "name": "Title - Soul Guardian",
+    "descriptions": {
+      "notStarted": "You can apparently acquire the title of #b\u003cSoul Guardian\u003e#k by eliminating undead monsters and sending them back to nirvana…",
+      "inProgress": "#b#eTitle - Soul Guardian#k#n\\r\\nEliminate undead monsters and send them back to where they came from.\\n\\n1 #t2384004# \\n1 #t2384014# \\n1 #t2384018# \\n1 #t2385000# \\n1 #t2385020# \\n\\n#o6230400# #a290181#\\n#o6230500# #a290182#\\n#o6110301# #a290183#\\n#o8140300# #a290184#\\n#o7130300# #a290185#",
+      "completed": "You were able to eliminate the undead monsters and acquired the title of #b\u003cSoul Guardian\u003e#k."
+    },
+    "area": 51,
+    "autoComplete": true,
+    "medalItemId": 1142139
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061011,
+      "minLevel": 67,
+      "prerequisiteQuests": [
+        {
+          "questId": 29017,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "monsters": [
+        {
+          "monsterId": 6230400,
+          "count": 444
+        },
+        {
+          "monsterId": 6230500,
+          "count": 444
+        },
+        {
+          "monsterId": 6110301,
+          "count": 444
+        },
+        {
+          "monsterId": 8140300,
+          "count": 444
+        },
+        {
+          "monsterId": 7130300,
+          "count": 444
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142139
+        }
+      ]
+    }
+  }
+}

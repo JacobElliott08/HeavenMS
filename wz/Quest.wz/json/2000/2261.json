@@ -1,0 +1,45 @@
+{
+  "questId": 2261,
+  "info": {
+    "name": "Camel\u0027s Training Session 1 (Repeatable)",
+    "descriptions": {
+      "notStarted": "Apparently, the Camel Cab is willing to help you train until you reach Level 30.",
+      "inProgress": "Apparently, the Camel Cab is willing to help you train until you reach Level 30.\\r\\n\\r\\n#i4032401:# #t4032401:# #c4032401# / 60\\r\\n",
+      "completed": "The Camel Cab helped you train until you reached Level 30."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2110005,
+      "maxLevel": 29,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 2260,
+          "state": "STARTED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2110005,
+      "items": [
+        {
+          "itemId": 4032401,
+          "count": 60
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4000,
+      "items": [
+        {
+          "itemId": 4032401,
+          "count": -60
+        }
+      ]
+    }
+  }
+}

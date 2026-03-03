@@ -1,0 +1,55 @@
+{
+  "questId": 3905,
+  "info": {
+    "name": "Queen\u0027s Tea 3",
+    "parent": "Queen\u0027s Tea",
+    "descriptions": {
+      "inProgress": "I eliminated 30 #o5200000#s, went to #b#p2012012##k and received #t4031577#. Just looking at it, it doesn\u0027t really look different from anything else... I don\u0027t understand why the queen is being so picky. Anyway, I better give this #t4031577# to #bthe queen #p2101007##k.",
+      "completed": "As expected... the queen didn\u0027t even say thanks. I could tell why the people in #m260000000# hates her guts. Arrrgh!"
+    },
+    "area": 44,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012012,
+      "minLevel": 23,
+      "prerequisiteQuests": [
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3904,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101007,
+      "items": [
+        {
+          "itemId": 4031577
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031577
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 2600,
+      "items": [
+        {
+          "itemId": 4031577,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "questId": 29004,
+  "info": {
+    "name": "One Who\u0027s Touched the Sky",
+    "descriptions": {
+      "notStarted": "You\u0027ll need to aim higher and shoot further to make it to the top! Apparently, if you visit all the areas in the highest regions of Maple World, something good might happen.",
+      "inProgress": "#b#eTitle - One Who\u0027s Touched the Sky#n#k\\r\\nVisit the highest regions of Maple World, where you can practically touch the sky.\\r\\n#bA total of 5 regions: Completed #R27018# Regions.#k",
+      "completed": "#b\u003cOne Who\u0027s Touched the Sky\u003e#k. There\u0027s nothing like the view from the top of the world, where you can practically touch the sky."
+    },
+    "area": 51,
+    "medalItemId": 1142111
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000066,
+      "minLevel": 20
+    },
+    "complete": {
+      "npc": 9000040,
+      "infoNumber": 27018,
+      "infoEx": [
+        null
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1142111
+        }
+      ]
+    }
+  }
+}

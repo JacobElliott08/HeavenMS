@@ -1,0 +1,44 @@
+{
+  "questId": 3735,
+  "info": {
+    "name": "The Wreckage of the Missile",
+    "parent": "Year 2215- The Bombing",
+    "descriptions": {
+      "inProgress": "Bao says that the Iruvatas and Robbies seem to come from the place the missile landed and suggests you search around there. How did he know you were looking for something? He seemed a little dull and slow, but perhaps he actually has a perceptive side. Anyway, investigate and report your findings to Andy.",
+      "completed": "Bao said that the Iruvatas and Robbies seemed to come from the area the missile landed and suggested you search there. You then defeated Dunas the missile android in the bombed City Center and delivered the Time Sand you acquired to Andy."
+    },
+    "area": 41,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082010,
+      "minLevel": 80,
+      "prerequisiteQuests": [
+        {
+          "questId": 3734,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082004,
+      "items": [
+        {
+          "itemId": 4032516
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 60000,
+      "items": [
+        {
+          "itemId": 4032516,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

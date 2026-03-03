@@ -1,0 +1,57 @@
+{
+  "questId": 29902,
+  "info": {
+    "name": "Veteran Adventurer",
+    "descriptions": {
+      "notStarted": "You can earn the #b\u003cVeteran Adventurer\u003e#k title by completing your 3rd Job Advancement as an Adventurer.",
+      "inProgress": "Adventurers who complete the 3rd Job Advancement will receive the #b\u003cVeteran Adventurer\u003e#k title. Go find NPC #p9000040#, who can be found in every town.",
+      "completed": "You have earned the #b\u003cJunior Adventurer\u003e#k title by completing your 3rd Job Advancement as an Adventurer."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142109
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 70,
+      "normalAutoStart": true,
+      "npc": 9000040,
+      "startScript": "q29902s",
+      "items": [
+        {
+          "itemId": 1142109
+        }
+      ],
+      "jobs": [
+        111,
+        121,
+        131,
+        112,
+        122,
+        132,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        311,
+        321,
+        312,
+        322,
+        411,
+        421,
+        412,
+        422,
+        511,
+        521,
+        512,
+        522
+      ]
+    },
+    "complete": {
+      "npc": 9000040,
+      "endScript": "q29902e"
+    }
+  }
+}

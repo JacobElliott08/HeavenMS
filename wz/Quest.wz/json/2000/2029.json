@@ -1,0 +1,55 @@
+{
+  "questId": 2029,
+  "info": {
+    "name": "Don Hwang\u0027s Request",
+    "parent": "Nella \u0026 Kerning City Citizen\u0027s Request",
+    "descriptions": {
+      "notStarted": "I heard that I can get a job if I go see Nella at Kerning City...",
+      "inProgress": "I gave Nella 1000 mesos as a commission for hooking up Kerning City citizen\u0027s request. First request was to get the materials for Don Hwang, the owner of armor shop. The materials for making new armor are #b50 Green Mushroom caps#k and #b50 Bubbling\u0027s huge bubbles#k. It wouldn\u0027t be that hard, since I can easily find Green Mushrooms near the Ellina and Bubblings at the Subway.",
+      "completed": "I gave what Don Hwang asked for and I got bunch of lemons for return. I wonder what kind of armor would Don Hwang make. Nella said there are many more requests I can do. I should visit Nella every once in a while."
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052103,
+      "minLevel": 15
+    },
+    "complete": {
+      "npc": 1052103,
+      "items": [
+        {
+          "itemId": 4000012,
+          "count": 50
+        },
+        {
+          "itemId": 4000037,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "meso": -1000
+    },
+    "onComplete": {
+      "experience": 800,
+      "items": [
+        {
+          "itemId": 4000012,
+          "count": -50
+        },
+        {
+          "itemId": 4000037,
+          "count": -50
+        },
+        {
+          "itemId": 2010004,
+          "count": 50
+        }
+      ]
+    }
+  }
+}

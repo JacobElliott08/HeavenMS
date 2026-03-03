@@ -1,0 +1,53 @@
+{
+  "questId": 20720,
+  "info": {
+    "name": "Before the Mission in Perion Begins",
+    "descriptions": {
+      "notStarted": "It looksl ike #p1101002# is trying to give me a new assignment. I wonder what it is...",
+      "inProgress": "#p1101002# finally gave me a new assignment, but before even starting, he wanted me to get to Ereve so I could make a delivery to someone else...",
+      "completed": "#p1101002# finally gave me a new assignment, but before even starting, he wanted me to get to Ereve and pick up an item for the upcoming assignment."
+    },
+    "area": 15,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "minLevel": 25,
+      "normalAutoStart": true,
+      "startScript": "q20720s",
+      "prerequisiteQuests": [
+        {
+          "questId": 20719,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1101002
+    }
+  }
+}

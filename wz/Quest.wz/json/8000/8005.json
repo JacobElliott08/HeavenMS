@@ -1,0 +1,48 @@
+{
+  "questId": 8005,
+  "info": {
+    "name": "Mariwaka\u0027s Purse",
+    "parent": "Find Mariwaka\u0027s Purse!",
+    "descriptions": {
+      "notStarted": "Apparently, Popo is so busy, he hasn\u0027t had time to handle the case of Mariwaka\u0027s missing Purse. My gosh! Mariwaka will be really disappointed if I tell her the bad news...",
+      "inProgress": "Mariwaka asked me if I could find the purse for her, in place of Popo. She said the thugs walking around the back alley may be the ones that stole her purse. She also mentioned that they have not seen any type of animals in the city for quite some time...I wonder what happened to them...",
+      "completed": "I returned the purse to Mariwaka, and she was crying with tears of joy. Oh yeah, I remember, she\u0027s an actress...! I wonder if she was really acting..."
+    },
+    "area": 48,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9120016,
+      "prerequisiteQuests": [
+        {
+          "questId": 8004,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9120016,
+      "items": [
+        {
+          "itemId": 4031139
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031139,
+          "count": -1
+        },
+        {
+          "itemId": 2050004,
+          "count": 20
+        }
+      ],
+      "experience": 15000
+    }
+  }
+}

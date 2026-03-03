@@ -1,0 +1,50 @@
+{
+  "questId": 2144,
+  "info": {
+    "name": "Truth of the Rumor",
+    "parent": "The Old Tree",
+    "descriptions": {
+      "notStarted": "The archaeologist, Doctor #p1022006#, currently does research at a camping site in #m102000000#. He recently called me about a strange rumor he heard. ",
+      "inProgress": "During the excavation, Doctor #p1022006# said he heard a rumor about a very old tree living in #m102000000#. However, he had no clue on what kind of tree it was, or where exactly it was located. That\u0027s why he\u0027s asked me to visit #b#m102000000# village to collect information on this particular tree.#k\\n\\n#y2148# #b (#u2148#)#k\\n#y2149# #b(#u2149#)#k\\n#y2150# #b(#u2150#)#k\\n#y2151# #b(#u2151#)#k\\n#y2152# #b(#u2152#)#k",
+      "completed": "Told Doctor #p1022006# what the villagers of #m102000000# talked about. Could #o3220000# mentioned by #p1020000# be the same tree Doctor #p1022006# is looking for?"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1022006,
+      "minLevel": 35
+    },
+    "complete": {
+      "npc": 1022006,
+      "prerequisiteQuests": [
+        {
+          "questId": 2151,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2152,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2148,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2149,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 2150,
+          "state": "COMPLETED"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 100
+    }
+  }
+}

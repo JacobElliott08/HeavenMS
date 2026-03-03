@@ -1,0 +1,75 @@
+{
+  "questId": 3946,
+  "info": {
+    "name": "A Proper Reward for a Good Deed",
+    "descriptions": {
+      "notStarted": "I got bamboozled by a Red Scorpion, thinking I was helping Sand Bandits out. Good thing I noticed it before it went on for too long, and I stole some from their treasures and gave them out to others. I feel great about it, but for some reason, #bSirin#k wanted to talk to me about it.",
+      "inProgress": "Sirin told me I have done more good deeds that made up for helping out the Red Scorpions, and that she said it\u0027s okay for me to look for some #bcompensation#k from this. Compensation? Who\u0027s going to pay me?",
+      "completed": "As a small compensation for all that, I took some from the treasure chest. This should be enough."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101000,
+      "prerequisiteQuests": [
+        {
+          "questId": 3926,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2103007
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 2101000
+    },
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4020007,
+          "count": 5
+        },
+        {
+          "itemId": 4020005,
+          "count": 5
+        },
+        {
+          "itemId": 4020001,
+          "count": 5
+        },
+        {
+          "itemId": 4020002,
+          "count": 5
+        },
+        {
+          "itemId": 4020004,
+          "count": 5
+        },
+        {
+          "itemId": 4020006,
+          "count": 5
+        },
+        {
+          "itemId": 4020000,
+          "count": 5
+        },
+        {
+          "itemId": 4020008,
+          "count": 5
+        },
+        {
+          "itemId": 4020003,
+          "count": 5
+        },
+        {
+          "itemId": 4010007,
+          "count": 5
+        }
+      ]
+    }
+  }
+}

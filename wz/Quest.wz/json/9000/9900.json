@@ -1,0 +1,27 @@
+{
+  "questId": 9900,
+  "info": {
+    "name": "즐거운 한가위",
+    "descriptions": {
+      "notStarted": "#b카산드라#k가 민족 최대의 명절인 한가위를 맞아 선물을 준비 했다고 한다.",
+      "inProgress": "#b카산드라#k가 준비한 선물은 무엇일까?",
+      "completed": "#b카산드라#k가 준비한 선물을 받았다. 10월 7일까지는 매일 선물을 준다고 하는데..."
+    },
+    "area": 50,
+    "autoStart": true,
+    "autoPreComplete": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "startDate": "2007092000",
+      "endDate": "2007100800",
+      "normalAutoStart": true
+    },
+    "complete": {
+      "npc": 9010010,
+      "endScript": "eDay_join2"
+    }
+  }
+}

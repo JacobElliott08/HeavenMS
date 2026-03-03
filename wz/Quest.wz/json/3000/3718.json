@@ -1,0 +1,47 @@
+{
+  "questId": 3718,
+  "info": {
+    "name": "Andy the Time Traveler",
+    "parent": "The Truth Behind that Man",
+    "descriptions": {
+      "inProgress": "Andy the Time Traveler has asked you to help him find the Pocket Watch, the key to the Time Gate, which he\u0027s lost in Minar Forest.",
+      "completed": "The Pocket Watch has chosen you as the new Time Traveler. You begin to wonder what you\u0027ve got yourself into."
+    },
+    "area": 41,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2082004,
+      "minLevel": 70,
+      "prerequisiteQuests": [
+        {
+          "questId": 3717,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2082004,
+      "items": [
+        {
+          "itemId": 4032511
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 40000,
+      "items": [
+        {
+          "itemId": 4032511,
+          "count": -1
+        },
+        {
+          "itemId": 4001393
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "questId": 21730,
+  "info": {
+    "name": "The Cave\u0027s Password",
+    "descriptions": {
+      "notStarted": "This is your fourth assignment as an informant and  even though you found the puppeteer\u0027s cave, you couldn\u0027t enter because you didn\u0027t have the password. The code might be written on #p1061006#. Go talk to #p1061006# at #m105040300#.",
+      "inProgress": "Rotating the #p1061006# might reveal the scribbles, but it\u0027s not moving. Wait a minute, the statue seems to be talking to you directly. \u0027I want 100 #t4000007#s.\u0027 Now you\u0027ve heard of some outrageous demands, but a statue demanding something from you? Really? Oh well, better find some #t4000007#s.\\r\\n\\r\\n#i4000007# #t4000007# #b#c4000007# / 100#k",
+      "completed": "You found the scribble on #p1061006#. It\u0027s written in a near-illegible scribble, but you can still make it out. It says: \u0027Francis is a genius puppeteer!\u0027 All the words in the password have to be exact, including the capitalization and spacing, so be careful."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061006,
+      "minLevel": 28,
+      "prerequisiteQuests": [
+        {
+          "questId": 21729,
+          "state": "STARTED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1061006,
+      "items": [
+        {
+          "itemId": 4000007,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7250,
+      "items": [
+        {
+          "itemId": 4000007,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

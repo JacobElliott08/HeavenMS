@@ -1,0 +1,112 @@
+{
+  "questId": 9270,
+  "info": {
+    "name": "새해이벤트 : HappyNewYear",
+    "descriptions": {
+      "notStarted": "알파벳을 모아 Happy New Year(해피 뉴 이어)라는 단어를 만들어볼까?",
+      "inProgress": "알파벳을 모아 Happy New Year(해피 뉴 이어)라는 단어를 만들어낸다.\\n\\n#i3994019##i3994017##i3994021##i3994021##i3994024#\\n#i3994020##i3994018##i3994023#  #i3994024##i3994018##i3994017##i3994022#",
+      "completed": "알파벳을 모아 Happy New Year(해피 뉴 이어)라는 단어를 만들어냈다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 13,
+      "repeatIntervalMinutes": 0,
+      "endDate": "2009012300",
+      "startDate": "2008122600"
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 3994022
+        },
+        {
+          "itemId": 3994023
+        },
+        {
+          "itemId": 3994024,
+          "count": 2
+        },
+        {
+          "itemId": 3994017,
+          "count": 2
+        },
+        {
+          "itemId": 3994018,
+          "count": 2
+        },
+        {
+          "itemId": 3994019
+        },
+        {
+          "itemId": 3994020
+        },
+        {
+          "itemId": 3994021,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 2400,
+      "items": [
+        {
+          "itemId": 4031019
+        },
+        {
+          "itemId": 3994019,
+          "count": -1
+        },
+        {
+          "itemId": 3994017,
+          "count": -1
+        },
+        {
+          "itemId": 3994021,
+          "count": -1
+        },
+        {
+          "itemId": 3994021,
+          "count": -1
+        },
+        {
+          "itemId": 3994024,
+          "count": -1
+        },
+        {
+          "itemId": 3994020,
+          "count": -1
+        },
+        {
+          "itemId": 3994018,
+          "count": -1
+        },
+        {
+          "itemId": 3994023,
+          "count": -1
+        },
+        {
+          "itemId": 3994024,
+          "count": -1
+        },
+        {
+          "itemId": 3994018,
+          "count": -1
+        },
+        {
+          "itemId": 3994017,
+          "count": -1
+        },
+        {
+          "itemId": 3994022,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "questId": 1010,
+  "info": {
+    "name": "Rain\u0027s Maple Quiz 2",
+    "parent": "Rain\u0027s Maple Quiz",
+    "descriptions": {
+      "notStarted": "Let\u0027s solve Rain\u0027s 2nd Quiz.",
+      "inProgress": "What would be Rain\u0027s 2nd Quiz?",
+      "completed": "I found out from Rain\u0027s Quiz that the wearable items can be equipped by double-clicking onthe item."
+    },
+    "area": 20,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 12101,
+      "prerequisiteQuests": [
+        {
+          "questId": 1009,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        0
+      ]
+    },
+    "complete": {
+      "npc": 12101
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 4,
+      "nextQuest": 1011
+    }
+  }
+}

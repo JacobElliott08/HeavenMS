@@ -1,0 +1,55 @@
+{
+  "questId": 20704,
+  "info": {
+    "name": "A Mission in Henesys",
+    "descriptions": {
+      "notStarted": "I have finally reached the level it takes to receive an assignment as a Cygnus Knight. I\u0027ll need to visit #bthe Tactician for Cygnus Knights, #p1101002##k, for an assignment.",
+      "inProgress": "I finally received the first assignment from #p1101002#, asking that I head over to #b#m100000000# in Victoria Island#k and provide support for #bAgent #p1103001##k.",
+      "completed": "I finally received the first assignment from #p1101002#, asking that I head over to #m100000000# in Victoria Island and provide support for Agent #p1103001#. I guess this kind of assignment is very common, since the Cygnus Knights are sent to different parts of Maple World to collect information on the Black Mage."
+    },
+    "area": 15,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 1101002,
+      "minLevel": 13,
+      "normalAutoStart": true,
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1103001
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4032288
+        }
+      ]
+    }
+  }
+}

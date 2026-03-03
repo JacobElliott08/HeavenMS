@@ -1,0 +1,86 @@
+{
+  "questId": 2036,
+  "info": {
+    "name": "First Material for Building a New House",
+    "parent": "Ronnie \u0026 the Fairies Building a New House.",
+    "descriptions": {
+      "notStarted": "Let\u0027s go meet Ronnie in the woods in Ellinia.",
+      "inProgress": "Ronnie from the forest of Ellinia asked me a favor of gathering up materials to build a house for the newborn fairies that are to come down the road. #b50 of orange mushroom caps, leaves, squishy liquid, and red snail shells each#k ... I guess I can get most of these from the monsters around the prairie ...",
+      "completed": "I got all the items Ronnie requested, but when do I get rewarded for this? What? How many more times do I have to do this??"
+    },
+    "area": 30,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1061004,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 2023,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        200,
+        210,
+        220,
+        230,
+        211,
+        221,
+        231,
+        212,
+        222,
+        232,
+        1200,
+        1210,
+        1211,
+        1212
+      ]
+    },
+    "complete": {
+      "npc": 1061004,
+      "items": [
+        {
+          "itemId": 4000016,
+          "count": 50
+        },
+        {
+          "itemId": 4000001,
+          "count": 50
+        },
+        {
+          "itemId": 4000004,
+          "count": 50
+        },
+        {
+          "itemId": 4000005,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 6000,
+      "items": [
+        {
+          "itemId": 4000001,
+          "count": -50
+        },
+        {
+          "itemId": 4000005,
+          "count": -50
+        },
+        {
+          "itemId": 4000004,
+          "count": -50
+        },
+        {
+          "itemId": 4000016,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

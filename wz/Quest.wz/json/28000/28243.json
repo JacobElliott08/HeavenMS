@@ -1,0 +1,66 @@
+{
+  "questId": 28243,
+  "info": {
+    "name": "The Mystery of the Green Portion",
+    "parent": "Unveiling the Map",
+    "descriptions": {
+      "notStarted": "#b#@1032104:##k in #bEllinia#k says she may know a way to reveal the portion of the #rDirty Treasure Map#k that has been covered. Let\u0027s go find her.",
+      "inProgress": "#b#@1032104:##k in #bEllinia#k says she\u0027ll reveal the green portion of the map if you hunt #rSlimes#k and collect #rSquishy Liquids#k. Although #rSlimes#k are found everywhere, a great number of them can be found in #b#m101010000##k.\\n\\nReport back to #b#@1032104:##k in #bEllinia#k upon completion.",
+      "completed": "#b#@1032001:##k in #bEllinia#k says he may know of a way to unveil the rest of the map. Let\u0027s talk to him."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032104,
+      "prerequisiteQuests": [
+        {
+          "questId": 28242,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4220153
+        }
+      ],
+      "jobs": [
+        500,
+        510,
+        520,
+        511,
+        521,
+        512,
+        522,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1032104,
+      "items": [
+        {
+          "itemId": 4000004,
+          "count": 20
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 800,
+      "items": [
+        {
+          "itemId": 4000004,
+          "count": -20
+        },
+        {
+          "itemId": 4032486
+        }
+      ]
+    }
+  }
+}

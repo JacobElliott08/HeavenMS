@@ -1,0 +1,34 @@
+{
+  "questId": 3423,
+  "info": {
+    "name": "The New Control Program",
+    "parent": "The Control Program for Rombot",
+    "descriptions": {
+      "notStarted": "I should go see Kay the engineer at the Omega Sector.",
+      "inProgress": "I met Kay the Engineer again at the Silo of the Omega Sector. She first wanted to make sure that I didn\u0027t forget that I volunteered to be her assistant. Then, she said she needed a number of memory cards that contain Rombot Control Program, and asked me to collect 3 #bRombot\u0027s Memory Cards#k, which can be found through Rombot the monster at the Eos Tower. Then, I\u0027ll have to pay a visit to #bPorter#k at the Command Center in the Omega Sector and have him decipher the memory cards, and then hand her the #b3 Deciphered Memory Cards#k to her.",
+      "completed": "I defeated the Rombots that have been hidden in Eos Tower and got a hold of the #bRombot\u0027s Memory Cards#k. I then handed them to Porter to decipher the code."
+    },
+    "area": 37,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2051001,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 3422,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2050013
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "nextQuest": 3424
+    }
+  }
+}

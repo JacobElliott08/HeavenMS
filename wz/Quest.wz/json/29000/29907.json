@@ -1,0 +1,42 @@
+{
+  "questId": 29907,
+  "info": {
+    "name": "Official Knight",
+    "descriptions": {
+      "notStarted": "You can acquire the #b\u003cOfficial Knight\u003e#k title by completing the 2nd Job Advancement as a Knight.",
+      "inProgress": "You can acquire the #b\u003cOfficial Knight\u003e#k title by completing the 2nd Job Advancement as a Knight.",
+      "completed": "Your prowess has been recognized! You have earned the #b\u003cOfficial Knight\u003e#k title."
+    },
+    "area": 51,
+    "autoStart": true,
+    "medalItemId": 1142067
+  },
+  "requirements": {
+    "start": {
+      "minLevel": 30,
+      "normalAutoStart": true,
+      "npc": 1101000,
+      "startScript": "q29907s",
+      "jobs": [
+        1110,
+        1111,
+        1112,
+        1210,
+        1211,
+        1212,
+        1310,
+        1311,
+        1312,
+        1410,
+        1411,
+        1412,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1101000
+    }
+  }
+}

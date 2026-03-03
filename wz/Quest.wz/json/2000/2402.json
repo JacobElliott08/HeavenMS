@@ -1,0 +1,36 @@
+{
+  "questId": 2402,
+  "info": {
+    "name": "Training Center for Beginner Thieves",
+    "descriptions": {
+      "notStarted": "After making a job advancement as a Thief, you need to find a training center that\u0027ll help you level up faster.",
+      "inProgress": "After making a job advancement as a Thief, you should follow the arrows from Kerning City that lead you to a training center. You won\u0027t be able to enter once you reach Level 20.",
+      "completed": "You found the training center for beginner Thieves. You\u0027ll be able to receive your first set of training lessons from the trainer, Power B. Fore."
+    },
+    "area": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 1052001,
+      "minLevel": 10,
+      "maxLevel": 19,
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422
+      ]
+    },
+    "complete": {
+      "npc": 1052113
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 900
+    }
+  }
+}

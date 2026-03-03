@@ -1,0 +1,54 @@
+{
+  "questId": 6105,
+  "info": {
+    "name": "The One Who Remembers...",
+    "parent": "Extreme Temptation",
+    "descriptions": {
+      "inProgress": " I spoke with #p2020010#, who had a new suggestion to help me piece together this puzzle. She told me to go to see #b#p1061011##k in Sleepywood. I can sense the answers coming soon--they\u0027d better, because my feet are tiring from all this walking! \\n\\n#t4161028#  #b#c4161028# / 1",
+      "completed": " My journey continues...#p1061011# had no idea about the book. But he said he might be able to point me in the right direction to who would know about the book..."
+    },
+    "area": 10,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020010,
+      "jobs": [
+        312,
+        322
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6104,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1061011,
+      "items": [
+        {
+          "itemId": 4161028
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4161028
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 100000,
+      "items": [
+        {
+          "itemId": 4161028,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

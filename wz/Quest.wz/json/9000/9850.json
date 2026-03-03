@@ -1,0 +1,36 @@
+{
+  "questId": 9850,
+  "info": {
+    "name": "Do Gong\u0027s Test",
+    "descriptions": {
+      "notStarted": "Did you hear #b#p2091001##k, the mental strength trainer of Mu Lung, might need help?",
+      "inProgress": "#b#p2091001##k says he wants to test your progress and has asked that you defeat the Book Ghost and Sage Cat. He says the Book Ghost and the Sage Cat have mastered magic, so defeating them won\u0027t be as easy as you think.\\n\\n#o6130209# #r#a98501##k \\n#o5120506# #r#a98502##k",
+      "completed": "You have returned after defeating the Book Ghost and the Sage Cat, but he said you needed to continue training, as that\u0027s the only way for you to become a master."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2091001,
+      "minLevel": 65,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2007052900",
+      "endDate": "2007061800"
+    },
+    "complete": {
+      "npc": 2091001,
+      "endScript": "huntUP9",
+      "monsters": [
+        {
+          "monsterId": 6130209,
+          "count": 100
+        },
+        {
+          "monsterId": 5120506,
+          "count": 100
+        }
+      ]
+    }
+  }
+}

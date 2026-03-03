@@ -1,0 +1,48 @@
+{
+  "questId": 4543,
+  "info": {
+    "name": "I am Bored!",
+    "parent": "Malek\u0027s Joy of Music",
+    "descriptions": {
+      "notStarted": "People in Kampung village seems not as perky as they used to be. Talk to #b#p9270061##k and see what else he needs to bring the energy back to village.",
+      "inProgress": "#b#p9270061##k and entire village are bored and they need me to hunt #b100 #t4000466#s#k so they can entertain themselves with their favorite songs. \\n\\n#t4000466# #r#c4000466#/100#k",
+      "completed": "Kampung village is now full of delightful melody playing with finest #b#t4000466##k."
+    },
+    "area": 49,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270061,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 4542,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270061,
+      "items": [
+        {
+          "itemId": 4000466,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000,
+      "meso": 8000,
+      "fame": 8,
+      "items": [
+        {
+          "itemId": 4000466,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

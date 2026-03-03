@@ -1,0 +1,62 @@
+{
+  "questId": 21731,
+  "info": {
+    "name": "Eliminate the Puppeteer!",
+    "descriptions": {
+      "notStarted": "You have now reached Level 29, which means it\u0027s time for you to ambush the #o9300344#, no? You should head over to #b#m104000000##k and notify #b#p1002104##k that you are ready for action.",
+      "inProgress": "#p1002104#, seeing that you\u0027re determined to attack the #o9300344#, decides to rent a powerful weapon for you. It\u0027s a disposable weapon, but it\u0027ll be put to good use. Now everything is set for the ambush in #b#m910510201##k. Remember, the password is \u0027Francis is a genius Puppeteer!\u0027\\r\\n\\r\\n#o9300344##r #a217311##k\\r\\nThe Black Wings\u0027 Clue #t4032322# #b#c4032322# / 1#k",
+      "completed": "You defeated the Puppeteer, but he ran away before you could finish him off. All you have left is a document the Puppeteer dropped while running away. When you showed #p1002104# the document, he suddenly looked dead serious."
+    },
+    "area": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002104,
+      "minLevel": 29,
+      "prerequisiteQuests": [
+        {
+          "questId": 21729,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        2100,
+        2110,
+        2111,
+        2112
+      ]
+    },
+    "complete": {
+      "npc": 1002104,
+      "items": [
+        {
+          "itemId": 4032322
+        }
+      ],
+      "monsters": [
+        {
+          "monsterId": 9300344
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 1442081,
+          "jobRestriction": 2099202
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 8550,
+      "items": [
+        {
+          "itemId": 4032322,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

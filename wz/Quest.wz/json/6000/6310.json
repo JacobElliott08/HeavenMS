@@ -1,0 +1,58 @@
+{
+  "questId": 6310,
+  "info": {
+    "name": "End of Attributes",
+    "parent": " Inverse Attributes ",
+    "descriptions": {
+      "notStarted": " I have reached the highest level of the attributes. Is there a stronger attribute magic that I can learn? Let\u0027s go ask #b#p2020005##k.",
+      "inProgress": "#b#p2020005##k mentioned about inverse attributes, and suggested that we research it. He wants me to bring him the ingredients for the research....\\r\\n#i04000081##t04000081# #b#c04000081#/50#k\\n#i04000232##t04000232# #b#c04000232#/10#k\\n#i04000240##t04000240# #b#c04000240#/10 ",
+      "completed": " I got all the ingredients. But will #b#p2020005##k do a good job?"
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "jobs": [
+        222
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "items": [
+        {
+          "itemId": 4000081,
+          "count": 50
+        },
+        {
+          "itemId": 4000232,
+          "count": 10
+        },
+        {
+          "itemId": 4000240,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 400000,
+      "items": [
+        {
+          "itemId": 4000081,
+          "count": -50
+        },
+        {
+          "itemId": 4000232,
+          "count": -10
+        },
+        {
+          "itemId": 4000240,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

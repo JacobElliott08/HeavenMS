@@ -1,0 +1,46 @@
+{
+  "questId": 28224,
+  "info": {
+    "name": "Delivering the Antique",
+    "parent": "Antique Search",
+    "descriptions": {
+      "notStarted": "#b#@9201118:##k in #bHenesys#k says he has a favor to ask of you. Let\u0027s talk to him.",
+      "inProgress": "#b#@9201118:##k in #bHenesys#k has asked you to go see #b#@1072008:##k in #bNautilus#k and retrieve his #rAntique#k.",
+      "completed": "#b#@1072008:##k in #bNautilus#k has asked that you bring the #rAntique#k for her. Let\u0027s talk to her."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 9201118,
+      "prerequisiteQuests": [
+        {
+          "questId": 28223,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        300,
+        310,
+        320,
+        311,
+        321,
+        312,
+        322,
+        1300,
+        1310,
+        1311,
+        1312
+      ]
+    },
+    "complete": {
+      "npc": 1090000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

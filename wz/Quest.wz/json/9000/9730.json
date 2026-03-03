@@ -1,0 +1,32 @@
+{
+  "questId": 9730,
+  "info": {
+    "name": "To Fool a Liar",
+    "descriptions": {
+      "notStarted": "Wanted: A great liar? Apparently, #b#p9010010##k is looking for explorers that can help protect Maplers from monsters, and she is looking for a great liar... What is that supposed be? I better go talk to #p9010010# right now.",
+      "inProgress": "#p9010010# mentioned that #r#p9010011##k was hatching a plan to transform into a human and pull some pranks on unsuspecting Maplers, and she wants to prevent that from happening by having him sniff the Flower Petals of Transformation, which will prevent him from transforming altogether. But she warned that #r#p9010011##k wouldn\u0027t believe it if I just gave it to him as is, so we have to trick him into believing that the petals will actually help him transform into a human much easier... There are plenty of #p9010011#s #baround #m100000000##k, though... how am I going to tell which one is really him? \\n\\n#i4031583##t4031583# #b#c4031583#/10#k",
+      "completed": "I managed to give #t4031583# to #p9010011#. This will prevent him from transforming into a human for an hour, right?"
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "minLevel": 10,
+      "maxLevel": 30,
+      "repeatIntervalMinutes": 60,
+      "startDate": "2009032400",
+      "endDate": "2009040700"
+    },
+    "complete": {
+      "npc": 9010011,
+      "endScript": "q9730e",
+      "items": [
+        {
+          "itemId": 4031583,
+          "count": 10
+        }
+      ]
+    }
+  }
+}

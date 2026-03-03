@@ -1,0 +1,62 @@
+{
+  "questId": 3013,
+  "info": {
+    "name": "To Acquire the Fairy Dust",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "#bKriel the Fairy#k wanted to make a deal with me, and I complied. For her to give up the #bFairy Dust#k, I\u0027ll have to get her #b100 Star Pixie Starpieces, 50 Lunar Pixie Moonpieces, and 30 Luster Pixie Sunpieces#k. I\u0027ll have to go on a serious Pixie hunting spree for a while. \\n\\n#t4000061# #b#c4000061##k/30\\n#t4000059# #b#c4000059##k/100\\n#t4000060# #b#c4000060##k/50",
+      "completed": "I gave all ingredients to Kriel the Fairy. She will give me Fairy Dust."
+    },
+    "area": 33,
+    "order": 10
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012011,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3012,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012011,
+      "items": [
+        {
+          "itemId": 4000061,
+          "count": 30
+        },
+        {
+          "itemId": 4000059,
+          "count": 100
+        },
+        {
+          "itemId": 4000060,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 7230,
+      "nextQuest": 3014,
+      "items": [
+        {
+          "itemId": 4000059,
+          "count": -100
+        },
+        {
+          "itemId": 4000060,
+          "count": -50
+        },
+        {
+          "itemId": 4000061,
+          "count": -30
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "questId": 6221,
+  "info": {
+    "name": " Inverse Attributes",
+    "parent": " Inverse Attributes",
+    "descriptions": {
+      "notStarted": "#b#p2020005##k said he will conduct an experiment with the ingredients, and told me to come back to him in a little bit.",
+      "inProgress": " I tried the experiment with b#p2020005##k but unfortunately it failed.  #b#p2020005##k told me to go to see #b#p2030012##k, an expert on magic ingredients.",
+      "completed": " #b#p2030012##k said the inverse attributes is a bunch of nonsense. Nevertheless, he seemed intrigued by it and told me to go see #b#p2012017##k, the mad scientist in Orbis."
+    },
+    "area": 10,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "jobs": [
+        212
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6220,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030012
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200000
+    }
+  }
+}

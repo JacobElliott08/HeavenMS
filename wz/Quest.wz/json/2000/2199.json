@@ -1,0 +1,41 @@
+{
+  "questId": 2199,
+  "info": {
+    "name": "Eliminate the Dark Stone Golems",
+    "descriptions": {
+      "notStarted": "Muirhat is worried about the evil spirits that have infiltrated Victoria Island as of late. I wonder what I could do to help? I should go talk to Muirhat on the top deck of The Nautilus.",
+      "inProgress": "Victoria Island has already been infused with evil spirits. But I refuse to give up like this. I need to eliminate #r100 Dark Stone Golems#k to stop these evil creatures from further spreading their evilness in Victoria Island. \\n\\n#o 5130102# #r#a21991##k",
+      "completed": "I\u0027ve eliminated 100 Dark Stone Golems. I wonder if I\u0027ve made a difference in Victoria Island?"
+    },
+    "area": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 1092007,
+      "minLevel": 58,
+      "prerequisiteQuests": [
+        {
+          "questId": 2198,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092007,
+      "monsters": [
+        {
+          "monsterId": 5130102,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "npc": 1092007
+    },
+    "onComplete": {
+      "experience": 110000
+    }
+  }
+}

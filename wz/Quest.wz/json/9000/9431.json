@@ -1,0 +1,76 @@
+{
+  "questId": 9431,
+  "info": {
+    "name": "북극곰 포치의 코카-콜라",
+    "descriptions": {
+      "notStarted": "#b북극곰 포치#k가 코카-콜라를 만드는 비법을 알아 냈다고 하는데... 코-크 타운으로 가려면 #b코-크베어 운영자#k를 먼저 만나야겠지?",
+      "inProgress": "#b북극곰 포치#k는 코카-콜라를 만들려면 코-크 플레이닷컴(#bwww.cokeplay.com#k)에서만 구할 수 있는 재료들을 가지고 와야 한다고 했다.  \\n\\n#i4031322# #t4031322# #b#c4031322#/1#k \\n#i4031323# #t4031323# #b#c4031323#/1#k \\n#i4031324# #t4031324# #b#c4031324#/1#k",
+      "completed": "#b북극곰 포치#k가 코카-콜라를 만드는 것을 도와 주었다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9001002,
+      "repeatIntervalMinutes": 0,
+      "startDate": "2007071300",
+      "endDate": "2007110100"
+    },
+    "complete": {
+      "npc": 9001002,
+      "items": [
+        {
+          "itemId": 4031322
+        },
+        {
+          "itemId": 4031323
+        },
+        {
+          "itemId": 4031324
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4031322,
+          "count": -1
+        },
+        {
+          "itemId": 4031323,
+          "count": -1
+        },
+        {
+          "itemId": 4031324,
+          "count": -1
+        },
+        {
+          "itemId": 2022075,
+          "count": 12,
+          "probability": 6
+        },
+        {
+          "itemId": 2022076,
+          "count": 10,
+          "probability": 2
+        },
+        {
+          "itemId": 2022077,
+          "count": 6,
+          "probability": 2
+        },
+        {
+          "itemId": 2022078,
+          "count": 4,
+          "probability": 2
+        },
+        {
+          "itemId": 1002663,
+          "probability": 6
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "questId": 10347,
+  "info": {
+    "name": "The Wolf In Waiting",
+    "descriptions": {
+      "notStarted": "If you want to obtain another Aran Memory Fragment, you should go see Cassandra.",
+      "inProgress": "What? Go find a wolf awaiting its master?",
+      "completed": "You found a wolf that seemed to be waiting for its master, but when you approached, he howled really loudly and ran away, leaving an Aran Memory Fragment in the snow."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "endDate": "2009010100",
+      "prerequisiteQuests": [
+        {
+          "questId": 10346,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000067,
+      "endScript": "q10347e"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "questId": 2076,
+  "info": {
+    "name": "Estelle\u0027s Special Sauce",
+    "parent": "Mrs. Ming Ming\u0027s Second Worry",
+    "descriptions": {
+      "inProgress": "I received the special sauce from Estelle near Ellinia. I guess I have to return to Mrs. Ming Ming with #b20 Pig\u0027s Head and 60 Octopus\u0027 Legs#k. \\n\\nPig\u0027s Head : #c4000017#/20\\nOctopus\u0027 Legs : #c4000006#/60\\nEstelle\u0027s Special Sauce : #c4031154#/1",
+      "completed": "I got all the materials that Mrs. Ming Ming asked me to get, and gave it to her. I can\u0027t wait to see the village festival!"
+    },
+    "area": 30,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 1032105,
+      "minLevel": 21,
+      "prerequisiteQuests": [
+        {
+          "questId": 2064,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1012106,
+      "items": [
+        {
+          "itemId": 4000006,
+          "count": 60
+        },
+        {
+          "itemId": 4000017,
+          "count": 20
+        },
+        {
+          "itemId": 4031154
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031154
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 1200,
+      "items": [
+        {
+          "itemId": 4000006,
+          "count": -60
+        },
+        {
+          "itemId": 4031154,
+          "count": -1
+        },
+        {
+          "itemId": 1002441
+        },
+        {
+          "itemId": 4000017,
+          "count": -15
+        }
+      ]
+    }
+  }
+}

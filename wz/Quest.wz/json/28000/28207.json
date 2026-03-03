@@ -1,0 +1,46 @@
+{
+  "questId": 28207,
+  "info": {
+    "name": "Meeting Kyrin of The Nautilus",
+    "parent": "Commotion on the Ship",
+    "descriptions": {
+      "notStarted": "#b#@1012109:##k in #bHenesys#k says #b#p1072008##k in #bNautilus#k needs your help. But first, let\u0027s talk to #b#@1012109:##k.",
+      "inProgress": "#b#@1012109:##k says to go to #bNautilus#k and find out how you can help #b#@1072008:##k.",
+      "completed": "#b#@1072008:##k in #bNautilus#k says she has a favor to request of you. Let\u0027s talk to her."
+    },
+    "area": 10,
+    "order": 1
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012109,
+      "prerequisiteQuests": [
+        {
+          "questId": 28206,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        400,
+        410,
+        420,
+        411,
+        421,
+        412,
+        422,
+        1400,
+        1410,
+        1411,
+        1412
+      ]
+    },
+    "complete": {
+      "npc": 1090000
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 300
+    }
+  }
+}

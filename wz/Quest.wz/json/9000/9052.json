@@ -1,0 +1,51 @@
+{
+  "questId": 9052,
+  "info": {
+    "name": "Beat the Heat \u003cEasy\u003e - 2nd Stage",
+    "parent": "Beat the Heat \u003cEasy\u003e",
+    "descriptions": {
+      "notStarted": "I should go visit Maple Administrator for Beat the Heat, 2nd Stage.",
+      "inProgress": "For the 2nd Stage task, the Maple Administrator asked me to gather up #b10 #t4031167#s#, which can be obtained by hunting #b#o1110100##k and #b#o1110101##k.\\n\\n#t4031167# #b#c4031167##k/10",
+      "completed": "I met the Maple Administrator, and passed the 2nd stage of the Easy level of #bBeat the Heat#k."
+    },
+    "area": 50,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "startDate": "2005082400",
+      "endDate": "2005090300",
+      "prerequisiteQuests": [
+        {
+          "questId": 9051,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 4031167,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 1000,
+      "items": [
+        {
+          "itemId": 2001000,
+          "count": 15
+        },
+        {
+          "itemId": 4031167,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "questId": 9840,
+  "info": {
+    "name": "Dr. Winston\u0027s Research",
+    "descriptions": {
+      "notStarted": "#b#p9010010##k seems to have something urgent to tell you.",
+      "inProgress": "You must eliminate the monsters that are getting in the way of Dr. #b#p1022006##k\u0027s research and report back. \\n\\n#o0130100# #r#a98401##k \\n#o1110101# #r#a98402##k",
+      "completed": "You were a great help in Dr. #b#p1022006##k\u0027s research."
+    },
+    "area": 50,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "repeatIntervalMinutes": 1440,
+      "startDate": "2007052900",
+      "endDate": "2007061800"
+    },
+    "complete": {
+      "npc": 1022006,
+      "endScript": "huntUP1",
+      "monsters": [
+        {
+          "monsterId": 130100,
+          "count": 30
+        },
+        {
+          "monsterId": 1110101,
+          "count": 20
+        }
+      ]
+    }
+  }
+}

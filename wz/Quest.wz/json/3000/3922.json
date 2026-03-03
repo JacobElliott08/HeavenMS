@@ -1,0 +1,46 @@
+{
+  "questId": 3922,
+  "info": {
+    "name": "A Request from a Member of the Sand Bandits?! 2",
+    "parent": "A Request from a Member of the Sand Bandits?!",
+    "descriptions": {
+      "notStarted": "#b#p2101012##k lives outside #b#m260000000##k. He claims to be a member of the Sand Bandits, the secret organization in #m260000000#. If he\u0027s a Sand Bandit, then there\u0027s got to be a lot of things he should do for these good people. What else is there for me to do?",
+      "inProgress": "#p2101012# told me he\u0027ll need a poisoned needle to steal a treasure from the queen, and asked me to get #b#t4000330##k for him. Since this is for the Sand Bandits, this shouldn\u0027t be too hard to do. \\n\\n#i4000330# #t4000330#  #b#c4000330##k/50",
+      "completed": "I gave #p2101012# all the #t4000330#s required for this. Sand Bandits must be needing a lot of stuff to do good for these people."
+    },
+    "area": 44,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101012,
+      "minLevel": 27,
+      "prerequisiteQuests": [
+        {
+          "questId": 3921,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101012,
+      "items": [
+        {
+          "itemId": 4000330,
+          "count": 50
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5250,
+      "items": [
+        {
+          "itemId": 4000330,
+          "count": -50
+        }
+      ]
+    }
+  }
+}

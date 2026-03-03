@@ -1,0 +1,52 @@
+{
+  "questId": 20522,
+  "info": {
+    "name": "Raising Mimiana",
+    "descriptions": {
+      "notStarted": "I better visit the #bHatchery#k and talk to #b#p1102002# the Mount Trainer#k about the Mounts for knights.",
+      "inProgress": "#p1102002# told me the Mounts for the knights are through #t1902005#, a type of Mimi, and told me I\u0027ll have to raise #t1902005# on my own. He then handed me a small egg... #t1902005# can be raised by #bsharing my experiences with it#k.",
+      "completed": "After fully raising #t1902005#, I handed it back to #p1102002#."
+    },
+    "area": 15
+  },
+  "requirements": {
+    "start": {
+      "npc": 1102002,
+      "startScript": "q20522s",
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 20521,
+          "state": "COMPLETED"
+        }
+      ],
+      "jobs": [
+        1000,
+        1100,
+        1110,
+        1111,
+        1112,
+        1200,
+        1210,
+        1211,
+        1212,
+        1300,
+        1310,
+        1311,
+        1312,
+        1400,
+        1410,
+        1411,
+        1412,
+        1500,
+        1510,
+        1511,
+        1512
+      ]
+    },
+    "complete": {
+      "npc": 1102002,
+      "endScript": "q20522e"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "questId": 3901,
+  "info": {
+    "name": "Tigun the Guard at the Palace",
+    "descriptions": {
+      "notStarted": "The palace of #m260000000# boasts a tight security, and doesn\u0027t let strangers in, but I really want to see what it\u0027s like inside... I should ask the head of the security at the palace, #b#p2101004##k, for help.",
+      "inProgress": "#p2101004# told me flat out he can\u0027t let me in the palace... unless I show my allegiance towards Sultan by paying some mesos, then he\u0027ll give me a pass to the palace. ...#b2,000 mesos#k isn\u0027t much, but I feel like I\u0027m just buying him off.",
+      "completed": "After I paid #p2101004# 2,000 mesos, I received the pass to the palace. Even though I feel like I got ripped off, oh well... at least I can enter the palace now."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2101004,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 0,
+      "prerequisiteQuests": [
+        {
+          "questId": 3900,
+          "state": "COMPLETED"
+        }
+      ],
+      "items": [
+        {
+          "itemId": 4031582
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2101004
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": -2000,
+      "items": [
+        {
+          "itemId": 4031582
+        }
+      ]
+    }
+  }
+}

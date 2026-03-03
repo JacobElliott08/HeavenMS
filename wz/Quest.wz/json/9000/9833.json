@@ -1,0 +1,40 @@
+{
+  "questId": 9833,
+  "info": {
+    "name": "카산드라의 네번째 퀴즈!",
+    "parent": "카산드라의 메이플 퀴즈",
+    "descriptions": {
+      "inProgress": "세번째 퀴즈도 문제없었다! ...아니, 사실 조금 헷갈리긴 했지만. 그럼 다음 문제를 풀어볼까? #p9010010#를 찾아가자.",
+      "completed": "네번째 문제도 풀었다. 휴우~ 점점 어려워지는걸?"
+    },
+    "area": 50,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "startDate": "2007042400",
+      "endDate": "2007052100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9832,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 250,
+      "items": [
+        {
+          "itemId": 4001126,
+          "count": 4
+        }
+      ]
+    }
+  }
+}

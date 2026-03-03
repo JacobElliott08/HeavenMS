@@ -1,0 +1,29 @@
+{
+  "questId": 28004,
+  "info": {
+    "name": "Save the Snowman!",
+    "descriptions": {
+      "notStarted": "Scrooge seems to have started putting his plan into reality. I better go see Snow Spirit.",
+      "inProgress": "Protect the snowman from Scrooge and his men!",
+      "completed": "I was able to protect the symbol of luck here in Happyville, the giant snowman. That really made my day."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9105003,
+      "startScript": "q28004s",
+      "prerequisiteQuests": [
+        {
+          "questId": 28003,
+          "state": "COMPLETED"
+        }
+      ],
+      "minLevel": 21,
+      "maxLevel": 51
+    },
+    "complete": {
+      "npc": 9105003
+    }
+  }
+}

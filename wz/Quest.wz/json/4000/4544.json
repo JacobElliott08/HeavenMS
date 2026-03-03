@@ -1,0 +1,48 @@
+{
+  "questId": 4544,
+  "info": {
+    "name": "All taken away!",
+    "parent": "Malek\u0027s Joy of Music",
+    "descriptions": {
+      "notStarted": "#b#p9270061##k needs more of the #b#t4000466#s#k to keep the Kampung village safe from #b#o9420528##k.",
+      "inProgress": "#bEmo Slimes#k have snatched away all of the #bRebabs#k in the village. Kampung Village now needs#b 150 Rebabs#k to lure those monsters and put the to sleep. \\n\\n#t4000466# #r#c4000466#/150#k ",
+      "completed": "#b#p9270061##k and the whole village is now safe from #b#o9420528##k, and it seems like there will be a party with some great musics. Kampung village is always a fun place to hang out. "
+    },
+    "area": 49,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 9270061,
+      "minLevel": 50,
+      "prerequisiteQuests": [
+        {
+          "questId": 4543,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9270061,
+      "items": [
+        {
+          "itemId": 4000466,
+          "count": 150
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 30000,
+      "meso": 10000,
+      "fame": 10,
+      "items": [
+        {
+          "itemId": 4000466,
+          "count": -150
+        }
+      ]
+    }
+  }
+}

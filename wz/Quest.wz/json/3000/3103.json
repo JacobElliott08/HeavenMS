@@ -1,0 +1,72 @@
+{
+  "questId": 3103,
+  "info": {
+    "name": "Alcaster\u0027s Cape",
+    "parent": "Warm El Nath",
+    "descriptions": {
+      "notStarted": "According to #p2020003#, the person that gave him the magical cape is a man over 300 years old. Really? If so, then wouldn\u0027t he be none other than #p2020005#? I should go see #p2020005#.",
+      "inProgress": "The person who gave #p2020003# the cape was indeed #p2020005#. The one #p2020003# had turned out to be #t1102109#, the cape he made to combat the cold of #m211000000# when he went there to study magic. After asking for the cape, he asked me to get him some items so he can make another one for me.\\n\\n#i4021000# #t4021000#  #b#c4021000##k / 4 \\n#i4006000# #t4006000#  #b#c4006000##k / 2  \\n#i4000087# #t4000087#  #b#c4000087##k / 40 \\n#i4000051# #t4000051#  #b#c4000051##k / 2",
+      "completed": "I brought all the materials back to #p2020005#, and in return, he gave me #t1102109#, a magic-laced cape designed to combat even the toughest weather. Now I feel like I can totally hunt at #m211000000# now!"
+    },
+    "area": 33,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "prerequisiteQuests": [
+        {
+          "questId": 3102,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2020005,
+      "items": [
+        {
+          "itemId": 4000087,
+          "count": 40
+        },
+        {
+          "itemId": 4006000,
+          "count": 2
+        },
+        {
+          "itemId": 4021000,
+          "count": 4
+        },
+        {
+          "itemId": 4000051,
+          "count": 2
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 14500,
+      "items": [
+        {
+          "itemId": 4021000,
+          "count": -4
+        },
+        {
+          "itemId": 4006000,
+          "count": -2
+        },
+        {
+          "itemId": 1102109
+        },
+        {
+          "itemId": 4000051,
+          "count": -2
+        },
+        {
+          "itemId": 4000087,
+          "count": -40
+        }
+      ]
+    }
+  }
+}

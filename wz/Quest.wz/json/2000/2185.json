@@ -1,0 +1,51 @@
+{
+  "questId": 2185,
+  "info": {
+    "name": "Dress for Kyrin",
+    "parent": "For Kyrin",
+    "descriptions": {
+      "inProgress": "The dress for Kyrin is finally done. It looks so nice! I should hurry and bring the dress to #bBlack Bark#k.",
+      "completed": "I wonder if Miss Kyrin will be wearing the dress at her birthday party. Can\u0027t wait to see her in the dress!"
+    },
+    "area": 30,
+    "order": 2
+  },
+  "requirements": {
+    "start": {
+      "npc": 1012106,
+      "prerequisiteQuests": [
+        {
+          "questId": 2184,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1092006,
+      "items": [
+        {
+          "itemId": 4031852
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031852
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 7000,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4031852,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

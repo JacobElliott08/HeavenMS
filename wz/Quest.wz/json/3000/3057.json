@@ -1,0 +1,69 @@
+{
+  "questId": 3057,
+  "info": {
+    "name": "Lisa\u0027s Special Medicine II",
+    "descriptions": {
+      "notStarted": "To cure Moppie, I need Lisa\u0027s Special Medicine...",
+      "inProgress": "To make Lisa\u0027s Special Medicine, I\u0027ll need 40 Orange Potions, 20 Blue Potions, 1 Antidote, and ... 1 Fierry\u0027s Tentacle. Obtaining the Fierry\u0027s Tentacle is going to be difficult.\\n\\n#t2000001# #b#c2000001#/40#k\\n#t2000003# #b#c2000003#/20#k\\n#t2050000# #b#c2050000#/1#k\\n#t4000068# #b#c4000068#/1#k",
+      "completed": "Lisa\u0027s Special Medicine is finally made! The sweet scent of it just makes it look that much more appealing to me, and I\u0027m sure it will for Moppie."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012012,
+      "minLevel": 30,
+      "prerequisiteQuests": [
+        {
+          "questId": 3056,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012012,
+      "items": [
+        {
+          "itemId": 2000001,
+          "count": 40
+        },
+        {
+          "itemId": 2000003,
+          "count": 20
+        },
+        {
+          "itemId": 2050000
+        },
+        {
+          "itemId": 4000068
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 5000,
+      "items": [
+        {
+          "itemId": 2000001,
+          "count": -40
+        },
+        {
+          "itemId": 2000003,
+          "count": -20
+        },
+        {
+          "itemId": 2050000,
+          "count": -1
+        },
+        {
+          "itemId": 4000068,
+          "count": -1
+        },
+        {
+          "itemId": 2048001
+        }
+      ]
+    }
+  }
+}

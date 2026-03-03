@@ -1,0 +1,53 @@
+{
+  "questId": 10391,
+  "info": {
+    "name": "Teo\u0027s Nostalgic Reminscing II",
+    "descriptions": {
+      "notStarted": "You should visit #b#p1002001##k, who gave you a helping hand last time.",
+      "inProgress": "#b#p1002001##k wants to see how much more powerful you\u0027ve become and tests you to find out.\\n\\n#t04000024# #b#c04000024#/80#k\\n#t04000020# #b#c04000020#/100#k",
+      "completed": "You were able to emphatically prove to #b#p1002001##k that you\u0027ve gotten much stronger since the last time you met."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 1002001,
+      "minLevel": 30,
+      "endDate": "2010012000",
+      "prerequisiteQuests": [
+        {
+          "questId": 10390,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 1002001,
+      "items": [
+        {
+          "itemId": 4000024,
+          "count": 80
+        },
+        {
+          "itemId": 4000020,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "meso": 200000,
+      "items": [
+        {
+          "itemId": 4000024,
+          "count": -80
+        },
+        {
+          "itemId": 4000020,
+          "count": -100
+        }
+      ]
+    }
+  }
+}

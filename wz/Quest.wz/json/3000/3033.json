@@ -1,0 +1,46 @@
+{
+  "questId": 3033,
+  "info": {
+    "name": "The Secrets Behind the Statue",
+    "parent": "In Search of the Book of Ancient",
+    "descriptions": {
+      "inProgress": "With the Memory Powder, Alcaster was able to attach the four map pieces and turn it into a map. According to the map, the Book of Ancient lies somewhere #baround Orbis Tower at some statue#k."
+    },
+    "area": 33,
+    "order": 30
+  },
+  "requirements": {
+    "start": {
+      "npc": 2020005,
+      "minLevel": 55,
+      "prerequisiteQuests": [
+        {
+          "questId": 3032,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2030005
+    }
+  },
+  "actions": {
+    "onStart": {
+      "items": [
+        {
+          "itemId": 4031053
+        }
+      ]
+    },
+    "onComplete": {
+      "experience": 4500,
+      "nextQuest": 3034,
+      "items": [
+        {
+          "itemId": 4031053,
+          "count": -1
+        }
+      ]
+    }
+  }
+}

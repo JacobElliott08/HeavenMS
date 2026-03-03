@@ -1,0 +1,39 @@
+{
+  "questId": 3308,
+  "info": {
+    "name": "Getting in the Way of Alcadno",
+    "descriptions": {
+      "notStarted": "#b#p2111008##k, an alchemist from Zenumist, seems to have a plan in store. Now that I\u0027m Zenumist, I should help him out, right? I better go see #p2111008# immediately.",
+      "inProgress": "Zenumist is in conflict with Alcadno... I knew that fact, but I never thought he\u0027d ask me for a favor like this! Anyway, since #p2111008# made the request, I better follow through with it, or I may be in trouble. I\u0027ll have to destroy #r200 #o5110300#k that Alcadnos have been working on. \\n\\n#o5110300#  #r#a33081#",
+      "completed": "I destroyed the #o5110300#s that Alcadnos have been working on, at the request of #p2111008#. Hmmm... was I allowed to do this? Why do Zenumist and Alcadno have such a huge conflict between them?"
+    },
+    "area": 44,
+    "autoStart": true
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111008,
+      "minLevel": 52,
+      "prerequisiteQuests": [
+        {
+          "questId": 3307,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111008,
+      "monsters": [
+        {
+          "monsterId": 5110300,
+          "count": 200
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 37600
+    }
+  }
+}

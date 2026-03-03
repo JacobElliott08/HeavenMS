@@ -1,0 +1,32 @@
+{
+  "questId": 6933,
+  "info": {
+    "name": "Hellin\u0027s Third Story",
+    "parent": "The Thief\u0027s Extreme Path",
+    "descriptions": {
+      "inProgress": "#b#p2081400##k said she\u0027ll tell me the final story and told me to come talk to her again when I\u0027m ready.",
+      "completed": " #b#p2081400##k told me about a lake stopped in time, which is the third truth.  Then she said come back and talk to her when I\u0027m ready to prove my skills."
+    },
+    "area": 10,
+    "order": 4
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081400,
+      "minLevel": 120,
+      "jobs": [
+        411,
+        421
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6932,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081400
+    }
+  }
+}

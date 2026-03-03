@@ -1,0 +1,97 @@
+{
+  "questId": 9412,
+  "info": {
+    "name": "Hughes Needs the Eraser",
+    "descriptions": {
+      "notStarted": "Hughes seems to be in need of help. I better go see him.",
+      "inProgress": "Hughes has been trying to go on with his research, but told me he needs an eraser to continue...",
+      "completed": "I got Hughes the eraser he\u0027s been seeking."
+    },
+    "area": 33
+  },
+  "requirements": {
+    "start": {
+      "npc": 2012017,
+      "minLevel": 10,
+      "repeatIntervalMinutes": 0,
+      "items": [
+        {
+          "itemId": 4001038
+        },
+        {
+          "itemId": 4001039
+        },
+        {
+          "itemId": 4001040
+        },
+        {
+          "itemId": 4001041
+        },
+        {
+          "itemId": 4001042
+        },
+        {
+          "itemId": 4001043
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2012017,
+      "items": [
+        {
+          "itemId": 4001038
+        },
+        {
+          "itemId": 4001039
+        },
+        {
+          "itemId": 4001040
+        },
+        {
+          "itemId": 4001041
+        },
+        {
+          "itemId": 4001042
+        },
+        {
+          "itemId": 4001043
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 200,
+      "fame": 1,
+      "items": [
+        {
+          "itemId": 4001038,
+          "count": -1
+        },
+        {
+          "itemId": 4001039,
+          "count": -1
+        },
+        {
+          "itemId": 4001040,
+          "count": -1
+        },
+        {
+          "itemId": 4001041,
+          "count": -1
+        },
+        {
+          "itemId": 4001042,
+          "count": -1
+        },
+        {
+          "itemId": 4001043,
+          "count": -1
+        },
+        {
+          "itemId": 1442039
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "questId": 3349,
+  "info": {
+    "name": "For Phyllia",
+    "descriptions": {
+      "notStarted": "#p2111002#, the missing alchemist. What he wanted, and the dark truth behind #m261000000#... All these previously hidden facts have been revealed. Now it\u0027s the matter of choice. If I am to choose the truth, then I\u0027ll have to head over to #b#p2111004##k. ",
+      "inProgress": "The truth must be told, even if it causes heartbreak and anger. Once I get myself ready to reveal the truth, I better hand in #b#t4161033##k to #p2111004#.",
+      "completed": "With trembling hands, #p2111004# received #t4161033#. There was no way to tell how she\u0027d react to it, whether to be angry, sad, in despair...or forgive. It\u0027s all up to her now."
+    },
+    "area": 44
+  },
+  "requirements": {
+    "start": {
+      "npc": 2111004,
+      "minLevel": 75,
+      "prerequisiteQuests": [
+        {
+          "questId": 3346,
+          "state": "COMPLETED"
+        },
+        {
+          "questId": 3347
+        },
+        {
+          "questId": 3348
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2111004,
+      "items": [
+        {
+          "itemId": 4161034
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 120000,
+      "fame": 30,
+      "items": [
+        {
+          "itemId": 4161034,
+          "count": -1
+        },
+        {
+          "itemId": 2000004,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

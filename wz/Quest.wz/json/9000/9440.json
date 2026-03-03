@@ -1,0 +1,45 @@
+{
+  "questId": 9440,
+  "info": {
+    "name": "더위 탈출 프로젝트 초급 1단계",
+    "descriptions": {
+      "notStarted": "무더위가 짜증난다면 #b#p9010000##k를 찾아가 보자.",
+      "inProgress": "#b#p9010000##k는 몬스터 사냥을 하면서 더위를 잊어보라고 했다. \\n\\n#t04000004:# #b#c04000004#/100#k ",
+      "completed": "#b#p9010000##k를 만나 더위탈출 프로젝트 1단계를 수행하였다."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010000,
+      "minLevel": 8,
+      "maxLevel": 29,
+      "startDate": "2006062200",
+      "endDate": "2006072400"
+    },
+    "complete": {
+      "npc": 9010000,
+      "items": [
+        {
+          "itemId": 4000004,
+          "count": 100
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 500,
+      "items": [
+        {
+          "itemId": 4000004,
+          "count": -100
+        },
+        {
+          "itemId": 2000000,
+          "count": 30
+        }
+      ]
+    }
+  }
+}

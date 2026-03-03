@@ -1,0 +1,75 @@
+{
+  "questId": 8000,
+  "info": {
+    "name": "New Life",
+    "descriptions": {
+      "notStarted": "I should go see Mai right now...",
+      "inProgress": "I better get Mai #b10 Mushroom Spores, 10 Snail Shells, and 10 Red Snail Shells#k right now.\\n#t4000011#  #b#c4000011##k/10\\n#t4000019#  #b#c4000019##k/10\\n#t4000016#  #b#c4000016##k/10",
+      "completed": "I took care of the challenge Mai gave me. That was easy..."
+    },
+    "area": 20
+  },
+  "requirements": {
+    "start": {
+      "npc": 12100,
+      "jobs": [
+        0
+      ],
+      "items": [
+        {
+          "itemId": 1042003
+        }
+      ]
+    },
+    "complete": {
+      "npc": 12100,
+      "items": [
+        {
+          "itemId": 4000016,
+          "count": 10
+        },
+        {
+          "itemId": 4000011,
+          "count": 10
+        },
+        {
+          "itemId": 4000019,
+          "count": 10
+        }
+      ]
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 4000011,
+          "count": -10
+        },
+        {
+          "itemId": 1002424,
+          "jobRestriction": 1,
+          "probability": 1
+        },
+        {
+          "itemId": 2000000,
+          "count": 100,
+          "jobRestriction": 1
+        },
+        {
+          "itemId": 1002425,
+          "jobRestriction": 1,
+          "probability": 1
+        },
+        {
+          "itemId": 4000016,
+          "count": -10
+        },
+        {
+          "itemId": 4000019,
+          "count": -10
+        }
+      ]
+    }
+  }
+}

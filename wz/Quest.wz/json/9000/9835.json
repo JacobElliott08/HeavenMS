@@ -1,0 +1,40 @@
+{
+  "questId": 9835,
+  "info": {
+    "name": "카산드라의 여섯번째 퀴즈!",
+    "parent": "카산드라의 메이플 퀴즈",
+    "descriptions": {
+      "inProgress": "벌써 여섯번째 퀴즈를 풀 차례인가? 다음 문제는 뭔지 궁금한걸? #b#p9010010##k를 찾아가 보자. ",
+      "completed": "문제를 풀면 풀수록 점점 메이플스토리에 대해 놀라게 되는 것 같다. "
+    },
+    "area": 50,
+    "order": 6
+  },
+  "requirements": {
+    "start": {
+      "npc": 9010010,
+      "startDate": "2007042400",
+      "endDate": "2007052100",
+      "prerequisiteQuests": [
+        {
+          "questId": 9834,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9010010
+    }
+  },
+  "actions": {
+    "onComplete": {
+      "experience": 350,
+      "items": [
+        {
+          "itemId": 4001126,
+          "count": 6
+        }
+      ]
+    }
+  }
+}

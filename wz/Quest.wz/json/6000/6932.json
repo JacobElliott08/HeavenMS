@@ -1,0 +1,32 @@
+{
+  "questId": 6932,
+  "info": {
+    "name": " Helin\u0027s Second Truth",
+    "parent": "The Thief\u0027s Extreme Path",
+    "descriptions": {
+      "inProgress": "#b#p2081400##k said she\u0027ll tell me the second truth and told me to come talk to her again when I\u0027m ready.",
+      "completed": " #b#p2081400##k told me about Holycolas, which is the second truth.  She said she had one final story to tell me."
+    },
+    "area": 10,
+    "order": 3
+  },
+  "requirements": {
+    "start": {
+      "npc": 2081400,
+      "minLevel": 120,
+      "jobs": [
+        411,
+        421
+      ],
+      "prerequisiteQuests": [
+        {
+          "questId": 6931,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 2081400
+    }
+  }
+}
