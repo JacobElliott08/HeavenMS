@@ -1,0 +1,43 @@
+{
+  "questId": 10001,
+  "info": {
+    "name": "Co-op with Special Agent O",
+    "descriptions": {
+      "notStarted": "Gaga, who' now a secret agent, says he has someone he wants to introduce me to. I wonder who it is?",
+      "inProgress": "Gaga, who suddenly became a secret agent of an unknown organization, has deputized me and now I am an agent as well. Gaga suggested I do a co-op with special agent O.",
+      "completed": "Through Gaga's introduction, I met Special Agent O. He seemed like quite a character--full of personality and life."
+    },
+    "area": 50
+  },
+  "requirements": {
+    "start": {
+      "npc": 9000021,
+      "minLevel": 10,
+      "startDate": "2009060100",
+      "endDate": "2009082600",
+      "prerequisiteQuests": [
+        {
+          "questId": 10000,
+          "state": "COMPLETED"
+        }
+      ]
+    },
+    "complete": {
+      "npc": 9000034
+    }
+  },
+  "actions": {
+    "onStart": {},
+    "onComplete": {
+      "items": [
+        {
+          "itemId": 1072366,
+          "count": 1,
+          "jobRestriction": 63,
+          "expirationDate": "2009090923"
+        }
+      ],
+      "experience": 500
+    }
+  }
+}

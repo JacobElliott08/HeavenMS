@@ -51,6 +51,7 @@ public class ServerConfig {
 
     //Server Flags
     public boolean USE_CUSTOM_KEYSET;
+    public boolean USE_JSON_QUESTS;
     public boolean USE_DEBUG;
     public boolean USE_DEBUG_SHOW_INFO_EQPEXP;
     public boolean USE_DEBUG_SHOW_RCVD_PACKET;

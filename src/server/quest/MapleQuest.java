@@ -40,6 +40,7 @@ import provider.MapleDataProvider;
 import provider.MapleDataProviderFactory;
 import provider.MapleDataTool;
 import server.quest.actions.*;
+import server.quest.json.JsonQuestLoader;
 import server.quest.requirements.*;
 import tools.MaplePacketCreator;
 import tools.StringUtil;
@@ -78,10 +79,30 @@ public class MapleQuest {
     private final static MapleData questInfo = questData.getData("QuestInfo.img");
     private final static MapleData questAct = questData.getData("Act.img");
     private final static MapleData questReq = questData.getData("Check.img");
+    private static JsonQuestLoader jsonQuestLoader = null;
+    private static boolean useJsonQuests = false;  // Toggle for JSON vs XML loading
 	
     private MapleQuest(int id) {
         this.id = (short) id;
-		
+        
+        // Try loading from JSON first if enabled
+        if (useJsonQuests && jsonQuestLoader != null && jsonQuestLoader.jsonQuestExists(id)) {
+            try {
+                jsonQuestLoader.loadQuestFromJson(this, id);
+                return;
+            } catch (Exception e) {
+                System.err.println("Failed to load quest " + id + " from JSON, falling back to XML: " + e.getMessage());
+            }
+        }
+        
+        // Fall back to XML loading
+        loadFromXml(id);
+    }
+    
+    /**
+     * Load quest data from XML (original format)
+     */
+    private void loadFromXml(int id) {
         MapleData reqData = questReq.getChildByPath(String.valueOf(id));
         if (reqData == null) {//most likely infoEx
             return;
@@ -657,7 +678,82 @@ public class MapleQuest {
                 return ret;
         }
         
+        // ===== Setter methods for JSON quest loading =====
+        
+        public void setName(String name) {
+                this.name = name;
+        }
+        
+        public void setParent(String parent) {
+                this.parent = parent;
+        }
+        
+        public void setTimeLimit(int timeLimit) {
+                this.timeLimit = timeLimit;
+        }
+        
+        public void setTimeLimit2(int timeLimit2) {
+                this.timeLimit2 = timeLimit2;
+        }
+        
+        public void setAutoStart(boolean autoStart) {
+                this.autoStart = autoStart;
+        }
+        
+        public void setAutoPreComplete(boolean autoPreComplete) {
+                this.autoPreComplete = autoPreComplete;
+        }
+        
+        public void setAutoComplete(boolean autoComplete) {
+                this.autoComplete = autoComplete;
+        }
+        
+        public void setRepeatable(boolean repeatable) {
+                this.repeatable = repeatable;
+        }
+        
+        public void addMedal(int medalId) {
+                medals.put(this.id, medalId);
+        }
+        
+        public void addRelevantMob(int mobId) {
+                if (!relevantMobs.contains(mobId)) {
+                        relevantMobs.add(mobId);
+                }
+        }
+        
+        public void addRequirement(MapleQuestRequirementType type, MapleQuestRequirement requirement, boolean isStart) {
+                if (isStart) {
+                        startReqs.put(type, requirement);
+                } else {
+                        completeReqs.put(type, requirement);
+                }
+        }
+        
+        public void addAction(MapleQuestActionType type, MapleQuestAction action, boolean isStart) {
+                if (isStart) {
+                        startActs.put(type, action);
+                } else {
+                        completeActs.put(type, action);
+                }
+        }
+        
+        // ===== Quest loading methods =====
+        
+        public static void enableJsonQuests(boolean enable) {
+                useJsonQuests = enable;
+                if (enable && jsonQuestLoader == null) {
+                        jsonQuestLoader = new JsonQuestLoader(System.getProperty("wzpath", "./wz"));
+                        System.out.println("[QuestSystem] JSON quest loading enabled");
+                }
+        }
+        
 	public static void loadAllQuest() {
+		// Enable JSON quest loading if configured
+		if (YamlConfig.config.server.USE_JSON_QUESTS) {
+			enableJsonQuests(true);
+		}
+		
 		try {
 			for(MapleData quest : questInfo.getChildren()) {
 				int questID = Integer.parseInt(quest.getName());
@@ -676,6 +772,9 @@ public class MapleQuest {
                         infoNumberQuests.put(infoNumber, questID);
                 }
 			}
+			
+			System.out.println("[QuestSystem] Loaded " + quests.size() + " quests" + 
+			    (useJsonQuests ? " (using JSON format)" : " (using XML format)"));
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
