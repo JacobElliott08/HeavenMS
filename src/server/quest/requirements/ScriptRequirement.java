@@ -37,6 +37,12 @@ public class ScriptRequirement extends MapleQuestRequirement {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public ScriptRequirement(MapleQuest quest, String script) {
+		super(MapleQuestRequirementType.BUFF);
+		this.reqScript = script != null && !script.isEmpty();
+	}
+	
 	@Override
 	public void processData(MapleData data) {
                 reqScript = !MapleDataTool.getString(data, "").isEmpty();

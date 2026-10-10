@@ -39,6 +39,13 @@ public class InfoNumberRequirement extends MapleQuestRequirement {
                 questID = quest.getId();
                 processData(data);
         }
+        
+        /** Constructor for JSON quest loading */
+        public InfoNumberRequirement(MapleQuest quest, short infoNumber) {
+                super(MapleQuestRequirementType.INFO_NUMBER);
+                this.questID = quest.getId();
+                this.infoNumber = infoNumber;
+        }
 
         @Override
         public void processData(MapleData data) {

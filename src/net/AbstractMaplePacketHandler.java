@@ -27,7 +27,11 @@ import net.server.Server;
 public abstract class AbstractMaplePacketHandler implements MaplePacketHandler {
     @Override
     public boolean validateState(MapleClient c) {
-        return c.isLoggedIn();
+        boolean isLoggedIn = c.isLoggedIn();
+        if (!isLoggedIn) {
+            System.out.println("[AbstractMaplePacketHandler.validateState] Client is NOT logged in. Player: " + (c.getPlayer() != null ? c.getPlayer().getName() : "null") + ", State: " + c.getLoginState());
+        }
+        return isLoggedIn;
     }
     
     protected static long currentServerTime() {

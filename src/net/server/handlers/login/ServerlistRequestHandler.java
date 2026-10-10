@@ -29,6 +29,7 @@ import net.server.Server;
 import net.server.world.World;
 import tools.MaplePacketCreator;
 import tools.data.input.SeekableLittleEndianAccessor;
+import tools.packets.login.ServerListPacket;
 
 public final class ServerlistRequestHandler extends AbstractMaplePacketHandler {
 
@@ -36,13 +37,41 @@ public final class ServerlistRequestHandler extends AbstractMaplePacketHandler {
     public final void handlePacket(SeekableLittleEndianAccessor slea, MapleClient c) {
     	Server server = Server.getInstance();
         List<World> worlds = server.getWorlds();
+        System.out.println("[LoginFlow][Serverlist] request received opcode=11 worlds=" + worlds.size());
         c.requestedServerlist(worlds.size());
         
         for (World world : worlds) {
-            c.announce(MaplePacketCreator.getServerList(world.getId(), GameConstants.WORLD_NAMES[world.getId()], world.getFlag(), world.getEventMessage(), world.getChannels()));
+            byte[] packet = MaplePacketCreator.getServerList(world.getId(), GameConstants.WORLD_NAMES[world.getId()], world.getFlag(), world.getEventMessage(), world.getChannels());
+            System.out.println("[LoginFlow][Serverlist] before world=" + world.getId() + " bytes=" + packet.length);
+            c.announce(packet);
+            System.out.println("[LoginFlow][Serverlist] after world=" + world.getId());
         }
-        c.announce(MaplePacketCreator.getEndOfServerList());
-        c.announce(MaplePacketCreator.selectWorld(0));//too lazy to make a check lol
-        c.announce(MaplePacketCreator.sendRecommended(server.worldRecommendedList()));
+        byte[] endOfList = MaplePacketCreator.getEndOfServerList();
+        System.out.println("[LoginFlow][Serverlist] before end-of-list bytes=" + endOfList.length);
+        c.announce(endOfList);
+        System.out.println("[LoginFlow][Serverlist] after end-of-list");
+
+        byte[] selectedWorld = MaplePacketCreator.selectWorld(0);//too lazy to make a check lol
+        System.out.println("[LoginFlow][Serverlist] before selectWorld bytes=" + selectedWorld.length);
+        c.announce(selectedWorld);
+        System.out.println("[LoginFlow][Serverlist] after selectWorld");
+
+        byte[] recommended = MaplePacketCreator.sendRecommended(server.worldRecommendedList());
+        System.out.println("[LoginFlow][Serverlist] before recommended bytes=" + recommended.length);
+        c.announce(recommended);
+        System.out.println("[LoginFlow][Serverlist] after recommended");
+    }
+
+    public final void handleFlatBufferRequest(MapleClient c) {
+        Server server = Server.getInstance();
+        List<World> worlds = server.getWorlds();
+        System.out.println("[LoginFlow][Serverlist] FlatBuffers request worlds=" + worlds.size());
+        c.requestedServerlist(worlds.size());
+        for (World world : worlds) {
+            c.announce(ServerListPacket.world(world));
+        }
+        c.announce(ServerListPacket.end());
+        c.announce(ServerListPacket.selectedWorld(0));
+        c.announce(ServerListPacket.recommended(server.worldRecommendedList()));
     }
 }

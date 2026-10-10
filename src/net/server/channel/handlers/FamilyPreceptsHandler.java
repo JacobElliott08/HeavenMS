@@ -1,4 +1,5 @@
 package net.server.channel.handlers;
+import tools.packets.character.EnterGamePackets;
 
 import client.MapleClient;
 import client.MapleFamily;
@@ -17,7 +18,7 @@ public class FamilyPreceptsHandler extends AbstractMaplePacketHandler {
         if(newPrecepts.length() > 200) return;
         family.setMessage(newPrecepts, true);
         //family.broadcastFamilyInfoUpdate(); //probably don't need to broadcast for this?
-        c.announce(MaplePacketCreator.getFamilyInfo(c.getPlayer().getFamilyEntry()));
+        c.announce(EnterGamePackets.familyInfo(c.getPlayer().getFamilyEntry()));
     }
 
 }

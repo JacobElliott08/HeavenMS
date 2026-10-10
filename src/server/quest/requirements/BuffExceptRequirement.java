@@ -18,7 +18,8 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 package server.quest.requirements;
-    
+
+import java.util.List;    
 import client.MapleCharacter;
 import provider.MapleData;
 import provider.MapleDataTool;
@@ -35,6 +36,14 @@ public class BuffExceptRequirement extends MapleQuestRequirement {
 	public BuffExceptRequirement(MapleQuest quest, MapleData data) {
 		super(MapleQuestRequirementType.BUFF);
 		processData(data);
+	}
+	
+	/** Constructor for JSON quest loading */
+	public BuffExceptRequirement(MapleQuest quest, List<Integer> buffIds) {
+		super(MapleQuestRequirementType.BUFF);
+		if (!buffIds.isEmpty()) {
+			this.buffId = -1 * buffIds.get(0); // item buffs are negative
+		}
 	}
 	
 	@Override

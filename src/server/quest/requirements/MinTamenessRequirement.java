@@ -41,6 +41,12 @@ public class MinTamenessRequirement extends MapleQuestRequirement {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public MinTamenessRequirement(MapleQuest quest, int tameness) {
+		super(MapleQuestRequirementType.MIN_PET_TAMENESS);
+		this.minTameness = tameness;
+	}
+	
 	/**
 	 * 
 	 * @param data 

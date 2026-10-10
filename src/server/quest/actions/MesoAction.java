@@ -41,6 +41,13 @@ public class MesoAction extends MapleQuestAction {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public MesoAction(MapleQuest quest, int meso) {
+		super(MapleQuestActionType.MESO, quest);
+		this.questID = quest.getId();
+		this.mesos = meso;
+	}
+	
 	
 	@Override
 	public void processData(MapleData data) {

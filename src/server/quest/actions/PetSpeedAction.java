@@ -38,6 +38,13 @@ public class PetSpeedAction extends MapleQuestAction {
 		questID = quest.getId();
 	}
 	
+	/** Constructor for JSON quest loading */
+	public PetSpeedAction(MapleQuest quest, int speed) {
+		super(MapleQuestActionType.PETTAMENESS, quest);
+		this.questID = quest.getId();
+		// No data needed for PetSpeedAction
+	}
+	
 	
 	@Override
 	public void processData(MapleData data) {}

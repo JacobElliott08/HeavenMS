@@ -533,6 +533,15 @@ public class AbstractPlayerInteraction {
                 }
         }
         
+        /**
+         * Refreshes NPC quest markers on the current map to reflect updated quest status.
+         * This is usually called automatically when quest status changes, but scripts
+         * can call it explicitly if needed (e.g., after custom quest manipulations).
+         */
+        public void refreshNpcQuestMarkers() {
+                getPlayer().refreshNpcQuestMarkers();
+        }
+        
         public Item evolvePet(byte slot, int afterId) {
             MaplePet evolved = null;
             MaplePet target;

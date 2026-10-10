@@ -151,6 +151,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
 
 	public void dispose() {
 		NPCScriptManager.getInstance().dispose(this);
+                ReplyBuilder.sendEnd(getClient(), getNpc());
                 getClient().announce(MaplePacketCreator.enableActions());
 	}
 
@@ -208,20 +209,30 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
                 return ReplyBuilder.acquire(getClient(), npc, speakerType);
         }
 
+        // Legacy dialogue support - delegates to LegacyNPCDialogue for backward compatibility
+        private LegacyNPCDialogue legacyDialogue;
+        
+        private LegacyNPCDialogue legacy() {
+                if (legacyDialogue == null) {
+                        legacyDialogue = new LegacyNPCDialogue(getClient(), npc);
+                }
+                return legacyDialogue;
+        }
+        
 	public void sendNext(String text) {
-		getClient().announce(MaplePacketCreator.getNPCTalk(npc, (byte) 0, text, "00 01", (byte) 0));
+		legacy().sendNext(text);
 	}
 
 	public void sendPrev(String text) {
-		getClient().announce(MaplePacketCreator.getNPCTalk(npc, (byte) 0, text, "01 00", (byte) 0));
+		legacy().sendPrev(text);
 	}
 
 	public void sendNextPrev(String text) {
-		getClient().announce(MaplePacketCreator.getNPCTalk(npc, (byte) 0, text, "01 01", (byte) 0));
+		legacy().sendNextPrev(text);
 	}
 
 	public void sendOk(String text) {
-		getClient().announce(MaplePacketCreator.getNPCTalk(npc, (byte) 0, text, "00 00", (byte) 0));
+		legacy().sendOk(text);
 	}
         
         public void sendDefault() {
@@ -229,60 +240,58 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         }
 
 	public void sendYesNo(String text) {
-		getClient().announce(MaplePacketCreator.getNPCTalk(npc, (byte) 1, text, "", (byte) 0));
+		legacy().sendYesNo(text);
 	}
 
 	public void sendAcceptDecline(String text) {
-		getClient().announce(MaplePacketCreator.getNPCTalk(npc, (byte) 0x0C, text, "", (byte) 0));
+		legacy().sendAcceptDecline(text);
 	}
 
 	public void sendSimple(String text) {
-		getClient().announce(MaplePacketCreator.getNPCTalk(npc, (byte) 4, text, "", (byte) 0));
+		legacy().sendSimple(text);
 	}
 
 	public void sendNext(String text, byte speaker) {
-		getClient().announce(MaplePacketCreator.getNPCTalk(npc, (byte) 0, text, "00 01", speaker));
+		legacy().sendNext(text, speaker);
 	}
 
 	public void sendPrev(String text, byte speaker) {
-		getClient().announce(MaplePacketCreator.getNPCTalk(npc, (byte) 0, text, "01 00", speaker));
+		legacy().sendPrev(text, speaker);
 	}
 
 	public void sendNextPrev(String text, byte speaker) {
-		getClient().announce(MaplePacketCreator.getNPCTalk(npc, (byte) 0, text, "01 01", speaker));
+		legacy().sendNextPrev(text, speaker);
 	}
 
 	public void sendOk(String text, byte speaker) {
-		getClient().announce(MaplePacketCreator.getNPCTalk(npc, (byte) 0, text, "00 00", speaker));
+		legacy().sendOk(text, speaker);
 	}
 
 	public void sendYesNo(String text, byte speaker) {
-		getClient().announce(MaplePacketCreator.getNPCTalk(npc, (byte) 1, text, "", speaker));
+		legacy().sendYesNo(text, speaker);
 	}
 
 	public void sendAcceptDecline(String text, byte speaker) {
-		getClient().announce(MaplePacketCreator.getNPCTalk(npc, (byte) 0x0C, text, "", speaker));
+		legacy().sendAcceptDecline(text, speaker);
 	}
 
 	public void sendSimple(String text, byte speaker) {
-		getClient().announce(MaplePacketCreator.getNPCTalk(npc, (byte) 4, text, "", speaker));
+		legacy().sendSimple(text, speaker);
 	}
 
 	public void sendStyle(String text, int styles[]) {
-                if (styles.length > 0) {
-                        getClient().announce(MaplePacketCreator.getNPCTalkStyle(npc, text, styles));
-                } else {    // thanks Conrad for noticing empty styles crashing players
-                        sendOk("Sorry, there are no options of cosmetics available for you here at the moment.");
+                legacy().sendStyle(text, styles);
+                if (styles.length == 0) {
                         dispose();
                 }
 	}
 
 	public void sendGetNumber(String text, int def, int min, int max) {
-		getClient().announce(MaplePacketCreator.getNPCTalkNum(npc, text, def, min, max));
+		legacy().sendGetNumber(text, def, min, max);
 	}
 
 	public void sendGetText(String text) {
-		getClient().announce(MaplePacketCreator.getNPCTalkText(npc, text, ""));
+		legacy().sendGetText(text);
 	}
 
 	/*

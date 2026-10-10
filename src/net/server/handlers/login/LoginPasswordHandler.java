@@ -159,7 +159,9 @@ public final class LoginPasswordHandler implements MaplePacketHandler {
     }
 
     private static void login(MapleClient c){
-        c.announce(MaplePacketCreator.getAuthSuccess(c));//why the fk did I do c.getAccountName()?
+        byte[] authSuccess = MaplePacketCreator.getAuthSuccess(c);//why the fk did I do c.getAccountName()?
+        System.out.println("[LoginFlow][AuthSuccess] sending bytes=" + authSuccess.length);
+        c.announce(authSuccess);
         Server.getInstance().registerLoginState(c);
     }
 

@@ -21,6 +21,7 @@
  */
 package server.quest.requirements;
 
+import java.util.List;
 import client.MapleCharacter;
 import provider.MapleData;
 import provider.MapleDataTool;
@@ -38,6 +39,12 @@ public class CompletedQuestRequirement extends MapleQuestRequirement {
 	public CompletedQuestRequirement(MapleQuest quest, MapleData data) {
 		super(MapleQuestRequirementType.COMPLETED_QUEST);
 		processData(data);
+	}
+	
+	/** Constructor for JSON quest loading */
+	public CompletedQuestRequirement(MapleQuest quest, List<Integer> completedQuests) {
+		super(MapleQuestRequirementType.COMPLETED_QUEST);
+		this.reqQuest = completedQuests.size();
 	}
 	
 	@Override

@@ -47,6 +47,12 @@ public class ItemRequirement extends MapleQuestRequirement {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public ItemRequirement(MapleQuest quest, Map<Integer, Integer> items) {
+		super(MapleQuestRequirementType.ITEM);
+		this.items = items;
+	}
+	
 	@Override
 	public void processData(MapleData data) {
 		for (MapleData itemEntry : data.getChildren()) {

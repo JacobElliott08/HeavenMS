@@ -80,7 +80,7 @@ public class MapleQuest {
     private final static MapleData questAct = questData.getData("Act.img");
     private final static MapleData questReq = questData.getData("Check.img");
     private static JsonQuestLoader jsonQuestLoader = null;
-    private static boolean useJsonQuests = false;  // Toggle for JSON vs XML loading
+    private static boolean useJsonQuests = true;  // Toggle for JSON vs XML loading
 	
     private MapleQuest(int id) {
         this.id = (short) id;
@@ -278,6 +278,7 @@ public class MapleQuest {
 
     public boolean canComplete(MapleCharacter chr, Integer npcid) {
         MapleQuestStatus mqs = chr.getQuest(this);
+        
         if (!mqs.getStatus().equals(Status.STARTED)) {
             return false;
         }
@@ -663,6 +664,10 @@ public class MapleQuest {
         
         public static boolean isExploitableQuest(short questid) {
                 return exploitableQuests.contains(questid);
+        }
+        
+        public static Collection<MapleQuest> getAllInstances() {
+                return quests.values();
         }
         
         public static List<MapleQuest> getMatchedQuests(String search) {

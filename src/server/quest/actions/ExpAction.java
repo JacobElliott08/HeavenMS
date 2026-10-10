@@ -40,6 +40,12 @@ public class ExpAction extends MapleQuestAction {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public ExpAction(MapleQuest quest, int exp) {
+		super(MapleQuestActionType.EXP, quest);
+		this.exp = exp;
+	}
+	
 	
 	@Override
 	public void processData(MapleData data) {

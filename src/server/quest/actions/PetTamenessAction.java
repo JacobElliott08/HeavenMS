@@ -40,6 +40,13 @@ public class PetTamenessAction extends MapleQuestAction {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public PetTamenessAction(MapleQuest quest, int tameness) {
+		super(MapleQuestActionType.PETTAMENESS, quest);
+		this.questID = quest.getId();
+		this.tameness = tameness;
+	}
+	
 	
 	@Override
 	public void processData(MapleData data) {

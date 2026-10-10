@@ -44,6 +44,13 @@ public class InfoExRequirement extends MapleQuestRequirement {
                 processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public InfoExRequirement(MapleQuest quest, List<String> infoEx) {
+		super(MapleQuestRequirementType.INFO_EX);
+		this.questID = quest.getId();
+		this.infoExpected = infoEx;
+	}
+	
 	@Override
 	public void processData(MapleData data) {
 		// Because we have to...

@@ -40,6 +40,13 @@ public class FameAction extends MapleQuestAction {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public FameAction(MapleQuest quest, int fame) {
+		super(MapleQuestActionType.FAME, quest);
+		this.questID = quest.getId();
+		this.fame = fame;
+	}
+	
 	
 	@Override
 	public void processData(MapleData data) {

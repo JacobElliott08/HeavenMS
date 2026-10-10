@@ -18,6 +18,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 package net.server.channel.handlers;
+import tools.packets.character.EnterGamePackets;
 
 import config.YamlConfig;
 import client.MapleCharacter;
@@ -35,7 +36,7 @@ public final class OpenFamilyHandler extends AbstractMaplePacketHandler {
     public final void handlePacket(SeekableLittleEndianAccessor slea, MapleClient c) {
         if(!YamlConfig.config.server.USE_FAMILY_SYSTEM) return;
         MapleCharacter chr = c.getPlayer();
-        c.announce(MaplePacketCreator.getFamilyInfo(chr.getFamilyEntry()));
+        c.announce(EnterGamePackets.familyInfo(chr.getFamilyEntry()));
     }
 }
 

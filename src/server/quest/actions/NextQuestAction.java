@@ -41,6 +41,12 @@ public class NextQuestAction extends MapleQuestAction {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public NextQuestAction(MapleQuest quest, int nextQuestId) {
+		super(MapleQuestActionType.NEXTQUEST, quest);
+		this.nextQuest = nextQuestId;
+	}
+	
 	
 	@Override
 	public void processData(MapleData data) {

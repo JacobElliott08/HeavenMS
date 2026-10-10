@@ -60,6 +60,7 @@ public class MaplePacketDecoder extends CumulativeProtocolDecoder {
         if (in.remaining() >= 4 && decoderState.packetlength == -1) {
             int packetHeader = in.getInt();
             if (!rcvdCrypto.checkPacket(packetHeader)) {
+                System.out.println("[MaplePacketDecoder] Invalid packet header=" + Integer.toHexString(packetHeader) + " session=" + session.getId());
                 MapleSessionCoordinator.getInstance().closeSession(session, true);
                 return false;
             }

@@ -20,6 +20,7 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package net.server.channel.handlers;
+import tools.packets.character.EnterGamePackets;
 
 import config.YamlConfig;
 
@@ -115,7 +116,7 @@ public final class AcceptFamilyHandler extends AbstractMaplePacketHandler {
                 }
                 c.getPlayer().getFamily().broadcast(MaplePacketCreator.sendFamilyJoinResponse(true, c.getPlayer().getName()), c.getPlayer().getId());
                 c.announce(MaplePacketCreator.getSeniorMessage(inviter.getName()));
-                c.announce(MaplePacketCreator.getFamilyInfo(chr.getFamilyEntry()));
+                c.announce(EnterGamePackets.familyInfo(chr.getFamilyEntry()));
                 chr.getFamilyEntry().updateSeniorFamilyInfo(true);
             } else {
                 inviter.announce(MaplePacketCreator.sendFamilyJoinResponse(false, c.getPlayer().getName()));

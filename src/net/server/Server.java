@@ -910,6 +910,11 @@ public class Server {
 	MapleQuest.loadAllQuest();
 	System.out.println("Quest loaded in " + ((System.currentTimeMillis() - timeToTake) / 1000.0) + " seconds\r\n");
 	
+	// Initialize quest service NPC cache
+	timeToTake = System.currentTimeMillis();
+	server.quest.QuestService.getInstance().initializeCache();
+	System.out.println("Quest service cache initialized in " + ((System.currentTimeMillis() - timeToTake) / 1000.0) + " seconds\r\n");
+	
         NewYearCardRecord.startPendingNewYearCardRequests();
         
         if(YamlConfig.config.server.USE_THREAD_TRACKER) ThreadTracker.getInstance().registerThreadTrackerTask();

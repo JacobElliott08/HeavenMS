@@ -42,6 +42,13 @@ public class IntervalRequirement extends MapleQuestRequirement {
                 processData(data);
 	}
 	
+	/** Constructor for JSON quest loading (interval in minutes) */
+	public IntervalRequirement(MapleQuest quest, int intervalMinutes) {
+		super(MapleQuestRequirementType.INTERVAL);
+		this.questID = quest.getId();
+		this.interval = intervalMinutes * 60 * 1000;
+	}
+	
         public int getInterval() {
                 return interval;
         }

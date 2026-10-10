@@ -21,6 +21,7 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package client;
+import tools.packets.character.EnterGamePackets;
 
 import java.awt.Point;
 import java.lang.ref.WeakReference;
@@ -235,6 +236,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     private AtomicInteger gachaexp = new AtomicInteger();
     private AtomicInteger meso = new AtomicInteger();
     private AtomicInteger chair = new AtomicInteger(-1);
+    private volatile long lastPickupTime = 0; // anti-spam for item pickup
     private int merchantmeso;
     private BuddyList buddylist;
     private EventInstanceManager eventInstance = null;
@@ -255,6 +257,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     private MapleSkinColor skinColor = MapleSkinColor.NORMAL;
     private MapleStorage storage = null;
     private MapleTrade trade = null;
+    private server.npc.session.NpcSession npcSession = null;
     private MonsterBook monsterbook;
     private CashShop cashshop;
     private Set<NewYearCardRecord> newyears = new LinkedHashSet<>();
@@ -1851,7 +1854,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             }
 
             // if this map has obstacle components moving, make it do so for this client
-            announce(MaplePacketCreator.environmentMoveList(map.getEnvironment().entrySet()));
+            announce(tools.packets.map.FieldPackets.environmentMoveList(map.getEnvironment().entrySet()));
         }
     }
     
@@ -1871,11 +1874,11 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
         if (newLevel > -1) {
             skills.put(skill, new SkillEntry(newLevel, newMasterlevel, expiration));
             if (!GameConstants.isHiddenSkills(skill.getId())) {
-                this.client.announce(MaplePacketCreator.updateSkill(skill.getId(), newLevel, newMasterlevel, expiration));
+                this.client.announce(EnterGamePackets.skillUpdate(skill.getId(), newLevel, newMasterlevel, expiration));
             }
         } else {
             skills.remove(skill);
-            this.client.announce(MaplePacketCreator.updateSkill(skill.getId(), newLevel, newMasterlevel, -1)); //Shouldn't use expiration anymore :)
+            this.client.announce(EnterGamePackets.skillUpdate(skill.getId(), newLevel, newMasterlevel, -1)); //Shouldn't use expiration anymore :)
             try {
                 Connection con = DatabaseConnection.getConnection();
                 try (PreparedStatement ps = con.prepareStatement("DELETE FROM skills WHERE skillid = ? AND characterid = ?")) {
@@ -2033,13 +2036,32 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     }
     
     public final void pickupItem(MapleMapObject ob, int petIndex) {     // yes, one picks the MapleMapObject, not the MapleMapItem
+        System.out.println("[MapleCharacter.pickupItem] START - Player: " + this.getName() + ", OID: " + (ob != null ? ob.getObjectId() : "null") + ", PetIndex: " + petIndex);
+        
         if (ob == null) {                                               // pet index refers to the one picking up the item
+            System.out.println("[MapleCharacter.pickupItem] Object is null - returning");
             return;
         }
+        
+        // Anti-spam: prevent pickup requests faster than 50ms (debounce)
+        long currentTime = net.server.Server.getInstance().getCurrentTime();
+        long timeSinceLastPickup = currentTime - lastPickupTime;
+        if (timeSinceLastPickup < 50 && petIndex == -1) { // only for manual pickups, not pets
+            System.out.println("[MapleCharacter.pickupItem] Pickup cooldown active (" + timeSinceLastPickup + "ms) - ignoring spam request");
+            return;
+        }
+        lastPickupTime = currentTime;
 		
         if (ob instanceof MapleMapItem) {
             MapleMapItem mapitem = (MapleMapItem) ob;
-            if (System.currentTimeMillis() - mapitem.getDropTime() < 400 || !mapitem.canBePickedBy(this)) {
+            System.out.println("[MapleCharacter.pickupItem] ItemID: " + mapitem.getItemId() + ", Mesos: " + mapitem.getMeso() + ", OwnerId: " + mapitem.getOwnerId());
+            
+            long timeSinceDrop = currentTime - mapitem.getDropTime();
+            boolean canPickup = mapitem.canBePickedBy(this);
+            System.out.println("[MapleCharacter.pickupItem] CurrentTime: " + currentTime + ", DropTime: " + mapitem.getDropTime() + ", TimeSinceDrop: " + timeSinceDrop + "ms, CanPickup: " + canPickup);
+            
+            if (timeSinceDrop < 400 || !canPickup) {
+                System.out.println("[MapleCharacter.pickupItem] Drop too recent or cannot pickup - sending enableActions");
                 client.announce(MaplePacketCreator.enableActions());
                 return;
             }
@@ -2050,20 +2072,29 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             }
             
             ScriptedItem itemScript = null;
+            System.out.println("[MapleCharacter.pickupItem] Locking item...");
             mapitem.lockItem();
             try {
+                System.out.println("[MapleCharacter.pickupItem] Item locked. isPickedUp: " + mapitem.isPickedUp());
+                
                 if (mapitem.isPickedUp()) {
+                    System.out.println("[MapleCharacter.pickupItem] Item already picked up - sending unavailable + enableActions");
                     client.announce(MaplePacketCreator.showItemUnavailable());
                     client.announce(MaplePacketCreator.enableActions());
                     return;
                 }
                 
                 boolean isPet = petIndex > -1;
+                System.out.println("[MapleCharacter.pickupItem] Creating pickup packet. isPet: " + isPet);
                 final byte[] pickupPacket = MaplePacketCreator.removeItemFromMap(mapitem.getObjectId(), (isPet) ? 5 : 2, this.getId(), isPet, petIndex);
+                System.out.println("[MapleCharacter.pickupItem] Pickup packet created, length: " + pickupPacket.length);
 
                 Item mItem = mapitem.getItem();
                 boolean hasSpaceInventory = true;
+                System.out.println("[MapleCharacter.pickupItem] Checking conditions for pickup...");
+                
                 if (mapitem.getItemId() == 4031865 || mapitem.getItemId() == 4031866 || mapitem.getMeso() > 0 || ii.isConsumeOnPickup(mapitem.getItemId()) || (hasSpaceInventory = MapleInventoryManipulator.checkSpace(client, mapitem.getItemId(), mItem.getQuantity(), mItem.getOwner()))) {
+                    System.out.println("[MapleCharacter.pickupItem] Conditions met. hasSpaceInventory: " + hasSpaceInventory);
                     int mapId = this.getMapId();
                     
                     if ((mapId > 209000000 && mapId < 209000016) || (mapId >= 990000500 && mapId <= 990000502)) {//happyville trees and guild PQ
@@ -2104,21 +2135,28 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
                         return;
                     }
             
-                    if (!this.needQuestItem(mapitem.getQuest(), mapitem.getItemId())) {
+                    boolean needsQuest = this.needQuestItem(mapitem.getQuest(), mapitem.getItemId());
+                    System.out.println("[MapleCharacter.pickupItem] Quest check. QuestId: " + mapitem.getQuest() + ", NeedsQuest: " + needsQuest);
+                    
+                    if (!needsQuest) {
+                        System.out.println("[MapleCharacter.pickupItem] Quest requirement not met - sending unavailable + enableActions");
                         client.announce(MaplePacketCreator.showItemUnavailable());
                         client.announce(MaplePacketCreator.enableActions());
                         return;
                     }
                     
                     if (mapitem.getMeso() > 0) {
+                        System.out.println("[MapleCharacter.pickupItem] Picking up mesos: " + mapitem.getMeso() + ", Party members: " + mpcs.size());
                         if (!mpcs.isEmpty()) {
                             int mesosamm = mapitem.getMeso() / mpcs.size();
+                            System.out.println("[MapleCharacter.pickupItem] Distributing " + mesosamm + " mesos to each party member");
                             for (MapleCharacter partymem : mpcs) {
                                 if (partymem.isLoggedinWorld()) {
                                     partymem.gainMeso(mesosamm, true, true, false);
                                 }
                             }
                         } else {
+                            System.out.println("[MapleCharacter.pickupItem] Gaining " + mapitem.getMeso() + " mesos (solo)");
                             this.gainMeso(mapitem.getMeso(), true, true, false);
                         }
                     } else if (mItem.getItemId() / 10000 == 243) {
@@ -2138,30 +2176,40 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
                         
                         showHint("You have earned #e#b" + nxGain + " NX#k#n. (" + this.getCashShop().getCash(1) + " NX)", 300);
                     } else if (applyConsumeOnPickup(mItem.getItemId())) {
+                        System.out.println("[MapleCharacter.pickupItem] Applied consume on pickup for itemId: " + mItem.getItemId());
                     } else if (MapleInventoryManipulator.addFromDrop(client, mItem, true)) {
+                        System.out.println("[MapleCharacter.pickupItem] Item added to inventory successfully");
                         if (mItem.getItemId() == 4031868) {
                             updateAriantScore();
                         }
                     } else {
+                        System.out.println("[MapleCharacter.pickupItem] Failed to add item to inventory - sending enableActions");
                         client.announce(MaplePacketCreator.enableActions());
                         return;
                     }
 
+                    System.out.println("[MapleCharacter.pickupItem] Calling map.pickItemDrop()...");
                     this.getMap().pickItemDrop(pickupPacket, mapitem);
+                    System.out.println("[MapleCharacter.pickupItem] map.pickItemDrop() completed");
                 } else if(!hasSpaceInventory) {
+                    System.out.println("[MapleCharacter.pickupItem] No inventory space - sending inventory full");
                     client.announce(MaplePacketCreator.getInventoryFull());
                     client.announce(MaplePacketCreator.getShowInventoryFull());
                 }
             } finally {
+                System.out.println("[MapleCharacter.pickupItem] Unlocking item");
                 mapitem.unlockItem();
             }
             
             if (itemScript != null) {
+                System.out.println("[MapleCharacter.pickupItem] Running item script");
                 ItemScriptManager ism = ItemScriptManager.getInstance();
                 ism.runItemScript(client, itemScript);
             }
         }
+        System.out.println("[MapleCharacter.pickupItem] Sending final enableActions");
         client.announce(MaplePacketCreator.enableActions());
+        System.out.println("[MapleCharacter.pickupItem] END");
     }
 
     public int countItem(int itemid) {
@@ -2255,7 +2303,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             notifyRemoteChannel(client, getWorldServer().find(otherCid), otherCid, BuddyList.BuddyOperation.DELETED);
         }
         bl.remove(otherCid);
-        client.announce(MaplePacketCreator.updateBuddylist(getBuddylist().getBuddies()));
+        client.announce(EnterGamePackets.buddyList(getBuddylist().getBuddies()));
         nextPendingRequest(client);
     }
     
@@ -3302,6 +3350,8 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     }
 
     public void gainMeso(int gain, boolean show, boolean enableActions, boolean inChat) {
+        System.out.println("[MapleCharacter.gainMeso] Player: " + this.getName() + ", Gain: " + gain + ", Show: " + show + ", EnableActions: " + enableActions + ", InChat: " + inChat);
+        
         long nextMeso;
         petLock.lock();
         try {
@@ -3312,18 +3362,23 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
                 gain = -meso.get();
             }
             nextMeso = meso.addAndGet(gain);
+            System.out.println("[MapleCharacter.gainMeso] New meso amount: " + nextMeso);
         } finally {
             petLock.unlock();
         }
         
         if (gain != 0) {
+            System.out.println("[MapleCharacter.gainMeso] Calling updateSingleStat for MESO");
             updateSingleStat(MapleStat.MESO, (int) nextMeso, enableActions);
             if (show) {
+                System.out.println("[MapleCharacter.gainMeso] Sending getShowMesoGain");
                 client.announce(MaplePacketCreator.getShowMesoGain(gain, inChat));
             }
         } else {
+            System.out.println("[MapleCharacter.gainMeso] Gain is 0, sending enableActions");
             client.announce(MaplePacketCreator.enableActions());
         }
+        System.out.println("[MapleCharacter.gainMeso] END");
     }
 
     public void genericGuildMessage(int code) {
@@ -7596,6 +7651,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     }
 
     public void raiseQuestMobCount(int id) {
+        System.out.println("[MapleCharacter->raiseQuestMobCount] MobID: " + id + ", Character: " + this.getName());
         // It seems nexon uses monsters that don't exist in the WZ (except string) to merge multiple mobs together for these 3 monsters.
         // We also want to run mobKilled for both since there are some quest that don't use the updated ID...
         if (id == 1110100 || id == 1110130) {
@@ -7607,21 +7663,51 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
         }
         
         int lastQuestProcessed = 0;
+        boolean progressUpdated = false;
+        boolean anyQuestCompletable = false;
         try {
             synchronized (quests) {
                 for (MapleQuestStatus qs : getQuests()) {
                     lastQuestProcessed = qs.getQuest().getId();
-                    if (qs.getStatus() == MapleQuestStatus.Status.COMPLETED || qs.getQuest().canComplete(this, null)) {
+                    
+                    // Skip completed quests
+                    if (qs.getStatus() == MapleQuestStatus.Status.COMPLETED) {
                         continue;
                     }
                     
+                    // Skip quests that aren't started
+                    if (qs.getStatus() != MapleQuestStatus.Status.STARTED) {
+                        continue;
+                    }
+                    
+                    System.out.println("[MapleCharacter->raiseQuestMobCount] Checking quest " + qs.getQuest().getId() + 
+                        ", Status: " + qs.getStatus() + ", CanComplete: " + qs.getQuest().canComplete(this, null));
+                    
+                    // Try to progress this mob kill
                     if (qs.progress(id)) {
+                        System.out.println("[MapleCharacter->raiseQuestMobCount] Quest " + qs.getQuest().getId() + 
+                            " progressed for mob " + id);
                         announceUpdateQuest(DelayedQuestUpdate.UPDATE, qs, false);
                         if (qs.getInfoNumber() > 0) {
                             announceUpdateQuest(DelayedQuestUpdate.UPDATE, qs, true);
                         }
+                        progressUpdated = true;
+                        
+                        // Check if this quest can now be completed
+                        if (qs.getQuest().canComplete(this, null)) {
+                            System.out.println("[MapleCharacter->raiseQuestMobCount] Quest " + qs.getQuest().getId() + 
+                                " can now be completed!");
+                            anyQuestCompletable = true;
+                        }
                     }
                 }
+            }
+            
+            // Refresh NPC quest markers if any quest progress was updated
+            // This ensures NPCs show completion markers (?) when requirements are met
+            if (progressUpdated) {
+                System.out.println("[MapleCharacter->raiseQuestMobCount] Progress updated, refreshing NPC quest markers. AnyCompletable: " + anyQuestCompletable);
+                refreshNpcQuestMarkers();
             }
         } catch (Exception e) {
             FilePrinter.printError(FilePrinter.EXCEPTION_CAUGHT, e, "MapleCharacter.mobKilled. CID: " + this.id + " last Quest Processed: " + lastQuestProcessed);
@@ -9701,6 +9787,14 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
         this.trade = trade;
     }
 
+    public server.npc.session.NpcSession getNpcSession() {
+        return npcSession;
+    }
+
+    public void setNpcSession(server.npc.session.NpcSession npcSession) {
+        this.npcSession = npcSession;
+    }
+
     public void setVanquisherKills(int x) {
         this.vanquisherKills = x;
     }
@@ -9783,7 +9877,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
                     rs.last();
                     int count = rs.getRow();
                     rs.first();
-                    client.announce(MaplePacketCreator.showNotes(rs, count));
+                    client.announce(EnterGamePackets.notes(rs, count));
                 }
             }
             
@@ -9989,11 +10083,10 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     
     private void announceUpdateQuestInternal(MapleCharacter chr, Pair<DelayedQuestUpdate, Object[]> questUpdate) {
         Object[] objs = questUpdate.getRight();
-        
+        refreshNpcQuestMarkers();
         switch (questUpdate.getLeft()) {
             case UPDATE:
-                announce(MaplePacketCreator.updateQuest(chr, (MapleQuestStatus) objs[0], (Boolean) objs[1]));
-                break;
+                announce(MaplePacketCreator.updateQuest(chr, (MapleQuestStatus) objs[0], (Boolean) objs[1]));                break;
                 
             case FORFEIT:
                 announce(MaplePacketCreator.forfeitQuest((Short) objs[0]));
@@ -10035,6 +10128,18 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
         }
     }
     
+    /**
+     * Refreshes NPC quest markers on the current map to reflect updated quest status.
+     * This should be called when quest progress changes (start, complete, mob kills)
+     * so NPCs show the correct icons (!, ?, etc.) without requiring a map change.
+     */
+    public void refreshNpcQuestMarkers() {
+        MapleClient c = this.getClient();
+        if (c != null && this.getMap() != null) {
+            c.announce(tools.MaplePacketCreator.buildNpcQuestData(this));
+        }
+    }
+    
     public void updateQuestStatus(MapleQuestStatus qs) {
         synchronized (quests) {
             quests.put(qs.getQuestID(), qs);
@@ -10062,6 +10167,9 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
             }
             // reminder: do not reset quest progress of infoNumbers, some quests cannot backtrack
         }
+        
+        // Refresh NPC quest markers to reflect the updated quest status
+        refreshNpcQuestMarkers();
     }
     
     private void expireQuest(MapleQuest quest) {

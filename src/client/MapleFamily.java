@@ -20,6 +20,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package client;
+import tools.packets.character.EnterGamePackets;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -169,7 +170,7 @@ public class MapleFamily {
         for(MapleFamilyEntry entry : members.values()) {
             MapleCharacter chr = entry.getChr();
             if(chr != null) {
-                chr.getClient().announce(MaplePacketCreator.getFamilyInfo(entry));
+                chr.getClient().announce(EnterGamePackets.familyInfo(entry));
             }
         }
     }

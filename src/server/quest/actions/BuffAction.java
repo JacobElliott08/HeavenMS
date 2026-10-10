@@ -39,6 +39,12 @@ public class BuffAction extends MapleQuestAction {
 		super(MapleQuestActionType.BUFF, quest);
 		processData(data);
 	}
+	
+	/** Constructor for JSON quest loading */
+	public BuffAction(MapleQuest quest, int buffItemId) {
+		super(MapleQuestActionType.BUFF, quest);
+		this.itemEffect = buffItemId;
+	}
         
         @Override
 	public boolean check(MapleCharacter chr, Integer extSelection) {

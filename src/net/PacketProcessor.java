@@ -67,11 +67,17 @@ public final class PacketProcessor {
 
     public MaplePacketHandler getHandler(short packetId) {
         if (packetId > handlers.length) {
+            System.out.println("[PacketProcessor.getHandler] Packet ID " + packetId + " exceeds handler array length (" + handlers.length + ")");
             return null;
         }
         MaplePacketHandler handler = handlers[packetId];
         if (handler != null) {
             return handler;
+        }
+        // Log missing handler for NPC_TALK specifically
+        if (packetId == 0x3A) {
+            System.out.println("[PacketProcessor.getHandler ERROR] No handler registered for NPC_TALK (0x3A/58)!");
+            System.out.println("[PacketProcessor.getHandler] Handler array length: " + handlers.length);
         }
         return null;
     }
@@ -79,6 +85,10 @@ public final class PacketProcessor {
     public void registerHandler(RecvOpcode code, MaplePacketHandler handler) {
         try {
             handlers[code.getValue()] = handler;
+            // Log NPC_TALK handler registration
+            if (code == RecvOpcode.NPC_TALK) {
+                System.out.println("[PacketProcessor.registerHandler] Registered handler for NPC_TALK (0x" + Integer.toHexString(code.getValue()).toUpperCase() + "/" + code.getValue() + "): " + handler.getClass().getSimpleName());
+            }
         } catch (ArrayIndexOutOfBoundsException e) {
             e.printStackTrace();
             System.out.println("Error registering handler - " + code.name());
@@ -97,6 +107,7 @@ public final class PacketProcessor {
     }
 
     public void reset(int channel) {
+        System.out.println("[PacketProcessor.reset] Initializing packet handlers for channel: " + channel);
         handlers = new MaplePacketHandler[handlers.length];
 
         registerHandler(RecvOpcode.PONG, new KeepAliveHandler());
@@ -275,6 +286,23 @@ public final class PacketProcessor {
             registerHandler(RecvOpcode.OPEN_ITEMUI, new RaiseUIStateHandler());
             registerHandler(RecvOpcode.USE_ITEMUI, new RaiseIncExpHandler());
             registerHandler(RecvOpcode.CHANGE_QUICKSLOT, new QuickslotKeyMappedModifiedHandler());
+            
+            // Count registered handlers
+            int registeredCount = 0;
+            for (MaplePacketHandler handler : handlers) {
+                if (handler != null) {
+                    registeredCount++;
+                }
+            }
+            System.out.println("[PacketProcessor.reset] Registered " + registeredCount + " packet handlers for channel " + channel);
+            
+            // Verify NPC_TALK handler is registered
+            MaplePacketHandler npcTalkHandler = handlers[0x3A];
+            if (npcTalkHandler != null) {
+                System.out.println("[PacketProcessor.reset] ✓ NPC_TALK handler confirmed: " + npcTalkHandler.getClass().getSimpleName());
+            } else {
+                System.out.println("[PacketProcessor.reset] ✗ WARNING: NPC_TALK handler NOT registered!");
+            }
         }
     }
 }

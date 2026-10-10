@@ -12,6 +12,7 @@
   "requirements": {
     "start": {
       "npc": 2004,
+      "startScript": "q1035s",
       "maxLevel": 10,
       "jobs": [
         0
@@ -19,6 +20,7 @@
     },
     "complete": {
       "npc": 2002,
+      "endScript": "q1035e",
       "items": [
         {
           "itemId": 4031802
@@ -26,7 +28,8 @@
       ],
       "monsters": [
         {
-          "monsterId": 9300018
+          "monsterId": 9300018,
+          "count": 10
         }
       ]
     }

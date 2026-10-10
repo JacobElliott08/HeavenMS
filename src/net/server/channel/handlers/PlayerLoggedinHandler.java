@@ -20,6 +20,7 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package net.server.channel.handlers;
+import tools.packets.character.EnterGamePackets;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -74,6 +75,7 @@ import org.apache.mina.core.session.IoSession;
 import server.life.MobSkill;
 import scripting.event.EventInstanceManager;
 import tools.packets.Wedding;
+import tools.packets.character.CharacterLoadPacket;
 
 public final class PlayerLoggedinHandler extends AbstractMaplePacketHandler {
 
@@ -232,7 +234,7 @@ public final class PlayerLoggedinHandler extends AbstractMaplePacketHandler {
                     player.silentApplyDiseases(diseases);
                 }
 
-                c.announce(MaplePacketCreator.getCharInfo(player));
+                c.announce(CharacterLoadPacket.characterLoad(player, c.getChannel() - 1));
                 if (!player.isHidden()) {
                     if(player.isGM() && YamlConfig.config.server.USE_AUTOHIDE_GM) {
                         player.toggleHide(true);
@@ -260,9 +262,9 @@ public final class PlayerLoggedinHandler extends AbstractMaplePacketHandler {
                     ble.setChannel(onlineBuddy.getChannel());
                     bl.put(ble);
                 }
-                c.announce(MaplePacketCreator.updateBuddylist(bl.getBuddies()));
+                c.announce(EnterGamePackets.buddyList(bl.getBuddies()));
 
-                c.announce(MaplePacketCreator.loadFamily(player));
+                c.announce(EnterGamePackets.familyPrivileges(player));
                 if (player.getFamilyId() > 0) {
                     MapleFamily f = wserv.getFamily(player.getFamilyId());
                     if(f != null) {
@@ -271,17 +273,17 @@ public final class PlayerLoggedinHandler extends AbstractMaplePacketHandler {
                             familyEntry.setCharacter(player);
                             player.setFamilyEntry(familyEntry);
                             
-                            c.announce(MaplePacketCreator.getFamilyInfo(familyEntry));
+                            c.announce(EnterGamePackets.familyInfo(familyEntry));
                             familyEntry.announceToSenior(MaplePacketCreator.sendFamilyLoginNotice(player.getName(), true), true);
                         } else {
                             FilePrinter.printError(FilePrinter.FAMILY_ERROR, "Player " + player.getName() + "'s family doesn't have an entry for them. (" + f.getID() + ")");
                         }
                     } else {
                         FilePrinter.printError(FilePrinter.FAMILY_ERROR, "Player " + player.getName() + " has an invalid family ID. (" + player.getFamilyId() + ")");
-                        c.announce(MaplePacketCreator.getFamilyInfo(null));
+                        c.announce(EnterGamePackets.familyInfo(null));
                     }
                 } else {
-                    c.announce(MaplePacketCreator.getFamilyInfo(null));
+                    c.announce(EnterGamePackets.familyInfo(null));
                 }
                 if (player.getGuildId() > 0) {
                     MapleGuild playerGuild = server.getGuild(player.getGuildId(), player.getWorld(), player);
@@ -341,16 +343,16 @@ public final class PlayerLoggedinHandler extends AbstractMaplePacketHandler {
                     eqpInv.unlockInventory();
                 }
 
-                c.announce(MaplePacketCreator.updateBuddylist(player.getBuddylist().getBuddies()));
+                c.announce(EnterGamePackets.buddyList(player.getBuddylist().getBuddies()));
 
                 CharacterNameAndId pendingBuddyRequest = c.getPlayer().getBuddylist().pollPendingRequest();
                 if (pendingBuddyRequest != null) {
                     c.announce(MaplePacketCreator.requestBuddylistAdd(pendingBuddyRequest.getId(), c.getPlayer().getId(), pendingBuddyRequest.getName()));
                 }
 
-                c.announce(MaplePacketCreator.updateGender(player));
+                c.announce(EnterGamePackets.gender(player));
                 player.checkMessenger();
-                c.announce(MaplePacketCreator.enableReport());
+                c.announce(EnterGamePackets.reportStatus());
                 player.changeSkillLevel(SkillFactory.getSkill(10000000 * player.getJobType() + 12), (byte) (player.getLinkedLevel() / 10), 20, -1);
                 player.checkBerserk(player.isHidden());
 

@@ -51,6 +51,17 @@ import tools.data.input.ByteArrayByteStream;
 import tools.data.input.GenericSeekableLittleEndianAccessor;
 import tools.data.input.SeekableLittleEndianAccessor;
 import java.util.Arrays;
+import net.opcodes.RecvOpcode;
+import protocol.generated.maple.network.ClientMessage;
+import protocol.generated.maple.network.Packet;
+import protocol.generated.maple.login.LoginServerListRequest;
+import protocol.generated.maple.map.PlayerMove;
+import protocol.generated.maple.npc.NpcDialogueResponse;
+import net.server.channel.handlers.NpcDialogueResponseHandler;
+import net.server.channel.handlers.MovePlayerHandler;
+import net.server.handlers.login.ServerlistRequestHandler;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 
 import java.util.concurrent.ScheduledFuture;
 
@@ -185,12 +196,86 @@ public class MapleServerHandler extends IoHandlerAdapter {
     @Override
     public void messageReceived(IoSession session, Object message) {
         byte[] content = (byte[]) message;
+        if (content.length < 2) {
+            return;
+        }
+        ByteBuffer flatBuffer = ByteBuffer.wrap(content).order(ByteOrder.LITTLE_ENDIAN);
+        if (content.length >= 8 && Packet.PacketBufferHasIdentifier(flatBuffer)) {
+            Packet packet = Packet.getRootAsPacket(flatBuffer);
+            MapleClient client = (MapleClient) session.getAttribute(MapleClient.CLIENT_KEY);
+            switch (packet.clientMessageType()) {
+                case ClientMessage.protocol_generated_maple_npc_NpcDialogueResponse: {
+                    NpcDialogueResponse response = new NpcDialogueResponse();
+                    packet.clientMessage(response);
+                    new NpcDialogueResponseHandler().handleFlatBufferResponse(response, client);
+                    return;
+                }
+                case ClientMessage.protocol_generated_maple_login_LoginServerListRequest: {
+                    LoginServerListRequest request = new LoginServerListRequest();
+                    packet.clientMessage(request);
+                    new ServerlistRequestHandler().handleFlatBufferRequest(client);
+                    return;
+                }
+                case ClientMessage.protocol_generated_maple_map_PlayerMove: {
+                    PlayerMove move = new PlayerMove();
+                    packet.clientMessage(move);
+                    new MovePlayerHandler().handleFlatBufferMove(move, client);
+                    return;
+                }
+                case ClientMessage.protocol_generated_maple_character_QuestAction: {
+                    protocol.generated.maple.character.QuestAction action = new protocol.generated.maple.character.QuestAction();
+                    packet.clientMessage(action);
+                    new net.server.channel.handlers.QuestActionHandler().handleFlatBufferAction(action, client);
+                    return;
+                }
+                default:
+                    return;
+            }
+        }
+
         SeekableLittleEndianAccessor slea = new GenericSeekableLittleEndianAccessor(new ByteArrayByteStream(content));
         short packetId = slea.readShort();
         MapleClient client = (MapleClient) session.getAttribute(MapleClient.CLIENT_KEY);
         
-        if(YamlConfig.config.server.USE_DEBUG_SHOW_RCVD_PACKET && !ignoredDebugRecvPackets.contains(packetId)) System.out.println("Received packet id " + packetId);
+        String opcodeName = getOpcodeName(packetId);
+        String playerInfo = (client != null && client.getPlayer() != null) ? client.getPlayer().getName() : "unknown";
+        
+        // Always log NPC_TALK packets (0x3A = 58)
+        if (packetId == 0x3A) {
+            System.out.println("[PACKET TRACE] Received NPC_TALK packet (0x3A/58) from player: " + playerInfo);
+        }
+        
+        if(YamlConfig.config.server.USE_DEBUG_SHOW_RCVD_PACKET && !ignoredDebugRecvPackets.contains(packetId)) {
+            System.out.println("[PACKET TRACE] Received packet: " + opcodeName + " (0x" + Integer.toHexString(packetId).toUpperCase() + "/" + packetId + ") from player: " + playerInfo);
+        }
+        
         final MaplePacketHandler packetHandler = processor.getHandler(packetId);
+        
+        if (packetHandler == null) {
+            if (packetId == 0x3A) {
+                System.out.println("[PACKET TRACE ERROR] No handler registered for NPC_TALK packet (0x3A/58)!");
+            }
+            if(YamlConfig.config.server.USE_DEBUG_SHOW_RCVD_PACKET && !ignoredDebugRecvPackets.contains(packetId)) {
+                System.out.println("[PACKET TRACE WARN] No handler found for packet: " + opcodeName + " (0x" + Integer.toHexString(packetId).toUpperCase() + "/" + packetId + ")");
+            }
+            return;
+        }
+        
+        if (!packetHandler.validateState(client)) {
+            if (packetId == 0x3A) {
+                System.out.println("[PACKET TRACE ERROR] Handler validation failed for NPC_TALK packet (0x3A/58). Handler: " + packetHandler.getClass().getSimpleName());
+                System.out.println("[PACKET TRACE ERROR] Client state - Player: " + (client.getPlayer() != null ? client.getPlayer().getName() : "null") + ", Login state: " + client.getLoginState());
+            }
+            if(YamlConfig.config.server.USE_DEBUG_SHOW_RCVD_PACKET && !ignoredDebugRecvPackets.contains(packetId)) {
+                System.out.println("[PACKET TRACE WARN] Handler validation failed for " + opcodeName + " (0x" + Integer.toHexString(packetId).toUpperCase() + ")");
+            }
+            return;
+        }
+        
+        if (packetId == 0x3A) {
+            System.out.println("[PACKET TRACE] Dispatching NPC_TALK to handler: " + packetHandler.getClass().getSimpleName());
+        }
+        
         if (packetHandler != null && packetHandler.validateState(client)) {
             try {
             	MapleLogger.logRecv(client, packetId, message);
@@ -201,6 +286,18 @@ public class MapleServerHandler extends IoHandlerAdapter {
             }
             client.updateLastPacket();
         }
+    }
+    
+    /**
+     * Helper method to get the opcode name from packet ID for debugging.
+     */
+    private String getOpcodeName(short packetId) {
+        for (RecvOpcode op : RecvOpcode.values()) {
+            if (op.getValue() == packetId) {
+                return op.name();
+            }
+        }
+        return "UNKNOWN";
     }
     
     @Override

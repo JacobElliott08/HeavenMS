@@ -40,6 +40,12 @@ public class QuestRequirement extends MapleQuestRequirement {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public QuestRequirement(MapleQuest quest, Map<Integer, Integer> quests) {
+		super(MapleQuestRequirementType.QUEST);
+		this.quests = quests;
+	}
+	
 	/**
 	 * 
 	 * @param data 

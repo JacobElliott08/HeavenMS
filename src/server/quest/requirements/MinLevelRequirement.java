@@ -40,6 +40,12 @@ public class MinLevelRequirement extends MapleQuestRequirement {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public MinLevelRequirement(MapleQuest quest, int level) {
+		super(MapleQuestRequirementType.MIN_LEVEL);
+		this.minLevel = level;
+	}
+	
 	
 	@Override
 	public void processData(MapleData data) {

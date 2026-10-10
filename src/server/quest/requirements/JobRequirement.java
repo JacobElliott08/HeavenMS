@@ -43,6 +43,12 @@ public class JobRequirement extends MapleQuestRequirement {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public JobRequirement(MapleQuest quest, List<Integer> jobs) {
+		super(MapleQuestRequirementType.JOB);
+		this.jobs = jobs;
+	}
+	
 	/**
 	 * 
 	 * @param data 

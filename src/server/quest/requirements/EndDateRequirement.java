@@ -41,6 +41,12 @@ public class EndDateRequirement extends MapleQuestRequirement {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public EndDateRequirement(MapleQuest quest, String dateString) {
+		super(MapleQuestRequirementType.END_DATE);
+		this.timeStr = dateString;
+	}
+	
 	/**
 	 * 
 	 * @param data 

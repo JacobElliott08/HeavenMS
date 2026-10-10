@@ -37,6 +37,12 @@ public class MesoRequirement extends MapleQuestRequirement {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public MesoRequirement(MapleQuest quest, int meso) {
+		super(MapleQuestRequirementType.MESO);
+		this.meso = meso;
+	}
+	
 	@Override
 	public void processData(MapleData data) {
 		meso = MapleDataTool.getInt(data);

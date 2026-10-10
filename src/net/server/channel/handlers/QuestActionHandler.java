@@ -25,6 +25,7 @@ import java.awt.Point;
 import client.MapleCharacter;
 import client.MapleClient;
 import net.AbstractMaplePacketHandler;
+import protocol.generated.maple.character.QuestAction;
 import scripting.quest.QuestScriptManager;
 import server.quest.MapleQuest;
 import server.life.MapleNPC;
@@ -37,18 +38,9 @@ import tools.data.input.SeekableLittleEndianAccessor;
 public final class QuestActionHandler extends AbstractMaplePacketHandler {
     
     // isNpcNearby thanks to GabrielSin
-    private static boolean isNpcNearby(SeekableLittleEndianAccessor slea, MapleCharacter player, MapleQuest quest, int npcId) {
-        Point playerP;
+    private static boolean isNpcNearby(Point requested, MapleCharacter player, MapleQuest quest, int npcId) {
         Point pos = player.getPosition();
-        
-        if(slea.available() >= 4) {
-            playerP = new Point(slea.readShort(), slea.readShort());
-            if (playerP.distance(pos) > 1000) {     // thanks Darter (YungMoozi) for reporting unchecked player position
-                playerP = pos;
-            }
-        } else {
-            playerP = pos;
-        }
+        Point playerP = requested == null || requested.distance(pos) > 1000 ? pos : requested;
         
         if (!quest.isAutoStart() && !quest.isAutoComplete()) {
             MapleNPC npc = player.getMap().getNPCById(npcId);
@@ -64,6 +56,58 @@ public final class QuestActionHandler extends AbstractMaplePacketHandler {
         }
         
         return true;
+    }
+
+    private static boolean isNpcNearby(SeekableLittleEndianAccessor slea, MapleCharacter player, MapleQuest quest, int npcId) {
+        Point requested = slea.available() >= 4 ? new Point(slea.readShort(), slea.readShort()) : null;
+        return isNpcNearby(requested, player, quest, npcId);
+    }
+
+    public void handleFlatBufferAction(QuestAction req, MapleClient c) {
+        MapleCharacter player = c.getPlayer();
+        if (player == null) {
+            return;
+        }
+        short questid = req.questId();
+        int npc = req.npcId();
+        MapleQuest quest = MapleQuest.getInstance(questid);
+        Point pos = req.hasPosition() ? new Point(req.x(), req.y()) : null;
+        System.out.println("[FlatBuffers<-QuestAction] action=" + req.action() + " quest=" + questid + " npc=" + npc);
+
+        switch (req.action()) {
+            case 0:
+                quest.restoreLostItem(player, req.itemId());
+                break;
+            case 1:
+                if (isNpcNearby(pos, player, quest, npc) && quest.canStart(player, npc)) {
+                    quest.start(player, npc);
+                }
+                break;
+            case 2:
+                if (isNpcNearby(pos, player, quest, npc) && quest.canComplete(player, npc)) {
+                    if (req.selection() >= 0) {
+                        quest.complete(player, npc, req.selection());
+                    } else {
+                        quest.complete(player, npc);
+                    }
+                }
+                break;
+            case 3:
+                quest.forfeit(player);
+                break;
+            case 4:
+                if (isNpcNearby(pos, player, quest, npc) && quest.canStart(player, npc)) {
+                    QuestScriptManager.getInstance().start(c, questid, npc);
+                }
+                break;
+            case 5:
+                if (isNpcNearby(pos, player, quest, npc) && quest.canComplete(player, npc)) {
+                    QuestScriptManager.getInstance().end(c, questid, npc);
+                }
+                break;
+            default:
+                break;
+        }
     }
     
     @Override

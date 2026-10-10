@@ -46,6 +46,13 @@ public class MobRequirement extends MapleQuestRequirement {
                 processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public MobRequirement(MapleQuest quest, Map<Integer, Integer> mobs) {
+		super(MapleQuestRequirementType.MOB);
+		this.questID = quest.getId();
+		this.mobs = mobs;
+	}
+	
 	/**
 	 * 
 	 * @param data 
@@ -63,6 +70,9 @@ public class MobRequirement extends MapleQuestRequirement {
 	@Override
 	public boolean check(MapleCharacter chr, Integer npcid) {
 		MapleQuestStatus status = chr.getQuest(MapleQuest.getInstance(questID));
+		System.out.println("[MobRequirement->check] QuestID: " + questID + ", Character: " + chr.getName() + 
+			", Checking " + mobs.size() + " mob requirements");
+		
 		for(Integer mobID : mobs.keySet()) {
 			int countReq = mobs.get(mobID);
 			int progress;
@@ -74,9 +84,16 @@ public class MobRequirement extends MapleQuestRequirement {
 				return false;
 			}
 			
-			if(progress < countReq)
+			System.out.println("[MobRequirement->check] QuestID: " + questID + ", MobID: " + mobID + 
+				", Progress: " + progress + "/" + countReq + ", Met: " + (progress >= countReq));
+			
+			if(progress < countReq) {
+				System.out.println("[MobRequirement->check] QuestID: " + questID + " mob requirement NOT met for mob " + mobID);
 				return false;
+			}
 		}
+		
+		System.out.println("[MobRequirement->check] QuestID: " + questID + " ALL mob requirements met!");
 		return true;
 	}
 	

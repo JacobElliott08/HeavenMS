@@ -49,7 +49,6 @@ Offset  Size      Field
 The `dialogue_type` byte describes what UI controls to render.
 
 | Byte   | Name             | Description                                          |
-|--------|------------------|------------------------------------------------------|
 | `0x01` | `OK`             | Single "Ok" dismiss button                           |
 | `0x02` | `NEXT`           | "Next ›" button only                                 |
 | `0x03` | `PREV`           | "‹ Prev" button only                                 |
@@ -60,7 +59,6 @@ The `dialogue_type` byte describes what UI controls to render.
 | `0x08` | `GET_NUMBER`     | Numeric input field (see §1.5 for trailing fields)   |
 | `0x09` | `GET_TEXT`       | Free-text input field (see §1.5 for trailing fields) |
 
-### 1.4 Element Stream
 
 After the header, read exactly `element_count` elements sequentially.  
 Each element starts with a 1-byte tag:
@@ -176,7 +174,6 @@ All other dialogue types (`OK`, `NEXT`, `PREV`, `NEXT_PREV`, `YES_NO`, `ACCEPT_D
 
 #### `GET_NUMBER` (`0x08`)
 ```
-[s32 LE  value]
 ```
 
 #### `GET_TEXT` (`0x09`)

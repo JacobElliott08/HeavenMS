@@ -1062,12 +1062,30 @@ public class MapleMap {
     }
     
     public void pickItemDrop(byte[] pickupPacket, MapleMapItem mdrop) { // mdrop must be already locked and not-pickedup checked at this point
-        broadcastMessage(pickupPacket, mdrop.getPosition());
+        System.out.println("[MapleMap.pickItemDrop] START - OID: " + mdrop.getObjectId() + ", ItemId: " + mdrop.getItemId() + ", Mesos: " + mdrop.getMeso());
         
-        droppedItemCount.decrementAndGet();
-        this.removeMapObject(mdrop);
+        System.out.println("[MapleMap.pickItemDrop] Broadcasting pickup packet (length: " + pickupPacket.length + ") from position: " + mdrop.getPosition());
+        broadcastMessage(pickupPacket, mdrop.getPosition());
+        System.out.println("[MapleMap.pickItemDrop] Broadcast completed");
+        
+        int itemCount = droppedItemCount.decrementAndGet();
+        System.out.println("[MapleMap.pickItemDrop] Dropped item count decremented to: " + itemCount);
+        
         mdrop.setPickedUp(true);
-        unregisterItemDrop(mdrop);
+        System.out.println("[MapleMap.pickItemDrop] Item marked as picked up");
+        
+        // Optimize: acquire objectWLock only once for both operations
+        System.out.println("[MapleMap.pickItemDrop] Acquiring objectWLock...");
+        objectWLock.lock();
+        try {
+            this.mapobjects.remove(Integer.valueOf(mdrop.getObjectId()));
+            droppedItems.remove(mdrop);
+            System.out.println("[MapleMap.pickItemDrop] Removed from mapobjects and droppedItems");
+        } finally {
+            objectWLock.unlock();
+            System.out.println("[MapleMap.pickItemDrop] objectWLock released");
+        }
+        System.out.println("[MapleMap.pickItemDrop] END");
     }
     
     public List<MapleMapItem> updatePlayerItemDropsToParty(int partyid, int charid, List<MapleCharacter> partyMembers, MapleCharacter partyLeaver) {
@@ -2659,6 +2677,9 @@ public class MapleMap {
 
         sendObjectPlacement(chr.getClient());
         
+        // Send NPC quest data in bulk after spawning all NPCs
+        chr.getClient().announce(MaplePacketCreator.buildNpcQuestData(chr));
+        
         if (isStartingEventMap() && !eventStarted()) {
             chr.getMap().getPortal("join00").setPortalStatus(false);
         }
@@ -2929,10 +2950,13 @@ public class MapleMap {
         chrRLock.lock();
         try {
             int sentCount = 0;
+            int totalChars = characters.size();
+            
             for (MapleCharacter chr : characters) {
                 if (chr != source) {
                     if (rangeSq < Double.POSITIVE_INFINITY) {
-                        if (rangedFrom.distanceSq(chr.getPosition()) <= rangeSq) {
+                        double distSq = rangedFrom.distanceSq(chr.getPosition());
+                        if (distSq <= rangeSq) {
                             chr.getClient().announce(packet);
                             sentCount++;
                         }
@@ -2942,11 +2966,12 @@ public class MapleMap {
                     }
                 }
             }
-            // Only log for KILL_MONSTER packets (starts with opcode)
+            
+            // Log only item pickup broadcasts
             if (packet.length >= 2) {
                 int opcode = ((packet[0] & 0xFF) | ((packet[1] & 0xFF) << 8));
-                if (opcode == 0xED) { // KILL_MONSTER opcode
-                    System.out.println("[MapleMap->broadcastMessage] Sent KILL_MONSTER packet to " + sentCount + " players on map " + this.getId());
+                if (opcode == 0x10D) { // REMOVE_ITEM_FROM_MAP
+                    System.out.println("[MapleMap.broadcastMessage] REMOVE_ITEM_FROM_MAP sent to " + sentCount + "/" + totalChars + " players on map " + this.getId());
                 }
             }
         } finally {

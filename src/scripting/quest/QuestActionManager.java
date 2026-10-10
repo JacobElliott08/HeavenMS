@@ -53,6 +53,7 @@ public class QuestActionManager extends NPCConversationManager {
     @Override
     public void dispose() {
         QuestScriptManager.getInstance().dispose(this, getClient());
+        scripting.npc.ReplyBuilder.sendEnd(getClient(), getNpc());
     }
 
     public boolean forceStartQuest() {

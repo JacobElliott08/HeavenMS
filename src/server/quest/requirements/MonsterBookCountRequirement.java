@@ -40,6 +40,12 @@ public class MonsterBookCountRequirement extends MapleQuestRequirement {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public MonsterBookCountRequirement(MapleQuest quest, int cardCount) {
+		super(MapleQuestRequirementType.MONSTER_BOOK);
+		this.reqCards = cardCount;
+	}
+	
 	@Override
 	public void processData(MapleData data) {
 		reqCards = MapleDataTool.getInt(data);

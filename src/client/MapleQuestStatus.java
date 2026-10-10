@@ -129,8 +129,18 @@ public class MapleQuestStatus {
     }
 
     private void registerMobs() {
-        for (int i : MapleQuest.getInstance(questID).getRelevantMobs()) {
+        List<Integer> mobs = MapleQuest.getInstance(questID).getRelevantMobs();
+        System.out.println("[MapleQuestStatus->registerMobs] QuestID: " + questID + 
+            ", Found " + mobs.size() + " relevant mobs: " + mobs);
+        
+        for (int i : mobs) {
             progress.put(i, "000");
+            System.out.println("[MapleQuestStatus->registerMobs] Registered mob " + i + " with progress 000");
+        }
+        
+        if (mobs.isEmpty()) {
+            System.out.println("[MapleQuestStatus->registerMobs] WARNING: Quest " + questID + 
+                " has no relevant mobs registered! This quest will not track mob kills.");
         }
         //this.setUpdated();
     }
@@ -152,17 +162,29 @@ public class MapleQuestStatus {
 
     public boolean progress(int id) {
         String currentStr = progress.get(id);
+        System.out.println("[MapleQuestStatus->progress] QuestID: " + this.getQuest().getId() + 
+            ", MobID: " + id + ", CurrentProgress: " + currentStr + 
+            ", AllProgress: " + progress.toString());
+        
         if (currentStr == null) {
+            System.out.println("[MapleQuestStatus->progress] Progress is null for mob " + id + 
+                ", mob not in quest requirements. Required mobs: " + progress.keySet());
             return false;
         }
         
         int current = Integer.parseInt(currentStr);
-        if (current >= this.getQuest().getMobAmountNeeded(id)) {
+        int needed = this.getQuest().getMobAmountNeeded(id);
+        System.out.println("[MapleQuestStatus->progress] Current: " + current + ", Needed: " + needed);
+        
+        if (current >= needed) {
+            System.out.println("[MapleQuestStatus->progress] Already completed mob requirement for " + id);
             return false;
         }
         
         String str = StringUtil.getLeftPaddedStr(Integer.toString(++current), '0', 3);
         progress.put(id, str);
+        System.out.println("[MapleQuestStatus->progress] Updated progress for mob " + id + 
+            " to " + str + " (count: " + current + "/" + needed + ")");
         //this.setUpdated();
         return true;
     }

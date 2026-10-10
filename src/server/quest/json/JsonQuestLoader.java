@@ -12,7 +12,9 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Loads quest data from JSON files instead of XML WZ files.
@@ -142,9 +144,9 @@ public class JsonQuestLoader {
         
         // Item requirements
         if (reqSet.getItems() != null && !reqSet.getItems().isEmpty()) {
-            List<ItemRequirement.ItemData> items = new ArrayList<>();
+            Map<Integer, Integer> items = new HashMap<>();
             for (QuestJsonData.ItemRequirement item : reqSet.getItems()) {
-                items.add(new ItemRequirement.ItemData(item.getItemId(), item.getCount()));
+                items.put(item.getItemId(), item.getCount());
             }
             quest.addRequirement(MapleQuestRequirementType.ITEM,
                 new ItemRequirement(quest, items), isStart);
@@ -152,9 +154,9 @@ public class JsonQuestLoader {
         
         // Monster requirements
         if (reqSet.getMonsters() != null && !reqSet.getMonsters().isEmpty()) {
-            List<MobRequirement.MobData> mobs = new ArrayList<>();
+            Map<Integer, Integer> mobs = new HashMap<>();
             for (QuestJsonData.MonsterRequirement mob : reqSet.getMonsters()) {
-                mobs.add(new MobRequirement.MobData(mob.getMonsterId(), mob.getCount()));
+                mobs.put(mob.getMonsterId(), mob.getCount());
                 quest.addRelevantMob(mob.getMonsterId());
             }
             quest.addRequirement(MapleQuestRequirementType.MOB,
@@ -163,9 +165,9 @@ public class JsonQuestLoader {
         
         // Quest prerequisites
         if (reqSet.getPrerequisiteQuests() != null && !reqSet.getPrerequisiteQuests().isEmpty()) {
-            List<QuestRequirement.QuestData> quests = new ArrayList<>();
+            Map<Integer, Integer> quests = new HashMap<>();
             for (QuestJsonData.PrerequisiteQuest pq : reqSet.getPrerequisiteQuests()) {
-                quests.add(new QuestRequirement.QuestData(pq.getQuestId(), pq.getStateValue()));
+                quests.put(pq.getQuestId(), pq.getStateValue());
             }
             quest.addRequirement(MapleQuestRequirementType.QUEST,
                 new QuestRequirement(quest, quests), isStart);
@@ -218,7 +220,7 @@ public class JsonQuestLoader {
         // Monster book requirement
         if (reqSet.getMinMonsterBookCards() != null) {
             quest.addRequirement(MapleQuestRequirementType.MONSTER_BOOK,
-                new MonsterBookRequirement(quest, reqSet.getMinMonsterBookCards()), isStart);
+                new MonsterBookCountRequirement(quest, reqSet.getMinMonsterBookCards()), isStart);
         }
         
         // Info requirements
@@ -240,7 +242,7 @@ public class JsonQuestLoader {
         
         if (reqSet.getForbiddenBuffs() != null && !reqSet.getForbiddenBuffs().isEmpty()) {
             quest.addRequirement(MapleQuestRequirementType.EXCEPT_BUFF,
-                new ExceptBuffRequirement(quest, reqSet.getForbiddenBuffs()), isStart);
+                new BuffExceptRequirement(quest, reqSet.getForbiddenBuffs()), isStart);
         }
     }
     
@@ -262,15 +264,16 @@ public class JsonQuestLoader {
         
         // Item rewards
         if (actSet.getItems() != null && !actSet.getItems().isEmpty()) {
-            List<ItemAction.ItemData> items = new ArrayList<>();
+            List<Map<String, Object>> items = new ArrayList<>();
             for (QuestJsonData.ItemReward item : actSet.getItems()) {
-                ItemAction.ItemData itemData = new ItemAction.ItemData(
-                    item.getItemId(), 
-                    item.getCount(),
-                    item.getJobRestriction(),
-                    item.getGender(),
-                    item.getProbability()
-                );
+                Map<String, Object> itemData = new HashMap<>();
+                itemData.put("map", 0); // Default map
+                itemData.put("id", item.getItemId());
+                itemData.put("count", item.getCount());
+                itemData.put("prop", item.getProbability());
+                itemData.put("job", item.getJobRestriction() != null ? item.getJobRestriction() : -1);
+                itemData.put("gender", item.getGender() != null ? item.getGender() : 2);
+                itemData.put("period", 0); // Default period
                 items.add(itemData);
             }
             quest.addAction(MapleQuestActionType.ITEM,
@@ -279,13 +282,13 @@ public class JsonQuestLoader {
         
         // Skill rewards
         if (actSet.getSkills() != null && !actSet.getSkills().isEmpty()) {
-            List<SkillAction.SkillData> skills = new ArrayList<>();
+            List<Map<String, Object>> skills = new ArrayList<>();
             for (QuestJsonData.SkillReward skill : actSet.getSkills()) {
-                SkillAction.SkillData skillData = new SkillAction.SkillData(
-                    skill.getSkillId(),
-                    skill.getSkillLevel() != null ? skill.getSkillLevel() : 0,
-                    skill.getMasterLevel() != null ? skill.getMasterLevel() : 0
-                );
+                Map<String, Object> skillData = new HashMap<>();
+                skillData.put("id", skill.getSkillId());
+                skillData.put("level", skill.getSkillLevel() != null ? skill.getSkillLevel() : 0);
+                skillData.put("masterLevel", skill.getMasterLevel() != null ? skill.getMasterLevel() : 0);
+                skillData.put("jobs", new ArrayList<Integer>()); // Default empty job list
                 skills.add(skillData);
             }
             quest.addAction(MapleQuestActionType.SKILL,

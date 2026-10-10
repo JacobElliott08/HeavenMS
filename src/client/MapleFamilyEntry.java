@@ -18,6 +18,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 package client;
+import tools.packets.character.EnterGamePackets;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -437,11 +438,11 @@ public class MapleFamilyEntry {
         MapleFamilyEntry senior = getSenior();
         if(senior != null) {
             MapleCharacter seniorChr = senior.getChr();
-            if(seniorChr != null) seniorChr.announce(MaplePacketCreator.getFamilyInfo(senior));
+            if(seniorChr != null) seniorChr.announce(EnterGamePackets.familyInfo(senior));
             senior = senior.getSenior();
             if(includeSuperSenior && senior != null) {
                 seniorChr = senior.getChr();
-                if(seniorChr != null) seniorChr.announce(MaplePacketCreator.getFamilyInfo(senior));
+                if(seniorChr != null) seniorChr.announce(EnterGamePackets.familyInfo(senior));
             }
         }
     }

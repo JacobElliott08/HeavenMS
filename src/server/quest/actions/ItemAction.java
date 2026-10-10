@@ -31,6 +31,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import provider.MapleData;
 import provider.MapleDataTool;
 import client.inventory.manipulator.MapleInventoryManipulator;
@@ -53,6 +54,24 @@ public class ItemAction extends MapleQuestAction {
 	public ItemAction(MapleQuest quest, MapleData data) {
 		super(MapleQuestActionType.ITEM, quest);
 		processData(data);
+	}
+	
+	/**
+	 * Constructor for JSON quest loading
+	 * @param data List of item data maps with keys: id, count, prop, job, gender, period, map
+	 */
+	public ItemAction(MapleQuest quest, List<Map<String, Object>> itemDataList) {
+		super(MapleQuestActionType.ITEM, quest);
+		for (Map<String, Object> itemData : itemDataList) {
+			int map = (Integer) itemData.getOrDefault("map", 0);
+			int id = (Integer) itemData.get("id");
+			int count = (Integer) itemData.getOrDefault("count", 1);
+			Integer prop = (Integer) itemData.get("prop");
+			int job = (Integer) itemData.getOrDefault("job", -1);
+			int gender = (Integer) itemData.getOrDefault("gender", 2);
+			int period = (Integer) itemData.getOrDefault("period", 0);
+			items.add(new ItemData(map, id, count, prop, job, gender, period));
+		}
 	}
 	
 	

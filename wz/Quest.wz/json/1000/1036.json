@@ -12,13 +12,15 @@
   "requirements": {
     "start": {
       "npc": 2003,
+      "startScript": "1036",
       "maxLevel": 10,
       "jobs": [
         0
       ]
     },
     "complete": {
-      "npc": 2003
+      "npc": 2003,
+      "endScript": "1036"
     }
   },
   "actions": {

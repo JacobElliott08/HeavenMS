@@ -40,6 +40,12 @@ public class MaxLevelRequirement extends MapleQuestRequirement {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public MaxLevelRequirement(MapleQuest quest, int level) {
+		super(MapleQuestRequirementType.MAX_LEVEL);
+		this.maxLevel = level;
+	}
+	
 	/**
 	 * 
 	 * @param data 

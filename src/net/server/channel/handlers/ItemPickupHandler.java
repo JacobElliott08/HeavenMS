@@ -43,16 +43,27 @@ public final class ItemPickupHandler extends AbstractMaplePacketHandler {
         slea.readPos(); //cpos
         int oid = slea.readInt();
         MapleCharacter chr = c.getPlayer();
+        
+        System.out.println("[ItemPickupHandler] Player: " + chr.getName() + " (ID: " + chr.getId() + ") attempting to pickup OID: " + oid);
+        
         MapleMapObject ob = chr.getMap().getMapObject(oid);
-        if(ob == null) return;
+        if(ob == null) {
+            System.out.println("[ItemPickupHandler] Object not found for OID: " + oid + " - returning");
+            return;
+        }
         
         Point charPos = chr.getPosition();
         Point obPos = ob.getPosition();
+        System.out.println("[ItemPickupHandler] Distance check - Player: " + charPos + ", Object: " + obPos);
+        
         if (Math.abs(charPos.getX() - obPos.getX()) > 800 || Math.abs(charPos.getY() - obPos.getY()) > 600) {
+            System.out.println("[ItemPickupHandler] Player too far from item - REJECTED");
             FilePrinter.printError(FilePrinter.EXPLOITS + c.getPlayer().getName() + ".txt", c.getPlayer().getName() + " tried to pick up an item too far away. Mapid: " + chr.getMapId() + " Player pos: " + charPos + " Object pos: " + obPos);
             return;
         }
         
+        System.out.println("[ItemPickupHandler] Calling chr.pickupItem() for OID: " + oid);
         chr.pickupItem(ob);
+        System.out.println("[ItemPickupHandler] chr.pickupItem() completed for OID: " + oid);
     }
 }

@@ -59,37 +59,38 @@ public class QuestScriptManager extends AbstractScriptManager {
         
 	public void start(MapleClient c, short questid, int npc) {
                 MapleQuest quest = MapleQuest.getInstance(questid);
-                try {
-                        QuestActionManager qm = new QuestActionManager(c, questid, npc, true);
-                        if (qms.containsKey(c)) {
-                                return;
-                        }
-                        if(c.canClickNPC()) {
-                                qms.put(c, qm);
-                                
-                                if (!quest.hasScriptRequirement(false)) {   // lack of scripted quest checks found thanks to Mali, Resinate
-                                        qm.dispose();
-                                        return;
-                                }
-                                
-                                NashornScriptEngine iv = getQuestScriptEngine(c, questid);
-                                if (iv == null) {
-                                        FilePrinter.printError(FilePrinter.QUEST_UNCODED, "START Quest " + questid + " is uncoded.");
-                                        qm.dispose();
-                                        return;
-                                }
-                                
-                                iv.put("qm", qm);
-                                scripts.put(c, iv);
-                                c.setClickedNPC();
-                                iv.invokeFunction("start", (byte) 1, (byte) 0, 0);
-                        }
-                } catch (final UndeclaredThrowableException ute) {
-                        FilePrinter.printError(FilePrinter.QUEST + questid + ".txt", ute);
-                        dispose(c);
-                } catch (final Throwable t) {
-                        FilePrinter.printError(FilePrinter.QUEST + getQM(c).getQuest() + ".txt", t);
-                        dispose(c);
+		try {
+			QuestActionManager qm = new QuestActionManager(c, questid, npc, true);
+			if (qms.containsKey(c)) {
+				return;
+			}
+			if(c.canClickNPC()) {
+				qms.put(c, qm);
+				
+				if (!quest.hasScriptRequirement(false)) {   // lack of scripted quest checks found thanks to Mali, Resinate
+					qm.dispose();
+					return;
+				}
+				
+				NashornScriptEngine iv = getQuestScriptEngine(c, questid);
+				if (iv == null) {
+					FilePrinter.printError(FilePrinter.QUEST_UNCODED, "START Quest " + questid + " is uncoded.");
+					qm.dispose();
+					return;
+				}
+				
+				iv.put("qm", qm);
+				scripts.put(c, iv);
+				c.setClickedNPC();
+				iv.invokeFunction("start", (byte) 1, (byte) 0, 0);
+			}
+		} catch (final UndeclaredThrowableException ute) {
+			FilePrinter.printError(FilePrinter.QUEST + questid + ".txt", ute);
+			dispose(c);
+		} catch (final Throwable t) {
+			FilePrinter.printError(FilePrinter.QUEST + getQM(c).getQuest() + ".txt", t);
+                        System.out.println("[QuestScriptManager.start] Throwable: " + t.getMessage());
+                        t.printStackTrace();
                 }
 	}
 

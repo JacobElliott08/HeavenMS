@@ -20,6 +20,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 package net.server.channel.handlers;
+import tools.packets.character.EnterGamePackets;
 
 import client.BuddyList;
 import client.BuddyList.BuddyAddResult;
@@ -151,7 +152,7 @@ public class BuddylistModifyHandler extends AbstractMaplePacketHandler {
                                 con.close();
                             }
                             buddylist.put(new BuddylistEntry(charWithId.getName(), group, otherCid, displayChannel, true));
-                            c.announce(MaplePacketCreator.updateBuddylist(buddylist.getBuddies()));
+                            c.announce(EnterGamePackets.buddyList(buddylist.getBuddies()));
                         }
                     } else {
                         c.announce(MaplePacketCreator.serverNotice(1, "A character called \"" + addName + "\" does not exist"));
@@ -161,7 +162,7 @@ public class BuddylistModifyHandler extends AbstractMaplePacketHandler {
                 }
             } else {
                 ble.changeGroup(group);
-                c.announce(MaplePacketCreator.updateBuddylist(buddylist.getBuddies()));
+                c.announce(EnterGamePackets.buddyList(buddylist.getBuddies()));
             }
         } else if (mode == 2) { // accept buddy
             int otherCid = slea.readInt();
@@ -186,7 +187,7 @@ public class BuddylistModifyHandler extends AbstractMaplePacketHandler {
                     }
                     if (otherName != null) {
                         buddylist.put(new BuddylistEntry(otherName, "Default Group", otherCid, channel, true));
-                        c.announce(MaplePacketCreator.updateBuddylist(buddylist.getBuddies()));
+                        c.announce(EnterGamePackets.buddyList(buddylist.getBuddies()));
                         notifyRemoteChannel(c, channel, otherCid, ADDED);
                     }
                 } catch (SQLException e) {

@@ -42,6 +42,13 @@ public class PetSkillAction extends MapleQuestAction {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public PetSkillAction(MapleQuest quest, int petSkillFlag) {
+		super(MapleQuestActionType.PETSKILL, quest);
+		this.questID = quest.getId();
+		this.flag = petSkillFlag;
+	}
+	
 	
 	@Override
 	public void processData(MapleData data) {

@@ -125,7 +125,7 @@ public class MapleMapItem extends AbstractMapleMapObject {
     }
     
     public final boolean hasExpiredOwnershipTime() {
-        return System.currentTimeMillis() - dropTime >= 15 * 1000;
+        return net.server.Server.getInstance().getCurrentTime() - dropTime >= 15 * 1000;
     }
     
     public final boolean canBePickedBy(MapleCharacter chr) {

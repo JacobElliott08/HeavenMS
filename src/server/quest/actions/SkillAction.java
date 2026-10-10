@@ -47,6 +47,22 @@ public class SkillAction extends MapleQuestAction {
 		processData(data);
 	}
 	
+	/**
+	 * Constructor for JSON quest loading
+	 * @param skillDataList List of skill data maps with keys: id, level, masterLevel, jobs
+	 */
+	public SkillAction(MapleQuest quest, List<Map<String, Object>> skillDataList) {
+		super(MapleQuestActionType.SKILL, quest);
+		for (Map<String, Object> skillInfo : skillDataList) {
+			int id = (Integer) skillInfo.get("id");
+			int level = (Integer) skillInfo.getOrDefault("level", 0);
+			int masterLevel = (Integer) skillInfo.getOrDefault("masterLevel", 0);
+			@SuppressWarnings("unchecked")
+			List<Integer> jobs = (List<Integer>) skillInfo.getOrDefault("jobs", new ArrayList<Integer>());
+			skillData.put(id, new SkillData(id, level, masterLevel, jobs));
+		}
+	}
+	
 	
 	@Override
 	public void processData(MapleData data) {

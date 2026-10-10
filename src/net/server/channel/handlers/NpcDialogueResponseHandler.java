@@ -1,22 +1,3 @@
-/*
- This file is part of the OdinMS Maple Story Server
- Copyright (C) 2008 Patrick Huy <patrick.huy@frz.cc>
-
- This program is free software: you can redistribute it and/or modify
- it under the terms of the GNU Affero General Public License as
- published by the Free Software Foundation version 3 as published by
- the Free Software Foundation. You may not use, modify or distribute
- this program under any other version of the GNU Affero General Public
- License.
-
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU Affero General Public License for more details.
-
- You should have received a copy of the GNU Affero General Public License
- along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
 package net.server.channel.handlers;
 
 import client.MapleClient;
@@ -24,7 +5,16 @@ import net.AbstractMaplePacketHandler;
 import scripting.npc.DialogueType;
 import scripting.npc.NPCScriptManager;
 import scripting.quest.QuestScriptManager;
+import server.npc.session.NpcSession;
+import server.npc.interaction.NpcInteractionContext;
+import server.npc.interaction.NpcInteractionOption;
+import server.life.MapleNPC;
+import server.maps.MapleMapObject;
+import tools.MaplePacketCreator;
 import tools.data.input.SeekableLittleEndianAccessor;
+import protocol.generated.maple.npc.NpcDialogueResponse;
+
+import java.util.List;
 
 /**
  * Handles the {@code NPC_DIALOGUE_RESPONSE} packet (RecvOpcode 0xA0).
@@ -105,8 +95,12 @@ public final class NpcDialogueResponseHandler extends AbstractMaplePacketHandler
 
     @Override
     public void handlePacket(SeekableLittleEndianAccessor slea, MapleClient c) {
+        System.out.println("[TRACE] NpcDialogueResponseHandler.handlePacket() - Received NPC_TALK_MORE/NPC_DIALOGUE_RESPONSE packet (0x3C/0xA0) from player: " + c.getPlayer().getName());
+        
         final byte action       = slea.readByte();
         final byte dialogueCode = slea.readByte();
+        
+        System.out.println("[TRACE] NpcDialogueResponseHandler.handlePacket() - Action: " + action + ", DialogueCode: " + dialogueCode);
 
         final DialogueType dtype = DialogueType.fromCode(dialogueCode);
 
@@ -149,9 +143,42 @@ public final class NpcDialogueResponseHandler extends AbstractMaplePacketHandler
             }
         }
 
+        handleResponse(c, action, dialogueCode, selection);
+    }
+
+    public void handleFlatBufferResponse(NpcDialogueResponse response, MapleClient c) {
+        if (response == null) {
+            return;
+        }
+
+        final byte action = (byte) response.action();
+        final byte dialogueCode = (byte) response.dialogueType();
+        final DialogueType dtype = DialogueType.fromCode(dialogueCode);
+        int selection = response.selection();
+
+        if (action != ACTION_CANCEL && dtype == DialogueType.GET_TEXT) {
+            final String input = response.text();
+            if (c.getQM() != null) {
+                c.getQM().setGetText(input == null ? "" : input);
+            } else if (c.getCM() != null) {
+                c.getCM().setGetText(input == null ? "" : input);
+            }
+            selection = -1;
+        }
+
+        handleResponse(c, action, dialogueCode, selection);
+    }
+
+    private void handleResponse(MapleClient c, byte action, byte dialogueCode, int selection) {
         // --- Dispatch ---------------------------------------------------
         if (action == ACTION_CANCEL) {
+            System.out.println("[TRACE] NpcDialogueResponseHandler.handlePacket() - Player cancelled dialogue, disposing managers");
             // Player closed the window.
+            // Clear NPC session if present
+            if (c.getPlayer().getNpcSession() != null) {
+                c.getPlayer().setNpcSession(null);
+            }
+            
             if (c.getQM() != null) {
                 c.getQM().dispose();
             } else if (c.getCM() != null) {
@@ -160,14 +187,89 @@ public final class NpcDialogueResponseHandler extends AbstractMaplePacketHandler
             return;
         }
 
+        // Check for NPC interaction session first
+        NpcSession session = c.getPlayer().getNpcSession();
+        if (session != null && session.hasPendingOptions()) {
+            System.out.println("[TRACE] NpcDialogueResponseHandler.handlePacket() - NPC interaction session active, delegating to handleInteractionSelection(), selection: " + selection);
+            handleInteractionSelection(c, session, selection, action);
+            return;
+        }
+
         if (c.getQM() != null) {
+            System.out.println("[TRACE] NpcDialogueResponseHandler.handlePacket() - Quest Manager active, delegating to QuestScriptManager, selection: " + selection);
             if (c.getQM().isStart()) {
                 QuestScriptManager.getInstance().start(c, action, dialogueCode, selection);
             } else {
                 QuestScriptManager.getInstance().end(c, action, dialogueCode, selection);
             }
         } else if (c.getCM() != null) {
+            System.out.println("[TRACE] NpcDialogueResponseHandler.handlePacket() - Conversation Manager active, delegating to NPCScriptManager.action(), selection: " + selection);
             NPCScriptManager.getInstance().action(c, action, dialogueCode, selection);
+        } else {
+            System.out.println("[TRACE] NpcDialogueResponseHandler.handlePacket() - No active manager (QM or CM), ignoring response");
+        }
+    }
+
+    /**
+     * Handle selection from NPC interaction menu.
+     */
+    private void handleInteractionSelection(MapleClient c, NpcSession session, int selection, byte action) {
+        System.out.println("[TRACE] NpcDialogueResponseHandler.handleInteractionSelection() - Processing selection " + selection + " from NPC interaction menu");
+        List<NpcInteractionOption> options = session.getPendingOptions();
+        
+        // Validate selection
+        if (selection < 0 || selection >= options.size() || action != ACTION_OK) {
+            System.out.println("[TRACE] NpcDialogueResponseHandler.handleInteractionSelection() - Invalid selection or action, aborting (selection: " + selection + ", options: " + options.size() + ", action: " + action + ")");
+            c.getPlayer().setNpcSession(null);
+            c.announce(MaplePacketCreator.enableActions());
+            return;
+        }
+
+        // Get the selected option
+        NpcInteractionOption selectedOption = options.get(selection);
+        String questInfo = selectedOption.hasQuestId() ? " (questId=" + selectedOption.getQuestId() + ")" : "";
+        System.out.println("[TRACE] NpcDialogueResponseHandler.handleInteractionSelection() - Selected option: " + selectedOption.getLabel() + " (type: " + selectedOption.getType() + ")" + questInfo);
+        
+        // Get the NPC object
+        MapleMapObject obj = c.getPlayer().getMap().getMapObject(session.getObjectId());
+        if (!(obj instanceof MapleNPC)) {
+            // NPC no longer exists
+            System.out.println("[TRACE] NpcDialogueResponseHandler.handleInteractionSelection() - NPC object no longer exists (OID: " + session.getObjectId() + "), aborting");
+            c.getPlayer().setNpcSession(null);
+            c.announce(MaplePacketCreator.enableActions());
+            return;
+        }
+
+        MapleNPC npc = (MapleNPC) obj;
+        NpcInteractionContext context = new NpcInteractionContext(c, npc);
+
+        // Clear the session before execution
+        c.getPlayer().setNpcSession(null);
+
+        // Log what action will be taken based on the interaction type
+        switch (selectedOption.getType()) {
+            case QUEST_AVAILABLE:
+                System.out.println("[TRACE] NpcDialogueResponseHandler.handleInteractionSelection() - Routing to QuestScriptManager.start() for quest " + selectedOption.getQuestId());
+                break;
+            case QUEST_COMPLETE:
+                System.out.println("[TRACE] NpcDialogueResponseHandler.handleInteractionSelection() - Routing to QuestScriptManager.end() for quest " + selectedOption.getQuestId());
+                break;
+            case QUEST_IN_PROGRESS:
+                System.out.println("[TRACE] NpcDialogueResponseHandler.handleInteractionSelection() - Routing to QuestScriptManager.start() for quest " + selectedOption.getQuestId());
+                break;
+            default:
+                System.out.println("[TRACE] NpcDialogueResponseHandler.handleInteractionSelection() - Executing " + selectedOption.getType() + " interaction");
+                break;
+        }
+
+        // Execute the selected interaction (lambda will invoke QuestScriptManager or other handler)
+        try {
+            selectedOption.execute(context);
+            System.out.println("[TRACE] NpcDialogueResponseHandler.handleInteractionSelection() - Interaction executed successfully");
+        } catch (Exception e) {
+            System.out.println("[TRACE] NpcDialogueResponseHandler.handleInteractionSelection() - Exception during interaction execution: " + e.getMessage());
+            e.printStackTrace();
+            c.announce(MaplePacketCreator.enableActions());
         }
     }
 }

@@ -20,6 +20,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 package net.server.channel.handlers;
+import tools.packets.character.EnterGamePackets;
 
 import client.MapleCharacter;
 import client.MapleClient;
@@ -51,7 +52,7 @@ public final class FamilyUseHandler extends AbstractMaplePacketHandler {
         if(entry.getReputation() < cost || entry.isEntitlementUsed(type)) {
             return; // shouldn't even be able to request it
         }
-        c.announce(MaplePacketCreator.getFamilyInfo(entry));
+        c.announce(EnterGamePackets.familyInfo(entry));
         MapleCharacter victim;
         if(type == MapleFamilyEntitlement.FAMILY_REUINION || type == MapleFamilyEntitlement.SUMMON_FAMILY) {
             victim = c.getChannelServer().getPlayerStorage().getCharacterByName(slea.readMapleAsciiString());
@@ -133,7 +134,7 @@ public final class FamilyUseHandler extends AbstractMaplePacketHandler {
     private boolean useEntitlement(MapleFamilyEntry entry, MapleFamilyEntitlement entitlement) {
         if(entry.useEntitlement(entitlement)) {
             entry.gainReputation(-entitlement.getRepCost(), false);
-            entry.getChr().announce(MaplePacketCreator.getFamilyInfo(entry));
+            entry.getChr().announce(EnterGamePackets.familyInfo(entry));
             return true;
         }
         return false;

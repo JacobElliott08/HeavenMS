@@ -1,4 +1,5 @@
 package net.server.channel.handlers;
+import tools.packets.character.EnterGamePackets;
 
 import client.MapleCharacter;
 import client.MapleClient;
@@ -32,7 +33,7 @@ public class FamilySummonResponseHandler extends AbstractMaplePacketHandler {
         } else {
             inviterEntry.refundEntitlement(MapleFamilyEntitlement.SUMMON_FAMILY);
             inviterEntry.gainReputation(MapleFamilyEntitlement.SUMMON_FAMILY.getRepCost(), false); //refund rep cost if declined
-            inviter.announce(MaplePacketCreator.getFamilyInfo(inviterEntry));
+            inviter.announce(EnterGamePackets.familyInfo(inviterEntry));
             inviter.dropMessage(5, c.getPlayer().getName() + " has denied the summon request.");
         }
     }

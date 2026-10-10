@@ -39,6 +39,12 @@ public class NpcRequirement extends MapleQuestRequirement {
 		processData(data);
 	}
 	
+	/** Constructor for JSON quest loading */
+	public NpcRequirement(MapleQuest quest, int npcId) {
+		super(MapleQuestRequirementType.NPC);
+		this.reqNPC = npcId;
+	}
+	
 	@Override
 	public void processData(MapleData data) {
 		reqNPC = MapleDataTool.getInt(data);
