@@ -68,6 +68,10 @@ public class MobStatusService extends BaseService {
     public void interruptMobStatus(int mapid, MonsterStatusEffect mse) {
         mobStatusSchedulers[getChannelSchedulerIndex(mapid)].interruptMobStatus(mse);
     }
+
+    public long remainingMobStatusMillis(int mapid, MonsterStatusEffect mse) {
+        return mobStatusSchedulers[getChannelSchedulerIndex(mapid)].remainingEntryMillis(mse);
+    }
     
     private class MobStatusScheduler extends BaseScheduler {
 
@@ -144,6 +148,10 @@ public class MobStatusService extends BaseService {
 
         public void interruptMobStatus(MonsterStatusEffect mse) {
             interruptEntry(mse);
+        }
+
+        public long remainingEntryMillis(MonsterStatusEffect mse) {
+            return super.remainingEntryMillis(mse);
         }
 
         @Override

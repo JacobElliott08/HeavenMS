@@ -38,6 +38,7 @@ import constants.skills.ILMage;
 import constants.skills.NightLord;
 import constants.skills.NightWalker;
 import constants.skills.Priest;
+import constants.skills.Rogue;
 import constants.skills.Shadower;
 import constants.skills.WhiteKnight;
 import java.awt.Point;
@@ -47,6 +48,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.HashMap;
+import java.util.IdentityHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -81,6 +83,8 @@ import net.server.coordinator.world.MapleMonsterAggroCoordinator;
 import server.MapleStatEffect;
 import server.loot.MapleLootManager;
 import server.maps.MapleSummon;
+import tools.packets.map.MobStatusPackets;
+import protocol.generated.maple.map.MobStatusOperation;
 
 public class MapleMonster extends AbstractLoadedMapleLife {
     
@@ -89,8 +93,9 @@ public class MapleMonster extends AbstractLoadedMapleLife {
     private AtomicInteger hp = new AtomicInteger(1);
     private AtomicLong maxHpPlusHeal = new AtomicLong(1);
     private int mp;
-    private WeakReference<MapleCharacter> controller = new WeakReference<>(null);
-    private boolean controllerHasAggro, controllerKnowsAboutAggro, controllerHasPuppet;
+    private volatile WeakReference<MapleCharacter> controller = new WeakReference<>(null);
+    private volatile boolean controllerHasAggro;
+    private boolean controllerKnowsAboutAggro, controllerHasPuppet;
     private Collection<MonsterListener> listeners = new LinkedList<>();
     private EnumMap<MonsterStatus, MonsterStatusEffect> stati = new EnumMap<>(MonsterStatus.class);
     private ArrayList<MonsterStatus> alreadyBuffed = new ArrayList<>();
@@ -165,8 +170,225 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         return dropsDisabled;
     }
 
+    // Set only by SpawnPoint, whose position was rebased by MapleMap.
+    private boolean groundSpawnRebased;
+
+    void markGroundSpawnRebased() {
+        groundSpawnRebased = true;
+    }
+
     public void setMap(MapleMap map) {
         this.map = map;
+        snapshotEnabled = YamlConfig.config.server.USE_SERVER_GROUND_MOBS;
+        boolean recoverSpawnFoothold = groundSpawnRebased;
+        groundSpawnRebased = false;
+        groundSimulation = snapshotEnabled && !fake
+                ? (recoverSpawnFoothold
+                    ? GroundMobSimulation.createAtAttachment(getId(), stats, map.getFootholds(), getFh(), getPosition(), getF() == 1)
+                    : GroundMobSimulation.create(getId(), stats, map.getFootholds(), getFh(), getPosition(), getF() == 1))
+                : null;
+        if (groundSimulation != null) {
+            if (stats.groundAttackProfile != null && groundAttack == null)
+                groundAttack = new GroundMobAttackSimulation(stats.groundAttackProfile);
+            setFh(groundSimulation.foothold());
+            setPosition(groundSimulation.position());
+            setStance(groundSimulation.stance());
+        }
+        captureGroundSnapshot();
+        if (lupinTraceEnabled()) {
+            lupinTrace("attach configured=" + snapshotEnabled + " fake=" + fake
+                    + " authority=" + (groundSimulation != null)
+                    + " profile=" + (stats.groundAttackProfile != null)
+                    + " attackFlag=" + stats.groundHasAttack + " jumpOnly=" + stats.groundJumpOnly
+                    + " boss=" + stats.isBoss() + " skills=" + stats.getSkills().size()
+                    + " revives=" + stats.getRevives().size() + " footholds=" + (map.getFootholds() != null)
+                    + " fh=" + getFh() + " rebase=" + recoverSpawnFoothold);
+        }
+        if (groundSimulation != null) map.startGroundMobSimulation();
+    }
+
+    private static final java.util.concurrent.atomic.AtomicLong groundInstances = new java.util.concurrent.atomic.AtomicLong();
+    private final long groundInstance = groundInstances.incrementAndGet();
+    private volatile GroundMobSimulation groundSimulation;
+    private GroundMobAttackSimulation groundAttack;
+    // Only server-owned attack mobs need a retry when legacy tryLock drops a
+    // damage-triggered controller switch. Keep an ID, never a retained client.
+    private final java.util.concurrent.atomic.AtomicInteger pendingGroundAggro =
+            new java.util.concurrent.atomic.AtomicInteger();
+    private boolean snapshotEnabled;
+    private long groundTick;
+    // State logs are rate-limited per mob. No player names, IDs or coordinates.
+    private String lupinLastTraceState;
+    private long lupinLastStateTraceNanos;
+    private volatile long lupinLastHitTraceNanos;
+    private volatile long lupinLastContentionTraceNanos;
+
+    private boolean lupinTraceEnabled() {
+        return getId() == 3210800 && YamlConfig.config.server.USE_LUPIN_ATTACK_TRACE;
+    }
+
+    private void lupinTrace(String message) {
+        if (lupinTraceEnabled()) {
+            System.out.println("[LupinTrace] map=" + (map == null ? 0 : map.getId())
+                    + " oid=" + getObjectId() + " instance=" + groundInstance + " " + message);
+        }
+    }
+
+    // Called under monsterLock. The next differing state is logged after the
+    // limit, so transient oscillations do not produce a line every tick.
+    private void lupinTraceState(MapleCharacter controller, MapleCharacter target,
+                                 GroundMobSimulation simulation, boolean interrupted) {
+        String reason;
+        if (controller == null) reason = "no_controller";
+        else if (!isControllerHasAggro()) reason = "no_aggro";
+        else if (target != null) reason = "eligible";
+        else if (!controller.isLoggedinWorld()) reason = "offline";
+        else if (controller.isChangingMaps()) reason = "transition";
+        else if (controller.getMap() != map) reason = "wrong_map";
+        else if (!controller.isAlive()) reason = "dead";
+        else if (controller.isHidden()) reason = "hidden";
+        else if (controller.isDarkSightActive()) reason = "dark_sight";
+        else reason = "puppet_or_changed";
+        String blocked = !interrupted ? "none" : simulation.isInHitReaction() ? "hit_reaction"
+                : isHermitShadowWebbed() ? "web" : isBuffed(MonsterStatus.STUN) ? "stun"
+                : isBuffed(MonsterStatus.FREEZE) ? "freeze"
+                : isBuffed(MonsterStatus.NEUTRALISE) ? "neutralise" : "changed";
+        String range = target == null ? "unknown"
+                : getPosition().distanceSq(target.getPosition()) <=
+                    stats.groundAttackProfile.range() * stats.groundAttackProfile.range() ? "in" : "out";
+        String lifecycle = groundAttack.isAttacking() ? "attacking"
+                : groundAttack.isActive() ? "recovery" : "idle";
+        String state = "target=" + reason + " grounded=" + simulation.isGrounded()
+                + " blocked=" + blocked + " range=" + range + " lifecycle=" + lifecycle;
+        long now = System.nanoTime();
+        if (!state.equals(lupinLastTraceState)
+                && (lupinLastTraceState == null || now - lupinLastStateTraceNanos >= 1_000_000_000L)) {
+            lupinLastTraceState = state;
+            lupinLastStateTraceNanos = now;
+            lupinTrace("state " + state);
+        }
+    }
+
+    private void lupinTraceEvent(GroundMobAttackSimulation.Event event, int damage) {
+        if (lupinTraceEnabled()) {
+            lupinTrace("event phase=" + event.phase() + " attack=" + event.attackId()
+                    + " collision=" + event.collision() + " damage=" + damage
+                    + " broadcast=returned playersSnapshot=" + map.getAllPlayers().size());
+        }
+    }
+    // Publication avoids acquiring monsterLock in sendSpawnData (visibility lock
+    // ordering), while ensuring entry/controller snapshots are a coherent tick.
+    private record GroundSnapshot(long tick, boolean authority, int x, int y,
+                                  int foothold, int stance, boolean alive) {}
+    private volatile GroundSnapshot groundSnapshot;
+
+    private void captureGroundSnapshot() {
+        Point p = getPosition();
+        groundSnapshot = snapshotEnabled ? new GroundSnapshot(groundTick, isServerGroundAuthority(),
+                p.x, p.y, getFh(), getStance(), isAlive()) : null;
+    }
+
+    private byte[] groundSnapshotPacket(GroundSnapshot s) {
+        return tools.packets.map.MobSnapshotPackets.snapshot(map.getId(), getObjectId(),
+                groundInstance, s.tick(), s.authority(), new Point(s.x(), s.y()),
+                s.foothold(), s.stance(), s.alive());
+    }
+
+    public boolean isServerGroundAuthority() { return groundSimulation != null; }
+    public boolean hasServerGroundAttack() { return groundSimulation != null && groundAttack != null; }
+
+    public void announceMobAuthority(MapleClient client) {
+        GroundSnapshot s = groundSnapshot;
+        if (s != null) client.announce(groundSnapshotPacket(s));
+    }
+
+    private void broadcastGroundSnapshot() {
+        ++groundTick;
+        captureGroundSnapshot();
+        map.broadcastMessage(groundSnapshotPacket(groundSnapshot));
+    }
+
+    private void retryGroundAttackAggro() {
+        int cid = pendingGroundAggro.get();
+        if (cid == 0) return;
+        if (!hasServerGroundAttack() || !isAlive() || map.getMapObject(getObjectId()) != this) {
+            pendingGroundAggro.compareAndSet(cid, 0);
+            return;
+        }
+        MapleCharacter candidate = map.getCharacterById(cid);
+        // Reuse the coordinator's DPS/puppet policy; do not revive stale damage
+        // or choose a target independently of normal controller ownership.
+        if (candidate == null || !candidate.isLoggedinWorld() || candidate.getMap() != map
+                || !candidate.isAlive() || candidate.isHidden()
+                || !getMapAggroCoordinator().isLeadingCharacterAggro(this, candidate)) {
+            if (pendingGroundAggro.compareAndSet(cid, 0) && lupinTraceEnabled())
+                lupinTrace("controller action=damage_retry_discarded");
+            return;
+        }
+        aggroSwitchController(candidate, true); // Nonblocking, retry next map tick on contention.
+        if (getController() == candidate && isControllerHasAggro()
+                && pendingGroundAggro.compareAndSet(cid, 0) && lupinTraceEnabled()) {
+            lupinTrace("controller action=damage_retry_succeeded");
+        }
+    }
+
+    public void tickGroundAuthority() {
+        if (!isServerGroundAuthority()) return;
+        // Before monsterLock: no new blocking monster/controller lock ordering.
+        retryGroundAttackAggro();
+        lockMonster();
+        try {
+            GroundMobSimulation simulation = groundSimulation;
+            if (simulation == null || !isAlive() || map.getMapObject(getObjectId()) != this) return;
+            boolean webbed = isHermitShadowWebbed();
+            boolean stopped = isBuffed(MonsterStatus.STUN) || isBuffed(MonsterStatus.FREEZE) || webbed;
+            Integer slow = getStatusValue(MonsterStatus.SPEED);
+            int speedPercent = slow == null ? 0 : slow;
+            if (groundAttack != null) {
+                MapleCharacter controller = getController();
+                MapleCharacter target = isControllerHasAggro() ? controller : null;
+                if (target != null && (!target.isLoggedinWorld() || target.isChangingMaps()
+                        || target.getMap() != map || !target.isAlive() || target.isHidden()
+                        || target.isDarkSightActive() || isCharacterPuppetInVicinity(target))) target = null;
+                boolean interrupted = simulation.isInHitReaction() || webbed
+                        || isBuffed(MonsterStatus.STUN) || isBuffed(MonsterStatus.FREEZE)
+                        || isBuffed(MonsterStatus.NEUTRALISE);
+                if (lupinTraceEnabled()) lupinTraceState(controller, target, simulation, interrupted);
+                for (GroundMobAttackSimulation.Event event : groundAttack.tick(getPosition(),
+                        target == null ? 0 : target.getId(), target == null ? null : target.getPosition(),
+                        simulation.isGrounded(), interrupted)) {
+                    int damage = -1;
+                    if (event.phase() == GroundMobAttackSimulation.Phase.IMPACT && event.collision() && target != null) {
+                        damage = new net.server.channel.handlers.TakeDamageHandler().applyServerGroundImpact(
+                                target, this, GroundMobAttackDamage.roll(target, this, stats.groundAttackProfile),
+                                event.left() ? 1 : 0,
+                                applied -> {
+                                    map.broadcastMessage(tools.packets.map.MobAttackPackets.event(
+                                            map.getId(), getObjectId(), groundInstance, event, applied));
+                                    lupinTraceEvent(event, applied);
+                                });
+                    }
+                    if (damage < 0) {
+                        map.broadcastMessage(tools.packets.map.MobAttackPackets.event(
+                                map.getId(), getObjectId(), groundInstance, event, damage));
+                        lupinTraceEvent(event, damage);
+                    }
+                    if (!isAlive() || map.getMapObject(getObjectId()) != this) return;
+                }
+                simulation.directAttackTarget(target == null ? null : target.getPosition().x,
+                        groundAttack.isAttacking(), groundAttack.isFacingLeft());
+            }
+            simulation.tick(stopped, speedPercent);
+            setFh(simulation.foothold());
+            setStance(webbed ? 4 + (simulation.stance() & 1) : simulation.stance());
+            setPosition(simulation.position());
+            ++groundTick;
+            captureGroundSnapshot();
+            map.moveMonster(this, getPosition());
+            map.broadcastMessage(groundSnapshotPacket(groundSnapshot));
+        } finally {
+            unlockMonster();
+        }
     }
     
     public int getParentMobOid() {
@@ -378,6 +600,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
     
     public synchronized void disposeMapObject() {     // mob is no longer associated with the map it was in
         hp.set(-1);
+        if (isServerGroundAuthority()) broadcastGroundSnapshot();
     }
     
     public void broadcastMobHpBar(MapleCharacter from) {
@@ -437,6 +660,15 @@ public class MapleMonster extends AbstractLoadedMapleLife {
 
             if (damage > 0) {
                 this.applyDamage(attacker, damage, stayAlive, false);
+                if (isServerGroundAuthority()) {
+                    if (isAlive() && damage >= stats.pushed) {
+                        groundSimulation.hit(attacker.getPosition().x);
+                        setStance(groundSimulation.stance());
+                    }
+                    // Terminal state precedes KILL_MOB, freezing corpse/drop coordinates
+                    // without changing the client's existing delayed impact/death schedule.
+                    broadcastGroundSnapshot();
+                }
                 if (!this.isAlive()) {  // monster just died
                     System.out.println("[MapleMonster->damage] Monster " + this.getObjectId() + " just died! Setting lastHit=true, HP: " + hp.get());
                     lastHit = true;
@@ -461,7 +693,10 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         if (trueDamage == null) {
             return;
         }
-        
+        recordDamage(from, trueDamage, fake);
+    }
+
+    private void recordDamage(MapleCharacter from, int trueDamage, boolean fake) {
         if (YamlConfig.config.server.USE_DEBUG) {
             from.dropMessage(5, "Hitted MOB " + this.getId() + ", OID " + this.getObjectId());
         }
@@ -1047,17 +1282,39 @@ public class MapleMonster extends AbstractLoadedMapleLife {
     
     @Override
     public void sendSpawnData(MapleClient client) {
-        if (hp.get() <= 0) { // mustn't monsterLock this function
-            return;
-        }
-        if (fake) {
-            client.announce(MaplePacketCreator.spawnFakeMonster(this, 0));
-        } else {
-            client.announce(MaplePacketCreator.spawnMonster(this, false));
-        }
+        if (!isAlive()) return;
+        sendSpawnWithStatuses(client, () -> fake ? MaplePacketCreator.spawnFakeMonster(this, 0)
+                : MaplePacketCreator.spawnMonster(this, false));
         
         if (hasBossHPBar()) {
             client.announceBossHpBar(this, this.hashCode(), makeBossHPBarPacket());
+        }
+    }
+
+    /**
+     * Serialize spawn and status delivery with status changes, without taking monsterLock.
+     * Callers must not hold map character/object locks: spawn creation may take
+     * objectRLock, and status broadcasts take chrRLock while statiLock is held.
+     */
+    public void sendSpawnWithStatuses(MapleClient client, java.util.function.Supplier<byte[]> spawn) {
+        statiLock.lock();
+        try {
+            if (!isAlive()) return;
+            client.announce(spawn.get());
+            announceMobAuthority(client);
+            if (!stati.isEmpty()) {
+                MobStatusService service = statusService();
+                List<MobStatusPackets.Entry> entries = new ArrayList<>();
+                for (Entry<MonsterStatus, MonsterStatusEffect> active : stati.entrySet()) {
+                    MonsterStatusEffect effect = active.getValue();
+                    entries.add(statusEntry(active.getKey(), effect,
+                            service.remainingMobStatusMillis(map.getId(), effect)));
+                }
+                client.announce(MobStatusPackets.update(map.getId(), getObjectId(),
+                        MobStatusOperation.Apply, entries, true));
+            }
+        } finally {
+            statiLock.unlock();
         }
     }
 
@@ -1127,12 +1384,62 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         }
     }
     
-    private int broadcastStatusEffect(final MonsterStatusEffect status) {
-        int animationTime = status.getSkill().getAnimationTime();
-        byte[] packet = MaplePacketCreator.applyMonsterStatus(getObjectId(), status, null);
-        broadcastMonsterStatusMessage(packet);
-        
-        return animationTime;
+    private MobStatusService statusService() {
+        return (MobStatusService) map.getChannelServer().getServiceAccess(ChannelServices.MOB_STATUS);
+    }
+
+    private MobStatusPackets.Entry statusEntry(MonsterStatus stat, MonsterStatusEffect effect, long remaining) {
+        int source = effect.getSkill() == null ? 0 : effect.getSkill().getId();
+        return new MobStatusPackets.Entry(stat, effect.getStati().get(stat), remaining, source);
+    }
+
+    // All status mutation, scheduler registration and delivery is serialized by statiLock.
+    // MobStatusService invokes expiry/overtime callbacks only after releasing its locks.
+    private void broadcastFlatStatus(int operation, MonsterStatusEffect effect,
+                                     Collection<MonsterStatus> statuses, long remaining) {
+        if (statuses.isEmpty()) return;
+        List<MobStatusPackets.Entry> entries = new ArrayList<>();
+        for (MonsterStatus stat : statuses) entries.add(statusEntry(stat, effect, remaining));
+        broadcastMonsterStatusMessage(MobStatusPackets.update(map.getId(), getObjectId(), operation, entries));
+    }
+
+    private void replaceStatuses(MonsterStatusEffect effect) {
+        for (MonsterStatus stat : effect.getStati().keySet()) {
+            MonsterStatusEffect old = stati.remove(stat);
+            if (old != null) {
+                old.removeActiveStatus(stat);
+                if (old.getStati().isEmpty()) statusService().interruptMobStatus(map.getId(), old);
+            }
+            stati.put(stat, effect);
+            alreadyBuffed.add(stat);
+        }
+    }
+
+    private void cancelEffect(MonsterStatusEffect effect) {
+        statiLock.lock();
+        try {
+            Map<MonsterStatus, Integer> removed = new EnumMap<>(MonsterStatus.class);
+            for (MonsterStatus stat : new ArrayList<>(effect.getStati().keySet())) {
+                if (stati.get(stat) == effect) removed.put(stat, effect.getStati().get(stat));
+            }
+            if (!removed.isEmpty() && isAlive()) {
+                broadcastMonsterStatusMessage(MaplePacketCreator.cancelMonsterStatus(getObjectId(), removed));
+                broadcastFlatStatus(MobStatusOperation.Cancel, effect, removed.keySet(), 0);
+            }
+            for (MonsterStatus stat : removed.keySet()) {
+                stati.remove(stat);
+                effect.removeActiveStatus(stat);
+            }
+            if (removed.containsKey(MonsterStatus.POISON) && !stati.containsKey(MonsterStatus.POISON)) {
+                setVenomMulti(0);
+            }
+        } finally {
+            statiLock.unlock();
+        }
+    }
+
+    private static boolean isDisorder(int skillId) {
+        return skillId == Rogue.DISORDER || skillId == NightWalker.DISORDER;
     }
     
     public boolean applyStatus(MapleCharacter from, final MonsterStatusEffect status, boolean poison, long duration) {
@@ -1140,6 +1447,19 @@ public class MapleMonster extends AbstractLoadedMapleLife {
     }
 
     public boolean applyStatus(MapleCharacter from, final MonsterStatusEffect status, boolean poison, long duration, boolean venom) {
+        if (status.getSkill().getId() == Hermit.SHADOW_WEB) {
+            // Serialize application with ground ticks and legacy controller displacement.
+            lockMonster();
+            try {
+                return isAlive() && applyStatusInternal(from, status, poison, duration, venom);
+            } finally {
+                unlockMonster();
+            }
+        }
+        return applyStatusInternal(from, status, poison, duration, venom);
+    }
+
+    private boolean applyStatusInternal(MapleCharacter from, final MonsterStatusEffect status, boolean poison, long duration, boolean venom) {
         switch (getMonsterEffectiveness(status.getSkill().getElement())) {
             case IMMUNE:
             case STRONG:
@@ -1182,47 +1502,8 @@ public class MapleMonster extends AbstractLoadedMapleLife {
             }
         }
 
-        final Channel ch = map.getChannelServer();
         final int mapid = map.getId();
-        if(statis.size() > 0) {
-            statiLock.lock();
-            try {
-                for (MonsterStatus stat : statis.keySet()) {
-                    final MonsterStatusEffect oldEffect = stati.get(stat);
-                    if (oldEffect != null) {
-                        oldEffect.removeActiveStatus(stat);
-                        if (oldEffect.getStati().isEmpty()) {
-                            MobStatusService service = (MobStatusService) map.getChannelServer().getServiceAccess(ChannelServices.MOB_STATUS);
-                            service.interruptMobStatus(mapid, oldEffect);
-                        }
-                    }
-                }
-            } finally {
-                statiLock.unlock();
-            }
-        }
-        
-        final Runnable cancelTask = new Runnable() {
-
-            @Override
-            public void run() {
-                if (isAlive()) {
-                    byte[] packet = MaplePacketCreator.cancelMonsterStatus(getObjectId(), status.getStati());
-                    broadcastMonsterStatusMessage(packet);
-                }
-                
-                statiLock.lock();
-                try {
-                    for (MonsterStatus stat : status.getStati().keySet()) {
-                        stati.remove(stat);
-                    }
-                } finally {
-                    statiLock.unlock();
-                }
-                
-                setVenomMulti(0);
-            }
-        };
+        final Runnable cancelTask = () -> cancelEffect(status);
         
         Runnable overtimeAction = null;
         int overtimeDelay = -1;
@@ -1232,7 +1513,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
             int poisonLevel = from.getSkillLevel(status.getSkill());
             int poisonDamage = Math.min(Short.MAX_VALUE, (int) (getMaxHp() / (70.0 - poisonLevel) + 0.999));
             status.setValue(MonsterStatus.POISON, Integer.valueOf(poisonDamage));
-            animationTime = broadcastStatusEffect(status);
+            animationTime = status.getSkill().getAnimationTime();
             
             overtimeAction = new DamageTask(poisonDamage, from, status, 0);
             overtimeDelay = 1000;
@@ -1259,100 +1540,93 @@ public class MapleMonster extends AbstractLoadedMapleLife {
                 poisonDamage = Math.min(Short.MAX_VALUE, poisonDamage);
                 status.setValue(MonsterStatus.VENOMOUS_WEAPON, Integer.valueOf(poisonDamage));
                 status.setValue(MonsterStatus.POISON, Integer.valueOf(poisonDamage));
-                animationTime = broadcastStatusEffect(status);
+                animationTime = status.getSkill().getAnimationTime();
                 
                 overtimeAction = new DamageTask(poisonDamage, from, status, 0);
                 overtimeDelay = 1000;
             } else {
                 return false;
             }
-            /*
-        } else if (status.getSkill().getId() == Hermit.SHADOW_WEB || status.getSkill().getId() == NightWalker.SHADOW_WEB) { //Shadow Web
-            int webDamage = (int) (getMaxHp() / 50.0 + 0.999);
-            status.setValue(MonsterStatus.SHADOW_WEB, Integer.valueOf(webDamage));
-            animationTime = broadcastStatusEffect(status);
-            
+        } else if (status.getSkill().getId() == Hermit.SHADOW_WEB) {
+            // The original disabled Shadow Web branch used ceil(max HP / 50)
+            // every 3500 ms. Legacy status values are signed 16-bit, like poison.
+            int webDamage = (int) Math.min(Short.MAX_VALUE, (getMaxHp() + 49L) / 50L);
+            status.setValue(MonsterStatus.SHADOW_WEB, webDamage);
+            animationTime = status.getSkill().getAnimationTime();
             overtimeAction = new DamageTask(webDamage, from, status, 1);
             overtimeDelay = 3500;
-            */
         } else if (status.getSkill().getId() == 4121004 || status.getSkill().getId() == 4221004) { // Ninja Ambush
             final Skill skill = SkillFactory.getSkill(status.getSkill().getId());
             final byte level = from.getSkillLevel(skill);
             final int damage = (int) ((from.getStr() + from.getLuk()) * ((3.7 * skill.getEffect(level).getDamage()) / 100));
             
             status.setValue(MonsterStatus.NINJA_AMBUSH, Integer.valueOf(damage));
-            animationTime = broadcastStatusEffect(status);
+            animationTime = status.getSkill().getAnimationTime();
             
             overtimeAction = new DamageTask(damage, from, status, 2);
             overtimeDelay = 1000;
         } else {
-            animationTime = broadcastStatusEffect(status);
+            animationTime = status.getSkill().getAnimationTime();
         }
         
         statiLock.lock();
         try {
-            for (MonsterStatus stat : status.getStati().keySet()) {
-                stati.put(stat, status);
-                alreadyBuffed.add(stat);
+            if (isDisorder(status.getSkill().getId())) {
+                if (stats.isBoss()) return false;
+                for (MonsterStatusEffect active : stati.values()) {
+                    if (active.getSkill() != null && isDisorder(active.getSkill().getId())) return false;
+                }
+            }
+            if (status.getStati().isEmpty()) return false;
+            replaceStatuses(status);
+            MobStatusService service = statusService();
+            long statusDuration = status.getSkill().getId() == Hermit.SHADOW_WEB
+                    ? duration : duration + animationTime - 100;
+            service.registerMobStatus(mapid, status, cancelTask, statusDuration, overtimeAction, overtimeDelay);
+            broadcastMonsterStatusMessage(MaplePacketCreator.applyMonsterStatus(getObjectId(), status, null));
+            broadcastFlatStatus(MobStatusOperation.Apply, status, status.getStati().keySet(),
+                    service.remainingMobStatusMillis(mapid, status));
+            if (status.getSkill().getId() == Hermit.SHADOW_WEB && !isServerGroundAuthority()) {
+                // Bring controllers and observers to the last server-accepted position.
+                broadcastMonsterStatusMessage(MaplePacketCreator.moveMonster(getObjectId(), false,
+                        -1, 0, 0, 0, getPosition(), getIdleMovement(), getIdleMovementDataLength()));
             }
         } finally {
             statiLock.unlock();
         }
-        
-        MobStatusService service = (MobStatusService) map.getChannelServer().getServiceAccess(ChannelServices.MOB_STATUS);
-        service.registerMobStatus(mapid, status, cancelTask, duration + animationTime - 100, overtimeAction, overtimeDelay);
         return true;
     }
     
     public final void dispelSkill(final MobSkill skillId) {
-        List<MonsterStatus> toCancel = new ArrayList<MonsterStatus>();
-        for (Entry<MonsterStatus, MonsterStatusEffect> effects : stati.entrySet()) {
-            MonsterStatusEffect mse = effects.getValue();
-            if (mse.getMobSkill() != null && mse.getMobSkill().getSkillId() == skillId.getSkillId()) { //not checking for level.
-                toCancel.add(effects.getKey());
+        statiLock.lock();
+        try {
+            List<MonsterStatus> toCancel = new ArrayList<MonsterStatus>();
+            for (Entry<MonsterStatus, MonsterStatusEffect> effects : stati.entrySet()) {
+                MonsterStatusEffect mse = effects.getValue();
+                if (mse.getMobSkill() != null && mse.getMobSkill().getSkillId() == skillId.getSkillId()) {
+                    toCancel.add(effects.getKey());
+                }
             }
-        }
-        for (MonsterStatus stat : toCancel) {
-            debuffMobStat(stat);
+            for (MonsterStatus stat : toCancel) debuffMobStat(stat);
+        } finally {
+            statiLock.unlock();
         }
     }
     
     public void applyMonsterBuff(final Map<MonsterStatus, Integer> stats, final int x, int skillId, long duration, MobSkill skill, final List<Integer> reflection) {
-        final Runnable cancelTask = new Runnable() {
-
-            @Override
-            public void run() {
-                if (isAlive()) {
-                    byte[] packet = MaplePacketCreator.cancelMonsterStatus(getObjectId(), stats);
-                    broadcastMonsterStatusMessage(packet);
-                    
-                    statiLock.lock();
-                    try {
-                        for (final MonsterStatus stat : stats.keySet()) {
-                            stati.remove(stat);
-                        }
-                    } finally {
-                        statiLock.unlock();
-                    }
-                }
-            }
-        };
         final MonsterStatusEffect effect = new MonsterStatusEffect(stats, null, skill, true);
-        byte[] packet = MaplePacketCreator.applyMonsterStatus(getObjectId(), effect, reflection);
-        broadcastMonsterStatusMessage(packet);
-        
         statiLock.lock();
         try {
-            for (MonsterStatus stat : stats.keySet()) {
-                stati.put(stat, effect);
-                alreadyBuffed.add(stat);
-            }
+            if (effect.getStati().isEmpty()) return;
+            replaceStatuses(effect);
+            MobStatusService service = statusService();
+            service.registerMobStatus(map.getId(), effect, () -> cancelEffect(effect), duration);
+            broadcastMonsterStatusMessage(MaplePacketCreator.applyMonsterStatus(getObjectId(), effect, reflection));
+            broadcastFlatStatus(MobStatusOperation.Apply, effect, effect.getStati().keySet(),
+                    service.remainingMobStatusMillis(map.getId(), effect));
         } finally {
             statiLock.unlock();
         }
-        
-        MobStatusService service = (MobStatusService) map.getChannelServer().getServiceAccess(ChannelServices.MOB_STATUS);
-        service.registerMobStatus(map.getId(), effect, cancelTask, duration);
     }
     
     public void refreshMobPosition() {
@@ -1360,6 +1634,32 @@ public class MapleMonster extends AbstractLoadedMapleLife {
     }
     
     public void resetMobPosition(Point newPoint) {
+        if (isServerGroundAuthority()) {
+            lockMonster();
+            try {
+                if (newPoint.equals(getPosition())) {
+                    broadcastGroundSnapshot();
+                    return;
+                }
+                // Only server-side resets enter here. Rebase on real ground or
+                // explicitly hand this exceptional case back to legacy control.
+                server.maps.MapleFoothold fh = map.getFootholds().findBelow(newPoint);
+                GroundMobSimulation rebased = fh == null ? null : GroundMobSimulation.create(
+                        getId(), stats, map.getFootholds(), fh.getId(), newPoint, isFacingLeft());
+                groundSimulation = rebased;
+                if (rebased != null) {
+                    setFh(rebased.foothold());
+                    map.moveMonster(this, rebased.position());
+                    setStance(rebased.stance());
+                    broadcastGroundSnapshot();
+                    return;
+                }
+                setPosition(newPoint);
+                broadcastGroundSnapshot(); // explicit Legacy transition
+            } finally {
+                unlockMonster();
+            }
+        }
         aggroRemoveController();
         
         setPosition(newPoint);
@@ -1370,17 +1670,18 @@ public class MapleMonster extends AbstractLoadedMapleLife {
     }
 
     private void debuffMobStat(MonsterStatus stat) {
-        MonsterStatusEffect oldEffect;
         statiLock.lock();
         try {
-            oldEffect = stati.remove(stat);
+            MonsterStatusEffect oldEffect = stati.get(stat);
+            if (oldEffect == null) return;
+            Map<MonsterStatus, Integer> removed = Collections.singletonMap(stat, oldEffect.getStati().get(stat));
+            broadcastMonsterStatusMessage(MaplePacketCreator.cancelMonsterStatus(getObjectId(), removed));
+            broadcastFlatStatus(MobStatusOperation.Cancel, oldEffect, removed.keySet(), 0);
+            stati.remove(stat);
+            oldEffect.removeActiveStatus(stat);
+            if (oldEffect.getStati().isEmpty()) statusService().interruptMobStatus(map.getId(), oldEffect);
         } finally {
             statiLock.unlock();
-        }
-        
-        if (oldEffect != null) {
-            byte[] packet = MaplePacketCreator.cancelMonsterStatus(getObjectId(), oldEffect.getStati());
-            broadcastMonsterStatusMessage(packet);
         }
     }
     
@@ -1427,6 +1728,16 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         statiLock.lock();
         try {
             return stati.containsKey(status);
+        } finally {
+            statiLock.unlock();
+        }
+    }
+
+    public boolean isHermitShadowWebbed() {
+        statiLock.lock();
+        try {
+            MonsterStatusEffect web = stati.get(MonsterStatus.SHADOW_WEB);
+            return web != null && web.getSkill() != null && web.getSkill().getId() == Hermit.SHADOW_WEB;
         } finally {
             statiLock.unlock();
         }
@@ -1665,6 +1976,10 @@ public class MapleMonster extends AbstractLoadedMapleLife {
 
         @Override
         public void run() {
+            if (type == 1 && status.getSkill().getId() == Hermit.SHADOW_WEB) {
+                tickHermitShadowWeb();
+                return;
+            }
             int curHp = hp.get();
             if(curHp <= 1) {
                 MobStatusService service = (MobStatusService) map.getChannelServer().getServiceAccess(ChannelServices.MOB_STATUS);
@@ -1695,6 +2010,46 @@ public class MapleMonster extends AbstractLoadedMapleLife {
                         map.broadcastMessage(MaplePacketCreator.damageMonster(getObjectId(), damage), getPosition());
                     }
                 }
+            }
+        }
+
+        private void tickHermitShadowWeb() {
+            // Application and mob movement use the same outer lock. Check the
+            // exact effect under statiLock: scheduler callbacks may already have
+            // been collected when a refresh or expiry removed this instance.
+            lockMonster();
+            try {
+                int actualDamage = 0;
+                statiLock.lock();
+                try {
+                    if (stati.get(MonsterStatus.SHADOW_WEB) != status || !isAlive()
+                            || MapleMonster.this.map != map || map.getMapObject(getObjectId()) != MapleMonster.this
+                            || chr.getMap() != map
+                            || statusService().remainingMobStatusMillis(map.getId(), status) <= 0) {
+                        return;
+                    }
+                    int curHp = hp.get();
+                    int damage = Math.min(dealDamage, Math.max(0, curHp - 1));
+                    if (damage > 0) {
+                        Integer applied = applyAndGetHpDamage(damage, true);
+                        actualDamage = applied == null ? 0 : applied;
+                        if (actualDamage > 0) {
+                            broadcastMonsterStatusMessage(MaplePacketCreator.damageMonster(getObjectId(), actualDamage));
+                        }
+                    }
+                    // Preserve the original nonlethal web interruption behavior.
+                    if (isAlive() && (curHp <= 1 || actualDamage < dealDamage)) {
+                        statusService().interruptMobStatus(map.getId(), status);
+                    }
+                } finally {
+                    statiLock.unlock();
+                }
+                // Listener callbacks must not run while holding statiLock.
+                if (actualDamage > 0) {
+                    recordDamage(chr, actualDamage, false);
+                }
+            } finally {
+                unlockMonster();
             }
         }
     }
@@ -1769,7 +2124,31 @@ public class MapleMonster extends AbstractLoadedMapleLife {
     public Map<MonsterStatus, MonsterStatusEffect> getStati() {
         statiLock.lock();
         try {
-            return new HashMap<>(stati);
+            // Callers encode/read this after releasing statiLock. Copy each
+            // effect too: replacement or expiry mutates its active stat map.
+            Map<MonsterStatusEffect, MonsterStatusEffect> copies = new IdentityHashMap<>();
+            Map<MonsterStatus, MonsterStatusEffect> snapshot = new EnumMap<>(MonsterStatus.class);
+            for (Entry<MonsterStatus, MonsterStatusEffect> entry : stati.entrySet()) {
+                MonsterStatusEffect effect = entry.getValue();
+                MonsterStatusEffect copy = copies.get(effect);
+                if (copy == null) {
+                    copy = new MonsterStatusEffect(effect.getStati(), effect.getSkill(),
+                            effect.getMobSkill(), effect.isMonsterSkill());
+                    copies.put(effect, copy);
+                }
+                snapshot.put(entry.getKey(), copy);
+            }
+            return snapshot;
+        } finally {
+            statiLock.unlock();
+        }
+    }
+
+    public Integer getStatusValue(MonsterStatus stat) {
+        statiLock.lock();
+        try {
+            MonsterStatusEffect effect = stati.get(stat);
+            return effect == null ? null : effect.getStati().get(stat);
         } finally {
             statiLock.unlock();
         }
@@ -1887,7 +2266,9 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         MapleCharacter newControllerWithPuppet = null;
         
         for (MapleCharacter chr : getMap().getAllPlayers()) {
-            if (!chr.isHidden()) {
+            // Do not let a stale map snapshot candidate mask an eligible controller.
+            // Keep the switch-time checks too, since world/map state can change.
+            if (!chr.isHidden() && chr.isLoggedinWorld() && chr.getMap() == this.getMap()) {
                 int ctrlMonsSize = chr.getNumControlledMonsters();
 
                 if (isCharacterPuppetInVicinity(chr)) {
@@ -1940,6 +2321,8 @@ public class MapleMonster extends AbstractLoadedMapleLife {
             if (!this.isFake()) chrController.announce(MaplePacketCreator.stopControllingMonster(this.getObjectId()));
             chrController.stopControllingMonster(this);
         }
+        if (lupinTraceEnabled() && chrController != null)
+            lupinTrace("controller action=removed hadAggro=" + hadAggro);
         
         return new Pair<>(chrController, hadAggro);
     }
@@ -1954,11 +2337,14 @@ public class MapleMonster extends AbstractLoadedMapleLife {
             try {
                 MapleCharacter prevController = getController();
                 if (prevController == newController) {
-                    return;
+                    // A queued damage target may have been assigned idle by a
+                    // concurrent controller update. Complete its pending aggro.
+                    if (!(hasServerGroundAttack() && immediateAggro && newController != null)) return;
+                } else {
+                    aggroRemoveController();
                 }
-                
-                aggroRemoveController();
                 if (!(newController != null && newController.isLoggedinWorld() && newController.getMap() == this.getMap())) {
+                    if (lupinTraceEnabled()) lupinTrace("controller action=rejected_candidate");
                     return;
                 }
                 
@@ -1973,6 +2359,13 @@ public class MapleMonster extends AbstractLoadedMapleLife {
             this.aggroUpdatePuppetVisibility();
             aggroMonsterControl(newController.getClient(), this, immediateAggro);
             newController.controlMonster(this);
+            if (lupinTraceEnabled()) lupinTrace("controller action=assigned immediateAggro=" + immediateAggro);
+        } else if (lupinTraceEnabled()) {
+            long now = System.nanoTime();
+            if (lupinLastContentionTraceNanos == 0 || now - lupinLastContentionTraceNanos >= 1_000_000_000L) {
+                lupinLastContentionTraceNanos = now;
+                lupinTrace("controller action=contended immediateAggro=" + immediateAggro);
+            }
         }
     }
     
@@ -2124,14 +2517,30 @@ public class MapleMonster extends AbstractLoadedMapleLife {
      * 
      */
     public void aggroMonsterDamage(MapleCharacter attacker, int damage) {
+        boolean traceHit = false;
+        boolean beforeAggro = false;
+        if (lupinTraceEnabled()) {
+            long now = System.nanoTime();
+            if (lupinLastHitTraceNanos == 0 || now - lupinLastHitTraceNanos >= 1_000_000_000L) {
+                lupinLastHitTraceNanos = now;
+                traceHit = true;
+                beforeAggro = isControllerHasAggro();
+            }
+        }
         MapleMonsterAggroCoordinator mmac = this.getMapAggroCoordinator();
         mmac.addAggroDamage(this, attacker.getId(), damage);
         
         MapleCharacter chrController = this.getController();    // aggro based on DPS rather than first-come-first-served, now live after suggestions thanks to MedicOP, Thora, Vcoc
+        String decision = "same_controller";
         if (chrController != attacker) {
             if (this.getMapAggroCoordinator().isLeadingCharacterAggro(this, attacker)) {
+                decision = "leading_switch";
+                if (hasServerGroundAttack()) pendingGroundAggro.set(attacker.getId());
                 this.aggroSwitchController(attacker, true);
+                if (getController() == attacker && isControllerHasAggro())
+                    pendingGroundAggro.compareAndSet(attacker.getId(), 0);
             } else {
+                decision = "existing_controller";
                 this.setControllerHasAggro(true);
                 this.aggroUpdatePuppetVisibility();
             }
@@ -2149,10 +2558,18 @@ public class MapleMonster extends AbstractLoadedMapleLife {
             this.setControllerHasAggro(true);
             this.aggroUpdatePuppetVisibility();
         }
+        if (traceHit) {
+            MapleCharacter after = getController();
+            lupinTrace("hit damage=" + damage + " decision=" + decision
+                    + " controllerBefore=" + (chrController != null)
+                    + " aggroBefore=" + beforeAggro + " controllerAfter=" + (after != null)
+                    + " attackerControls=" + (after == attacker)
+                    + " aggroAfter=" + isControllerHasAggro());
+        }
     }
     
     private static void aggroMonsterControl(MapleClient c, MapleMonster mob, boolean immediateAggro) {
-        c.announce(MaplePacketCreator.controlMonster(mob, false, immediateAggro));
+        mob.sendSpawnWithStatuses(c, () -> MaplePacketCreator.controlMonster(mob, false, immediateAggro));
     }
     
     private void aggroRefreshPuppetVisibility(MapleCharacter chrController, MapleSummon puppet) {

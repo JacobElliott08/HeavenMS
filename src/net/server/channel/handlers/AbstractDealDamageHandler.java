@@ -111,7 +111,7 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
 
         public int numAttacked, numDamage, numAttackedAndDamage, skill, skilllevel, stance, direction, rangedirection, charge, display;
         public Map<Integer, List<Integer>> allDamage;
-        public boolean ranged, magic;
+        public boolean ranged, magic, authoritativeDamage;
         public int speed = 4;
         public Point position = new Point();
         
@@ -137,6 +137,36 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
         }
     }
 
+    protected static boolean isDisorderSkill(int skillId) {
+        return skillId == Rogue.DISORDER || skillId == NightWalker.DISORDER;
+    }
+
+    protected static boolean shouldRejectDisorderTarget(AttackInfo attack, MapleCharacter player) {
+        if (!isDisorderSkill(attack.skill)) {
+            return false;
+        }
+        if (attack.allDamage != null && attack.allDamage.size() > 1) {
+            return true;
+        }
+        if (attack.allDamage == null) {
+            return false;
+        }
+
+        for (Integer oid : attack.allDamage.keySet()) {
+            MapleMonster monster = player.getMap().getMonsterByOid(oid);
+            if (monster == null) {
+                continue;
+            }
+            for (MonsterStatus stat : new MonsterStatus[]{MonsterStatus.WATK, MonsterStatus.WDEF}) {
+                MonsterStatusEffect effect = monster.getStati(stat);
+                if (effect != null && effect.getSkill() != null && isDisorderSkill(effect.getSkill().getId())) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     protected void applyAttack(AttackInfo attack, final MapleCharacter player, int attackCount) {
         final MapleMap map = player.getMap();
         if (map.isOwnershipRestricted(player)) {
@@ -148,6 +178,10 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
         final int job = player.getJob().getId();
         try {
             if (player.isBanned()) {
+                return;
+            }
+            if (shouldRejectDisorderTarget(attack, player)) {
+                player.announce(MaplePacketCreator.enableActions());
                 return;
             }
             if (attack.skill != 0) {
@@ -165,6 +199,10 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
                 int mobCount = attackEffect.getMobCount();
                 if (attack.skill != Cleric.HEAL) {
                     if (player.isAlive()) {
+                        if (player.isDarkSightActive()) {
+                            player.cancelDarkSight();
+                        }
+
                         if(attack.skill == Aran.BODY_PRESSURE || attack.skill == Marauder.ENERGY_CHARGE || attack.skill == ThunderBreaker.ENERGY_CHARGE) {  // thanks IxianMace for noticing Energy Charge skills refreshing on touch
                             // prevent touch dmg skills refreshing
                         } else if(attack.skill == DawnWarrior.FINAL_ATTACK || attack.skill == WindArcher.FINAL_ATTACK) {
@@ -277,11 +315,21 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
                         AutobanFactory.DISTANCE_HACK.alert(player, "Distance Sq to monster: " + distance + " SID: " + attack.skill + " MID: " + monster.getId());
                         monster.refreshMobPosition();
                     }
+                    if (isDisorderSkill(attack.skill)) {
+                        if (attackEffect != null && attackEffect.makeChanceResult()) {
+                            monster.applyStatus(player, new MonsterStatusEffect(attackEffect.getMonsterStati(), theSkill, null, false),
+                                    attackEffect.isPoison(), attackEffect.getDuration());
+                        }
+                        continue;
+                    }
                     
                     int totDamageToOneMonster = 0;
                     List<Integer> onedList = attack.allDamage.get(oned);
                     
-                    if (attack.magic) { // thanks BHB, Alex (CanIGetaPR) for noticing no immunity status check here
+                    if (attack.authoritativeDamage) {
+                        // The FlatBuffer adapter already resolved immunity per hit,
+                        // including misses, before replicating the authoritative result.
+                    } else if (attack.magic) { // thanks BHB, Alex (CanIGetaPR) for noticing no immunity status check here
                         if (monster.isBuffed(MonsterStatus.MAGIC_IMMUNITY)) {
                             Collections.fill(onedList, 1);
                         }
@@ -335,7 +383,7 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
                                 }
                             }
                         }
-                    } else if (attack.skill == Marauder.ENERGY_DRAIN || attack.skill == ThunderBreaker.ENERGY_DRAIN || attack.skill == NightWalker.VAMPIRE || attack.skill == Assassin.DRAIN) {
+                    } else if (attack.skill == Marauder.ENERGY_DRAIN || attack.skill == ThunderBreaker.ENERGY_DRAIN || attack.skill == NightWalker.VAMPIRE) {
                         player.addHP(Math.min(monster.getMaxHp(), Math.min((int) ((double) totDamage * (double) SkillFactory.getSkill(attack.skill).getEffect(player.getSkillLevel(SkillFactory.getSkill(attack.skill))).getX() / 100.0), player.getCurrentMaxHp() / 2)));
                     } else if (attack.skill == Bandit.STEAL) {
                         Skill steal = SkillFactory.getSkill(Bandit.STEAL);
@@ -542,7 +590,15 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
                             map.broadcastMessage(MaplePacketCreator.damageMonster(monster.getObjectId(), totDamageToOneMonster));
                         }
                         
-                        map.damageMonster(player, monster, totDamageToOneMonster);
+                        int drainTargetHp = attack.skill == Assassin.DRAIN ? monster.getHp() : 0;
+                        if (map.damageMonster(player, monster, totDamageToOneMonster) && drainTargetHp > 0) {
+                            // Count HP removed, not overkill or HP lost to a scripted death.
+                            int dealt = Math.min(totDamageToOneMonster, drainTargetHp - Math.max(0, monster.getHp()));
+                            int heal = (int) (dealt * (long) attackEffect.getX() / 100);
+                            if (heal > 0) {
+                                player.addHP(Math.min(heal, player.getCurrentMaxHp() / 2));
+                            }
+                        }
                     }
                     if (monster.isBuffed(MonsterStatus.WEAPON_REFLECT) && !attack.magic) {
                         List<Pair<Integer, Integer>> mobSkills = monster.getSkills();
@@ -797,10 +853,9 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
             calcDmgMax *= 1.4;
         }
         
-        boolean shadowPartner = false;
-        if(chr.getBuffEffect(MapleBuffStat.SHADOWPARTNER) != null) {
-            shadowPartner = true;
-        }	
+        boolean shadowPartner = chr.getBuffEffect(MapleBuffStat.SHADOWPARTNER) != null
+                && ret.numDamage >= 2 && ret.numDamage % 2 == 0;
+        double shadowScale = shadowPartnerScale(chr, ret.skill);
 		
         if(ret.skill != 0) {
             int fixed = ret.getAttackEffect(chr, SkillFactory.getSkill(ret.skill)).getFixDamage();
@@ -884,17 +939,21 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
             
             for (int j = 0; j < ret.numDamage; j++) {
                     int damage = lea.readInt();
+                    if (shadowPartner && j >= ret.numDamage / 2) {
+                        // Consume the wire line, but derive the duplicate from its
+                        // validated original. Never trust a second client roll or
+                        // duplicate an already doubled list again in a handler.
+                        int original = allDamageNumbers.get(j - ret.numDamage / 2);
+                        boolean critical = original < 0;
+                        int raw = critical ? original + Integer.MAX_VALUE : original;
+                        int scaled = Math.max(0, (int) (raw * shadowScale));
+                        allDamageNumbers.add(critical ? -Integer.MAX_VALUE + scaled : scaled);
+                        continue;
+                    }
                     long hitDmgMax = calcDmgMax;
                     if(ret.skill == Buccaneer.BARRAGE || ret.skill == ThunderBreaker.BARRAGE) {
                         if(j > 3)
                             hitDmgMax *= Math.pow(2, (j - 3));
-                    }
-                    if(shadowPartner) {
-                            // For shadow partner, the second half of the hits only do 50% damage. So calc that
-                            // in for the crit effects.
-                            if(j >= ret.numDamage / 2) {
-                                    hitDmgMax *= 0.5;
-                            }
                     }
 
                     if(ret.skill == Marksman.SNIPE) {
@@ -935,6 +994,15 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
             ret.position.setLocation(lea.readShort(), lea.readShort());
         }
         return ret;
+    }
+
+    protected static double shadowPartnerScale(MapleCharacter chr, int skillId) {
+        MapleStatEffect partner = chr.getBuffEffect(MapleBuffStat.SHADOWPARTNER);
+        if (partner == null) {
+            return 1.0;
+        }
+        // WZ: x is basic attack damage, y is skill attack damage.
+        return Math.max(0, Math.min(100, skillId == 0 ? partner.getX() : partner.getY())) / 100.0;
     }
 
     private static int rand(int l, int u) {

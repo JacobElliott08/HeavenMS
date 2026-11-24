@@ -57,6 +57,8 @@ import protocol.generated.maple.network.Packet;
 import protocol.generated.maple.login.LoginServerListRequest;
 import protocol.generated.maple.map.PlayerMove;
 import protocol.generated.maple.npc.NpcDialogueResponse;
+import protocol.generated.maple.combat.AttackRequest;
+import net.server.channel.handlers.FlatBufferAttackHandler;
 import net.server.channel.handlers.NpcDialogueResponseHandler;
 import net.server.channel.handlers.MovePlayerHandler;
 import net.server.handlers.login.ServerlistRequestHandler;
@@ -226,6 +228,50 @@ public class MapleServerHandler extends IoHandlerAdapter {
                     protocol.generated.maple.character.QuestAction action = new protocol.generated.maple.character.QuestAction();
                     packet.clientMessage(action);
                     new net.server.channel.handlers.QuestActionHandler().handleFlatBufferAction(action, client);
+                    return;
+                }
+                case ClientMessage.protocol_generated_maple_combat_AttackRequest: {
+                    AttackRequest attackRequest = new AttackRequest();
+                    packet.clientMessage(attackRequest);
+                    new FlatBufferAttackHandler().handleFlatBufferAttack(attackRequest, client);
+                    return;
+                }
+                case ClientMessage.protocol_generated_maple_character_SkillBookUseRequest: {
+                    if (channel < 0 || client == null || !client.isLoggedIn() || client.getPlayer() == null) {
+                        return;
+                    }
+                    try {
+                        if (packet.version() != protocol.generated.maple.network.ProtocolVersion.V1
+                                || packet.serverMessageType() != protocol.generated.maple.network.ServerMessage.NONE) {
+                            return;
+                        }
+                        protocol.generated.maple.character.SkillBookUseRequest request =
+                                new protocol.generated.maple.character.SkillBookUseRequest();
+                        if (packet.clientMessage(request) != null) {
+                            new net.server.channel.handlers.SkillBookHandler().handleFlatBufferRequest(request, client);
+                        }
+                    } catch (IndexOutOfBoundsException | IllegalArgumentException malformed) {
+                        // Malformed book payloads cannot reach inventory mutation.
+                    }
+                    return;
+                }
+                case ClientMessage.protocol_generated_maple_character_SkillMacroUpdate: {
+                    if (channel < 0 || client == null || !client.isLoggedIn() || client.getPlayer() == null) {
+                        return;
+                    }
+                    try {
+                        if (packet.version() != protocol.generated.maple.network.ProtocolVersion.V1
+                                || packet.serverMessageType() != protocol.generated.maple.network.ServerMessage.NONE) {
+                            return;
+                        }
+                        protocol.generated.maple.character.SkillMacroUpdate update =
+                                new protocol.generated.maple.character.SkillMacroUpdate();
+                        if (packet.clientMessage(update) != null) {
+                            new net.server.channel.handlers.SkillMacroFlatBufferHandler().handle(update, client);
+                        }
+                    } catch (IndexOutOfBoundsException | IllegalArgumentException malformed) {
+                        // Malformed macro state cannot reach character persistence.
+                    }
                     return;
                 }
                 default:

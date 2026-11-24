@@ -37,10 +37,14 @@ import constants.skills.Brawler;
 import constants.skills.Corsair;
 import constants.skills.DarkKnight;
 import constants.skills.Hero;
+import constants.skills.Hermit;
+import constants.skills.NightWalker;
 import constants.skills.Paladin;
 import constants.skills.Priest;
+import constants.skills.Rogue;
 import constants.skills.SuperGM;
 import net.server.Server;
+import constants.game.GameConstants;
 
 public final class SpecialMoveHandler extends AbstractMaplePacketHandler {
     
@@ -63,6 +67,11 @@ public final class SpecialMoveHandler extends AbstractMaplePacketHandler {
         Point pos = null;
         int __skillLevel = slea.readByte();
         Skill skill = SkillFactory.getSkill(skillid);
+        if (skillid == Hermit.SHADOW_WEB && (skill == null
+                || !GameConstants.isInJobTree(skillid, chr.getJob().getId()))) {
+            c.announce(MaplePacketCreator.enableActions());
+            return;
+        }
         int skillLevel = chr.getSkillLevel(skill);
         if (skillid % 10000000 == 1010 || skillid % 10000000 == 1011) {
             if (chr.getDojoEnergy() < 10000) { // PE hacking or maybe just lagging
@@ -73,9 +82,21 @@ public final class SpecialMoveHandler extends AbstractMaplePacketHandler {
             c.announce(MaplePacketCreator.getEnergy("energy", chr.getDojoEnergy()));
             c.announce(MaplePacketCreator.serverNotice(5, "As you used the secret skill, your energy bar has been reset."));
         }
-        if (skillLevel == 0 || skillLevel != __skillLevel) return;
+        if (skillLevel <= 0 || skillLevel != __skillLevel
+                || (skillid == Hermit.SHADOW_WEB && skillLevel > skill.getMaxLevel())) {
+            if (skillid == Hermit.SHADOW_WEB) c.announce(MaplePacketCreator.enableActions());
+            return;
+        }
         
         MapleStatEffect effect = skill.getEffect(skillLevel);
+        if ((skillid == Rogue.DARK_SIGHT || skillid == NightWalker.DARK_SIGHT) && chr.isDarkSightActive()) {
+            chr.cancelDarkSight();
+            c.announce(MaplePacketCreator.enableActions());
+            return;
+        }
+        if (chr.isDarkSightActive() && effect.getStatups().isEmpty()) {
+            chr.cancelDarkSight();
+        }
         if (effect.getCooldown() > 0) {
             if (chr.skillIsCooling(skillid)) {
                 return;
@@ -131,7 +152,11 @@ public final class SpecialMoveHandler extends AbstractMaplePacketHandler {
         if (chr.isAlive()) {
             if (skill.getId() != Priest.MYSTIC_DOOR) {
                 if (skill.getId() % 10000000 != 1005) {
-                    skill.getEffect(skillLevel).applyTo(chr, pos);
+                    boolean applied = skill.getEffect(skillLevel).applyTo(chr, pos);
+                    if (applied && skillid == Hermit.SHADOW_WEB) {
+                        chr.getMap().broadcastMessage(chr,
+                                MaplePacketCreator.showBuffeffect(chr.getId(), skillid, 1), false);
+                    }
                 } else {
                     skill.getEffect(skillLevel).applyEchoOfHero(chr);
                 }

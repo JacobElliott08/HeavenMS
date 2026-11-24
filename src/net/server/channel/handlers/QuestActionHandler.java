@@ -86,7 +86,7 @@ public final class QuestActionHandler extends AbstractMaplePacketHandler {
             case 2:
                 if (isNpcNearby(pos, player, quest, npc) && quest.canComplete(player, npc)) {
                     if (req.selection() >= 0) {
-                        quest.complete(player, npc, req.selection());
+                        quest.complete(player, npc, (int) req.selection());
                     } else {
                         quest.complete(player, npc);
                     }

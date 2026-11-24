@@ -215,8 +215,8 @@ public class QuestScriptManager extends AbstractScriptManager {
 		return qms.get(c);
 	}
         
-        public void reloadQuestScripts() {
-                scripts.clear();
-                qms.clear();
-        }
+	public void reloadQuestScripts() {
+    	scripts.clear();
+        qms.clear();
+	}
 }

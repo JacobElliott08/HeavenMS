@@ -1744,97 +1744,7 @@ public class MaplePacketCreator {
         }
 
         /**
-         * Gets a packet telling the client to show an EXP increase.
-         *
-         * @param gain The amount of EXP gained.
-         * @param inChat In the chat box?
-         * @param white White text or yellow?
-         * @return The exp gained packet.
-         */
-        public static byte[] getShowExpGain(int gain, int equip, int party, boolean inChat, boolean white) {
-                System.out.println("[MaplePacketCreator->getShowExpGain] Gain: " + gain + ", Equip: " + equip + ", Party: " + party + ", InChat: " + inChat + ", White: " + white);
-                final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-                mplew.writeShort(SendOpcode.SHOW_STATUS_INFO.getValue());
-                mplew.write(3); // 3 = exp, 4 = fame, 5 = mesos, 6 = guildpoints
-                mplew.writeBool(white);
-                mplew.writeInt(gain);
-                mplew.writeBool(inChat);
-                mplew.writeInt(0); // bonus event exp
-                mplew.write(0); // third monster kill event
-                mplew.write(0); // RIP byte, this is always a 0
-                mplew.writeInt(0); //wedding bonus
-                if (inChat) { // quest bonus rate stuff
-                        mplew.write(0);
-                }
-
-                mplew.write(0); //0 = party bonus, 100 = 1x Bonus EXP, 200 = 2x Bonus EXP
-                mplew.writeInt(party); // party bonus 
-                mplew.writeInt(equip); //equip bonus
-                mplew.writeInt(0); //Internet Cafe Bonus
-                mplew.writeInt(0); //Rainbow Week Bonus
-                return mplew.getPacket();
-        }
-
-        /**
-         * Gets a packet telling the client to show a fame gain.
-         *
-         * @param gain How many fame gained.
-         * @return The meso gain packet.
-         */
-        public static byte[] getShowFameGain(int gain) {
-                System.out.println("[MaplePacketCreator->getShowFameGain] Gain: " + gain);
-                final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-                mplew.writeShort(SendOpcode.SHOW_STATUS_INFO.getValue());
-                mplew.write(4);
-                mplew.writeInt(gain);
-                return mplew.getPacket();
-        }
-
-        /**
-         * Gets a packet telling the client to show a meso gain.
-         *
-         * @param gain How many mesos gained.
-         * @return The meso gain packet.
-         */
-        public static byte[] getShowMesoGain(int gain) {
-                return getShowMesoGain(gain, false);
-        }
-
-        /**
-         * Gets a packet telling the client to show a meso gain.
-         *
-         * @param gain How many mesos gained.
-         * @param inChat Show in the chat window?
-         * @return The meso gain packet.
-         */
-        public static byte[] getShowMesoGain(int gain, boolean inChat) {
-                System.out.println("[MaplePacketCreator->getShowMesoGain] Gain: " + gain + ", InChat: " + inChat);
-                final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-                mplew.writeShort(SendOpcode.SHOW_STATUS_INFO.getValue());
-                if (!inChat) {
-                        mplew.write(0);
-                        mplew.writeShort(1); //v83
-                } else {
-                        mplew.write(5);
-                }
-                mplew.writeInt(gain);
-                mplew.writeShort(0);
-                return mplew.getPacket();
-        }
-
-        /**
-         * Gets a packet telling the client to show a item gain.
-         *
-         * @param itemId The ID of the item gained.
-         * @param quantity How many items gained.
-         * @return The item gain packet.
-         */
-        public static byte[] getShowItemGain(int itemId, short quantity) {
-                return getShowItemGain(itemId, quantity, false);
-        }
-
-        /**
-         * Gets a packet telling the client to show an item gain.
+         * Gets a packet telling the client to show an item gain in chat.
          *
          * @param itemId The ID of the item gained.
          * @param quantity The number of items gained.
@@ -1844,20 +1754,11 @@ public class MaplePacketCreator {
         public static byte[] getShowItemGain(int itemId, short quantity, boolean inChat) {
                 System.out.println("[MaplePacketCreator->getShowItemGain] ItemId: " + itemId + ", Quantity: " + quantity + ", InChat: " + inChat);
                 final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-                if (inChat) {
-                        mplew.writeShort(SendOpcode.SHOW_ITEM_GAIN_INCHAT.getValue());
-                        mplew.write(3);
-                        mplew.write(1);
-                        mplew.writeInt(itemId);
-                        mplew.writeInt(quantity);
-                } else {
-                        mplew.writeShort(SendOpcode.SHOW_STATUS_INFO.getValue());
-                        mplew.writeShort(0);
-                        mplew.writeInt(itemId);
-                        mplew.writeInt(quantity);
-                        mplew.writeInt(0);
-                        mplew.writeInt(0);
-                }
+                mplew.writeShort(SendOpcode.SHOW_ITEM_GAIN_INCHAT.getValue());
+                mplew.write(3);
+                mplew.write(1);
+                mplew.writeInt(itemId);
+                mplew.writeInt(quantity);
                 return mplew.getPacket();
         }
 
@@ -3502,91 +3403,6 @@ public class MaplePacketCreator {
                 return mplew.getPacket();
         }
         
-        public static byte[] getNPCTalk(int npc, byte msgType, String talk, String endBytes, byte speaker) {
-                return LegacyNPCPackets.getNPCTalk(npc, msgType, talk, endBytes, speaker);
-        }
-        
-        public static byte[] getNPCTalk(MapleNPC npc, byte msgType, String talk, String endBytes, byte speaker) {
-                return LegacyNPCPackets.getNPCTalk(npc, msgType, talk, endBytes, speaker);
-        }
-
-        public static byte[] getDimensionalMirror(String talk) {
-                System.out.println("[MaplePacketCreator->getDimensionalMirror] Talk: " + talk);
-                final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-                mplew.writeShort(SendOpcode.NPC_TALK.getValue());
-                mplew.write(4); // ?
-                mplew.writeInt(9010022);
-                mplew.write(0x0E);
-                mplew.write(0);
-                mplew.writeInt(0);
-                mplew.writeMapleAsciiString(talk);
-                return mplew.getPacket();
-        }
-
-        public static byte[] getNPCTalkStyle(int npc, String talk, int styles[]) {
-                return LegacyNPCPackets.getNPCTalkStyle(npc, talk, styles);
-        }
-        
-        public static byte[] getNPCTalkStyle(MapleNPC npc, String talk, int styles[]) {
-                return LegacyNPCPackets.getNPCTalkStyle(npc, talk, styles);
-        }
-
-        public static byte[] getNPCTalkNum(int npc, String talk, int def, int min, int max) {
-                return LegacyNPCPackets.getNPCTalkNum(npc, talk, def, min, max);
-        }
-        
-        public static byte[] getNPCTalkNum(MapleNPC npc, String talk, int def, int min, int max) {
-                return LegacyNPCPackets.getNPCTalkNum(npc, talk, def, min, max);
-        }
-
-        public static byte[] getNPCTalkText(int npc, String talk, String def) {
-                return LegacyNPCPackets.getNPCTalkText(npc, talk, def);
-        }
-        
-        public static byte[] getNPCTalkText(MapleNPC npc, String talk, String def) {
-                return LegacyNPCPackets.getNPCTalkText(npc, talk, def);
-        }
-        
-        // NPC Quiz packets thanks to Eric
-        public static byte[] OnAskQuiz(int nSpeakerTypeID, int nSpeakerTemplateID, int nResCode, String sTitle, String sProblemText, String sHintText, int nMinInput, int nMaxInput, int tRemainInitialQuiz) {
-                System.out.println("[MaplePacketCreator->OnAskQuiz] SpeakerTemplateID: " + nSpeakerTemplateID + ", ResCode: " + nResCode);
-                MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter(); 
-                mplew.writeShort(SendOpcode.NPC_TALK.getValue()); 
-                mplew.write(nSpeakerTypeID); 
-                mplew.writeInt(nSpeakerTemplateID); 
-                mplew.write(0x6); 
-                mplew.write(0); 
-                mplew.write(nResCode); 
-                if (nResCode == 0x0) {//fail has no bytes <3 
-                        mplew.writeMapleAsciiString(sTitle); 
-                        mplew.writeMapleAsciiString(sProblemText); 
-                        mplew.writeMapleAsciiString(sHintText); 
-                        mplew.writeShort(nMinInput); 
-                        mplew.writeShort(nMaxInput); 
-                        mplew.writeInt(tRemainInitialQuiz); 
-                } 
-                return mplew.getPacket(); 
-        } 
-
-        public static byte[] OnAskSpeedQuiz(int nSpeakerTypeID, int nSpeakerTemplateID, int nResCode, int nType, int dwAnswer, int nCorrect, int nRemain, int tRemainInitialQuiz) {
-                System.out.println("[MaplePacketCreator->OnAskSpeedQuiz] SpeakerTemplateID: " + nSpeakerTemplateID + ", ResCode: " + nResCode + ", Type: " + nType);
-                MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter(); 
-                mplew.writeShort(SendOpcode.NPC_TALK.getValue()); 
-                mplew.write(nSpeakerTypeID); 
-                mplew.writeInt(nSpeakerTemplateID); 
-                mplew.write(0x7); 
-                mplew.write(0); 
-                mplew.write(nResCode); 
-                if (nResCode == 0x0) {//fail has no bytes <3 
-                        mplew.writeInt(nType); 
-                        mplew.writeInt(dwAnswer); 
-                        mplew.writeInt(nCorrect); 
-                        mplew.writeInt(nRemain); 
-                        mplew.writeInt(tRemainInitialQuiz); 
-                } 
-                return mplew.getPacket(); 
-        }
-
         public static byte[] showBuffeffect(int cid, int skillid, int effectid) {
                 return showBuffeffect(cid, skillid, effectid, (byte) 3);
         }
@@ -3678,7 +3494,7 @@ public class MaplePacketCreator {
                 mplew.write(0);
                 for (int x = 0; x < 90; x++) {
                         MapleKeyBinding binding = keybindings.get(Integer.valueOf(x));
-                        if (binding != null) {
+                        if (binding != null && binding.getType() != 8) {
                                 mplew.write(binding.getType());
                                 mplew.writeInt(binding.getAction());
                         } else {
@@ -3729,25 +3545,6 @@ public class MaplePacketCreator {
 
         public static byte[] getInventoryFull() {
                 return modifyInventory(true, Collections.<ModifyInventory>emptyList());
-        }
-
-        public static byte[] getShowInventoryFull() {
-                return getShowInventoryStatus(0xff);
-        }
-
-        public static byte[] showItemUnavailable() {
-                return getShowInventoryStatus(0xfe);
-        }
-
-        public static byte[] getShowInventoryStatus(int mode) {
-                System.out.println("[MaplePacketCreator->getShowInventoryStatus] Mode: " + mode);
-                final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-                mplew.writeShort(SendOpcode.SHOW_STATUS_INFO.getValue());
-                mplew.write(0);
-                mplew.write(mode);
-                mplew.writeInt(0);
-                mplew.writeInt(0);
-                return mplew.getPacket();
         }
 
         public static byte[] getStorage(int npcId, byte slots, Collection<Item> items, int meso) {
@@ -6842,34 +6639,6 @@ public class MaplePacketCreator {
                 mplew.writeMapleAsciiString(entry.getName()); //name
         }
 
-        public static byte[] updateAreaInfo(int area, String info) {
-                System.out.println("[MaplePacketCreator->updateAreaInfo] Area: " + area + ", Info: " + info);
-                final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-                mplew.writeShort(SendOpcode.SHOW_STATUS_INFO.getValue());
-                mplew.write(0x0A); //0x0B in v95
-                mplew.writeShort(area);//infoNumber
-                mplew.writeMapleAsciiString(info);
-                return mplew.getPacket();
-        }
-
-        public static byte[] getGPMessage(int gpChange) {
-                System.out.println("[MaplePacketCreator->getGPMessage] GpChange: " + gpChange);
-                final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter(7);
-                mplew.writeShort(SendOpcode.SHOW_STATUS_INFO.getValue());
-                mplew.write(6);
-                mplew.writeInt(gpChange);
-                return mplew.getPacket();
-        }
-
-        public static byte[] getItemMessage(int itemid) {
-                System.out.println("[MaplePacketCreator->getItemMessage] ItemId: " + itemid);
-                final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter(7);
-                mplew.writeShort(SendOpcode.SHOW_STATUS_INFO.getValue());
-                mplew.write(7);
-                mplew.writeInt(itemid);
-                return mplew.getPacket();
-        }
-
         public static byte[] addCard(boolean full, int cardid, int level) {
                 final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter(11);
                 mplew.writeShort(SendOpcode.MONSTER_BOOK_SET_CARD.getValue());
@@ -7137,14 +6906,6 @@ public class MaplePacketCreator {
 
         public static byte[] updateQuestFinish(short quest, int npc, short nextquest) { //Check
                 return tools.packets.character.QuestPacket.finish(quest, npc, nextquest);
-        }
-
-        public static byte[] showInfoText(String text) {
-                final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-                mplew.writeShort(SendOpcode.SHOW_STATUS_INFO.getValue());
-                mplew.write(9);
-                mplew.writeMapleAsciiString(text);
-                return mplew.getPacket();
         }
 
         public static byte[] questError(short quest) {
@@ -7660,23 +7421,6 @@ public class MaplePacketCreator {
                 return mplew.getPacket();
         }
 
-        public static byte[] getDojoInfo(String info) {
-                final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-                mplew.writeShort(SendOpcode.SHOW_STATUS_INFO.getValue());
-                mplew.write(10);
-                mplew.write(new byte[]{(byte) 0xB7, 4});//QUEST ID f5
-                mplew.writeMapleAsciiString(info);
-                return mplew.getPacket();
-        }
-
-        public static byte[] getDojoInfoMessage(String message) {
-                final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-                mplew.writeShort(SendOpcode.SHOW_STATUS_INFO.getValue());
-                mplew.write(9);
-                mplew.writeMapleAsciiString(message);
-                return mplew.getPacket();
-        }
-
         /**
          * Gets a "block" packet (ie. the cash shop is unavailable, etc)
          *
@@ -7714,15 +7458,6 @@ public class MaplePacketCreator {
                 final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
                 mplew.writeShort(SendOpcode.BLOCKED_SERVER.getValue());
                 mplew.write(type);
-                return mplew.getPacket();
-        }
-
-        public static byte[] updateDojoStats(MapleCharacter chr, int belt) {
-                final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-                mplew.writeShort(SendOpcode.SHOW_STATUS_INFO.getValue());
-                mplew.write(10);
-                mplew.write(new byte[]{(byte) 0xB7, 4}); //?
-                mplew.writeMapleAsciiString("pt=" + chr.getDojoPoints() + ";belt=" + belt + ";tuto=" + (chr.getFinishedDojoTutorial() ? "1" : "0"));
                 return mplew.getPacket();
         }
 
@@ -7815,14 +7550,6 @@ public class MaplePacketCreator {
                 return mplew.getPacket();
         }
 
-        public static byte[] itemExpired(int itemid) {
-                final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-                mplew.writeShort(SendOpcode.SHOW_STATUS_INFO.getValue());
-                mplew.write(2);
-                mplew.writeInt(itemid);
-                return mplew.getPacket();
-        }
-
         private static String getRightPaddedStr(String in, char padchar, int length) {
                 StringBuilder builder = new StringBuilder(in);
                 for (int x = in.length(); x < length; x++) {
@@ -7907,14 +7634,6 @@ public class MaplePacketCreator {
                 mplew.writeShort(SendOpcode.SORT_ITEM_RESULT.getValue());
                 mplew.write(0);
                 mplew.write(inv);
-                return mplew.getPacket();
-        }
-
-        public static byte[] bunnyPacket() {
-                final MaplePacketLittleEndianWriter mplew = new MaplePacketLittleEndianWriter();
-                mplew.writeShort(SendOpcode.SHOW_STATUS_INFO.getValue());
-                mplew.write(9);
-                mplew.writeAsciiString("Protect the Moon Bunny!!!");
                 return mplew.getPacket();
         }
 

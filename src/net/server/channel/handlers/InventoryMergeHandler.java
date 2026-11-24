@@ -28,9 +28,10 @@ import tools.MaplePacketCreator;
 import tools.data.input.SeekableLittleEndianAccessor;
 import client.MapleCharacter;
 import client.MapleClient;
-import client.inventory.Item;
 import client.inventory.MapleInventory;
 import client.inventory.MapleInventoryType;
+import client.inventory.ModifyInventory;
+import java.util.List;
 import net.server.Server;
 import server.MapleItemInformationProvider;
 
@@ -57,50 +58,14 @@ public final class InventoryMergeHandler extends AbstractMaplePacketHandler {
 	MapleInventory inventory = c.getPlayer().getInventory(inventoryType);
         inventory.lockInventory();
         try {
-            //------------------- RonanLana's SLOT MERGER -----------------
-        
             MapleItemInformationProvider ii = MapleItemInformationProvider.getInstance();
-            Item srcItem, dstItem;
-
-            for(short dst = 1; dst <= inventory.getSlotLimit(); dst++) {
-                dstItem = inventory.getItem(dst);
-                if(dstItem == null) continue;
-
-                for(short src = (short)(dst + 1); src <= inventory.getSlotLimit(); src++) {
-                    srcItem = inventory.getItem(src);
-                    if(srcItem == null) continue;
-
-                    if(dstItem.getItemId() != srcItem.getItemId()) continue;
-                    if(dstItem.getQuantity() == ii.getSlotMax(c, inventory.getItem(dst).getItemId())) break;
-
-                    MapleInventoryManipulator.move(c, inventoryType, src, dst);
-                }
-            }
-
-            //------------------------------------------------------------
-
-            inventory = c.getPlayer().getInventory(inventoryType);
-            boolean sorted = false;
-
-            while (!sorted) {
-                short freeSlot = inventory.getNextFreeSlot();
-
-                if (freeSlot != -1) {
-                    short itemSlot = -1;
-                    for (short i = (short) (freeSlot + 1); i <= inventory.getSlotLimit(); i = (short) (i + 1)) {
-                        if (inventory.getItem(i) != null) {
-                            itemSlot = i;
-                            break;
-                        }
-                    }
-                    if (itemSlot > 0) {
-                        MapleInventoryManipulator.move(c, inventoryType, itemSlot, freeSlot);
-                    } else {
-                        sorted = true;
-                    }
-                } else {
-                    sorted = true;
-                }
+            InventoryGathering.mergeStacks(inventory, inventoryType,
+                    itemId -> ii.getSlotMax(c, itemId),
+                    (src, dst) -> MapleInventoryManipulator.move(c, inventoryType, src, dst));
+            List<ModifyInventory> modifications = InventoryGathering.compactAndSort(
+                    inventory, ii::getEquipLevelReq, ii::getName);
+            if (!modifications.isEmpty()) {
+                c.announce(MaplePacketCreator.modifyInventory(true, modifications));
             }
         } finally {
             inventory.unlockInventory();

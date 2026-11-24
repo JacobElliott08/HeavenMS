@@ -42,15 +42,29 @@ public final class UseItemHandler extends AbstractMaplePacketHandler {
     @Override
     public final void handlePacket(SeekableLittleEndianAccessor slea, MapleClient c) {
         MapleCharacter chr = c.getPlayer();
+        slea.readInt();
+        short slot = slea.readShort();
+        int itemId = slea.readInt();
+
+        // A book has info/skill metadata, not a potion spec. In particular,
+        // never remove 228/229 items before validating their book requirements.
+        if (SkillBookHandler.isSkillBook(itemId)) {
+            new SkillBookHandler().handleUseItemRequest(slot, itemId, c);
+            return;
+        }
+
+        int category = itemId / 10000;
+        if (category != 200 && category != 201 && category != 202 && category != 205
+                && !ItemConstants.isTownScroll(itemId) && !ItemConstants.isAntibanishScroll(itemId)) {
+            c.announce(MaplePacketCreator.enableActions());
+            return;
+        }
         
         if (!chr.isAlive()) {
             c.announce(MaplePacketCreator.enableActions());
             return;
         }
         MapleItemInformationProvider ii = MapleItemInformationProvider.getInstance();
-        slea.readInt();
-        short slot = slea.readShort();
-        int itemId = slea.readInt();
         Item toUse = chr.getInventory(MapleInventoryType.USE).getItem(slot);
         if (toUse != null && toUse.getQuantity() > 0 && toUse.getItemId() == itemId) {
             if (itemId == 2050004) {

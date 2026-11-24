@@ -10,10 +10,13 @@ import protocol.generated.maple.npc.NpcDialogue;
 import protocol.generated.maple.npc.Quest;
 import protocol.generated.maple.npc.Selection;
 import protocol.generated.maple.npc.Text;
+import protocol.generated.maple.npc.TextColor;
+import protocol.generated.maple.npc.TextEffect;
 import protocol.generated.maple.network.Packet;
 import protocol.generated.maple.network.ServerMessage;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /** Builds the FlatBuffers NPC dialogue response without legacy inline markup. */
@@ -35,7 +38,6 @@ public final class ReplyBuilder {
     private int numMax;
     private String textDefault = "";
     private int selectionIndex;
-
     private ReplyBuilder() {
     }
 
@@ -151,6 +153,14 @@ public final class ReplyBuilder {
     }
 
     private void dispatch(DialogueType dialogueType) {
+        client.setNpcReplySent(true);
+        byte[] packet = serialize(dialogueType);
+        System.out.println("[FlatBuffers->NpcDialogue] NpcId: " + npcId + ", Type: " + dialogueType + ", Elements: " + elements.size());
+        client.announce(packet);
+    }
+
+    /** Serializes the current reply as a finished MSFB {@code Packet} buffer (no transport side effects). */
+    byte[] serialize(DialogueType dialogueType) {
         FlatBufferBuilder builder = new FlatBufferBuilder(1024);
         int[] elementOffsets = new int[elements.size()];
         byte[] elementTypes = new byte[elements.size()];
@@ -160,14 +170,14 @@ public final class ReplyBuilder {
             elementOffsets[i] = element.create(builder);
         }
 
-        int elementTypesOffset = NpcDialogue.createElementTypesVector(builder, elementTypes);
+        int elementTypesOffset = NpcDialogue.createElementsTypeVector(builder, elementTypes);
         int elementsOffset = NpcDialogue.createElementsVector(builder, elementOffsets);
         int textDefaultOffset = builder.createString(textDefault);
         NpcDialogue.startNpcDialogue(builder);
         NpcDialogue.addSpeakerType(builder, speakerType);
         NpcDialogue.addNpcId(builder, npcId);
         NpcDialogue.addDialogueType(builder, dialogueType.code);
-        NpcDialogue.addElementTypes(builder, elementTypesOffset);
+        NpcDialogue.addElementsType(builder, elementTypesOffset);
         NpcDialogue.addElements(builder, elementsOffset);
         NpcDialogue.addNumberDefault(builder, numDefault);
         NpcDialogue.addNumberMin(builder, numMin);
@@ -183,8 +193,7 @@ public final class ReplyBuilder {
         Packet.addServerMessageType(builder, ServerMessage.protocol_generated_maple_npc_NpcDialogue);
         int packet = Packet.endPacket(builder);
         Packet.finishPacketBuffer(builder, packet);
-        System.out.println("[FlatBuffers->NpcDialogue] NpcId: " + npcId + ", Type: " + dialogueType + ", Elements: " + elements.size());
-        client.announce(builder.sizedByteArray());
+        return builder.sizedByteArray();
     }
 
     public static void sendEnd(MapleClient client, int npcId) {
@@ -253,13 +262,25 @@ public final class ReplyBuilder {
         int create(FlatBufferBuilder builder) {
             switch (type) {
                 case DialogueElement.Text:
-                    int[] styleOffsets = new int[styles.length];
-                    for (int i = 0; i < styles.length; i++) {
-                        styleOffsets[i] = protocol.generated.maple.npc.TextStyle.createTextStyle(builder, styles[i].type, styles[i].value);
-                    }
-                    int stylesVector = Text.createStylesVector(builder, styleOffsets);
                     int value = builder.createString(text);
-                    return Text.createText(builder, value, stylesVector);
+
+                    // Typed styling: last color wins, effects are de-duplicated in call order.
+                    int typedColor = TextColor.Default;
+                    byte[] effects = new byte[styles.length];
+                    int effectCount = 0;
+                    for (TextStyle style : styles) {
+                        int c = style.typedColor();
+                        if (c >= 0) typedColor = c;
+                        int e = style.typedEffect();
+                        if (e > TextEffect.None && !contains(effects, effectCount, (byte) e)) effects[effectCount++] = (byte) e;
+                    }
+                    int effectsVector = effectCount == 0 ? 0 : Text.createEffectsVector(builder, Arrays.copyOf(effects, effectCount));
+
+                    Text.startText(builder);
+                    Text.addValue(builder, value);
+                    Text.addColor(builder, typedColor);
+                    if (effectsVector != 0) Text.addEffects(builder, effectsVector);
+                    return Text.endText(builder);
                 case DialogueElement.LineBreak:
                     LineBreak.startLineBreak(builder);
                     return LineBreak.endLineBreak(builder);
@@ -274,6 +295,13 @@ public final class ReplyBuilder {
                 default:
                     throw new IllegalStateException("Unknown NPC dialogue element: " + type);
             }
+        }
+
+        private static boolean contains(byte[] values, int count, byte value) {
+            for (int i = 0; i < count; i++) {
+                if (values[i] == value) return true;
+            }
+            return false;
         }
     }
 }

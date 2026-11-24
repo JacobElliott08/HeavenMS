@@ -175,6 +175,17 @@ public abstract class BaseScheduler {
         
         dispatchRemovedEntries(Collections.singletonList(key), false);
     }
+
+    /** Remaining scheduler lifetime, or zero when absent or awaiting removal. */
+    protected long remainingEntryMillis(Object key) {
+        lockScheduler();
+        try {
+            Pair<Runnable, Long> entry = registeredEntries.get(key);
+            return entry == null ? 0 : Math.max(0L, entry.getRight() - Server.getInstance().getCurrentTime());
+        } finally {
+            unlockScheduler();
+        }
+    }
     
     private void dispatchRemovedEntries(List<Object> toRemove, boolean fromUpdate) {
         for (SchedulerListener listener : listeners.toArray(new SchedulerListener[listeners.size()])) {

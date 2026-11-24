@@ -34,69 +34,124 @@ import client.inventory.manipulator.MapleInventoryManipulator;
 import server.MapleItemInformationProvider;
 import tools.MaplePacketCreator;
 import tools.data.input.SeekableLittleEndianAccessor;
+import protocol.generated.maple.character.SkillBookUseRequest;
+import protocol.generated.maple.character.SkillBookUseStatus;
+import tools.packets.character.SkillBookPackets;
+import tools.Randomizer;
 
 public final class SkillBookHandler extends AbstractMaplePacketHandler {
     @Override
     public final void handlePacket(SeekableLittleEndianAccessor slea, MapleClient c) {
-        if (!c.getPlayer().isAlive()) {
-            c.announce(MaplePacketCreator.enableActions());
+        // Retain the registered legacy adapter, sharing the same validation.
+        slea.readInt();
+        useBook(slea.readShort(), slea.readInt(), c, false);
+    }
+
+    public void handleFlatBufferRequest(SkillBookUseRequest request, MapleClient c) {
+        if (c == null || request == null || c.getPlayer() == null || !validateState(c)) {
             return;
         }
-        
-        slea.readInt();
-        short slot = (short) slea.readShort();
-        int itemId = slea.readInt();
-        
-        boolean canuse;
-        boolean success = false;
+        // Read all untrusted fields before mutating inventory.
+        short slot = request.slot();
+        int itemId = request.itemId();
+        handleUseItemRequest(slot, itemId, c);
+    }
+
+    // Older versions of this C++ client sent books through USE_ITEM. Keep
+    // those clicks on the same authoritative path and migrated result contract.
+    void handleUseItemRequest(short slot, int itemId, MapleClient c) {
+        if (c == null || c.getPlayer() == null || !validateState(c)) {
+            return;
+        }
+        useBook(slot, itemId, c, true);
+    }
+
+    private void useBook(short slot, int itemId, MapleClient c, boolean flatBuffer) {
+        MapleCharacter player = c.getPlayer();
+        int status = SkillBookUseStatus.Rejected;
         int skill = 0;
         int maxlevel = 0;
-        
-        MapleCharacter player = c.getPlayer();
-        if (c.tryacquireClient()) {
+        if (!c.tryacquireClient()) {
+            sendResult(c, itemId, skill, maxlevel, status, flatBuffer);
+            return;
+        }
+        try {
+            if (!player.isAlive() || player.isChangingMaps() || player.isAwayFromWorld() || player.getTrade() != null
+                    || slot <= 0 || !isSkillBook(itemId)) {
+                return;
+            }
+            MapleInventory inv = player.getInventory(MapleInventoryType.USE);
+            // Hold the existing inventory lock from validation through consumption
+            // and grant: a stale slot must never consume a replacement item.
+            inv.lockInventory();
             try {
-                MapleInventory inv = c.getPlayer().getInventory(MapleInventoryType.USE);
                 Item toUse = inv.getItem(slot);
-                if (toUse == null || toUse.getItemId() != itemId) {
+                if (!matchesBook(toUse, slot, itemId)) {
                     return;
                 }
-                Map<String, Integer> skilldata = MapleItemInformationProvider.getInstance().getSkillStats(toUse.getItemId(), c.getPlayer().getJob().getId());
+                Map<String, Integer> skilldata = MapleItemInformationProvider.getInstance().getSkillStats(toUse.getItemId(), player.getJob().getId());
                 if (skilldata == null) {
                     return;
                 }
-                Skill skill2 = SkillFactory.getSkill(skilldata.get("skillid"));
-                if (skilldata.get("skillid") == 0) {
-                    canuse = false;
-                } else if ((player.getSkillLevel(skill2) >= skilldata.get("reqSkillLevel") || skilldata.get("reqSkillLevel") == 0) && player.getMasterLevel(skill2) < skilldata.get("masterLevel")) {
-                    inv.lockInventory();
-                    try {
-                        Item used = inv.getItem(slot);
-                        if (used != toUse || toUse.getQuantity() < 1) {    // thanks ClouD for noticing skillbooks not being usable when stacked
-                            return;
-                        }
 
-                        MapleInventoryManipulator.removeFromSlot(c, MapleInventoryType.USE, slot, (short) 1, false);
-                    } finally {
-                        inv.unlockInventory();
-                    }
+                skill = skilldata.getOrDefault("skillid", 0);
+                maxlevel = skilldata.getOrDefault("masterLevel", 0);
+                Skill skill2 = skill > 0 ? SkillFactory.getSkill(skill) : null;
+                boolean canuse = skill2 != null && maxlevel <= skill2.getMaxLevel() && meetsBookRequirements(
+                        player.getSkillLevel(skill2),
+                        player.getMasterLevel(skill2),
+                        skilldata.getOrDefault("reqSkillLevel", 0),
+                        maxlevel);
 
-                    canuse = true;
-                    if (MapleItemInformationProvider.rollSuccessChance(skilldata.get("success"))) {
-                        success = true;
-                        player.changeSkillLevel(skill2, player.getSkillLevel(skill2), Math.max(skilldata.get("masterLevel"), player.getMasterLevel(skill2)), -1);
-                    } else {
-                        success = false;
-                        //player.dropMessage("The skill book lights up, but the skill winds up as if nothing happened.");
+                if (canuse) {
+                    MapleInventoryManipulator.removeFromSlot(c, MapleInventoryType.USE, slot, (short) 1, false);
+                    status = SkillBookUseStatus.Failed;
+                    // Book chance is the WZ percentage, not the configurable
+                    // scroll multiple-roll bonus in rollSuccessChance.
+                    if (succeeds(skilldata.getOrDefault("success", 0), Randomizer.nextInt(100))) {
+                        player.changeSkillLevel(skill2, player.getSkillLevel(skill2),
+                                Math.max(maxlevel, player.getMasterLevel(skill2)), -1);
+                        status = SkillBookUseStatus.Success;
                     }
-                } else {
-                    canuse = false;
                 }
             } finally {
-                c.releaseClient();
+                inv.unlockInventory();
             }
-            
-            // thanks Vcoc for noting skill book result not showing for all in area
-            player.getMap().broadcastMessage(MaplePacketCreator.skillBookResult(player, skill, maxlevel, canuse, success));
+        } finally {
+            c.releaseClient();
+            sendResult(c, itemId, skill, maxlevel, status, flatBuffer);
         }
+    }
+
+    private void sendResult(MapleClient c, int itemId, int skill, int maxlevel, int status, boolean flatBuffer) {
+        MapleCharacter player = c.getPlayer();
+        boolean attempted = status != SkillBookUseStatus.Rejected;
+        byte[] result = flatBuffer
+                ? SkillBookPackets.result(player.getId(), itemId, skill, maxlevel, status)
+                : MaplePacketCreator.skillBookResult(player, skill, maxlevel, attempted, status == SkillBookUseStatus.Success);
+        c.announce(result);
+        if (attempted && player.getMap() != null) {
+            // Exclude the owner, who already received exactly one result.
+            player.getMap().broadcastMessage(player, result);
+        }
+    }
+
+    static boolean isSkillBook(int itemId) {
+        return itemId / 10000 == 228 || itemId / 10000 == 229;
+    }
+
+    static boolean matchesBook(Item item, short slot, int itemId) {
+        return slot > 0 && isSkillBook(itemId) && item != null
+                && item.getPosition() == slot && item.getItemId() == itemId && item.getQuantity() > 0;
+    }
+
+    static boolean succeeds(int chance, int roll) {
+        return roll >= 0 && roll < 100 && roll < chance;
+    }
+
+    static boolean meetsBookRequirements(int skillLevel, int currentMasterLevel,
+                                         int requiredSkillLevel, int bookMasterLevel) {
+        return requiredSkillLevel >= 0 && bookMasterLevel > 0 && skillLevel >= requiredSkillLevel
+                && currentMasterLevel < bookMasterLevel;
     }
 }

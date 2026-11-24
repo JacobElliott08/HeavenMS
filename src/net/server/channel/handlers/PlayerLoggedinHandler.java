@@ -167,6 +167,8 @@ public final class PlayerLoggedinHandler extends AbstractMaplePacketHandler {
                 }
                 c.setPlayer(player);
                 c.setAccID(player.getAccountID());
+                // A new client session restarts its attack request ids.
+                FlatBufferAttackHandler.forget(player.getId());
                 
                 boolean allowLogin = true;
 
@@ -239,6 +241,10 @@ public final class PlayerLoggedinHandler extends AbstractMaplePacketHandler {
                     if(player.isGM() && YamlConfig.config.server.USE_AUTOHIDE_GM) {
                         player.toggleHide(true);
                     }
+                } else {
+                    // A channel/reconnect can retain the server character while
+                    // CharacterLoad creates a fresh client-side player and UI.
+                    player.syncHideIndicator();
                 }
                 player.sendKeymap();
                 player.sendQuickmap();

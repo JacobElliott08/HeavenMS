@@ -21,6 +21,8 @@
 */
 package net.server.guild;
 
+import tools.packets.character.StatusInfoPackets;
+
 import client.MapleCharacter;
 import client.MapleClient;
 import config.YamlConfig;
@@ -711,7 +713,7 @@ public class MapleGuild {
         this.gp += amount;
         this.writeToDB(false);
         this.guildMessage(MaplePacketCreator.updateGP(this.id, this.gp));
-        this.guildMessage(MaplePacketCreator.getGPMessage(amount));
+        this.guildMessage(StatusInfoPackets.guildPoints(amount));
     }
     
     public void removeGP(int amount){

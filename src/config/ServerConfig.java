@@ -56,6 +56,10 @@ public class ServerConfig {
     public boolean USE_DEBUG_SHOW_INFO_EQPEXP;
     public boolean USE_DEBUG_SHOW_RCVD_PACKET;
     public boolean USE_DEBUG_SHOW_RCVD_MVLIFE;
+    // Experimental, matched-client-only ground snail simulation. Latched at spawn.
+    public boolean USE_SERVER_GROUND_MOBS = false;
+    // Temporary, opt-in diagnostics for Lupin 3210800; no character names or IDs.
+    public boolean USE_LUPIN_ATTACK_TRACE = false;
     public boolean USE_DEBUG_SHOW_PACKET;
     public boolean USE_SUPPLY_RATE_COUPONS;
     public boolean USE_IP_VALIDATION;

@@ -39,6 +39,7 @@ import tools.Pair;
 public class MapleMonsterStats {
     public boolean changeable;
     public int exp, hp, mp, level, PADamage, PDDamage, MADamage, MDDamage, dropPeriod, cp, buffToGive = -1, removeAfter;
+    private int evasion;
     public boolean boss, undead, ffaLoot, isExplosiveReward, firstAttack, removeOnMiss;
     public String name;
     public Map<String, Integer> animationTimes = new HashMap<String, Integer>();
@@ -52,6 +53,9 @@ public class MapleMonsterStats {
     public selfDestruction selfDestruction = null;
     public int fixedStance = 0;
     public boolean friendly;
+    public int groundSpeed, pushed = 1;
+    public boolean groundWalkOnly, groundJumpOnly, groundHasAttack;
+    public GroundMobAttackProfile groundAttackProfile;
 
     public void setChange(boolean change) {
         this.changeable = change;
@@ -91,6 +95,14 @@ public class MapleMonsterStats {
 
     public void setLevel(int level) {
         this.level = level;
+    }
+
+    public int getEvasion() {
+        return evasion;
+    }
+
+    public void setEvasion(int evasion) {
+        this.evasion = evasion;
     }
 
     public int removeAfter() {

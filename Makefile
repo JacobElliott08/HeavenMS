@@ -9,12 +9,12 @@ all: build up-java
 # Build the Java application Docker image
 build:
 	@echo "Building HeavenMS Java application..."
-	docker-compose build maplestory
+	docker-compose build --no-cache maplestory
 
-# Deploy Java code only (rebuilds and restarts maplestory service)
+# Deploy Java code only (always recreates the maplestory container from the new image)
 up-java:
 	@echo "Deploying Java application (database will not be restarted)..."
-	docker-compose up -d --no-deps maplestory
+	docker-compose up -d --no-deps --force-recreate maplestory
 
 # Full deployment (both Java and SQL)
 up:

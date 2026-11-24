@@ -47,8 +47,9 @@ public final class PlayerMapTransitionHandler extends AbstractMaplePacketHandler
         if (beaconid != -1) {
             chr.cancelBuffStats(MapleBuffStat.HOMING_BEACON);
             
-            final List<Pair<MapleBuffStat, Integer>> stat = Collections.singletonList(new Pair<>(MapleBuffStat.HOMING_BEACON, 0));
-            chr.announce(MaplePacketCreator.giveBuff(1, beaconid, stat));
+            // per-source model: cancelBuffStats already pushed the per-source
+            // cancel; re-assert it here to mirror the legacy reset behavior.
+            chr.announce(tools.packets.character.BuffPackets.cancelBuff(beaconid));
         }
         
         // COMMENTED OUT: This was causing duplicate SPAWN/KILL packets when player loads into map

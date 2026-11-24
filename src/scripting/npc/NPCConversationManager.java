@@ -189,7 +189,8 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
          *
          * <p><strong>Pool contract:</strong> do not retain the returned instance
          * past the {@code send*()} call; the instance is reused on the next
-         * {@code createReply()} call on the same thread.</p>
+         * {@code createReply()} call on the same thread. Text runs are literal;
+         * styling is carried separately in typed color/effect fields.</p>
          *
          * @return a fresh {@link ReplyBuilder} ready for method chaining
          */
@@ -209,90 +210,9 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
                 return ReplyBuilder.acquire(getClient(), npc, speakerType);
         }
 
-        // Legacy dialogue support - delegates to LegacyNPCDialogue for backward compatibility
-        private LegacyNPCDialogue legacyDialogue;
-        
-        private LegacyNPCDialogue legacy() {
-                if (legacyDialogue == null) {
-                        legacyDialogue = new LegacyNPCDialogue(getClient(), npc);
-                }
-                return legacyDialogue;
-        }
-        
-	public void sendNext(String text) {
-		legacy().sendNext(text);
-	}
-
-	public void sendPrev(String text) {
-		legacy().sendPrev(text);
-	}
-
-	public void sendNextPrev(String text) {
-		legacy().sendNextPrev(text);
-	}
-
-	public void sendOk(String text) {
-		legacy().sendOk(text);
-	}
-        
         public void sendDefault() {
-                sendOk(getDefaultTalk(npc));
+                createReply().text(getDefaultTalk(npc)).sendOk();
         }
-
-	public void sendYesNo(String text) {
-		legacy().sendYesNo(text);
-	}
-
-	public void sendAcceptDecline(String text) {
-		legacy().sendAcceptDecline(text);
-	}
-
-	public void sendSimple(String text) {
-		legacy().sendSimple(text);
-	}
-
-	public void sendNext(String text, byte speaker) {
-		legacy().sendNext(text, speaker);
-	}
-
-	public void sendPrev(String text, byte speaker) {
-		legacy().sendPrev(text, speaker);
-	}
-
-	public void sendNextPrev(String text, byte speaker) {
-		legacy().sendNextPrev(text, speaker);
-	}
-
-	public void sendOk(String text, byte speaker) {
-		legacy().sendOk(text, speaker);
-	}
-
-	public void sendYesNo(String text, byte speaker) {
-		legacy().sendYesNo(text, speaker);
-	}
-
-	public void sendAcceptDecline(String text, byte speaker) {
-		legacy().sendAcceptDecline(text, speaker);
-	}
-
-	public void sendSimple(String text, byte speaker) {
-		legacy().sendSimple(text, speaker);
-	}
-
-	public void sendStyle(String text, int styles[]) {
-                legacy().sendStyle(text, styles);
-                if (styles.length == 0) {
-                        dispose();
-                }
-	}
-
-	public void sendGetNumber(String text, int def, int min, int max) {
-		legacy().sendGetNumber(text, def, min, max);
-	}
-
-	public void sendGetText(String text) {
-		legacy().sendGetText(text);
-	}
 
 	/*
 	 * 0 = ariant colliseum
@@ -304,7 +224,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
 	 * 6 = Kerning Subway
 	 */
 	public void sendDimensionalMirror(String text) {
-		getClient().announce(MaplePacketCreator.getDimensionalMirror(text));
+		createReply().text(text).sendOk();
 	}
 
 	public void setGetText(String text) {
@@ -484,7 +404,14 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
 
 		Item itemGained = gainItem(item.getId(), (short) (item.getId() / 10000 == 200 ? 100 : 1), true, true); // For normal potions, make it give 100.
 
-		sendNext("You have obtained a #b#t" + item.getId() + "##k.");
+		String itemName = MapleItemInformationProvider.getInstance().getName(item.getId());
+		if (itemName == null) {
+			itemName = Integer.toString(item.getId());
+		}
+		createReply().text("You have obtained a ")
+				.text(itemName, TextStyle.BLUE)
+				.text(".")
+				.sendNext();
 		
 		String map = c.getChannelServer().getMapFactory().getMap(maps[(getNpc() != 9100117 && getNpc() != 9100109) ? (getNpc() - 9100100) : getNpc() == 9100109 ? 8 : 9]).getMapName();
 		
@@ -695,6 +622,9 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             return avg;
         }
 
+        // These legacy #L values encode the CPQ field ID, while ReplyBuilder's
+        // current selection() API assigns dense display-order indices. Do not
+        // translate this into selections until the field-ID mapping is explicit.
         public boolean sendCPQMapLists() {
             String msg = LanguageConstants.getMessage(getPlayer(), LanguageConstants.CPQPickRoom);
             int msgLen = msg.length();
@@ -716,7 +646,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             }
             
             if (msg.length() > msgLen) {
-                sendSimple(msg);
+                createReply().text(msg).send();
                 return true;
             } else {
                 return false;
@@ -970,6 +900,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             }
         }
 
+        // CPQ variant 2 uses the same field-ID-in-#L mapping constraint.
         public boolean sendCPQMapLists2() {
             String msg = LanguageConstants.getMessage(getPlayer(), LanguageConstants.CPQPickRoom);
             int msgLen = msg.length();
@@ -991,7 +922,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             }
             
             if (msg.length() > msgLen) {
-                sendSimple(msg);
+                createReply().text(msg).send();
                 return true;
             } else {
                 return false;
@@ -1077,7 +1008,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             for (MapleMapObject mmo : map.getAllPlayer()) {
                 MapleCharacter mc = (MapleCharacter) mmo;
                 if (mc.getParty() == null) {
-                    sendOk(LanguageConstants.getMessage(mc, LanguageConstants.CPQFindError));
+                    createReply().text(LanguageConstants.getMessage(mc, LanguageConstants.CPQFindError)).sendOk();
                     return;
                 }
                 if (mc.getParty().getLeader().getId() == mc.getId()) {
@@ -1088,13 +1019,13 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             if (leader != null) {
                 if (!leader.isChallenged()) {
                     if (!sendCPQChallenge("cpq2", leader.getId())) {
-                        sendOk(LanguageConstants.getMessage(leader, LanguageConstants.CPQChallengeRoomAnswer));
+                        createReply().text(LanguageConstants.getMessage(leader, LanguageConstants.CPQChallengeRoomAnswer)).sendOk();
                     }
                 } else {
-                    sendOk(LanguageConstants.getMessage(leader, LanguageConstants.CPQChallengeRoomAnswer));
+                    createReply().text(LanguageConstants.getMessage(leader, LanguageConstants.CPQChallengeRoomAnswer)).sendOk();
                 }
             } else {
-                sendOk(LanguageConstants.getMessage(leader, LanguageConstants.CPQLeaderNotFound));
+                createReply().text(LanguageConstants.getMessage(leader, LanguageConstants.CPQLeaderNotFound)).sendOk();
             }
         }
         
@@ -1102,13 +1033,13 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             MapleCharacter leader = null;
             MapleMap map = c.getChannelServer().getMapFactory().getMap(980000100 + 100 * field);
             if (map.getAllPlayer().size() != getPlayer().getParty().getMembers().size()) {
-                sendOk("An unexpected error regarding the other party has occurred.");
+                createReply().text("An unexpected error regarding the other party has occurred.").sendOk();
                 return;
             }
             for (MapleMapObject mmo : map.getAllPlayer()) {
                 MapleCharacter mc = (MapleCharacter) mmo;
                 if (mc.getParty() == null) {
-                    sendOk(LanguageConstants.getMessage(mc, LanguageConstants.CPQFindError));
+                    createReply().text(LanguageConstants.getMessage(mc, LanguageConstants.CPQFindError)).sendOk();
                     return;
                 }
                 if (mc.getParty().getLeader().getId() == mc.getId()) {
@@ -1119,13 +1050,13 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             if (leader != null) {
                 if (!leader.isChallenged()) {
                     if (!sendCPQChallenge("cpq1", leader.getId())) {
-                        sendOk(LanguageConstants.getMessage(leader, LanguageConstants.CPQChallengeRoomAnswer));
+                        createReply().text(LanguageConstants.getMessage(leader, LanguageConstants.CPQChallengeRoomAnswer)).sendOk();
                     }
                 } else {
-                    sendOk(LanguageConstants.getMessage(leader, LanguageConstants.CPQChallengeRoomAnswer));
+                    createReply().text(LanguageConstants.getMessage(leader, LanguageConstants.CPQChallengeRoomAnswer)).sendOk();
                 }
             } else {
-                sendOk(LanguageConstants.getMessage(leader, LanguageConstants.CPQLeaderNotFound));
+                createReply().text(LanguageConstants.getMessage(leader, LanguageConstants.CPQLeaderNotFound)).sendOk();
             }
         }
         

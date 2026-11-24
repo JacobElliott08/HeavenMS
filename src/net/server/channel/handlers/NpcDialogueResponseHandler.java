@@ -195,6 +195,10 @@ public final class NpcDialogueResponseHandler extends AbstractMaplePacketHandler
             return;
         }
 
+        if (action == ACTION_PREV) {
+            action = 0;
+        }
+
         if (c.getQM() != null) {
             System.out.println("[TRACE] NpcDialogueResponseHandler.handlePacket() - Quest Manager active, delegating to QuestScriptManager, selection: " + selection);
             if (c.getQM().isStart()) {

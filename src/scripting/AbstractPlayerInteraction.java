@@ -21,6 +21,8 @@
  */
 package scripting;
 
+import tools.packets.character.StatusInfoPackets;
+
 import java.awt.Point;
 import java.util.Arrays;
 import java.util.ArrayList;
@@ -949,7 +951,7 @@ public class AbstractPlayerInteraction {
 
 	public void useItem(int id) {
 		MapleItemInformationProvider.getInstance().getItemEffect(id).applyTo(c.getPlayer());
-		c.announce(MaplePacketCreator.getItemMessage(id));//Useful shet :3
+		c.announce(StatusInfoPackets.itemMessage(id));//Useful shet :3
 	}
 
 	public void cancelItem(final int id) {
@@ -1078,7 +1080,7 @@ public class AbstractPlayerInteraction {
 	}
 
 	public void showInfoText(String msg) {
-		c.announce(MaplePacketCreator.showInfoText(msg));
+		c.announce(StatusInfoPackets.infoText(msg));
 	}
 
 	public void openUI(byte ui) {
@@ -1228,7 +1230,7 @@ public class AbstractPlayerInteraction {
         }
         
         public void npcTalk(int npcid, String message) {
-                c.announce(MaplePacketCreator.getNPCTalk(npcid, (byte) 0, message, "00 00", (byte) 0));
+                scripting.npc.ReplyBuilder.acquire(c, npcid).text(message).sendOk();
         }
 
         public long getCurrentTime() {

@@ -449,9 +449,15 @@ public class MapleClient {
     public int finishLogin() {
         encoderLock.lock();
         try {
-            if (getLoginState() > LOGIN_NOTLOGGEDIN) { // 0 = LOGIN_NOTLOGGEDIN, 1= LOGIN_SERVER_TRANSITION, 2 = LOGIN_LOGGEDIN
+            int state = getLoginState(); // 0 = LOGIN_NOTLOGGEDIN, 1= LOGIN_SERVER_TRANSITION, 2 = LOGIN_LOGGEDIN
+            boolean staleLogin = state == LOGIN_LOGGEDIN && !MapleSessionCoordinator.getInstance().hasActiveGameClient(getAccID());
+            if (state > LOGIN_NOTLOGGEDIN && !staleLogin) {
                 loggedIn = false;
+                System.out.println("[LoginFlow][Reject] acc=" + getAccID() + " state=" + state);
                 return 7;
+            }
+            if (staleLogin) {
+                System.out.println("[LoginFlow][StaleLogin] acc=" + getAccID() + " taking over stale loggedin state");
             }
             updateLoginState(MapleClient.LOGIN_LOGGEDIN);
         } finally {
@@ -1176,6 +1182,16 @@ public class MapleClient {
 
     public void setGMLevel(int level) {
         gmlevel = level;
+    }
+
+    private volatile boolean npcReplySent;
+
+    public void setNpcReplySent(boolean sent) {
+        npcReplySent = sent;
+    }
+
+    public boolean isNpcReplySent() {
+        return npcReplySent;
     }
 
     public void setScriptEngine(String name, NashornScriptEngine e) {

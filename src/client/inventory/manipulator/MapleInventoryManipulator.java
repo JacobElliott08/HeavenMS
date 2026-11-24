@@ -21,6 +21,8 @@
  */
 package client.inventory.manipulator;
 
+import tools.packets.character.StatusInfoPackets;
+
 import client.MapleBuffStat;
 import client.MapleCharacter;
 import client.MapleClient;
@@ -116,7 +118,7 @@ public class MapleInventoryManipulator {
                         short newSlot = inv.addItem(nItem);
                         if (newSlot == -1) {
                             c.announce(MaplePacketCreator.getInventoryFull());
-                            c.announce(MaplePacketCreator.getShowInventoryFull());
+                            c.announce(StatusInfoPackets.inventoryFull());
                             return false;
                         }
                         if (owner != null) {
@@ -136,7 +138,7 @@ public class MapleInventoryManipulator {
                 short newSlot = inv.addItem(nItem);
                 if (newSlot == -1) {
                     c.announce(MaplePacketCreator.getInventoryFull());
-                    c.announce(MaplePacketCreator.getShowInventoryFull());
+                    c.announce(StatusInfoPackets.inventoryFull());
                     return false;
                 }
                 c.announce(MaplePacketCreator.modifyInventory(true, Collections.singletonList(new ModifyInventory(0, nItem))));
@@ -152,7 +154,7 @@ public class MapleInventoryManipulator {
             short newSlot = inv.addItem(nEquip);
             if (newSlot == -1) {
                 c.announce(MaplePacketCreator.getInventoryFull());
-                c.announce(MaplePacketCreator.getShowInventoryFull());
+                c.announce(StatusInfoPackets.inventoryFull());
                 return false;
             }
             c.announce(MaplePacketCreator.modifyInventory(true, Collections.singletonList(new ModifyInventory(0, nEquip))));
@@ -189,7 +191,7 @@ public class MapleInventoryManipulator {
         int itemid = item.getItemId();
         if (ii.isPickupRestricted(itemid) && chr.haveItemWithId(itemid, true)) {
             c.announce(MaplePacketCreator.getInventoryFull());
-            c.announce(MaplePacketCreator.showItemUnavailable());
+            c.announce(StatusInfoPackets.itemUnavailable());
             return false;
         }
         short quantity = item.getQuantity();
@@ -226,7 +228,7 @@ public class MapleInventoryManipulator {
                     short newSlot = inv.addItem(nItem);
                     if (newSlot == -1) {
                         c.announce(MaplePacketCreator.getInventoryFull());
-                        c.announce(MaplePacketCreator.getShowInventoryFull());
+                        c.announce(StatusInfoPackets.inventoryFull());
                         item.setQuantity((short) (quantity + newQ));
                         return false;
                     }
@@ -243,7 +245,7 @@ public class MapleInventoryManipulator {
                 short newSlot = inv.addItem(nItem);
                 if (newSlot == -1) {
                     c.announce(MaplePacketCreator.getInventoryFull());
-                    c.announce(MaplePacketCreator.getShowInventoryFull());
+                    c.announce(StatusInfoPackets.inventoryFull());
                     return false;
                 }
                 nItem.setPosition(newSlot);
@@ -256,7 +258,7 @@ public class MapleInventoryManipulator {
             short newSlot = inv.addItem(item);
             if (newSlot == -1) {
                 c.announce(MaplePacketCreator.getInventoryFull());
-                c.announce(MaplePacketCreator.getShowInventoryFull());
+                c.announce(StatusInfoPackets.inventoryFull());
                 return false;
             }
             item.setPosition(newSlot);
@@ -265,11 +267,11 @@ public class MapleInventoryManipulator {
         } else {
             FilePrinter.printError(FilePrinter.ITEM, "Tried to pickup Equip id " + itemid + " containing more than 1 quantity --> " + quantity);
             c.announce(MaplePacketCreator.getInventoryFull());
-            c.announce(MaplePacketCreator.showItemUnavailable());
+            c.announce(StatusInfoPackets.itemUnavailable());
             return false;
         }
         if (show) {
-            c.announce(MaplePacketCreator.getShowItemGain(itemid, item.getQuantity()));
+            c.announce(StatusInfoPackets.itemGain(itemid, item.getQuantity(), false));
         }
         return true;
     }
@@ -534,7 +536,7 @@ public class MapleInventoryManipulator {
             if (top != null && ItemConstants.isOverall(top.getItemId())) {
                 if (eqpInv.isFull()) {
                     c.announce(MaplePacketCreator.getInventoryFull());
-                    c.announce(MaplePacketCreator.getShowInventoryFull());
+                    c.announce(StatusInfoPackets.inventoryFull());
                     return;
                 }
                 unequip(c, (byte) -5, eqpInv.getNextFreeSlot());
@@ -544,7 +546,7 @@ public class MapleInventoryManipulator {
             if (bottom != null && ItemConstants.isOverall(source.getItemId())) {
                 if (eqpInv.isFull()) {
                     c.announce(MaplePacketCreator.getInventoryFull());
-                    c.announce(MaplePacketCreator.getShowInventoryFull());
+                    c.announce(StatusInfoPackets.inventoryFull());
                     return;
                 }
                 unequip(c, (byte) -6, eqpInv.getNextFreeSlot());
@@ -554,7 +556,7 @@ public class MapleInventoryManipulator {
             if (weapon != null && ii.isTwoHanded(weapon.getItemId())) {
                 if (eqpInv.isFull()) {
                     c.announce(MaplePacketCreator.getInventoryFull());
-                    c.announce(MaplePacketCreator.getShowInventoryFull());
+                    c.announce(StatusInfoPackets.inventoryFull());
                     return;
                 }
                 unequip(c, (byte) -11, eqpInv.getNextFreeSlot());
@@ -564,7 +566,7 @@ public class MapleInventoryManipulator {
             if (shield != null && ii.isTwoHanded(source.getItemId())) {
                 if (eqpInv.isFull()) {
                     c.announce(MaplePacketCreator.getInventoryFull());
-                    c.announce(MaplePacketCreator.getShowInventoryFull());
+                    c.announce(StatusInfoPackets.inventoryFull());
                     return;
                 }
                 unequip(c, (byte) -10, eqpInv.getNextFreeSlot());

@@ -37,8 +37,6 @@ import constants.skills.Crusader;
 import constants.skills.DawnWarrior;
 import constants.skills.DragonKnight;
 import constants.skills.Hero;
-import constants.skills.NightWalker;
-import constants.skills.Rogue;
 import constants.skills.WindArcher;
 import server.MapleStatEffect;
 import tools.MaplePacketCreator;
@@ -58,6 +56,14 @@ public final class CloseRangeDamageHandler extends AbstractDealDamageHandler {
         chr.getAutobanManager().spam(8);*/
         
         AttackInfo attack = parseDamage(slea, chr, false, false);
+        if (shouldRejectDisorderTarget(attack, chr)) {
+            c.announce(MaplePacketCreator.enableActions());
+            return;
+        }
+        if (attack.skill == 0 && chr.isDarkSightActive()) {
+            c.announce(MaplePacketCreator.enableActions());
+            return;
+        }
         if (chr.getBuffEffect(MapleBuffStat.MORPH) != null) {
             if(chr.getBuffEffect(MapleBuffStat.MORPH).isMorphWithoutAttack()) {
                 // How are they attacking when the client won't let them?
@@ -115,8 +121,8 @@ public final class CloseRangeDamageHandler extends AbstractDealDamageHandler {
                         List<Pair<MapleBuffStat, Integer>> stat = Collections.singletonList(new Pair<>(MapleBuffStat.COMBO, neworbcount));
                         chr.setBuffedValue(MapleBuffStat.COMBO, neworbcount);                 
                         duration -= (int) (currentServerTime() - chr.getBuffedStarttime(MapleBuffStat.COMBO));
-                        c.announce(MaplePacketCreator.giveBuff(oid, duration, stat));
-                        chr.getMap().broadcastMessage(chr, MaplePacketCreator.giveForeignBuff(chr.getId(), stat), false);
+                        c.announce(tools.packets.character.BuffPackets.giveBuff(oid, duration, stat));
+                        chr.getMap().broadcastMessage(chr, tools.packets.character.BuffPackets.giveForeignBuff(chr.getId(), oid, duration, stat), false);
                     }
                 }
             } else if (chr.getSkillLevel(chr.isCygnus() ? SkillFactory.getSkill(15100004) : SkillFactory.getSkill(5110001)) > 0 && (chr.getJob().isA(MapleJob.MARAUDER) || chr.getJob().isA(MapleJob.THUNDERBREAKER2))) {
@@ -171,10 +177,7 @@ public final class CloseRangeDamageHandler extends AbstractDealDamageHandler {
                 }
             }
         }
-        if ((chr.getSkillLevel(SkillFactory.getSkill(NightWalker.VANISH)) > 0 || chr.getSkillLevel(SkillFactory.getSkill(Rogue.DARK_SIGHT)) > 0) && chr.getBuffedValue(MapleBuffStat.DARKSIGHT) != null) {// && chr.getBuffSource(MapleBuffStat.DARKSIGHT) != 9101004
-            chr.cancelEffectFromBuffStat(MapleBuffStat.DARKSIGHT);
-            chr.cancelBuffStats(MapleBuffStat.DARKSIGHT);
-        } else if(chr.getSkillLevel(SkillFactory.getSkill(WindArcher.WIND_WALK)) > 0 && chr.getBuffedValue(MapleBuffStat.WIND_WALK) != null) {
+        if (chr.getSkillLevel(SkillFactory.getSkill(WindArcher.WIND_WALK)) > 0 && chr.getBuffedValue(MapleBuffStat.WIND_WALK) != null) {
             chr.cancelEffectFromBuffStat(MapleBuffStat.WIND_WALK);
             chr.cancelBuffStats(MapleBuffStat.WIND_WALK);
         }

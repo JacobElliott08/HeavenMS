@@ -82,7 +82,7 @@ public class MatchCheckerCPQChallenge implements MatchCheckerListenerRecipe {
                     NPCScriptManager.getInstance().start("cpqchallenge2", ldr.getClient(), npcid, chrMembers);
                 }
                 
-                cm.sendOk(LanguageConstants.getMessage(chr, LanguageConstants.CPQChallengeRoomSent));
+                cm.createReply().text(LanguageConstants.getMessage(chr, LanguageConstants.CPQChallengeRoomSent)).sendOk();
             }
             
             @Override

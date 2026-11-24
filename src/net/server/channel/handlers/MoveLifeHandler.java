@@ -67,6 +67,13 @@ public final class MoveLifeHandler extends AbstractMovementPacketHandler {
 		}
                 
 		MapleMonster monster = (MapleMonster) mmo;
+                if (monster.isServerGroundAuthority()) {
+                    if (YamlConfig.config.server.USE_DEBUG_SHOW_RCVD_MVLIFE) {
+                        System.out.println("[ServerGroundMob] ignored MOVE_LIFE oid=" + objectid
+                                + " character=" + player.getId());
+                    }
+                    return;
+                }
                 List<MapleCharacter> banishPlayers = null;
                 
                 byte pNibbles = slea.readByte();
@@ -157,21 +164,29 @@ public final class MoveLifeHandler extends AbstractMovementPacketHandler {
 			c.announce(MaplePacketCreator.moveMonsterResponse(objectid, moveid, mobMp, aggro));
 		}
                 
-                
+                // Serialize displacement with web application. Mob actions above
+                // still execute: Shadow Web is not a seal or a stun.
+                monster.lockMonster();
                 try {
-                        long movementDataStart = slea.getPosition();
-                        updatePosition(slea, monster, -2);  // Thanks Doodle & ZERO傑洛 for noticing sponge-based bosses moving out of stage in case of no-offset applied
-                        long movementDataLength = slea.getPosition() - movementDataStart; //how many bytes were read by updatePosition
-                        slea.seek(movementDataStart);
+                    if (!monster.isHermitShadowWebbed()) {
+                        try {
+                            long movementDataStart = slea.getPosition();
+                            updatePosition(slea, monster, -2);  // Thanks Doodle & ZERO傑洛 for noticing sponge-based bosses moving out of stage in case of no-offset applied
+                            long movementDataLength = slea.getPosition() - movementDataStart; //how many bytes were read by updatePosition
+                            slea.seek(movementDataStart);
                         
-                        if (YamlConfig.config.server.USE_DEBUG_SHOW_RCVD_MVLIFE) {
+                            if (YamlConfig.config.server.USE_DEBUG_SHOW_RCVD_MVLIFE) {
                                 System.out.println((isSkill ? "SKILL " : (isAttack ? "ATTCK " : " ")) + "castPos: " + castPos + " rawAct: " + rawActivity + " opt: " + pOption + " skillID: " + useSkillId + " skillLV: " + useSkillLevel + " " + "allowSkill: " + nextMovementCouldBeSkill + " mobMp: " + mobMp);
-                        }
+                            }
                         
-                        map.broadcastMessage(player, MaplePacketCreator.moveMonster(objectid, nextMovementCouldBeSkill, rawActivity, useSkillId, useSkillLevel, pOption, startPos, slea, movementDataLength), serverStartPos);
-                        //updatePosition(res, monster, -2); //does this need to be done after the packet is broadcast?
-                        map.moveMonster(monster, monster.getPosition());
-                } catch (EmptyMovementException e) {}
+                            map.broadcastMessage(player, MaplePacketCreator.moveMonster(objectid, nextMovementCouldBeSkill, rawActivity, useSkillId, useSkillLevel, pOption, startPos, slea, movementDataLength), serverStartPos);
+                            //updatePosition(res, monster, -2); //does this need to be done after the packet is broadcast?
+                            map.moveMonster(monster, monster.getPosition());
+                        } catch (EmptyMovementException e) {}
+                    }
+                } finally {
+                    monster.unlockMonster();
+                }
                 
                 if (banishPlayers != null) {
                         for (MapleCharacter chr : banishPlayers) {

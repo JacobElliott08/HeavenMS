@@ -253,6 +253,11 @@ public class MapleSessionCoordinator {
         }
     }
 
+    public boolean hasActiveGameClient(int accountId) {
+        MapleClient c = onlineClients.get(accountId);
+        return c != null && c.getPlayer() != null && c.getSession() != null && c.getSession().isConnected();
+    }
+
     public boolean canStartLoginSession(IoSession session) {
         if (!YamlConfig.config.server.DETERRED_MULTICLIENT) return true;
 

@@ -69,7 +69,7 @@ public final class NpcDialogue extends com.google.flatbuffers.Table {
       int sessionId,
       boolean showPrev,
       boolean showNext) {
-    builder.startTable(13);
+    builder.startTable(14);
     NpcDialogue.addSessionId(builder, sessionId);
     NpcDialogue.addTextDefault(builder, textDefaultOffset);
     NpcDialogue.addNumberMax(builder, numberMax);
@@ -86,7 +86,7 @@ public final class NpcDialogue extends com.google.flatbuffers.Table {
     return NpcDialogue.endNpcDialogue(builder);
   }
 
-  public static void startNpcDialogue(FlatBufferBuilder builder) { builder.startTable(13); }
+  public static void startNpcDialogue(FlatBufferBuilder builder) { builder.startTable(14); }
   public static void addSpeakerType(FlatBufferBuilder builder, int speakerType) { builder.addByte(0, (byte) speakerType, (byte) 0); }
   public static void addNpcId(FlatBufferBuilder builder, int npcId) { builder.addInt(1, npcId, 0); }
   public static void addDialogueType(FlatBufferBuilder builder, int dialogueType) { builder.addByte(2, (byte) dialogueType, (byte) 0); }

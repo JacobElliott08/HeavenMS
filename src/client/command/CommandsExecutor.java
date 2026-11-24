@@ -400,6 +400,9 @@ public class CommandsExecutor {
         addCommand("addworld", 6, ServerAddWorldCommand.class);
         addCommand("removechannel", 6, ServerRemoveChannelCommand.class);
         addCommand("removeworld", 6, ServerRemoveWorldCommand.class);
+        addCommand("reloadAllScripts", 6, ReloadAllScriptCommand.class);
+        addCommand("resetquests", 6, ResetQuestsCommand.class);
+        addCommand("playsound", 6, PlaySoundCommand.class);
         
         commandsNameDesc.add(levelCommandsCursor);
     }

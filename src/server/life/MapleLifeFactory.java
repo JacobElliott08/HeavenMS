@@ -124,6 +124,15 @@ public class MapleLifeFactory {
         stats.setMp(MapleDataTool.getIntConvert("maxMP", monsterInfoData, stats.getMp()));
         stats.setExp(MapleDataTool.getIntConvert("exp", monsterInfoData, stats.getExp()));
         stats.setLevel(MapleDataTool.getIntConvert("level", monsterInfoData));
+        stats.setEvasion(MapleDataTool.getIntConvert("eva", monsterInfoData, 0));
+        stats.groundSpeed = MapleDataTool.getIntConvert("speed", monsterInfoData, 0);
+        stats.pushed = MapleDataTool.getIntConvert("pushed", monsterInfoData, 1);
+        stats.groundWalkOnly = monsterData.getChildByPath("move") != null
+                && monsterData.getChildByPath("fly") == null
+                && monsterData.getChildByPath("jump") == null;
+        stats.groundJumpOnly = monsterData.getChildByPath("move") != null
+                && monsterData.getChildByPath("fly") == null
+                && monsterData.getChildByPath("jump") != null;
         stats.setRemoveAfter(MapleDataTool.getIntConvert("removeAfter", monsterInfoData, stats.removeAfter()));
         stats.setBoss(MapleDataTool.getIntConvert("boss", monsterInfoData, stats.isBoss() ? 1 : 0) > 0);
         stats.setExplosiveReward(MapleDataTool.getIntConvert("explosiveReward", monsterInfoData, stats.isExplosiveReward() ? 1 : 0) > 0);
@@ -225,6 +234,10 @@ public class MapleLifeFactory {
             attackInfos.add(new MobAttackInfoHolder(i, mpCon, coolTime, animationTime));
             i++;
         }
+        stats.groundHasAttack = !attackInfos.isEmpty();
+        int groundAttackReleaseFrame = GroundMobAttackProfile.releaseFrameFor(mid);
+        if (groundAttackReleaseFrame >= 0)
+            stats.groundAttackProfile = GroundMobAttackProfile.fromWz(monsterData, groundAttackReleaseFrame);
 
         MapleData banishData = monsterInfoData.getChildByPath("ban");
         if (banishData != null) {

@@ -79,6 +79,7 @@ public class SpawnPoint {
         mob.setTeam(team);
         mob.setFh(fh);
         mob.setF(f);
+        mob.markGroundSpawnRebased();
         spawnedMonsters.incrementAndGet();
         mob.addListener(new MonsterListener() {
             @Override

@@ -135,6 +135,44 @@ Appended **after** all elements, only for the following types:
 
 No trailing fields for any other dialogue type.
 
+### 1.6 FlatBuffers `NpcDialogue`: typed text styling
+
+The FlatBuffers form of this frame (`protocols/schemas/npc/Dialogue.fbs`, carried in the
+`MSFB` `Packet` root with no opcode) always treats text as literal. Inline `#` and
+backslash formatting codes are not interpreted; use separate `ReplyBuilder.text(...)`
+runs with typed styles instead. Legacy NPC scripts that still send inline codes are
+not migrated by this change; the client displays their code characters literally.
+
+| Field | Type | Meaning |
+|-------|------|---------|
+| `Text.color` | `TextColor` (`Default`, `Red`, `Blue`, `Green`) | Run color. Unknown values render as `Default`. |
+| `Text.effects` | `[TextEffect]` (`Bold`, `Italic`, `Underline`) | Independent run effects (vector entries, not bit flags). Unknown values are ignored. |
+| `Text.styles` | deprecated `[TextStyle]` | Reserved at its original FlatBuffers field slot for evolution; no longer read or written. |
+| `NpcDialogue.literal_text` | deprecated `bool` | Reserved at its original FlatBuffers field slot; ignored by readers and omitted by writers. |
+
+All NPC replies, including ordinary `createReply()` calls, may style text runs:
+
+```javascript
+var TextStyle = Java.type("scripting.npc.TextStyle");
+cm.createReply()
+    .text("If you dream of becoming a ")
+    .text("Bowman", TextStyle.GREEN, TextStyle.BOLD, TextStyle.ITALIC)
+    .text(" someday...")
+    .sendNext();
+```
+
+`TextStyle` maps only to the typed fields. `DEFAULT/RED/BLUE/GREEN` set `color` (last color wins).
+`BOLD/ITALIC/UNDERLINE` add to `effects` (de-duplicated, in call order). Client rendering
+(`UINpcTalk` → `Text` spans → `GraphicsGL`): bold uses the bold font (`A12B`) with its own
+metrics, italic is a glyph shear, and underline is a 1px bar under the run. Wrapping happens
+only at spaces, including across run boundaries. `linebreak()` and a literal newline start a new line.
+Selection and quest labels remain separate, unstyled literal strings; their own selection color
+contract is unchanged. The text color `Blue` maps to the existing inline `#b` tint (Persian Green)
+to retain the old NPC text appearance; selection-label `Blue` remains the separate pure-blue color.
+
+The custom legacy NPC dialogue opcode remains a separate transport path. Its deprecated inline
+style pairs are consumed only to preserve that packet's framing and are not applied to rendering.
+
 ---
 
 ## 2. Client → Server — `NPC_DIALOGUE_RESPONSE` (`0xA0`)

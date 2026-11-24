@@ -5423,7 +5423,7 @@
       <imgdir name="mob">
         <imgdir name="0">
           <int name="id" value="9300018"/>
-          <int name="count" value="1"/>
+          <int name="count" value="10"/>
         </imgdir>
       </imgdir>
     </imgdir>

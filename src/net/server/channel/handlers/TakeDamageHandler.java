@@ -61,6 +61,61 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
 
     @Override
     public final void handlePacket(SeekableLittleEndianAccessor slea, MapleClient c) {
+        applyPacket(slea, c, false, null);
+    }
+
+    /**
+     * Reuse the legacy mitigation, effects and HP mutation for a server-owned
+     * ground-mob impact. The input is constructed by the server, not from a socket.
+     * Returns -1 if the hit was rejected.
+     */
+    public int applyServerGroundImpact(MapleCharacter chr, MapleMonster mob, int damage, int direction) {
+        return applyServerGroundImpact(chr, mob, damage, direction, null);
+    }
+
+    /**
+     * The committed-impact callback is invoked after HP/MP mutation but before
+     * reflection can kill the attacker and publish its terminal snapshot.
+     * The caller owns the mob lock and must not publish the same impact again.
+     */
+    public int applyServerGroundImpact(MapleCharacter chr, MapleMonster mob, int damage, int direction,
+                                       java.util.function.IntConsumer publishImpact) {
+        if (chr == null || mob == null || !mob.hasServerGroundAttack()
+                || chr.getMap() != mob.getMap() || !chr.isAlive() || !mob.isAlive()
+                || !chr.isLoggedinWorld() || chr.isChangingMaps() || chr.isHidden() || chr.isDarkSightActive()
+                || mob.isBuffed(MonsterStatus.NEUTRALISE)
+                || chr.getClient() == null || chr.getClient().getPlayer() != chr
+                || chr.getMap().getMapObject(mob.getObjectId()) != mob) return -1;
+        tools.data.output.MaplePacketLittleEndianWriter out =
+                new tools.data.output.MaplePacketLittleEndianWriter();
+        out.writeInt(0);
+        out.write(0);
+        out.write(0);
+        out.writeInt(damage);
+        out.writeInt(mob.getId());
+        out.writeInt(mob.getObjectId());
+        out.write(direction);
+        long reservation = System.nanoTime();
+        if (!chr.getGroundMobHitWindow().claimGroundImpact(reservation)) return -1;
+        boolean accepted = false;
+        List<Runnable> deferredReflection = new ArrayList<>();
+        try {
+            int result = applyPacket(new tools.data.input.GenericSeekableLittleEndianAccessor(
+                    new tools.data.input.ByteArrayByteStream(out.getPacket())), chr.getClient(), true, deferredReflection);
+            accepted = result >= 0;
+            try {
+                if (accepted && publishImpact != null) publishImpact.accept(result);
+            } finally {
+                for (Runnable reflection : deferredReflection) reflection.run();
+            }
+            return result;
+        } finally {
+            if (!accepted) chr.getGroundMobHitWindow().releaseGroundImpact(reservation);
+        }
+    }
+
+    private int applyPacket(SeekableLittleEndianAccessor slea, MapleClient c, boolean serverGroundImpact,
+                            List<Runnable> deferredReflection) {
         List<MapleCharacter> banishPlayers = new ArrayList<>();
         
         MapleCharacter chr = c.getPlayer();
@@ -74,6 +129,9 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
         int mpattack = 0;
         MapleMonster attacker = null;
         final MapleMap map = chr.getMap();
+        if (chr.isDarkSightActive() && damagefrom != -3 && damagefrom != -4) {
+            return -1;
+        }
         if (damagefrom != -3 && damagefrom != -4) {
             monsteridfrom = slea.readInt();
 	    oid = slea.readInt();
@@ -89,8 +147,12 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
                 
                 if (attacker != null) {
                     if (attacker.isBuffed(MonsterStatus.NEUTRALISE)) {
-                        return;
+                        return -1;
                     }
+                    // Touch remains on the existing legacy path.
+                    if (!serverGroundImpact && damagefrom >= 0 && attacker.hasServerGroundAttack()) return -1;
+                    if (!serverGroundImpact && damagefrom == -1
+                            && !chr.getGroundMobHitWindow().recordLegacyTouch(System.nanoTime())) return -1;
                     
                     List<loseItem> loseItems;
                     if (damage > 0) {
@@ -139,7 +201,7 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
                         }
                     }
                 } else if (damagefrom != 0 || !map.removeSelfDestructive(oid)) {    // thanks inhyuk for noticing self-destruct damage not being handled properly
-                    return;
+                    return -1;
                 }
             } catch(ClassCastException e) {
                 //this happens due to mob on last map damaging player just before changing maps
@@ -147,7 +209,7 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
                 e.printStackTrace();
                 FilePrinter.printError(FilePrinter.EXCEPTION_CAUGHT, "Attacker is not a mob-type, rather is a " + map.getMapObject(oid).getClass().getName() + " entity.");
                 
-                return;
+                return -1;
             }
             
             direction = slea.readByte();
@@ -176,10 +238,16 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
                                 if (bouncedamage > attacker.getMaxHp() / 5) {
                                     bouncedamage = attacker.getMaxHp() / 5;
                                 }
-                                map.damageMonster(chr, attacker, bouncedamage);
-                                map.broadcastMessage(chr, MaplePacketCreator.damageMonster(oid, bouncedamage), true);
-                                chr.getClient().announce(MaplePacketCreator.showOwnBuffEffect(id, 5));
-                                map.broadcastMessage(chr, MaplePacketCreator.showBuffeffect(chr.getId(), id, 5), false);
+                                final MapleMonster reflectedMob = attacker;
+                                final int reflectedDamage = bouncedamage, reflectedOid = oid;
+                                Runnable reflection = () -> {
+                                    map.damageMonster(chr, reflectedMob, reflectedDamage);
+                                    map.broadcastMessage(chr, MaplePacketCreator.damageMonster(reflectedOid, reflectedDamage), true);
+                                    chr.getClient().announce(MaplePacketCreator.showOwnBuffEffect(id, 5));
+                                    map.broadcastMessage(chr, MaplePacketCreator.showBuffeffect(chr.getId(), id, 5), false);
+                                };
+                                if (serverGroundImpact) deferredReflection.add(reflection);
+                                else reflection.run();
                             }
                         }
                     }
@@ -190,10 +258,12 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
             fake = 4020002 + (chr.getJob().getId() / 10 - 40) * 100000;
         }
         
-        if (damage > 0) {
-            chr.getAutobanManager().resetMisses();
-        } else {
-            chr.getAutobanManager().addMiss();
+        if (!serverGroundImpact) {
+            if (damage > 0) {
+                chr.getAutobanManager().resetMisses();
+            } else if (damage != 0 || damagefrom != -1) {
+                chr.getAutobanManager().addMiss();
+            }
         }
         
         //in dojo player cannot use pot, so deadly attacks should be turned off as well
@@ -289,5 +359,6 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
         for (MapleCharacter player : banishPlayers) {  // chill, if this list ever gets non-empty an attacker does exist, trust me :)
             player.changeMapBanish(attacker.getBanish().getMap(), attacker.getBanish().getPortal(), attacker.getBanish().getMsg());
         }
+        return damage;
     }
 }

@@ -29,26 +29,32 @@ public final class Text extends com.google.flatbuffers.Table {
   public String value() { int o = __offset(4); return o != 0 ? __string(o + bb_pos) : null; }
   public ByteBuffer valueAsByteBuffer() { return __vector_as_bytebuffer(4, 1); }
   public ByteBuffer valueInByteBuffer(ByteBuffer _bb) { return __vector_in_bytebuffer(_bb, 4, 1); }
-  public protocol.generated.maple.npc.TextStyle styles(int j) { return styles(new protocol.generated.maple.npc.TextStyle(), j); }
-  public protocol.generated.maple.npc.TextStyle styles(protocol.generated.maple.npc.TextStyle obj, int j) { int o = __offset(6); return o != 0 ? obj.__assign(__indirect(__vector(o) + j * 4), bb) : null; }
-  public int stylesLength() { int o = __offset(6); return o != 0 ? __vector_len(o) : 0; }
-  public protocol.generated.maple.npc.TextStyle.Vector stylesVector() { return stylesVector(new protocol.generated.maple.npc.TextStyle.Vector()); }
-  public protocol.generated.maple.npc.TextStyle.Vector stylesVector(protocol.generated.maple.npc.TextStyle.Vector obj) { int o = __offset(6); return o != 0 ? obj.__assign(__vector(o), 4, bb) : null; }
+  public int color() { int o = __offset(8); return o != 0 ? bb.get(o + bb_pos) & 0xFF : 0; }
+  public int effects(int j) { int o = __offset(10); return o != 0 ? bb.get(__vector(o) + j * 1) & 0xFF : 0; }
+  public int effectsLength() { int o = __offset(10); return o != 0 ? __vector_len(o) : 0; }
+  public ByteVector effectsVector() { return effectsVector(new ByteVector()); }
+  public ByteVector effectsVector(ByteVector obj) { int o = __offset(10); return o != 0 ? obj.__assign(__vector(o), bb) : null; }
+  public ByteBuffer effectsAsByteBuffer() { return __vector_as_bytebuffer(10, 1); }
+  public ByteBuffer effectsInByteBuffer(ByteBuffer _bb) { return __vector_in_bytebuffer(_bb, 10, 1); }
 
   public static int createText(FlatBufferBuilder builder,
       int valueOffset,
-      int stylesOffset) {
-    builder.startTable(2);
-    Text.addStyles(builder, stylesOffset);
+      int color,
+      int effectsOffset) {
+    builder.startTable(4);
+    Text.addEffects(builder, effectsOffset);
     Text.addValue(builder, valueOffset);
+    Text.addColor(builder, color);
     return Text.endText(builder);
   }
 
-  public static void startText(FlatBufferBuilder builder) { builder.startTable(2); }
+  public static void startText(FlatBufferBuilder builder) { builder.startTable(4); }
   public static void addValue(FlatBufferBuilder builder, int valueOffset) { builder.addOffset(0, valueOffset, 0); }
-  public static void addStyles(FlatBufferBuilder builder, int stylesOffset) { builder.addOffset(1, stylesOffset, 0); }
-  public static int createStylesVector(FlatBufferBuilder builder, int[] data) { builder.startVector(4, data.length, 4); for (int i = data.length - 1; i >= 0; i--) builder.addOffset(data[i]); return builder.endVector(); }
-  public static void startStylesVector(FlatBufferBuilder builder, int numElems) { builder.startVector(4, numElems, 4); }
+  public static void addColor(FlatBufferBuilder builder, int color) { builder.addByte(2, (byte) color, (byte) 0); }
+  public static void addEffects(FlatBufferBuilder builder, int effectsOffset) { builder.addOffset(3, effectsOffset, 0); }
+  public static int createEffectsVector(FlatBufferBuilder builder, byte[] data) { return builder.createByteVector(data); }
+  public static int createEffectsVector(FlatBufferBuilder builder, ByteBuffer data) { return builder.createByteVector(data); }
+  public static void startEffectsVector(FlatBufferBuilder builder, int numElems) { builder.startVector(1, numElems, 1); }
   public static int endText(FlatBufferBuilder builder) {
     int o = builder.endTable();
     return o;

@@ -7,6 +7,13 @@ RUN apk add --no-cache tini bash maven
 WORKDIR /mnt
 COPY ./ ./
 
+RUN mvn install:install-file \
+    -Dfile=./flatbuffers/flatbuffers-java-25.12.19.jar \
+    -DgroupId=com.google.flatbuffers \
+    -DartifactId=flatbuffers-java \
+    -Dversion=25.12.19 \
+    -Dpackaging=jar
+
 RUN sed -i 's/\r$//' ./posix-compile.sh ./posix-launch.sh && bash ./posix-compile.sh
 
 ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.6.0/wait /wait

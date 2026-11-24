@@ -50,6 +50,18 @@ public class MapleFootholdTree {
         center = new Point((p2.x - p1.x) / 2, (p2.y - p1.y) / 2);
     }
 
+    public MapleFoothold getById(int id) {
+        for (MapleFoothold f : footholds) {
+            if (f.getId() == id) return f;
+        }
+        if (nw == null) return null;
+        MapleFoothold f = nw.getById(id);
+        if (f == null) f = ne.getById(id);
+        if (f == null) f = sw.getById(id);
+        if (f == null) f = se.getById(id);
+        return f;
+    }
+
     public MapleFootholdTree(Point p1, Point p2, int depth) {
         this.p1 = p1;
         this.p2 = p2;
@@ -194,6 +206,74 @@ public class MapleFootholdTree {
             }
         }
         return null;
+    }
+
+    /**
+     * Authority-attachment recovery only. Require agreement with the legacy
+     * Point lookup and a unique nearby surface, except for two reciprocally
+     * connected footholds meeting exactly at the feet. Their shared endpoint
+     * is the same surface, so preserve the legacy lookup's side of the join.
+     */
+    public MapleFoothold findGroundForAttachment(Point p, double maxDistance) {
+        List<MapleFoothold> matches = new LinkedList<>();
+        collectGroundNear(p, maxDistance, matches);
+        MapleFoothold preferred = findBelow(p);
+        if (preferred == null || !matches.contains(preferred)) return null;
+        if (matches.size() == 1) return preferred;
+        if (matches.size() != 2) return null;
+        MapleFoothold a = matches.get(0), b = matches.get(1);
+        MapleFoothold left = a.getX2() == p.x && b.getX1() == p.x ? a
+                : b.getX2() == p.x && a.getX1() == p.x ? b : null;
+        if (left == null) return null;
+        MapleFoothold right = left == a ? b : a;
+        return left.getY2() == right.getY1()
+                && left.getNext() == right.getId() && right.getPrev() == left.getId()
+                ? preferred : null;
+    }
+
+    private void collectGroundNear(Point p, double maxDistance, List<MapleFoothold> matches) {
+        for (MapleFoothold f : footholds) {
+            if (f.isWall() || p.x < f.getX1() || p.x > f.getX2()) continue;
+            double y = f.getY1() + (p.x - f.getX1()) * (f.getY2() - f.getY1())
+                    / (double) (f.getX2() - f.getX1());
+            if (y >= p.y && y - p.y <= maxDistance) matches.add(f);
+        }
+        if (nw != null) {
+            nw.collectGroundNear(p, maxDistance, matches);
+            ne.collectGroundNear(p, maxDistance, matches);
+            sw.collectGroundNear(p, maxDistance, matches);
+            se.collectGroundNear(p, maxDistance, matches);
+        }
+    }
+
+    /** Exact nearest surface for fixed-step mob landing; no integer slope/feet rounding.
+     * Leave the legacy Point query (drops, spawn placement, etc.) unchanged.
+     */
+    public MapleFoothold findBelow(double x, double y) {
+        MapleFoothold best = null;
+        double bestY = Double.POSITIVE_INFINITY;
+        for (MapleFoothold f : footholds) {
+            if (f.isWall() || (int) x < f.getX1() || (int) x > f.getX2()) continue;
+            double ground = f.getY1() + (x - f.getX1()) * (f.getY2() - f.getY1())
+                    / (double) (f.getX2() - f.getX1());
+            if (ground >= y && ground < bestY) {
+                best = f;
+                bestY = ground;
+            }
+        }
+        if (nw != null) {
+            for (MapleFootholdTree child : new MapleFootholdTree[]{nw, ne, sw, se}) {
+                MapleFoothold f = child.findBelow(x, y);
+                if (f == null) continue;
+                double ground = f.getY1() + (x - f.getX1()) * (f.getY2() - f.getY1())
+                        / (double) (f.getX2() - f.getX1());
+                if (ground < bestY) {
+                    best = f;
+                    bestY = ground;
+                }
+            }
+        }
+        return best;
     }
 
     public int getX1() {

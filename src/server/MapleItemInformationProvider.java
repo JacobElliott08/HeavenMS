@@ -1332,7 +1332,7 @@ public class MapleItemInformationProvider {
 
     public Map<String, Integer> getSkillStats(int itemId, double playerJob) {
         Pair<Map<String, Integer>, MapleData> retData = getSkillStatsInternal(itemId);
-        if(retData.getLeft().isEmpty()) return null;
+        if (retData.getLeft().isEmpty() || retData.getRight() == null) return null;
 
         Map<String, Integer> ret = new LinkedHashMap<>(retData.getLeft());
         MapleData skill = retData.getRight();

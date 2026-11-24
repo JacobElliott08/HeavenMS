@@ -10,8 +10,11 @@ public final class ClientMessage {
   public static final byte protocol_generated_maple_login_LoginServerListRequest = 2;
   public static final byte protocol_generated_maple_map_PlayerMove = 3;
   public static final byte protocol_generated_maple_character_QuestAction = 4;
+  public static final byte protocol_generated_maple_combat_AttackRequest = 5;
+  public static final byte protocol_generated_maple_character_SkillBookUseRequest = 6;
+  public static final byte protocol_generated_maple_character_SkillMacroUpdate = 7;
 
-  public static final String[] names = { "NONE", "protocol_generated_maple_npc_NpcDialogueResponse", "protocol_generated_maple_login_LoginServerListRequest", "protocol_generated_maple_map_PlayerMove", "protocol_generated_maple_character_QuestAction", };
+  public static final String[] names = { "NONE", "protocol_generated_maple_npc_NpcDialogueResponse", "protocol_generated_maple_login_LoginServerListRequest", "protocol_generated_maple_map_PlayerMove", "protocol_generated_maple_character_QuestAction", "protocol_generated_maple_combat_AttackRequest", "protocol_generated_maple_character_SkillBookUseRequest", "protocol_generated_maple_character_SkillMacroUpdate", };
 
   public static String name(int e) { return names[e]; }
 }

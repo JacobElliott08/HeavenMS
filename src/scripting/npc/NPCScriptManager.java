@@ -55,12 +55,13 @@ public class NPCScriptManager extends AbstractScriptManager {
     private Map<MapleClient, NashornScriptEngine> scripts = new HashMap<>();
 
     public boolean isNpcScriptAvailable(MapleClient c, String fileName) {
-        NashornScriptEngine iv = null;
-        if (fileName != null) {
-            iv = getScriptEngine("npc/" + fileName + ".js", c);
-        }
+        return fileName != null && new java.io.File("scripts/npc/" + fileName + ".js").exists();
+    }
 
-        return iv != null;
+    private void disposeIfEnded(MapleClient c, NPCConversationManager cm) {
+        if (!c.isNpcReplySent() && cms.get(c) == cm) {
+            cm.dispose();
+        }
     }
 
     public boolean start(MapleClient c, int npc, MapleCharacter chr) {
@@ -144,6 +145,7 @@ public class NPCScriptManager extends AbstractScriptManager {
                 iv.put(engineName, cm);
                 scripts.put(c, iv);
                 c.setClickedNPC();
+                c.setNpcReplySent(false);
                 try {
                     iv.invokeFunction("start");
                 } catch (final NoSuchMethodException nsme) {
@@ -153,6 +155,7 @@ public class NPCScriptManager extends AbstractScriptManager {
                         nsma.printStackTrace();
                     }
                 }
+                disposeIfEnded(c, cm);
             } else {
                 c.announce(MaplePacketCreator.enableActions());
             }
@@ -175,7 +178,12 @@ public class NPCScriptManager extends AbstractScriptManager {
         if (iv != null) {
             try {
                 c.setClickedNPC();
+                c.setNpcReplySent(false);
+                NPCConversationManager cm = cms.get(c);
                 iv.invokeFunction("action", mode, type, selection);
+                if (cm != null) {
+                    disposeIfEnded(c, cm);
+                }
             } catch (ScriptException | NoSuchMethodException t) {
                 if (getCM(c) != null) {
                     FilePrinter.printError(FilePrinter.NPC + getCM(c).getNpc() + ".txt", t);

@@ -61,6 +61,14 @@ public final class RangedAttackHandler extends AbstractDealDamageHandler {
         chr.getAutobanManager().spam(8);*/
 		
         AttackInfo attack = parseDamage(slea, chr, true, false);
+        if (shouldRejectDisorderTarget(attack, chr)) {
+            c.announce(MaplePacketCreator.enableActions());
+            return;
+        }
+        if (attack.skill == 0 && chr.isDarkSightActive()) {
+            c.announce(MaplePacketCreator.enableActions());
+            return;
+        }
         
         if (chr.getBuffEffect(MapleBuffStat.MORPH) != null) {
             if(chr.getBuffEffect(MapleBuffStat.MORPH).isMorphWithoutAttack()) {
@@ -132,6 +140,13 @@ public final class RangedAttackHandler extends AbstractDealDamageHandler {
             if (hasShadowPartner) {
                 bulletCount *= 2;
             }
+            short bulletConsume = bulletCount;
+            if (effect != null && effect.getBulletConsume() != 0) {
+                bulletConsume = (short) (effect.getBulletConsume() * (hasShadowPartner ? 2 : 1));
+            }
+            boolean soulArrow = chr.getBuffedValue(MapleBuffStat.SOULARROW) != null;
+            boolean shadowClaw = chr.getBuffedValue(MapleBuffStat.SHADOW_CLAW) != null;
+            short requiredQuantity = (soulArrow || shadowClaw) ? 0 : bulletConsume;
             MapleInventory inv = chr.getInventory(MapleInventoryType.USE);
             for (short i = 1; i <= inv.getSlotLimit(); i++) {
                 Item item = inv.getItem(i);
@@ -141,7 +156,7 @@ public final class RangedAttackHandler extends AbstractDealDamageHandler {
                     
                     boolean bow = ItemConstants.isArrowForBow(id);
                     boolean cbow = ItemConstants.isArrowForCrossBow(id);
-                    if (item.getQuantity() >= bulletCount) { //Fixes the bug where you can't use your last arrow.
+                    if (item.getQuantity() >= requiredQuantity) {
                         if (type == MapleWeaponType.CLAW && ItemConstants.isThrowingStar(id) && weapon.getItemId() != 1472063) {
                             if (((id == 2070007 || id == 2070018) && chr.getLevel() < 70) || (id == 2070016 && chr.getLevel() < 50)) {
                             } else {	
@@ -165,16 +180,8 @@ public final class RangedAttackHandler extends AbstractDealDamageHandler {
                     }
                 }
             }            
-            boolean soulArrow = chr.getBuffedValue(MapleBuffStat.SOULARROW) != null;
-            boolean shadowClaw = chr.getBuffedValue(MapleBuffStat.SHADOW_CLAW) != null;
             if (projectile != 0) {
                 if (!soulArrow && !shadowClaw && attack.skill != 11101004 && attack.skill != 15111007 && attack.skill != 14101006) {
-                    short bulletConsume = bulletCount;
-
-                    if (effect != null && effect.getBulletConsume() != 0) {
-                        bulletConsume = (byte) (effect.getBulletConsume() * (hasShadowPartner ? 2 : 1));           
-                    }
-
                     if(slot < 0) System.out.println("<ERROR> Projectile to use was unable to be found.");
                     else MapleInventoryManipulator.removeFromSlot(c, MapleInventoryType.USE, slot, bulletConsume, false, true);
                 }
@@ -224,15 +231,16 @@ public final class RangedAttackHandler extends AbstractDealDamageHandler {
                     }
                 }
                 
-                if (chr.getSkillLevel(SkillFactory.getSkill(NightWalker.VANISH)) > 0 && chr.getBuffedValue(MapleBuffStat.DARKSIGHT) != null && attack.numAttacked > 0 && chr.getBuffSource(MapleBuffStat.DARKSIGHT) != 9101004) {
-                    chr.cancelEffectFromBuffStat(MapleBuffStat.DARKSIGHT);
-                    chr.cancelBuffStats(MapleBuffStat.DARKSIGHT);
-                } else if(chr.getSkillLevel(SkillFactory.getSkill(WindArcher.WIND_WALK)) > 0 && chr.getBuffedValue(MapleBuffStat.WIND_WALK) != null && attack.numAttacked > 0) {
+                if (chr.getSkillLevel(SkillFactory.getSkill(WindArcher.WIND_WALK)) > 0 && chr.getBuffedValue(MapleBuffStat.WIND_WALK) != null && attack.numAttacked > 0) {
                     chr.cancelEffectFromBuffStat(MapleBuffStat.WIND_WALK);
                     chr.cancelBuffStats(MapleBuffStat.WIND_WALK);
                 }
                 
                 applyAttack(attack, chr, bulletCount);
+            } else {
+                // The attack is rejected, not a successful zero-HP hit.
+                chr.dropMessage(5, "You do not have enough usable ammunition for this attack. Check its level requirement.");
+                c.announce(MaplePacketCreator.enableActions());
             }
         }
     }

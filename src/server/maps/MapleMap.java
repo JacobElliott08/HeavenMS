@@ -158,6 +158,19 @@ public class MapleMap {
     private ScheduledFuture<?> expireItemsTask = null;
     private ScheduledFuture<?> mobSpawnLootTask = null;
     private ScheduledFuture<?> characterStatUpdateTask = null;
+    private ScheduledFuture<?> groundMobTask;
+    private boolean groundMobDisposed;
+
+    public synchronized void startGroundMobSimulation() {
+        if (groundMobDisposed || groundMobTask != null) return;
+        groundMobTask = TimerManager.getInstance().register(() -> {
+            // Serialize shutdown with the task; no retained clients/controllers.
+            synchronized (MapleMap.this) {
+                if (groundMobDisposed || getAllPlayers().isEmpty()) return;
+                for (MapleMonster mob : getAllMonsters()) mob.tickGroundAuthority();
+            }
+        }, server.life.GroundMobSimulation.INTERVAL_MS);
+    }
     private short itemMonitorTimeout;
     private Pair<Integer, String> timeMob = null;
     private short mobInterval = 5000;
@@ -743,9 +756,9 @@ public class MapleMap {
         byte d = 1;
         Point pos = new Point(0, mob.getPosition().y);
 
-        MonsterStatusEffect stati = mob.getStati(MonsterStatus.SHOWDOWN);
-        if (stati != null) {
-            chRate *= (stati.getStati().get(MonsterStatus.SHOWDOWN).doubleValue() / 100.0 + 1.0);
+        Integer showdown = mob.getStatusValue(MonsterStatus.SHOWDOWN);
+        if (showdown != null) {
+            chRate *= (showdown.doubleValue() / 100.0 + 1.0);
         }
         
         if (useBaseRate) {
@@ -1951,7 +1964,7 @@ public class MapleMap {
         spawnAndAddRangedMapObject(monster, new DelayedPacketCreation() {
             @Override
             public void sendPackets(MapleClient c) {
-                c.announce(MaplePacketCreator.spawnMonster(monster, false));
+                monster.sendSpawnWithStatuses(c, () -> MaplePacketCreator.spawnMonster(monster, false));
             }
         });
         
@@ -2053,7 +2066,7 @@ public class MapleMap {
         spawnAndAddRangedMapObject(monster, new DelayedPacketCreation() {
             @Override
             public void sendPackets(MapleClient c) {
-                c.announce(MaplePacketCreator.spawnMonster(monster, true));
+                monster.sendSpawnWithStatuses(c, () -> MaplePacketCreator.spawnMonster(monster, true));
             }
         }, null);
         
@@ -2119,7 +2132,7 @@ public class MapleMap {
         spawnAndAddRangedMapObject(monster, new DelayedPacketCreation() {
             @Override
             public void sendPackets(MapleClient c) {
-                c.announce(MaplePacketCreator.spawnMonster(monster, true, effect));
+                monster.sendSpawnWithStatuses(c, () -> MaplePacketCreator.spawnMonster(monster, true, effect));
             }
         });
         
@@ -2132,12 +2145,12 @@ public class MapleMap {
     }
 
     public void spawnFakeMonster(final MapleMonster monster) {
-        monster.setMap(this);
         monster.setFake(true);
+        monster.setMap(this);
         spawnAndAddRangedMapObject(monster, new DelayedPacketCreation() {
             @Override
             public void sendPackets(MapleClient c) {
-                c.announce(MaplePacketCreator.spawnFakeMonster(monster, 0));
+                monster.sendSpawnWithStatuses(c, () -> MaplePacketCreator.spawnFakeMonster(monster, 0));
             }
         });
         
@@ -2670,7 +2683,7 @@ public class MapleMap {
             chr.announce(MaplePacketCreator.getGMEffect(0x10, (byte) 1));
 
             List<Pair<MapleBuffStat, Integer>> dsstat = Collections.singletonList(new Pair<MapleBuffStat, Integer>(MapleBuffStat.DARKSIGHT, 0));
-            broadcastGMMessage(chr, MaplePacketCreator.giveForeignBuff(chr.getId(), dsstat), false);
+            broadcastGMMessage(chr, tools.packets.character.BuffPackets.giveForeignBuff(chr.getId(), constants.skills.SuperGM.HIDE, Integer.MAX_VALUE, dsstat), false);
         } else {
             broadcastSpawnPlayerMapObjectMessage(chr, chr, true);
         }
@@ -4590,6 +4603,13 @@ public class MapleMap {
     }
     
     public void dispose() {
+        synchronized (this) {
+            groundMobDisposed = true;
+            if (groundMobTask != null) {
+                groundMobTask.cancel(false);
+                groundMobTask = null;
+            }
+        }
         for(MapleMonster mm : this.getAllMonsters()) {
             mm.dispose();
         }

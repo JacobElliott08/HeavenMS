@@ -12,6 +12,8 @@ services:
       - "7577:7577"
     volumes:
       - ./config.docker.yaml:/mnt/config.yaml:ro
+      - ./scripts:/mnt/scripts
+      - ./wz:/mnt/wz:ro
     networks:
       - heavenms
     
